@@ -16,13 +16,13 @@ const initialProgress: StoredProgress = {
 }
 
 const navigation: { id: SectionId; label: string; short: string }[] = [
-  { id: 'today', label: '今日学习', short: '今日' },
-  { id: 'immersion', label: '沉浸阅读', short: '阅读' },
-  { id: 'vocabulary', label: 'N1 词汇', short: '词汇' },
+  { id: 'today', label: '今日の学習', short: '今日' },
+  { id: 'immersion', label: '没入読解', short: '没入' },
+  { id: 'vocabulary', label: 'N1 語彙', short: '語彙' },
   { id: 'grammar', label: 'N1 文法', short: '文法' },
-  { id: 'reading', label: '读解练习', short: '读解' },
-  { id: 'review', label: '错题复习', short: '复习' },
-  { id: 'history', label: '历史日报', short: '历史' },
+  { id: 'reading', label: '読解練習', short: '読解' },
+  { id: 'review', label: '誤答復習', short: '復習' },
+  { id: 'history', label: '学習履歴', short: '履歴' },
 ]
 
 function Icon({ name, size = 20 }: { name: string; size?: number }) {
@@ -163,10 +163,10 @@ export default function App() {
       <aside className={`sidebar ${mobileNavOpen ? 'open' : ''}`}>
         <div className="brand" onClick={() => openLesson(latestLesson.date)} role="button" tabIndex={0}>
           <div className="brand-mark">N1</div>
-          <div><strong>Immersive</strong><span>Sparring Partner</span></div>
+          <div><strong>没入型</strong><span>学習パートナー</span></div>
         </div>
 
-        <nav className="side-nav" aria-label="主要导航">
+        <nav className="side-nav" aria-label="メインナビゲーション">
           {navigation.map((item) => (
             <button key={item.id} className={active === item.id ? 'nav-item active' : 'nav-item'} onClick={() => go(item.id)}>
               <span className="nav-icon"><Icon name={item.id === 'today' ? 'spark' : item.id === 'history' ? 'history' : item.id === 'reading' ? 'pen' : item.id === 'review' ? 'target' : 'book'} size={18} /></span>
@@ -176,19 +176,19 @@ export default function App() {
         </nav>
 
         <div className="sidebar-bottom">
-          <div className="mini-streak"><Icon name="flame" size={18} /><span><strong>{streakDisplay} 天</strong> 连续学习</span></div>
-          <button className="theme-toggle" onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')} aria-label="切换深浅色模式">
+          <div className="mini-streak"><Icon name="flame" size={18} /><span><strong>{streakDisplay}日</strong> 連続学習</span></div>
+          <button className="theme-toggle" onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')} aria-label="表示テーマを切り替える">
             <Icon name={theme === 'light' ? 'moon' : 'sun'} size={18} />
-            <span>{theme === 'light' ? '深色阅读' : '浅色阅读'}</span>
+            <span>{theme === 'light' ? 'ダークモード' : 'ライトモード'}</span>
           </button>
         </div>
       </aside>
 
-      {mobileNavOpen ? <button className="mobile-overlay" aria-label="关闭导航" onClick={() => setMobileNavOpen(false)} /> : null}
+      {mobileNavOpen ? <button className="mobile-overlay" aria-label="ナビゲーションを閉じる" onClick={() => setMobileNavOpen(false)} /> : null}
 
       <main className="main">
         <header className="topbar">
-          <button className="mobile-menu" onClick={() => setMobileNavOpen(true)} aria-label="打开导航"><Icon name="menu" /></button>
+          <button className="mobile-menu" onClick={() => setMobileNavOpen(true)} aria-label="ナビゲーションを開く"><Icon name="menu" /></button>
           <DateDropdown date={lesson.date} day={lesson.day} activeSection={active} onOpen={openLesson} />
           <DailySearch onOpen={openLesson} />
           <div className="topbar-actions">
@@ -416,7 +416,7 @@ export default function App() {
         </div>
       </main>
 
-      <nav className="mobile-bottom-nav" aria-label="移动端快捷导航">
+      <nav className="mobile-bottom-nav" aria-label="モバイルクイックナビゲーション">
         {navigation.slice(0, 5).map((item) => <button key={item.id} className={active === item.id ? 'active' : ''} onClick={() => go(item.id)}><span>{item.short}</span></button>)}
       </nav>
     </div>
