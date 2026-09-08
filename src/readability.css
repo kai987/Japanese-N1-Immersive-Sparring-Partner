@@ -1,0 +1,119 @@
+/* Readability pass: stronger dark-theme contrast and a slightly larger type scale. */
+
+.app {
+  color: var(--text);
+  font-size: 17px;
+}
+
+.app[data-theme="dark"] {
+  --text: #f1f4f1;
+  --text-soft: #c4ccc7;
+  --muted: #a4aea8;
+  --border: #36403a;
+  --border-strong: #465249;
+  --accent: #aebae0;
+  --accent-2: #93c7bb;
+  --danger: #e0a9a3;
+}
+
+.app[data-theme="dark"] .mini-streak svg {
+  color: #d2a06f;
+}
+
+.brand strong { font-size: 16px; }
+.brand span { font-size: 12px; }
+.nav-item { font-size: 15px; }
+.mini-streak,
+.theme-toggle { font-size: 13px; }
+.date-block strong { font-size: 14px; }
+.date-block span { font-size: 12px; }
+.quiet-stat { font-size: 13px; }
+
+.day-label,
+.section-index { font-size: 12px; }
+.hero h1 { font-size: clamp(36px, 4.5vw, 58px); }
+.hero p { font-size: 17px; }
+.primary-btn,
+.text-btn { font-size: 14px; }
+.progress-ring-label strong { font-size: 26px; }
+.progress-ring-label span { font-size: 11px; }
+
+.summary-strip span,
+.history-summary span { font-size: 12px; }
+.summary-strip strong,
+.history-summary strong { font-size: 24px; }
+.summary-strip small,
+.history-summary small { font-size: 12px; }
+
+.section-header h2 { font-size: 29px; }
+.section-header p { font-size: 15px; }
+.plan-num { font-size: 12px; }
+.plan-main strong { font-size: 17px; }
+.plan-main small { font-size: 14px; }
+.plan-time { font-size: 12px; }
+.focus-note strong { font-size: 14px; }
+.focus-note p { font-size: 15px; }
+
+.mode-switch button { font-size: 13px; }
+.article-head span { font-size: 11px; }
+.article-head h1 { font-size: clamp(28px, 3.2vw, 38px); }
+.jp-body { font-size: 20px; line-height: 2.05; }
+.zh-translation { font-size: 15px; }
+.analysis-note span { font-size: 10px; }
+.analysis-note p { font-size: 15px; }
+.complete-btn,
+.next-link { font-size: 13px; }
+
+.card-index { font-size: 11px; }
+.word-line h3,
+.grammar-top h3 { font-size: 27px; }
+.reading { font-size: 13px; }
+.tag { font-size: 11px; }
+.meaning { font-size: 15px; }
+.example-box p { font-size: 17px; }
+.example-box span { font-size: 12px; }
+.detail-label { font-size: 10px; }
+.detail-grid p { font-size: 14px; }
+.collocations span { font-size: 12px; }
+.status-btn { font-size: 12px; }
+.frequency > span { font-size: 10px; }
+.grammar-meta span { font-size: 12px; }
+.grammar-meta b { font-size: 10px; }
+.grammar-explain { font-size: 15px; }
+.compare-box span { font-size: 10px; }
+.compare-box p { font-size: 14px; }
+
+.question-label { font-size: 11px; }
+.question-block h3 { font-size: 20px; }
+.answer-option { font-size: 15px; }
+.answer-letter { font-size: 11px; }
+.result-panel > p { font-size: 14px; }
+.option-notes p { font-size: 13px; }
+
+.empty-state h3 { font-size: 19px; }
+.empty-state p { font-size: 14px; }
+.review-number { font-size: 11px; }
+.review-type { font-size: 11px; }
+.review-row strong { font-size: 15px; }
+.review-row p { font-size: 13px; }
+.spaced-review h3 { font-size: 18px; }
+.spaced-review p { font-size: 13px; }
+.intervals { font-size: 11px; }
+
+.history-head { font-size: 10px; }
+.history-row { font-size: 14px; }
+.history-row > span:first-child b { font-size: 14px; }
+.history-row > span:first-child small { font-size: 10px; }
+.history-note p { font-size: 13px; }
+
+@media (max-width: 680px) {
+  .hero h1 { font-size: 34px; }
+  .hero p { font-size: 15px; }
+  .section-header h2 { font-size: 27px; }
+  .jp-body { font-size: 19px; line-height: 2.05; }
+  .zh-translation { font-size: 14px; }
+  .word-line h3,
+  .grammar-top h3 { font-size: 24px; }
+  .answer-option { font-size: 14px; }
+  .mobile-bottom-nav button { font-size: 11px; }
+}
