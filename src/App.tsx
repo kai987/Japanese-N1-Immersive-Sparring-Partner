@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState, type ReactNode } from 'react'
+import { DailySearch } from './components/DailySearch'
 import { getLessonByDate, historyItems, lesson as latestLesson, reviewFocusByDate } from './data/history'
 import { useLocalStorage } from './hooks/useLocalStorage'
 import type { LearningStatus, ReadingMode, SectionId, StoredProgress } from './types'
@@ -206,6 +207,7 @@ export default function App() {
             <div className="date-block"><strong>{formatDate(lesson.date)}</strong><span>Day {lesson.day} · 99日N1计划</span></div>
             <button className="date-nav-btn" disabled={!newerDate} onClick={() => newerDate && openLesson(newerDate, active)} aria-label="后一天"><Icon name="arrow" size={17} /></button>
           </div>
+          <DailySearch onOpen={openLesson} />
           <div className="topbar-actions">
             <div className="quiet-stat"><Icon name="clock" size={17} /><span>约 {lesson.estimatedMinutes} 分钟</span></div>
             <button className="icon-button" onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')} aria-label="切换阅读主题"><Icon name={theme === 'light' ? 'moon' : 'sun'} size={18} /></button>
