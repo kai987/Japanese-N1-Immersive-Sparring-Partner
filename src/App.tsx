@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState, type ReactNode } from 'react'
 import { DailySearch } from './components/DailySearch'
+import { DateDropdown } from './components/DateDropdown'
 import { getLessonByDate, historyItems, lesson as latestLesson, reviewFocusByDate } from './data/history'
 import { useLocalStorage } from './hooks/useLocalStorage'
 import type { LearningStatus, ReadingMode, SectionId, StoredProgress } from './types'
@@ -23,17 +24,6 @@ const navigation: { id: SectionId; label: string; short: string }[] = [
   { id: 'review', label: '错题复习', short: '复习' },
   { id: 'history', label: '历史日报', short: '历史' },
 ]
-
-const formatDate = (date: string) => {
-  const parsed = new Date(`${date}T12:00:00+09:00`)
-  return new Intl.DateTimeFormat('ja-JP', {
-    timeZone: 'Asia/Tokyo',
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-    weekday: 'long',
-  }).format(parsed)
-}
 
 function Icon({ name, size = 20 }: { name: string; size?: number }) {
   const paths: Record<string, ReactNode> = {
@@ -107,9 +97,6 @@ export default function App() {
   const [completedLessons, setCompletedLessons] = useLocalStorage<Record<string, boolean>>('n1-completed-lessons', {})
 
   const lesson = getLessonByDate(selectedDate)
-  const selectedHistoryIndex = historyItems.findIndex((item) => item.date === lesson.date)
-  const olderDate = historyItems[selectedHistoryIndex + 1]?.date
-  const newerDate = historyItems[selectedHistoryIndex - 1]?.date
   const isLatest = lesson.date === latestLesson.date
   const historyEntry = historyItems.find((item) => item.date === lesson.date)
   const streakDisplay = Math.min(progress.streak, latestLesson.day)
@@ -202,11 +189,7 @@ export default function App() {
       <main className="main">
         <header className="topbar">
           <button className="mobile-menu" onClick={() => setMobileNavOpen(true)} aria-label="打开导航"><Icon name="menu" /></button>
-          <div className="date-switcher">
-            <button className="date-nav-btn date-nav-prev" disabled={!olderDate} onClick={() => olderDate && openLesson(olderDate, active)} aria-label="前一天"><Icon name="arrow" size={17} /></button>
-            <div className="date-block"><strong>{formatDate(lesson.date)}</strong><span>Day {lesson.day} · 99日N1计划</span></div>
-            <button className="date-nav-btn" disabled={!newerDate} onClick={() => newerDate && openLesson(newerDate, active)} aria-label="后一天"><Icon name="arrow" size={17} /></button>
-          </div>
+          <DateDropdown date={lesson.date} day={lesson.day} activeSection={active} onOpen={openLesson} />
           <DailySearch onOpen={openLesson} />
           <div className="topbar-actions">
             <div className="quiet-stat"><Icon name="clock" size={17} /><span>约 {lesson.estimatedMinutes} 分钟</span></div>
