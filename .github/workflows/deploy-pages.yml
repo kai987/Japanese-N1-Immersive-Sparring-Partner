@@ -33,6 +33,11 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Add Pages fallbacks
+        run: |
+          cp dist/index.html dist/404.html
+          touch dist/.nojekyll
+
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
