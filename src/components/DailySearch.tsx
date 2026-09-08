@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { lessons, reviewFocusByDate } from '../data/history'
 import type { DailyLesson, SectionId } from '../types'
 
@@ -143,7 +143,20 @@ const searchLessons = (query: string): SearchResult[] => {
 export function DailySearch({ onOpen }: { onOpen: (date: string, section: SectionId) => void }) {
   const [query, setQuery] = useState('')
   const [open, setOpen] = useState(false)
+  const inputRef = useRef<HTMLInputElement>(null)
   const results = useMemo(() => searchLessons(query), [query])
+
+  useEffect(() => {
+    const handleShortcut = (event: KeyboardEvent) => {
+      if ((event.metaKey || event.ctrlKey) && event.key.toLocaleLowerCase() === 'k') {
+        event.preventDefault()
+        inputRef.current?.focus()
+        setOpen(true)
+      }
+    }
+    window.addEventListener('keydown', handleShortcut)
+    return () => window.removeEventListener('keydown', handleShortcut)
+  }, [])
 
   const choose = (result: SearchResult) => {
     onOpen(result.date, result.section)
@@ -161,6 +174,7 @@ export function DailySearch({ onOpen }: { onOpen: (date: string, section: Sectio
       <div className="daily-search-input-wrap">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg>
         <input
+          ref={inputRef}
           value={query}
           onChange={(event) => { setQuery(event.target.value); setOpen(true) }}
           onFocus={() => setOpen(true)}
