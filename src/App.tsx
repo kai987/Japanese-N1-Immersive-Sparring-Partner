@@ -1,14 +1,15 @@
-import { useMemo, useState, type ReactNode } from 'react'
-import { historyItems, lesson } from './data/lesson'
+import { useEffect, useMemo, useState, type ReactNode } from 'react'
+import { getLessonByDate, historyItems, lesson as latestLesson, reviewFocusByDate } from './data/history'
 import { useLocalStorage } from './hooks/useLocalStorage'
 import type { LearningStatus, ReadingMode, SectionId, StoredProgress } from './types'
+import './history.css'
 
 const initialProgress: StoredProgress = {
   vocab: {},
   grammar: {},
   readingAnswers: {},
   completedSections: [],
-  streak: 12,
+  streak: 11,
   minutesThisWeek: 164,
 }
 
@@ -19,8 +20,19 @@ const navigation: { id: SectionId; label: string; short: string }[] = [
   { id: 'grammar', label: 'N1 文法', short: '文法' },
   { id: 'reading', label: '读解练习', short: '读解' },
   { id: 'review', label: '错题复习', short: '复习' },
-  { id: 'history', label: '学习记录', short: '记录' },
+  { id: 'history', label: '历史日报', short: '历史' },
 ]
+
+const formatDate = (date: string) => {
+  const parsed = new Date(`${date}T12:00:00+09:00`)
+  return new Intl.DateTimeFormat('ja-JP', {
+    timeZone: 'Asia/Tokyo',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    weekday: 'long',
+  }).format(parsed)
+}
 
 function Icon({ name, size = 20 }: { name: string; size?: number }) {
   const paths: Record<string, ReactNode> = {
@@ -85,11 +97,26 @@ function SectionHeader({ eyebrow, title, description }: { eyebrow: string; title
 
 export default function App() {
   const [active, setActive] = useState<SectionId>('today')
+  const [selectedDate, setSelectedDate] = useState(latestLesson.date)
   const [readingMode, setReadingMode] = useState<ReadingMode>('japanese')
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null)
   const [mobileNavOpen, setMobileNavOpen] = useState(false)
   const [theme, setTheme] = useLocalStorage<'light' | 'dark'>('n1-theme', 'light')
   const [progress, setProgress] = useLocalStorage<StoredProgress>('n1-progress', initialProgress)
+  const [completedLessons, setCompletedLessons] = useLocalStorage<Record<string, boolean>>('n1-completed-lessons', {})
+
+  const lesson = getLessonByDate(selectedDate)
+  const selectedHistoryIndex = historyItems.findIndex((item) => item.date === lesson.date)
+  const olderDate = historyItems[selectedHistoryIndex + 1]?.date
+  const newerDate = historyItems[selectedHistoryIndex - 1]?.date
+  const isLatest = lesson.date === latestLesson.date
+  const historyEntry = historyItems.find((item) => item.date === lesson.date)
+  const streakDisplay = Math.min(progress.streak, latestLesson.day)
+
+  useEffect(() => {
+    setSelectedAnswer(null)
+    setReadingMode('japanese')
+  }, [lesson.date])
 
   const answered = progress.readingAnswers[lesson.reading.question.id]
   const answerIsCorrect = answered === lesson.reading.question.answer
@@ -98,19 +125,33 @@ export default function App() {
     const vocabDone = lesson.vocabulary.filter((item) => progress.vocab[item.id] === 'mastered').length
     const grammarDone = lesson.grammar.filter((item) => progress.grammar[item.id] === 'mastered').length
     const readingDone = answered !== undefined ? 1 : 0
-    const immersionDone = progress.completedSections.includes('immersion') ? 1 : 0
+    const immersionDone = completedLessons[lesson.date] ? 1 : 0
     const total = lesson.vocabulary.length + lesson.grammar.length + 2
     return Math.round(((vocabDone + grammarDone + readingDone + immersionDone) / total) * 100)
-  }, [answered, progress])
+  }, [answered, completedLessons, lesson, progress])
 
   const reviewItems = useMemo(() => {
-    const vocab = lesson.vocabulary.filter((item) => progress.vocab[item.id] === 'review').map((item) => ({ type: '词汇', title: item.word, detail: `${item.reading} · ${item.meaning}` }))
-    const grammar = lesson.grammar.filter((item) => progress.grammar[item.id] === 'review').map((item) => ({ type: '文法', title: item.pattern, detail: item.meaning }))
-    const wrongReading = answered !== undefined && !answerIsCorrect ? [{ type: '读解', title: lesson.reading.question.prompt, detail: '重新确认主旨题的证据位置' }] : []
-    return [...vocab, ...grammar, ...wrongReading]
-  }, [answered, answerIsCorrect, progress])
+    const scheduled = reviewFocusByDate[lesson.date] ?? []
+    const vocab = lesson.vocabulary
+      .filter((item) => progress.vocab[item.id] === 'review')
+      .map((item) => ({ type: '词汇' as const, title: item.word, detail: `${item.reading} · ${item.meaning}` }))
+    const grammar = lesson.grammar
+      .filter((item) => progress.grammar[item.id] === 'review')
+      .map((item) => ({ type: '文法' as const, title: item.pattern, detail: item.meaning }))
+    const wrongReading = answered !== undefined && !answerIsCorrect
+      ? [{ type: '读解' as const, title: lesson.reading.question.prompt, detail: '重新确认主旨题的证据位置' }]
+      : []
+    return [...scheduled, ...vocab, ...grammar, ...wrongReading]
+  }, [answered, answerIsCorrect, lesson, progress])
 
   const go = (section: SectionId) => {
+    setActive(section)
+    setMobileNavOpen(false)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  const openLesson = (date: string, section: SectionId = 'today') => {
+    setSelectedDate(date)
     setActive(section)
     setMobileNavOpen(false)
     window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -121,10 +162,7 @@ export default function App() {
   }
 
   const markImmersionComplete = () => {
-    setProgress((prev) => ({
-      ...prev,
-      completedSections: prev.completedSections.includes('immersion') ? prev.completedSections.filter((x) => x !== 'immersion') : [...prev.completedSections, 'immersion'],
-    }))
+    setCompletedLessons((prev) => ({ ...prev, [lesson.date]: !prev[lesson.date] }))
   }
 
   const submitReading = () => {
@@ -135,7 +173,7 @@ export default function App() {
   return (
     <div className="app" data-theme={theme}>
       <aside className={`sidebar ${mobileNavOpen ? 'open' : ''}`}>
-        <div className="brand" onClick={() => go('today')} role="button" tabIndex={0}>
+        <div className="brand" onClick={() => openLesson(latestLesson.date)} role="button" tabIndex={0}>
           <div className="brand-mark">N1</div>
           <div><strong>Immersive</strong><span>Sparring Partner</span></div>
         </div>
@@ -150,7 +188,7 @@ export default function App() {
         </nav>
 
         <div className="sidebar-bottom">
-          <div className="mini-streak"><Icon name="flame" size={18} /><span><strong>{progress.streak} 天</strong> 连续学习</span></div>
+          <div className="mini-streak"><Icon name="flame" size={18} /><span><strong>{streakDisplay} 天</strong> 连续学习</span></div>
           <button className="theme-toggle" onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')} aria-label="切换深浅色模式">
             <Icon name={theme === 'light' ? 'moon' : 'sun'} size={18} />
             <span>{theme === 'light' ? '深色阅读' : '浅色阅读'}</span>
@@ -163,7 +201,11 @@ export default function App() {
       <main className="main">
         <header className="topbar">
           <button className="mobile-menu" onClick={() => setMobileNavOpen(true)} aria-label="打开导航"><Icon name="menu" /></button>
-          <div className="date-block"><strong>2026年9月9日</strong><span>水曜日 · Day {lesson.day}</span></div>
+          <div className="date-switcher">
+            <button className="date-nav-btn date-nav-prev" disabled={!olderDate} onClick={() => olderDate && openLesson(olderDate, active)} aria-label="前一天"><Icon name="arrow" size={17} /></button>
+            <div className="date-block"><strong>{formatDate(lesson.date)}</strong><span>Day {lesson.day} · 99日N1计划</span></div>
+            <button className="date-nav-btn" disabled={!newerDate} onClick={() => newerDate && openLesson(newerDate, active)} aria-label="后一天"><Icon name="arrow" size={17} /></button>
+          </div>
           <div className="topbar-actions">
             <div className="quiet-stat"><Icon name="clock" size={17} /><span>约 {lesson.estimatedMinutes} 分钟</span></div>
             <button className="icon-button" onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')} aria-label="切换阅读主题"><Icon name={theme === 'light' ? 'moon' : 'sun'} size={18} /></button>
@@ -173,34 +215,42 @@ export default function App() {
         <div className="content-shell">
           {active === 'today' && (
             <div className="page-enter">
+              {!isLatest ? (
+                <div className={`archive-note ${historyEntry?.merged ? 'merged' : ''}`}>
+                  <Icon name="history" size={18} />
+                  <span>{historyEntry?.merged ? '历史日报整理版：已把当日原本分开的「N1 沉浸式陪练」与「错题复习」合并到同一页。' : '历史日报：内容已按当前网页的统一格式整理。'}</span>
+                </div>
+              ) : null}
+
               <section className="hero">
                 <div className="hero-copy">
-                  <div className="day-label">今日のテーマ</div>
+                  <div className="day-label">{isLatest ? '今日のテーマ' : `DAY ${lesson.day} · ARCHIVE`}</div>
                   <h1>{lesson.title}</h1>
                   <p>{lesson.subtitle}</p>
                   <div className="hero-actions">
-                    <button className="primary-btn" onClick={() => go('immersion')}>开始今日学习 <Icon name="arrow" size={17} /></button>
-                    <button className="text-btn" onClick={() => go('review')}>先复习错题</button>
+                    <button className="primary-btn" onClick={() => go('immersion')}>{isLatest ? '开始今日学习' : '打开这天的学习'} <Icon name="arrow" size={17} /></button>
+                    <button className="text-btn" onClick={() => go('review')}>查看当天错题复习</button>
                   </div>
                 </div>
                 <ProgressRing value={progressValue} />
               </section>
 
-              <section className="summary-strip" aria-label="本周学习概览">
-                <div><span>连续学习</span><strong>{progress.streak}<small> 天</small></strong></div>
-                <div><span>本周学习</span><strong>{progress.minutesThisWeek}<small> min</small></strong></div>
-                <div><span>今日词汇</span><strong>{lesson.vocabulary.length}<small> 个</small></strong></div>
-                <div><span>今日文法</span><strong>{lesson.grammar.length}<small> 个</small></strong></div>
+              <section className="summary-strip" aria-label="学习概览">
+                <div><span>计划进度</span><strong>{lesson.day}<small> / 99</small></strong></div>
+                <div><span>预计学习</span><strong>{lesson.estimatedMinutes}<small> min</small></strong></div>
+                <div><span>本日词汇</span><strong>{lesson.vocabulary.length}<small> 个</small></strong></div>
+                <div><span>本日文法</span><strong>{lesson.grammar.length}<small> 个</small></strong></div>
               </section>
 
               <section className="today-plan">
-                <SectionHeader eyebrow="TODAY" title="今日学习路线" description="按顺序完成约 28 分钟，也可以从薄弱项直接进入。" />
+                <SectionHeader eyebrow="TODAY" title="学习路线" description={`按当前统一格式整理，约 ${lesson.estimatedMinutes} 分钟完成；历史日报也保留当日错题复习重点。`} />
                 <div className="plan-list">
                   {[
                     ['01', '沉浸阅读', '先只看日文，再切换中日对照与解析。', '8 min', 'immersion' as SectionId],
-                    ['02', 'N1 词汇', `${lesson.vocabulary.length} 个高频书面语词汇，带搭配与语感。`, '7 min', 'vocabulary' as SectionId],
-                    ['03', 'N1 文法', `${lesson.grammar.length} 个句型，重点比较相近表达。`, '6 min', 'grammar' as SectionId],
-                    ['04', '短文读解', 'JLPT 风格主旨题，提交后逐项看错误原因。', '7 min', 'reading' as SectionId],
+                    ['02', 'N1 词汇', `${lesson.vocabulary.length} 个当日重点词，带搭配、例句与语感。`, '7 min', 'vocabulary' as SectionId],
+                    ['03', 'N1 文法', `${lesson.grammar.length} 个当日重点句型，带接续与相似表达。`, '6 min', 'grammar' as SectionId],
+                    ['04', '短文读解', 'JLPT 风格主旨题，提交后逐项确认理由。', '7 min', 'reading' as SectionId],
+                    ['05', '错题复习', `${reviewFocusByDate[lesson.date]?.length ?? 0} 个历史错题/薄弱项重点。`, '5 min', 'review' as SectionId],
                   ].map(([num, title, desc, time, id]) => (
                     <button className="plan-row" key={String(id)} onClick={() => go(id as SectionId)}>
                       <span className="plan-num">{num}</span>
@@ -214,7 +264,7 @@ export default function App() {
 
               <section className="focus-note">
                 <div className="focus-icon"><Icon name="target" size={21} /></div>
-                <div><strong>今天的练习重点</strong><p>不要在“看懂解释”时结束。每学完一个词或语法，试着脱离页面，用自己的日语造一个和求职、学校或日常生活有关的句子。</p></div>
+                <div><strong>{isLatest ? '今天的练习重点' : '这天的复习方式'}</strong><p>不要只看中文释义。读完后脱离页面，用自己的日语说明一个词或句型，并在错题复习里确认当日需要间隔复现的薄弱点。</p></div>
               </section>
             </div>
           )}
@@ -229,17 +279,17 @@ export default function App() {
               </div>
 
               <article className="reading-paper">
-                <div className="article-head"><span>N1 IMMERSION</span><h1>{lesson.immersion.title}</h1></div>
+                <div className="article-head"><span>N1 IMMERSION · DAY {lesson.day}</span><h1>{lesson.immersion.title}</h1></div>
                 {lesson.immersion.paragraphs.map((p, index) => (
-                  <div className="paragraph-block" key={p}>
+                  <div className="paragraph-block" key={`${lesson.date}-${index}`}>
                     <p className="jp-body">{p}</p>
                     {readingMode === 'bilingual' ? <p className="zh-translation">{lesson.immersion.translations[index]}</p> : null}
                     {readingMode === 'analysis' ? <div className="analysis-note"><span>POINT {index + 1}</span><p>{lesson.immersion.analysis[index]}</p></div> : null}
                   </div>
                 ))}
                 <div className="article-finish">
-                  <button className={progress.completedSections.includes('immersion') ? 'complete-btn completed' : 'complete-btn'} onClick={markImmersionComplete}>
-                    <Icon name="check" size={17} /> {progress.completedSections.includes('immersion') ? '已完成阅读' : '标记为已完成'}
+                  <button className={completedLessons[lesson.date] ? 'complete-btn completed' : 'complete-btn'} onClick={markImmersionComplete}>
+                    <Icon name="check" size={17} /> {completedLessons[lesson.date] ? '已完成阅读' : '标记为已完成'}
                   </button>
                   <button className="next-link" onClick={() => go('vocabulary')}>下一步：N1 词汇 <Icon name="arrow" size={16} /></button>
                 </div>
@@ -249,7 +299,7 @@ export default function App() {
 
           {active === 'vocabulary' && (
             <div className="page-enter">
-              <SectionHeader eyebrow="02" title="N1 词汇" description="重点不是单独背中文释义，而是一起记住搭配、语域和例句。" />
+              <SectionHeader eyebrow="02" title="N1 词汇" description="历史日报沿用当天重点词；重点记住搭配、语域和例句，不只背中文释义。" />
               <div className="learning-list">
                 {lesson.vocabulary.map((item, index) => {
                   const status = progress.vocab[item.id] ?? 'new'
@@ -276,7 +326,7 @@ export default function App() {
 
           {active === 'grammar' && (
             <div className="page-enter">
-              <SectionHeader eyebrow="03" title="N1 文法" description="通过含义、接续、语体和相似句型对比，建立可以实际使用的判断标准。" />
+              <SectionHeader eyebrow="03" title="N1 文法" description="按当天训练重点整理含义、接续、语体和相似表达。" />
               <div className="learning-list grammar-list">
                 {lesson.grammar.map((item, index) => {
                   const status = progress.grammar[item.id] ?? 'new'
@@ -301,10 +351,10 @@ export default function App() {
 
           {active === 'reading' && (
             <div className="page-enter reading-page">
-              <SectionHeader eyebrow="04" title="短文读解" description="先找作者的主张与转折，再选择答案。不要只凭关键词匹配。" />
+              <SectionHeader eyebrow="04" title="短文读解" description="先找作者的主张、条件和转折，再选择答案。" />
               <article className="reading-paper quiz-paper">
-                <div className="article-head"><span>JLPT N1 · 読解</span><h1>{lesson.reading.title}</h1></div>
-                {lesson.reading.paragraphs.map((p) => <p className="jp-body" key={p}>{p}</p>)}
+                <div className="article-head"><span>JLPT N1 · 読解 · DAY {lesson.day}</span><h1>{lesson.reading.title}</h1></div>
+                {lesson.reading.paragraphs.map((p, index) => <p className="jp-body" key={`${lesson.date}-reading-${index}`}>{p}</p>)}
                 <div className="question-block">
                   <div className="question-label">問題 1</div>
                   <h3>{lesson.reading.question.prompt}</h3>
@@ -327,7 +377,7 @@ export default function App() {
                     <div className={`result-panel ${answerIsCorrect ? 'success' : 'error'}`}>
                       <div className="result-title"><Icon name={answerIsCorrect ? 'check' : 'target'} size={19} /><strong>{answerIsCorrect ? '回答正确' : `正确答案：${String.fromCharCode(65 + lesson.reading.question.answer)}`}</strong></div>
                       <p>{lesson.reading.question.explanation}</p>
-                      <div className="option-notes">{lesson.reading.question.optionNotes.map((note, index) => <p key={note}><b>{String.fromCharCode(65 + index)}</b>{note}</p>)}</div>
+                      <div className="option-notes">{lesson.reading.question.optionNotes.map((note, index) => <p key={`${lesson.date}-note-${index}`}><b>{String.fromCharCode(65 + index)}</b>{note}</p>)}</div>
                     </div>
                   )}
                 </div>
@@ -337,16 +387,16 @@ export default function App() {
 
           {active === 'review' && (
             <div className="page-enter">
-              <SectionHeader eyebrow="REVIEW" title="错题与薄弱项复习" description="这里会集中显示你标记“需要复习”的词汇、文法，以及答错的读解题。" />
+              <SectionHeader eyebrow="REVIEW" title="错题与薄弱项复习" description="历史日期会显示当时单独推送过的错题复习重点；你后来手动标记的项目也会继续追加在这里。" />
               {reviewItems.length === 0 ? (
-                <div className="empty-state"><div className="empty-icon"><Icon name="check" size={26} /></div><h3>今天暂时没有待复习项目</h3><p>在词汇或文法卡片里点“需要复习”，或完成一次读解答题后，这里会自动汇总。</p><button className="text-btn" onClick={() => go('vocabulary')}>去做今日学习</button></div>
+                <div className="empty-state"><div className="empty-icon"><Icon name="check" size={26} /></div><h3>这天没有待复习项目</h3><p>在词汇或文法卡片里点“需要复习”，或完成一次读解答题后，这里会自动汇总。</p><button className="text-btn" onClick={() => go('vocabulary')}>去做学习</button></div>
               ) : (
                 <div className="review-list">
-                  {reviewItems.map((item, index) => <div className="review-row" key={`${item.type}-${item.title}`}><span className="review-number">{index + 1}</span><span className="review-type">{item.type}</span><div><strong>{item.title}</strong><p>{item.detail}</p></div><Icon name="arrow" size={17} /></div>)}
+                  {reviewItems.map((item, index) => <div className="review-row" key={`${item.type}-${item.title}-${index}`}><span className="review-number">{index + 1}</span><span className="review-type">{item.type}</span><div><strong>{item.title}</strong><p>{item.detail}</p></div><Icon name="arrow" size={17} /></div>)}
                 </div>
               )}
               <section className="spaced-review">
-                <div><span className="section-index">SPACED REVIEW</span><h3>推荐复习节奏</h3><p>掌握后仍建议在间隔中重新主动回忆，而不是反复重读。</p></div>
+                <div><span className="section-index">SPACED REVIEW</span><h3>推荐复习节奏</h3><p>旧错题已按当日内容合并；掌握后仍建议在间隔中主动回忆，而不是反复重读。</p></div>
                 <div className="intervals"><span>1 天</span><i /><span>3 天</span><i /><span>7 天</span><i /><span>14 天</span><i /><span>30 天</span></div>
               </section>
             </div>
@@ -354,24 +404,28 @@ export default function App() {
 
           {active === 'history' && (
             <div className="page-enter">
-              <SectionHeader eyebrow="HISTORY" title="学习记录" description="用连续学习和正确率观察趋势，不追求一次全部记住。" />
+              <SectionHeader eyebrow="HISTORY" title="N1 沉浸式陪练历史日报" description="已收录从 2026-08-30 Day 1 起的日报。早期分开的陪练与错题复习已经合并为同一天的一份内容。" />
               <section className="history-summary">
-                <div><span>连续学习</span><strong>{progress.streak}<small> days</small></strong></div>
-                <div><span>近 5 日平均正确率</span><strong>{Math.round(historyItems.reduce((sum, item) => sum + item.score, 0) / historyItems.length)}<small>%</small></strong></div>
-                <div><span>本周学习</span><strong>{progress.minutesThisWeek}<small> min</small></strong></div>
+                <div><span>当前计划</span><strong>{latestLesson.day}<small> / 99</small></strong></div>
+                <div><span>已收录日报</span><strong>{historyItems.length}<small> 天</small></strong></div>
+                <div><span>旧推送已合并</span><strong>{historyItems.filter((item) => item.merged).length}<small> 天</small></strong></div>
               </section>
               <div className="history-table-wrap">
-                <div className="history-head"><span>日期</span><span>主题</span><span>用时</span><span>正确率</span></div>
-                {historyItems.map((item, index) => (
-                  <div className="history-row" key={item.date}>
-                    <span><b>{item.date.slice(5).replace('-', '/')}</b><small>{index === 0 ? '今天' : `${index} 天前`}</small></span>
-                    <span className="history-title">{item.title}</span>
-                    <span>{item.minutes} min</span>
-                    <span className="score-cell"><b>{item.score}%</b><i><em style={{ width: `${item.score}%` }} /></i></span>
-                  </div>
-                ))}
+                <div className="history-head"><span>日期</span><span>主题</span><span>用时</span><span>状态</span></div>
+                {historyItems.map((item) => {
+                  const current = item.date === lesson.date
+                  const latest = item.date === latestLesson.date
+                  return (
+                    <button className={`history-row history-row-button ${current ? 'selected' : ''}`} key={item.date} onClick={() => openLesson(item.date)}>
+                      <span><b>{item.date.slice(5).replace('-', '/')}</b><small>Day {item.day}</small></span>
+                      <span className="history-title">{item.title}</span>
+                      <span>{item.minutes} min</span>
+                      <span className={`history-status ${item.merged ? 'merged' : ''}`}>{latest ? '今天' : item.merged ? '历史合并' : '已收录'}</span>
+                    </button>
+                  )
+                })}
               </div>
-              <div className="history-note"><Icon name="layers" size={20} /><p>下一阶段可以把每天推送的内容按同一数据结构写入 <code>src/data</code>，历史页面就能直接扩展为完整日历与搜索。</p></div>
+              <div className="history-note"><Icon name="layers" size={20} /><p>8/30～9/4 期间原本分开的「N1 沉浸式陪练」与「错题复习」已经按日期合并。之后的日报也使用同一数据结构，所以切换任意日期都能继续查看沉浸阅读、词汇、文法、读解和当日错题。</p></div>
             </div>
           )}
         </div>

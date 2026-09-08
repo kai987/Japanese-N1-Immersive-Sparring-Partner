@@ -1,0 +1,100 @@
+/* Historical daily lesson controls. Kept separate so the original reading design stays unchanged. */
+.date-switcher {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.date-nav-btn {
+  width: 31px;
+  height: 31px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 9px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  color: var(--text-soft);
+  flex: 0 0 auto;
+}
+
+.date-nav-btn:hover:not(:disabled) {
+  color: var(--text);
+  border-color: var(--border-strong);
+}
+
+.date-nav-btn:disabled {
+  opacity: .28;
+  cursor: default;
+}
+
+.date-nav-prev svg { transform: rotate(180deg); }
+
+.archive-note {
+  margin: 0 0 22px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-soft);
+  border-radius: 12px;
+  padding: 13px 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.archive-note svg { color: var(--accent); flex: 0 0 auto; margin-top: 2px; }
+.archive-note.merged { background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 25%, var(--border)); }
+
+.history-row-button {
+  width: 100%;
+  appearance: none;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+}
+
+.history-row-button:hover {
+  background: color-mix(in srgb, var(--surface) 62%, transparent);
+}
+
+.history-row-button.selected {
+  background: var(--accent-soft);
+}
+
+.history-status {
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  min-height: 27px;
+  padding: 4px 9px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--text-soft);
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.history-status.merged {
+  color: var(--accent);
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
+  background: var(--accent-soft);
+}
+
+@media (max-width: 680px) {
+  .date-switcher { gap: 6px; min-width: 0; }
+  .date-switcher .date-block strong { font-size: 12px; white-space: nowrap; }
+  .date-switcher .date-block span { font-size: 10px; }
+  .date-nav-btn { width: 29px; height: 29px; }
+  .archive-note { font-size: 13px; padding: 12px 13px; }
+  .history-row-button { display: grid; }
+  .history-status { grid-column: 2; font-size: 10px; margin-top: 2px; }
+}
