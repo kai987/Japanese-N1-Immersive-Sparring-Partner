@@ -1,5 +1,5 @@
-import type { DailyLesson, GrammarItem, VocabularyItem } from '../types'
-import { lesson as rawLatestLesson } from './lesson'
+import type { DailyLesson, GrammarItem, VocabularyItem } from '../types.ts'
+import { lesson as rawLatestLesson } from './lesson.ts'
 
 type ReviewFocus = { type: '词汇' | '文法' | '读解'; title: string; detail: string }
 type HistoryItem = { date: string; day: number; title: string; minutes: number; merged: boolean }

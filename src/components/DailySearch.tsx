@@ -82,15 +82,15 @@ const makeSnippet = (text: string, query: string) => {
 
 const lessonChunks = (lesson: DailyLesson): SearchChunk[] => {
   const chunks: SearchChunk[] = [
-    { section: 'today', label: '主题', text: `${lesson.title} ${lesson.subtitle}`, priority: 38 },
-    { section: 'immersion', label: '沉浸阅读', text: `${lesson.immersion.title} ${lesson.immersion.paragraphs.join(' ')} ${lesson.immersion.translations.join(' ')} ${lesson.immersion.analysis.join(' ')}`, priority: 25 },
-    { section: 'reading', label: '读解', text: `${lesson.reading.title} ${lesson.reading.paragraphs.join(' ')} ${lesson.reading.question.prompt} ${lesson.reading.question.options.join(' ')} ${lesson.reading.question.explanation}`, priority: 22 },
+    { section: 'today', label: 'テーマ', text: `${lesson.title} ${lesson.subtitle}`, priority: 38 },
+    { section: 'immersion', label: '没入読解', text: `${lesson.immersion.title} ${lesson.immersion.paragraphs.join(' ')} ${lesson.immersion.translations.join(' ')} ${lesson.immersion.analysis.join(' ')}`, priority: 25 },
+    { section: 'reading', label: '読解', text: `${lesson.reading.title} ${lesson.reading.paragraphs.join(' ')} ${lesson.reading.question.prompt} ${lesson.reading.question.options.join(' ')} ${lesson.reading.question.explanation}`, priority: 22 },
   ]
 
   lesson.vocabulary.forEach((item) => {
     chunks.push({
       section: 'vocabulary',
-      label: `词汇 · ${item.word}`,
+      label: `語彙 · ${item.word}`,
       text: [item.word, item.reading, item.meaning, item.partOfSpeech, item.example, item.translation, ...item.collocations, item.nuance].join(' '),
       priority: 34,
     })
@@ -106,18 +106,20 @@ const lessonChunks = (lesson: DailyLesson): SearchChunk[] => {
   })
 
   ;(reviewFocusByDate[lesson.date] ?? []).forEach((item) => {
-    chunks.push({ section: 'review', label: `错题复习 · ${item.type}`, text: `${item.title} ${item.detail}`, priority: 30 })
+    chunks.push({ section: 'review', label: `誤答復習 · ${item.type === '词汇' ? '語彙' : item.type === '读解' ? '読解' : item.type}`, text: `${item.title} ${item.detail}`, priority: 30 })
   })
 
   return chunks
 }
 
+const searchIndex = lessons.map(lesson => ({ lesson, chunks: lessonChunks(lesson) }))
+
 const searchLessons = (query: string): SearchResult[] => {
   if (!normalize(query)) return []
 
-  return lessons
-    .map((lesson) => {
-      const scored = lessonChunks(lesson)
+  return searchIndex
+    .map(({ lesson, chunks }) => {
+      const scored = chunks
         .map((chunk) => ({ ...chunk, score: scoreText(query, chunk.text, chunk.priority) }))
         .filter((chunk) => chunk.score > 0)
         .sort((a, b) => b.score - a.score)
@@ -182,19 +184,19 @@ export function DailySearch({ onOpen }: { onOpen: (date: string, section: Sectio
             if (event.key === 'Escape') setOpen(false)
             if (event.key === 'Enter' && results[0]) choose(results[0])
           }}
-          placeholder="搜索日报：词汇、文法、AI、Security…"
-          aria-label="模糊搜索每天的N1日报内容"
+          placeholder="教材を検索：語彙、文法、AI…"
+          aria-label="毎日のN1教材を検索"
           autoComplete="off"
           spellCheck={false}
         />
-        {query ? <button className="daily-search-clear" onClick={() => setQuery('')} aria-label="清除搜索">×</button> : <span className="daily-search-hint">⌘ K</span>}
+        {query ? <button className="daily-search-clear" onClick={() => setQuery('')} aria-label="検索をクリア">×</button> : <span className="daily-search-hint">⌘ K</span>}
       </div>
 
       {open && query.trim() ? (
-        <div className="daily-search-results" role="listbox" aria-label="日报搜索结果">
+        <div className="daily-search-results" role="region" aria-label="教材の検索結果">
           <div className="daily-search-results-head">
-            <span>{results.length ? `找到 ${results.length} 天` : '没有匹配结果'}</span>
-            <small>支持日文、中文、读音和部分关键词</small>
+            <span>{results.length ? `${results.length}日分を表示（最大8件）` : '一致する教材がありません'}</span>
+            <small>日本語・中国語・読み・キーワードで検索できます</small>
           </div>
           {results.map((result) => (
             <button key={result.date} className="daily-search-result" onMouseDown={(event) => event.preventDefault()} onClick={() => choose(result)}>
@@ -204,10 +206,10 @@ export function DailySearch({ onOpen }: { onOpen: (date: string, section: Sectio
                 <strong>{result.title}</strong>
                 <small>{result.snippet}</small>
               </span>
-              <span className="daily-search-count">{result.hits > 1 ? `${result.hits}处` : '1处'}</span>
+              <span className="daily-search-count">{result.hits > 1 ? `${result.hits}か所` : '1か所'}</span>
             </button>
           ))}
-          {!results.length ? <div className="daily-search-empty">换一个较短的关键词，或尝试日文读音，例如「かんかつ」「Security」「権限」。</div> : null}
+          {!results.length ? <div className="daily-search-empty">短いキーワードや読みで検索してみましょう。例：「かんかつ」「Security」「権限」。</div> : null}
         </div>
       ) : null}
     </div>

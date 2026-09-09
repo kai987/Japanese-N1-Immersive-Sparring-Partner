@@ -1,80 +1,67 @@
 # Japanese N1 Immersive Sparring Partner
 
-A calm, reading-first JLPT N1 daily learning dashboard built with React, TypeScript and Vite.
+React・TypeScript・Viteで作る、99日間のN1学習アプリです。
+UIは日本語、教材の対訳・語義・解説には日本語と中国語を使用しています。
 
-## First version
+## 開発と検証
 
-The current UI turns a daily N1 practice message into a reusable learning flow:
-
-- Daily dashboard with progress and study route
-- Immersive reading with **Japanese only / bilingual / analysis** modes
-- N1 vocabulary cards with collocations, nuance and examples
-- N1 grammar cards with register, form, frequency and comparisons
-- JLPT-style reading comprehension with answer explanations
-- Automatic review list for items marked “需要复习” and incorrect reading answers
-- Learning history and lightweight progress overview
-- Light / dark reading themes
-- Responsive desktop and mobile layouts
-- Local persistence via `localStorage` (no backend required for v1)
-
-## Design principles
-
-This project is optimized for longer reading sessions rather than high-density dashboard visuals:
-
-- low-saturation neutral backgrounds
-- restrained indigo / teal accents
-- high-contrast but soft text colors
-- generous Japanese line-height
-- serif Japanese reading surface, sans-serif UI chrome
-- minimal shadows and borders
-- reduced-motion support
-- keyboard focus states
-
-## Run locally
+Node.js 24を使用します。依存バージョンと `package-lock.json` を管理しています。
 
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 
-Build:
+```bash
+npm test                 # 保存データ移行・日付・選択肢・教材取り込み
+npm run build            # 型検査・教材検証・本番ビルド
+npx playwright install chromium
+npm run test:e2e         # 本番プレビューを自動起動してブラウザー検証
+```
+
+ブラウザーテストはポート4173を使用し、結果と画像はOSの一時ディレクトリに出力します。
+GitHub Pagesのワークフローでもテストとビルドを通してから公開します。
+
+## 学習と記録
+
+- 没入読解は「日本語のみ」「日中対訳」「解説」を切り替えられます。
+- 語彙・文法を「要復習」「習得済み」に分類できます。
+- 読解は回答後に再挑戦でき、以前の回答履歴を保持します。再挑戦を中断しても前回の結果は残ります。
+- 読解の選択肢は日ごとに表示順を変えます。保存には元の選択肢番号を使うため、旧回答の意味を維持します。
+- 誤答は復習一覧から問題へ戻れます。再挑戦で正解すると、その問題の自動復習項目が消えます。
+- 連続学習日数は、読了・語彙／文法の状態変更・読解回答を行った実際の日付（日本時間）から計算します。当日未学習の場合は昨日までの連続日数を表示します。
+- 旧版には実際の学習日付がないため、固定表示されていた「11日」は引き継ぎません。語彙・文法・回答・読了記録は保持します。旧回答の日時は「日付不明」と表示します。
+- 記録はこのブラウザーの `localStorage` に保存します。書き込みに失敗しても学習は続行でき、画面の「保存を再試行」で再保存できます。
+- 不正な記録は検証して修復します。読み込めた項目は保持し、修復した場合は画面に案内を表示します。
+
+複数端末の同期、復習日の自動通知は未実装です。ブラウザーのサイトデータを削除すると記録は消えます。
+
+## 日次教材の取り込み
+
+既存教材は `src/data/lesson.ts` と `src/data/history-legacy.ts`、新しい教材は
+`src/data/daily/YYYY-MM-DD.json` で管理します。構造は [日次教材の仕様](src/data/daily/README.md) を参照してください。
 
 ```bash
+npm run import:daily -- /path/to/2026-09-10.json
+npm run validate:content
 npm run build
 ```
 
-## Content structure
+インポートは全体を検証した後、対象日のファイルだけを置き換えます。同じ日を再実行しても教材は増殖しません。不正なファイルで既存教材を上書きしません。
 
-Daily lesson content is currently defined in:
+検証内容：必須項目、実在する日付、開始日（2026-08-30）とDayの一致、ファイル名、日付付きID、IDの重複、本文・対訳・解説の段落数、選択肢と正解番号。
+同日のJSONは旧教材より優先されます。アーカイブ一覧と検索にも自動で反映されます。
 
-```text
-src/data/lesson.ts
-```
+日報の生成元からの取得・生成・Gitへの送信は、このリポジトリには含まれていません。
+外部の生成処理がJSONを書き出した後、上記のコマンドで取り込み、変更を `main` にpushすると既存のGitHub Pagesワークフローが検証・公開します。
+このコマンド自体はcommit・push・公開を行いません。
 
-The data is separated from the UI so future daily pushes can be exported into the same structure without rewriting components.
+## 主な構成
 
-A next iteration can move from one lesson module to date-based JSON/TS files, for example:
-
-```text
-src/data/lessons/
-  2026-09-09.json
-  2026-09-10.json
-  2026-09-11.json
-```
-
-## Future roadmap
-
-1. Date-based lesson loader and full calendar
-2. Search across vocabulary / grammar / past lessons
-3. Spaced-repetition scheduler (1 → 3 → 7 → 14 → 30 days)
-4. Supabase sync for progress across devices
-5. Daily content import pipeline shared with the ChatGPT push format
-6. Audio / shadowing mode for selected passages
-
-## Tech stack
-
-- React
-- TypeScript
-- Vite
-- Plain CSS design system
-- Browser `localStorage`
+- `src/App.tsx`：画面と学習操作
+- `src/components/ReadingExercise.tsx`：回答・再挑戦・履歴
+- `src/lib/progress.ts`：旧データ移行・保存データ検証・連続日数
+- `src/lib/reading.ts`：選択肢の表示順と元番号の対応
+- `src/lib/archive.ts`：教材検証と日付別の統合
+- `scripts/import-daily.ts`：検証付きの日次取り込み
+- `tests/`：単体・ブラウザー回帰テスト

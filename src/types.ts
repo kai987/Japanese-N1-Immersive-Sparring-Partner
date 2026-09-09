@@ -58,11 +58,16 @@ export interface DailyLesson {
   }
 }
 
+export interface ReadingAttempt {
+  answer: number
+  at: string | null
+}
+
 export interface StoredProgress {
+  version: 2
   vocab: Record<string, LearningStatus>
   grammar: Record<string, LearningStatus>
   readingAnswers: Record<string, number>
-  completedSections: SectionId[]
-  streak: number
-  minutesThisWeek: number
+  readingAttempts: Record<string, ReadingAttempt[]>
+  studyDates: string[]
 }

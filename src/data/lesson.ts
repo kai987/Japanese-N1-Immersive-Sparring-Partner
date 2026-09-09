@@ -1,4 +1,4 @@
-import type { DailyLesson } from '../types'
+import type { DailyLesson } from '../types.ts'
 
 export const lesson: DailyLesson = {
   date: '2026-09-09',

@@ -60,7 +60,7 @@ export function DateDropdown({
       >
         <span className="date-dropdown-copy">
           <strong>{formatCurrentDate(date)}</strong>
-          <small>Day {day} · 99日N1计划</small>
+          <small>Day {day} · 99日N1計画</small>
         </span>
         <svg className={open ? 'open' : ''} viewBox="0 0 24 24" aria-hidden="true">
           <path d="m7 9 5 5 5-5" />
@@ -68,10 +68,10 @@ export function DateDropdown({
       </button>
 
       {open ? (
-        <div className="date-dropdown-menu" role="listbox" aria-label="选择日报日期">
+        <div className="date-dropdown-menu" role="listbox" aria-label="教材の日付を選ぶ">
           <div className="date-dropdown-head">
-            <strong>历史日报</strong>
-            <span>{historyItems.length} 天</span>
+            <strong>学習アーカイブ</strong>
+            <span>{historyItems.length} 日</span>
           </div>
           <div className="date-dropdown-list">
             {historyItems.map((item) => {

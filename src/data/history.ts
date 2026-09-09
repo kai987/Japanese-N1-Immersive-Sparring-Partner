@@ -6,33 +6,15 @@ import {
   reviewFocusByDate as legacyReviewFocusByDate,
 } from './history-legacy'
 
-type ReviewFocus = { type: '词汇' | '文法' | '读解'; title: string; detail: string }
+import { mergeArchives, type ReviewFocus } from '../lib/archive'
 type HistoryItem = { date: string; day: number; title: string; minutes: number; merged: boolean }
-type DailyArchiveFile = {
-  lesson: DailyLesson
-  reviewFocus?: ReviewFocus[]
-  merged?: boolean
-}
 
-// Any YYYY-MM-DD.json added under ./daily is picked up automatically by Vite.
-// Generated entries override a legacy entry with the same date, so the daily
-// automation only needs to create/update one JSON file per day.
-const generatedModules = import.meta.glob('./daily/*.json', {
-  eager: true,
-  import: 'default',
-}) as Record<string, DailyArchiveFile>
-
-const generatedEntries = Object.values(generatedModules).filter(
-  (entry): entry is DailyArchiveFile => Boolean(entry?.lesson?.date),
-)
-
+const modules = import.meta.glob('./daily/*.json', { eager: true, import: 'default' })
+const catalog = mergeArchives(legacyLessons, modules)
+const generatedEntries = catalog.generated
 const generatedByDate = new Map(generatedEntries.map((entry) => [entry.lesson.date, entry]))
-const lessonByDate = new Map<string, DailyLesson>()
-
-legacyLessons.forEach((item) => lessonByDate.set(item.date, item))
-generatedEntries.forEach((entry) => lessonByDate.set(entry.lesson.date, entry.lesson))
-
-export const lessons: DailyLesson[] = [...lessonByDate.values()].sort((a, b) => b.date.localeCompare(a.date))
+const lessonByDate = catalog.byDate
+export const lessons: DailyLesson[] = catalog.lessons
 export const lesson: DailyLesson = lessons[0] ?? legacyLatestLesson
 export const getLessonByDate = (date: string) => lessonByDate.get(date) ?? lesson
 

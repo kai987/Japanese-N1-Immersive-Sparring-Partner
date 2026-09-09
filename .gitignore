@@ -3,3 +3,9 @@ dist
 .vite
 .DS_Store
 *.local
+
+*.tsbuildinfo
+vite.config.js
+vite.config.d.ts
+/test-results/
+/playwright-report/
