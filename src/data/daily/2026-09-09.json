@@ -1,0 +1,264 @@
+{
+  "lesson": {
+    "date": "2026-09-09",
+    "day": 11,
+    "title": "日本IBM：AI時代に企業の真の競争力とは何か",
+    "subtitle": "Think Japanを手掛かりに、企業知識・制御層・AI協働の関係を読む",
+    "estimatedMinutes": 35,
+    "immersion": {
+      "title": "日本IBMが年次イベント「Think Japan」を開催、村田新社長が新たな行動指針「3+1」を表明",
+      "paragraphs": [
+        "AI時代の企業競争力を考えるうえで重要なのは、知見をただ蓄積することではなく、組織の知識をAIと協働できる形へ再構築し、継続的に活用できる資産にすることである。",
+        "この日の学習では、Enterprise AIを「業務アプリケーション層・モデル層・リソース層・制御層・企業知識層」という五つの層で捉えた。なかでも企業知識層と制御層をモデルから切り分けることで、モデルが変わっても企業固有の知識や権限ルールを引き継げるという考え方が焦点となった。",
+        "日本IBMの事例として、約20万人のIBM社員がIBM Consulting Advantageを利用し、約15万人がAI開発エージェント「IBM Bob」を利用していることも取り上げた。AI導入を単なるツール追加ではなく、知識・権限・業務プロセスを含む組織的な再設計として捉えることが、この日の主読のポイントである。"
+      ],
+      "translations": [
+        "思考 AI 时代的企业竞争力时，重要的并不是单纯积累经验与知识，而是把组织知识重新构造成能够与 AI 协作的形态，并作为可持续利用的资产。",
+        "当天学习把 Enterprise AI 分为五层：业务应用层、模型层、资源层、控制层、企业知识层。重点尤其在于把企业知识层与控制层从模型本身分离出来，从而即使更换模型，也能继续沿用企业特有的知识和权限规则。",
+        "日报还提到，日本 IBM 的案例中约 20 万名 IBM 员工使用 IBM Consulting Advantage，约 15 万名员工使用 AI 开发 Agent「IBM Bob」。当天主读的重点，是把 AI 导入视为包括知识、权限和业务流程在内的组织级重新设计，而不只是增加一个工具。"
+      ],
+      "analysis": [
+        "「ただ～だけでなく、～」把重点从“积累”推进到“可与AI协作的再构筑”，是典型的对比—提升结构。",
+        "五层结构中，模型层是可替换部件，而企业知识层与制御層承担持续性与治理功能。读解时要抓住“什么应随模型变化、什么应持续保留”的对立。",
+        "数字用于说明企业内部AI工具已进入大规模使用阶段；主旨并不在数字本身，而在“知识资产化＋权限治理＋AI协作”的整体设计。"
+      ]
+    },
+    "vocabulary": [
+      {
+        "id": "2026-09-09-v-001",
+        "word": "乗っ取る",
+        "reading": "のっとる",
+        "meaning": "劫持、夺取账号或系统的控制权",
+        "jlpt": "N1",
+        "partOfSpeech": "動詞・五段",
+        "example": "AIアカウントを乗っ取られても被害が拡大しないよう、QuotaとCredentialを分離します。",
+        "translation": "为避免 AI 账号被劫持后影响扩大，将 Quota 与 Credential 分离。",
+        "collocations": ["アカウントを乗っ取る", "セッションを乗っ取る", "AI環境を乗っ取る"],
+        "nuance": "比「盗む」更强调取得后持续控制。"
+      },
+      {
+        "id": "2026-09-09-v-002",
+        "word": "絞る",
+        "reading": "しぼる",
+        "meaning": "缩小、限定范围",
+        "jlpt": "N1",
+        "partOfSpeech": "動詞・五段",
+        "example": "最初のSecurity対策では、守るRiskと攻撃経路を一つに絞ります。",
+        "translation": "初期 Security 对策先聚焦一个风险和攻击路径。",
+        "collocations": ["Riskを絞る", "対策範囲を絞る", "権限を絞る"],
+        "nuance": "日本 IT 现场常用于 Scope、Permission 和 Candidate。"
+      },
+      {
+        "id": "2026-09-09-v-003",
+        "word": "迂回する",
+        "reading": "うかいする",
+        "meaning": "绕过控制",
+        "jlpt": "N1",
+        "partOfSpeech": "動詞・サ変",
+        "example": "Sandbox失敗時の迂回実行をPolicyで無効化します。",
+        "translation": "通过 Policy 禁止 Sandbox 失败后的绕过执行。",
+        "collocations": ["制御を迂回する", "Sandboxを迂回する", "認証を迂回する"],
+        "nuance": "Security 中接近 bypass。"
+      },
+      {
+        "id": "2026-09-09-v-004",
+        "word": "差し替える",
+        "reading": "さしかえる",
+        "meaning": "替换、把一个值换成另一个值",
+        "jlpt": "N1",
+        "partOfSpeech": "動詞・一段",
+        "example": "実CredentialはAgentに見せず、Network出口で代理Tokenを差し替えます。",
+        "translation": "不向 Agent 暴露真实 Credential，而在网络出口替换代理 Token。",
+        "collocations": ["Tokenを差し替える", "値を差し替える", "Credentialを差し替える"],
+        "nuance": "常用于 Token、Config、File 等具体对象的替换。"
+      },
+      {
+        "id": "2026-09-09-v-005",
+        "word": "脆弱な",
+        "reading": "ぜいじゃくな",
+        "meaning": "脆弱的、容易被攻击或破坏的",
+        "jlpt": "N1",
+        "partOfSpeech": "な形容詞",
+        "example": "DooD構成ではHostへの境界が脆弱になる場合があります。",
+        "translation": "DooD 架构下 Host 边界可能变弱。",
+        "collocations": ["脆弱な設定", "脆弱な環境", "脆弱な境界"],
+        "nuance": "Security 中对应 vulnerable，不是单纯性能差。"
+      },
+      {
+        "id": "2026-09-09-v-006",
+        "word": "決定論的な",
+        "reading": "けっていろんてきな",
+        "meaning": "在相同条件下稳定得到相同结果的、确定性的",
+        "jlpt": "N1",
+        "partOfSpeech": "な形容詞",
+        "example": "Migrationの重要な判定は決定論的な処理として残します。",
+        "translation": "把迁移中的关键判断保留为确定性处理。",
+        "collocations": ["決定論的な処理", "決定論的な手法", "決定論的に実行する"],
+        "nuance": "比「確実な」更强调同条件下的再现性。"
+      },
+      {
+        "id": "2026-09-09-v-007",
+        "word": "一貫して",
+        "reading": "いっかんして",
+        "meaning": "一贯地、始终保持同一标准",
+        "jlpt": "N1",
+        "partOfSpeech": "副詞",
+        "example": "担当者が変わっても一貫して変更履歴を追跡します。",
+        "translation": "即使负责人变化，也一贯追踪变更历史。",
+        "collocations": ["一貫して管理する", "一貫して追跡する", "一貫した方法"],
+        "nuance": "比「ずっと」正式，强调方针与品质不变。"
+      },
+      {
+        "id": "2026-09-09-v-008",
+        "word": "大幅に",
+        "reading": "おおはばに",
+        "meaning": "大幅地、显著地",
+        "jlpt": "N1",
+        "partOfSpeech": "副詞",
+        "example": "AIで移行計画の作成時間を大幅に短縮しても、Reviewを省略しません。",
+        "translation": "即使 AI 显著缩短迁移规划时间，也不省略 Review。",
+        "collocations": ["大幅に短縮する", "大幅に削減する", "大幅に改善する"],
+        "nuance": "比「かなり」更适合报告和数值变化。"
+      },
+      {
+        "id": "2026-09-09-v-009",
+        "word": "足掛かり",
+        "reading": "あしがかり",
+        "meaning": "突破口、后续行动的入口",
+        "jlpt": "N1",
+        "partOfSpeech": "名詞",
+        "example": "露出したTokenがCloud侵入の足掛かりにならないよう失効させます。",
+        "translation": "让暴露 Token 失效，避免成为 Cloud 侵入的突破口。",
+        "collocations": ["攻撃の足掛かり", "侵入の足掛かり", "足掛かりにする"],
+        "nuance": "Security 中常表示 Attack Chain 起点。"
+      },
+      {
+        "id": "2026-09-09-v-010",
+        "word": "境界",
+        "reading": "きょうかい",
+        "meaning": "边界、Trust 或 Permission 的分界",
+        "jlpt": "N1",
+        "partOfSpeech": "名詞",
+        "example": "Agentの実行環境とCredential保管の境界を分離します。",
+        "translation": "分离 Agent 执行环境与 Credential 保存边界。",
+        "collocations": ["Security境界", "実行境界", "境界を強制する"],
+        "nuance": "Architecture 中可表示 Trust Boundary。"
+      }
+    ],
+    "grammar": [
+      {
+        "id": "2026-09-09-g-001",
+        "pattern": "～にとどまらず",
+        "meaning": "不止于……、不仅限于……",
+        "form": "名詞 + にとどまらず / 動詞辞書形 + にとどまらず",
+        "register": "書面語・フォーマル",
+        "frequency": 4,
+        "explanation": "用于说明风险或影响范围超出最初的一项。当天 C 部分用它说明 LLM Jacking 从费用滥用扩展到 Model、RAG 与知识产权。",
+        "example": "LLMジャッキングは利用料の不正消費にとどまらず、ModelやRAG資産の流出につながる可能性があります。",
+        "translation": "LLM Jacking 不止会造成费用滥用，也可能导致 Model 与 RAG 资产流出。",
+        "comparison": "「～だけでなく」也表示“不仅”，但「～にとどまらず」书面感更强，强调范围没有停留在某一点。"
+      },
+      {
+        "id": "2026-09-09-g-002",
+        "pattern": "～かねない",
+        "meaning": "有可能导致……，带明显风险警示",
+        "form": "動詞ます形去ます + かねない",
+        "register": "書面語・フォーマル",
+        "frequency": 5,
+        "explanation": "适合描述不希望发生但存在现实风险的结果。当天 C 部分用于说明 Credential 泄漏后的严重后果。",
+        "example": "AI ToolのLocal Configを平文で残すと、Cloud全体の乗っ取りにつながりかねません。",
+        "translation": "明文保存 AI Tool Config 可能导致整个 Cloud 被劫持。",
+        "comparison": "「～おそれがある」同样表示风险；「～かねない」更直接地强调说话人对负面结果的警戒。"
+      },
+      {
+        "id": "2026-09-09-g-003",
+        "pattern": "～に至るまで",
+        "meaning": "从……一直到……、甚至包括……",
+        "form": "名詞 + に至るまで",
+        "register": "書面語・フォーマル",
+        "frequency": 4,
+        "explanation": "用于列举范围的终点，突出覆盖面之广。当天 C 部分用于说明 Muse 的 External Action 范围。",
+        "example": "MuseはWeb操作からメール送信、購入に至るまで複数のActionを実行します。",
+        "translation": "Muse 能执行从 Web 操作一直到邮件发送、购买等动作。",
+        "comparison": "「～まで」只表示终点；「～に至るまで」更强调范围延伸到了该层级。"
+      },
+      {
+        "id": "2026-09-09-g-004",
+        "pattern": "～たうえで",
+        "meaning": "在完成……之后、以其为判断基础",
+        "form": "動詞た形 + 上で / 名詞 + の上で",
+        "register": "中立・ビジネス",
+        "frequency": 5,
+        "explanation": "表示先完成前项，再以其结果为基础做判断或决定。当天 C 部分用于 Migration 前的验证顺序。",
+        "example": "SELinux Policyを確認したうえで、Amazon Linux 2027への移行範囲を決めます。",
+        "translation": "确认 SELinux Policy 后再决定迁移范围。",
+        "comparison": "「～てから」只是时间顺序；「～たうえで」更强调前项是后项判断的前提。"
+      },
+      {
+        "id": "2026-09-09-g-005",
+        "pattern": "～に応じて",
+        "meaning": "根据……相应调整",
+        "form": "名詞 + に応じて / 名詞 + に応じた + 名詞",
+        "register": "中立・ビジネス",
+        "frequency": 5,
+        "explanation": "表示根据条件、程度或需求改变方法。当天 C 部分用于按 Task Risk 选择不同 Isolation Layer。",
+        "example": "開発TaskのRiskに応じてBash sandbox、Dev Container、Web実行を使い分けます。",
+        "translation": "根据 Task Risk 区分使用 Bash sandbox、Dev Container 与 Web Runtime。",
+        "comparison": "「～によって」可表示依据或原因；「～に応じて」更强调随条件变化而做相应调整。"
+      }
+    ],
+    "reading": {
+      "title": "企業知識はモデルと一緒に入れ替えるべきか",
+      "paragraphs": [
+        "企業が生成AIを導入するとき、モデルの性能だけを比較していては、長期的な競争力にはつながりにくい。モデルは今後も変わり得るからである。",
+        "そこで重要になるのが、企業固有の知識と権限ルールをモデルそのものから切り分け、企業知識層と制御層として持つ考え方だ。モデルを変更しても、知識とルールを引き継げれば、蓄積した資産を継続して活用できる。"
+      ],
+      "question": {
+        "id": "2026-09-09-q-main",
+        "prompt": "筆者が最も言いたいことは何か。",
+        "options": [
+          "最も性能の高いモデルを選び、すべての業務を一つのモデルに統一すべきだ。",
+          "知識の変化を防ぐため、一度導入したモデルはできるだけ長く固定すべきだ。",
+          "企業知識と権限ルールをモデルから分離し、モデルが変わっても資産を継続利用できるようにすべきだ。",
+          "AI導入では人間の判断を減らし、モデルの自動判断を優先すべきだ。"
+        ],
+        "answer": 2,
+        "explanation": "文章的核心不是固定某个模型，而是把企业知识与控制规则作为可持续资产独立出来，使模型更换后仍能继续利用。",
+        "optionNotes": [
+          "模型性能是变量，文章没有主张把所有业务统一到一个模型。",
+          "文章强调模型可能变化，因此不是要求长期固定模型。",
+          "与企业知识层、制御層以及模型更换后继续利用知识资产的主旨一致。",
+          "文章没有主张减少人类判断；控制与权限治理反而是重点。"
+        ]
+      }
+    }
+  },
+  "reviewFocus": [
+    {
+      "type": "文法",
+      "title": "Q34 ～みたいなところがある",
+      "detail": "复习表示“有……的一面／某种意义上像……”的用法，并重新区分「らしい」与「みたいなところがある」的语感。"
+    },
+    {
+      "type": "文法",
+      "title": "Q33 ～てくれたものだ",
+      "detail": "复习带讽刺、埋怨语气的「～してくれたものだ」，重点识别说话人对已发生行为的不满。"
+    },
+    {
+      "type": "词汇",
+      "title": "Q3 行政（ぎょうせい）",
+      "detail": "复习汉字读音与「行政機関・行政サービス」等常见搭配。"
+    },
+    {
+      "type": "词汇",
+      "title": "Q10 割り当てる",
+      "detail": "复习「仕事・役割・タスクを割り当てる」这一高频搭配，不把它与「引き渡す」混淆。"
+    },
+    {
+      "type": "读解",
+      "title": "企業知識・制御層・モデルの関係",
+      "detail": "复习如何从文章中区分可替换的模型与应持续保留的企业知识／权限治理，并据此判断主旨。"
+    }
+  ],
+  "merged": false
+}
