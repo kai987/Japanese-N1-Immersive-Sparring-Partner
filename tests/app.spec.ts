@@ -7,6 +7,8 @@ const question = latest.reading.question
 const wrongAnswer = (question.answer + 1) % 4
 const correctLetter = String.fromCharCode(65 + (latest.day - 1) % 4)
 const partialProgress = JSON.stringify({ vocab: { [latest.vocabulary[0].id]: 'mastered' }, readingAnswers: null })
+const canonicalDate = '2026-09-08'
+const canonicalDateIndex = catalog.findIndex((lesson) => lesson.date === canonicalDate)
 
 async function reading(page: import('@playwright/test').Page) {
   await page.getByRole('button', { name: '読解練習', exact: true }).click()
@@ -72,13 +74,14 @@ test('wrong answer can be retried from review without losing the earlier attempt
   await expect(page.locator('.answer-option:disabled')).toHaveCount(0)
 })
 test('old canonical answers remain correct after display reordering', async ({ page }) => {
+  expect(canonicalDateIndex).toBeGreaterThanOrEqual(0)
   await page.addInitScript(() => localStorage.setItem('n1-progress', JSON.stringify({
     vocab: { 'v-haaku': 'mastered' }, grammar: {}, readingAnswers: { '2026-09-08-q-main': 2 }, streak: 11,
   })))
   await page.goto('/')
   await expect(page.locator('.mini-streak')).toContainText('0日')
   await page.locator('.date-dropdown-trigger').click()
-  await page.locator('.date-dropdown-option').nth(1).click(); await reading(page)
+  await page.locator('.date-dropdown-option').nth(canonicalDateIndex).click(); await reading(page)
   await expect(page.locator('.result-title')).toHaveText('正解です')
   await expect(page.locator('.answer-option.correct .answer-letter')).toHaveText('B')
   await expect(page.locator('.answer-option.selected .answer-letter')).toHaveText('B')
