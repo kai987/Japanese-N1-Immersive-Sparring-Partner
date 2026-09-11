@@ -1,0 +1,264 @@
+{
+  "lesson": {
+    "date": "2026-09-11",
+    "day": 13,
+    "title": "生成AI時代、フィッシング攻撃はなぜ「違和感」だけで見抜きにくいのか",
+    "subtitle": "生成AIの普及によって、フィッシング対策はなぜ難しくなっているのでしょうか。",
+    "estimatedMinutes": 35,
+    "immersion": {
+      "title": "生成AIで高度化するフィッシングとサイバー攻撃",
+      "paragraphs": [
+        "NordVPNの2026年上半期の脅威情報では、日本で約26.8万件のマルウェア攻撃が検知され、国別統計で10位だったと報じられた。",
+        "同じ報告では、上半期に440万回を超えるフィッシング接続を阻止し、その99％がブランドのなりすましに関係していたとされる。",
+        "生成AIの進歩に伴って、粗雑な大量投下型の攻撃は、より自然で精巧な文章を使い、標的を絞った攻撃へ変化している。攻撃者は緊急性や不安、身近なブランドへの信頼も悪用するため、文章の違和感だけで見抜くことは難しくなっている。"
+      ],
+      "translations": [
+        "据 NordVPN 2026 年上半年的威胁信息报道，日本检测到约 26.8 万起恶意软件攻击，在其国家统计中排名第 10。",
+        "同一报告称，上半年阻止了超过 440 万次钓鱼连接，其中 99% 与品牌冒充有关。",
+        "随着生成式 AI 的进步，原本粗糙的大量投放型攻击正在变成使用更自然、更精巧文本并缩小目标范围的攻击。攻击者还会利用紧迫感、焦虑以及对熟悉品牌的信任，因此只凭文字中的违和感越来越难识破。"
+      ],
+      "analysis": [
+        "第一段要抓住新闻中的数量与排名，同时注意这些数字来自特定报告，不要脱离来源扩大解释。",
+        "第二段的重点是「440万回超」与「99％」之间的关系：后者说明被阻断的钓鱼连接中，品牌冒充占据了极高比例。",
+        "第三段是当天主旨：生成AI使攻击文本更自然、目标更明确，又叠加心理诱导，因此传统依赖“文章不自然”的判断线索变弱。"
+      ]
+    },
+    "vocabulary": [
+      {
+        "id": "2026-09-11-v-001",
+        "word": "仲介する",
+        "reading": "ちゅうかいする",
+        "meaning": "居中连接、作为中介协调两个主体",
+        "jlpt": "N1",
+        "partOfSpeech": "名詞・サ変動詞",
+        "example": "GatewayがAgentと複数のModel Providerの通信を仲介します。",
+        "translation": "Gateway 在 Agent 与多个 Model Provider 之间中介通信。",
+        "collocations": ["通信を仲介する", "取引を仲介する", "接続を仲介する"],
+        "nuance": "比「つなぐ」正式，强调自身处于两者之间并承担协调作用。"
+      },
+      {
+        "id": "2026-09-11-v-002",
+        "word": "絞り込む",
+        "reading": "しぼりこむ",
+        "meaning": "根据条件进一步筛选、缩小范围",
+        "jlpt": "N1",
+        "partOfSpeech": "動詞・五段",
+        "example": "利用者のRoleに応じて表示するToolを絞り込みます。",
+        "translation": "根据使用者 Role 筛选显示的 Tool。",
+        "collocations": ["候補を絞り込む", "利用できるToolを絞り込む", "条件で絞り込む"],
+        "nuance": "比「絞る」更强调从已有集合中逐步 Filter 到更小集合。"
+      },
+      {
+        "id": "2026-09-11-v-003",
+        "word": "耐える",
+        "reading": "たえる",
+        "meaning": "承受、经受某种压力而不失效",
+        "jlpt": "N1",
+        "partOfSpeech": "動詞・一段",
+        "example": "外部接続がなくても業務を継続できるか、閉域環境で確かめます。",
+        "translation": "在闭域环境确认没有外部连接时是否仍能持续业务。",
+        "collocations": ["負荷に耐える", "攻撃に耐える", "悪意ある入力に耐える"],
+        "nuance": "可用于人，也常用于 System Load、Failure、Adversarial Input。"
+      },
+      {
+        "id": "2026-09-11-v-004",
+        "word": "担う",
+        "reading": "になう",
+        "meaning": "承担职责、责任或重要功能",
+        "jlpt": "N1",
+        "partOfSpeech": "動詞・五段",
+        "example": "高Riskな最終判断はHuman Ownerが担います。",
+        "translation": "高风险的最终判断由 Human Owner 承担。",
+        "collocations": ["役割を担う", "判断を担う", "統制を担う"],
+        "nuance": "比「する」更强调职责归属和责任重量。"
+      },
+      {
+        "id": "2026-09-11-v-005",
+        "word": "過度な",
+        "reading": "かどな",
+        "meaning": "超过合理程度的、过度的",
+        "jlpt": "N1",
+        "partOfSpeech": "な形容詞",
+        "example": "過度な禁止Ruleだけでは、現場のShadow AIを増やす可能性があります。",
+        "translation": "仅靠过度禁止规则可能增加现场 Shadow AI。",
+        "collocations": ["過度な制限", "過度な依存", "過度に恐れる"],
+        "nuance": "带有超出适当范围的评价色彩，比「厳しい」更强调程度失衡。"
+      },
+      {
+        "id": "2026-09-11-v-006",
+        "word": "細かな",
+        "reading": "こまかな",
+        "meaning": "细致的、颗粒度很细的",
+        "jlpt": "N1",
+        "partOfSpeech": "な形容詞",
+        "example": "業界固有の細かな判断RuleをInterviewで明らかにします。",
+        "translation": "通过 Interview 明确行业固有的细致判断规则。",
+        "collocations": ["細かな判断", "細かな設定", "細かな違い"],
+        "nuance": "可描述 Detail 多，也可描述需要谨慎区分的微小差异。"
+      },
+      {
+        "id": "2026-09-11-v-007",
+        "word": "一元的に",
+        "reading": "いちげんてきに",
+        "meaning": "统一归到一个管理体系中",
+        "jlpt": "N1",
+        "partOfSpeech": "副詞",
+        "example": "Agentの登録と権限をPlatform側で一元的に管理します。",
+        "translation": "在 Platform 侧统一管理 Agent 注册和权限。",
+        "collocations": ["一元的に管理する", "一元的に把握する", "一元的に統制する"],
+        "nuance": "比「まとめて」正式，常用于企业 Data / Identity / Governance。"
+      },
+      {
+        "id": "2026-09-11-v-008",
+        "word": "都度",
+        "reading": "つど",
+        "meaning": "每当发生某件事时，每次分别处理",
+        "jlpt": "N1",
+        "partOfSpeech": "副詞",
+        "example": "高Risk Actionはその都度Human Approvalを要求します。",
+        "translation": "高风险 Action 每次都要求 Human Approval。",
+        "collocations": ["必要な都度", "その都度確認する", "都度生成する"],
+        "nuance": "比「毎回」更书面，常用于制度、运维和审批流程。"
+      },
+      {
+        "id": "2026-09-11-v-009",
+        "word": "ただし",
+        "reading": "ただし",
+        "meaning": "但是；补充前述结论成立的限制条件",
+        "jlpt": "N1",
+        "partOfSpeech": "接続詞",
+        "example": "Gatewayで接続は共通化できます。ただし、権限Policyは別途設計が必要です。",
+        "translation": "Gateway 可以统一连接，但权限 Policy 仍需另行设计。",
+        "collocations": ["ただし、条件がある", "ただし注意が必要だ", "ただし～とは限らない"],
+        "nuance": "比「でも」正式，适合文档、面试和技术结论的 Caveat。"
+      },
+      {
+        "id": "2026-09-11-v-010",
+        "word": "透明性",
+        "reading": "とうめいせい",
+        "meaning": "状态、依据或过程能够被看清与追踪的程度",
+        "jlpt": "N1",
+        "partOfSpeech": "名詞",
+        "example": "Tool CallをTraceへ残し、Agentの判断過程の透明性を高めます。",
+        "translation": "记录 Tool Call 到 Trace，提高 Agent 判断过程透明度。",
+        "collocations": ["透明性を高める", "活動の透明性", "透明性を確保する"],
+        "nuance": "不是信息越多越好，而是关键行为可解释、可审计。"
+      }
+    ],
+    "grammar": [
+      {
+        "id": "2026-09-11-g-001",
+        "pattern": "～にとどまらず",
+        "meaning": "不仅限于……，范围进一步扩大",
+        "form": "名詞 + にとどまらず / 動詞辞書形 + にとどまらず",
+        "register": "技術文書・面接",
+        "frequency": 5,
+        "explanation": "用于说明 Agent Gateway 不只处理模型，也扩展到 MCP Tool / Governance。",
+        "example": "Agent RouterはModel接続にとどまらず、MCP Toolの認可や使用量制御も扱います。",
+        "translation": "Agent Router 不只处理 Model 连接，也处理 MCP Tool 授权和使用量控制。",
+        "comparison": "对应当天 Top 1 的能力范围扩展。"
+      },
+      {
+        "id": "2026-09-11-g-002",
+        "pattern": "～を余儀なくされる",
+        "meaning": "因外部条件不得不采取某行动",
+        "form": "名詞 + を余儀なくされる",
+        "register": "技術文書・報告",
+        "frequency": 5,
+        "explanation": "适合描述 Self-hosted / Closed AI 带来的运维责任变化。",
+        "example": "AI基盤を自社運用する場合、PatchやCapacityの継続管理を余儀なくされます。",
+        "translation": "自营 AI 基盘时，不得不持续管理 Patch 与 Capacity。",
+        "comparison": "对应当天 Top 2 中“获得控制同时拿回责任”的 Trade-off。"
+      },
+      {
+        "id": "2026-09-11-g-003",
+        "pattern": "～に至るまで",
+        "meaning": "从前项一直到后项，强调覆盖范围",
+        "form": "名詞 + に至るまで",
+        "register": "技術文書・面接",
+        "frequency": 5,
+        "explanation": "用于描述 Claude Code Runtime 从 Effort 到 Cache / Session / Permission 的广范围变化。",
+        "example": "Effortの上限からSession再開、Managed Permissionに至るまでRuntimeを検証します。",
+        "translation": "从 Effort 上限到 Session 恢复和 Managed Permission，都验证 Runtime。",
+        "comparison": "对应当天 Top 3 的多类 Runtime Concern。"
+      },
+      {
+        "id": "2026-09-11-g-004",
+        "pattern": "～に応じて",
+        "meaning": "根据条件相应改变",
+        "form": "名詞 + に応じて / 名詞 + に応じた + 名詞",
+        "register": "ビジネス・技術説明",
+        "frequency": 5,
+        "explanation": "表达 Agent Role / Tool Visibility / Workflow 根据需求动态调整。",
+        "example": "業務ニーズに応じて必要なAI社員を生成します。",
+        "translation": "根据业务需求生成所需 AI Employee。",
+        "comparison": "直接对应当天 Top 4 的 NEC 组织机制。"
+      },
+      {
+        "id": "2026-09-11-g-005",
+        "pattern": "～とは限らない",
+        "meaning": "并不一定……，用于阻止过度一般化",
+        "form": "普通形 + とは限らない",
+        "register": "技術文書・面接",
+        "frequency": 5,
+        "explanation": "用于限定 Case Study、Demo、Vendor / Company Result 的外推。",
+        "example": "30分でWorkflowを作れても、業務固有Logicまで十分だとは限りません。",
+        "translation": "即使 30 分钟做出 Workflow，也不代表行业特有逻辑已经充分。",
+        "comparison": "直接对应当天 Top 5 作者指出的 Trial 限制。"
+      }
+    ],
+    "reading": {
+      "title": "生成AI時代のフィッシング対策",
+      "paragraphs": [
+        "ある企業では、生成AIを使ったメールフィルターを導入し、不審なメールを自動的に検出している。導入当初は、文章の不自然さや既知の危険なURLを主な判断材料としていた。",
+        "しかし最近では、生成AIを利用して自然な日本語で作られた偽メールや、受信者の勤務先・役職などに合わせて内容を変えたメールが増え、従来の特徴だけでは判定しにくくなった。そこで同社は、メール本文だけでなく、送信元の認証情報、アクセス先の挙動、過去の通信履歴など複数の情報を組み合わせて判断する方式に変更した。また、重要な操作については、メールの内容だけを根拠に実行しないよう社員教育も行っている。"
+      ],
+      "question": {
+        "id": "2026-09-11-q-main",
+        "prompt": "この企業が対策を変更した主な理由は何か。",
+        "options": [
+          "生成AIによってメールの文章が短くなったため。",
+          "自然な文章かどうかだけでは不正メールを見分けにくくなったため。",
+          "社員がメールを一切利用しなくなったため。",
+          "URLを確認する技術が不要になったため。"
+        ],
+        "answer": 1,
+        "explanation": "本文では、生成AIにより自然な日本語の偽メールや対象に合わせたメールが増え、従来の特徴だけでは判定しにくくなったことが対策変更の理由として示されている。",
+        "optionNotes": [
+          "本文は文章が短くなったことを理由にしていない。",
+          "本文の『従来の特徴だけでは判定しにくくなった』という説明に一致する。",
+          "社員がメールを使わなくなったとは書かれていない。",
+          "URL確認が不要になったのではなく、複数情報を組み合わせる方式へ広げている。"
+        ]
+      }
+    }
+  },
+  "reviewFocus": [
+    {
+      "type": "文法",
+      "title": "～とするには",
+      "detail": "今日の錯題1。ある方針・状態を成立させるための条件を述べる用法を復習する。"
+    },
+    {
+      "type": "文法",
+      "title": "～に越したことはない",
+      "detail": "今日の錯題2。『できるなら、そのほうが最も望ましい』という評価を表す用法を復習する。"
+    },
+    {
+      "type": "词汇",
+      "title": "リードする",
+      "detail": "今日の錯題3。市場・競争などで先頭に立つ意味と自然な搭配を確認する。"
+    },
+    {
+      "type": "词汇",
+      "title": "管轄",
+      "detail": "今日の錯題4。行政機関・部署などが担当範囲を受け持つ語義と使い方を確認する。"
+    },
+    {
+      "type": "读解",
+      "title": "生成AI時代のフィッシング対策",
+      "detail": "今日の錯題5。対策変更の理由を、本文中の『従来の特徴だけでは判定しにくくなった』という因果関係から捉える。"
+    }
+  ],
+  "merged": false
+}
