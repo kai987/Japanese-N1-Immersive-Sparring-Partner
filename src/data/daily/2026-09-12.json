@@ -1,0 +1,264 @@
+{
+  "lesson": {
+    "date": "2026-09-12",
+    "day": 14,
+    "title": "OpenAI「Agents API」公開テスト：エージェント開発は「モデル呼び出し」から「実行基盤」へ",
+    "subtitle": "実行環境・権限・状態管理・コストまで含めて、AIエージェントの運用基盤を考える",
+    "estimatedMinutes": 35,
+    "immersion": {
+      "title": "AIエージェント開発で重要になる実行基盤",
+      "paragraphs": [
+        "OpenAIは開発者向けに「Agents API」のパブリックベータ版を公開した。開発者はタスク、モデル、ツール、実行環境を指定し、クラウド上で動作するAIエージェントを構築できる。実行環境はOpenAIが管理するsandbox、自社インフラ、パートナーの環境から選択できる。",
+        "長時間動作するAIエージェントでは、一度のモデル呼び出しだけでは不十分である。Contextの管理、Tool Call、Subagent同士の協調、File・Code・中間結果などの状態を維持しながら、途中で失敗した場合の停止条件や権限も設計する必要がある。",
+        "同日の補充材料では、Sakana AIのFugu MaxとFugu Ultra v2が、低コストと複雑な多段階タスクという異なる方向で位置付けられていた。実務では、モデル性能だけでなく、タスクの複雑さ、実行環境、Tool権限、Cost、Latency、Reliabilityを合わせて設計することが重要になる。"
+      ],
+      "translations": [
+        "OpenAI 面向开发者公开了 Agents API 公测版。开发者可以指定任务、模型、工具和运行环境，构建在云端运行的 AI Agent。运行环境可选择 OpenAI 托管的 sandbox、自有基础设施或合作伙伴环境。",
+        "长时间运行的 AI Agent 不能只依赖一次模型调用。还需要管理 Context、Tool Call、Subagent 协作，以及文件、代码和中间结果等运行状态，同时设计失败时的停止条件和权限。",
+        "当天的补充材料中，Sakana AI 的 Fugu Max 与 Fugu Ultra v2 分别强调低成本与复杂多步骤任务。实际业务中，不能只看模型性能，还需要综合设计任务复杂度、运行环境、工具权限、成本、延迟与可靠性。"
+      ],
+      "analysis": [
+        "第一段的重点是「モデルを呼ぶAPI」から「Agentを動かす実行基盤」へ対象が広がっていること。実行環境を複数から選べる点も主旨の一部。",
+        "第二段では長時間実行に必要な状態管理とGuardrailが列挙されている。N1読解では「何が追加で必要になるか」をまとめて捉える。",
+        "第三段はModel SelectionのTrade-offを示す。単純な性能比較ではなく、Cost・Latency・Reliability・権限を含む運用設計へ論点が移る。"
+      ]
+    },
+    "vocabulary": [
+      {
+        "id": "2026-09-12-v-001",
+        "word": "洗い出す",
+        "reading": "あらいだす",
+        "meaning": "系统地找出并列出所有目标或问题",
+        "jlpt": "N1",
+        "partOfSpeech": "動詞・五段",
+        "example": "Upgrade前にDeprecated APIの利用箇所を洗い出します。",
+        "translation": "升级前把 Deprecated API 的使用位置全部找出。",
+        "collocations": ["SQLを洗い出す", "課題を洗い出す", "影響範囲を洗い出す"],
+        "nuance": "比「探す」更有完整 Inventory 与防止遗漏的语感。"
+      },
+      {
+        "id": "2026-09-12-v-002",
+        "word": "取りこぼす",
+        "reading": "とりこぼす",
+        "meaning": "在处理一组对象时遗漏其中一部分",
+        "jlpt": "N1",
+        "partOfSpeech": "動詞・五段",
+        "example": "大量Fileを処理しても重要SQLを取りこぼさない仕組みが必要です。",
+        "translation": "即使处理大量文件，也需要避免漏掉重要 SQL 的机制。",
+        "collocations": ["情報を取りこぼす", "対象を取りこぼす", "要件を取りこぼす"],
+        "nuance": "和「見逃す」相近，但更强调批量收集或处理过程中没有全部拿到。"
+      },
+      {
+        "id": "2026-09-12-v-003",
+        "word": "結び付ける",
+        "reading": "むすびつける",
+        "meaning": "把两个信息或对象建立明确关联",
+        "jlpt": "N1",
+        "partOfSpeech": "動詞・一段",
+        "example": "Agentの利用量をBusiness KPIと結び付けて評価します。",
+        "translation": "把 Agent 使用量与 Business KPI 关联后评价。",
+        "collocations": ["KPIと結び付ける", "LogとUserを結び付ける", "成果に結び付ける"],
+        "nuance": "比单纯「関連する」更强调主动建立关联和因果用途。"
+      },
+      {
+        "id": "2026-09-12-v-004",
+        "word": "引き継ぐ",
+        "reading": "ひきつぐ",
+        "meaning": "从前一个人或阶段接手任务、信息和责任",
+        "jlpt": "N1",
+        "partOfSpeech": "動詞・五段",
+        "example": "会話履歴を残し、別のEngineerが翌日すぐ作業を引き継げるようにします。",
+        "translation": "保留会话历史，让其他工程师第二天能立即接手工作。",
+        "collocations": ["作業を引き継ぐ", "Contextを引き継ぐ", "後任へ引き継ぐ"],
+        "nuance": "不只是传资料，也包含职责与状态连续性。"
+      },
+      {
+        "id": "2026-09-12-v-005",
+        "word": "複雑な",
+        "reading": "ふくざつな",
+        "meaning": "要素多、关系交织而难以处理的",
+        "jlpt": "N1",
+        "partOfSpeech": "な形容詞",
+        "example": "複雑な依存関係ほどGround Truthを用意して評価します。",
+        "translation": "对越复杂的依赖关系，越要准备 Ground Truth 进行评价。",
+        "collocations": ["複雑なLogic", "複雑なNetwork", "複雑な依存関係"],
+        "nuance": "可描述结构本身复杂，不一定带负面情绪。"
+      },
+      {
+        "id": "2026-09-12-v-006",
+        "word": "慎重な",
+        "reading": "しんちょうな",
+        "meaning": "为避免错误而仔细判断、不过早行动的",
+        "jlpt": "N1",
+        "partOfSpeech": "な形容詞",
+        "example": "Production変更では自動化しても慎重なEscalation Ruleを残します。",
+        "translation": "即使自动化 Production 变更，也保留谨慎的 Escalation Rule。",
+        "collocations": ["慎重な判断", "慎重に確認する", "慎重な運用"],
+        "nuance": "与「遅い」不同，重点是风险意识和认真判断。"
+      },
+      {
+        "id": "2026-09-12-v-007",
+        "word": "一元的に",
+        "reading": "いちげんてきに",
+        "meaning": "统一归入一个入口或管理体系",
+        "jlpt": "N1",
+        "partOfSpeech": "副詞",
+        "example": "Cloud接続とPolicyを共通Hubで一元的に管理します。",
+        "translation": "在共享 Hub 统一管理 Cloud 连接与 Policy。",
+        "collocations": ["一元的に管理する", "一元的に把握する", "接続を一元的に管理する"],
+        "nuance": "企业架构中比「まとめて」更正式，强调 Single Control Point。"
+      },
+      {
+        "id": "2026-09-12-v-008",
+        "word": "反射的に",
+        "reading": "はんしゃてきに",
+        "meaning": "几乎不经思考、像反射一样立即行动",
+        "jlpt": "N1",
+        "partOfSpeech": "副詞",
+        "example": "確認Dialogが多すぎると利用者は反射的に承認しやすくなります。",
+        "translation": "确认 Dialog 过多时，用户容易反射性批准。",
+        "collocations": ["反射的にクリックする", "反射的に答える", "反射的に承認する"],
+        "nuance": "强调没有充分认知判断，适合 Human Factors 讨论。"
+      },
+      {
+        "id": "2026-09-12-v-009",
+        "word": "ただし",
+        "reading": "ただし",
+        "meaning": "但是；用于补充前面结论的条件或限制",
+        "jlpt": "N1",
+        "partOfSpeech": "接続詞",
+        "example": "Auto modeは有力です。ただし、Synthetic Testの7％を実Trafficの率とは扱いません。",
+        "translation": "Auto mode 很有潜力，但不把 Synthetic Test 的 7% 当作真实流量漏检率。",
+        "collocations": ["ただし、条件がある", "ただし注意が必要だ", "ただし本番では～"],
+        "nuance": "技术说明中非常重要，用来防止过度一般化。"
+      },
+      {
+        "id": "2026-09-12-v-010",
+        "word": "文脈",
+        "reading": "ぶんみゃく",
+        "meaning": "理解某个行为或表达所需的前后关系、上下文",
+        "jlpt": "N1",
+        "partOfSpeech": "名詞",
+        "example": "Diffだけでなく、設計判断に至った文脈もReviewerへ共有します。",
+        "translation": "不仅共享 Diff，也把形成设计判断的上下文共享给 Reviewer。",
+        "collocations": ["文脈を共有する", "業務文脈", "文脈を保持する"],
+        "nuance": "IT 里的 Context 不仅指文字前后，也可指业务背景、权限和历史状态。"
+      }
+    ],
+    "grammar": [
+      {
+        "id": "2026-09-12-g-001",
+        "pattern": "～にとどまらず",
+        "meaning": "不止于……，范围进一步扩大",
+        "form": "名詞 + にとどまらず / 動詞辞書形 + にとどまらず",
+        "register": "技術文書・面接",
+        "frequency": 5,
+        "explanation": "适合说明 AI Platform 的职责从生成扩展到 Governance、Cost 与 Operation。",
+        "example": "Agentic EnterpriseではModel利用にとどまらず、RBACやCost、業務KPIまで管理します。",
+        "translation": "Agentic Enterprise 不止管理 Model 使用，还管理 RBAC、成本和业务 KPI。",
+        "comparison": "对应当天 Top 1 的 Control Plane 扩展。"
+      },
+      {
+        "id": "2026-09-12-g-002",
+        "pattern": "～を余儀なくされる",
+        "meaning": "由于客观条件被迫采取某行动",
+        "form": "名詞 + を余儀なくされる",
+        "register": "技術文書・報告",
+        "frequency": 5,
+        "explanation": "适合 Migration、Infrastructure 增长迫使 Architecture 改变的场景。",
+        "example": "Systemごとに回線を追加し続ければ、Network Architectureの見直しを余儀なくされます。",
+        "translation": "如果持续按系统增加线路，最终会被迫重新审视 Network 架构。",
+        "comparison": "对应当天 Top 5 中复杂度持续增长的背景。"
+      },
+      {
+        "id": "2026-09-12-g-003",
+        "pattern": "～に至るまで",
+        "meaning": "从……一直到……，表示覆盖范围很广",
+        "form": "名詞 + に至るまで",
+        "register": "技術文書・面接",
+        "frequency": 5,
+        "explanation": "适合描述从简单 Sample 到复杂 Legacy Pattern 的测试范围。",
+        "example": "単純なLiteralから複数Methodに分散したSQLに至るまで抽出精度を検証します。",
+        "translation": "从简单 Literal 到分散在多个 Method 中的 SQL 都验证抽取精度。",
+        "comparison": "对应当天 Top 2 的多类 SQL Pattern。"
+      },
+      {
+        "id": "2026-09-12-g-004",
+        "pattern": "～たうえで",
+        "meaning": "在完成前项、以其结果为基础后再做后项",
+        "form": "動詞た形 + 上で / 名詞 + の上で",
+        "register": "ビジネス・技術説明",
+        "frequency": 5,
+        "explanation": "适合 Architecture 与 Security 决策的前置验证。",
+        "example": "Private接続のLatencyと冗長性を確認したうえで、Network Hubへ移行します。",
+        "translation": "确认 Private 连接的 Latency 与冗余性之后，再迁移到 Network Hub。",
+        "comparison": "强调前项验证结果是后项决策的基础。"
+      },
+      {
+        "id": "2026-09-12-g-005",
+        "pattern": "～とは限らない",
+        "meaning": "不一定……，否定过度一般化",
+        "form": "普通形 + とは限らない",
+        "register": "技術文書・Evidence Boundary",
+        "frequency": 5,
+        "explanation": "在 Evidence Boundary 中用于限制实验结果被直接推广到真实环境。",
+        "example": "Synthetic DataでRecallが100％でも、実Legacy Codeで同じ結果になるとは限りません。",
+        "translation": "即使在 Synthetic Data 上 Recall 为 100%，真实 Legacy Code 也不一定得到相同结果。",
+        "comparison": "对应当天 Top 2 对 Synthetic Data 与真实 Legacy Code 之间边界的说明。"
+      }
+    ],
+    "reading": {
+      "title": "AIエージェントの共通基盤",
+      "paragraphs": [
+        "ある開発チームでは、AIエージェントにコード修正やテスト実行を任せている。当初は、最も性能の高いモデルを選べば十分だと考えていた。しかし、実際にはエージェントが長時間作業すると、途中で得た情報を保持する仕組み、利用できるツールの制限、失敗時に処理を止める方法、実行環境の管理などが必要になった。",
+        "そこでチームは、モデルの選定とは別に、エージェントの実行環境、権限、ログ、停止条件を共通基盤として整備した。これにより、使用するモデルを変更しても、運用ルールを維持しやすくなった。"
+      ],
+      "question": {
+        "id": "2026-09-12-q-main",
+        "prompt": "このチームが共通基盤を整備した主な理由は何か。",
+        "options": [
+          "常に同じAIモデルだけを使うため。",
+          "AIエージェントを長時間安定して運用し、モデル変更時も管理ルールを維持しやすくするため。",
+          "人間による確認を完全になくすため。",
+          "AIエージェントが自由にすべてのツールを利用できるようにするため。"
+        ],
+        "answer": 1,
+        "explanation": "文章では、長時間作業に必要な状態管理・権限・ログ・停止条件をモデル選定とは別の共通基盤として整備し、モデル変更後も運用ルールを維持しやすくすることが目的だと説明している。",
+        "optionNotes": [
+          "同じモデルを固定することが目的ではなく、モデル変更にも対応できる基盤を作っている。",
+          "本文の『長時間作業に必要な管理』と『モデルを変更しても運用ルールを維持』の両方に一致する。",
+          "人間の確認を完全になくすとは書かれていない。",
+          "ツール利用には制限が必要だと述べており、自由化が目的ではない。"
+        ]
+      }
+    }
+  },
+  "reviewFocus": [
+    {
+      "type": "文法",
+      "title": "～ならでは",
+      "detail": "長年の経験やその主体にしかない特徴を表す用法を復習する。"
+    },
+    {
+      "type": "文法",
+      "title": "AもAならBもBだ",
+      "detail": "双方に問題がある状況を批判的に評価する構文として復習する。"
+    },
+    {
+      "type": "词汇",
+      "title": "むしゃくしゃする",
+      "detail": "物事が思うように進まず、いらいらして気分が晴れない状態を表す語として復習する。"
+    },
+    {
+      "type": "词汇",
+      "title": "抜き打ち",
+      "detail": "事前に知らせず突然実施することを表し、「抜き打ち訓練」などの搭配を確認する。"
+    },
+    {
+      "type": "读解",
+      "title": "AIエージェントの共通基盤",
+      "detail": "Model性能だけでなく、実行環境・権限・Log・停止条件を分離して管理する理由を本文から確認する。"
+    }
+  ],
+  "merged": false
+}
