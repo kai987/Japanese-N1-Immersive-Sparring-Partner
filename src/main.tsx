@@ -5,6 +5,7 @@ import './styles.css'
 import './readability.css'
 import './search.css'
 import './hero-title.css'
+import './navigation-theme.css'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
