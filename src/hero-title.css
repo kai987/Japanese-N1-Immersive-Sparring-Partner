@@ -1,0 +1,9 @@
+.hero h1 {
+  font-size: clamp(32px, 3.8vw, 48px);
+}
+
+@media (max-width: 680px) {
+  .hero h1 {
+    font-size: 29px;
+  }
+}
