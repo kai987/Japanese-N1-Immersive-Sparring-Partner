@@ -97,6 +97,8 @@ jobs:
                       'collocations': item.get('collocations', []),
                       'nuance': item.get('nuanceZh', '')
                   }
+                  if entry['jlpt'] not in {'N1', 'N2'}:
+                      raise RuntimeError(f'Unexpected mirrored JLPT level for {day} {term}: {entry["jlpt"]}')
                   new_vocab.append(entry)
                   key = (entry['word'], entry['reading'])
                   if key in seen:
@@ -140,9 +142,10 @@ jobs:
           rm .github/workflows/sync-repaired-jlpt-history-once.yml
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add src/data/daily .github/workflows
+          git add src/data/daily src/lib/archive.ts src/types.ts .github/workflows
           git diff --cached --name-only
-          test "$(git diff --cached --name-only | grep -v '^src/data/daily/2026-09-\(09\|10\|11\|12\|13\|14\|15\|16\|17\)\.json$' | grep -v '^.github/workflows/sync-repaired-jlpt-history-once.yml$' | wc -l)" -eq 0
+          unexpected=$(git diff --cached --name-only | grep -v '^src/data/daily/2026-09-\(09\|10\|11\|12\|13\|14\|15\|16\|17\)\.json$' | grep -v '^src/lib/archive\.ts$' | grep -v '^src/types\.ts$' | grep -v '^.github/workflows/sync-repaired-jlpt-history-once.yml$' || true)
+          test -z "$unexpected"
           git commit -m 'content: sync repaired historical JLPT vocabulary mirror'
           AUTH=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
           git -c "http.https://github.com/.extraheader=AUTHORIZATION: basic $AUTH" push origin "HEAD:$BRANCH"
