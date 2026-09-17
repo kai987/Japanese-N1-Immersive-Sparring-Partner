@@ -26,7 +26,8 @@ export function validateLesson(input: unknown, path: string, datedIds = false): 
     ['grammar', ['id', 'pattern', 'meaning', 'form', 'register', 'explanation', 'example', 'translation', 'comparison']],
   ] as const) {
     const items = input[kind]
-    requireValid(Array.isArray(items) && items.length > 0, `${path}.${kind}`, '1件以上の配列が必要です')
+    requireValid(Array.isArray(items) && (kind === 'grammar' || items.length > 0), `${path}.${kind}`, '有効な配列が必要です（語彙は1件以上）')
+    if (kind === 'grammar' && items.length === 0) requireValid(typeof input.grammarSelectionNote === 'string' && input.grammarSelectionNote.trim().length >= 20, `${path}.grammarSelectionNote`, '新規文法が0件の場合は検証済みの理由が必要です')
     items.forEach((item, index) => {
       const itemPath = `${path}.${kind}[${index}]`
       fields(item, [...names], itemPath)

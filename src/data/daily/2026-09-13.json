@@ -187,64 +187,20 @@
     ],
     "grammar": [
       {
-        "id": "2026-09-13-g-001",
-        "pattern": "～にとどまらず",
-        "meaning": "不仅限于……，还扩展到……",
-        "form": "名詞 + にとどまらず / 動詞辞書形 + にとどまらず",
-        "register": "技術文書・面接",
-        "frequency": 5,
-        "explanation": "用于说明风险、价值或适用范围超出表面层。",
-        "example": "Fuguの評価はBenchmarkにとどまらず、Routing後のCostやLatencyまで見る必要があります。",
-        "translation": "Fugu 的评价不能只看 Benchmark，还要看到 Routing 后的成本和延迟。",
-        "comparison": "对应当天 Top 1 从分数扩展到 Production Evaluation。"
-      },
-      {
-        "id": "2026-09-13-g-002",
-        "pattern": "～を余儀なくされる",
-        "meaning": "由于外部条件而不得不……",
-        "form": "名詞 + を余儀なくされる / 動詞辞書形 + ことを余儀なくされる",
-        "register": "技術文書・報告",
-        "frequency": 5,
-        "explanation": "用于说明计划因现实约束被迫调整。",
-        "example": "建物の制約により、当初の50台計画は35台での運用開始を余儀なくされました。",
-        "translation": "由于建筑限制，原计划 50 台不得不以 35 台开始运营。",
-        "comparison": "对应 J-HRTI 从 50 台计划调整到实际 35 台。"
-      },
-      {
-        "id": "2026-09-13-g-003",
-        "pattern": "～に即して",
-        "meaning": "按照……、贴合……实际情况",
-        "form": "名詞 + に即して",
-        "register": "技術文書・制度説明",
-        "frequency": 5,
-        "explanation": "用于强调规则或设计应根据现场、业务事实，而非抽象假设。",
-        "example": "業務の実態に即して、AIに任せる範囲とHuman Reviewを決めます。",
-        "translation": "根据业务实际情况决定交给 AI 的范围与 Human Review。",
-        "comparison": "当天用于企业 AI 与制度设计语境。"
-      },
-      {
-        "id": "2026-09-13-g-004",
-        "pattern": "～たうえで",
-        "meaning": "完成前项，并以此为基础再做后项",
-        "form": "動詞た形 + 上で / 名詞 + の上で",
-        "register": "技術文書・ビジネス",
-        "frequency": 5,
-        "explanation": "强调验证、整理或比较是后续判断的前提。",
-        "example": "支払いDataと照合したうえで、経費精算を承認します。",
-        "translation": "在与支付数据核对后再批准报销。",
-        "comparison": "对应当天 Top 5 的独立 Evidence 核对。"
-      },
-      {
-        "id": "2026-09-13-g-005",
-        "pattern": "～とは限らない",
-        "meaning": "不一定……，用于避免过度一般化",
-        "form": "普通形 + とは限らない",
-        "register": "技術文書・面接",
-        "frequency": 5,
-        "explanation": "用于 Vendor Benchmark、小样本实验、视觉真实性等 Evidence Boundary。",
-        "example": "Buildが成功しても、変換Codeの業務Logicまで正しいとは限りません。",
-        "translation": "即使 Build 成功，也不一定代表转换代码的业务逻辑正确。",
-        "comparison": "对应当天 Top 4 作者只验证 Build / Run 的限制。"
+        "id": "2026-09-13-g-gh-9b65dd9682",
+        "pattern": "～に沿って",
+        "meaning": "沿着……；依照方针、计划或目的。",
+        "form": "名詞＋に沿って／に沿った＋名詞",
+        "register": "技術文書・日常の説明",
+        "frequency": 4,
+        "explanation": "用于说明成果须符合业务目的，强调不偏离既定方向。",
+        "example": "目的に沿って、評価する成果を先に決めます。",
+        "translation": "依照目的，先确定要评价的成果。",
+        "comparison": "「に応じて」强调随条件调整；「に沿って」强调沿既定方向行动。 当天Top 2原文形式：に沿って。例句为学习用原创。",
+        "level": "N2",
+        "sourceUrl": "https://www.itmedia.co.jp/enterprise/articles/2608/20/news009.html",
+        "sourceForm": "に沿って",
+        "sourceAnchor": "されるばかりです。一方で、『どの目的に沿って"
       }
     ],
     "reading": {
@@ -271,7 +227,9 @@
           "AIを廃止するのではなく、定型処理をAIに任せる方針を続けている。"
         ]
       }
-    }
+    },
+    "grammarSelectionNote": "全历史查重后，本日保留及补充1项未在更早日期收录的语法；已介绍的语法不再当作新项目。原文中已核实的新项目不足时，不为凑满5～8项而重复收录。",
+    "grammarSourceCommit": "5a1f17124902cee06530c5a3b5b70e356c4c3df9"
   },
   "reviewFocus": [
     {

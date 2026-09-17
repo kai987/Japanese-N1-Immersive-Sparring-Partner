@@ -187,64 +187,20 @@
     ],
     "grammar": [
       {
-        "id": "2026-09-11-g-001",
-        "pattern": "～にとどまらず",
-        "meaning": "不仅限于……，范围进一步扩大",
-        "form": "名詞 + にとどまらず / 動詞辞書形 + にとどまらず",
-        "register": "技術文書・面接",
-        "frequency": 5,
-        "explanation": "用于说明 Agent Gateway 不只处理模型，也扩展到 MCP Tool / Governance。",
-        "example": "Agent RouterはModel接続にとどまらず、MCP Toolの認可や使用量制御も扱います。",
-        "translation": "Agent Router 不只处理 Model 连接，也处理 MCP Tool 授权和使用量控制。",
-        "comparison": "对应当天 Top 1 的能力范围扩展。"
-      },
-      {
-        "id": "2026-09-11-g-002",
-        "pattern": "～を余儀なくされる",
-        "meaning": "因外部条件不得不采取某行动",
-        "form": "名詞 + を余儀なくされる",
-        "register": "技術文書・報告",
-        "frequency": 5,
-        "explanation": "适合描述 Self-hosted / Closed AI 带来的运维责任变化。",
-        "example": "AI基盤を自社運用する場合、PatchやCapacityの継続管理を余儀なくされます。",
-        "translation": "自营 AI 基盘时，不得不持续管理 Patch 与 Capacity。",
-        "comparison": "对应当天 Top 2 中“获得控制同时拿回责任”的 Trade-off。"
-      },
-      {
-        "id": "2026-09-11-g-003",
-        "pattern": "～に至るまで",
-        "meaning": "从前项一直到后项，强调覆盖范围",
-        "form": "名詞 + に至るまで",
-        "register": "技術文書・面接",
-        "frequency": 5,
-        "explanation": "用于描述 Claude Code Runtime 从 Effort 到 Cache / Session / Permission 的广范围变化。",
-        "example": "Effortの上限からSession再開、Managed Permissionに至るまでRuntimeを検証します。",
-        "translation": "从 Effort 上限到 Session 恢复和 Managed Permission，都验证 Runtime。",
-        "comparison": "对应当天 Top 3 的多类 Runtime Concern。"
-      },
-      {
-        "id": "2026-09-11-g-004",
-        "pattern": "～に応じて",
-        "meaning": "根据条件相应改变",
-        "form": "名詞 + に応じて / 名詞 + に応じた + 名詞",
-        "register": "ビジネス・技術説明",
-        "frequency": 5,
-        "explanation": "表达 Agent Role / Tool Visibility / Workflow 根据需求动态调整。",
-        "example": "業務ニーズに応じて必要なAI社員を生成します。",
-        "translation": "根据业务需求生成所需 AI Employee。",
-        "comparison": "直接对应当天 Top 4 的 NEC 组织机制。"
-      },
-      {
-        "id": "2026-09-11-g-005",
-        "pattern": "～とは限らない",
-        "meaning": "并不一定……，用于阻止过度一般化",
-        "form": "普通形 + とは限らない",
-        "register": "技術文書・面接",
-        "frequency": 5,
-        "explanation": "用于限定 Case Study、Demo、Vendor / Company Result 的外推。",
-        "example": "30分でWorkflowを作れても、業務固有Logicまで十分だとは限りません。",
-        "translation": "即使 30 分钟做出 Workflow，也不代表行业特有逻辑已经充分。",
-        "comparison": "直接对应当天 Top 5 作者指出的 Trial 限制。"
+        "id": "2026-09-11-g-gh-ee841bb753",
+        "pattern": "～つつも",
+        "meaning": "虽然同时承认……，却仍有另一相反状态。",
+        "form": "動詞ます形から「ます」を除く＋つつも",
+        "register": "技術文書・日常の説明",
+        "frequency": 4,
+        "explanation": "原文表达面向客户的乐趣与职业迷茫并存；用于同一主体内部的矛盾。",
+        "example": "価値を感じつつも、役割の狭さに迷いがありました。",
+        "translation": "虽然感受到价值，却也因职责范围狭窄而感到迷茫。",
+        "comparison": "此处是逆接，不是「性能を保ちつつ処理する」的单纯同时进行。 当天Top 5原文形式：つつも。例句为学习用原创。",
+        "level": "N2",
+        "sourceUrl": "https://tech.layerx.co.jp/entry/fde-is-fun",
+        "sourceForm": "つつも",
+        "sourceAnchor": "ため、お客さまと向き合う楽しさを感じつつも"
       }
     ],
     "reading": {
@@ -271,7 +227,9 @@
           "URL確認が不要になったのではなく、複数情報を組み合わせる方式へ広げている。"
         ]
       }
-    }
+    },
+    "grammarSelectionNote": "全历史查重后，本日保留及补充1项未在更早日期收录的语法；已介绍的语法不再当作新项目。原文中已核实的新项目不足时，不为凑满5～8项而重复收录。",
+    "grammarSourceCommit": "5a1f17124902cee06530c5a3b5b70e356c4c3df9"
   },
   "reviewFocus": [
     {

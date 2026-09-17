@@ -187,64 +187,20 @@
     ],
     "grammar": [
       {
-        "id": "2026-09-10-g-001",
-        "pattern": "～にとどまらず",
-        "meaning": "不止于……，范围进一步扩展",
-        "form": "名詞 + にとどまらず / 動詞辞書形 + にとどまらず",
-        "register": "書面語・フォーマル",
-        "frequency": 5,
-        "explanation": "适合说明某个作用或范围没有停留在一点，而是进一步扩展。当天用于说明 AI 生成范围从 Application 扩展到 IaC、Security、Observability。",
-        "example": "Nx Plugin for AWSはApplication Codeにとどまらず、IaCやObservabilityのScaffoldも生成します。",
-        "translation": "Nx Plugin for AWS 不止生成 Application Code，也生成 IaC 与 Observability Scaffold。",
-        "comparison": "「～だけでなく」也表示“不仅”，但「～にとどまらず」更书面，更强调范围扩张。"
-      },
-      {
-        "id": "2026-09-10-g-002",
-        "pattern": "～を余儀なくされる",
-        "meaning": "因外部条件被迫不得不……",
-        "form": "名詞 + を余儀なくされる",
-        "register": "書面語・フォーマル",
+        "id": "2026-09-10-g-gh-5defa47529",
+        "pattern": "～べきだ",
+        "meaning": "应当……，表达规范或合理判断。",
+        "form": "動詞辞書形＋べきだ／する→するべき・すべき",
+        "register": "技術文書・日常の説明",
         "frequency": 4,
-        "explanation": "用于表示主体并非主动选择，而是因外部环境变化不得不采取某种行动。当天用于说明攻击速度提升迫使企业改变传统 Patch Cadence。",
-        "example": "Exploitまでの時間が短くなれば、企業はPatch運用の見直しを余儀なくされます。",
-        "translation": "如果到 Exploit 的时间变短，企业将不得不重新审视 Patch 运维。",
-        "comparison": "「～ざるを得ない」也表示不得不做；「～を余儀なくされる」更常用于报告或新闻，突出外部因素的强制性。"
-      },
-      {
-        "id": "2026-09-10-g-003",
-        "pattern": "～に至るまで",
-        "meaning": "从……一直到……，甚至包括……",
-        "form": "名詞 + に至るまで",
-        "register": "書面語・フォーマル",
-        "frequency": 4,
-        "explanation": "用于说明范围延伸到较远的终点。当天用来表达验证 Scenario 从 Reader 新增一直覆盖到 Failover 和 Pod Stop。",
-        "example": "Reader追加からFailover、Pod停止に至るまで同じScenarioで検証します。",
-        "translation": "从 Reader 新增到 Failover、Pod 停止都用同一 Scenario 验证。",
-        "comparison": "「～まで」只表示终点；「～に至るまで」更强调覆盖范围之广。"
-      },
-      {
-        "id": "2026-09-10-g-004",
-        "pattern": "～たうえで",
-        "meaning": "完成……并以其为依据后再……",
-        "form": "動詞た形 + 上で / 名詞 + の上で",
-        "register": "中立・ビジネス",
-        "frequency": 5,
-        "explanation": "强调前项不是单纯的时间先后，而是后续判断或行动的重要前提。当天用于先验证 Human Evaluation 相关性，再决定是否把 LLM-as-a-Judge 用作 Gate。",
-        "example": "Human Evaluationとの相関を確認したうえで、LLM-as-a-Judgeを運用Gateに使います。",
-        "translation": "确认与 Human Evaluation 的相关性后，再把 LLM-as-a-Judge 用作运维 Gate。",
-        "comparison": "「～てから」主要表示时间顺序；「～たうえで」更强调以前项结果为判断基础。"
-      },
-      {
-        "id": "2026-09-10-g-005",
-        "pattern": "～一方で",
-        "meaning": "另一方面……，用于对比两个事实",
-        "form": "普通形 + 一方で",
-        "register": "中立・書面語",
-        "frequency": 5,
-        "explanation": "用于并列存在张力的两面事实。当天用它说明 AI 利用量增加与同等使用方式下实质 Token Cost 降低目标可以同时存在。",
-        "example": "AI利用量は増える一方で、同じ使い方なら実質Token Costを下げる目標です。",
-        "translation": "AI 使用量会增长，另一方面同等用法下目标是降低实质 Token Cost。",
-        "comparison": "「しかし」连接两个句子表示转折；「～一方で」更适合把两个侧面并列起来比较。"
+        "explanation": "用于说明最终评估应由组织承担，是责任或合理行动建议，而非物理上的必然。",
+        "example": "最終的なリスク評価は、利用する組織自身が行うべきです。",
+        "translation": "最终风险评估应当由使用该服务的组织自身完成。",
+        "comparison": "「はずだ」是推测；「べきだ」是规范判断。语气较强，应考虑沟通对象。 当天Top 5原文形式：べきだ。例句为学习用原创。",
+        "level": "N3",
+        "sourceUrl": "https://atmarkit.itmedia.co.jp/ait/articles/2609/09/news043.html",
+        "sourceForm": "べきだ",
+        "sourceAnchor": "思決定は各金融機関が自ら実施・判断すべきだ"
       }
     ],
     "reading": {
@@ -271,7 +227,9 @@
           "AIが必ず人間より正確になるという主張は本文にない。"
         ]
       }
-    }
+    },
+    "grammarSelectionNote": "全历史查重后，本日保留及补充1项未在更早日期收录的语法；已介绍的语法不再当作新项目。原文中已核实的新项目不足时，不为凑满5～8项而重复收录。",
+    "grammarSourceCommit": "5a1f17124902cee06530c5a3b5b70e356c4c3df9"
   },
   "reviewFocus": [
     {

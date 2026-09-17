@@ -184,64 +184,20 @@
     ],
     "grammar": [
       {
-        "id": "2026-09-17-g-001",
-        "pattern": "～にとどまらず",
-        "meaning": "不仅限于……，还进一步扩展到……",
-        "form": "名詞 + にとどまらず / 普通形 + にとどまらず",
-        "register": "技術文書・面接",
-        "frequency": 5,
-        "explanation": "强调影响或范围超出原先对象。",
-        "example": "Tail SamplingはError Traceの保存にとどまらず、性能調査にも利用されています。",
-        "translation": "Tail Sampling不仅用于保存错误Trace，也用于性能调查。",
-        "comparison": "对应AJA把Trace用于故障以外的性能和投放分析。"
-      },
-      {
-        "id": "2026-09-17-g-002",
-        "pattern": "～たうえで",
-        "meaning": "先完成前项，在此基础上再做后项",
-        "form": "Vた + うえで / Nの + うえで",
-        "register": "技術文書・ビジネス",
-        "frequency": 5,
-        "explanation": "适合说明先验证或确认再判断的顺序。",
-        "example": "Benchmark条件を確認したうえで、OJとViteの性能を比較します。",
-        "translation": "确认基准测试条件后，再比较OJ与Vite性能。",
-        "comparison": "对应OJ文章强调比较条件不同。"
-      },
-      {
-        "id": "2026-09-17-g-003",
-        "pattern": "～に応じて",
-        "meaning": "根据……的不同采取相应变化",
-        "form": "名詞 + に応じて / 名詞 + に応じた + 名詞",
-        "register": "技術文書・ビジネス",
-        "frequency": 5,
-        "explanation": "说明策略随Risk、Task或Traffic变化。",
-        "example": "Taskの設計自由度に応じてOpusとSonnetを使い分けます。",
-        "translation": "根据任务设计自由度区分使用Opus与Sonnet。",
-        "comparison": "对应SmartHR的Model Routing。"
-      },
-      {
-        "id": "2026-09-17-g-004",
-        "pattern": "～とは限らない",
-        "meaning": "不一定……；否定过度一般化",
-        "form": "普通形 + とは限らない",
-        "register": "技術文書・論説",
-        "frequency": 5,
-        "explanation": "用于保留Evidence Boundary，避免把单一案例说成普遍规律。",
-        "example": "一つのFeatureで開発期間が短縮しても、別Projectで同じ効果が出るとは限りません。",
-        "translation": "即使一个功能开发周期缩短，其他项目也不一定有同样效果。",
-        "comparison": "对应SmartHR明确说明Harness不是银弹。"
-      },
-      {
-        "id": "2026-09-17-g-005",
-        "pattern": "～かねない",
-        "meaning": "有可能导致不好的结果",
-        "form": "Vます形去ます + かねない",
-        "register": "書面語・警告",
-        "frequency": 5,
-        "explanation": "用于风险预测，语气正式。",
-        "example": "SSH Agent Socketを無制限にForwardすると、Sandbox内から資格情報を悪用されかねません。",
-        "translation": "如果无限制转发SSH Agent Socket，凭据可能被Sandbox内滥用。",
-        "comparison": "对应Cursor和Sandbox Credential Risk。"
+        "id": "2026-09-17-g-gh-bae79c2183",
+        "pattern": "～ない限り",
+        "meaning": "除非……，否则……；只要不……就……。",
+        "form": "動詞ない形＋限り／かぎり",
+        "register": "技術文書・日常の説明",
+        "frequency": 4,
+        "explanation": "原文说明共享技能存储默认挂载，除非主动停用；突出改变默认状态的必要条件。",
+        "example": "共有設定を無効にしない限り、同じ保存先が使われます。",
+        "translation": "除非停用共享设置，否则会使用同一保存位置。",
+        "comparison": "不同于「に限って」的范围限定；本项表达条件不改变时结果持续。 当天Top 3原文形式：ない限り。例句为学习用原创。",
+        "level": "N2",
+        "sourceUrl": "https://atmarkit.itmedia.co.jp/ait/articles/2609/16/news033.html",
+        "sourceForm": "ない限り",
+        "sourceAnchor": "いるエージェントは、作成時に無効化しない限り"
       }
     ],
     "reading": {
@@ -268,7 +224,9 @@
           "目的は通信を禁止することではなく、通信とツール呼び出しを共通化すること。"
         ]
       }
-    }
+    },
+    "grammarSelectionNote": "全历史查重后，本日保留及补充1项未在更早日期收录的语法；已介绍的语法不再当作新项目。原文中已核实的新项目不足时，不为凑满5～8项而重复收录。",
+    "grammarSourceCommit": "5a1f17124902cee06530c5a3b5b70e356c4c3df9"
   },
   "reviewFocus": [
     {

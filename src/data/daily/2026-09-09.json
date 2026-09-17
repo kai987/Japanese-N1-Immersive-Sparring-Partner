@@ -187,64 +187,20 @@
     ],
     "grammar": [
       {
-        "id": "2026-09-09-g-001",
-        "pattern": "～にとどまらず",
-        "meaning": "不止于……、不仅限于……",
-        "form": "名詞 + にとどまらず / 動詞辞書形 + にとどまらず",
-        "register": "書面語・フォーマル",
+        "id": "2026-09-09-g-gh-78c80effda",
+        "pattern": "～に対して",
+        "meaning": "针对……，以……为行为或态度的对象。",
+        "form": "名詞＋に対して／に対する＋名詞",
+        "register": "技術文書・日常の説明",
         "frequency": 4,
-        "explanation": "用于说明风险或影响范围超出最初的一项。当天 C 部分用它说明 LLM Jacking 从费用滥用扩展到 Model、RAG 与知识产权。",
-        "example": "LLMジャッキングは利用料の不正消費にとどまらず、ModelやRAG資産の流出につながる可能性があります。",
-        "translation": "LLM Jacking 不止会造成费用滥用，也可能导致 Model 与 RAG 资产流出。",
-        "comparison": "「～だけでなく」也表示“不仅”，但「～にとどまらず」书面感更强，强调范围没有停留在某一点。"
-      },
-      {
-        "id": "2026-09-09-g-002",
-        "pattern": "～かねない",
-        "meaning": "有可能导致……，带明显风险警示",
-        "form": "動詞ます形去ます + かねない",
-        "register": "書面語・フォーマル",
-        "frequency": 5,
-        "explanation": "适合描述不希望发生但存在现实风险的结果。当天 C 部分用于说明 Credential 泄漏后的严重后果。",
-        "example": "AI ToolのLocal Configを平文で残すと、Cloud全体の乗っ取りにつながりかねません。",
-        "translation": "明文保存 AI Tool Config 可能导致整个 Cloud 被劫持。",
-        "comparison": "「～おそれがある」同样表示风险；「～かねない」更直接地强调说话人对负面结果的警戒。"
-      },
-      {
-        "id": "2026-09-09-g-003",
-        "pattern": "～に至るまで",
-        "meaning": "从……一直到……、甚至包括……",
-        "form": "名詞 + に至るまで",
-        "register": "書面語・フォーマル",
-        "frequency": 4,
-        "explanation": "用于列举范围的终点，突出覆盖面之广。当天 C 部分用于说明 Muse 的 External Action 范围。",
-        "example": "MuseはWeb操作からメール送信、購入に至るまで複数のActionを実行します。",
-        "translation": "Muse 能执行从 Web 操作一直到邮件发送、购买等动作。",
-        "comparison": "「～まで」只表示终点；「～に至るまで」更强调范围延伸到了该层级。"
-      },
-      {
-        "id": "2026-09-09-g-004",
-        "pattern": "～たうえで",
-        "meaning": "在完成……之后、以其为判断基础",
-        "form": "動詞た形 + 上で / 名詞 + の上で",
-        "register": "中立・ビジネス",
-        "frequency": 5,
-        "explanation": "表示先完成前项，再以其结果为基础做判断或决定。当天 C 部分用于 Migration 前的验证顺序。",
-        "example": "SELinux Policyを確認したうえで、Amazon Linux 2027への移行範囲を決めます。",
-        "translation": "确认 SELinux Policy 后再决定迁移范围。",
-        "comparison": "「～てから」只是时间顺序；「～たうえで」更强调前项是后项判断的前提。"
-      },
-      {
-        "id": "2026-09-09-g-005",
-        "pattern": "～に応じて",
-        "meaning": "根据……相应调整",
-        "form": "名詞 + に応じて / 名詞 + に応じた + 名詞",
-        "register": "中立・ビジネス",
-        "frequency": 5,
-        "explanation": "表示根据条件、程度或需求改变方法。当天 C 部分用于按 Task Risk 选择不同 Isolation Layer。",
-        "example": "開発TaskのRiskに応じてBash sandbox、Dev Container、Web実行を使い分けます。",
-        "translation": "根据 Task Risk 区分使用 Bash sandbox、Dev Container 与 Web Runtime。",
-        "comparison": "「～によって」可表示依据或原因；「～に応じて」更强调随条件变化而做相应调整。"
+        "explanation": "原文说明对整个系统实行访问控制，重点是行为所针对的对象。",
+        "example": "管理者に対しても、同じアクセス制御を適用します。",
+        "translation": "即使针对管理员，也应用相同的访问控制。",
+        "comparison": "「にとって」表示评价立场；「に対して」表示针对对象，不能随意替换。 当天Top 5原文形式：に対して。例句为学习用原创。",
+        "level": "N3",
+        "sourceUrl": "https://www.publickey1.jp/blog/26/amazon_linux4amazon_linux_2027selinux.html",
+        "sourceForm": "に対して",
+        "sourceAnchor": "nuxポリシーに基づいてシステム全体に対して"
       }
     ],
     "reading": {
@@ -271,7 +227,9 @@
           "文章没有主张减少人类判断；控制与权限治理反而是重点。"
         ]
       }
-    }
+    },
+    "grammarSelectionNote": "全历史查重后，本日保留及补充1项未在更早日期收录的语法；已介绍的语法不再当作新项目。原文中已核实的新项目不足时，不为凑满5～8项而重复收录。",
+    "grammarSourceCommit": "5a1f17124902cee06530c5a3b5b70e356c4c3df9"
   },
   "reviewFocus": [
     {

@@ -1,0 +1,109 @@
+{
+  "sourceRepository": "kai987/japan-it-ai-daily",
+  "sourceCommit": "5a1f17124902cee06530c5a3b5b70e356c4c3df9",
+  "days": 9,
+  "before": 45,
+  "after": 10,
+  "duplicatesAfter": 0,
+  "protected": [
+    "vocabulary",
+    "immersion",
+    "reading",
+    "reviewFocus",
+    "n1-source originals",
+    "saved user state schema"
+  ],
+  "byDate": [
+    {
+      "date": "2026-09-09",
+      "before": 5,
+      "after": 1,
+      "patterns": [
+        "～に対して"
+      ],
+      "protectedSha256": "fd00b15313313bbd08a0bff81c4e0e64681d08808aebe389e1678ff159d54550",
+      "sourceFileSha256": "fc8ba1c972fecaccd9847b5a51cecd97ad868c134542236fe59f8e3ff419fef8"
+    },
+    {
+      "date": "2026-09-10",
+      "before": 5,
+      "after": 1,
+      "patterns": [
+        "～べきだ"
+      ],
+      "protectedSha256": "afb871439e495188930cd6b0ffa17b42b9cc9c32c8c58a04ed83b3a3d90ad19e",
+      "sourceFileSha256": "5a8fdf0f870083b9a437b703e258b874d5792c5ae5ab23c3148949fe32bbc829"
+    },
+    {
+      "date": "2026-09-11",
+      "before": 5,
+      "after": 1,
+      "patterns": [
+        "～つつも"
+      ],
+      "protectedSha256": "8efa2c9128cc018447540856eb5e7b323b3d5530f1b028205c91165a757d9ee4",
+      "sourceFileSha256": "b631abd287d7e002d87532188cc06fa1a6931537b1d6cea8cbffe096fea2828d"
+    },
+    {
+      "date": "2026-09-12",
+      "before": 5,
+      "after": 1,
+      "patterns": [
+        "～に加えて"
+      ],
+      "protectedSha256": "42c6d089f3747dde83da56ecc00f4c4b56c4734942d23338dfb3bed1ea662628",
+      "sourceFileSha256": "55eff61adaa4aa4470b4a44772414ef2f3eb54e5e8eb9e7054b23072428f21f4"
+    },
+    {
+      "date": "2026-09-13",
+      "before": 5,
+      "after": 1,
+      "patterns": [
+        "～に沿って"
+      ],
+      "protectedSha256": "2fb3e0ca3f41373495d36464b5953389a659800702888ec235962fccd51354fc",
+      "sourceFileSha256": "5122dcacef42b8906599faf11a0fafb6a73be1b82dc61a830e92b02a09e0123b"
+    },
+    {
+      "date": "2026-09-14",
+      "before": 5,
+      "after": 1,
+      "patterns": [
+        "～に先立って"
+      ],
+      "protectedSha256": "43d4c3643edc1c010e5d8ae47840d74ab40e5927a6e484b9b0f5fbec0bbdaa52",
+      "sourceFileSha256": "edde26635b120c1530eaafb4c37265bcdf985ca3da0f5161d79ee3781c67c048"
+    },
+    {
+      "date": "2026-09-15",
+      "before": 5,
+      "after": 1,
+      "patterns": [
+        "～たところ"
+      ],
+      "protectedSha256": "1e75fa0579b484870beb0c6361efff15371f2c7aeaf9fa912bcdffbb8137f597",
+      "sourceFileSha256": "10e3ea6eae17f967766c98d2ce1b372ff8604f99526542faa08efcb12ac07789"
+    },
+    {
+      "date": "2026-09-16",
+      "before": 5,
+      "after": 2,
+      "patterns": [
+        "～ざるを得ない",
+        "～をもとに"
+      ],
+      "protectedSha256": "f05ac711348473d5c0675dff91edfaef44260675c1729c5be980fbe625bf4fec",
+      "sourceFileSha256": "6c6f2e8344fa11ddc2bf842da90a6f3d42e7f742c09490fd857e34c9fa9d708c"
+    },
+    {
+      "date": "2026-09-17",
+      "before": 5,
+      "after": 1,
+      "patterns": [
+        "～ない限り"
+      ],
+      "protectedSha256": "6c0985f592960f81695d85ef066edc50033f6424f3ffbc1183ea7d606fc100ed",
+      "sourceFileSha256": "a664414874c4ab264d0d1439af6b20a63eb4b9d30d37212379d54455659af460"
+    }
+  ]
+}

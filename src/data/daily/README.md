@@ -95,3 +95,10 @@ Node.js 24で `npm run import:daily -- /path/to/YYYY-MM-DD.json` を実行でき
 選択肢と `optionNotes` はそれぞれ4件、`answer` は元配列の0〜3の番号です。
 画面で選択肢の順番が変わっても、JSONの配列や正解番号を書き換える必要はありません。
 既存の同じIDで選択肢の意味・順番を変更すると保存回答との対応が変わるため、問題を差し替える場合は新しいIDを付けてください。
+
+
+## 新词与新语法全历史查重
+
+自2026-09-09起的每日JSON为IT/AI日报必背项目镜像。词汇保持来源的N1/N2参考标注；语法取当天C-4已查重子集，0～5项，不能用历史项目补齐。少于5项必须提供`lesson.grammarSelectionNote`（至少20字符）；空数组只有附有核验后的真实原因才合法，缺失grammar字段仍然失败。可记录`lesson.grammarSourceCommit`，语法卡保留level、sourceUrl、sourceForm、sourceAnchor。2026-09-18起新语法需要可定位原文的出处信息。完整来源与当天Top5对应关系需在同步时验证，不能仅以本地语法查重代替。
+
+同一语法的表记与接续变体按`src/data/grammar-identity-rules.json`归一；不同功能不强行合并。`npm run validate:content`及生产构建会校验所有已生成镜像日期，跨日期或当日重复会阻止发布。原有独立课程、n1-source原文及错题复习不受此新项目规则删除。替换文型必须换ID，相同文型与例句的同日重跑保持ID，避免继承另一语法的掌握状态。
