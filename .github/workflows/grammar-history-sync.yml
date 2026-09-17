@@ -1,0 +1,90 @@
+name: Verify repaired grammar mirror
+on:
+  push:
+    branches: [fix/grammar-history-sync-2026-09-18]
+    paths: ['.github/workflows/grammar-history-sync.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: n1-grammar-history-repair
+  cancel-in-progress: false
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: 24
+          package-manager-cache: false
+      - name: Fetch exact verified IT daily source
+        shell: bash
+        run: |
+          set -euo pipefail
+          git init /tmp/it-grammar-source
+          git -C /tmp/it-grammar-source remote add origin https://github.com/kai987/japan-it-ai-daily.git
+          git -C /tmp/it-grammar-source fetch --depth 1 origin 5a1f17124902cee06530c5a3b5b70e356c4c3df9
+          git -C /tmp/it-grammar-source checkout --detach FETCH_HEAD
+          test "$(git -C /tmp/it-grammar-source rev-parse HEAD)" = '5a1f17124902cee06530c5a3b5b70e356c4c3df9'
+          cd /tmp/it-grammar-source
+          npm ci --no-audit --no-fund
+          npm run content:integrity:check
+      - name: Synchronize only grammar and validate invariant fields
+        run: |
+          python3 -m pip install PyYAML==6.0.2
+          python3 scripts/sync-grammar-history-once.py /tmp/it-grammar-source
+      - name: Install and validate content, units and production build
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/n1-grammar-checks
+          npm ci --no-audit --no-fund
+          npm run validate:content 2>&1 | tee /tmp/n1-grammar-checks/content.log
+          npm test 2>&1 | tee /tmp/n1-grammar-checks/tests.log
+          npm run build 2>&1 | tee /tmp/n1-grammar-checks/build.log
+      - name: Verify browser interactions
+        shell: bash
+        run: |
+          set -euo pipefail
+          npx playwright install --with-deps chromium
+          npm run test:e2e 2>&1 | tee /tmp/n1-grammar-checks/browser.log
+      - name: Commit verified grammar mirror to review branch only
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BRANCH: fix/grammar-history-sync-2026-09-18
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          report=json.loads(Path('docs/grammar-history-sync.json').read_text())
+          assert report['days']==9 and report['after']==10 and report['duplicatesAfter']==0
+          Path('.github/workflows/grammar-history-sync.yml').unlink()
+          Path('scripts/sync-grammar-history-once.py').unlink()
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add src/data/daily src/data/grammar-identity-rules.json src/types.ts src/lib/archive.ts src/lib/grammarHistory.ts src/App.tsx scripts/validate-content.ts scripts/sync-grammar-history-once.py tests/grammar-history.test.ts docs/grammar-history-sync.json .github/workflows/grammar-history-sync.yml
+          git diff --cached --stat
+          git commit -m 'fix: synchronize deduplicated grammar and enforce honest variable lesson counts'
+          AUTH=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
+          git -c "http.https://github.com/.extraheader=AUTHORIZATION: basic $AUTH" push origin "HEAD:$BRANCH"
+          git rev-parse HEAD > /tmp/n1-grammar-checks/VERIFIED_COMMIT.txt
+      - name: Export verification evidence
+        if: always()
+        run: |
+          mkdir -p /tmp/n1-grammar-checks
+          cp docs/grammar-history-sync.json /tmp/n1-grammar-checks/ 2>/dev/null || true
+          git diff --stat > /tmp/n1-grammar-checks/working-diff.txt
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: n1-grammar-verification
+          path: /tmp/n1-grammar-checks
+          retention-days: 7
