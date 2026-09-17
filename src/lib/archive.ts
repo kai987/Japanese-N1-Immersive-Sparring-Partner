@@ -31,7 +31,7 @@ export function validateLesson(input: unknown, path: string, datedIds = false): 
       const itemPath = `${path}.${kind}[${index}]`
       fields(item, [...names], itemPath)
       if (kind === 'vocabulary') {
-        requireValid(item.jlpt === 'N1', `${itemPath}.jlpt`, 'N1 が必要です')
+        requireValid(item.jlpt === 'N1' || item.jlpt === 'N2', `${itemPath}.jlpt`, 'N1 または N2 が必要です')
         requireValid(strings(item.collocations), `${itemPath}.collocations`, '組み合わせの配列が必要です')
       } else requireValid(Number.isInteger(item.frequency) && Number(item.frequency) >= 1 && Number(item.frequency) <= 5, `${itemPath}.frequency`, '1〜5の整数が必要です')
     })
