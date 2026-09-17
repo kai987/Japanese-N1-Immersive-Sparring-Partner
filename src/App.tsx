@@ -328,6 +328,7 @@ export default function App() {
           {active === 'grammar' && (
             <div className="page-enter">
               <SectionHeader eyebrow="03" title="N1 文法" description="意味・接続・文体を確認し、似た表現との違いを整理しましょう。" />
+              {lesson.grammarSelectionNote && <p className="grammar-explain" data-grammar-selection-note>{lesson.grammarSelectionNote}</p>}
               <div className="learning-list grammar-list">
                 {lesson.grammar.map((item, index) => {
                   const status = progress.grammar[item.id] ?? 'new'

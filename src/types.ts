@@ -16,6 +16,10 @@ export interface VocabularyItem {
 }
 
 export interface GrammarItem {
+  level?: string
+  sourceUrl?: string
+  sourceForm?: string
+  sourceAnchor?: string
   id: string
   pattern: string
   meaning: string
@@ -51,6 +55,8 @@ export interface DailyLesson {
   }
   vocabulary: VocabularyItem[]
   grammar: GrammarItem[]
+  grammarSelectionNote?: string
+  grammarSourceCommit?: string
   reading: {
     title: string
     paragraphs: string[]

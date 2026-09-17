@@ -187,64 +187,20 @@
     ],
     "grammar": [
       {
-        "id": "2026-09-15-g-001",
-        "pattern": "～にとどまらず",
-        "meaning": "不仅限于……，还扩展到更大范围",
-        "form": "名詞 + にとどまらず / 動詞辞書形 + にとどまらず",
-        "register": "書面語・技術文書",
-        "frequency": 5,
-        "explanation": "用于说明AI工程从单一功能扩展到更广的评价、治理或运维范围。",
-        "example": "AIはCode生成にとどまらず、実Dataの調査にも使われています。",
-        "translation": "AI不仅用于代码生成，也用于实际数据调查。",
-        "comparison": "比「～だけでなく」更正式，并带有范围继续扩展的语感。"
-      },
-      {
-        "id": "2026-09-15-g-002",
-        "pattern": "～たうえで",
-        "meaning": "完成前项、确认其结果后再做后项",
-        "form": "動詞た形 + うえで / 名詞 + のうえで",
-        "register": "技術文書・ビジネス",
-        "frequency": 5,
-        "explanation": "适合描述验证后发布、比较后选择等带前提顺序的流程。",
-        "example": "生成物を検証したうえで、Git Syncから本番へ反映します。",
-        "translation": "验证生成物后，再通过Git Sync发布到生产。",
-        "comparison": "强调前项完成并作为后项判断依据，不只是单纯时间先后。"
-      },
-      {
-        "id": "2026-09-15-g-003",
-        "pattern": "～に応じて",
-        "meaning": "根据条件、用途或变化采取相应行动",
-        "form": "名詞 + に応じて",
-        "register": "中立・技術説明",
-        "frequency": 5,
-        "explanation": "用于描述处理方式随着Access Pattern、风险或业务条件变化。",
-        "example": "Access Patternに応じてStorage ClassとLifecycleを選びます。",
-        "translation": "根据访问模式选择Storage Class和Lifecycle。",
-        "comparison": "比「～によって」更强调随着条件变化而相应调整。"
-      },
-      {
-        "id": "2026-09-15-g-004",
-        "pattern": "～とは限らない",
-        "meaning": "并不一定……；用于限制一般化",
-        "form": "普通形 + とは限らない",
-        "register": "論説・技術文書",
-        "frequency": 5,
-        "explanation": "用于提醒单一Customer Case或一次结果不能直接外推到所有环境。",
-        "example": "ある企業で80％削減できても、自社で同じ効果が出るとは限りません。",
-        "translation": "某企业能降本80%，自家公司也不一定有同样效果。",
-        "comparison": "常用于Evidence Boundary，避免把个案结果绝对化。"
-      },
-      {
-        "id": "2026-09-15-g-005",
-        "pattern": "～かねない",
-        "meaning": "有可能导致不希望发生的结果",
-        "form": "動詞ます形語幹 + かねない",
-        "register": "書面語・警告",
-        "frequency": 5,
-        "explanation": "适合Security、Shadow IT和Governance场景中的负面风险提示。",
-        "example": "代替手段を示さず禁止すると、利用が見えない場所へ移りかねません。",
-        "translation": "如果禁止却不给替代方案，使用行为可能转移到不可见处。",
-        "comparison": "与「～おそれがある」接近，但「～かねない」更直接表达警戒。"
+        "id": "2026-09-15-g-gh-766e9e947b",
+        "pattern": "～たところ",
+        "meaning": "做了……之后，发现了某结果。",
+        "form": "動詞た形＋ところ",
+        "register": "技術文書・日常の説明",
+        "frequency": 4,
+        "explanation": "原文在检查S3环境后发现存储占用原因，用于报告检查带来的发现。",
+        "example": "保存状況を調べたところ、不要なデータが残っていました。",
+        "translation": "调查保存状况后，发现仍残留着不需要的数据。",
+        "comparison": "「たところで」常表示即使做了也无效，不能仅删「で」视为同义变体。 当天Top 3原文形式：たところ。例句为学习用原创。",
+        "level": "N2",
+        "sourceUrl": "https://atmarkit.itmedia.co.jp/ait/spv/2609/14/news027.html",
+        "sourceForm": "たところ",
+        "sourceAnchor": "の改善に着手した。S3環境全体を調べたところ"
       }
     ],
     "reading": {
@@ -271,7 +227,9 @@
           "重要な内容は担当者が確認してから登録するため、人間の確認をなくしてはいない。"
         ]
       }
-    }
+    },
+    "grammarSelectionNote": "全历史查重后，本日保留及补充1项未在更早日期收录的语法；已介绍的语法不再当作新项目。原文中已核实的新项目不足时，不为凑满5～8项而重复收录。",
+    "grammarSourceCommit": "5a1f17124902cee06530c5a3b5b70e356c4c3df9"
   },
   "reviewFocus": [
     {

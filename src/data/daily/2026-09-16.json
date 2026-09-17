@@ -187,64 +187,33 @@
     ],
     "grammar": [
       {
-        "id": "2026-09-16-g-001",
-        "pattern": "～にとどまらず",
-        "meaning": "不仅限于……，还扩展到更广范围",
-        "form": "名詞 + にとどまらず / 動詞普通形 + にとどまらず",
-        "register": "書面語・技術文書",
-        "frequency": 5,
-        "explanation": "用于说明能力、影响或课题超出原先范围。",
-        "example": "MCPはTool接続にとどまらず、長期TaskやIdentityの設計へ広がっています。",
-        "translation": "MCP不仅限于工具连接，也正在扩展到长期任务和身份设计。",
-        "comparison": "比「～だけでなく」更正式，适合说明范围扩展。"
-      },
-      {
-        "id": "2026-09-16-g-002",
-        "pattern": "～に応じて",
-        "meaning": "根据条件或情况进行相应调整",
-        "form": "名詞 + に応じて",
-        "register": "中立・ビジネス",
-        "frequency": 5,
-        "explanation": "说明选择、配置、处理方式随条件变化。",
-        "example": "Taskの複雑さに応じてCopilotのAuto Tierを選びます。",
-        "translation": "根据任务复杂度选择Copilot Auto档位。",
-        "comparison": "比「～によって」更强调随条件变化采取相应措施。"
-      },
-      {
-        "id": "2026-09-16-g-003",
-        "pattern": "～たうえで",
-        "meaning": "在完成前项、确认前提后再进行后项",
-        "form": "動詞た形 + うえで / 名詞 + のうえで",
-        "register": "書面語・ビジネス",
-        "frequency": 5,
-        "explanation": "强调先验证或确认，再做决策或执行。",
-        "example": "Dataの所在と規制要件を確認したうえで、AI Workloadの配置を決めます。",
-        "translation": "在确认数据位置和监管要求后，再决定AI负载部署。",
-        "comparison": "与单纯的顺序表达相比，更强调前项是后项判断的前提。"
-      },
-      {
-        "id": "2026-09-16-g-004",
-        "pattern": "～とは限らない",
-        "meaning": "不一定……，用于限制过度一般化",
-        "form": "普通形 + とは限らない",
-        "register": "中立・論説",
-        "frequency": 5,
-        "explanation": "指出某个观察结果不能无条件推广。",
-        "example": "静的Error率が低くても、Code全体が正しいとは限りません。",
-        "translation": "即使静态错误率低，也不一定表示代码整体正确。",
-        "comparison": "比单纯否定更明确地限制绝对化推断。"
-      },
-      {
         "id": "2026-09-16-g-005",
         "pattern": "～ざるを得ない",
-        "meaning": "由于客观条件不得不……",
+        "meaning": "由于客观条件不得不……。",
         "form": "動詞ない形去ない + ざるを得ない（する→せざるを得ない）",
         "register": "書面語・報告",
         "frequency": 5,
         "explanation": "说明受成本、法规或系统限制而被迫选择某方案。",
         "example": "規制上Public Cloudへ置けないDataは、別環境を選ばざるを得ません。",
         "translation": "因监管不能放到公有云的数据，不得不选择其他环境。",
-        "comparison": "与「～しかない」相比，更强调外部客观条件造成的不得已。"
+        "comparison": "企业合规语境常用。",
+        "level": "N1"
+      },
+      {
+        "id": "2026-09-16-g-gh-cd5bd48728",
+        "pattern": "～をもとに",
+        "meaning": "以……为材料或基础，进行分析或制作。",
+        "form": "名詞＋をもとに／を基に／をもとにした＋名詞",
+        "register": "技術文書・日常の説明",
+        "frequency": 4,
+        "explanation": "原文依据使用数据分析代码质量，适合交代分析材料而非空泛推测。",
+        "example": "利用データをもとに、改善の傾向を調べます。",
+        "translation": "根据使用数据调查改善趋势。",
+        "comparison": "「に基づいて」更强调依据或规范；本项较突出作为材料，不因汉字变化重复收录。 当天Top 1原文形式：を基に。例句为学习用原创。",
+        "level": "N2",
+        "sourceUrl": "https://atmarkit.itmedia.co.jp/ait/articles/2609/15/news047.html",
+        "sourceForm": "を基に",
+        "sourceAnchor": "エージェント「Kiro」の利用データを基に"
       }
     ],
     "reading": {
@@ -271,7 +240,9 @@
           "AIは顧客情報を整理して提示するため、顧客データを一切使わないわけではない。"
         ]
       }
-    }
+    },
+    "grammarSelectionNote": "全历史查重后，本日保留及补充2项未在更早日期收录的语法；已介绍的语法不再当作新项目。原文中已核实的新项目不足时，不为凑满5～8项而重复收录。",
+    "grammarSourceCommit": "5a1f17124902cee06530c5a3b5b70e356c4c3df9"
   },
   "reviewFocus": [
     {

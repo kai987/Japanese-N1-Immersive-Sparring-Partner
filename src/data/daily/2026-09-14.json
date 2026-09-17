@@ -187,64 +187,20 @@
     ],
     "grammar": [
       {
-        "id": "2026-09-14-g-001",
-        "pattern": "～にとどまらず",
-        "meaning": "不仅限于……",
-        "form": "名詞 + にとどまらず / 動詞辞書形 + にとどまらず",
-        "register": "書面語・技術文書",
-        "frequency": 5,
-        "explanation": "用于说明能力、范围或影响没有停留在前项，而继续扩展到后项。",
-        "example": "DevinはAlert分類にとどまらず、条件次第で修正PRまで作成します。",
-        "translation": "Devin 不仅分类 Alert，在满足条件时还会生成修复 PR。",
-        "comparison": "比「～だけでなく」更正式，并强调范围扩展。"
-      },
-      {
-        "id": "2026-09-14-g-002",
-        "pattern": "～を余儀なくされる",
-        "meaning": "受客观条件影响不得不……",
-        "form": "名詞 + を余儀なくされる",
-        "register": "書面語・報告",
-        "frequency": 5,
-        "explanation": "用于 EOL、兼容性、制度等外部条件迫使设计或计划发生变化的场景。",
-        "example": "MHAが8.4に対応しないため、HA方式の再検討を余儀なくされました。",
-        "translation": "由于 MHA 不支持 8.4，不得不重新评估 HA 方式。",
-        "comparison": "「～ざるを得ない」也表示不得不，但本表达更常见于正式报告中的客观外因。"
-      },
-      {
-        "id": "2026-09-14-g-003",
-        "pattern": "～に応じて",
-        "meaning": "根据……相应改变",
-        "form": "名詞 + に応じて",
-        "register": "中立・ビジネス",
-        "frequency": 5,
-        "explanation": "表示处理方式随 Risk、Priority 或其他条件变化而调整。",
-        "example": "AlertのPriorityに応じてEscalationを変えます。",
-        "translation": "根据 Alert 优先级改变升级方式。",
-        "comparison": "比「～によって」更强调随条件变化进行相应调整。"
-      },
-      {
-        "id": "2026-09-14-g-004",
-        "pattern": "～とは限らない",
-        "meaning": "不一定……",
-        "form": "普通形 + とは限らない",
-        "register": "中立・論説",
-        "frequency": 5,
-        "explanation": "用于限制过度一般化，提醒表面现象不能直接推出结论。",
-        "example": "Dashboardが表示されても、AIが数値を読めるとは限りません。",
-        "translation": "即使 Dashboard 能显示，也不代表 AI 一定能读取其中的数值。",
-        "comparison": "用于 Evidence Boundary 时，比单纯的「～ない」更明确地否定绝对化推断。"
-      },
-      {
-        "id": "2026-09-14-g-005",
-        "pattern": "～かねない",
-        "meaning": "可能导致不良结果",
-        "form": "動詞ます形去ます + かねない",
-        "register": "書面語・警告",
-        "frequency": 5,
-        "explanation": "用于 Governance、Security 等场景，对可能发生的负面结果进行风险警示。",
-        "example": "Governanceを後回しにすると、利用実態を把握できなくなりかねません。",
-        "translation": "如果把治理放到后面，可能会变得无法掌握实际使用情况。",
-        "comparison": "「～おそれがある」也表示风险；「～かねない」更直接表达说话人的警戒。"
+        "id": "2026-09-14-g-gh-4d7fbbfae7",
+        "pattern": "～に先立って",
+        "meaning": "在……之前，先做准备或先行事项。",
+        "form": "名詞・動詞辞書形＋に先立って／に先立ち",
+        "register": "技術文書・日常の説明",
+        "frequency": 4,
+        "explanation": "原文指出AI使用可能先于正式治理，用于强调先后关系及准备缺口。",
+        "example": "正式な導入に先立って、データの管理方法を決めます。",
+        "translation": "正式导入之前，先确定数据管理方式。",
+        "comparison": "比「前に」正式，常用于有计划的重要事项；并非所有日常动作都自然。 当天Top 4原文形式：に先立って。例句为学习用原创。",
+        "level": "N2",
+        "sourceUrl": "https://atmarkit.itmedia.co.jp/ait/articles/2609/11/news006.html",
+        "sourceForm": "に先立って",
+        "sourceAnchor": "正式なガバナンス整備や専用の資金確保に先立って"
       }
     ],
     "reading": {
@@ -271,7 +227,9 @@
           "本文の中心であるデータ接続・Agent権限・Human Gateの境界設計をまとめている。"
         ]
       }
-    }
+    },
+    "grammarSelectionNote": "全历史查重后，本日保留及补充1项未在更早日期收录的语法；已介绍的语法不再当作新项目。原文中已核实的新项目不足时，不为凑满5～8项而重复收录。",
+    "grammarSourceCommit": "5a1f17124902cee06530c5a3b5b70e356c4c3df9"
   },
   "reviewFocus": [
     {
