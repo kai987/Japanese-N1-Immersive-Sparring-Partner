@@ -29,11 +29,15 @@
         "word": "確かめる",
         "reading": "たしかめる",
         "meaning": "确认、核实",
-        "jlpt": "N1",
+        "jlpt": "N2",
         "partOfSpeech": "動詞・一段",
         "example": "負荷をかけた状態でFailover後の挙動を確かめます。",
         "translation": "在施加负载的状态下确认 Failover 后的行为。",
-        "collocations": ["結果を確かめる", "動作を確かめる", "実測で確かめる"],
+        "collocations": [
+          "結果を確かめる",
+          "動作を確かめる",
+          "実測で確かめる"
+        ],
         "nuance": "比「見る」更强调通过证据核实结果。"
       },
       {
@@ -45,32 +49,44 @@
         "partOfSpeech": "動詞・一段",
         "example": "Taskの難易度に応じてModelを振り分けます。",
         "translation": "根据 Task 难度把处理分配给不同 Model。",
-        "collocations": ["処理を振り分ける", "Taskを振り分ける", "Modelへ振り分ける"],
+        "collocations": [
+          "処理を振り分ける",
+          "Taskを振り分ける",
+          "Modelへ振り分ける"
+        ],
         "nuance": "比「分ける」更有根据规则 Routing 的语感。"
       },
       {
-        "id": "2026-09-10-v-003",
-        "word": "踏まえる",
-        "reading": "ふまえる",
-        "meaning": "基于、考虑到已有事实",
-        "jlpt": "N1",
-        "partOfSpeech": "動詞・一段",
-        "example": "実測結果を踏まえて次の仕様を決めます。",
-        "translation": "基于实测结果决定下一版规格。",
-        "collocations": ["結果を踏まえる", "状況を踏まえる", "脅威変化を踏まえる"],
-        "nuance": "比「考えて」正式，强调以前项是后续判断的依据。"
+        "id": "2026-09-10-v-r003",
+        "word": "引きずる",
+        "reading": "ひきずる",
+        "meaning": "拖着某物移动；也表示持续受到过去的事情或其他因素影响。",
+        "jlpt": "N2",
+        "partOfSpeech": "動詞・五段",
+        "example": "以前の設計に引きずられず、現在の要件から考え直します。",
+        "translation": "我们不会被以前的设计牵制，而是从当前需求重新思考。",
+        "collocations": [
+          "失敗を引きずる",
+          "影響を引きずる",
+          "過去を引きずる"
+        ],
+        "nuance": "「参考にする」是主动借鉴；「引きずられる」通常指不由自主地受到影响。"
       },
       {
-        "id": "2026-09-10-v-004",
-        "word": "正確な",
-        "reading": "せいかくな",
-        "meaning": "准确的",
+        "id": "2026-09-10-v-r004",
+        "word": "載せ替える",
+        "reading": "のせかえる",
+        "meaning": "迁移到另一平台或承载环境",
         "jlpt": "N1",
-        "partOfSpeech": "な形容詞",
-        "example": "Assetを正確に把握してから優先度を付けます。",
-        "translation": "准确掌握 Asset 后再确定优先级。",
-        "collocations": ["正確な把握", "正確な情報", "正確に測る"],
-        "nuance": "强调误差小并与事实一致，常用于 Data、Inventory、Measurement。"
+        "partOfSpeech": "動詞・一段",
+        "example": "ProxySQLをEC2からEKSへ載せ替えました。",
+        "translation": "把 ProxySQL 从 EC2 迁到了 EKS。",
+        "collocations": [
+          "EKSへ載せ替える",
+          "新基盤へ載せ替える",
+          "Containerへ載せ替える"
+        ],
+        "nuance": "工程语境强调对象功能大体保留，而 Hosting 基盘发生替换。"
       },
       {
         "id": "2026-09-10-v-005",
@@ -81,47 +97,47 @@
         "partOfSpeech": "な形容詞",
         "example": "Virtual Patchは暫定的な対策として使います。",
         "translation": "把 Virtual Patch 作为临时措施使用。",
-        "collocations": ["暫定的な対策", "暫定的に適用する", "暫定措置"],
+        "collocations": [
+          "暫定的な対策",
+          "暫定的に適用する",
+          "暫定措置"
+        ],
         "nuance": "强调之后仍需要正式解决方案。"
       },
       {
-        "id": "2026-09-10-v-006",
+        "id": "2026-09-10-v-r006",
+        "word": "わずか",
+        "reading": "わずか",
+        "meaning": "数量或程度很少、很小；放在数值前还可强调“仅仅”。",
+        "jlpt": "N2",
+        "partOfSpeech": "名詞・な形容詞・副詞的用法",
+        "example": "わずかな差でも、測定条件が違えば単純には比較できません。",
+        "translation": "即使差异很小，测量条件不同也不能简单比较。",
+        "collocations": [
+          "わずかな差",
+          "わずか一回",
+          "わずかに増える"
+        ],
+        "nuance": "「少ない」较中性；「わずか」常包含相较于预期“很少”的评价。"
+      },
+      {
+        "id": "2026-09-10-v-r007",
         "word": "徐々に",
         "reading": "じょじょに",
         "meaning": "逐渐地、分阶段地",
-        "jlpt": "N1",
+        "jlpt": "N2",
         "partOfSpeech": "副詞",
         "example": "新しいReaderへのTrafficを徐々に増やします。",
         "translation": "逐步增加发往新 Reader 的 Traffic。",
-        "collocations": ["徐々に増やす", "徐々に移行する", "徐々に強化する"],
+        "collocations": [
+          "徐々に増やす",
+          "徐々に移行する",
+          "徐々に強化する"
+        ],
         "nuance": "比「少しずつ」更书面，适合 Rollout 说明。"
       },
       {
-        "id": "2026-09-10-v-007",
-        "word": "直ちに",
-        "reading": "ただちに",
-        "meaning": "立即、马上",
-        "jlpt": "N1",
-        "partOfSpeech": "副詞",
-        "example": "悪用が確認された脆弱性は直ちに優先度を上げます。",
-        "translation": "确认已被利用的漏洞后立即提高优先级。",
-        "collocations": ["直ちに対応する", "直ちに停止する", "直ちに確認する"],
-        "nuance": "比「すぐ」正式，适合 Policy、应急与报告。"
-      },
-      {
-        "id": "2026-09-10-v-008",
-        "word": "万が一",
-        "reading": "まんがいち",
-        "meaning": "万一、假设低概率但高影响情况发生",
-        "jlpt": "N1",
-        "partOfSpeech": "副詞・慣用表現",
-        "example": "万が一Serviceを停止する場合に備えてBCPを整備します。",
-        "translation": "为万一需要停止 Service 的情况准备 BCP。",
-        "collocations": ["万が一に備える", "万が一停止した場合", "万が一の障害"],
-        "nuance": "风险管理中很常用，强调发生概率低但影响大。"
-      },
-      {
-        "id": "2026-09-10-v-009",
+        "id": "2026-09-10-v-r008",
         "word": "一定程度",
         "reading": "いっていていど",
         "meaning": "在一定程度上",
@@ -129,20 +145,44 @@
         "partOfSpeech": "副詞的表現",
         "example": "学習済みDomainでは一定程度の正の相関を確認しました。",
         "translation": "在已学习 Domain 中确认了一定程度的正相关。",
-        "collocations": ["一定程度の相関", "一定程度改善する", "一定程度有効だ"],
+        "collocations": [
+          "一定程度の相関",
+          "一定程度改善する",
+          "一定程度有効だ"
+        ],
         "nuance": "用于限制结论强度，避免过度一般化。"
       },
       {
-        "id": "2026-09-10-v-010",
-        "word": "妥当性",
-        "reading": "だとうせい",
-        "meaning": "妥当性、是否合理适切",
+        "id": "2026-09-10-v-r009",
+        "word": "恒久",
+        "reading": "こうきゅう",
+        "meaning": "长期持续、不作为临时安排的性质或状态。",
         "jlpt": "N1",
         "partOfSpeech": "名詞",
-        "example": "Judgeの評価基準自体の妥当性も人が確認します。",
-        "translation": "Judge 的评价标准本身也要由人确认其合理性。",
-        "collocations": ["妥当性を検証する", "言葉選びの妥当性", "判断の妥当性"],
-        "nuance": "比「正しさ」更强调在目的与条件下是否合理。"
+        "example": "応急処置と恒久的な対策を分け、それぞれの担当を決めます。",
+        "translation": "我们会区分应急处理和长期对策，并分别确定负责人。",
+        "collocations": [
+          "恒久的な対策",
+          "恒久対応",
+          "恒久化する"
+        ],
+        "nuance": "「恒久的」说明预期长期有效，不等于承诺永远不需要更新。"
+      },
+      {
+        "id": "2026-09-10-v-r010",
+        "word": "急務",
+        "reading": "きゅうむ",
+        "meaning": "紧急且必须处理的任务",
+        "jlpt": "N1",
+        "partOfSpeech": "名詞",
+        "example": "脆弱性対応の高速化が急務になっています。",
+        "translation": "漏洞应对提速已经成为紧急任务。",
+        "collocations": [
+          "対応が急務だ",
+          "改善が急務だ",
+          "自動化が急務だ"
+        ],
+        "nuance": "正式且紧迫度高，常见于新闻和报告。"
       }
     ],
     "grammar": [

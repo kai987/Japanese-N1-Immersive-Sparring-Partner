@@ -25,43 +25,7 @@
     },
     "vocabulary": [
       {
-        "id": "2026-09-09-v-001",
-        "word": "乗っ取る",
-        "reading": "のっとる",
-        "meaning": "劫持、夺取账号或系统的控制权",
-        "jlpt": "N1",
-        "partOfSpeech": "動詞・五段",
-        "example": "AIアカウントを乗っ取られても被害が拡大しないよう、QuotaとCredentialを分離します。",
-        "translation": "为避免 AI 账号被劫持后影响扩大，将 Quota 与 Credential 分离。",
-        "collocations": ["アカウントを乗っ取る", "セッションを乗っ取る", "AI環境を乗っ取る"],
-        "nuance": "比「盗む」更强调取得后持续控制。"
-      },
-      {
-        "id": "2026-09-09-v-002",
-        "word": "絞る",
-        "reading": "しぼる",
-        "meaning": "缩小、限定范围",
-        "jlpt": "N1",
-        "partOfSpeech": "動詞・五段",
-        "example": "最初のSecurity対策では、守るRiskと攻撃経路を一つに絞ります。",
-        "translation": "初期 Security 对策先聚焦一个风险和攻击路径。",
-        "collocations": ["Riskを絞る", "対策範囲を絞る", "権限を絞る"],
-        "nuance": "日本 IT 现场常用于 Scope、Permission 和 Candidate。"
-      },
-      {
-        "id": "2026-09-09-v-003",
-        "word": "迂回する",
-        "reading": "うかいする",
-        "meaning": "绕过控制",
-        "jlpt": "N1",
-        "partOfSpeech": "動詞・サ変",
-        "example": "Sandbox失敗時の迂回実行をPolicyで無効化します。",
-        "translation": "通过 Policy 禁止 Sandbox 失败后的绕过执行。",
-        "collocations": ["制御を迂回する", "Sandboxを迂回する", "認証を迂回する"],
-        "nuance": "Security 中接近 bypass。"
-      },
-      {
-        "id": "2026-09-09-v-004",
+        "id": "2026-09-09-v-r001",
         "word": "差し替える",
         "reading": "さしかえる",
         "meaning": "替换、把一个值换成另一个值",
@@ -69,23 +33,63 @@
         "partOfSpeech": "動詞・一段",
         "example": "実CredentialはAgentに見せず、Network出口で代理Tokenを差し替えます。",
         "translation": "不向 Agent 暴露真实 Credential，而在网络出口替换代理 Token。",
-        "collocations": ["Tokenを差し替える", "値を差し替える", "Credentialを差し替える"],
+        "collocations": [
+          "Tokenを差し替える",
+          "値を差し替える",
+          "Credentialを差し替える"
+        ],
         "nuance": "常用于 Token、Config、File 等具体对象的替换。"
       },
       {
-        "id": "2026-09-09-v-005",
-        "word": "脆弱な",
-        "reading": "ぜいじゃくな",
-        "meaning": "脆弱的、容易被攻击或破坏的",
-        "jlpt": "N1",
-        "partOfSpeech": "な形容詞",
-        "example": "DooD構成ではHostへの境界が脆弱になる場合があります。",
-        "translation": "DooD 架构下 Host 边界可能变弱。",
-        "collocations": ["脆弱な設定", "脆弱な環境", "脆弱な境界"],
-        "nuance": "Security 中对应 vulnerable，不是单纯性能差。"
+        "id": "2026-09-09-v-r002",
+        "word": "仕掛ける",
+        "reading": "しかける",
+        "meaning": "主动设置机关、发起行动，使对方或局面产生反应。",
+        "jlpt": "N2",
+        "partOfSpeech": "動詞・一段",
+        "example": "改善の議論を仕掛ける前に、具体的な課題を整理します。",
+        "translation": "发起改善讨论前，我们会先整理具体问题。",
+        "collocations": [
+          "攻撃を仕掛ける",
+          "罠を仕掛ける",
+          "議論を仕掛ける"
+        ],
+        "nuance": "比「始める」更强调策略性地发起或布置，普通的工作开始不宜随意替换。"
       },
       {
-        "id": "2026-09-09-v-006",
+        "id": "2026-09-09-v-r003",
+        "word": "窃取する",
+        "reading": "せっしゅする",
+        "meaning": "窃取、非法取得机密或认证资料",
+        "jlpt": "N1",
+        "partOfSpeech": "動詞・サ変",
+        "example": "ローカル設定からAPIキーを窃取されないよう、平文保存を避けます。",
+        "translation": "为防止本地设置中的 API Key 被窃取，应避免明文保存。",
+        "collocations": [
+          "認証情報を窃取する",
+          "APIキーを窃取する",
+          "機密情報を窃取する"
+        ],
+        "nuance": "比「盗む」正式，常用于 Security Incident 报告。"
+      },
+      {
+        "id": "2026-09-09-v-r004",
+        "word": "備わる",
+        "reading": "そなわる",
+        "meaning": "某种功能、能力或性质已经具备、存在于其中。",
+        "jlpt": "N2",
+        "partOfSpeech": "動詞・五段",
+        "example": "標準で備わる機能を確認してから、追加実装の必要性を判断します。",
+        "translation": "确认默认具备的功能后，我们再判断是否需要追加实现。",
+        "collocations": [
+          "機能が備わる",
+          "能力が備わる",
+          "標準で備わる"
+        ],
+        "nuance": "「備える」表示主动配置；「備わる」着眼于已经具备的状态。"
+      },
+      {
+        "id": "2026-09-09-v-r005",
         "word": "決定論的な",
         "reading": "けっていろんてきな",
         "meaning": "在相同条件下稳定得到相同结果的、确定性的",
@@ -93,56 +97,92 @@
         "partOfSpeech": "な形容詞",
         "example": "Migrationの重要な判定は決定論的な処理として残します。",
         "translation": "把迁移中的关键判断保留为确定性处理。",
-        "collocations": ["決定論的な処理", "決定論的な手法", "決定論的に実行する"],
+        "collocations": [
+          "決定論的な処理",
+          "決定論的な手法",
+          "決定論的に実行する"
+        ],
         "nuance": "比「確実な」更强调同条件下的再现性。"
       },
       {
-        "id": "2026-09-09-v-007",
-        "word": "一貫して",
-        "reading": "いっかんして",
-        "meaning": "一贯地、始终保持同一标准",
+        "id": "2026-09-09-v-r006",
+        "word": "ややこしい",
+        "reading": "ややこしい",
+        "meaning": "事情错综复杂、难以理解或处理，让人觉得麻烦。",
+        "jlpt": "N2",
+        "partOfSpeech": "い形容詞",
+        "example": "手順がややこしいので、最初に全体の流れを図で示します。",
+        "translation": "由于步骤比较复杂难懂，我们会先用图展示整体流程。",
+        "collocations": [
+          "話がややこしい",
+          "ややこしい手順",
+          "関係がややこしい"
+        ],
+        "nuance": "「複雑」可以是客观描述；「ややこしい」更常带主观困扰，较口语化。"
+      },
+      {
+        "id": "2026-09-09-v-r007",
+        "word": "根こそぎ",
+        "reading": "ねこそぎ",
+        "meaning": "连根拔起般全部除去或夺走，几乎一点不留。",
         "jlpt": "N1",
         "partOfSpeech": "副詞",
-        "example": "担当者が変わっても一貫して変更履歴を追跡します。",
-        "translation": "即使负责人变化，也一贯追踪变更历史。",
-        "collocations": ["一貫して管理する", "一貫して追跡する", "一貫した方法"],
-        "nuance": "比「ずっと」正式，强调方针与品质不变。"
+        "example": "設定を根こそぎ削除する前に、復元方法を確認してください。",
+        "translation": "彻底删除全部设置前，请先确认恢复方法。",
+        "collocations": [
+          "根こそぎ取り除く",
+          "根こそぎ奪う",
+          "根こそぎ持ち去る"
+        ],
+        "nuance": "「すべて」相对中性；「根こそぎ」带有彻底移除、夺走的力度和形象。"
       },
       {
-        "id": "2026-09-09-v-008",
-        "word": "大幅に",
-        "reading": "おおはばに",
-        "meaning": "大幅地、显著地",
-        "jlpt": "N1",
+        "id": "2026-09-09-v-r008",
+        "word": "ゆくゆく",
+        "reading": "ゆくゆく",
+        "meaning": "在今后逐渐发展之后，最终到了将来的某个阶段。",
+        "jlpt": "N2",
         "partOfSpeech": "副詞",
-        "example": "AIで移行計画の作成時間を大幅に短縮しても、Reviewを省略しません。",
-        "translation": "即使 AI 显著缩短迁移规划时间，也不省略 Review。",
-        "collocations": ["大幅に短縮する", "大幅に削減する", "大幅に改善する"],
-        "nuance": "比「かなり」更适合报告和数值变化。"
+        "example": "まず一部署で試し、ゆくゆくは他部署にも広げる予定です。",
+        "translation": "计划先在一个部门试用，今后再逐步推广到其他部门。",
+        "collocations": [
+          "ゆくゆくは拡大する",
+          "ゆくゆくは独立する",
+          "ゆくゆく検討する"
+        ],
+        "nuance": "「まもなく」指不久之后；「ゆくゆく」通常比它更长远，时间点较模糊。"
       },
       {
-        "id": "2026-09-09-v-009",
-        "word": "足掛かり",
-        "reading": "あしがかり",
-        "meaning": "突破口、后续行动的入口",
-        "jlpt": "N1",
-        "partOfSpeech": "名詞",
-        "example": "露出したTokenがCloud侵入の足掛かりにならないよう失効させます。",
-        "translation": "让暴露 Token 失效，避免成为 Cloud 侵入的突破口。",
-        "collocations": ["攻撃の足掛かり", "侵入の足掛かり", "足掛かりにする"],
-        "nuance": "Security 中常表示 Attack Chain 起点。"
+        "id": "2026-09-09-v-r009",
+        "word": "行き渡る",
+        "reading": "いきわたる",
+        "meaning": "物品、信息或作用传播到整个范围中的各处。",
+        "jlpt": "N2",
+        "partOfSpeech": "動詞・五段",
+        "example": "変更点が全員に行き渡ったか、会議の最後に確認します。",
+        "translation": "会议结束时，我们会确认变更信息是否已传达给所有人。",
+        "collocations": [
+          "情報が行き渡る",
+          "全員に行き渡る",
+          "配慮が行き渡る"
+        ],
+        "nuance": "「行き届く」侧重周到充分；「行き渡る」侧重到达范围广、没有遗漏区域。"
       },
       {
-        "id": "2026-09-09-v-010",
-        "word": "境界",
-        "reading": "きょうかい",
-        "meaning": "边界、Trust 或 Permission 的分界",
-        "jlpt": "N1",
-        "partOfSpeech": "名詞",
-        "example": "Agentの実行環境とCredential保管の境界を分離します。",
-        "translation": "分离 Agent 执行环境与 Credential 保存边界。",
-        "collocations": ["Security境界", "実行境界", "境界を強制する"],
-        "nuance": "Architecture 中可表示 Trust Boundary。"
+        "id": "2026-09-09-v-r010",
+        "word": "閉じ込める",
+        "reading": "とじこめる",
+        "meaning": "封闭、限制在隔离边界内",
+        "jlpt": "N2",
+        "partOfSpeech": "動詞・一段",
+        "example": "不要なCredentialを持ち込まず、MalwareをContainer内に閉じ込めます。",
+        "translation": "不带入无关 Credential，把 Malware 限制在 Container 内。",
+        "collocations": [
+          "Processを閉じ込める",
+          "開発環境を閉じ込める",
+          "Malwareを閉じ込める"
+        ],
+        "nuance": "比「隔離する」更具象，强调 Containment。"
       }
     ],
     "grammar": [

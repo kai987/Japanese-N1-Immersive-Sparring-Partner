@@ -28,121 +28,161 @@
         "id": "2026-09-11-v-001",
         "word": "仲介する",
         "reading": "ちゅうかいする",
-        "meaning": "居中连接、作为中介协调两个主体",
+        "meaning": "居中连接、作为中介协调两个主体。",
         "jlpt": "N1",
         "partOfSpeech": "名詞・サ変動詞",
         "example": "GatewayがAgentと複数のModel Providerの通信を仲介します。",
         "translation": "Gateway 在 Agent 与多个 Model Provider 之间中介通信。",
-        "collocations": ["通信を仲介する", "取引を仲介する", "接続を仲介する"],
+        "collocations": [
+          "通信を仲介する",
+          "取引を仲介する",
+          "接続を仲介する"
+        ],
         "nuance": "比「つなぐ」正式，强调自身处于两者之间并承担协调作用。"
       },
       {
-        "id": "2026-09-11-v-002",
-        "word": "絞り込む",
-        "reading": "しぼりこむ",
-        "meaning": "根据条件进一步筛选、缩小范围",
-        "jlpt": "N1",
-        "partOfSpeech": "動詞・五段",
-        "example": "利用者のRoleに応じて表示するToolを絞り込みます。",
-        "translation": "根据使用者 Role 筛选显示的 Tool。",
-        "collocations": ["候補を絞り込む", "利用できるToolを絞り込む", "条件で絞り込む"],
-        "nuance": "比「絞る」更强调从已有集合中逐步 Filter 到更小集合。"
-      },
-      {
-        "id": "2026-09-11-v-003",
+        "id": "2026-09-11-v-r002",
         "word": "耐える",
         "reading": "たえる",
-        "meaning": "承受、经受某种压力而不失效",
-        "jlpt": "N1",
+        "meaning": "承受、经受某种压力而不失效。",
+        "jlpt": "N2",
         "partOfSpeech": "動詞・一段",
         "example": "外部接続がなくても業務を継続できるか、閉域環境で確かめます。",
         "translation": "在闭域环境确认没有外部连接时是否仍能持续业务。",
-        "collocations": ["負荷に耐える", "攻撃に耐える", "悪意ある入力に耐える"],
+        "collocations": [
+          "負荷に耐える",
+          "攻撃に耐える",
+          "悪意ある入力に耐える"
+        ],
         "nuance": "可用于人，也常用于 System Load、Failure、Adversarial Input。"
       },
       {
-        "id": "2026-09-11-v-004",
-        "word": "担う",
-        "reading": "になう",
-        "meaning": "承担职责、责任或重要功能",
-        "jlpt": "N1",
+        "id": "2026-09-11-v-r003",
+        "word": "割り振る",
+        "reading": "わりふる",
+        "meaning": "按照一定安排，把工作、数量或职责分别分配给各方。",
+        "jlpt": "N2",
         "partOfSpeech": "動詞・五段",
-        "example": "高Riskな最終判断はHuman Ownerが担います。",
-        "translation": "高风险的最终判断由 Human Owner 承担。",
-        "collocations": ["役割を担う", "判断を担う", "統制を担う"],
-        "nuance": "比「する」更强调职责归属和责任重量。"
+        "example": "得意分野と負担を確認してから、作業を割り振ります。",
+        "translation": "确认各自擅长的领域和负担后，再分配工作。",
+        "collocations": [
+          "仕事を割り振る",
+          "役割を割り振る",
+          "時間を割り振る"
+        ],
+        "nuance": "「割り当てる」也能表示分配；「割り振る」更突出在多个对象之间进行分配。"
       },
       {
-        "id": "2026-09-11-v-005",
-        "word": "過度な",
-        "reading": "かどな",
-        "meaning": "超过合理程度的、过度的",
-        "jlpt": "N1",
-        "partOfSpeech": "な形容詞",
-        "example": "過度な禁止Ruleだけでは、現場のShadow AIを増やす可能性があります。",
-        "translation": "仅靠过度禁止规则可能增加现场 Shadow AI。",
-        "collocations": ["過度な制限", "過度な依存", "過度に恐れる"],
-        "nuance": "带有超出适当范围的评价色彩，比「厳しい」更强调程度失衡。"
+        "id": "2026-09-11-v-r004",
+        "word": "こなす",
+        "reading": "こなす",
+        "meaning": "妥善完成、处理工作或任务，也可表示熟练运用。",
+        "jlpt": "N2",
+        "partOfSpeech": "動詞・五段",
+        "example": "多くの作業をこなすだけでなく、結果の確認も大切にします。",
+        "translation": "我不仅重视处理大量工作，也重视对结果的确认。",
+        "collocations": [
+          "仕事をこなす",
+          "課題をこなす",
+          "多くの作業をこなす"
+        ],
+        "nuance": "「終える」は单纯结束；「こなす」通常含有顺利处理、完成的意味。"
       },
       {
-        "id": "2026-09-11-v-006",
+        "id": "2026-09-11-v-r005",
         "word": "細かな",
         "reading": "こまかな",
-        "meaning": "细致的、颗粒度很细的",
-        "jlpt": "N1",
+        "meaning": "细致的、颗粒度很细的。",
+        "jlpt": "N2",
         "partOfSpeech": "な形容詞",
         "example": "業界固有の細かな判断RuleをInterviewで明らかにします。",
         "translation": "通过 Interview 明确行业固有的细致判断规则。",
-        "collocations": ["細かな判断", "細かな設定", "細かな違い"],
+        "collocations": [
+          "細かな判断",
+          "細かな設定",
+          "細かな違い"
+        ],
         "nuance": "可描述 Detail 多，也可描述需要谨慎区分的微小差异。"
       },
       {
-        "id": "2026-09-11-v-007",
-        "word": "一元的に",
-        "reading": "いちげんてきに",
-        "meaning": "统一归到一个管理体系中",
+        "id": "2026-09-11-v-r006",
+        "word": "平易",
+        "reading": "へいい",
+        "meaning": "表达或内容浅显易懂，没有不必要的难度。",
         "jlpt": "N1",
-        "partOfSpeech": "副詞",
-        "example": "Agentの登録と権限をPlatform側で一元的に管理します。",
-        "translation": "在 Platform 侧统一管理 Agent 注册和权限。",
-        "collocations": ["一元的に管理する", "一元的に把握する", "一元的に統制する"],
-        "nuance": "比「まとめて」正式，常用于企业 Data / Identity / Governance。"
+        "partOfSpeech": "名詞・な形容詞",
+        "example": "専門用語を使う場合も、最初に平易な言葉で説明します。",
+        "translation": "即使需要使用专业术语，也会先用容易理解的语言说明。",
+        "collocations": [
+          "平易な言葉",
+          "平易に説明する",
+          "平易な文章"
+        ],
+        "nuance": "「容易」表示做事不困难；「平易」常强调内容容易读懂、听懂。"
       },
       {
-        "id": "2026-09-11-v-008",
+        "id": "2026-09-11-v-r007",
         "word": "都度",
         "reading": "つど",
-        "meaning": "每当发生某件事时，每次分别处理",
+        "meaning": "每当发生某件事时，每次分别处理。",
         "jlpt": "N1",
         "partOfSpeech": "副詞",
         "example": "高Risk Actionはその都度Human Approvalを要求します。",
         "translation": "高风险 Action 每次都要求 Human Approval。",
-        "collocations": ["必要な都度", "その都度確認する", "都度生成する"],
+        "collocations": [
+          "必要な都度",
+          "その都度確認する",
+          "都度生成する"
+        ],
         "nuance": "比「毎回」更书面，常用于制度、运维和审批流程。"
       },
       {
-        "id": "2026-09-11-v-009",
-        "word": "ただし",
-        "reading": "ただし",
-        "meaning": "但是；补充前述结论成立的限制条件",
-        "jlpt": "N1",
-        "partOfSpeech": "接続詞",
-        "example": "Gatewayで接続は共通化できます。ただし、権限Policyは別途設計が必要です。",
-        "translation": "Gateway 可以统一连接，但权限 Policy 仍需另行设计。",
-        "collocations": ["ただし、条件がある", "ただし注意が必要だ", "ただし～とは限らない"],
-        "nuance": "比「でも」正式，适合文档、面试和技术结论的 Caveat。"
+        "id": "2026-09-11-v-r008",
+        "word": "引き続き",
+        "reading": "ひきつづき",
+        "meaning": "接续此前的状态或行为，继续进行。",
+        "jlpt": "N2",
+        "partOfSpeech": "副詞",
+        "example": "修正後も引き続き記録を確認し、同じ問題が出ないか調べます。",
+        "translation": "修改后也会继续检查记录，确认是否再次出现相同问题。",
+        "collocations": [
+          "引き続き確認する",
+          "引き続き利用する",
+          "引き続き適用する"
+        ],
+        "nuance": "「再び」表示中断后又开始；「引き続き」通常强调不中断地延续。"
       },
       {
-        "id": "2026-09-11-v-010",
+        "id": "2026-09-11-v-r009",
         "word": "透明性",
         "reading": "とうめいせい",
-        "meaning": "状态、依据或过程能够被看清与追踪的程度",
+        "meaning": "状态、依据或过程能够被看清与追踪的程度。",
         "jlpt": "N1",
         "partOfSpeech": "名詞",
         "example": "Tool CallをTraceへ残し、Agentの判断過程の透明性を高めます。",
         "translation": "记录 Tool Call 到 Trace，提高 Agent 判断过程透明度。",
-        "collocations": ["透明性を高める", "活動の透明性", "透明性を確保する"],
+        "collocations": [
+          "透明性を高める",
+          "活動の透明性",
+          "透明性を確保する"
+        ],
         "nuance": "不是信息越多越好，而是关键行为可解释、可审计。"
+      },
+      {
+        "id": "2026-09-11-v-r010",
+        "word": "温床",
+        "reading": "おんしょう",
+        "meaning": "促使某事产生、发展的环境，常比喻不良问题滋生的基础。",
+        "jlpt": "N1",
+        "partOfSpeech": "名詞",
+        "example": "相談しにくい雰囲気が、無断利用の温床にならないようにします。",
+        "translation": "我们会避免难以咨询的氛围成为擅自使用的温床。",
+        "collocations": [
+          "不正の温床",
+          "問題の温床",
+          "温床となる"
+        ],
+        "nuance": "「原因」可以是单一直接因素；「温床」更偏向让问题滋生的持续环境。"
       }
     ],
     "grammar": [

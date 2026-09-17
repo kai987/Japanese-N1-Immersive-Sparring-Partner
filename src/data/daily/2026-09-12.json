@@ -28,121 +28,161 @@
         "id": "2026-09-12-v-001",
         "word": "洗い出す",
         "reading": "あらいだす",
-        "meaning": "系统地找出并列出所有目标或问题",
+        "meaning": "系统地找出并列出所有目标或问题。",
         "jlpt": "N1",
         "partOfSpeech": "動詞・五段",
         "example": "Upgrade前にDeprecated APIの利用箇所を洗い出します。",
-        "translation": "升级前把 Deprecated API 的使用位置全部找出。",
-        "collocations": ["SQLを洗い出す", "課題を洗い出す", "影響範囲を洗い出す"],
-        "nuance": "比「探す」更有完整 Inventory 与防止遗漏的语感。"
+        "translation": "升级前把Deprecated API使用位置全部找出。",
+        "collocations": [
+          "SQLを洗い出す",
+          "課題を洗い出す",
+          "影響範囲を洗い出す"
+        ],
+        "nuance": "比「探す」更有完整Inventory与遗漏防止的语感。"
       },
       {
         "id": "2026-09-12-v-002",
         "word": "取りこぼす",
         "reading": "とりこぼす",
-        "meaning": "在处理一组对象时遗漏其中一部分",
+        "meaning": "在处理一组对象时遗漏其中一部分。",
         "jlpt": "N1",
         "partOfSpeech": "動詞・五段",
         "example": "大量Fileを処理しても重要SQLを取りこぼさない仕組みが必要です。",
-        "translation": "即使处理大量文件，也需要避免漏掉重要 SQL 的机制。",
-        "collocations": ["情報を取りこぼす", "対象を取りこぼす", "要件を取りこぼす"],
+        "translation": "即使处理大量文件也需要避免漏掉重要SQL的机制。",
+        "collocations": [
+          "情報を取りこぼす",
+          "対象を取りこぼす",
+          "要件を取りこぼす"
+        ],
         "nuance": "和「見逃す」相近，但更强调批量收集或处理过程中没有全部拿到。"
       },
       {
         "id": "2026-09-12-v-003",
         "word": "結び付ける",
         "reading": "むすびつける",
-        "meaning": "把两个信息或对象建立明确关联",
-        "jlpt": "N1",
+        "meaning": "把两个信息或对象建立明确关联。",
+        "jlpt": "N2",
         "partOfSpeech": "動詞・一段",
         "example": "Agentの利用量をBusiness KPIと結び付けて評価します。",
-        "translation": "把 Agent 使用量与 Business KPI 关联后评价。",
-        "collocations": ["KPIと結び付ける", "LogとUserを結び付ける", "成果に結び付ける"],
+        "translation": "把Agent使用量与Business KPI关联后评价。",
+        "collocations": [
+          "KPIと結び付ける",
+          "LogとUserを結び付ける",
+          "成果に結び付ける"
+        ],
         "nuance": "比单纯「関連する」更强调主动建立关联和因果用途。"
       },
       {
-        "id": "2026-09-12-v-004",
-        "word": "引き継ぐ",
-        "reading": "ひきつぐ",
-        "meaning": "从前一个人或阶段接手任务、信息和责任",
-        "jlpt": "N1",
-        "partOfSpeech": "動詞・五段",
-        "example": "会話履歴を残し、別のEngineerが翌日すぐ作業を引き継げるようにします。",
-        "translation": "保留会话历史，让其他工程师第二天能立即接手工作。",
-        "collocations": ["作業を引き継ぐ", "Contextを引き継ぐ", "後任へ引き継ぐ"],
-        "nuance": "不只是传资料，也包含职责与状态连续性。"
+        "id": "2026-09-12-v-r004",
+        "word": "投げかける",
+        "reading": "なげかける",
+        "meaning": "向对方提出问题、话语等，以引起思考或反应。",
+        "jlpt": "N2",
+        "partOfSpeech": "動詞・一段",
+        "example": "結論を急ぐ前に、前提を確かめる質問を投げかけます。",
+        "translation": "在急着下结论前，我会提出问题，确认前提。",
+        "collocations": [
+          "質問を投げかける",
+          "疑問を投げかける",
+          "問いを投げかける"
+        ],
+        "nuance": "「問い詰める」带有追问、施压；「投げかける」不一定要求立刻给出答案。"
       },
       {
         "id": "2026-09-12-v-005",
         "word": "複雑な",
         "reading": "ふくざつな",
-        "meaning": "要素多、关系交织而难以处理的",
-        "jlpt": "N1",
+        "meaning": "要素多、关系交织而难以处理的。",
+        "jlpt": "N2",
         "partOfSpeech": "な形容詞",
         "example": "複雑な依存関係ほどGround Truthを用意して評価します。",
-        "translation": "对越复杂的依赖关系，越要准备 Ground Truth 进行评价。",
-        "collocations": ["複雑なLogic", "複雑なNetwork", "複雑な依存関係"],
+        "translation": "对越复杂的依赖关系越要准备Ground Truth进行评价。",
+        "collocations": [
+          "複雑なLogic",
+          "複雑なNetwork",
+          "複雑な依存関係"
+        ],
         "nuance": "可描述结构本身复杂，不一定带负面情绪。"
       },
       {
-        "id": "2026-09-12-v-006",
-        "word": "慎重な",
-        "reading": "しんちょうな",
-        "meaning": "为避免错误而仔细判断、不过早行动的",
-        "jlpt": "N1",
-        "partOfSpeech": "な形容詞",
-        "example": "Production変更では自動化しても慎重なEscalation Ruleを残します。",
-        "translation": "即使自动化 Production 变更，也保留谨慎的 Escalation Rule。",
-        "collocations": ["慎重な判断", "慎重に確認する", "慎重な運用"],
-        "nuance": "与「遅い」不同，重点是风险意识和认真判断。"
+        "id": "2026-09-12-v-r006",
+        "word": "心強い",
+        "reading": "こころづよい",
+        "meaning": "因为有人支持或有可靠依据而感到安心、有信心。",
+        "jlpt": "N2",
+        "partOfSpeech": "い形容詞",
+        "example": "困ったときに相談できる仲間がいると、心強く感じます。",
+        "translation": "有在遇到困难时可以商量的伙伴，会让我感到安心。",
+        "collocations": [
+          "心強い支援",
+          "心強く感じる",
+          "仲間がいて心強い"
+        ],
+        "nuance": "「力強い」可描述动作和表现有力量；「心強い」着重受到支持的安心感。"
       },
       {
-        "id": "2026-09-12-v-007",
-        "word": "一元的に",
-        "reading": "いちげんてきに",
-        "meaning": "统一归入一个入口或管理体系",
-        "jlpt": "N1",
-        "partOfSpeech": "副詞",
-        "example": "Cloud接続とPolicyを共通Hubで一元的に管理します。",
-        "translation": "在共享 Hub 统一管理 Cloud 连接与 Policy。",
-        "collocations": ["一元的に管理する", "一元的に把握する", "接続を一元的に管理する"],
-        "nuance": "企业架构中比「まとめて」更正式，强调 Single Control Point。"
-      },
-      {
-        "id": "2026-09-12-v-008",
+        "id": "2026-09-12-v-r007",
         "word": "反射的に",
         "reading": "はんしゃてきに",
-        "meaning": "几乎不经思考、像反射一样立即行动",
+        "meaning": "几乎不经思考、像反射一样立即行动。",
         "jlpt": "N1",
         "partOfSpeech": "副詞",
         "example": "確認Dialogが多すぎると利用者は反射的に承認しやすくなります。",
-        "translation": "确认 Dialog 过多时，用户容易反射性批准。",
-        "collocations": ["反射的にクリックする", "反射的に答える", "反射的に承認する"],
-        "nuance": "强调没有充分认知判断，适合 Human Factors 讨论。"
+        "translation": "确认Dialog过多时用户容易反射性批准。",
+        "collocations": [
+          "反射的にクリックする",
+          "反射的に答える",
+          "反射的に承認する"
+        ],
+        "nuance": "强调没有充分认知判断，适合Human Factors讨论。"
       },
       {
-        "id": "2026-09-12-v-009",
-        "word": "ただし",
-        "reading": "ただし",
-        "meaning": "但是；用于补充前面结论的条件或限制",
-        "jlpt": "N1",
-        "partOfSpeech": "接続詞",
-        "example": "Auto modeは有力です。ただし、Synthetic Testの7％を実Trafficの率とは扱いません。",
-        "translation": "Auto mode 很有潜力，但不把 Synthetic Test 的 7% 当作真实流量漏检率。",
-        "collocations": ["ただし、条件がある", "ただし注意が必要だ", "ただし本番では～"],
-        "nuance": "技术说明中非常重要，用来防止过度一般化。"
-      },
-      {
-        "id": "2026-09-12-v-010",
+        "id": "2026-09-12-v-r008",
         "word": "文脈",
         "reading": "ぶんみゃく",
-        "meaning": "理解某个行为或表达所需的前后关系、上下文",
+        "meaning": "理解某个行为或表达所需的前后关系、上下文。",
         "jlpt": "N1",
         "partOfSpeech": "名詞",
         "example": "Diffだけでなく、設計判断に至った文脈もReviewerへ共有します。",
-        "translation": "不仅共享 Diff，也把形成设计判断的上下文共享给 Reviewer。",
-        "collocations": ["文脈を共有する", "業務文脈", "文脈を保持する"],
-        "nuance": "IT 里的 Context 不仅指文字前后，也可指业务背景、权限和历史状态。"
+        "translation": "不仅共享Diff，也把形成设计判断的上下文共享给Reviewer。",
+        "collocations": [
+          "文脈を共有する",
+          "業務文脈",
+          "文脈を保持する"
+        ],
+        "nuance": "IT里的Context不仅指文字前后，也可指业务背景、权限和历史状态。"
+      },
+      {
+        "id": "2026-09-12-v-r009",
+        "word": "実績",
+        "reading": "じっせき",
+        "meaning": "已经取得并可确认的成果、业绩。",
+        "jlpt": "N1",
+        "partOfSpeech": "名詞",
+        "example": "導入実績と将来目標を分けてArchitecture Reviewに記録します。",
+        "translation": "在架构评审中区分已取得的成果与未来目标。",
+        "collocations": [
+          "利用実績",
+          "導入実績",
+          "実績を示す"
+        ],
+        "nuance": "比「結果」更强调已经积累、可作为可信经历展示的成果。"
+      },
+      {
+        "id": "2026-09-12-v-r010",
+        "word": "俊敏性",
+        "reading": "しゅんびんせい",
+        "meaning": "快速响应变化并行动的能力。",
+        "jlpt": "N1",
+        "partOfSpeech": "名詞",
+        "example": "共通Network Hubによって新Service立ち上げの俊敏性を高めます。",
+        "translation": "通过共享Network Hub提高新服务上线敏捷性。",
+        "collocations": [
+          "事業の俊敏性",
+          "俊敏性を高める",
+          "組織の俊敏性"
+        ],
+        "nuance": "比「速さ」更强调组织面对变化时的响应能力。"
       }
     ],
     "grammar": [
