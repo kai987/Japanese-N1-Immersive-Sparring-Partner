@@ -1,0 +1,148 @@
+name: Sync repaired JLPT history once
+
+on:
+  push:
+    branches: [fix/sync-repaired-jlpt-history-2026-09-18]
+    paths: ['.github/workflows/sync-repaired-jlpt-history-once.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout N1 site
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+
+      - name: Install YAML parser
+        run: python3 -m pip install PyYAML==6.0.2
+
+      - name: Fetch repaired IT/AI learning source
+        run: git clone --depth 1 --branch main https://github.com/kai987/japan-it-ai-daily.git /tmp/japan-it-ai-daily
+
+      - name: Synchronize 2026-09-09 through 2026-09-17 vocabulary
+        shell: python
+        run: |
+          from pathlib import Path
+          import datetime as dt
+          import json
+          import re
+          import yaml
+
+          target_root = Path('src/data/daily')
+          source_root = Path('/tmp/japan-it-ai-daily/src/content/japanese')
+          start = dt.date(2026, 9, 9)
+          end = dt.date(2026, 9, 17)
+          changed = []
+          seen = {}
+
+          def frontmatter(path: Path):
+              text = path.read_text()
+              m = re.match(r'^---\r?\n([\s\S]*?)\r?\n---', text)
+              if not m:
+                  raise RuntimeError(f'No YAML frontmatter: {path}')
+              return yaml.safe_load(m.group(1))
+
+          date = start
+          while date <= end:
+              day = date.isoformat()
+              source_path = source_root / f'{day}.md'
+              target_path = target_root / f'{day}.json'
+              if not source_path.exists() or not target_path.exists():
+                  raise RuntimeError(f'Missing source/target for {day}')
+
+              source = frontmatter(source_path)
+              cards = {item['term']: item for item in source.get('vocabulary', [])}
+              must = list(source.get('mustRememberWords') or [])
+              if not must:
+                  raise RuntimeError(f'No mustRememberWords for {day}')
+              if len(must) > 10:
+                  raise RuntimeError(f'Too many mustRememberWords for {day}: {len(must)}')
+              if len(set(must)) != len(must):
+                  raise RuntimeError(f'Duplicate mustRememberWords inside {day}')
+              missing = [term for term in must if term not in cards]
+              if missing:
+                  raise RuntimeError(f'{day} mustRememberWords missing from vocabulary: {missing}')
+
+              data = json.loads(target_path.read_text())
+              old_vocab = data['lesson'].get('vocabulary', [])
+              old_by_pos = list(old_vocab)
+              new_vocab = []
+              for i, term in enumerate(must, start=1):
+                  item = cards[term]
+                  previous = old_by_pos[i - 1] if i - 1 < len(old_by_pos) else None
+                  same_identity = bool(previous and previous.get('word') == term and previous.get('reading') == item['reading'])
+                  item_id = previous['id'] if same_identity else f'{day}-v-r{i:03d}'
+                  entry = {
+                      'id': item_id,
+                      'word': item['term'],
+                      'reading': item['reading'],
+                      'meaning': item['meaningZh'],
+                      'jlpt': item['level'],
+                      'partOfSpeech': item['partOfSpeech'],
+                      'example': item['exampleJa'],
+                      'translation': item.get('exampleZh', ''),
+                      'collocations': item.get('collocations', []),
+                      'nuance': item.get('nuanceZh', '')
+                  }
+                  new_vocab.append(entry)
+                  key = (entry['word'], entry['reading'])
+                  if key in seen:
+                      raise RuntimeError(f'Cross-date duplicate {key}: {seen[key]} and {day}')
+                  seen[key] = day
+
+              before = json.dumps(data['lesson'].get('vocabulary', []), ensure_ascii=False, sort_keys=True)
+              after = json.dumps(new_vocab, ensure_ascii=False, sort_keys=True)
+              data['lesson']['vocabulary'] = new_vocab
+              if before != after:
+                  changed.append(day)
+              target_path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n')
+              date += dt.timedelta(days=1)
+
+          if not changed:
+              raise RuntimeError('No N1 vocabulary files changed; expected repaired history differences')
+          print('Changed dates:', ', '.join(changed))
+          print('Unique mirrored vocabulary identities:', len(seen))
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Validate synchronized lessons
+        run: |
+          npm run validate:content
+          npm test
+          npm run build
+
+      - name: Browser regression
+        run: |
+          npx playwright install --with-deps chromium
+          npm run test:e2e
+
+      - name: Commit verified synchronized history
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BRANCH: fix/sync-repaired-jlpt-history-2026-09-18
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm .github/workflows/sync-repaired-jlpt-history-once.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add src/data/daily .github/workflows
+          git diff --cached --name-only
+          test "$(git diff --cached --name-only | grep -v '^src/data/daily/2026-09-\(09\|10\|11\|12\|13\|14\|15\|16\|17\)\.json$' | grep -v '^.github/workflows/sync-repaired-jlpt-history-once.yml$' | wc -l)" -eq 0
+          git commit -m 'content: sync repaired historical JLPT vocabulary mirror'
+          AUTH=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
+          git -c "http.https://github.com/.extraheader=AUTHORIZATION: basic $AUTH" push origin "HEAD:$BRANCH"
