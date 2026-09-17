@@ -7,7 +7,7 @@ export interface VocabularyItem {
   word: string
   reading: string
   meaning: string
-  jlpt: 'N1'
+  jlpt: 'N1' | 'N2'
   partOfSpeech: string
   example: string
   translation: string
