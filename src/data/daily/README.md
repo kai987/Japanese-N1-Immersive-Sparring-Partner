@@ -102,3 +102,11 @@ Node.js 24で `npm run import:daily -- /path/to/YYYY-MM-DD.json` を実行でき
 自2026-09-09起的每日JSON为IT/AI日报必背项目镜像。词汇保持来源的N1/N2参考标注；语法取当天C-4已查重子集，0～5项，不能用历史项目补齐。少于5项必须提供`lesson.grammarSelectionNote`（至少20字符）；空数组只有附有核验后的真实原因才合法，缺失grammar字段仍然失败。可记录`lesson.grammarSourceCommit`，语法卡保留level、sourceUrl、sourceForm、sourceAnchor。2026-09-18起新语法需要可定位原文的出处信息。完整来源与当天Top5对应关系需在同步时验证，不能仅以本地语法查重代替。
 
 同一语法的表记与接续变体按`src/data/grammar-identity-rules.json`归一；不同功能不强行合并。`npm run validate:content`及生产构建会校验所有已生成镜像日期，跨日期或当日重复会阻止发布。原有独立课程、n1-source原文及错题复习不受此新项目规则删除。替换文型必须换ID，相同文型与例句的同日重跑保持ID，避免继承另一语法的掌握状态。
+
+## 2026-09-18 起：新学＋复习与真实出现频率
+
+原始每日JSON中的重点新词/新语法继续遵守上述新规查重；不要把复习混入这些数组伪装成新项目。展示层使用 `src/data/it-study-snapshot.json` 的上游验证结果，从2026-09-18起展示完整新学＋复习20词/7语法，并分开标记。不会重写 n1-source、沉浸正文、读解或错题队列。
+
+11:00同步在当天原始JSON写入之外，必须同步同一上游发布commit的 `it-study-snapshot` Actions artifact，核对 `sourceCommit`、当天日期以及最终Deploy成功后，运行 `npm run import:study -- /path/to/study-index.json`；再执行validate:content、tests、build、浏览器测试并发布。snapshot缺失当日或来自不同上游commit时，停止，不能用昨天的snapshot冒充。
+
+`src/lib/itStudy.ts` 独立校验新学/复习身份、同日重复、复习首次日期、当前用例、日期集合、频率及期号；原有新规语法查重未关闭。频率继承IT日报全部日期的分母，不用本站N1 Day天数。标题“第XX号”是IT日报期号，保留N1计划Day作为另一个标记。旧词条同日同义同例句复用原ID，新项目/不同例句生成稳定新ID，避免错误继承掌握状态。

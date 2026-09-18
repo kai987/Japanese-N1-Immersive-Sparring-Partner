@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState, type ReactNode } from 'react'
+import { Fragment, useEffect, useMemo, useState, type ReactNode } from 'react'
 import { DailySearch } from './components/DailySearch'
 import { DateDropdown } from './components/DateDropdown'
 import { getLessonByDate, historyItems, lesson as latestLesson, reviewFocusByDate } from './data/history'
@@ -7,6 +7,8 @@ import type { LearningStatus, ReadingMode, SectionId, StoredProgress } from './t
 import { ReadingExercise } from './components/ReadingExercise'
 import { initialProgress, decodeProgress, decodeCompleted, decodeTheme, recordStudy, streakFor, tokyoDate } from './lib/progress'
 import './history.css'
+import './study-reference.css'
+import { StudyReference, ReviewEvidence } from './components/StudyReference'
 
 const navigation: { id: SectionId; label: string; short: string }[] = [
   { id: 'today', label: '今日の学習', short: '今日' },
@@ -226,8 +228,9 @@ export default function App() {
               <section className="hero">
                 <div className="hero-copy">
                   <div className="day-label">{lesson.date === today ? '今日のテーマ' : `DAY ${lesson.day} · ARCHIVE`}</div>
-                  <h1>{lesson.title}</h1>
+                  <h1>{lesson.title}{lesson.issueNumber ? `（第${lesson.issueNumber}号）` : null}</h1>
                   <p>{lesson.subtitle}</p>
+                  {lesson.issueNumber && <small className="source-issue">IT/AI 日报第{lesson.issueNumber}号 · N1 学習計画 Day {lesson.day}（別の番号です）</small>}
                   <div className="hero-actions">
                     <button className="primary-btn" onClick={() => go('immersion')}>{isLatest ? '学習を始める' : 'この日の学習を開く'} <Icon name="arrow" size={17} /></button>
                     <button className="text-btn" onClick={() => go('review')}>この日の復習を見る</button>
@@ -301,15 +304,20 @@ export default function App() {
           {active === 'vocabulary' && (
             <div className="page-enter">
               <SectionHeader eyebrow="02" title="N1 語彙" description="意味だけでなく、よく使う組み合わせ・使用場面・例文を覚えましょう。" />
+              {lesson.studyVocabularyNote && <p>{lesson.studyVocabularyNote}</p>}
+              {lesson.vocabulary.some(item=>item.studyKind) && <p className="study-count">新学 {lesson.vocabulary.filter(item=>item.studyKind==='new').length} ＋ 復習 {lesson.vocabulary.filter(item=>item.studyKind==='review').length} ＝ {lesson.vocabulary.length}語</p>}
               <div className="learning-list">
                 {lesson.vocabulary.map((item, index) => {
                   const status = progress.vocab[item.id] ?? 'new'
                   return (
-                    <article className="learning-card" key={item.id}>
+                    <Fragment key={item.id}>
+                    {item.studyKind==='review' && (index===0 || lesson.vocabulary[index-1].studyKind!=='review') && <h2 className="review-group-title">本文で復習できる既習語彙</h2>}
+                    <article className="learning-card" data-study-kind={item.studyKind}>
                       <div className="card-index">{String(index + 1).padStart(2, '0')}</div>
                       <div className="card-content">
-                        <div className="word-line"><div><h3>{item.word}</h3><span className="reading">{item.reading}</span></div><span className="tag">{item.partOfSpeech}</span></div>
+                        <div className="word-line"><div><h3>{item.word}</h3><span className="reading">{item.reading}</span></div><span className="tag">{item.partOfSpeech}</span><StudyReference item={item} level={item.jlpt} /></div>
                         <p className="meaning">{item.meaning}</p>
+                        <ReviewEvidence item={item} />
                         <div className="example-box"><p>{item.example}</p><span>{item.translation}</span></div>
                         <div className="detail-grid">
                           <div><span className="detail-label">よく使う組み合わせ</span><div className="collocations">{item.collocations.map((c) => <span key={c}>{c}</span>)}</div></div>
@@ -318,6 +326,7 @@ export default function App() {
                         <StatusButton status={status} onChange={(next) => updateStatus('vocab', item.id, next)} />
                       </div>
                     </article>
+                    </Fragment>
                   )
                 })}
               </div>
@@ -329,21 +338,26 @@ export default function App() {
             <div className="page-enter">
               <SectionHeader eyebrow="03" title="N1 文法" description="意味・接続・文体を確認し、似た表現との違いを整理しましょう。" />
               {lesson.grammarSelectionNote && <p className="grammar-explain" data-grammar-selection-note>{lesson.grammarSelectionNote}</p>}
+              {lesson.studyGrammarNote && <p>{lesson.studyGrammarNote}</p>}
               <div className="learning-list grammar-list">
                 {lesson.grammar.map((item, index) => {
                   const status = progress.grammar[item.id] ?? 'new'
                   return (
-                    <article className="learning-card" key={item.id}>
+                    <Fragment key={item.id}>
+                    {item.studyKind==='review' && (index===0 || lesson.grammar[index-1].studyKind!=='review') && <h2 className="review-group-title">本文で復習できる既習文法</h2>}
+                    <article className="learning-card" data-study-kind={item.studyKind}>
                       <div className="card-index">{String(index + 1).padStart(2, '0')}</div>
                       <div className="card-content">
-                        <div className="grammar-top"><div><h3>{item.pattern}</h3><p className="meaning">{item.meaning}</p></div><div className="frequency" title="読解・表現での実用度"><span>実用度</span><div>{[1,2,3,4,5].map((n) => <i key={n} className={n <= item.frequency ? 'on' : ''} />)}</div></div></div>
+                        <div className="grammar-top"><div><h3>{item.pattern}</h3><p className="meaning">{item.meaning}</p></div><StudyReference item={item} level={item.level ?? 'N1'} /><div className="frequency" title="読解・表現での実用度"><span>実用度</span><div>{[1,2,3,4,5].map((n) => <i key={n} className={n <= item.frequency ? 'on' : ''} />)}</div></div></div>
                         <div className="grammar-meta"><span><b>接続</b>{item.form}</span><span><b>文体</b>{item.register}</span></div>
                         <p className="grammar-explain">{item.explanation}</p>
+                        <ReviewEvidence item={item} />
                         <div className="example-box"><p>{item.example}</p><span>{item.translation}</span></div>
                         <div className="compare-box"><span>類似表現との比較</span><p>{item.comparison}</p></div>
                         <StatusButton status={status} onChange={(next) => updateStatus('grammar', item.id, next)} />
                       </div>
                     </article>
+                    </Fragment>
                   )
                 })}
               </div>
