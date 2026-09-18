@@ -27,7 +27,7 @@ export interface StudySnapshot {
   schemaVersion: number
   sourceCommit: string
   frequencyScope: string
-  policy: { effectiveFrom: string; vocabularyTarget: number; grammarTarget: number }
+  policy: { effectiveFrom: string; vocabularyTarget: number; grammarTarget: number; grammarEffectiveFrom?: string; grammarMinimum?: number; grammarMaximum?: number }
   totalDays: number
   firstDate: string
   lastDate: string
@@ -37,6 +37,7 @@ export interface StudySnapshot {
   firstVocabulary: Record<string,string>
   firstGrammar: Record<string,string>
   lessons: Record<string, { issueNumber: number; vocabulary: SourceCard[]; grammar: SourceCard[]; reviewVocabularyNote?: string; reviewGrammarNote?: string }>
+  grammarLessons?: Record<string, { issueNumber: number; grammar: SourceCard[]; reviewGrammarNote?: string }>
 }
 const dayPattern = /^\d{4}-\d{2}-\d{2}$/
 const lexicalKey = (value: string) => value.normalize('NFKC').replace(/\s+/g,'').replace(/する$/,'')
@@ -55,7 +56,7 @@ export function validateStudySnapshot(snapshot: StudySnapshot) {
     if (date < snapshot.policy.effectiveFrom || lesson.issueNumber !== snapshot.issueNumbers[date]) throw new Error(`${date}: invalid source issue`)
     for (const kind of ['vocabulary','grammar'] as const) {
       const cards = lesson[kind], seen = new Set<string>()
-      const target = kind === 'vocabulary' ? snapshot.policy.vocabularyTarget : snapshot.policy.grammarTarget
+      const target = kind === 'vocabulary' ? snapshot.policy.vocabularyTarget : (snapshot.policy.grammarMinimum ?? snapshot.policy.grammarTarget)
       const introduction = kind === 'vocabulary' ? snapshot.firstVocabulary : snapshot.firstGrammar
       const frequencies = kind === 'vocabulary' ? snapshot.vocabularyFrequency : snapshot.grammarFrequency
       if (!Array.isArray(cards)) throw new Error(`${date}: missing ${kind}`)
@@ -71,7 +72,33 @@ export function validateStudySnapshot(snapshot: StudySnapshot) {
         frequency(card.reportFrequency)
         if (!same(card.reportFrequency,frequencies[card.identity]) || !card.reportFrequency.appearedDates.includes(date)) throw new Error(`${date}: inconsistent frequency`)
       }
+      if (kind === 'grammar' && cards.length > (snapshot.policy.grammarMaximum ?? snapshot.policy.grammarTarget)) throw new Error(`${date}: grammar exceeds range ceiling`)
       if (cards.length < target && !(kind === 'vocabulary' ? lesson.reviewVocabularyNote : lesson.reviewGrammarNote)) throw new Error(`${date}: unexplained study shortfall`)
+    }
+  }
+  if (snapshot.grammarLessons) {
+    const {grammarEffectiveFrom,grammarMinimum,grammarMaximum}=snapshot.policy
+    if(!grammarEffectiveFrom || grammarMinimum!==5 || grammarMaximum!==8)throw new Error('Invalid grammar range policy')
+    const required=dates.filter(date=>date>=grammarEffectiveFrom)
+    if(!same(Object.keys(snapshot.grammarLessons).sort(),required))throw new Error('Incomplete historical grammar snapshot')
+    for(const [date,entry] of Object.entries(snapshot.grammarLessons)){
+      if(entry.issueNumber!==snapshot.issueNumbers[date] || !Array.isArray(entry.grammar))throw new Error(`${date}: invalid historical grammar issue`)
+      const seen=new Set<string>()
+      for(const card of entry.grammar){
+        if(!card.identity || seen.has(card.identity) || !card.pattern || !card.exampleJa || !card.meaning || !['N1','N2','N3','N5/N4'].includes(card.level))throw new Error(`${date}: invalid/duplicate historical grammar card`)
+        seen.add(card.identity)
+        if(snapshot.firstGrammar[card.identity]!==card.firstIntroducedDate)throw new Error(`${date}: historical introduction mismatch`)
+        if(card.studyKind==='new'){
+          if(card.firstIntroducedDate!==date)throw new Error(`${date}: repeated NEW historical grammar`)
+        }else if(card.studyKind==='review'){
+          if(card.firstIntroducedDate>=date || !card.reviewEvidence?.form || !card.reviewEvidence.excerpt.includes(card.reviewEvidence.form))throw new Error(`${date}: invalid historical review evidence`)
+        }else throw new Error(`${date}: missing historical new/review label`)
+        frequency(card.reportFrequency)
+        if(!same(card.reportFrequency,snapshot.grammarFrequency[card.identity]) || !card.reportFrequency.appearedDates.includes(date))throw new Error(`${date}: inconsistent historical frequency`)
+      }
+      if(entry.grammar.length>grammarMaximum)throw new Error(`${date}: historical grammar exceeds range ceiling`)
+      if(entry.grammar.length<grammarMinimum && !entry.reviewGrammarNote)throw new Error(`${date}: unexplained historical grammar shortfall`)
+      if(snapshot.lessons[date] && !same(entry.grammar,snapshot.lessons[date].grammar))throw new Error(`${date}: inconsistent full and grammar-only views`)
     }
   }
   return snapshot
@@ -86,17 +113,23 @@ const metadata = (card: SourceCard): StudyMetadata => ({studyKind:card.studyKind
 export function withItStudy(lesson: DailyLesson,snapshot: StudySnapshot): DailyLesson {
   const issueNumber = snapshot.issueNumbers[lesson.date]
   if (!issueNumber) return lesson
-  const source = snapshot.lessons[lesson.date]
+  // Earlier independent N1 courses are not IT daily mirrors. Historical grammar
+  // overlays begin at the first actual IT-sourced lesson; vocabulary stays raw.
+  const historical = lesson.date >= '2026-09-09' ? snapshot.grammarLessons?.[lesson.date] : undefined
+  const source = snapshot.lessons[lesson.date] ?? (historical ? {
+    grammar:historical.grammar,vocabulary:undefined,
+    reviewGrammarNote:historical.reviewGrammarNote,reviewVocabularyNote:undefined,
+  } : undefined)
   if (!source) return {...lesson,issueNumber,studyFrequencyScope:snapshot.frequencyScope,
     vocabulary:lesson.vocabulary.map(card => ({...card,reportFrequency:snapshot.vocabularyFrequency[card.word] ?? snapshot.vocabularyFrequency[lexicalKey(card.word)]})),
     grammar:lesson.grammar.map(card => ({...card,reportFrequency:snapshot.grammarFrequency[grammarIdentity(card.pattern)]})),
   }
-  const vocabulary: VocabularyItem[] = source.vocabulary.map(card => {
+  const vocabulary: VocabularyItem[] = source.vocabulary?.map(card => {
     const existing = lesson.vocabulary.find(item => item.word === card.term && item.reading === card.reading && item.example === card.exampleJa)
     return {id:existing?.id ?? stableId(lesson.date,'v',card.identity,card.exampleJa),word:card.term!,reading:card.reading!,meaning:card.meaning,
       jlpt:card.level as VocabularyItem['jlpt'],partOfSpeech:card.partOfSpeech ?? '',example:card.exampleJa,translation:card.exampleMeaning ?? '',
       collocations:card.collocations ?? [],nuance:card.nuance ?? card.note ?? '',...metadata(card)}
-  })
+  }) ?? lesson.vocabulary.map(card => ({...card,reportFrequency:snapshot.vocabularyFrequency[card.word] ?? snapshot.vocabularyFrequency[lexicalKey(card.word)]}))
   const grammar: GrammarItem[] = source.grammar.map(card => {
     const existing=lesson.grammar.find(item=>grammarIdentity(item.pattern)===card.identity && item.example===card.exampleJa)
     return {id:existing?.id ?? stableId(lesson.date,'g',card.identity,card.exampleJa),pattern:card.pattern!,level:card.level,meaning:card.meaning,

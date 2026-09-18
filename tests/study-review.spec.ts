@@ -40,3 +40,21 @@ test('new and review learning cards expose source frequency and keep progress',a
  await expect(page.locator('.study-reference').first()).toContainText('参考：')
  expect(errors).toEqual([])
 })
+
+test('historical IT grammar supplements are displayed without replacing historical vocabulary',async({page},testInfo)=>{
+ const source=JSON.parse(readFileSync(new URL('../src/data/it-study-snapshot.json',import.meta.url),'utf8'))
+ const date='2026-09-09',expected=source.grammarLessons[date].grammar
+ const index=validateContent().lessons.findIndex(lesson=>lesson.date===date)
+ const raw=JSON.parse(readFileSync(new URL(`../src/data/daily/${date}.json`,import.meta.url),'utf8')).lesson
+ await page.goto('/')
+ await page.locator('.date-dropdown-trigger').click()
+ await page.locator('.date-dropdown-option').nth(index).click()
+ await page.getByRole('button',{name:'N1 文法',exact:true}).click()
+ await expect(page.locator('.learning-card')).toHaveCount(expected.length)
+ await expect(page.locator('.learning-card[data-study-kind="review"]')).toHaveCount(expected.filter((x:any)=>x.studyKind==='review').length)
+ await expect(page.getByRole('heading',{name:'本文で復習できる既習文法'})).toBeVisible()
+ await page.locator('.learning-card[data-study-kind="review"]').first().scrollIntoViewIfNeeded()
+ await page.screenshot({path:testInfo.outputPath('n1-grammar-history.png')})
+ await page.getByRole('button',{name:'N1 語彙',exact:true}).click()
+ await expect(page.locator('.learning-card')).toHaveCount(raw.vocabulary.length)
+})
