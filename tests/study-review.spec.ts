@@ -1,0 +1,42 @@
+import { test,expect } from '@playwright/test'
+import { readFileSync } from 'node:fs'
+import { validateContent } from '../scripts/validate-content.ts'
+const reportDays=JSON.parse(readFileSync(new URL('../src/data/it-study-snapshot.json',import.meta.url),'utf8')).totalDays
+const selectedIndex=validateContent().lessons.findIndex(lesson=>lesson.date==='2026-09-18')
+async function selectDatedLesson(page:import('@playwright/test').Page){
+ if(selectedIndex<0)throw new Error('September 18 regression fixture is missing')
+ await page.locator('.date-dropdown-trigger').click()
+ await page.locator('.date-dropdown-option').nth(selectedIndex).click()
+}
+test('new and review learning cards expose source frequency and keep progress',async({page},testInfo)=>{
+ const errors:string[]=[]; page.on('pageerror',e=>errors.push(e.message))
+ await page.goto('/')
+ await selectDatedLesson(page)
+ await expect(page.locator('.hero h1')).toContainText('（第38号）')
+ await expect(page.locator('.source-issue')).toContainText('Day 20')
+ await page.getByRole('button',{name:'N1 語彙',exact:true}).click()
+ await expect(page.locator('.learning-card')).toHaveCount(20)
+ await expect(page.locator('.learning-card[data-study-kind="review"]')).toHaveCount(3)
+ await expect(page.getByRole('heading',{name:'本文で復習できる既習語彙'})).toBeVisible()
+ const first=page.locator('.study-frequency').first()
+ await expect(first).toHaveAttribute('data-frequency-total',String(reportDays))
+ await first.locator('summary').click(); await expect(first).toHaveAttribute('open','')
+ await expect(first).toContainText('2026-09-18')
+ const review=page.locator('.learning-card[data-study-kind="review"]').first()
+ await review.getByRole('button',{name:'要復習',exact:true}).click()
+ await page.reload()
+ await selectDatedLesson(page)
+ await page.getByRole('button',{name:'N1 語彙',exact:true}).click()
+ await expect(page.locator('.learning-card[data-study-kind="review"]').first().locator('.status-btn.review')).toHaveCount(1)
+ await page.getByRole('button',{name:'N1 文法',exact:true}).click()
+ await expect(page.locator('.learning-card')).toHaveCount(7)
+ await expect(page.locator('.learning-card[data-study-kind="review"]')).toHaveCount(7)
+ await expect(page.getByRole('heading',{name:'本文で復習できる既習文法'})).toBeVisible()
+ await page.locator('.learning-card').first().scrollIntoViewIfNeeded()
+ await page.screenshot({path:testInfo.outputPath('n1-study-desktop.png')})
+ await page.setViewportSize({width:390,height:844})
+ await page.screenshot({path:testInfo.outputPath('n1-study-mobile.png')})
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true)
+ await expect(page.locator('.study-reference').first()).toContainText('参考：')
+ expect(errors).toEqual([])
+})
