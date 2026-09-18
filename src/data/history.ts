@@ -1,4 +1,7 @@
 import type { DailyLesson } from '../types'
+import rawStudySnapshot from './it-study-snapshot.json'
+import { validateStudySnapshot, withItStudy, type StudySnapshot } from '../lib/itStudy'
+const studySnapshot = validateStudySnapshot(rawStudySnapshot as StudySnapshot)
 import {
   historyItems as legacyHistoryItems,
   lesson as legacyLatestLesson,
@@ -13,8 +16,8 @@ const modules = import.meta.glob('./daily/*.json', { eager: true, import: 'defau
 const catalog = mergeArchives(legacyLessons, modules)
 const generatedEntries = catalog.generated
 const generatedByDate = new Map(generatedEntries.map((entry) => [entry.lesson.date, entry]))
-const lessonByDate = catalog.byDate
-export const lessons: DailyLesson[] = catalog.lessons
+export const lessons: DailyLesson[] = catalog.lessons.map(lesson => withItStudy(lesson,studySnapshot))
+const lessonByDate = new Map(lessons.map(lesson => [lesson.date,lesson]))
 export const lesson: DailyLesson = lessons[0] ?? legacyLatestLesson
 export const getLessonByDate = (date: string) => lessonByDate.get(date) ?? lesson
 

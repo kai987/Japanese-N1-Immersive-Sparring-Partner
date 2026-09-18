@@ -2,12 +2,25 @@ export type SectionId = 'today' | 'immersion' | 'vocabulary' | 'grammar' | 'read
 export type ReadingMode = 'japanese' | 'bilingual' | 'analysis'
 export type LearningStatus = 'new' | 'review' | 'mastered'
 
-export interface VocabularyItem {
+export interface ReportFrequency {
+  appearedDays: number
+  totalDays: number
+  percent: number
+  appearedDates: string[]
+}
+export interface StudyMetadata {
+  studyKind?: 'new' | 'review'
+  firstIntroducedDate?: string
+  reportFrequency?: ReportFrequency
+  reviewEvidence?: { form: string; excerpt: string; sourceKind: string }
+}
+
+export interface VocabularyItem extends StudyMetadata {
   id: string
   word: string
   reading: string
   meaning: string
-  jlpt: 'N1' | 'N2'
+  jlpt: 'N1' | 'N2' | 'N3' | 'N5/N4'
   partOfSpeech: string
   example: string
   translation: string
@@ -15,7 +28,7 @@ export interface VocabularyItem {
   nuance: string
 }
 
-export interface GrammarItem {
+export interface GrammarItem extends StudyMetadata {
   level?: string
   sourceUrl?: string
   sourceForm?: string
@@ -42,6 +55,10 @@ export interface ReadingQuestion {
 }
 
 export interface DailyLesson {
+  issueNumber?: number
+  studyFrequencyScope?: string
+  studyVocabularyNote?: string
+  studyGrammarNote?: string
   date: string
   day: number
   title: string

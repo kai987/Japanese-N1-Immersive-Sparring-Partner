@@ -43,6 +43,15 @@ jobs:
       - name: Browser tests
         run: npm run test:e2e
 
+      - name: Retain learning UI verification
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n1-learning-ui-verification
+          path: /tmp/n1-improvements-playwright/**/*.png
+          if-no-files-found: ignore
+          retention-days: 3
+
       - name: Add Pages fallbacks
         run: |
           cp dist/index.html dist/404.html
