@@ -30,3 +30,31 @@ test('reference levels are preserved instead of promoting N3 to N1',()=>{
  const snapshot=load(), lesson=withItStudy(raw(),snapshot)
  assert.deepEqual(lesson.grammar.map(x=>x.level),snapshot.lessons['2026-09-18'].grammar.map(x=>x.level))
 })
+
+test('five, six and seven grammar cards are valid without padding to eight',()=>{
+ for(const count of [5,6,7]){
+  const data=load()
+  data.lessons['2026-09-18'].grammar=data.lessons['2026-09-18'].grammar.slice(0,count)
+  data.grammarLessons!['2026-09-18'].grammar=data.lessons['2026-09-18'].grammar
+  assert.doesNotThrow(()=>validateStudySnapshot(data))
+ }
+ const short=load();short.lessons['2026-09-18'].grammar=short.lessons['2026-09-18'].grammar.slice(0,3)
+ short.grammarLessons!['2026-09-18'].grammar=short.lessons['2026-09-18'].grammar
+ assert.throws(()=>validateStudySnapshot(short),/shortfall/)
+})
+test('historical IT grammar overlays preserve vocabulary, source text, questions and stable IDs',()=>{
+ const date='2026-09-09'
+ const original=JSON.parse(readFileSync(new URL(`../src/data/daily/${date}.json`,import.meta.url),'utf8')).lesson as DailyLesson
+ const snapshot=validateStudySnapshot(load()),lesson=withItStudy(original,snapshot)
+ assert.equal(lesson.grammar.length,snapshot.grammarLessons![date].grammar.length)
+ assert.ok(lesson.grammar.some(card=>card.studyKind==='review'))
+ assert.deepEqual(lesson.vocabulary.map(({reportFrequency,...card})=>card),original.vocabulary.map(({reportFrequency,...card})=>card))
+ assert.deepEqual(lesson.immersion,original.immersion);assert.deepEqual(lesson.reading,original.reading)
+ for(const card of original.grammar){const kept=lesson.grammar.find(x=>x.pattern===card.pattern && x.example===card.example);if(kept)assert.equal(kept.id,card.id)}
+ assert.deepEqual(withItStudy(lesson,snapshot).grammar.map(card=>card.id),lesson.grammar.map(card=>card.id))
+})
+test('historical snapshot rejects missing dates, false-new cards and absent evidence',()=>{
+ let data=load();delete data.grammarLessons!['2026-09-09'];assert.throws(()=>validateStudySnapshot(data),/Incomplete/)
+ data=load();data.grammarLessons!['2026-09-09'].grammar.find(card=>card.studyKind==='review')!.studyKind='new';assert.throws(()=>validateStudySnapshot(data),/repeated NEW/)
+ data=load();delete data.grammarLessons!['2026-09-09'].grammar.find(card=>card.studyKind==='review')!.reviewEvidence;assert.throws(()=>validateStudySnapshot(data),/evidence/)
+})
