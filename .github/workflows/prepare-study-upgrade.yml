@@ -1,0 +1,74 @@
+name: Verify N1 study review upgrade
+on:
+  push:
+    branches: [work/n1-study-ui-2026-09-18]
+    paths: [.github/workflows/prepare-study-upgrade.yml]
+permissions:
+  contents: write
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    env:
+      UPSTREAM_COMMIT: 5ab9cf03515d96c5d06cbdeb5214a4dc32b674ff
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: work/n1-study-ui-2026-09-18
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          repository: kai987/japan-it-ai-daily
+          ref: 5ab9cf03515d96c5d06cbdeb5214a4dc32b674ff
+          path: .upstream-daily
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: 24
+      - name: Confirm the exact upstream release has deployed
+        run: |
+          python3 - <<'PY'
+          import json,os,time,urllib.request
+          sha=os.environ['UPSTREAM_COMMIT']
+          url=f'https://api.github.com/repos/kai987/japan-it-ai-daily/actions/runs?head_sha={sha}&per_page=10'
+          for attempt in range(12):
+              request=urllib.request.Request(url,headers={'Accept':'application/vnd.github+json','User-Agent':'N1-study-upgrade-verifier'})
+              with urllib.request.urlopen(request,timeout=30) as response: data=json.load(response)
+              runs=[r for r in data['workflow_runs'] if r['head_sha']==sha and r['path']=='.github/workflows/deploy.yml']
+              if runs and runs[0]['status']=='completed':
+                  assert runs[0]['conclusion']=='success',f'Upstream deployment failed: {runs[0]["id"]}'
+                  print('Verified deployed upstream',sha,'run',runs[0]['id']);break
+              time.sleep(20)
+          else: raise SystemExit('Upstream deployment not yet confirmed; nothing committed')
+          PY
+      - name: Generate deterministic snapshot from the deployed source commit
+        run: |
+          cd .upstream-daily
+          npm ci --no-audit --no-fund
+          node --input-type=module -e "import {writeFileSync} from 'node:fs'; import {exportStudySnapshot} from './scripts/export-study-snapshot.mjs'; writeFileSync('../src/data/it-study-snapshot.json',JSON.stringify(exportStudySnapshot(undefined,process.env.UPSTREAM_COMMIT))+'\n');"
+          cd ..
+          python3 .review-transfer/apply.py
+      - name: Validate, test and build N1 site
+        run: |
+          npm ci --no-audit --no-fund
+          npm run validate:content
+          npm test
+          npm run build
+      - name: Install test browser
+        run: npx playwright install --with-deps chromium
+      - name: Run all N1 browser tests
+        run: npm run test:e2e
+      - name: Retain learning UI verification
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n1-learning-ui-verification
+          path: /tmp/n1-improvements-playwright/**/*.png
+          if-no-files-found: ignore
+          retention-days: 3
+      - name: Commit verified source changes to staging branch only
+        run: |
+          git rm .review-transfer/apply.py
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add package.json scripts/validate-content.ts src/types.ts src/data/history.ts src/App.tsx src/data/daily/README.md src/data/it-study-snapshot.json
+          git commit -m 'feat: sync verified study reviews, frequencies and issue numbers'
+          git push origin HEAD:work/n1-study-ui-2026-09-18
