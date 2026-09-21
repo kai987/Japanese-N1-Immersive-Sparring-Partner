@@ -88,7 +88,7 @@ jobs:
           assert.equal(snapshot.policy.grammarMinimum,5);
           assert.equal(snapshot.policy.grammarMaximum,8);
           validateStudySnapshot(snapshot);
-          const rebuilt=exportStudySnapshot(undefined,sourceCommit);
+          const rebuilt=JSON.parse(JSON.stringify(exportStudySnapshot(undefined,sourceCommit)));
           assert.deepEqual(snapshot,rebuilt,'Published artifact differs from full-history upstream derivation');
           const jp=documents.japanese.data,ja=documents['japanese-ja'].data;
           assert.deepEqual(jp.vocabulary.map(v=>[v.term,v.reading,v.level]),ja.vocabulary.map(v=>[v.term,v.reading,v.level]));
