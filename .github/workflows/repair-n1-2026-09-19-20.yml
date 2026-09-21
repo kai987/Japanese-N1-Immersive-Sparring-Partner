@@ -216,7 +216,7 @@ jobs:
           for i in {1..30}; do if curl -sf http://127.0.0.1:4173/ > /dev/null; then break; fi; sleep 1; done
           node --input-type=module <<'NODE'
           import assert from 'node:assert/strict';
-          import {chromium} from '@playwright/test';
+          import {chromium,expect} from '@playwright/test';
           import {mkdirSync,readFileSync} from 'node:fs';
           import {validateContent} from './scripts/validate-content.ts';
           import {withItStudy} from './src/lib/itStudy.ts';
@@ -232,16 +232,16 @@ jobs:
             await page.locator('.date-dropdown-trigger').click();
             const index=catalog.findIndex(l=>l.date===date);assert(index>=0);
             await page.locator('.date-dropdown-option').nth(index).click();
-            assert((await page.locator('.hero h1').innerText()).includes(lesson.title));
+            await expect(page.locator('.hero h1')).toContainText(lesson.title);
             assert.equal(await page.locator('vite-error-overlay').count(),0);
             await page.getByRole('button',{name:'N1 語彙',exact:true}).click();
-            for(const card of lesson.vocabulary)assert((await page.locator('main').innerText()).includes(card.word));
+            for(const card of lesson.vocabulary)await expect(page.locator('main')).toContainText(card.word);
             await page.screenshot({path:`${output}/${date}-vocabulary-desktop.png`});
             await page.getByRole('button',{name:'N1 文法',exact:true}).click();
-            for(const card of lesson.grammar)assert((await page.locator('main').innerText()).includes(card.pattern));
+            for(const card of lesson.grammar)await expect(page.locator('main')).toContainText(card.pattern);
             await page.screenshot({path:`${output}/${date}-grammar-desktop.png`});
             await page.setViewportSize({width:390,height:844});
-            assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+            await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),{timeout:5000}).toBe(true);
             await page.screenshot({path:`${output}/${date}-grammar-mobile.png`});
             assert.deepEqual(errors,[]);await context.close();
           }
