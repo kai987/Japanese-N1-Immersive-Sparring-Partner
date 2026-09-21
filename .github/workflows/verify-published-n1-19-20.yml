@@ -1,0 +1,91 @@
+name: Verify published N1 September 19 and 20
+on:
+  push:
+    branches: [sync/repair-n1-2026-09-19-20]
+    paths: [.github/workflows/verify-published-n1-19-20.yml]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: 01dbb168aae1d3afa9f5437ffcb38681990385e8
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+      - run: npm ci --no-audit --no-fund
+      - run: npx playwright install --with-deps chromium
+      - name: Verify final deployment and read the actual published pages
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          node --input-type=module <<'NODE'
+          import assert from 'node:assert/strict';
+          import {readFileSync,mkdirSync,writeFileSync} from 'node:fs';
+          import {chromium,expect} from '@playwright/test';
+          import {validateContent} from './scripts/validate-content.ts';
+          import {withItStudy,validateStudySnapshot} from './src/lib/itStudy.ts';
+          const repo='kai987/Japanese-N1-Immersive-Sparring-Partner',sha='01dbb168aae1d3afa9f5437ffcb38681990385e8';
+          const api=async path=>{const r=await fetch(`https://api.github.com/repos/${repo}/${path}`,{headers:{Authorization:`Bearer ${process.env.GH_TOKEN}`,Accept:'application/vnd.github+json'}});assert(r.ok,`GitHub read failed: ${r.status}`);return r.json();};
+          let run;
+          for(let attempt=0;attempt<30;attempt++){
+            run=await api('actions/runs/35620559287');
+            assert.equal(run.head_sha,sha);assert.equal(run.head_branch,'main');
+            if(run.status==='completed')break;
+            await new Promise(resolve=>setTimeout(resolve,10000));
+          }
+          assert.equal(run.status,'completed');assert.equal(run.conclusion,'success');
+          assert.equal((await api('git/ref/heads/main')).object.sha,sha);
+          const jobs=(await api('actions/runs/35620559287/jobs')).jobs;
+          for(const name of ['build','deploy'])assert.equal(jobs.find(j=>j.name===name)?.conclusion,'success');
+          for(const name of ['Unit tests','Build','Browser tests'])assert.equal(jobs.find(j=>j.name==='build').steps.find(s=>s.name===name)?.conclusion,'success');
+          const catalog=validateContent().lessons;
+          const snapshot=validateStudySnapshot(JSON.parse(readFileSync('src/data/it-study-snapshot.json','utf8')));
+          assert.equal(snapshot.sourceCommit,'e415d502b29a031a8f10fb1d3c45ea95ff71e630');
+          assert.equal(snapshot.lastDate,'2026-09-21');assert.equal(snapshot.totalDays,41);
+          const base='https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/';
+          const html=await (await fetch(base+'?verify='+sha,{cache:'no-store'})).text();
+          assert(html.includes('index-BmsTq2fM.js'),'The published bundle must match the tested final build');
+          const output=process.env.RUNNER_TEMP+'/published-check';mkdirSync(output,{recursive:true});
+          const browser=await chromium.launch();const reports=[];
+          for(const date of ['2026-09-19','2026-09-20']){
+            const context=await browser.newContext({viewport:{width:1440,height:1000},reducedMotion:'reduce'});
+            const page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
+            const lesson=withItStudy(catalog.find(l=>l.date===date),snapshot);
+            await page.goto(base+'?verify='+sha);
+            await page.locator('.date-dropdown-trigger').click();
+            await page.locator('.date-dropdown-option').nth(catalog.findIndex(l=>l.date===date)).click();
+            await expect(page.locator('.hero h1')).toContainText(lesson.title);
+            await expect(page.locator('.date-dropdown-trigger')).toContainText(`2026年9月${date.slice(-2)}日`);
+            await page.getByRole('button',{name:'N1 語彙',exact:true}).click();
+            for(const card of lesson.vocabulary)await expect(page.locator('main')).toContainText(card.word);
+            await expect(page.locator('.learning-card')).toHaveCount(lesson.vocabulary.length);
+            await page.getByRole('button',{name:'N1 文法',exact:true}).click();
+            for(const card of lesson.grammar)await expect(page.locator('main')).toContainText(card.pattern);
+            await expect(page.locator('.learning-card')).toHaveCount(lesson.grammar.length);
+            await page.screenshot({path:`${output}/${date}-live-desktop.png`});
+            await page.setViewportSize({width:390,height:844});
+            await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),{timeout:5000}).toBe(true);
+            await page.screenshot({path:`${output}/${date}-live-mobile.png`});
+            assert.deepEqual(errors,[]);
+            reports.push({date,day:lesson.day,issueNumber:lesson.issueNumber,vocabulary:{new:lesson.vocabulary.filter(c=>c.studyKind==='new').length,review:lesson.vocabulary.filter(c=>c.studyKind==='review').length},grammar:{new:lesson.grammar.filter(c=>c.studyKind==='new').length,review:lesson.grammar.filter(c=>c.studyKind==='review').length},liveVerified:true});
+            await context.close();
+          }
+          await browser.close();
+          const proof={commit:sha,pagesRun:35620559287,deploy:'success',snapshotSource:snapshot.sourceCommit,snapshotLastDate:snapshot.lastDate,totalDays:snapshot.totalDays,reports};
+          writeFileSync(output+'/published-proof.json',JSON.stringify(proof,null,2));
+          console.log('PUBLISHED_PROOF='+JSON.stringify(proof));
+          NODE
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: n1-published-september-19-20
+          path: ${{ runner.temp }}/published-check/*
+          if-no-files-found: ignore
+          retention-days: 7
