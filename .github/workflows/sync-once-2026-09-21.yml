@@ -1,0 +1,233 @@
+name: Prepare verified N1 September 21 sync
+on:
+  push:
+    branches: [sync/n1-publish-2026-09-21]
+    paths: [.github/workflows/sync-once-2026-09-21.yml]
+permissions:
+  contents: write
+concurrency:
+  group: n1-sync-once-2026-09-21
+  cancel-in-progress: false
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout unchanged N1 main baseline
+        uses: actions/checkout@v6
+        with:
+          ref: 94715ba35e2dd1d25ea6f591638d9abb3e9c6492
+          path: n1
+          persist-credentials: false
+      - name: Checkout complete upstream content at the deployed commit
+        uses: actions/checkout@v6
+        with:
+          repository: kai987/japan-it-ai-daily
+          ref: e415d502b29a031a8f10fb1d3c45ea95ff71e630
+          path: upstream
+          persist-credentials: false
+          sparse-checkout: |
+            src
+            scripts
+            docs
+            tests
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+      - name: Install upstream validators
+        working-directory: upstream
+        run: npm ci --no-audit --no-fund
+      - name: Validate all four collections and full new-item and review history
+        working-directory: upstream
+        run: npm run content:integrity:check
+      - name: Retrieve the published snapshot and verify artifact digest
+        run: |
+          curl --fail --silent --show-error --location --retry 3 'https://kai987.github.io/japan-it-ai-daily/study-index.json' -o "$RUNNER_TEMP/study-index.json"
+          echo "c6dc017f36aeeb6d24675f1034c886ca841bd1b3684efe411e9d8b8e496845d7  $RUNNER_TEMP/study-index.json" | sha256sum --check
+      - name: Verify provenance and prepare the same-day raw lesson
+        working-directory: upstream
+        run: |
+          node --input-type=module <<'NODE'
+          import assert from 'node:assert/strict';
+          import {readFileSync,writeFileSync,readdirSync,existsSync} from 'node:fs';
+          import {createHash} from 'node:crypto';
+          import {execFileSync} from 'node:child_process';
+          import {parse} from 'yaml';
+          import {exportStudySnapshot} from './scripts/export-study-snapshot.mjs';
+          import {validateStudySnapshot} from '../n1/src/lib/itStudy.ts';
+          import {grammarIdentity} from '../n1/src/lib/grammarHistory.ts';
+          const date='2026-09-21';
+          const sourceCommit='e415d502b29a031a8f10fb1d3c45ea95ff71e630';
+          const day=(Date.parse(date)-Date.parse('2026-08-30'))/86400000+1;
+          assert.equal(day,23);
+          assert.equal(execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),sourceCommit);
+          const collections=['daily','daily-ja','japanese','japanese-ja'];
+          const lists=collections.map(collection=>readdirSync(`src/content/${collection}`).filter(name=>/^\d{4}-\d{2}-\d{2}\.md$/.test(name)).sort());
+          for(const list of lists)assert.deepEqual(list,lists[0],'Full four-file date coverage differs');
+          const documents={};
+          for(const collection of collections){
+            for(const filename of lists[0]){
+              const text=readFileSync(`src/content/${collection}/${filename}`,'utf8');
+              const fm=text.match(/^---\r?\n([\s\S]*?)\r?\n---(?:\r?\n|$)/);
+              assert(fm,`Missing frontmatter: ${collection}/${filename}`);
+              const data=parse(fm[1]);
+              assert.equal(String(data.date),filename.slice(0,10));
+              if(filename===`${date}.md`)documents[collection]={data,text};
+            }
+          }
+          assert.equal(Object.keys(documents).length,4);
+          const snapshot=JSON.parse(readFileSync(`${process.env.RUNNER_TEMP}/study-index.json`,'utf8'));
+          assert.equal(snapshot.sourceCommit,sourceCommit);
+          assert.equal(snapshot.lastDate,date);
+          assert.equal(snapshot.totalDays,lists[0].length);
+          assert.equal(snapshot.issueNumbers[date],41);
+          assert.deepEqual(Object.keys(snapshot.issueNumbers).sort(),lists[0].map(name=>name.slice(0,10)));
+          assert.deepEqual(Object.keys(snapshot.grammarLessons).sort(),Object.keys(snapshot.issueNumbers).filter(d=>d>=snapshot.policy.grammarEffectiveFrom).sort());
+          assert.equal(snapshot.policy.grammarMinimum,5);
+          assert.equal(snapshot.policy.grammarMaximum,8);
+          validateStudySnapshot(snapshot);
+          const rebuilt=exportStudySnapshot(undefined,sourceCommit);
+          assert.deepEqual(snapshot,rebuilt,'Published artifact differs from full-history upstream derivation');
+          const jp=documents.japanese.data,ja=documents['japanese-ja'].data;
+          assert.deepEqual(jp.vocabulary.map(v=>[v.term,v.reading,v.level]),ja.vocabulary.map(v=>[v.term,v.reading,v.level]));
+          assert.deepEqual(jp.grammar.map(g=>[g.pattern,g.level]),ja.grammar.map(g=>[g.pattern,g.level]));
+          assert.deepEqual(jp.mustRememberWords,ja.mustRememberWords);
+          assert.deepEqual(jp.mustRememberGrammar,ja.mustRememberGrammar);
+          assert(jp.mustRememberWords.length<=10);
+          assert.equal(jp.mustRememberGrammar.length,Math.min(5,jp.grammar.length));
+          assert.equal(jp.vocabularyCount,jp.vocabulary.length);
+          assert.equal(jp.grammarCount,jp.grammar.length);
+          const sourcePath=`../n1/n1-source/${date}.md`;
+          const original=readFileSync(sourcePath,'utf8');
+          assert.equal(execFileSync('git',['hash-object',sourcePath],{encoding:'utf8'}).trim(),'b96ba233142c9a47f5993428415b410219208e94');
+          assert(original.startsWith('# Day 23 / 99｜2026年9月21日'));
+          for(const path of ['src/data/daily/README.md','src/types.ts','src/lib/archive.ts','src/lib/itStudy.ts','scripts/import-study-snapshot.ts'])assert(readFileSync(`../n1/${path}`,'utf8').trim());
+          const oldPath=`../n1/src/data/daily/${date}.json`;
+          const old=existsSync(oldPath)?JSON.parse(readFileSync(oldPath,'utf8')):undefined;
+          const hash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex').slice(0,16);
+          const vocabulary=jp.mustRememberWords.map(word=>{
+            const v=jp.vocabulary.find(item=>item.term===word);
+            assert(v,`C-4 word absent from new vocabulary: ${word}`);
+            const sourceCard=snapshot.lessons[date].vocabulary.find(item=>item.term===v.term&&item.reading===v.reading);
+            assert(sourceCard&&sourceCard.studyKind==='new'&&sourceCard.firstIntroducedDate===date);
+            const existing=old?.lesson.vocabulary.find(item=>item.word===v.term&&item.reading===v.reading&&item.example===v.exampleJa);
+            return {id:existing?.id??`${date}-v-${hash([sourceCard.identity,v.reading,v.exampleJa])}`,word:v.term,reading:v.reading,meaning:v.meaningZh,jlpt:v.level,partOfSpeech:v.partOfSpeech,example:v.exampleJa,translation:v.exampleZh,collocations:v.collocations,nuance:[v.nuanceZh,v.noteZh].filter(Boolean).join('\n')};
+          });
+          const grammar=jp.mustRememberGrammar.map(pattern=>{
+            const g=jp.grammar.find(item=>item.pattern===pattern);
+            assert(g,`C-4 grammar absent from new grammar: ${pattern}`);
+            const sourceCard=snapshot.lessons[date].grammar.find(item=>item.pattern===g.pattern);
+            assert(sourceCard&&sourceCard.studyKind==='new'&&sourceCard.firstIntroducedDate===date);
+            const existing=old?.lesson.grammar.find(item=>grammarIdentity(item.pattern)===grammarIdentity(g.pattern)&&item.example===g.exampleJa);
+            return {id:existing?.id??`${date}-g-${hash([sourceCard.identity,g.exampleJa])}`,pattern:g.pattern,level:g.level,meaning:g.meaningZh,form:g.structure,register:g.usageZh,frequency:existing?.frequency??3,explanation:g.usageZh,example:g.exampleJa,translation:g.exampleZh,comparison:g.noteZh,sourceUrl:g.sourceUrl,sourceForm:g.sourceForm,sourceAnchor:g.sourceAnchor};
+          });
+          const paragraphs=[
+            'ある会社では、AIエージェントに社内システムの調査や障害対応の補助を任せている。エージェントには必要なシステムへのアクセス権を与えていたため、当初は「権限の範囲を制限しておけば十分だ」と考えていた。',
+            'しかし運用を始めると、同じ権限を持っていても、状況によってエージェントがアクセスするデータや呼び出すツールが変化することが分かった。',
+            'そこで会社は、許可された権限だけでなく、実際にどのデータへアクセスし、何を実行したかを記録する仕組みを追加した。また、重要な操作の前には確認を求め、異常な行動が見つかった場合には処理を停止できるようにした。'
+          ];
+          for(const paragraph of paragraphs)assert(original.includes(paragraph),'Immersion must be in the 09:00 original');
+          const options=[
+            '一度権限を与えれば、エージェントの実際の行動を確認する必要はないから。',
+            'AIエージェントの行動は状況によって変わるため、権限設定だけでなく実際の行動も追跡・制御する必要があるから。',
+            'AIエージェントには一切システムを利用させないほうがよいから。',
+            'ログを保存するとAIモデルの精度が必ず上がるから。'
+          ];
+          for(const option of options)assert(original.includes(option));
+          const prompt='この会社が運用方法を変更した主な理由は何か。';
+          assert(original.includes(prompt));
+          const readingParagraphs=[paragraphs[0],paragraphs[1]+paragraphs[2]];
+          const oldReading=old?.lesson.reading;
+          const sameQuestion=oldReading&&JSON.stringify([oldReading.paragraphs,oldReading.question.prompt,oldReading.question.options,oldReading.question.answer])===JSON.stringify([readingParagraphs,prompt,options,1]);
+          const data={lesson:{date,day,title:'AIエージェント時代のゼロトラスト',subtitle:'「誰がアクセスするか」だけでなく「エージェントが何をしているか」も検証する',estimatedMinutes:40,
+            immersion:{title:'権限設定だけで十分なのか',paragraphs,
+              translations:[
+                '某家公司把内部系统调查及故障应对的辅助工作交给了AI智能体。由于已经为智能体授予所需系统的访问权限，公司最初认为，只要限制权限范围就足够了。',
+                '但是，开始运用后，公司发现：即使拥有相同权限，智能体访问的数据和调用的工具也会随具体情况而变化。',
+                '因此，公司增加了记录机制，不仅记录获准的权限，也记录实际访问了哪些数据、执行了哪些操作。同时，重要操作前需要确认；发现异常行为时，可以停止处理。'
+              ],
+              analysis:[
+                '「～ため」说明初始判断的依据，「当初は」提示后文会修正这一认识。此段呈现的是公司最初的想法，而不是全文的最终结论。',
+                '「しかし」是关键转折；「同じ権限を持っていても」与「状況によって」形成对照，突出权限相同并不意味着实际行动始终相同。',
+                '「そこで」引出针对问题的措施，「だけでなく」把关注点从已授予的权限扩展到实际行动。记录、操作前确认与异常时停止共同回应第二段发现的问题。'
+              ]},vocabulary,grammar,grammarSourceCommit:sourceCommit,
+            grammarSelectionNote:`本JSONの新学重点文法は${grammar.length}項目です。これは新学の件数であり、本文復習を重ねた文法区全体の件数ではありません。${jp.grammarSelectionNote??''}`,
+            reading:{title:'原稿「今日の錯題」第5問：権限と実際の行動',paragraphs:readingParagraphs,question:{id:sameQuestion?oldReading.question.id:`${date}-q-${hash([readingParagraphs,prompt,options,1])}`,prompt,options,answer:1,
+              explanation:'公司发现，实际访问的数据和调用的工具会随情境变化，单纯限制已授予的权限并不足够，因此增加了行为记录、重要操作前确认以及异常停止机制。',
+              optionNotes:[
+                '这与第二段的发现及后续措施相反；文章强调必须检查实际行动。',
+                '准确对应转折后的发现，以及公司因此追加记录、确认和停止机制的原因。',
+                '文章没有全面禁止智能体使用系统，而是在继续使用的同时增加控制措施。',
+                '文章没有讨论日志必然提高模型精度；日志用于追踪实际行为。'
+              ]}}
+          },reviewFocus:[
+            {type:'文法',title:'今日の錯題1｜二つの立場への評価',detail:'原稿第1問。二つの立場をどう評価しているかを文脈から判断する。選択肢の番号は原稿で解答し、ここでは答えを表示しない。'},
+            {type:'文法',title:'今日の錯題2｜人物の一面',detail:'原稿第2問。普段の慎重さと、新しい道具に接した時の傾向との関係を読む。意味と接続を確認してから原稿の選択肢に答える。'},
+            {type:'词汇',title:'今日の錯題3｜突然の警告への対応',detail:'原稿第3問。担当者の心理状態と、その後に取った行動のつながりを手掛かりに語彙を選ぶ。'},
+            {type:'词汇',title:'今日の錯題4｜実行環境の用意',detail:'原稿第4問。外部サービスへの依存と社内での用意を対比し、文脈に合う語彙を判断する。'},
+            {type:'读解',title:'今日の錯題5｜運用方法を変えた理由',detail:'原稿第5問を読解練習に収録。初期の考え、運用後の発見、追加した措置を分け、変更理由を本文の根拠から選ぶ。'}
+          ],merged:old?.merged??false};
+          writeFileSync(`${process.env.RUNNER_TEMP}/${date}.json`,JSON.stringify(data,null,2)+'\n');
+          const counts=Object.fromEntries(['vocabulary','grammar'].map(kind=>[kind,{new:snapshot.lessons[date][kind].filter(c=>c.studyKind==='new').length,review:snapshot.lessons[date][kind].filter(c=>c.studyKind==='review').length}]));
+          const proof={date,day,issueNumber:snapshot.issueNumbers[date],sourceCommit,upstreamRun:35568339184,snapshotSha256:'c6dc017f36aeeb6d24675f1034c886ca841bd1b3684efe411e9d8b8e496845d7',totalDays:snapshot.totalDays,historicalGrammarDays:Object.keys(snapshot.grammarLessons).length,rawWords:vocabulary.length,rawGrammar:grammar.length,...counts};
+          writeFileSync(`${process.env.RUNNER_TEMP}/n1-sync-proof.json`,JSON.stringify(proof,null,2));
+          console.log('SOURCE_PROOF='+JSON.stringify(proof));
+          NODE
+      - name: Install N1 dependencies
+        working-directory: n1
+        run: npm ci --no-audit --no-fund
+      - name: Import the verified snapshot and raw lesson
+        working-directory: n1
+        run: |
+          npm run import:study -- "$RUNNER_TEMP/study-index.json"
+          npm run import:daily -- "$RUNNER_TEMP/2026-09-21.json"
+      - name: Validate all N1 content
+        working-directory: n1
+        run: npm run validate:content
+      - name: Unit tests
+        working-directory: n1
+        run: npm test
+      - name: Build
+        working-directory: n1
+        run: npm run build
+      - name: Install test browser
+        working-directory: n1
+        run: npx playwright install --with-deps chromium
+      - name: Browser tests
+        working-directory: n1
+        run: npm run test:e2e
+      - name: Create a validated data-only commit object without moving main
+        working-directory: n1
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          node --input-type=module <<'NODE'
+          import assert from 'node:assert/strict';
+          import {readFileSync} from 'node:fs';
+          import {execFileSync} from 'node:child_process';
+          const repo='kai987/Japanese-N1-Immersive-Sparring-Partner';
+          const parent='94715ba35e2dd1d25ea6f591638d9abb3e9c6492';
+          const files=['src/data/daily/2026-09-21.json','src/data/it-study-snapshot.json'];
+          const api=async(path,method='GET',body)=>{
+            const response=await fetch(`https://api.github.com/repos/${repo}/${path}`,{method,headers:{Authorization:`Bearer ${process.env.GH_TOKEN}`,Accept:'application/vnd.github+json','Content-Type':'application/json','X-GitHub-Api-Version':'2022-11-28'},body:body===undefined?undefined:JSON.stringify(body)});
+            const text=await response.text();
+            assert(response.ok,`${method} ${path}: HTTP ${response.status}: ${text}`);
+            return text?JSON.parse(text):null;
+          };
+          assert.equal(execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),parent);
+          assert.equal((await api('git/ref/heads/main')).object.sha,parent,'main changed; abort rather than overwrite');
+          execFileSync('git',['add','--',...files]);
+          assert.deepEqual(execFileSync('git',['diff','--cached','--name-only'],{encoding:'utf8'}).trim().split('\n').sort(),files.toSorted());
+          assert.equal(execFileSync('git',['diff','--name-only'],{encoding:'utf8'}).trim(),'');
+          assert.equal(execFileSync('git',['hash-object','n1-source/2026-09-21.md'],{encoding:'utf8'}).trim(),'b96ba233142c9a47f5993428415b410219208e94');
+          const base=await api(`git/commits/${parent}`);
+          const tree=[];
+          for(const path of files){const blob=await api('git/blobs','POST',{content:readFileSync(path,'utf8'),encoding:'utf-8'});tree.push({path,mode:'100644',type:'blob',sha:blob.sha});}
+          const createdTree=await api('git/trees','POST',{base_tree:base.tree.sha,tree});
+          const commit=await api('git/commits','POST',{message:'content: sync N1 daily 2026-09-21',tree:createdTree.sha,parents:[parent]});
+          const proof=JSON.parse(readFileSync(`${process.env.RUNNER_TEMP}/n1-sync-proof.json`,'utf8'));
+          console.log('PREPARED_COMMIT='+commit.sha);
+          console.log('PREPARED_PROOF='+JSON.stringify({...proof,parent,commit:commit.sha,changedFiles:files,validation:'content/unit/build/browser passed; main not yet moved'}));
+          NODE
