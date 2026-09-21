@@ -1,0 +1,51 @@
+name: Diagnose N1 September 19 mobile overflow
+on:
+  push:
+    branches: [sync/repair-n1-2026-09-19-20]
+    paths: [.github/workflows/diagnose-n1-mobile.yml]
+permissions:
+  contents: read
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: 41312aefb436ca80962c114675a30084ff6fc63f
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+      - run: npm ci --no-audit --no-fund
+      - run: npx playwright install --with-deps chromium
+      - name: Observe actual overflow before changing CSS or assertions
+        run: |
+          node --input-type=module <<'NODE'
+          import {chromium,expect} from '@playwright/test';
+          import {mkdirSync,writeFileSync} from 'node:fs';
+          import {validateContent} from './scripts/validate-content.ts';
+          const out=process.env.RUNNER_TEMP+'/mobile-diagnostic';mkdirSync(out,{recursive:true});
+          const browser=await chromium.launch();
+          const page=await browser.newPage({viewport:{width:1440,height:1000},reducedMotion:'reduce'});
+          await page.goto('https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/');
+          await page.locator('.date-dropdown-trigger').click();
+          await page.locator('.date-dropdown-option').nth(validateContent().lessons.findIndex(l=>l.date==='2026-09-19')).click();
+          await page.getByRole('button',{name:'N1 文法',exact:true}).click();
+          await page.setViewportSize({width:390,height:844});
+          const inspect=()=>page.evaluate(()=>({viewport:innerWidth,scroll:document.documentElement.scrollWidth,elements:[...document.querySelectorAll('body *')].map(e=>({e,r:e.getBoundingClientRect(),s:getComputedStyle(e)})).filter(({r,s})=>r.width>0&&r.right>innerWidth+1&&s.position!=='fixed').map(({e,r,s})=>({tag:e.tagName,cls:e.className,text:e.textContent.slice(0,160),width:r.width,right:r.right,display:s.display,whiteSpace:s.whiteSpace,minWidth:s.minWidth,overflowWrap:s.overflowWrap})).slice(0,35)}));
+          const immediate=await inspect();
+          try{await expect.poll(async()=>await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),{timeout:5000}).toBe(true);}catch{}
+          const settled=await inspect();
+          await page.screenshot({path:out+'/grammar-19-mobile-before.png',fullPage:false});
+          console.log('MOBILE_DIAGNOSTIC='+JSON.stringify({immediate,settled}));
+          writeFileSync(out+'/diagnostic.json',JSON.stringify({immediate,settled},null,2));
+          await browser.close();
+          NODE
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: n1-mobile-overflow-diagnostic
+          path: ${{ runner.temp }}/mobile-diagnostic/*
+          retention-days: 3
