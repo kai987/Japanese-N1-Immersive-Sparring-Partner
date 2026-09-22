@@ -31,6 +31,15 @@ jobs:
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
 
+      - name: Verify study snapshot import
+        run: |
+          cp src/data/it-study-snapshot.json /tmp/study-index.json
+          npm run import:study -- /tmp/study-index.json
+          git diff --exit-code -- src/data/it-study-snapshot.json
+
+      - name: Validate content
+        run: npm run validate:content
+
       - name: Unit tests
         run: npm test
 
