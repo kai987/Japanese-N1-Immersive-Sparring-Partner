@@ -84,3 +84,42 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Checkout deployment metadata
+        uses: actions/checkout@v6
+
+      - name: Verify live target date
+        env:
+          PAGE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          python3 <<'PY'
+          import json, os, re, time
+          from pathlib import Path
+          from urllib.parse import urljoin
+          from urllib.request import Request, urlopen
+
+          request = json.loads(Path('.github/n1-sync-request.json').read_text())
+          target = request['targetDate']
+          title = request['daily']['lesson']['title']
+          base = os.environ['PAGE_URL']
+          headers = {'User-Agent': 'n1-pages-live-check'}
+          last_error = None
+
+          for attempt in range(3):
+              try:
+                  html = urlopen(Request(base, headers=headers), timeout=20).read().decode('utf-8')
+                  scripts = re.findall(r'<script[^>]+src="([^"]+\.js[^"]*)"', html)
+                  if not scripts:
+                      raise RuntimeError('no JavaScript bundle found on deployed page')
+                  for src in scripts:
+                      body = urlopen(Request(urljoin(base, src), headers=headers), timeout=20).read().decode('utf-8')
+                      if target in body and title in body:
+                          print(f'Live target verified: {target} / {title}')
+                          raise SystemExit(0)
+                  raise RuntimeError(f'target {target} not present in deployed JavaScript bundle')
+              except Exception as error:
+                  last_error = error
+                  if attempt < 2:
+                      time.sleep(5)
+          raise SystemExit(f'Live target verification failed: {last_error}')
+          PY
