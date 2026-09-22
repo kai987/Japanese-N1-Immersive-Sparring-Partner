@@ -1,0 +1,176 @@
+name: Sync verified N1 daily content
+
+on:
+  workflow_run:
+    workflows: ["Deploy Vite site to GitHub Pages"]
+    types: [completed]
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  sync:
+    if: github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout N1 repository
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
+          fetch-depth: 0
+          path: n1
+
+      - name: Check whether this run owns a sync request
+        id: gate
+        shell: bash
+        run: |
+          request="n1/.github/n1-sync-request.json"
+          if [ ! -f "$request" ]; then
+            echo "execute=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          last_commit="$(git -C n1 log -1 --format=%H -- .github/n1-sync-request.json)"
+          if [ "$last_commit" = "${{ github.event.workflow_run.head_sha }}" ]; then
+            echo "execute=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "execute=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Read locked sync metadata
+        if: steps.gate.outputs.execute == 'true'
+        id: meta
+        shell: bash
+        run: |
+          node <<'NODE'
+          const fs = require('fs')
+          const request = JSON.parse(fs.readFileSync('n1/.github/n1-sync-request.json', 'utf8'))
+          const required = ['targetDate','sourceCommit','snapshotSha256','sourceBlobSha','issueNumber','totalDays']
+          for (const key of required) if (!request[key]) throw new Error(`missing ${key}`)
+          const out = process.env.GITHUB_OUTPUT
+          const values = {
+            target_date: request.targetDate,
+            source_commit: request.sourceCommit,
+            snapshot_sha256: request.snapshotSha256,
+            source_blob_sha: request.sourceBlobSha,
+            issue_number: String(request.issueNumber),
+            total_days: String(request.totalDays)
+          }
+          fs.appendFileSync(out, Object.entries(values).map(([k,v]) => `${k}=${v}\n`).join(''))
+          NODE
+
+      - name: Checkout locked IT/AI source commit
+        if: steps.gate.outputs.execute == 'true'
+        uses: actions/checkout@v6
+        with:
+          repository: kai987/japan-it-ai-daily
+          ref: ${{ steps.meta.outputs.source_commit }}
+          path: upstream
+          persist-credentials: false
+
+      - name: Setup Node
+        if: steps.gate.outputs.execute == 'true'
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+
+      - name: Rebuild and verify published study snapshot
+        if: steps.gate.outputs.execute == 'true'
+        shell: bash
+        run: |
+          cd upstream
+          npm ci --no-audit --no-fund
+          npm run build
+          cd ..
+          actual_sha="$(sha256sum upstream/dist/study-index.json | awk '{print $1}')"
+          test "$actual_sha" = "${{ steps.meta.outputs.snapshot_sha256 }}"
+          node <<'NODE'
+          const fs = require('fs')
+          const s = JSON.parse(fs.readFileSync('upstream/dist/study-index.json','utf8'))
+          const date = process.env.TARGET_DATE
+          const source = process.env.SOURCE_COMMIT
+          const issue = Number(process.env.ISSUE_NUMBER)
+          const total = Number(process.env.TOTAL_DAYS)
+          if (s.sourceCommit !== source) throw new Error('snapshot sourceCommit mismatch')
+          if (s.totalDays !== total) throw new Error('snapshot totalDays mismatch')
+          if (s.issueNumbers?.[date] !== issue) throw new Error('snapshot issueNumber mismatch')
+          if (!s.lessons?.[date]) throw new Error('snapshot target lesson missing')
+          if (s.lastDate < date) throw new Error('snapshot lastDate does not cover target')
+          const grammarDates = Object.keys(s.grammarLessons || {}).sort()
+          if (grammarDates.length !== total || grammarDates[0] !== s.firstDate || grammarDates.at(-1) !== s.lastDate) {
+            throw new Error('grammarLessons history is incomplete')
+          }
+          NODE
+        env:
+          TARGET_DATE: ${{ steps.meta.outputs.target_date }}
+          SOURCE_COMMIT: ${{ steps.meta.outputs.source_commit }}
+          ISSUE_NUMBER: ${{ steps.meta.outputs.issue_number }}
+          TOTAL_DAYS: ${{ steps.meta.outputs.total_days }}
+
+      - name: Verify locked 09:00 N1 source blob
+        if: steps.gate.outputs.execute == 'true'
+        shell: bash
+        run: |
+          actual="$(git -C n1 hash-object "n1-source/${{ steps.meta.outputs.target_date }}.md")"
+          test "$actual" = "${{ steps.meta.outputs.source_blob_sha }}"
+
+      - name: Materialize requested daily JSON and validated snapshot
+        if: steps.gate.outputs.execute == 'true'
+        shell: bash
+        run: |
+          cd n1
+          npm ci --no-audit --no-fund
+          node <<'NODE'
+          const fs = require('fs')
+          const request = JSON.parse(fs.readFileSync('.github/n1-sync-request.json','utf8'))
+          const target = `src/data/daily/${request.targetDate}.json`
+          fs.writeFileSync(target, JSON.stringify(request.daily, null, 2) + '\n')
+          NODE
+          cp ../upstream/dist/study-index.json /tmp/study-index.json
+          npm run import:study -- /tmp/study-index.json
+
+      - name: Validate content
+        if: steps.gate.outputs.execute == 'true'
+        working-directory: n1
+        run: npm run validate:content
+
+      - name: Unit tests
+        if: steps.gate.outputs.execute == 'true'
+        working-directory: n1
+        run: npm test
+
+      - name: Build
+        if: steps.gate.outputs.execute == 'true'
+        working-directory: n1
+        run: npm run build
+
+      - name: Install browser
+        if: steps.gate.outputs.execute == 'true'
+        working-directory: n1
+        run: npx playwright install --with-deps chromium
+
+      - name: Browser tests
+        if: steps.gate.outputs.execute == 'true'
+        working-directory: n1
+        run: npm run test:e2e
+
+      - name: Commit verified content with fast-forward protection
+        if: steps.gate.outputs.execute == 'true'
+        shell: bash
+        run: |
+          cd n1
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "${{ github.event.workflow_run.head_sha }}"
+          date="${{ steps.meta.outputs.target_date }}"
+          git add "src/data/daily/$date.json" src/data/it-study-snapshot.json
+          if git diff --cached --quiet; then
+            echo "No verified content change; skipping duplicate commit."
+            exit 0
+          fi
+          changed="$(git diff --cached --name-only)"
+          test "$changed" = "$(printf 'src/data/daily/%s.json\nsrc/data/it-study-snapshot.json' "$date")"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "content: sync N1 daily $date"
+          git push origin HEAD:main
