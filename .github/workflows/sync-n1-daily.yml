@@ -81,7 +81,7 @@ jobs:
         run: |
           cd upstream
           npm ci --no-audit --no-fund
-          npm run build
+          GITHUB_SHA="${{ steps.meta.outputs.source_commit }}" npm run build
           cd ..
           actual_sha="$(sha256sum upstream/dist/study-index.json | awk '{print $1}')"
           test "$actual_sha" = "${{ steps.meta.outputs.snapshot_sha256 }}"
