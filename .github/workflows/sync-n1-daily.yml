@@ -1,23 +1,27 @@
 name: Sync verified N1 daily content
 
+# A request must be imported before Pages can verify its new target date.
 on:
-  workflow_run:
-    workflows: ["Deploy Vite site to GitHub Pages"]
-    types: [completed]
+  push:
+    branches: [main]
+    paths: ['.github/n1-sync-request.json']
 
 permissions:
   contents: write
-  actions: read
+  actions: write
+
+concurrency:
+  group: n1-content-sync
+  cancel-in-progress: false
 
 jobs:
   sync:
-    if: github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout N1 repository
         uses: actions/checkout@v6
         with:
-          ref: ${{ github.event.workflow_run.head_sha }}
+          ref: ${{ github.sha }}
           fetch-depth: 0
           path: n1
 
@@ -31,7 +35,7 @@ jobs:
             exit 0
           fi
           last_commit="$(git -C n1 log -1 --format=%H -- .github/n1-sync-request.json)"
-          if [ "$last_commit" = "${{ github.event.workflow_run.head_sha }}" ]; then
+          if [ "$last_commit" = "${{ github.sha }}" ]; then
             echo "execute=true" >> "$GITHUB_OUTPUT"
           else
             echo "execute=false" >> "$GITHUB_OUTPUT"
@@ -47,6 +51,10 @@ jobs:
           const request = JSON.parse(fs.readFileSync('n1/.github/n1-sync-request.json', 'utf8'))
           const required = ['targetDate','sourceCommit','snapshotSha256','sourceBlobSha','issueNumber','totalDays']
           for (const key of required) if (!request[key]) throw new Error(`missing ${key}`)
+          if (!/^\d{4}-\d{2}-\d{2}$/.test(request.targetDate) || request.daily?.lesson?.date !== request.targetDate) throw new Error('invalid locked target date')
+          for (const key of ['sourceCommit','sourceBlobSha']) if (!/^[a-f0-9]{40}$/.test(request[key])) throw new Error(`invalid ${key}`)
+          if (!/^[a-f0-9]{64}$/.test(request.snapshotSha256)) throw new Error('invalid snapshot hash')
+          for (const key of ['issueNumber','totalDays']) if (!Number.isInteger(request[key]) || request[key] < 1) throw new Error(`invalid ${key}`)
           const out = process.env.GITHUB_OUTPUT
           const values = {
             target_date: request.targetDate,
@@ -101,6 +109,8 @@ jobs:
           if (grammarDates.length !== total || grammarDates[0] !== s.firstDate || grammarDates.at(-1) !== s.lastDate) {
             throw new Error('grammarLessons history is incomplete')
           }
+          const previous = JSON.parse(fs.readFileSync('n1/src/data/it-study-snapshot.json','utf8'))
+          if (s.lastDate < previous.lastDate || s.totalDays < previous.totalDays || Object.keys(previous.issueNumbers).some(d => !s.issueNumbers[d])) throw new Error('snapshot history rollback')
           NODE
         env:
           TARGET_DATE: ${{ steps.meta.outputs.target_date }}
@@ -157,20 +167,35 @@ jobs:
 
       - name: Commit verified content with fast-forward protection
         if: steps.gate.outputs.execute == 'true'
+        id: commit
         shell: bash
         run: |
           cd n1
           git fetch origin main
-          test "$(git rev-parse origin/main)" = "${{ github.event.workflow_run.head_sha }}"
+          test "$(git rev-parse origin/main)" = "${{ github.sha }}"
           date="${{ steps.meta.outputs.target_date }}"
           git add "src/data/daily/$date.json" src/data/it-study-snapshot.json
           if git diff --cached --quiet; then
             echo "No verified content change; skipping duplicate commit."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          changed="$(git diff --cached --name-only)"
-          test "$changed" = "$(printf 'src/data/daily/%s.json\nsrc/data/it-study-snapshot.json' "$date")"
+          node scripts/verify-sync-changed-paths.mjs "$date" "$(git diff --cached --name-only)"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "content: sync N1 daily $date"
           git push origin HEAD:main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      # GITHUB_TOKEN pushes do not trigger push workflows. Dispatch explicitly.
+      - name: Deploy the verified content commit
+        if: steps.commit.outputs.changed == 'true'
+        working-directory: n1
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERIFIED_COMMIT: ${{ steps.commit.outputs.sha }}
+        run: |
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$VERIFIED_COMMIT"
+          gh workflow run deploy-pages.yml --repo "$GITHUB_REPOSITORY" --ref main
