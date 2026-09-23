@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "timeZone": "Asia/Tokyo",
+  "planStart": "2026-08-30",
+  "planEnd": "2026-12-06",
+  "recoveryFrom": "2026-09-19",
+  "sourceProgressBranch": "automation/n1-progress",
+  "sourceDirectory": "n1-source",
+  "requestPath": ".github/n1-sync-request.json",
+  "syncWorkflow": "sync-n1-daily.yml",
+  "upstreamRepository": "kai987/japan-it-ai-daily",
+  "upstreamWorkflow": ".github/workflows/deploy.yml",
+  "learning": {
+    "vocabularyTarget": 20,
+    "grammarMinimum": 5,
+    "grammarMaximum": 8,
+    "allowDocumentedShortfall": true,
+    "newVocabularyFocusMaximum": 10,
+    "newGrammarFocusMaximum": 5,
+    "grammarMirrorFrom": "2026-09-09",
+    "vocabularyMirrorFrom": "2026-09-18"
+  },
+  "schedule": {"sourceHourJST": 9, "syncHourJST": 11, "recoveryHourJST": 12, "recoveryRunsPerDay": 1},
+  "maximumTransientAttempts": 3
+}

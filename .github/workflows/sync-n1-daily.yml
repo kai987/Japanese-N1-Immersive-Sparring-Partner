@@ -1,10 +1,21 @@
 name: Sync verified N1 daily content
 
-# A request must be imported before Pages can verify its new target date.
 on:
   push:
     branches: [main]
     paths: ['.github/n1-sync-request.json']
+  workflow_dispatch:
+    inputs:
+      source_commit:
+        description: Optional upstream commit; replay only a matching complete request
+        required: false
+        type: string
+      target_date:
+        description: Optional YYYY-MM-DD; never substitutes another date
+        required: false
+        type: string
+  repository_dispatch:
+    types: [it-study-published]
 
 permissions:
   contents: write
@@ -16,6 +27,7 @@ concurrency:
 
 jobs:
   sync:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout N1 repository
@@ -25,46 +37,62 @@ jobs:
           fetch-depth: 0
           path: n1
 
+      - name: Verify shared automation contract
+        run: node --test n1/scripts/n1-automation.test.mjs
+
       - name: Check whether this run owns a sync request
         id: gate
-        shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
         run: |
-          request="n1/.github/n1-sync-request.json"
-          if [ ! -f "$request" ]; then
-            echo "execute=false" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-          last_commit="$(git -C n1 log -1 --format=%H -- .github/n1-sync-request.json)"
-          if [ "$last_commit" = "${{ github.sha }}" ]; then
-            echo "execute=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "execute=false" >> "$GITHUB_OUTPUT"
-          fi
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import { execFileSync } from 'node:child_process';
+          import { selectRequest } from './n1/scripts/n1-automation.mjs';
+          const path = 'n1/.github/n1-sync-request.json';
+          const request = fs.existsSync(path) ? JSON.parse(fs.readFileSync(path,'utf8')) : null;
+          const event = JSON.parse(fs.readFileSync(process.env.GITHUB_EVENT_PATH,'utf8'));
+          let result = selectRequest(request,process.env.EVENT_NAME,event);
+          if (result.execute && process.env.EVENT_NAME === 'push') {
+            const last = execFileSync('git',['-C','n1','log','-1','--format=%H','--','.github/n1-sync-request.json'],{encoding:'utf8'}).trim();
+            if (last !== process.env.GITHUB_SHA) result = {execute:false,reason:'not_request_owner'};
+          }
+          fs.appendFileSync(process.env.GITHUB_OUTPUT,`execute=${result.execute}\n`);
+          fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,`N1 request: ${result.reason}. A callback is not publication success.\n`);
+          NODE
 
       - name: Read locked sync metadata
         if: steps.gate.outputs.execute == 'true'
         id: meta
-        shell: bash
         run: |
-          node <<'NODE'
-          const fs = require('fs')
-          const request = JSON.parse(fs.readFileSync('n1/.github/n1-sync-request.json', 'utf8'))
-          const required = ['targetDate','sourceCommit','snapshotSha256','sourceBlobSha','issueNumber','totalDays']
-          for (const key of required) if (!request[key]) throw new Error(`missing ${key}`)
-          if (!/^\d{4}-\d{2}-\d{2}$/.test(request.targetDate) || request.daily?.lesson?.date !== request.targetDate) throw new Error('invalid locked target date')
-          for (const key of ['sourceCommit','sourceBlobSha']) if (!/^[a-f0-9]{40}$/.test(request[key])) throw new Error(`invalid ${key}`)
-          if (!/^[a-f0-9]{64}$/.test(request.snapshotSha256)) throw new Error('invalid snapshot hash')
-          for (const key of ['issueNumber','totalDays']) if (!Number.isInteger(request[key]) || request[key] < 1) throw new Error(`invalid ${key}`)
-          const out = process.env.GITHUB_OUTPUT
-          const values = {
-            target_date: request.targetDate,
-            source_commit: request.sourceCommit,
-            snapshot_sha256: request.snapshotSha256,
-            source_blob_sha: request.sourceBlobSha,
-            issue_number: String(request.issueNumber),
-            total_days: String(request.totalDays)
-          }
-          fs.appendFileSync(out, Object.entries(values).map(([k,v]) => `${k}=${v}\n`).join(''))
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import { validateRequest } from './n1/scripts/n1-automation.mjs';
+          const r = validateRequest(JSON.parse(fs.readFileSync('n1/.github/n1-sync-request.json','utf8')));
+          const values = {target_date:r.targetDate,source_commit:r.sourceCommit,snapshot_sha256:r.snapshotSha256,source_blob_sha:r.sourceBlobSha,issue_number:r.issueNumber,total_days:r.totalDays};
+          fs.appendFileSync(process.env.GITHUB_OUTPUT,Object.entries(values).map(([k,v])=>`${k}=${v}\n`).join(''));
+          NODE
+
+      - name: Verify successful upstream Pages run and post-deployment check
+        if: steps.gate.outputs.execute == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SOURCE_COMMIT: ${{ steps.meta.outputs.source_commit }}
+        run: |
+          gh api "repos/kai987/japan-it-ai-daily/actions/workflows/deploy.yml/runs?head_sha=$SOURCE_COMMIT&branch=main&status=success&per_page=100" > /tmp/upstream-runs.json
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import { execFileSync } from 'node:child_process';
+          import { publishedRun } from './n1/scripts/n1-automation.mjs';
+          const runs=JSON.parse(fs.readFileSync('/tmp/upstream-runs.json','utf8')).workflow_runs;
+          const run=runs.find(r=>publishedRun(r,process.env.SOURCE_COMMIT));
+          if (!run) throw new Error('waiting_upstream: no successful exact-commit main Pages run');
+          const jobs=JSON.parse(execFileSync('gh',['api',`repos/kai987/japan-it-ai-daily/actions/runs/${run.id}/jobs?per_page=100`],{encoding:'utf8'})).jobs;
+          const build=jobs.find(j=>j.name==='build');
+          const deploy=jobs.find(j=>j.name==='deploy');
+          const verification=deploy?.steps?.find(s=>s.name==='Verify published snapshot and bilingual report bytes');
+          if (build?.conclusion!=='success'||deploy?.conclusion!=='success'||verification?.conclusion!=='success') throw new Error('upstream build/deploy/post-deployment verification incomplete');
+          fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,`Verified upstream run ${run.id}, source ${run.head_sha}.\n`);
           NODE
 
       - name: Checkout locked IT/AI source commit
@@ -85,11 +113,15 @@ jobs:
 
       - name: Rebuild and verify published study snapshot
         if: steps.gate.outputs.execute == 'true'
-        shell: bash
+        env:
+          TARGET_DATE: ${{ steps.meta.outputs.target_date }}
+          SOURCE_COMMIT: ${{ steps.meta.outputs.source_commit }}
+          ISSUE_NUMBER: ${{ steps.meta.outputs.issue_number }}
+          TOTAL_DAYS: ${{ steps.meta.outputs.total_days }}
         run: |
           cd upstream
           npm ci --no-audit --no-fund
-          GITHUB_SHA="${{ steps.meta.outputs.source_commit }}" npm run build
+          GITHUB_SHA="$SOURCE_COMMIT" npm run build
           cd ..
           actual_sha="$(sha256sum upstream/dist/study-index.json | awk '{print $1}')"
           test "$actual_sha" = "${{ steps.meta.outputs.snapshot_sha256 }}"
@@ -97,45 +129,33 @@ jobs:
           const fs = require('fs')
           const s = JSON.parse(fs.readFileSync('upstream/dist/study-index.json','utf8'))
           const date = process.env.TARGET_DATE
-          const source = process.env.SOURCE_COMMIT
-          const issue = Number(process.env.ISSUE_NUMBER)
-          const total = Number(process.env.TOTAL_DAYS)
-          if (s.sourceCommit !== source) throw new Error('snapshot sourceCommit mismatch')
-          if (s.totalDays !== total) throw new Error('snapshot totalDays mismatch')
-          if (s.issueNumbers?.[date] !== issue) throw new Error('snapshot issueNumber mismatch')
+          if (s.sourceCommit !== process.env.SOURCE_COMMIT) throw new Error('snapshot sourceCommit mismatch')
+          if (s.totalDays !== Number(process.env.TOTAL_DAYS)) throw new Error('snapshot totalDays mismatch')
+          if (s.issueNumbers?.[date] !== Number(process.env.ISSUE_NUMBER)) throw new Error('snapshot issueNumber mismatch')
           if (!s.lessons?.[date]) throw new Error('snapshot target lesson missing')
           if (s.lastDate < date) throw new Error('snapshot lastDate does not cover target')
           const grammarDates = Object.keys(s.grammarLessons || {}).sort()
-          if (grammarDates.length !== total || grammarDates[0] !== s.firstDate || grammarDates.at(-1) !== s.lastDate) {
-            throw new Error('grammarLessons history is incomplete')
-          }
+          const issueDates = Object.keys(s.issueNumbers || {}).sort()
+          if (grammarDates.length !== s.totalDays || grammarDates[0] !== s.firstDate || grammarDates.at(-1) !== s.lastDate || JSON.stringify(grammarDates)!==JSON.stringify(issueDates)) throw new Error('grammarLessons history is incomplete')
           const previous = JSON.parse(fs.readFileSync('n1/src/data/it-study-snapshot.json','utf8'))
           if (s.lastDate < previous.lastDate || s.totalDays < previous.totalDays || Object.keys(previous.issueNumbers).some(d => !s.issueNumbers[d])) throw new Error('snapshot history rollback')
           NODE
-        env:
-          TARGET_DATE: ${{ steps.meta.outputs.target_date }}
-          SOURCE_COMMIT: ${{ steps.meta.outputs.source_commit }}
-          ISSUE_NUMBER: ${{ steps.meta.outputs.issue_number }}
-          TOTAL_DAYS: ${{ steps.meta.outputs.total_days }}
 
       - name: Verify locked 09:00 N1 source blob
         if: steps.gate.outputs.execute == 'true'
-        shell: bash
         run: |
           actual="$(git -C n1 hash-object "n1-source/${{ steps.meta.outputs.target_date }}.md")"
           test "$actual" = "${{ steps.meta.outputs.source_blob_sha }}"
 
       - name: Materialize requested daily JSON and validated snapshot
         if: steps.gate.outputs.execute == 'true'
-        shell: bash
         run: |
           cd n1
           npm ci --no-audit --no-fund
           node <<'NODE'
           const fs = require('fs')
           const request = JSON.parse(fs.readFileSync('.github/n1-sync-request.json','utf8'))
-          const target = `src/data/daily/${request.targetDate}.json`
-          fs.writeFileSync(target, JSON.stringify(request.daily, null, 2) + '\n')
+          fs.writeFileSync(`src/data/daily/${request.targetDate}.json`, JSON.stringify(request.daily, null, 2) + '\n')
           NODE
           cp ../upstream/dist/study-index.json /tmp/study-index.json
           npm run import:study -- /tmp/study-index.json
@@ -144,22 +164,18 @@ jobs:
         if: steps.gate.outputs.execute == 'true'
         working-directory: n1
         run: npm run validate:content
-
       - name: Unit tests
         if: steps.gate.outputs.execute == 'true'
         working-directory: n1
         run: npm test
-
       - name: Build
         if: steps.gate.outputs.execute == 'true'
         working-directory: n1
         run: npm run build
-
       - name: Install browser
         if: steps.gate.outputs.execute == 'true'
         working-directory: n1
         run: npx playwright install --with-deps chromium
-
       - name: Browser tests
         if: steps.gate.outputs.execute == 'true'
         working-directory: n1
@@ -168,29 +184,25 @@ jobs:
       - name: Commit verified content with fast-forward protection
         if: steps.gate.outputs.execute == 'true'
         id: commit
-        shell: bash
         run: |
           cd n1
           git fetch origin main
           test "$(git rev-parse origin/main)" = "${{ github.sha }}"
           date="${{ steps.meta.outputs.target_date }}"
           git add "src/data/daily/$date.json" src/data/it-study-snapshot.json
-          if git diff --cached --quiet; then
-            echo "No verified content change; skipping duplicate commit."
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-            exit 0
+          if ! git diff --cached --quiet; then
+            node scripts/verify-sync-changed-paths.mjs "$date" "$(git diff --cached --name-only)"
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "content: sync N1 daily $date"
+            git push origin HEAD:main
           fi
-          node scripts/verify-sync-changed-paths.mjs "$date" "$(git diff --cached --name-only)"
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "content: sync N1 daily $date"
-          git push origin HEAD:main
-          echo "changed=true" >> "$GITHUB_OUTPUT"
           echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
-      # GITHUB_TOKEN pushes do not trigger push workflows. Dispatch explicitly.
-      - name: Deploy the verified content commit
-        if: steps.commit.outputs.changed == 'true'
+      # No changed data is NOT evidence that the last deployment succeeded.
+      # GITHUB_TOKEN pushes need an explicit dispatch.
+      - name: Ensure verified content has a Pages deployment
+        if: steps.gate.outputs.execute == 'true'
         working-directory: n1
         env:
           GH_TOKEN: ${{ github.token }}
@@ -198,4 +210,18 @@ jobs:
         run: |
           git fetch origin main
           test "$(git rev-parse origin/main)" = "$VERIFIED_COMMIT"
-          gh workflow run deploy-pages.yml --repo "$GITHUB_REPOSITORY" --ref main
+          gh api "repos/$GITHUB_REPOSITORY/actions/workflows/deploy-pages.yml/runs?head_sha=$VERIFIED_COMMIT&branch=main&per_page=100" > /tmp/n1-deploy-runs.json
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import { execFileSync } from 'node:child_process';
+          const runs=JSON.parse(fs.readFileSync('/tmp/n1-deploy-runs.json','utf8')).workflow_runs.filter(r=>r.head_sha===process.env.VERIFIED_COMMIT);
+          const active=new Set(['queued','requested','pending','waiting','in_progress']);
+          if (runs.some(r=>r.status==='completed'&&r.conclusion==='success')) {
+            fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,'Exact N1 commit already passed Pages and live verification.\n');
+          } else if (runs.some(r=>active.has(r.status))) {
+            fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,'awaiting_deploy: existing Pages run retained; no duplicate dispatch.\n');
+          } else {
+            execFileSync('gh',['workflow','run','deploy-pages.yml','--repo',process.env.GITHUB_REPOSITORY,'--ref','main'],{stdio:'inherit'});
+            fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,'awaiting_deploy: Pages dispatched; this sync run alone is not publication success.\n');
+          }
+          NODE

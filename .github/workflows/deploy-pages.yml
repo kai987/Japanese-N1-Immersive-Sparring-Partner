@@ -29,6 +29,9 @@ jobs:
           node-version: 24
           package-manager-cache: false
 
+      - name: Verify shared automation contract
+        run: node --test scripts/n1-automation.test.mjs
+
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
 
