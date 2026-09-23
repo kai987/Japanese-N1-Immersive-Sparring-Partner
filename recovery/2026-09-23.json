@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "targetDate": "2026-09-23",
+  "timeZone": "Asia/Tokyo",
+  "day": 25,
+  "stage": "awaiting_upstream_publication",
+  "n1Source": {
+    "path": "n1-source/2026-09-23.md",
+    "readCommit": "b5372a395f82f8697b52e65b9104c236ae905f44",
+    "blobSha": "18a08946feb27c7b72e5ece6f316229a65f7c149",
+    "completeSourceRead": true,
+    "originalUnmodified": true,
+    "readingSource": "今日の錯題 第5問",
+    "reviewFocusSource": "今日の錯題 第1問〜第5問"
+  },
+  "upstream": {
+    "repository": "kai987/japan-it-ai-daily",
+    "lastObservedMainCommit": "d28097c3d54bd8e304471551db5001250c1d7fed",
+    "targetSourceCommit": null,
+    "requiredFilesMissingAtObservedMain": [
+      "src/content/daily/2026-09-23.md",
+      "src/content/daily-ja/2026-09-23.md",
+      "src/content/japanese/2026-09-23.md",
+      "src/content/japanese-ja/2026-09-23.md"
+    ],
+    "draftCheckpointBranch": "automation/daily-progress",
+    "draftCheckpointPath": "runs/2026-09-23/status.json",
+    "draftCheckpointBlobSha": "bd1d3cf2f18e1269f6199afeea91fc8e47f0b1b6",
+    "observedPublisherOwner": "chatgpt-daily-recovery-2026-09-23-run1",
+    "observedPublisherLeaseExpiresAt": "2026-09-23T06:56:30Z",
+    "publisherLeaseWasNotTakenOver": true,
+    "previousPublishedSnapshot": {
+      "sourceCommit": "d28097c3d54bd8e304471551db5001250c1d7fed",
+      "pagesRunId": 35707281872,
+      "artifactId": 10684946393,
+      "archiveSha256": "8be99c3cfc3e466c5e65c61d2621fe3de8b48e0d420b6cec3954c18fadad6969",
+      "snapshotSha256": "17e6ed18552ed3c49653a5a5a46c0ce40c5ee14a6abf79b9d3f9b4508c28c67d",
+      "totalDays": 42,
+      "grammarLessonDates": 42,
+      "lastDate": "2026-09-22",
+      "coversTargetDate": false,
+      "usedForTargetImport": false
+    }
+  },
+  "repairs": [
+    {
+      "commit": "34ddcd602d18a91572f90b4bdaf805fc78c01f45",
+      "summary": "Run a date-locked sync request before Pages target verification, preserve all validation and fast-forward protections, allow unchanged snapshot bytes, and explicitly dispatch Pages after the bot content commit.",
+      "initialPagesRunId": 35825864086,
+      "initialFailure": "TS7016: the new MJS path guard lacked a TypeScript declaration; content validation and all 25 unit tests passed before the strict build stopped."
+    },
+    {
+      "commit": "6251e13c1ddd293326c67d874a16def62edd47d3",
+      "summary": "Add the matching typed declaration without relaxing TypeScript or content checks.",
+      "pagesRunId": 35825958199,
+      "buildJobId": 107067600456,
+      "deployJobId": 107067825044,
+      "snapshotImport": "success",
+      "validateContent": "success",
+      "unitTests": "success",
+      "build": "success",
+      "browserTests": "success",
+      "deploy": "success",
+      "liveVerification": "success for the existing September 22 request, not a September 23 publication"
+    }
+  ],
+  "targetPublication": {
+    "dailyJsonWritten": false,
+    "snapshotUpdated": false,
+    "sourceCommit": null,
+    "issueNumber": null,
+    "vocabularyNew": null,
+    "vocabularyReview": null,
+    "grammarNew": null,
+    "grammarReview": null,
+    "deploy": "not_started"
+  },
+  "resume": {
+    "keepTargetDate": "2026-09-23",
+    "taskWasNotDisabled": true,
+    "instructions": "Re-read both latest main refs and the upstream publication checkpoint. Do not take over an unexpired publisher lease. After the exact target four-file main commit has passed its complete Pages build/tests/browser/Deploy and publication verification, read that run's it-study-snapshot artifact and verify its sourceCommit, full date sets, denominator and grammarLessons. Re-read the unchanged complete target N1 source, map only the same-date canonical C-4 new subset into the raw lesson, and retain its actual reading and five review questions. Update .github/n1-sync-request.json with the newly verified source commit/artifact/hash and complete daily payload. The repaired push-triggered importer performs import:study, all validation/tests/build/browser checks, a content-only fast-forward commit, and explicit Pages dispatch. Confirm the final content commit's full deployment and live September 23 availability. Never use the September 22 snapshot for this target."
+  }
+}
