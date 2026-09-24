@@ -2,9 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-09-23",
   "day": 25,
-  "stage": "request_staged",
-  "checkedAtJST": "2026-09-24T11:57:16+09:00",
-  "n1MainCommit": "8f1d9eee3b4070df39bbd2227deb086ae19a4184",
+  "stage": "published",
+  "checkedAtJST": "2026-09-24T12:14:37+09:00",
   "sourceRecord": {
     "mainSourcePresent": true,
     "sourceBlobSha": "18a08946feb27c7b72e5ece6f316229a65f7c149",
@@ -46,10 +45,25 @@
     "rawVocabulary": 10,
     "rawGrammar": 3
   },
-  "sharedRequest": {
-    "observedTargetDate": "2026-09-22",
-    "replaced": false,
-    "reason": "Complete 2026-09-23 request is staged; claim the single shared request slot only after re-reading latest main/CAS and confirming no active sync writer."
+  "recovery": {
+    "failedSyncRunId": 35950072139,
+    "failedStage": "import_study",
+    "lastError": "N1 snapshot validation rejected the verified upstream IT/AI reference level.",
+    "fixCommits": [
+      "67129f6cd95c84c222d768e9c14fe7dd69556ec4",
+      "321b8489864dd11d1744acd7700d1e2bd2be6963",
+      "91d81070257ad08beca09d25e5bc57dbb888f52a"
+    ],
+    "retryRequestCommit": "fa8c4ed8ed74756823ea1571ffefcd8a1b7429a5",
+    "resolution": "Preserve verified upstream IT/AI levels in the N1 derived display while retaining rejection of unknown levels; regression test added."
+  },
+  "publication": {
+    "syncRunId": 35950437429,
+    "n1Commit": "1ee34679c2e938ee2fc28bbba278f96143cb9009",
+    "pagesRunId": 35950538910,
+    "pagesConclusion": "success",
+    "liveTargetDateVerification": "success",
+    "publishedAtJST": "2026-09-24T12:14:37+09:00"
   },
   "validation": {
     "source": "verified_present",
@@ -57,12 +71,14 @@
     "upstreamIntegrityQualityBilingualTestsBuildBrowserDeploy": "verified_by_exact_pages_run",
     "snapshot": "verified_same_run",
     "requestDraft": "persisted",
-    "request": "not_written",
-    "syncWorkflow": "not_started",
-    "n1Build": "not_started",
-    "n1Tests": "not_started",
-    "n1Browser": "not_started",
-    "n1Deploy": "not_started"
+    "request": "executed",
+    "syncWorkflow": "success",
+    "n1ValidateContent": "success",
+    "n1Tests": "success",
+    "n1Build": "success",
+    "n1Browser": "success",
+    "n1Deploy": "success",
+    "liveDate": "success"
   },
-  "nextAction": "Re-read N1 main and the shared request blob SHA. If no sync-n1-daily writer is active, CAS-replace the stale 2026-09-22 request with the persisted complete 2026-09-23 draft. Let sync-n1-daily.yml be the only final daily/snapshot writer; then verify its resulting exact N1 commit through the full Pages workflow and live date before marking published."
+  "nextAction": "none"
 }
