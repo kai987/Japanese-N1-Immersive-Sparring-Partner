@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "targetDate": "2026-09-23",
+  "day": 25,
+  "stage": "request_staged",
+  "checkedAtJST": "2026-09-24T11:57:16+09:00",
+  "n1MainCommit": "8f1d9eee3b4070df39bbd2227deb086ae19a4184",
+  "sourceRecord": {
+    "mainSourcePresent": true,
+    "sourceBlobSha": "18a08946feb27c7b72e5ece6f316229a65f7c149",
+    "sourceCommit": "b5372a395f82f8697b52e65b9104c236ae905f44",
+    "sourceCommitTimeJST": "2026-09-23T09:04:16+09:00",
+    "verifiedDate": "2026-09-23",
+    "verifiedDay": 25
+  },
+  "requestDraft": {
+    "path": "runs/2026-09-23/request-draft.json",
+    "sourceCommit": "604118a63c338ed755af0a929e94e5eda8a40c08",
+    "sourcePagesRunId": 35834997410,
+    "sourceSnapshotArtifactId": 10738497496,
+    "snapshotSha256": "f5603355fe617350128a61af233e146e2fc4cb089ccc3da810aafe530e8f09b8",
+    "issueNumber": 43,
+    "totalDays": 43,
+    "prepared": true
+  },
+  "upstream": {
+    "repository": "kai987/japan-it-ai-daily",
+    "targetDate": "2026-09-23",
+    "sourceCommit": "604118a63c338ed755af0a929e94e5eda8a40c08",
+    "pagesRunId": 35834997410,
+    "pagesConclusion": "success",
+    "buildTestsBrowser": "success",
+    "deployAndPostDeploy": "success",
+    "snapshotSourceCommit": "604118a63c338ed755af0a929e94e5eda8a40c08",
+    "snapshotLastDate": "2026-09-23",
+    "snapshotTotalDays": 43,
+    "snapshotIssueNumber": 43,
+    "snapshotGrammarDays": 43,
+    "snapshotSha256": "f5603355fe617350128a61af233e146e2fc4cb089ccc3da810aafe530e8f09b8"
+  },
+  "learning": {
+    "vocabularyNew": 20,
+    "vocabularyReview": 0,
+    "grammarNew": 3,
+    "grammarReview": 5,
+    "rawVocabulary": 10,
+    "rawGrammar": 3
+  },
+  "sharedRequest": {
+    "observedTargetDate": "2026-09-22",
+    "replaced": false,
+    "reason": "Complete 2026-09-23 request is staged; claim the single shared request slot only after re-reading latest main/CAS and confirming no active sync writer."
+  },
+  "validation": {
+    "source": "verified_present",
+    "upstreamExactPublish": "verified",
+    "upstreamIntegrityQualityBilingualTestsBuildBrowserDeploy": "verified_by_exact_pages_run",
+    "snapshot": "verified_same_run",
+    "requestDraft": "persisted",
+    "request": "not_written",
+    "syncWorkflow": "not_started",
+    "n1Build": "not_started",
+    "n1Tests": "not_started",
+    "n1Browser": "not_started",
+    "n1Deploy": "not_started"
+  },
+  "nextAction": "Re-read N1 main and the shared request blob SHA. If no sync-n1-daily writer is active, CAS-replace the stale 2026-09-22 request with the persisted complete 2026-09-23 draft. Let sync-n1-daily.yml be the only final daily/snapshot writer; then verify its resulting exact N1 commit through the full Pages workflow and live date before marking published."
+}
