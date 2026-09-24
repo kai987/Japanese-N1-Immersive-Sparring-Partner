@@ -1,10 +1,11 @@
 import { test, expect } from '@playwright/test'
+import { readFileSync } from 'node:fs'
 import { validateContent } from '../scripts/validate-content.ts'
-import rawStudySnapshot from '../src/data/it-study-snapshot.json'
 import { validateStudySnapshot, withItStudy, type StudySnapshot } from '../src/lib/itStudy.ts'
 
 const catalog = validateContent().lessons
-const latest = withItStudy(catalog[0], validateStudySnapshot(rawStudySnapshot as StudySnapshot))
+const studySnapshot = validateStudySnapshot(JSON.parse(readFileSync(new URL('../src/data/it-study-snapshot.json', import.meta.url), 'utf8')) as StudySnapshot)
+const latest = withItStudy(catalog[0], studySnapshot)
 const question = latest.reading.question
 const wrongAnswer = (question.answer + 1) % 4
 const correctLetter = String.fromCharCode(65 + (latest.day - 1) % 4)
