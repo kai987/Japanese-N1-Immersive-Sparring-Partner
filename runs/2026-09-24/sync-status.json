@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-09-24",
   "day": 26,
-  "stage": "validating",
-  "checkedAtJST": "2026-09-24T18:02:21+09:00",
+  "stage": "browser_failed",
+  "checkedAtJST": "2026-09-24T18:30:38+09:00",
   "n1MainCommit": "1ee34679c2e938ee2fc28bbba278f96143cb9009",
   "sourceRecord": {
     "path": "runs/2026-09-24/source.json",
@@ -34,13 +34,19 @@
     "sourceRecord": "verified_present_and_matches_main_blob",
     "upstreamExactPublish": "verified",
     "request": "submitted",
-    "syncWorkflow": "in_progress",
-    "n1Build": "not_started",
-    "n1Tests": "not_started",
-    "n1Browser": "not_started",
+    "syncWorkflow": "failed",
+    "n1Build": "success",
+    "n1Tests": "success",
+    "n1Browser": "failed",
     "n1Deploy": "not_started"
   },
-  "nextAction": "Let sync-n1-daily.yml verify the exact upstream release/snapshot and source blob, then run N1 import, validation, tests, build and browser checks.",
+  "nextAction": "Patch the browser test fixture to derive the expected latest lesson through withItStudy using the same validated snapshot as the UI, preserving the existing visible-card -> review-row assertion. Then resubmit the unchanged source-bound 2026-09-24 request in the same commit so the unique sync workflow owns the retry.",
   "syncRunId": 35978774334,
-  "requestCommit": "30bd33fadb31fe4b0336f976b36e9473215305a6"
+  "requestCommit": "30bd33fadb31fe4b0336f976b36e9473215305a6",
+  "lastError": {
+    "kind": "deterministic_browser_regression",
+    "step": "Browser tests",
+    "message": "tests/app.spec.ts expected the raw daily JSON first vocabulary word 動的 after clicking the first visible vocabulary card, but the UI renders the IT study snapshot overlay whose first visible card is 初稿. 11/12 browser tests passed.",
+    "evidence": "run 35978774334 job 107565420923"
+  }
 }
