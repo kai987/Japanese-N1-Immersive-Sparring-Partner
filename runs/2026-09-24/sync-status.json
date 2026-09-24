@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "targetDate": "2026-09-24",
   "day": 26,
-  "stage": "browser_failed",
-  "checkedAtJST": "2026-09-24T18:33:02+09:00",
-  "n1MainCommit": "1ee34679c2e938ee2fc28bbba278f96143cb9009",
+  "stage": "published",
+  "checkedAtJST": "2026-09-24T18:37:04+09:00",
+  "n1MainCommit": "1a99c07476735b1a3f75f8c9891442dea5411f8c",
   "sourceRecord": {
     "path": "runs/2026-09-24/source.json",
     "sha256": "8d9768b87709964a2285c0125ad64c16116c2ed002c8d36dd2f0a53645858728",
@@ -14,7 +14,7 @@
   "sharedRequest": {
     "currentTargetDate": "2026-09-24",
     "replaced": true,
-    "reason": "Staged source-bound request was written to the shared slot with CAS after confirming no active sync/Pages run."
+    "reason": "Exact 2026-09-24 request executed successfully; no second request was created."
   },
   "upstream": {
     "repository": "kai987/japan-it-ai-daily",
@@ -34,19 +34,45 @@
     "sourceRecord": "verified_present_and_matches_main_blob",
     "upstreamExactPublish": "verified",
     "request": "submitted",
-    "syncWorkflow": "failed",
-    "n1Build": "success",
+    "syncWorkflow": "success",
+    "upstreamSnapshotRebuild": "success",
+    "sourceBlob": "success",
+    "materialize": "success",
+    "n1ContentValidation": "success",
     "n1Tests": "success",
-    "n1Browser": "failed",
-    "n1Deploy": "not_started"
+    "n1Build": "success",
+    "n1Browser": "success",
+    "n1ContentCommit": "success",
+    "n1Deploy": "success",
+    "liveTargetDate": "success"
   },
-  "nextAction": "Replace the test-only direct JSON module import with readFileSync(new URL(..., import.meta.url)) + JSON.parse, keeping the withItStudy overlay expectation unchanged; then atomically touch the same 2026-09-24 request to let the unique sync workflow own the retry.",
-  "syncRunId": 35981781155,
-  "requestCommit": "30bd33fadb31fe4b0336f976b36e9473215305a6",
-  "lastError": {
-    "kind": "deterministic_test_runtime",
-    "step": "Browser tests",
-    "message": "Playwright/Node 24 rejected direct JSON ESM import in tests/app.spec.ts: it-study-snapshot.json needs an import attribute of type json. The earlier visible-card expectation repair is still valid; snapshot fixture loading must use filesystem JSON parsing.",
-    "evidence": "sync run 35981781155 job 107575123994; deploy run 35981781107 job 107575123611"
+  "nextAction": "none",
+  "syncRunId": 35981989203,
+  "requestCommit": "87c0d1a1a264049e8a091eddf9a1b88278297971",
+  "lastError": null,
+  "pagesRunId": 35982127945,
+  "result": {
+    "targetDate": "2026-09-24",
+    "day": 26,
+    "issueNumber": 44,
+    "sourceCommit": "384c81dfcf7ab63831d6ff2a1c5488be66576705",
+    "sourcePagesRunId": 35977925568,
+    "sourceSnapshotArtifactId": 10798727485,
+    "snapshotSha256": "44e878c0e1524e90e6b23aa99c98611b322941134a8f381f61174b44d4b36ae6",
+    "sourceBlobSha": "437f490975866aff050695fe9c1e0e37085cc988",
+    "contentCommit": "1a99c07476735b1a3f75f8c9891442dea5411f8c",
+    "pagesRunId": 35982127945,
+    "studyCounts": {
+      "vocabulary": {
+        "new": 12,
+        "review": 8,
+        "total": 20
+      },
+      "grammar": {
+        "new": 3,
+        "review": 5,
+        "total": 8
+      }
+    }
   }
 }
