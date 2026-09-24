@@ -20,7 +20,7 @@ export interface VocabularyItem extends StudyMetadata {
   word: string
   reading: string
   meaning: string
-  jlpt: 'N1' | 'N2' | 'N3' | 'N5/N4'
+  jlpt: 'N1' | 'N2' | 'N3' | 'N5/N4' | 'IT/AI'
   partOfSpeech: string
   example: string
   translation: string
