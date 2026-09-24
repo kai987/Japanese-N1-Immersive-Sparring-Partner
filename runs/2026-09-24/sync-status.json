@@ -3,7 +3,7 @@
   "targetDate": "2026-09-24",
   "day": 26,
   "stage": "browser_failed",
-  "checkedAtJST": "2026-09-24T18:30:38+09:00",
+  "checkedAtJST": "2026-09-24T18:33:02+09:00",
   "n1MainCommit": "1ee34679c2e938ee2fc28bbba278f96143cb9009",
   "sourceRecord": {
     "path": "runs/2026-09-24/source.json",
@@ -40,13 +40,13 @@
     "n1Browser": "failed",
     "n1Deploy": "not_started"
   },
-  "nextAction": "Patch the browser test fixture to derive the expected latest lesson through withItStudy using the same validated snapshot as the UI, preserving the existing visible-card -> review-row assertion. Then resubmit the unchanged source-bound 2026-09-24 request in the same commit so the unique sync workflow owns the retry.",
-  "syncRunId": 35978774334,
+  "nextAction": "Replace the test-only direct JSON module import with readFileSync(new URL(..., import.meta.url)) + JSON.parse, keeping the withItStudy overlay expectation unchanged; then atomically touch the same 2026-09-24 request to let the unique sync workflow own the retry.",
+  "syncRunId": 35981781155,
   "requestCommit": "30bd33fadb31fe4b0336f976b36e9473215305a6",
   "lastError": {
-    "kind": "deterministic_browser_regression",
+    "kind": "deterministic_test_runtime",
     "step": "Browser tests",
-    "message": "tests/app.spec.ts expected the raw daily JSON first vocabulary word 動的 after clicking the first visible vocabulary card, but the UI renders the IT study snapshot overlay whose first visible card is 初稿. 11/12 browser tests passed.",
-    "evidence": "run 35978774334 job 107565420923"
+    "message": "Playwright/Node 24 rejected direct JSON ESM import in tests/app.spec.ts: it-study-snapshot.json needs an import attribute of type json. The earlier visible-card expectation repair is still valid; snapshot fixture loading must use filesystem JSON parsing.",
+    "evidence": "sync run 35981781155 job 107575123994; deploy run 35981781107 job 107575123611"
   }
 }
