@@ -40,6 +40,7 @@ export interface StudySnapshot {
   grammarLessons?: Record<string, { issueNumber: number; grammar: SourceCard[]; reviewGrammarNote?: string }>
 }
 const dayPattern = /^\d{4}-\d{2}-\d{2}$/
+const studyLevels = new Set(['N1','N2','N3','N5/N4','IT/AI'])
 const lexicalKey = (value: string) => value.normalize('NFKC').replace(/\s+/g,'').replace(/する$/,'')
 const same = (a: unknown,b: unknown) => JSON.stringify(a) === JSON.stringify(b)
 export function validateStudySnapshot(snapshot: StudySnapshot) {
@@ -61,7 +62,7 @@ export function validateStudySnapshot(snapshot: StudySnapshot) {
       const frequencies = kind === 'vocabulary' ? snapshot.vocabularyFrequency : snapshot.grammarFrequency
       if (!Array.isArray(cards)) throw new Error(`${date}: missing ${kind}`)
       for (const card of cards) {
-        if (!card.identity || seen.has(card.identity) || !card.exampleJa || !card.meaning || !['N1','N2','N3','N5/N4'].includes(card.level)) throw new Error(`${date}: invalid/duplicate study card`)
+        if (!card.identity || seen.has(card.identity) || !card.exampleJa || !card.meaning || !studyLevels.has(card.level)) throw new Error(`${date}: invalid/duplicate study card`)
         seen.add(card.identity)
         if (introduction[card.identity] !== card.firstIntroducedDate) throw new Error(`${date}: introduction mismatch`)
         if (card.studyKind === 'new') {
@@ -85,7 +86,7 @@ export function validateStudySnapshot(snapshot: StudySnapshot) {
       if(entry.issueNumber!==snapshot.issueNumbers[date] || !Array.isArray(entry.grammar))throw new Error(`${date}: invalid historical grammar issue`)
       const seen=new Set<string>()
       for(const card of entry.grammar){
-        if(!card.identity || seen.has(card.identity) || !card.pattern || !card.exampleJa || !card.meaning || !['N1','N2','N3','N5/N4'].includes(card.level))throw new Error(`${date}: invalid/duplicate historical grammar card`)
+        if(!card.identity || seen.has(card.identity) || !card.pattern || !card.exampleJa || !card.meaning || !studyLevels.has(card.level))throw new Error(`${date}: invalid/duplicate historical grammar card`)
         seen.add(card.identity)
         if(snapshot.firstGrammar[card.identity]!==card.firstIntroducedDate)throw new Error(`${date}: historical introduction mismatch`)
         if(card.studyKind==='new'){
