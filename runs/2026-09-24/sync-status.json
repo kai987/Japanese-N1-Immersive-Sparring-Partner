@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "targetDate": "2026-09-24",
   "day": 26,
-  "stage": "waiting_upstream",
-  "checkedAtJST": "2026-09-24T11:02:57+09:00",
-  "n1MainCommit": "8f1d9eee3b4070df39bbd2227deb086ae19a4184",
+  "stage": "waiting_request",
+  "checkedAtJST": "2026-09-24T18:00:42+09:00",
+  "n1MainCommit": "1ee34679c2e938ee2fc28bbba278f96143cb9009",
   "sourceRecord": {
     "path": "runs/2026-09-24/source.json",
     "sha256": "8d9768b87709964a2285c0125ad64c16116c2ed002c8d36dd2f0a53645858728",
@@ -12,31 +12,33 @@
     "mainSourcePresent": true
   },
   "sharedRequest": {
-    "currentTargetDate": "2026-09-22",
+    "currentTargetDate": "2026-09-23",
     "replaced": false,
-    "reason": "A complete verified 2026-09-24 request cannot be created until the exact upstream publication and snapshot exist."
+    "reason": "Complete 2026-09-24 request is staged; shared slot will be claimed only after a fresh active-run and CAS check."
   },
   "upstream": {
     "repository": "kai987/japan-it-ai-daily",
-    "observedMainCommit": "71841501105c069b0badf8418b2457357946f2f1",
+    "observedMainCommit": "384c81dfcf7ab63831d6ff2a1c5488be66576705",
     "targetDate": "2026-09-24",
-    "stage": "sources_verified",
-    "sourceCommit": "71841501105c069b0badf8418b2457357946f2f1",
-    "activePublisherOwner": "chatgpt-automation",
-    "leaseExpiresAt": "2026-09-24T02:29:03Z",
-    "nextAction": "scan_history_and_author_learning",
-    "targetContentCommitted": false,
-    "verifiedPagesRun": null
+    "stage": "published",
+    "sourceCommit": "384c81dfcf7ab63831d6ff2a1c5488be66576705",
+    "sourcePagesRunId": 35977925568,
+    "sourceSnapshotArtifactId": 10798727485,
+    "snapshotSha256": "44e878c0e1524e90e6b23aa99c98611b322941134a8f381f61174b44d4b36ae6",
+    "totalDays": 44,
+    "issueNumber": 44,
+    "targetContentCommitted": true,
+    "verifiedPagesRun": 35977925568
   },
   "validation": {
-    "sourceRecord": "verified_present",
-    "upstreamExactPublish": "waiting",
-    "request": "not_written",
+    "sourceRecord": "verified_present_and_matches_main_blob",
+    "upstreamExactPublish": "verified",
+    "request": "staged",
     "syncWorkflow": "not_started",
     "n1Build": "not_started",
     "n1Tests": "not_started",
     "n1Browser": "not_started",
     "n1Deploy": "not_started"
   },
-  "nextAction": "Do not parallel-write or cancel the live upstream publisher. On the next recovery/sync check, re-read the exact upstream target publication. Only after its main deploy.yml Build/tests/browser/Deploy/post-deploy verification and same-run snapshot pass, build and save the complete 2026-09-24 request, then claim the shared request slot with the latest SHA/CAS and let sync-n1-daily.yml import, validate, test, commit and dispatch Pages."
+  "nextAction": "Recheck the shared request slot and active sync/Pages runs; if idle, CAS-update .github/n1-sync-request.json with the staged 2026-09-24 request and let sync-n1-daily.yml execute."
 }
