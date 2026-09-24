@@ -30,6 +30,16 @@ test('reference levels are preserved instead of promoting N3 to N1',()=>{
  const snapshot=load(), lesson=withItStudy(raw(),snapshot)
  assert.deepEqual(lesson.grammar.map(x=>x.level),snapshot.lessons['2026-09-18'].grammar.map(x=>x.level))
 })
+test('IT/AI reference levels are preserved while unknown levels remain invalid',()=>{
+ const snapshot=load()
+ snapshot.lessons['2026-09-18'].vocabulary[0].level='IT/AI'
+ assert.doesNotThrow(()=>validateStudySnapshot(snapshot))
+ const lesson=withItStudy(raw(),snapshot)
+ assert.equal(lesson.vocabulary[0].jlpt,'IT/AI')
+ const invalid=load()
+ invalid.lessons['2026-09-18'].vocabulary[0].level='UNKNOWN'
+ assert.throws(()=>validateStudySnapshot(invalid),/invalid\/duplicate study card/)
+})
 
 test('five, six and seven grammar cards are valid without padding to eight',()=>{
  for(const count of [5,6,7]){
