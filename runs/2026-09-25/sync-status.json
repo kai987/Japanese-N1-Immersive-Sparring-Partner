@@ -3,7 +3,7 @@
   "targetDate": "2026-09-25",
   "day": 27,
   "stage": "waiting_upstream",
-  "checkedAtJST": "2026-09-25T11:08:45+09:00",
+  "checkedAtJST": "2026-09-25T11:59:33+09:00",
   "n1MainCommit": "3edae79033885c499b541d535dd0f2997648774b",
   "sourceRecord": {
     "path": "runs/2026-09-25/source.json",
@@ -23,7 +23,7 @@
     "stage": "registered",
     "sourceCommit": "56591391c9e15759a00f27488000ef5657d6c8d3",
     "targetContentCommitted": false,
-    "activeAuthorLease": true,
+    "activeAuthorLease": false,
     "leaseExpiresAt": "2026-09-25T02:48:00.000Z",
     "statusPath": "runs/2026-09-25/status.json"
   },
@@ -39,7 +39,7 @@
     "n1Deploy": "not_started",
     "liveTargetDate": "not_started"
   },
-  "nextAction": "Do not parallel-write while the live 2026-09-25 upstream author lease exists. On recovery, re-read the same upstream status and exact deploy/publisher runs. Once the six target files are published by the request-only upstream publisher and the exact main deploy.yml succeeds with a verified snapshot artifact, build and submit the 2026-09-25 N1 request from that exact source commit and continue through sync plus final N1 Pages verification.",
-  "lastError": null,
+  "nextAction": "At the next authorized upstream author/recovery entrypoint, re-read automation/daily-progress and active publisher runs, acquire the expired publisher lease with claimLease/latest-SHA CAS/token read-back, then resume 2026-09-25 from registered. After request-only publication and exact main deploy.yml plus snapshot verification succeed, continue the preserved 2026-09-25 N1 request through sync-n1-daily.yml and final Pages/live-date verification.",
+  "lastError": "Upstream 2026-09-25 is still only registered with no completed source/history/draft artifacts or Pages run. Its prior author lease expired at 2026-09-25T02:48:00Z; this recovery could not acquire a replacement lease through the current authorized GitHub write channel, so no upstream content mutation was performed.",
   "result": null
 }
