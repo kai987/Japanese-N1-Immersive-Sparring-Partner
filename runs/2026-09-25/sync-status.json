@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "targetDate": "2026-09-25",
   "day": 27,
-  "stage": "request_ready",
-  "checkedAtJST": "2026-09-25T08:49:50.520Z",
-  "n1MainCommit": "3edae79033885c499b541d535dd0f2997648774b",
+  "stage": "published",
+  "checkedAtJST": "2026-09-25T08:52:59.045Z",
+  "n1MainCommit": "538c800cd2250c86ed1e11e0ad8e3f0fa5c47536",
   "sourceRecord": {
     "path": "runs/2026-09-25/source.json",
     "sha256": "c97d7e499b4afcb6ddaabd73e5deec0164ad739e37ac44a7662d89132da65204",
@@ -33,16 +33,47 @@
   "validation": {
     "sourceRecord": "verified_present_and_matches_main_source",
     "upstreamExactPublish": "success",
-    "request": "ready_persisted",
-    "syncWorkflow": "not_started",
-    "n1ContentValidation": "not_started",
-    "n1Tests": "not_started",
-    "n1Build": "not_started",
-    "n1Browser": "not_started",
-    "n1Deploy": "not_started",
-    "liveTargetDate": "not_started"
+    "request": "submitted_and_consumed",
+    "syncWorkflow": "success",
+    "n1ContentValidation": "success",
+    "n1Tests": "success",
+    "n1Build": "success",
+    "n1Browser": "success",
+    "n1Deploy": "success",
+    "liveTargetDate": "success"
   },
-  "nextAction": "CAS-write the complete preserved 2026-09-25 request to .github/n1-sync-request.json if the shared slot remains idle, then let sync-n1-daily.yml validate/import/build/test/browser/deploy.",
+  "nextAction": "None for 2026-09-25. Keep the normal 11:00 sync and once-daily 12:00 recovery contract; do not create an hourly N1 recovery task.",
   "lastError": null,
-  "result": null
+  "result": {
+    "publishedAt": "2026-09-25T08:52:59.045Z",
+    "targetDate": "2026-09-25",
+    "day": 27,
+    "issueNumber": 45,
+    "sourceCommit": "5666e407f43358d4d0bb6f6d70f20b9c89c1f438",
+    "sourcePagesRunId": 36114398173,
+    "sourceSnapshotArtifactId": 10854506053,
+    "snapshotSha256": "c2e06910d5a64a70ca5a6a15d419eb0d54eb8f10379784fff164769936664956",
+    "n1RequestCommit": "cf528a0a6bc05fcb786f24d49c9bf8b77306cf58",
+    "n1ReleaseCommit": "538c800cd2250c86ed1e11e0ad8e3f0fa5c47536",
+    "n1SyncRunId": 36115063473,
+    "n1PagesRunId": 36115182922,
+    "rawC4": {
+      "vocabularyNew": 10,
+      "grammarNew": 4
+    },
+    "study": {
+      "vocabularyNew": 15,
+      "vocabularyReview": 5,
+      "grammarNew": 4,
+      "grammarReview": 4
+    },
+    "checks": {
+      "validateContent": "success",
+      "tests": "success",
+      "build": "success",
+      "browser": "success",
+      "deploy": "success",
+      "liveTargetDate": "success"
+    }
+  }
 }
