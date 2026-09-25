@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "targetDate": "2026-09-25",
+  "day": 27,
+  "stage": "waiting_upstream",
+  "checkedAtJST": "2026-09-25T11:08:45+09:00",
+  "n1MainCommit": "3edae79033885c499b541d535dd0f2997648774b",
+  "sourceRecord": {
+    "path": "runs/2026-09-25/source.json",
+    "sha256": "c97d7e499b4afcb6ddaabd73e5deec0164ad739e37ac44a7662d89132da65204",
+    "bytes": 12389,
+    "mainSourcePresent": true,
+    "mainSourceBlobSha": "5c41366898ed87dfcfd5f08d9b7d22862da5bfa3"
+  },
+  "sharedRequest": {
+    "currentTargetDate": "2026-09-24",
+    "replaceableOnlyAfterUpstreamVerified": true,
+    "reason": "The current slot belongs to an already-published 2026-09-24 request; no 2026-09-25 request is complete yet."
+  },
+  "upstream": {
+    "repository": "kai987/japan-it-ai-daily",
+    "targetDate": "2026-09-25",
+    "stage": "registered",
+    "sourceCommit": "56591391c9e15759a00f27488000ef5657d6c8d3",
+    "targetContentCommitted": false,
+    "activeAuthorLease": true,
+    "leaseExpiresAt": "2026-09-25T02:48:00.000Z",
+    "statusPath": "runs/2026-09-25/status.json"
+  },
+  "validation": {
+    "sourceRecord": "verified_present_and_matches_main_source",
+    "upstreamExactPublish": "waiting",
+    "request": "not_submitted",
+    "syncWorkflow": "not_started",
+    "n1ContentValidation": "not_started",
+    "n1Tests": "not_started",
+    "n1Build": "not_started",
+    "n1Browser": "not_started",
+    "n1Deploy": "not_started",
+    "liveTargetDate": "not_started"
+  },
+  "nextAction": "Do not parallel-write while the live 2026-09-25 upstream author lease exists. On recovery, re-read the same upstream status and exact deploy/publisher runs. Once the six target files are published by the request-only upstream publisher and the exact main deploy.yml succeeds with a verified snapshot artifact, build and submit the 2026-09-25 N1 request from that exact source commit and continue through sync plus final N1 Pages verification.",
+  "lastError": null,
+  "result": null
+}
