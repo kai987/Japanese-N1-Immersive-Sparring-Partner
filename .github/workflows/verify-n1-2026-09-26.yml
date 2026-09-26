@@ -66,14 +66,17 @@ jobs:
           npm run build
           echo 'b95d55e604b21217c693566f1061a99a24b199221bc9026e1e0a8cbb1a90787a  dist/study-index.json' | sha256sum --check
       - name: Export source-only inspection bundle
+        if: always()
         run: |
+          mkdir -p evidence
           git -C n1 archive --format=tar HEAD docs scripts src tests .github n1-source package.json package-lock.json > evidence/n1.tar
           git -C upstream archive --format=tar HEAD docs scripts src tests .github package.json package-lock.json astro.config.mjs > evidence/upstream.tar
           git -C progress archive --format=tar HEAD runs > evidence/progress.tar
           cp upstream/dist/study-index.json evidence/study-index.json
           tar -C upstream/node_modules -cf evidence/yaml.tar yaml
           sha256sum evidence/*.tar evidence/study-index.json > evidence/SHA256SUMS
-      - name: Retain verified sources for exact mapping
+      - name: Retain diagnostic sources without marking failed verification successful
+        if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: n1-source-inspection-2026-09-26
