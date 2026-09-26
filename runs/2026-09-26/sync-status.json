@@ -2,19 +2,14 @@
   "schemaVersion": 1,
   "targetDate": "2026-09-26",
   "day": 28,
-  "stage": "waiting_request",
-  "checkedAtJST": "2026-09-26T17:58:00+09:00",
-  "n1MainCommit": "67c3d9cfb0274672a97aa672ec04a76dd7f00fc9",
+  "stage": "validating",
   "sourceRecord": {
     "path": "runs/2026-09-26/source.json",
-    "progressRecordPresent": true,
-    "mainSourcePresent": true,
     "mainSourcePath": "n1-source/2026-09-26.md",
     "sourceBlobSha": "d9e83fb89626b1fe46dd66d74d65af45d1ff2be5",
     "sha256": "6742b43804b67329988f0868fd02ecd058af823d9a12e543a1c329e7c0d8afe2",
     "bytes": 12756,
-    "generatedAtJST": "2026-09-26T17:21:39.806+09:00",
-    "completeMarkdownRead": true,
+    "completeMarkdownVerified": true,
     "verifySourceRecord": "success",
     "restoreSource": "identical_no_change",
     "outboxMatchesMain": true
@@ -25,9 +20,9 @@
     "blobSha": "453cea911775081cfe11478c848494e7b14f39b4",
     "sha256": "9d0b8a81a37a7da8615896ed64216c2b2a3db78a295aa387f3190ceaa031b262",
     "bytes": 20204,
-    "complete": true,
-    "readBackHashMatches": true,
-    "mainSlotSubmitted": false,
+    "mainRequestCommit": "d3b071dab0700fa6f8d6330e76604f8d23fdd17b",
+    "mainSlotSubmitted": true,
+    "mainReadBackHashMatches": true,
     "rawNewVocabularyFocus": 10,
     "rawNewGrammarFocus": 2,
     "reviewFocusQuestions": 5
@@ -39,6 +34,7 @@
     "runId": 36230953511,
     "buildJobId": 108373884953,
     "deployJobId": 108374231790,
+    "allSourceQualityAndHistoryChecks": "success",
     "build": "success",
     "tests": "success",
     "browser": "success",
@@ -63,24 +59,17 @@
     "leaseReleased": true
   },
   "repairs": [
-    {"repository": "japan-it-ai-daily", "commit": "b19f4ca98743cfba6b0e8381dc655c94cc12d874", "scope": "Exclude spatial and lexical grammar false matches with regression tests; six daily source files unchanged.", "deploy": "success"},
-    {"repository": "Japanese-N1-Immersive-Sparring-Partner", "commit": "67c3d9cfb0274672a97aa672ec04a76dd7f00fc9", "scope": "Retain both vocabulary source context and nuance without changing IDs.", "runId": 36231245343, "build": "success", "tests": "success", "browser": "success", "deploy": "success", "targetPublication": false}
+    {"repository": "japan-it-ai-daily", "commit": "b19f4ca98743cfba6b0e8381dc655c94cc12d874", "scope": "Grammar evidence semantics with regression tests; no raw daily changes.", "deploy": "success"},
+    {"repository": "Japanese-N1-Immersive-Sparring-Partner", "commit": "67c3d9cfb0274672a97aa672ec04a76dd7f00fc9", "scope": "Keep vocabulary context and nuance with stable IDs.", "runId": 36231245343, "build": "success", "tests": "success", "browser": "success", "deploy": "success", "targetPublication": false}
   ],
   "studyCounts": {
     "vocabulary": {"new": 15, "review": 5, "total": 20},
     "grammar": {"new": 2, "review": 6, "total": 8}
   },
-  "validation": {
-    "completeRequest": "success",
-    "rawDailySchema": "success",
-    "snapshot": "success",
-    "sourceMapping": "success",
-    "targetSyncWorkflow": "not_started",
-    "targetN1Deploy": "not_started",
-    "liveTargetDate": "not_started"
-  },
+  "sync": {"runId": 36231388704, "jobId": 108375093965, "workflowPath": ".github/workflows/sync-n1-daily.yml", "status": "in_progress", "upstreamPublicationVerified": true},
+  "targetPublication": {"releaseCommit": null, "deploy": "not_started", "liveTargetDate": "not_started"},
   "lastError": null,
-  "resolvedBlocker": "source_missing: the restored complete original and outbox now agree",
-  "nextAction": "Recheck idle main request slot and live sync/Pages runs; submit this exact prepared request by non-force CAS. Let sync-n1-daily.yml import, validate, test and commit only the target daily JSON plus complete snapshot. Verify the resulting exact content commit's complete Pages and live September 26 before recording published.",
+  "resolvedBlocker": "source_missing",
+  "nextAction": "Observe the existing sync run; do not replace its request or start another writer. After its verified content commit, check that commit's complete deploy-pages.yml and live September 26. Only then mark published. On failure read this exact job log and minimally repair without weakening any gate.",
   "recovery": {"targetDatePreserved": true, "tasksModified": false, "hourlyRecoveryCreated": false}
 }
