@@ -3,29 +3,79 @@
   "targetDate": "2026-09-26",
   "day": 28,
   "stage": "source_missing",
-  "checkedAtJST": "2026-09-26T11:01:22+09:00",
+  "checkedAtJST": "2026-09-26T17:12:41+09:00",
   "n1MainCommit": "538c800cd2250c86ed1e11e0ad8e3f0fa5c47536",
   "sourceRecord": {
     "path": "runs/2026-09-26/source.json",
     "progressRecordPresent": false,
     "mainSourcePresent": false,
-    "mainSourcePath": "n1-source/2026-09-26.md"
+    "mainSourcePath": "n1-source/2026-09-26.md",
+    "mainReadStatus": 404,
+    "outboxReadStatus": 404,
+    "sourceBlobSha": null,
+    "sha256": null
   },
   "sharedRequest": {
     "currentTargetDate": "2026-09-25",
+    "blobSha": "8d2793369fa5ec458dfd90126e8183ffa20da49c",
     "replaced": false,
-    "reason": "2026-09-26 source is absent from both main and progress outbox; do not rebind the shared request or reconstruct content."
+    "reason": "The September 26 original is absent from main and the source outbox. Replaying the September 25 request would not publish September 26."
+  },
+  "n1WorkflowObservation": {
+    "mainQueuedRuns": 0,
+    "mainInProgressRuns": 0,
+    "latestObservedPagesRunId": 36115182922,
+    "latestObservedPagesCommit": "538c800cd2250c86ed1e11e0ad8e3f0fa5c47536",
+    "latestObservedPagesConclusion": "success",
+    "latestObservedRunIsTargetPublication": false
   },
   "upstream": {
     "repository": "kai987/japan-it-ai-daily",
-    "observedMainCommit": "5666e407f43358d4d0bb6f6d70f20b9c89c1f438",
+    "observedMainCommit": "d1263f244fb08fb3e50286fb88f616c1cf378560",
     "targetDate": "2026-09-26",
-    "targetStatusRecordPresent": false,
-    "authorLeaseActiveForTarget": false
+    "targetStatusRecordPresent": true,
+    "publication": {
+      "sourceCommit": "d1263f244fb08fb3e50286fb88f616c1cf378560",
+      "workflowPath": ".github/workflows/deploy.yml",
+      "runId": 36228496329,
+      "runUrl": "https://github.com/kai987/japan-it-ai-daily/actions/runs/36228496329",
+      "buildJobId": 108366987179,
+      "deployJobId": 108367307200,
+      "conclusion": "success",
+      "contentIntegrity": "success",
+      "evidence": "success",
+      "bilingual": "success",
+      "quality": "success",
+      "tests": "success",
+      "build": "success",
+      "browser": "success",
+      "security": "success",
+      "deploy": "success",
+      "postDeployVerification": "success"
+    },
+    "snapshot": {
+      "artifactId": 10902020320,
+      "artifactSha256": "720579b000aa884b4993dc6bb5973d7f34dafca64afb1605fd56950a6d6d051b",
+      "snapshotSha256": "b95d55e604b21217c693566f1061a99a24b199221bc9026e1e0a8cbb1a90787a",
+      "bytes": 1480213,
+      "sourceCommit": "d1263f244fb08fb3e50286fb88f616c1cf378560",
+      "issueNumber": 46,
+      "totalDays": 46,
+      "firstDate": "2026-08-12",
+      "lastDate": "2026-09-26",
+      "grammarLessonsCount": 46,
+      "artifactDigestVerified": true,
+      "targetPresent": true,
+      "internalDateSetsAndIssueSequenceVerified": true,
+      "targetReviewMetadataVerified": true,
+      "vocabulary": {"new": 15, "review": 5, "total": 20},
+      "grammar": {"new": 2, "review": 6, "total": 8},
+      "scope": "Exact successful main artifact downloaded and checksummed. Internal date sets, issue sequence and target review metadata checked. Independent six-file/full-history source review, snapshot rebuild comparison and N1 import remain deferred until the original is restored. These checks do not mark the N1 lesson published."
+    }
   },
   "validation": {
     "sourceRecord": "missing",
-    "sourceRestore": "not_possible",
+    "sourceRestore": "not_possible_without_original",
     "request": "not_written",
     "syncWorkflow": "not_started",
     "n1ContentValidation": "not_started",
@@ -35,9 +85,18 @@
     "n1Deploy": "not_started",
     "liveTargetDate": "not_started"
   },
-  "nextAction": "Re-read n1-source/2026-09-26.md and automation/n1-progress:runs/2026-09-26/source.json. If a complete source record appears, verify date/Day/sha256/full markdown and restore exact bytes before mapping. If both remain absent, keep source_missing and do not generate a replacement.",
+  "nextAction": "Recover the actual complete September 26 N1 original, not a newly generated substitute. Re-read main n1-source/2026-09-26.md and automation/n1-progress:runs/2026-09-26/source.json; verifySourceRecord/restore only when the exact record exists and read back the promoted bytes. Then revalidate the latest covering successful upstream commit, all six source files and full-history rules, artifact/date sets and C-4 mapping; preserve snapshot coverage. Save a complete September 26 request to the progress branch and CAS-update the idle shared slot for sync-n1-daily.yml. Verify its final content commit, full Pages workflow and live target before recording published. Do not repeat the September 25 request or assume another deployment can create a missing original.",
   "lastError": {
     "type": "source_missing",
-    "message": "Neither the main source nor the progress source record exists; no replacement source was generated."
+    "message": "The upstream September 26 report is now published, but both authorized N1 original locations still return 404. No original, daily payload or source hash has been fabricated.",
+    "rootCause": "unknown",
+    "failureRunId": null
+  },
+  "recovery": {
+    "targetDatePreserved": true,
+    "existingDailyNoonRecoveryEnabled": true,
+    "tasksModified": false,
+    "hourlyRecoveryCreated": false,
+    "mainFilesModified": false
   }
 }
