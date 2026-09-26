@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "targetDate": "2026-09-26",
+  "day": 28,
+  "stage": "source_missing",
+  "checkedAtJST": "2026-09-26T11:01:22+09:00",
+  "n1MainCommit": "538c800cd2250c86ed1e11e0ad8e3f0fa5c47536",
+  "sourceRecord": {
+    "path": "runs/2026-09-26/source.json",
+    "progressRecordPresent": false,
+    "mainSourcePresent": false,
+    "mainSourcePath": "n1-source/2026-09-26.md"
+  },
+  "sharedRequest": {
+    "currentTargetDate": "2026-09-25",
+    "replaced": false,
+    "reason": "2026-09-26 source is absent from both main and progress outbox; do not rebind the shared request or reconstruct content."
+  },
+  "upstream": {
+    "repository": "kai987/japan-it-ai-daily",
+    "observedMainCommit": "5666e407f43358d4d0bb6f6d70f20b9c89c1f438",
+    "targetDate": "2026-09-26",
+    "targetStatusRecordPresent": false,
+    "authorLeaseActiveForTarget": false
+  },
+  "validation": {
+    "sourceRecord": "missing",
+    "sourceRestore": "not_possible",
+    "request": "not_written",
+    "syncWorkflow": "not_started",
+    "n1ContentValidation": "not_started",
+    "n1Tests": "not_started",
+    "n1Build": "not_started",
+    "n1Browser": "not_started",
+    "n1Deploy": "not_started",
+    "liveTargetDate": "not_started"
+  },
+  "nextAction": "Re-read n1-source/2026-09-26.md and automation/n1-progress:runs/2026-09-26/source.json. If a complete source record appears, verify date/Day/sha256/full markdown and restore exact bytes before mapping. If both remain absent, keep source_missing and do not generate a replacement.",
+  "lastError": {
+    "type": "source_missing",
+    "message": "Neither the main source nor the progress source record exists; no replacement source was generated."
+  }
+}
