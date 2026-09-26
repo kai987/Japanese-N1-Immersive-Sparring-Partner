@@ -129,7 +129,7 @@ export function withItStudy(lesson: DailyLesson,snapshot: StudySnapshot): DailyL
     const existing = lesson.vocabulary.find(item => item.word === card.term && item.reading === card.reading && item.example === card.exampleJa)
     return {id:existing?.id ?? stableId(lesson.date,'v',card.identity,card.exampleJa),word:card.term!,reading:card.reading!,meaning:card.meaning,
       jlpt:card.level as VocabularyItem['jlpt'],partOfSpeech:card.partOfSpeech ?? '',example:card.exampleJa,translation:card.exampleMeaning ?? '',
-      collocations:card.collocations ?? [],nuance:card.nuance ?? card.note ?? '',...metadata(card)}
+      collocations:card.collocations ?? [],nuance:[...new Set([card.note,card.nuance].filter((text): text is string => Boolean(text?.trim())))].join('\n\n'),...metadata(card)}
   }) ?? lesson.vocabulary.map(card => ({...card,reportFrequency:snapshot.vocabularyFrequency[card.word] ?? snapshot.vocabularyFrequency[lexicalKey(card.word)]}))
   const grammar: GrammarItem[] = source.grammar.map(card => {
     const existing=lesson.grammar.find(item=>grammarIdentity(item.pattern)===card.identity && item.example===card.exampleJa)
