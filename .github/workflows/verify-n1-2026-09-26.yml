@@ -1,0 +1,82 @@
+name: Verify locked N1 sources 2026-09-26
+on:
+  push:
+    branches: [verify/n1-2026-09-26]
+    paths: [.github/workflows/verify-n1-2026-09-26.yml]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: 0badf93603af385919389814bfd108f744aa8074
+          path: n1
+          persist-credentials: false
+      - uses: actions/checkout@v6
+        with:
+          repository: kai987/japan-it-ai-daily
+          ref: d1263f244fb08fb3e50286fb88f616c1cf378560
+          path: upstream
+          persist-credentials: false
+      - uses: actions/checkout@v6
+        with:
+          ref: 3d508f5f39590c4379be81606d1e116847417e58
+          path: progress
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+      - name: Verify complete restored original and outbox
+        run: |
+          mkdir -p evidence
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import assert from 'node:assert/strict';
+          import {execFileSync} from 'node:child_process';
+          import {verifySourceRecord,restoreSource,dateInfo,sha256} from './n1/scripts/n1-automation.mjs';
+          const record=verifySourceRecord(JSON.parse(fs.readFileSync('progress/runs/2026-09-26/source.json','utf8')));
+          assert.equal(record.targetDate,'2026-09-26');
+          assert.equal(record.day,28);
+          assert.equal(record.sha256,'6742b43804b67329988f0868fd02ecd058af823d9a12e543a1c329e7c0d8afe2');
+          const original=fs.readFileSync('n1/n1-source/2026-09-26.md','utf8');
+          assert.equal(original,record.markdown);
+          assert.equal(restoreSource(record,'n1').changed,false);
+          const blob=execFileSync('git',['-C','n1','hash-object','n1-source/2026-09-26.md'],{encoding:'utf8'}).trim();
+          assert.equal(blob,'d9e83fb89626b1fe46dd66d74d65af45d1ff2be5');
+          fs.writeFileSync('evidence/source-verification.json',JSON.stringify({targetDate:record.targetDate,...dateInfo(record.targetDate),sourceBlobSha:blob,sha256:sha256(original),bytes:record.bytes,outboxMatches:true,restoreChanged:false},null,2)+'\n');
+          console.log('Complete original verified; no source or final lesson was written.');
+          NODE
+      - name: Check all upstream historical files and identities
+        working-directory: upstream
+        run: |
+          npm ci --no-audit --no-fund
+          npm run jlpt:check
+          npm run grammar:check
+          npm run study:check
+          npm run content:integrity:check
+      - name: Rebuild exact published snapshot
+        working-directory: upstream
+        env:
+          GITHUB_SHA: d1263f244fb08fb3e50286fb88f616c1cf378560
+        run: |
+          npm run build
+          echo 'b95d55e604b21217c693566f1061a99a24b199221bc9026e1e0a8cbb1a90787a  dist/study-index.json' | sha256sum --check
+      - name: Export source-only inspection bundle
+        run: |
+          git -C n1 archive --format=tar HEAD docs scripts src tests .github n1-source package.json package-lock.json > evidence/n1.tar
+          git -C upstream archive --format=tar HEAD docs scripts src tests .github package.json package-lock.json astro.config.mjs > evidence/upstream.tar
+          git -C progress archive --format=tar HEAD runs > evidence/progress.tar
+          cp upstream/dist/study-index.json evidence/study-index.json
+          tar -C upstream/node_modules -cf evidence/yaml.tar yaml
+          sha256sum evidence/*.tar evidence/study-index.json > evidence/SHA256SUMS
+      - name: Retain verified sources for exact mapping
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n1-source-inspection-2026-09-26
+          path: evidence/
+          if-no-files-found: error
+          retention-days: 3
