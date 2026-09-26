@@ -2,7 +2,12 @@
   "schemaVersion": 1,
   "targetDate": "2026-09-26",
   "day": 28,
-  "stage": "validating",
+  "issueNumber": 46,
+  "stage": "published",
+  "checkedAtJST": "2026-09-26T18:02:23+09:00",
+  "publishedAtJST": "2026-09-26T18:01:32+09:00",
+  "sourceCommit": "b19f4ca98743cfba6b0e8381dc655c94cc12d874",
+  "releaseCommit": "d8c88ae0b7b02141113e96b54c0a18a10db98a4c",
   "sourceRecord": {
     "path": "runs/2026-09-26/source.json",
     "mainSourcePath": "n1-source/2026-09-26.md",
@@ -12,7 +17,8 @@
     "completeMarkdownVerified": true,
     "verifySourceRecord": "success",
     "restoreSource": "identical_no_change",
-    "outboxMatchesMain": true
+    "outboxMatchesMain": true,
+    "unchangedAfterPublication": true
   },
   "request": {
     "path": "runs/2026-09-26/request.json",
@@ -54,22 +60,62 @@
     "fullDateSetsMatch": true,
     "totalDays": 46,
     "grammarLessonsCount": 46,
+    "firstDate": "2026-08-12",
     "lastDate": "2026-09-26",
     "issueNumber": 46,
     "leaseReleased": true
   },
   "repairs": [
     {"repository": "japan-it-ai-daily", "commit": "b19f4ca98743cfba6b0e8381dc655c94cc12d874", "scope": "Grammar evidence semantics with regression tests; no raw daily changes.", "deploy": "success"},
-    {"repository": "Japanese-N1-Immersive-Sparring-Partner", "commit": "67c3d9cfb0274672a97aa672ec04a76dd7f00fc9", "scope": "Keep vocabulary context and nuance with stable IDs.", "runId": 36231245343, "build": "success", "tests": "success", "browser": "success", "deploy": "success", "targetPublication": false}
+    {"repository": "Japanese-N1-Immersive-Sparring-Partner", "commit": "67c3d9cfb0274672a97aa672ec04a76dd7f00fc9", "scope": "Keep vocabulary context and nuance with stable IDs.", "runId": 36231245343, "build": "success", "tests": "success", "browser": "success", "deploy": "success"}
   ],
   "studyCounts": {
     "vocabulary": {"new": 15, "review": 5, "total": 20},
     "grammar": {"new": 2, "review": 6, "total": 8}
   },
-  "sync": {"runId": 36231388704, "jobId": 108375093965, "workflowPath": ".github/workflows/sync-n1-daily.yml", "status": "in_progress", "upstreamPublicationVerified": true},
-  "targetPublication": {"releaseCommit": null, "deploy": "not_started", "liveTargetDate": "not_started"},
+  "sync": {
+    "runId": 36231388704,
+    "jobId": 108375093965,
+    "workflowPath": ".github/workflows/sync-n1-daily.yml",
+    "status": "completed",
+    "conclusion": "success",
+    "upstreamPublicationVerified": true,
+    "snapshotRebuildAndHash": "success",
+    "sourceBlobVerification": "success",
+    "importStudy": "success",
+    "validateContent": "success",
+    "tests": "success",
+    "build": "success",
+    "browser": "success",
+    "fastForwardContentCommit": "success",
+    "pagesDispatch": "success"
+  },
+  "targetPublication": {
+    "releaseCommit": "d8c88ae0b7b02141113e96b54c0a18a10db98a4c",
+    "runId": 36231447460,
+    "workflowPath": ".github/workflows/deploy-pages.yml",
+    "buildJobId": 108375259729,
+    "deployJobId": 108375424112,
+    "pagesArtifactId": 10901928994,
+    "validateContent": "success",
+    "snapshotImport": "success",
+    "tests": "success",
+    "build": "success",
+    "browser": "success",
+    "deploy": "success",
+    "liveTargetDate": "success",
+    "liveEvidence": "Live target verified: 2026-09-26 / クラウドAIエージェントの自律実行と権限管理",
+    "liveVerifiedAt": "2026-09-26T09:01:32.3213763Z",
+    "changedPaths": ["src/data/daily/2026-09-26.json", "src/data/it-study-snapshot.json"],
+    "dailyBlobSha": "15f8f2473f2d55360599070d949dfc11c04ca1b5",
+    "dailySha256": "bfa64f138537b6773e9ae4b940ffda57a909ca450b45104e6845901006c13293",
+    "snapshotBlobSha": "48c963f1b7b879fab51d460674c1f1a777b2581a",
+    "normalizedSnapshotSha256": "cc9ee7d582357479616432d2be5a9a6f0f78638ddd8ac76e36b9c8019958a076",
+    "readBackMatchesExpectedImporterBytes": true,
+    "normalFinalWriter": "sync-n1-daily.yml"
+  },
   "lastError": null,
   "resolvedBlocker": "source_missing",
-  "nextAction": "Observe the existing sync run; do not replace its request or start another writer. After its verified content commit, check that commit's complete deploy-pages.yml and live September 26. Only then mark published. On failure read this exact job log and minimally repair without weakening any gate.",
-  "recovery": {"targetDatePreserved": true, "tasksModified": false, "hourlyRecoveryCreated": false}
+  "nextAction": "none",
+  "recovery": {"targetDatePreserved": true, "tasksModified": false, "hourlyRecoveryCreated": false, "repeatUnchangedPublication": false}
 }
