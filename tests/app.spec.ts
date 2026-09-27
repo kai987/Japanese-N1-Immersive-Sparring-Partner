@@ -142,9 +142,15 @@ test('search and mobile Japanese reading remain usable in dark mode', async ({ p
   const logs: string[] = []; page.on('console', message => { if (['error', 'warning'].includes(message.type())) logs.push(message.text()) })
   await page.goto('/')
   await page.getByRole('textbox', { name: '毎日のN1教材を検索' }).fill('かんかつ')
-  await expect(page.locator('.daily-search-result')).toHaveCount(2)
-  await page.locator('.daily-search-result').first().click()
+  // New daily review questions legitimately add search hits. Select the vocabulary
+  // result by its meaning, not a fixed historical count or the first overall hit.
+  const vocabularyResult = page.locator('.daily-search-result').filter({
+    has: page.locator('.daily-search-label').filter({ hasText: /^語彙 · 管轄$/ }),
+  }).first()
+  await expect(vocabularyResult).toBeVisible()
+  await vocabularyResult.click()
   await expect(page.locator('.section-header h2')).toHaveText('N1 語彙')
+  await expect(page.getByRole('heading', { name: '管轄', exact: true })).toBeVisible()
   await page.getByRole('button', { name: '没入読解', exact: true }).click()
   await page.getByRole('button', { name: '読解テーマを切り替える', exact: true }).click()
   await expect(page.locator('.jp-body').first()).toHaveCSS('color', 'rgb(241, 244, 241)')
