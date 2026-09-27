@@ -3,9 +3,11 @@
   "targetDate": "2026-09-27",
   "day": 29,
   "issueNumber": 47,
-  "stage": "request_ready",
-  "checkedAtJST": "2026-09-27T21:43:30+09:00",
-  "mainHeadSha": "4767205f8aa20df48e3bce1750e8ae304e51089a",
+  "stage": "published",
+  "checkedAtJST": "2026-09-27T21:51:01+09:00",
+  "publishedAtJST": "2026-09-27T21:50:14+09:00",
+  "sourceCommit": "5d0dfd731abd70f26010d109c4ae03b726f8406a",
+  "releaseCommit": "0530d99a750d4c6bfbc6836cf47bd1f1c356d55d",
   "sourceRecord": {
     "path": "runs/2026-09-27/source.json",
     "mainSourcePath": "n1-source/2026-09-27.md",
@@ -15,7 +17,9 @@
     "fullMainOriginalRead": true,
     "dateAndDayVerified": true,
     "syncSourceBlobVerification": "success",
-    "sourceWasNotModified": true
+    "sourceWasNotModified": true,
+    "sourceBlobUnchangedAfterPublication": true,
+    "restore": "not_needed_original_already_restored_before_sync"
   },
   "request": {
     "path": "runs/2026-09-27/request.json",
@@ -24,7 +28,9 @@
     "sha256": "c67afb21f34890163c6c71d38ebe36bc02cefbc6b55f5e07aec95953164a236d",
     "bytes": 20384,
     "originalMainRequestCommit": "1e0c4cd82a1ee65a100d24427f68209d75186a26",
-    "retryMainSlotSubmitted": false,
+    "retryMainRequestCommit": "4c6345fec139334c8bd9c9cf8e3d098a53a8b961",
+    "retryMainSlotSubmitted": true,
+    "mainRequestBlobMatchesCheckpoint": true,
     "retryOfSyncRunId": 36319536916,
     "validationRepairCommit": "4767205f8aa20df48e3bce1750e8ae304e51089a",
     "dailyPayloadAndAllSourcePinsUnchanged": true,
@@ -64,10 +70,11 @@
     "targetReviewMetadataVerified": true,
     "totalDays": 47,
     "grammarLessonsCount": 47,
+    "firstDate": "2026-08-12",
     "lastDate": "2026-09-27",
-    "snapshotRebuild": "success: exact artifact SHA256 matched in sync run 36319536916"
+    "snapshotRebuild": "success: exact artifact SHA256 verified in both initial and successful retry sync workflows"
   },
-  "upstreamStudyCounts": {
+  "studyCounts": {
     "vocabulary": {"new": 12, "review": 8, "total": 20},
     "grammar": {"new": 0, "review": 8, "total": 8}
   },
@@ -93,11 +100,56 @@
     "build": "success",
     "tests": "success",
     "browser": "success",
-    "publication": "not_a_target_content_release: final live-date check failed while target lesson remains unimported"
+    "publication": "This code-only run did not publish the target: its final live-date check failed before the target lesson was imported. The successful retry and final content Pages run below supersede it."
   }],
-  "targetPublication": null,
-  "resolvedBlocker": "source_missing; deterministic browser test fixture repaired without changing authentic content",
+  "sync": {
+    "runId": 36320175600,
+    "jobId": 108622370114,
+    "workflowPath": ".github/workflows/sync-n1-daily.yml",
+    "requestCommit": "4c6345fec139334c8bd9c9cf8e3d098a53a8b961",
+    "status": "completed",
+    "conclusion": "success",
+    "upstreamPublicationVerified": true,
+    "snapshotRebuildAndHash": "success",
+    "sourceBlobVerification": "success",
+    "importStudy": "success",
+    "validateContent": "success",
+    "tests": "success",
+    "build": "success",
+    "browser": "success",
+    "fastForwardContentCommit": "success",
+    "pagesDispatch": "success"
+  },
+  "targetPublication": {
+    "releaseCommit": "0530d99a750d4c6bfbc6836cf47bd1f1c356d55d",
+    "runId": 36320247188,
+    "workflowPath": ".github/workflows/deploy-pages.yml",
+    "buildJobId": 108622577616,
+    "deployJobId": 108622728913,
+    "pagesArtifactId": 10932346893,
+    "status": "completed",
+    "conclusion": "success",
+    "validateContent": "success",
+    "snapshotImport": "success",
+    "tests": "success",
+    "build": "success",
+    "browser": "success",
+    "deploy": "success",
+    "liveTargetDate": "success",
+    "liveEvidence": "Live target verified: 2026-09-27 / AIモデルの使い分けとコスト管理",
+    "liveVerifiedAt": "2026-09-27T12:50:14.7467631Z",
+    "changedPaths": ["src/data/daily/2026-09-27.json", "src/data/it-study-snapshot.json"],
+    "dailyBlobSha": "fc8fac2ee855eadc806368d5d413139cead3f7fc",
+    "dailySha256": "5fabecb634a88b57411f5285db3ad3022b4434a45937c7a3da75a7c2b5de174c",
+    "dailyBytes": 19363,
+    "snapshotBlobSha": "e9cb94a9fa952afc32e70d18c5a4f888565ed921",
+    "normalizedSnapshotSha256": "8105f9a74b28560ad9af3630d903423edd4b23987dc20b023f9e52c076e647c5",
+    "normalizedSnapshotBytes": 1551991,
+    "readBackBlobHashesMatchLocallySerializedImporterBytes": true,
+    "normalFinalWriter": "sync-n1-daily.yml"
+  },
+  "resolvedBlocker": "Original restored; deterministic browser test count repaired; same source-bound request successfully imported and deployed.",
   "lastError": null,
-  "nextAction": "After confirming no active sync or Pages run and unchanged request ownership, CAS-submit the checkpointed retry request. Run sync-n1-daily.yml with the repaired test against the same target data and snapshot. Only after its content-only commit passes complete Pages and live target verification record published. Do not re-run the original pre-repair commit or write final JSON directly.",
-  "recovery": {"targetDatePreserved": true, "tasksModified": false, "hourlyRecoveryCreated": false, "finalDailyJsonWritten": false, "snapshotWrittenToMain": false}
+  "nextAction": "none",
+  "recovery": {"targetDatePreserved": true, "tasksModified": false, "hourlyRecoveryCreated": false, "repeatUnchangedPublication": false}
 }
