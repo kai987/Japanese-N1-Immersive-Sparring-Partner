@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-09-28",
   "day": 30,
-  "stage": "waiting_request",
-  "checkedAtJST": "2026-09-28T23:45:00+09:00",
+  "stage": "published",
+  "checkedAtJST": "2026-09-29T00:01:12+09:00",
   "mainHeadSha": "0530d99a750d4c6bfbc6836cf47bd1f1c356d55d",
   "sourceRecord": {
     "path": "runs/2026-09-28/source.json",
@@ -50,22 +50,63 @@
     "postDeployVerification": "success"
   },
   "studyCounts": {
-    "vocabularyNew": 10,
-    "vocabularyReview": 10,
-    "grammarNew": 0,
-    "grammarReview": 8
+    "vocabulary": {
+      "new": 10,
+      "review": 10,
+      "total": 20
+    },
+    "grammar": {
+      "new": 0,
+      "review": 8,
+      "total": 8
+    }
   },
-  "sync": null,
-  "targetPublication": null,
+  "sync": {
+    "runId": 36440006893,
+    "jobId": 108987735621,
+    "workflowPath": ".github/workflows/sync-n1-daily.yml",
+    "status": "completed",
+    "conclusion": "success",
+    "upstreamPublicationVerified": true,
+    "snapshotRebuildAndHash": "success",
+    "sourceBlobVerification": "success",
+    "importStudy": "success",
+    "validateContent": "success",
+    "tests": "success",
+    "build": "success",
+    "browser": "success",
+    "fastForwardContentCommit": "success",
+    "pagesDispatch": "success"
+  },
+  "targetPublication": {
+    "releaseCommit": "b182b017a176683dca7a4af8fb79e149636fb3f6",
+    "runId": 36440171797,
+    "workflowPath": ".github/workflows/deploy-pages.yml",
+    "buildJobId": 108988314633,
+    "deployJobId": 108988865127,
+    "validateContent": "success",
+    "snapshotImport": "success",
+    "tests": "success",
+    "build": "success",
+    "browser": "success",
+    "deploy": "success",
+    "liveTargetDate": "success",
+    "liveEvidence": "Live target verified: 2026-09-28 / フィジカルAIのフィードバック制御",
+    "dailyBlobSha": "7ad1e69af2bb0d0e7f5eb5dba2d91068d78ce7c5",
+    "snapshotBlobSha": "4ceb306d563b4653141dad579d20373a6064173f",
+    "normalFinalWriter": "sync-n1-daily.yml"
+  },
   "lastError": null,
-  "nextAction": "CAS-submit the complete 2026-09-28 request to the idle shared slot, then let sync-n1-daily.yml import and validate it. Verify the resulting exact content commit Pages deployment and live target date before marking published.",
+  "nextAction": "none",
   "recovery": {
     "targetDatePreserved": true,
     "tasksModified": false,
     "hourlyRecoveryCreated": false,
     "currentRequestNotReplaced": true,
     "finalDailyJsonWritten": false,
-    "snapshotWrittenToMain": false
+    "snapshotWrittenToMain": false,
+    "crossMidnightPreserved": true,
+    "repeatUnchangedPublication": false
   },
   "request": {
     "path": "runs/2026-09-28/request.json",
@@ -77,7 +118,13 @@
     "totalDays": 48,
     "rawNewVocabularyFocus": 10,
     "rawNewGrammarFocus": 0,
-    "reviewFocusQuestions": 5
+    "reviewFocusQuestions": 5,
+    "contentSha": "5756dc8328a8efb866788e233658ef8ddf4bd185",
+    "mainSlotSubmitted": true,
+    "mainRequestCommit": "9dcaa487e81c80b649abfa4820517b8e41d7476a"
   },
-  "resolvedBlocker": "source_missing resolved; exact original and outbox match."
+  "resolvedBlocker": "source_missing",
+  "publishedAtJST": "2026-09-29T00:01:12+09:00",
+  "sourceCommit": "c644479a1f01f91b9468b2e676b500f2128e4300",
+  "releaseCommit": "b182b017a176683dca7a4af8fb79e149636fb3f6"
 }
