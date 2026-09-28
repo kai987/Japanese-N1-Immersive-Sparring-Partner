@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "targetDate": "2026-09-28",
+  "day": 30,
+  "stage": "waiting_source",
+  "checkedAtJST": "2026-09-28T10:57:55+09:00",
+  "mainHeadSha": "0530d99a750d4c6bfbc6836cf47bd1f1c356d55d",
+  "sourceRecord": {
+    "path": "runs/2026-09-28/source.json",
+    "mainSourcePath": "n1-source/2026-09-28.md",
+    "mainSourceExists": false,
+    "progressSourceExists": false,
+    "mainSourceReadStatus": 404,
+    "progressSourceReadStatus": 404,
+    "completeMarkdownVerified": false,
+    "sourceBlobSha": null,
+    "sha256": null,
+    "verification": "Both exact target paths were freshly read and returned 404; the target progress directory itself is absent. No failed or truncated read was treated as proof of absence.",
+    "restore": "not_possible_without_original_record"
+  },
+  "requestSlot": {
+    "path": ".github/n1-sync-request.json",
+    "blobSha": "2639669d84efa37b4f492e3787f5e531942ebf52",
+    "targetDate": "2026-09-27",
+    "sourceCommit": "5d0dfd731abd70f26010d109c4ae03b726f8406a",
+    "occupiedByOtherDate": true,
+    "activeSyncOrPagesRun": false,
+    "unchanged": true,
+    "inspectionScope": "No queued or in-progress main workflow runs; previous published request left unchanged."
+  },
+  "upstream": {
+    "repository": "kai987/japan-it-ai-daily",
+    "targetDate": "2026-09-28",
+    "stage": "waiting_publication",
+    "currentMain": "5d0dfd731abd70f26010d109c4ae03b726f8406a",
+    "latestVerifiedDeployRunId": 36317530414,
+    "latestPublishedDate": "2026-09-27",
+    "latestIssueNumber": 47,
+    "targetDailySourcesPublished": false,
+    "targetDailySourceReadStatus": {
+      "daily": 404,
+      "dailyJa": 404,
+      "japanese": 404,
+      "japaneseJa": 404
+    },
+    "targetIssueNumber": null,
+    "targetTotalDays": null,
+    "targetSnapshotSha256": null
+  },
+  "studyCounts": null,
+  "sync": null,
+  "targetPublication": null,
+  "lastError": "source_missing",
+  "nextAction": "Recover or author the authentic complete 2026-09-28 Day 30 original through the existing 09:00 authoring/recovery process. Verify the source record and restore exact bytes to main if available. Then wait for an exact successful upstream 2026-09-28 main deploy and verified snapshot before preparing the request. Do not reconstruct from memory, reuse 2026-09-27, write final daily JSON directly, or replace the current request until a complete 2026-09-28 request is ready and the slot is idle.",
+  "recovery": {
+    "targetDatePreserved": true,
+    "tasksModified": false,
+    "hourlyRecoveryCreated": false,
+    "currentRequestNotReplaced": true,
+    "finalDailyJsonWritten": false,
+    "snapshotWrittenToMain": false
+  }
+}
