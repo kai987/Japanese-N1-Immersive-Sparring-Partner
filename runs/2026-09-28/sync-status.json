@@ -3,7 +3,7 @@
   "targetDate": "2026-09-28",
   "day": 30,
   "stage": "waiting_source",
-  "checkedAtJST": "2026-09-28T10:57:55+09:00",
+  "checkedAtJST": "2026-09-28T13:43:46+09:00",
   "mainHeadSha": "0530d99a750d4c6bfbc6836cf47bd1f1c356d55d",
   "sourceRecord": {
     "path": "runs/2026-09-28/source.json",
@@ -15,7 +15,7 @@
     "completeMarkdownVerified": false,
     "sourceBlobSha": null,
     "sha256": null,
-    "verification": "Both exact target paths were freshly read and returned 404; the target progress directory itself is absent. No failed or truncated read was treated as proof of absence.",
+    "verification": "Both exact target paths were freshly read and returned 404. The complete target progress directory contains only sync-status.json; no verified original/outbox is available.",
     "restore": "not_possible_without_original_record"
   },
   "requestSlot": {
@@ -26,32 +26,36 @@
     "occupiedByOtherDate": true,
     "activeSyncOrPagesRun": false,
     "unchanged": true,
-    "inspectionScope": "No queued or in-progress main workflow runs; previous published request left unchanged."
+    "inspectionScope": "No queued or in-progress N1 sync/Pages run. Previous published 2026-09-27 request remains untouched because no complete 2026-09-28 source-bound request can be built."
   },
   "upstream": {
     "repository": "kai987/japan-it-ai-daily",
     "targetDate": "2026-09-28",
-    "stage": "waiting_publication",
-    "currentMain": "5d0dfd731abd70f26010d109c4ae03b726f8406a",
-    "latestVerifiedDeployRunId": 36317530414,
-    "latestPublishedDate": "2026-09-27",
-    "latestIssueNumber": 47,
-    "targetDailySourcesPublished": false,
-    "targetDailySourceReadStatus": {
-      "daily": 404,
-      "dailyJa": 404,
-      "japanese": 404,
-      "japaneseJa": 404
-    },
-    "targetIssueNumber": null,
-    "targetTotalDays": null,
-    "targetSnapshotSha256": null
+    "stage": "published",
+    "releaseCommit": "c644479a1f01f91b9468b2e676b500f2128e4300",
+    "deployRunId": 36378567982,
+    "publisherRunId": 36378385985,
+    "snapshotArtifactId": 10951752244,
+    "snapshotSha256": "c1ab3997481d44586d16ff484d399c6b2b48ef2f4b82a5c8854d31a16922d6ee",
+    "snapshotSourceCommit": "c644479a1f01f91b9468b2e676b500f2128e4300",
+    "targetIssueNumber": 48,
+    "targetTotalDays": 48,
+    "snapshotLastDate": "2026-09-28",
+    "grammarLessons": 48,
+    "build": "success",
+    "pages": "success",
+    "postDeployVerification": "success"
   },
-  "studyCounts": null,
+  "studyCounts": {
+    "vocabularyNew": 10,
+    "vocabularyReview": 10,
+    "grammarNew": 0,
+    "grammarReview": 8
+  },
   "sync": null,
   "targetPublication": null,
   "lastError": "source_missing",
-  "nextAction": "Recover or author the authentic complete 2026-09-28 Day 30 original through the existing 09:00 authoring/recovery process. Verify the source record and restore exact bytes to main if available. Then wait for an exact successful upstream 2026-09-28 main deploy and verified snapshot before preparing the request. Do not reconstruct from memory, reuse 2026-09-27, write final daily JSON directly, or replace the current request until a complete 2026-09-28 request is ready and the slot is idle.",
+  "nextAction": "Recover the authentic complete 2026-09-28 Day 30 original from the existing 09:00 source process if a verified outbox becomes available, then promote exact bytes to n1-source and prepare a source-bound request using upstream release c644479a1f01f91b9468b2e676b500f2128e4300 and snapshot SHA-256 c1ab3997481d44586d16ff484d399c6b2b48ef2f4b82a5c8854d31a16922d6ee. Do not reconstruct from memory, yesterday, or templates, and do not replace the current request before the complete target request is ready.",
   "recovery": {
     "targetDatePreserved": true,
     "tasksModified": false,
