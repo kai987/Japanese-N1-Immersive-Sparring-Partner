@@ -2,21 +2,24 @@
   "schemaVersion": 1,
   "targetDate": "2026-09-28",
   "day": 30,
-  "stage": "waiting_source",
-  "checkedAtJST": "2026-09-28T13:43:46+09:00",
+  "stage": "waiting_request",
+  "checkedAtJST": "2026-09-28T23:45:00+09:00",
   "mainHeadSha": "0530d99a750d4c6bfbc6836cf47bd1f1c356d55d",
   "sourceRecord": {
     "path": "runs/2026-09-28/source.json",
     "mainSourcePath": "n1-source/2026-09-28.md",
-    "mainSourceExists": false,
-    "progressSourceExists": false,
+    "mainSourceExists": true,
+    "progressSourceExists": true,
     "mainSourceReadStatus": 404,
     "progressSourceReadStatus": 404,
-    "completeMarkdownVerified": false,
-    "sourceBlobSha": null,
-    "sha256": null,
+    "completeMarkdownVerified": true,
+    "sourceBlobSha": "2c2e5a6a3efee492eb72d729866fadaaf5a7a280",
+    "sha256": "d59889ee32475e4f6f065dbffc3e9205ea0da0bda750691672063b9f63ab6007",
     "verification": "Both exact target paths were freshly read and returned 404. The complete target progress directory contains only sync-status.json; no verified original/outbox is available.",
-    "restore": "not_possible_without_original_record"
+    "restore": "not_possible_without_original_record",
+    "bytes": 13615,
+    "verifySourceRecord": "success",
+    "outboxMatchesMain": true
   },
   "requestSlot": {
     "path": ".github/n1-sync-request.json",
@@ -54,8 +57,8 @@
   },
   "sync": null,
   "targetPublication": null,
-  "lastError": "source_missing",
-  "nextAction": "Recover the authentic complete 2026-09-28 Day 30 original from the existing 09:00 source process if a verified outbox becomes available, then promote exact bytes to n1-source and prepare a source-bound request using upstream release c644479a1f01f91b9468b2e676b500f2128e4300 and snapshot SHA-256 c1ab3997481d44586d16ff484d399c6b2b48ef2f4b82a5c8854d31a16922d6ee. Do not reconstruct from memory, yesterday, or templates, and do not replace the current request before the complete target request is ready.",
+  "lastError": null,
+  "nextAction": "CAS-submit the complete 2026-09-28 request to the idle shared slot, then let sync-n1-daily.yml import and validate it. Verify the resulting exact content commit Pages deployment and live target date before marking published.",
   "recovery": {
     "targetDatePreserved": true,
     "tasksModified": false,
@@ -63,5 +66,18 @@
     "currentRequestNotReplaced": true,
     "finalDailyJsonWritten": false,
     "snapshotWrittenToMain": false
-  }
+  },
+  "request": {
+    "path": "runs/2026-09-28/request.json",
+    "prepared": true,
+    "targetDate": "2026-09-28",
+    "sourceCommit": "c644479a1f01f91b9468b2e676b500f2128e4300",
+    "snapshotSha256": "c1ab3997481d44586d16ff484d399c6b2b48ef2f4b82a5c8854d31a16922d6ee",
+    "issueNumber": 48,
+    "totalDays": 48,
+    "rawNewVocabularyFocus": 10,
+    "rawNewGrammarFocus": 0,
+    "reviewFocusQuestions": 5
+  },
+  "resolvedBlocker": "source_missing resolved; exact original and outbox match."
 }
