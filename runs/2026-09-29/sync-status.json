@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-09-29",
   "day": 31,
-  "stage": "waiting_upstream",
-  "checkedAtJST": "2026-09-29T10:59:59+09:00",
+  "stage": "request_ready",
+  "checkedAtJST": "2026-09-29T17:31:05+09:00",
   "mainHeadSha": "5cef80afd4719f1d4c1183f340b2006b73213432",
   "sourceRecord": {
     "path": "runs/2026-09-29/source.json",
@@ -29,38 +29,29 @@
   "upstream": {
     "repository": "kai987/japan-it-ai-daily",
     "targetDate": "2026-09-29",
-    "observedMainHeadSha": "cad1a3abce2c8fed92578ea5abeb46b70300b3cc",
-    "latestPublishedDailyDate": "2026-09-28",
-    "targetPublicationFilesPresent": 0,
-    "requiredPublicationFiles": 6,
-    "progressStatusPresent": false,
-    "draftBranchPresent": false,
-    "activePublisherOrDeployRun": false,
-    "lease": {
-      "schemaVersion": 2,
-      "owner": "daily-author-2026-09-28",
-      "targetDate": "2026-09-28",
-      "released": true,
-      "releasedAt": "2026-09-28T04:35:47.000Z"
-    },
-    "stage": "waiting_upstream",
-    "releaseCommit": null,
-    "deployRunId": null,
-    "snapshotArtifactId": null,
-    "snapshotSha256": null,
-    "targetIssueNumber": null,
-    "targetTotalDays": null
+    "stage": "published",
+    "releaseCommit": "730b21196e8f8070a2b3f14ed20c1799dbc2abb2",
+    "deployRunId": 36542511270,
+    "snapshotArtifactId": 11021340094,
+    "snapshotSha256": "27bd44ac7f21f706033302d3a84172af835a07acc60a1d4e7295011420dc9bed",
+    "targetIssueNumber": 49,
+    "targetTotalDays": 49,
+    "snapshotLastDate": "2026-09-29",
+    "grammarLessons": 49,
+    "build": "success",
+    "pages": "success",
+    "postDeployVerification": "success"
   },
   "studyCounts": {
     "vocabulary": {
-      "new": null,
-      "review": null,
-      "total": null
+      "new": 10,
+      "review": 10,
+      "total": 20
     },
     "grammar": {
-      "new": null,
-      "review": null,
-      "total": null
+      "new": 0,
+      "review": 6,
+      "total": 6
     }
   },
   "sync": {
@@ -76,11 +67,8 @@
     "deploy": null,
     "liveTargetDate": null
   },
-  "lastError": {
-    "code": "waiting_upstream",
-    "message": "The upstream 2026-09-29 six-file publication is absent from main, no 2026-09-29 upstream progress/draft exists, and there is no exact successful main deploy/snapshot to bind. N1 daily JSON must not be synthesized from the 09:00 source or yesterday."
-  },
-  "nextAction": "At the next authorized recovery, re-read the upstream 2026-09-29 publication and exact successful deploy.yml run. Only after the same-date sourceCommit-bound study snapshot is verified, build and persist the complete N1 request, CAS-write the shared request slot, run sync-n1-daily.yml, then require exact N1 Pages success plus live target-date verification.",
+  "lastError": null,
+  "nextAction": "CAS-write the complete source-bound 2026-09-29 request to .github/n1-sync-request.json only if the slot and active sync/Pages state remain conflict-free; then verify the unique sync run and final Pages/live target date.",
   "recovery": {
     "targetDatePreserved": true,
     "tasksModified": false,
@@ -90,5 +78,13 @@
     "snapshotWrittenToMain": false,
     "sourceRegenerated": false,
     "upstreamMainModified": false
+  },
+  "requestDraft": {
+    "path": "runs/2026-09-29/request.json",
+    "sourceCommit": "730b21196e8f8070a2b3f14ed20c1799dbc2abb2",
+    "sourceBlobSha": "414ade00620816f453827c29d701866dc8b22e73",
+    "snapshotSha256": "27bd44ac7f21f706033302d3a84172af835a07acc60a1d4e7295011420dc9bed",
+    "issueNumber": 49,
+    "totalDays": 49
   }
 }
