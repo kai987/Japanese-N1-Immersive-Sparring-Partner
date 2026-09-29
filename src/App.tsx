@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useMemo, useState, type ReactNode } from 'react'
+import { Fragment, lazy, Suspense, useEffect, useMemo, useState, type ReactNode } from 'react'
 import { DailySearch } from './components/DailySearch'
 import { DateDropdown } from './components/DateDropdown'
 import { getLessonByDate, historyItems, lesson as latestLesson, reviewFocusByDate } from './data/history'
@@ -10,6 +10,8 @@ import './history.css'
 import './study-reference.css'
 import { StudyReference, ReviewEvidence } from './components/StudyReference'
 
+const LiveReactions = lazy(() => import('./components/LiveReactions'))
+
 const navigation: { id: SectionId; label: string; short: string }[] = [
   { id: 'today', label: '今日の学習', short: '今日' },
   { id: 'immersion', label: '没入読解', short: '没入' },
@@ -17,12 +19,14 @@ const navigation: { id: SectionId; label: string; short: string }[] = [
   { id: 'grammar', label: 'N1 文法', short: '文法' },
   { id: 'reading', label: '読解練習', short: '読解' },
   { id: 'review', label: '誤答復習', short: '復習' },
+  { id: 'live-reactions', label: '直播条反', short: '条反' },
   { id: 'history', label: '学習履歴', short: '履歴' },
 ]
 
 function Icon({ name, size = 20 }: { name: string; size?: number }) {
   const paths: Record<string, ReactNode> = {
     book: <><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M20 5.5A2.5 2.5 0 0 0 17.5 3H13v16h4.5a2.5 2.5 0 0 1 2.5 2.5z"/></>,
+    live: <><rect x="3" y="4" width="18" height="13" rx="2"/><path d="m10 8 5 3-5 3V8ZM8 21h8M12 17v4"/></>,
     sun: <><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></>,
     moon: <path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/>,
     check: <path d="m5 12 4 4L19 6"/>,
@@ -82,7 +86,7 @@ function SectionHeader({ eyebrow, title, description }: { eyebrow: string; title
 }
 
 export default function App() {
-  const [active, setActive] = useState<SectionId>('today')
+  const [active, setActive] = useState<SectionId>(() => window.location.hash === '#live-reactions' ? 'live-reactions' : 'today')
   const [selectedDate, setSelectedDate] = useState(latestLesson.date)
   const [readingMode, setReadingMode] = useState<ReadingMode>('japanese')
   const [mobileNavOpen, setMobileNavOpen] = useState(false)
@@ -91,6 +95,12 @@ export default function App() {
   const [completedLessons, setCompletedLessons, completedStorage] = useLocalStorage<Record<string, boolean>>('n1-completed-lessons', {}, decodeCompleted)
   const storageStates = [themeStorage, progressStorage, completedStorage]
   const [today, setToday] = useState(tokyoDate)
+  useEffect(() => {
+    const url = new URL(window.location.href)
+    if (active === 'live-reactions') url.hash = 'live-reactions'
+    else if (url.hash === '#live-reactions') url.hash = ''
+    if (url.href !== window.location.href) window.history.replaceState(window.history.state, '', url)
+  }, [active])
   useEffect(() => {
     const refresh = () => setToday(tokyoDate())
     const timer = window.setInterval(refresh, 60_000)
@@ -179,8 +189,8 @@ export default function App() {
 
         <nav className="side-nav" aria-label="メインナビゲーション">
           {navigation.map((item) => (
-            <button key={item.id} className={active === item.id ? 'nav-item active' : 'nav-item'} onClick={() => go(item.id)}>
-              <span className="nav-icon"><Icon name={item.id === 'today' ? 'spark' : item.id === 'history' ? 'history' : item.id === 'reading' ? 'pen' : item.id === 'review' ? 'target' : 'book'} size={18} /></span>
+            <button key={item.id} className={active === item.id ? 'nav-item active' : 'nav-item'} aria-current={active === item.id ? 'page' : undefined} onClick={() => go(item.id)}>
+              <span className="nav-icon"><Icon name={item.id === 'live-reactions' ? 'live' : item.id === 'today' ? 'spark' : item.id === 'history' ? 'history' : item.id === 'reading' ? 'pen' : item.id === 'review' ? 'target' : 'book'} size={18} /></span>
               <span>{item.label}</span>
             </button>
           ))}
@@ -200,10 +210,12 @@ export default function App() {
       <main className="main">
         <header className="topbar">
           <button className="mobile-menu" onClick={() => setMobileNavOpen(true)} aria-label="ナビゲーションを開く"><Icon name="menu" /></button>
-          <DateDropdown date={lesson.date} day={lesson.day} activeSection={active} onOpen={openLesson} />
-          <DailySearch onOpen={openLesson} />
+          {active === 'live-reactions' ? <div className="live-topbar-label"><strong>直播条反</strong><small>独立知识库 · 日中对照</small></div> : <>
+            <DateDropdown date={lesson.date} day={lesson.day} activeSection={active} onOpen={openLesson} />
+            <DailySearch onOpen={openLesson} />
+          </>}
           <div className="topbar-actions">
-            <div className="quiet-stat"><Icon name="clock" size={17} /><span>約 {lesson.estimatedMinutes} 分</span></div>
+            <div className="quiet-stat"><Icon name={active === 'live-reactions' ? 'book' : 'clock'} size={17} /><span>{active === 'live-reactions' ? '直播笔记' : `約 ${lesson.estimatedMinutes} 分`}</span></div>
             <button className="icon-button" onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')} aria-label="読解テーマを切り替える"><Icon name={theme === 'light' ? 'moon' : 'sun'} size={18} /></button>
           </div>
         </header>
@@ -216,6 +228,7 @@ export default function App() {
             <p>保存データの一部を読み込めなかったため、その部分を初期状態に戻しました。読み込めた学習記録は保持しています。</p>
             <button className="text-btn" onClick={() => storageStates.forEach(state => state.dismiss())}>閉じる</button>
           </div> : null}
+          {active === 'live-reactions' && <Suspense fallback={<p role="status">正在加载直播笔记…</p>}><LiveReactions /></Suspense>}
           {active === 'today' && (
             <div className="page-enter">
               {!isLatest ? (

@@ -1,4 +1,4 @@
-export type SectionId = 'today' | 'immersion' | 'vocabulary' | 'grammar' | 'reading' | 'review' | 'history'
+export type SectionId = 'today' | 'immersion' | 'vocabulary' | 'grammar' | 'reading' | 'review' | 'live-reactions' | 'history'
 export type ReadingMode = 'japanese' | 'bilingual' | 'analysis'
 export type LearningStatus = 'new' | 'review' | 'mastered'
 
