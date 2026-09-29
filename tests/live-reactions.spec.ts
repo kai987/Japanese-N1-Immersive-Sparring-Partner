@@ -73,7 +73,13 @@ test('mobile sidebar, dark theme, readable cards and no horizontal overflow', as
   await page.getByRole('button', { name: 'ナビゲーションを開く', exact: true }).click()
   await page.getByRole('button', { name: '表示テーマを切り替える', exact: true }).click()
   await expect(page.locator('.app')).toHaveAttribute('data-theme', 'dark')
-  await page.getByRole('button', { name: 'ナビゲーションを閉じる', exact: true }).click()
+  // The drawer covers the center of the backdrop on a narrow screen.
+  // Click its actually exposed right edge, without bypassing hit testing.
+  const backdrop = page.getByRole('button', { name: 'ナビゲーションを閉じる', exact: true })
+  const bounds = await backdrop.boundingBox()
+  if (!bounds) throw new Error('The mobile drawer backdrop is not visible')
+  await backdrop.click({ position: { x: bounds.width - 12, y: 12 } })
+  await expect(page.locator('.mobile-overlay')).toHaveCount(0)
   await page.getByLabel('选择知识组').selectOption('live-2026-09-28-ki')
   await page.locator('[data-live-group]').scrollIntoViewIfNeeded()
   await page.screenshot({ path: `${evidence}/mobile-dark.png` })
