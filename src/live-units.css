@@ -1,0 +1,24 @@
+.live-unit-picker { display: grid; gap: 9px; margin: 24px 0; }
+.live-unit-picker > span { color: var(--text-soft); font-size: 12px; font-weight: 700; }
+.live-unit-picker select { width: 100%; min-width: 0; min-height: 46px; padding: 11px 12px; border: 1px solid var(--border-strong); border-radius: 9px; background: var(--surface); color: var(--text); font: inherit; font-size: 16px; }
+.live-unit-picker select:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.live-unit-intro { border-left: 3px solid var(--accent); padding-left: 18px; }
+.live-unit-intro h2 { font-size: clamp(19px, 2.7vw, 25px); margin: 8px 0; line-height: 1.55; overflow-wrap: anywhere; }
+.live-unit-intro p { color: var(--text-soft); font-size: 13px; line-height: 1.9; margin: 10px 0; }
+.live-unit-count { color: var(--accent); font-size: 12px; font-weight: 700; }
+.live-categories { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+.live-categories button { border: 1px solid var(--border-strong); background: var(--surface); color: var(--text-soft); padding: 9px 12px; min-height: 42px; border-radius: 9px; font-size: 13px; cursor: pointer; }
+.live-categories button small { margin-left: 5px; font-variant-numeric: tabular-nums; }
+.live-categories button[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); font-weight: 700; }
+.live-category-caption { display: inline-block; color: var(--accent); font-size: 11px; margin-top: 8px; }
+.live-source-quote { margin: 20px 24px 0; padding: 13px 16px; border-left: 2px solid var(--accent-2); background: var(--surface-2); border-radius: 0 8px 8px 0; overflow-wrap: anywhere; }
+.live-source-quote > div { color: var(--accent-2); font-size: 11px; font-weight: 700; }
+.live-source-quote p { font-size: 16px; line-height: 1.9; margin: 8px 0 0; }
+.live-source-quote p[lang="zh-CN"] { font-size: 13px; color: var(--text-soft); }
+@media (max-width: 640px) {
+  .live-unit-picker { margin: 20px 0; }
+  .live-unit-intro { padding-left: 12px; }
+  .live-source-quote { margin: 18px 16px 0; padding: 12px; }
+  .live-categories { gap: 6px; }
+  .live-categories button { padding: 9px 10px; font-size: 12px; }
+}

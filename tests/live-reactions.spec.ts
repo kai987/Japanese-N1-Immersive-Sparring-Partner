@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test'
 import { mkdir } from 'node:fs/promises'
 
-// Vite preview serves dist at /; production uses relative asset URLs for Pages.
-const base = '/'
+// Vite preview serves dist at /; pin the legacy unit for these regression checks.
+const base = '/?live-unit=2026-09-28'
 const storageKey = 'n1-live-reactions-progress-v1'
 const evidence = '/tmp/n1-improvements-playwright/live-notes'
 
