@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "targetDate": "2026-09-29",
+  "day": 31,
+  "stage": "waiting_upstream",
+  "checkedAtJST": "2026-09-29T10:59:59+09:00",
+  "mainHeadSha": "5cef80afd4719f1d4c1183f340b2006b73213432",
+  "sourceRecord": {
+    "path": "runs/2026-09-29/source.json",
+    "mainSourcePath": "n1-source/2026-09-29.md",
+    "mainSourceExists": true,
+    "progressSourceExists": true,
+    "completeMarkdownVerified": true,
+    "sourceBlobSha": "414ade00620816f453827c29d701866dc8b22e73",
+    "sha256": "443d77cab1045eb0f59d1eb2fa1dc5bef407e937c633f1cdc09d196aff09c2e0",
+    "bytes": 13449,
+    "verifySourceRecord": "success",
+    "outboxMatchesMain": true
+  },
+  "requestSlot": {
+    "path": ".github/n1-sync-request.json",
+    "blobSha": "5756dc8328a8efb866788e233658ef8ddf4bd185",
+    "targetDate": "2026-09-28",
+    "sourceCommit": "c644479a1f01f91b9468b2e676b500f2128e4300",
+    "activeSyncOrPagesRun": false,
+    "unchanged": true,
+    "reason": "No complete 2026-09-29 source-bound request exists yet; the previous completed request is not rebound or replaced."
+  },
+  "upstream": {
+    "repository": "kai987/japan-it-ai-daily",
+    "targetDate": "2026-09-29",
+    "observedMainHeadSha": "cad1a3abce2c8fed92578ea5abeb46b70300b3cc",
+    "latestPublishedDailyDate": "2026-09-28",
+    "targetPublicationFilesPresent": 0,
+    "requiredPublicationFiles": 6,
+    "progressStatusPresent": false,
+    "draftBranchPresent": false,
+    "activePublisherOrDeployRun": false,
+    "lease": {
+      "schemaVersion": 2,
+      "owner": "daily-author-2026-09-28",
+      "targetDate": "2026-09-28",
+      "released": true,
+      "releasedAt": "2026-09-28T04:35:47.000Z"
+    },
+    "stage": "waiting_upstream",
+    "releaseCommit": null,
+    "deployRunId": null,
+    "snapshotArtifactId": null,
+    "snapshotSha256": null,
+    "targetIssueNumber": null,
+    "targetTotalDays": null
+  },
+  "studyCounts": {
+    "vocabulary": {
+      "new": null,
+      "review": null,
+      "total": null
+    },
+    "grammar": {
+      "new": null,
+      "review": null,
+      "total": null
+    }
+  },
+  "sync": {
+    "runId": null,
+    "workflowPath": ".github/workflows/sync-n1-daily.yml",
+    "status": "not_started",
+    "conclusion": null
+  },
+  "targetPublication": {
+    "releaseCommit": null,
+    "runId": null,
+    "workflowPath": ".github/workflows/deploy-pages.yml",
+    "deploy": null,
+    "liveTargetDate": null
+  },
+  "lastError": {
+    "code": "waiting_upstream",
+    "message": "The upstream 2026-09-29 six-file publication is absent from main, no 2026-09-29 upstream progress/draft exists, and there is no exact successful main deploy/snapshot to bind. N1 daily JSON must not be synthesized from the 09:00 source or yesterday."
+  },
+  "nextAction": "At the next authorized recovery, re-read the upstream 2026-09-29 publication and exact successful deploy.yml run. Only after the same-date sourceCommit-bound study snapshot is verified, build and persist the complete N1 request, CAS-write the shared request slot, run sync-n1-daily.yml, then require exact N1 Pages success plus live target-date verification.",
+  "recovery": {
+    "targetDatePreserved": true,
+    "tasksModified": false,
+    "hourlyRecoveryCreated": false,
+    "currentRequestNotReplaced": true,
+    "finalDailyJsonWritten": false,
+    "snapshotWrittenToMain": false,
+    "sourceRegenerated": false,
+    "upstreamMainModified": false
+  }
+}
