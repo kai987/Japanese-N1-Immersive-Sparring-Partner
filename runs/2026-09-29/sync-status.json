@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-09-29",
   "day": 31,
-  "stage": "validating",
-  "checkedAtJST": "2026-09-29T17:35:12+09:00",
+  "stage": "published",
+  "checkedAtJST": "2026-09-29T18:00:10+09:00",
   "mainHeadSha": "5cef80afd4719f1d4c1183f340b2006b73213432",
   "sourceRecord": {
     "path": "runs/2026-09-29/source.json",
@@ -57,25 +57,29 @@
   "sync": {
     "runId": 36543638283,
     "workflowPath": ".github/workflows/sync-n1-daily.yml",
-    "status": "in_progress",
-    "conclusion": null
+    "status": "completed",
+    "conclusion": "success",
+    "requestCommit": "7b997f81fdf4d006b6155210e38dd72ec47f2039",
+    "releaseCommit": "8d0b42589ce4bdc40612bd0dfbdcf700adbcd875"
   },
   "targetPublication": {
-    "releaseCommit": null,
-    "runId": null,
+    "releaseCommit": "8d0b42589ce4bdc40612bd0dfbdcf700adbcd875",
+    "runId": 36543795539,
     "workflowPath": ".github/workflows/deploy-pages.yml",
-    "deploy": null,
-    "liveTargetDate": null
+    "build": "success",
+    "deploy": "success",
+    "liveTargetDate": "2026-09-29",
+    "liveVerification": "success"
   },
   "lastError": null,
-  "nextAction": "Track unique sync run 36543638283 through upstream verification, snapshot rebuild/hash, source blob check, content validation, tests, build, browser, fast-forward commit and Pages dispatch; then verify exact N1 Pages/live target date.",
+  "nextAction": "Published. No further 2026-09-29 N1 handoff action is required unless the verified upstream source or target lesson changes.",
   "recovery": {
     "targetDatePreserved": true,
     "tasksModified": false,
     "hourlyRecoveryCreated": false,
     "currentRequestNotReplaced": false,
-    "finalDailyJsonWritten": false,
-    "snapshotWrittenToMain": false,
+    "finalDailyJsonWritten": true,
+    "snapshotWrittenToMain": true,
     "sourceRegenerated": false,
     "upstreamMainModified": false
   },
