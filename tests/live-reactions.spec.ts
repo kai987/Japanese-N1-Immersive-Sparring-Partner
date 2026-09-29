@@ -1,15 +1,18 @@
 import { test, expect } from '@playwright/test'
 import { mkdir } from 'node:fs/promises'
 
-const base = '/Japanese-N1-Immersive-Sparring-Partner/'
+// Vite preview serves dist at /; production uses relative asset URLs for Pages.
+const base = '/'
 const storageKey = 'n1-live-reactions-progress-v1'
 const evidence = '/tmp/n1-improvements-playwright/live-notes'
 
 test('sidebar opens all groups; bilingual search, selection and clear work', async ({ page }) => {
   const errors: string[] = []
   page.on('pageerror', error => errors.push(error.message))
-  page.on('console', message => { if (message.type() === 'error') errors.push(message.text()) })
+  page.on('console', message => { if (['error', 'warning'].includes(message.type())) errors.push(message.text()) })
   await page.goto(base)
+  await expect(page).toHaveTitle('N1 Immersive Sparring Partner')
+  await expect(page.locator('.hero h1')).toBeVisible()
   await page.getByRole('navigation', { name: 'メインナビゲーション', exact: true }).getByRole('button', { name: '直播条反', exact: true }).click()
   await expect(page.getByRole('heading', { name: '直播条反', exact: true })).toBeVisible()
   await expect(page.locator('[data-live-group]')).toHaveCount(15)
