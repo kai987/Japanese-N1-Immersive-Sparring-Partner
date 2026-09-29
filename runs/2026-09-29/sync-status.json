@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-09-29",
   "day": 31,
-  "stage": "request_ready",
-  "checkedAtJST": "2026-09-29T17:31:05+09:00",
+  "stage": "validating",
+  "checkedAtJST": "2026-09-29T17:35:12+09:00",
   "mainHeadSha": "5cef80afd4719f1d4c1183f340b2006b73213432",
   "sourceRecord": {
     "path": "runs/2026-09-29/source.json",
@@ -19,12 +19,12 @@
   },
   "requestSlot": {
     "path": ".github/n1-sync-request.json",
-    "blobSha": "5756dc8328a8efb866788e233658ef8ddf4bd185",
-    "targetDate": "2026-09-28",
-    "sourceCommit": "c644479a1f01f91b9468b2e676b500f2128e4300",
-    "activeSyncOrPagesRun": false,
-    "unchanged": true,
-    "reason": "No complete 2026-09-29 source-bound request exists yet; the previous completed request is not rebound or replaced."
+    "blobSha": "898ee5cab87a80173ceb9dcbae18592675789a10",
+    "targetDate": "2026-09-29",
+    "sourceCommit": "730b21196e8f8070a2b3f14ed20c1799dbc2abb2",
+    "activeSyncOrPagesRun": true,
+    "unchanged": false,
+    "requestCommit": "7b997f81fdf4d006b6155210e38dd72ec47f2039"
   },
   "upstream": {
     "repository": "kai987/japan-it-ai-daily",
@@ -55,9 +55,9 @@
     }
   },
   "sync": {
-    "runId": null,
+    "runId": 36543638283,
     "workflowPath": ".github/workflows/sync-n1-daily.yml",
-    "status": "not_started",
+    "status": "in_progress",
     "conclusion": null
   },
   "targetPublication": {
@@ -68,12 +68,12 @@
     "liveTargetDate": null
   },
   "lastError": null,
-  "nextAction": "CAS-write the complete source-bound 2026-09-29 request to .github/n1-sync-request.json only if the slot and active sync/Pages state remain conflict-free; then verify the unique sync run and final Pages/live target date.",
+  "nextAction": "Track unique sync run 36543638283 through upstream verification, snapshot rebuild/hash, source blob check, content validation, tests, build, browser, fast-forward commit and Pages dispatch; then verify exact N1 Pages/live target date.",
   "recovery": {
     "targetDatePreserved": true,
     "tasksModified": false,
     "hourlyRecoveryCreated": false,
-    "currentRequestNotReplaced": true,
+    "currentRequestNotReplaced": false,
     "finalDailyJsonWritten": false,
     "snapshotWrittenToMain": false,
     "sourceRegenerated": false,
