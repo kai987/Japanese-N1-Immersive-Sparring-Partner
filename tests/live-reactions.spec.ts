@@ -69,8 +69,11 @@ test('mobile sidebar, dark theme, readable cards and no horizontal overflow', as
   await expect(page.locator('.mobile-overlay')).toHaveCount(0)
   await mkdir(evidence, { recursive: true })
   await page.screenshot({ path: `${evidence}/mobile.png` })
-  await page.getByRole('button', { name: '読解テーマを切り替える', exact: true }).click()
+  // The existing mobile layout places the theme switch inside the drawer.
+  await page.getByRole('button', { name: 'ナビゲーションを開く', exact: true }).click()
+  await page.getByRole('button', { name: '表示テーマを切り替える', exact: true }).click()
   await expect(page.locator('.app')).toHaveAttribute('data-theme', 'dark')
+  await page.getByRole('button', { name: 'ナビゲーションを閉じる', exact: true }).click()
   await page.getByLabel('选择知识组').selectOption('live-2026-09-28-ki')
   await page.locator('[data-live-group]').scrollIntoViewIfNeeded()
   await page.screenshot({ path: `${evidence}/mobile-dark.png` })
