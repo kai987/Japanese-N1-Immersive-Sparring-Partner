@@ -5,8 +5,8 @@
   "snapshotSha256": "b53b184da10dd611878cfd73086ee5f2ef0a4d1300aec4d8677198c9226eb648",
   "issueNumber": 50,
   "totalDays": 50,
-  "stage": "validating",
-  "updatedAt": "2026-09-30T01:43:13.945Z",
+  "stage": "published",
+  "updatedAt": "2026-09-30T01:49:34.429Z",
   "sha256": "94c56646d161a80a817ad0c798d51ab3aa04b59237edb0f52d94ab04830e2f9a",
   "bytes": 13620,
   "generatedAtJST": "2026-09-30T08:57:52+09:00",
@@ -15,5 +15,23 @@
   "rawGrammar": 1,
   "displayVocabulary": 20,
   "displayGrammar": 5,
-  "verifiedAt": "2026-09-30T01:42:01.985Z"
+  "verifiedAt": "2026-09-30T01:47:47.086Z",
+  "releaseCommit": "747fcca10ee17224310545c8b10d0da77df698a3",
+  "sourceSha256": "94c56646d161a80a817ad0c798d51ab3aa04b59237edb0f52d94ab04830e2f9a",
+  "storedSnapshotSha256": "360f8da0dbc3902ae72364c910a56517e84cc10b6f71d5ddfb6a5bb6cc35ead6",
+  "pagesRunId": 36656584286,
+  "syncRunId": 36656434925,
+  "checks": {
+    "exactPages": true,
+    "postDeploy": true,
+    "originalUnchanged": true,
+    "snapshotExact": true,
+    "liveArtifactBytes": true,
+    "display": {
+      "date": "2026-09-30",
+      "day": 32,
+      "issue": 50,
+      "titleVisible": true
+    }
+  }
 }
