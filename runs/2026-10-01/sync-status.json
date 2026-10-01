@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "targetDate": "2026-10-01",
+  "status": "source_pending_promotion",
+  "sourceCheckpointPath": "runs/2026-10-01/source.json",
+  "sourceCheckpointBlobSha": "235f9c7d62f1589005c6fdcc9d6eacca716316e4",
+  "sourceSha256": "bae0494f88c757eeb2b686b96d45a496cf97a6919339fa0ac425c733315c87cf",
+  "sourceBytes": 14231,
+  "updatedAtJST": "2026-10-01T09:10:27+09:00",
+  "blocker": "GitHub main source promotion was blocked by the OpenAI runtime safety check before the create_file call could complete. No 401/403/409/5xx response was returned."
+}
