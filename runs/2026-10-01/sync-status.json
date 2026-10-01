@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "targetDate": "2026-10-01",
-  "status": "waiting_request",
+  "status": "validating",
   "sourceCheckpointPath": "runs/2026-10-01/source.json",
   "sourceCheckpointBlobSha": "235f9c7d62f1589005c6fdcc9d6eacca716316e4",
   "sourceSha256": "bae0494f88c757eeb2b686b96d45a496cf97a6919339fa0ac425c733315c87cf",
@@ -10,16 +10,16 @@
   "blocker": null,
   "day": 33,
   "sourceCheckpoint": "automation/n1-progress:runs/2026-10-01/source.json",
-  "stage": "waiting_request",
+  "stage": "validating",
   "attemptedAt": "2026-10-01T03:24:52.915Z",
   "lastError": null,
-  "nextAction": "Submit complete request after source promotion Pages completes; no final daily JSON written by author",
+  "nextAction": "Observe exact request sync workflow, final commit Pages and live Day 33 / issue 51",
   "sourceCommit": "73f2166c500c38b170ef05ed4ed86c1555c100ba",
   "sourcePagesRunId": 36810808336,
   "snapshotSha256": "272a84c55b8b499b293c3741a939d544e13d103f3e2eef19747829416a47f1ea",
   "issueNumber": 51,
   "totalDays": 51,
-  "updatedAt": "2026-10-01T04:35:58.277Z",
+  "updatedAt": "2026-10-01T04:38:19.535Z",
   "sourceBlobSha": "18cceb44bda2d3955c234584f6c77c058dfdd1a3",
   "sourceSnapshotArtifactId": 11138728881,
   "sourcePromotion": {
@@ -39,5 +39,8 @@
       "attempt": 1,
       "resolved": true
     }
-  ]
+  ],
+  "syncRunId": 36815968947,
+  "requestCommit": "8a0d052d58407880a4b582008afb683790e0c28c",
+  "requestBlobSha": "71b3a82e8092a90ba02ffeffbc384b04410fda86"
 }
