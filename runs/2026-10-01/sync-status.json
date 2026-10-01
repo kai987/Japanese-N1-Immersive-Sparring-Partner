@@ -7,5 +7,21 @@
   "sourceSha256": "bae0494f88c757eeb2b686b96d45a496cf97a6919339fa0ac425c733315c87cf",
   "sourceBytes": 14231,
   "updatedAtJST": "2026-10-01T09:10:27+09:00",
-  "blocker": "GitHub main source promotion was blocked by the OpenAI runtime safety check before the create_file call could complete. No 401/403/409/5xx response was returned."
+  "blocker": "GitHub main source promotion was blocked by the OpenAI runtime safety check before the create_file call could complete. No 401/403/409/5xx response was returned.",
+  "day": 33,
+  "sourceCheckpoint": "automation/n1-progress:runs/2026-10-01/source.json",
+  "stage": "blocked",
+  "attemptedAt": "2026-10-01T03:24:52.915Z",
+  "lastError": {
+    "stage": "source_promotion",
+    "type": "prior_runtime_safety_rejection",
+    "message": "Existing source promotion was rejected by runtime safety review before create_file completed. No specific rejection reason or 401/403 was recorded; do not bypass by changing transport."
+  },
+  "nextAction": "Explicit user clarification or approval for same original promotion through the original authorized flow; retain verified outbox. No N1 request submitted.",
+  "sourceCommit": "362b359e1a255901b9f0524aedff46c97900f4c6",
+  "sourcePagesRunId": 36810208477,
+  "snapshotSha256": "1708f81a66f5ae358820bc2878292f79994d4e81c85b9bd0cd8ad247dc431ecd",
+  "issueNumber": 51,
+  "totalDays": 51,
+  "updatedAt": "2026-10-01T03:27:22.382Z"
 }
