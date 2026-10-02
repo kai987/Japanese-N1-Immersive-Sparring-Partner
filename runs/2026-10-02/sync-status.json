@@ -11,7 +11,7 @@
     "error": "This tool call was blocked by OpenAI's safety checks. Please double check what you are sending."
   },
   "status": "in_progress",
-  "stage": "submitted",
+  "stage": "awaiting_deploy",
   "sourcePromotion": {
     "targetDate": "2026-10-02",
     "promotionCommit": "9965d2473bf1687f0698695e04c79c6875bda782",
@@ -20,13 +20,15 @@
     "bytes": 14732,
     "verifiedAt": "2026-10-02T01:40:11.458Z"
   },
-  "updatedAt": "2026-10-02T02:05:17.705Z",
+  "updatedAt": "2026-10-02T02:08:02.912Z",
   "lastError": null,
-  "nextStep": "Verify exact request sync then final N1 Pages artifact/live Day 34",
+  "nextStep": "Verify final N1 Pages artifact and real Day 34/issue 52 reading and study overlay",
   "sourceCommit": "38e25704c1b7f845f7609ae662c86a2e8e7c67cd",
   "snapshotSha256": "00a75ae38759332b747dadf0a4ae5f17107648fa6071199574c8d6b5f12b6de8",
   "issueNumber": 52,
   "totalDays": 52,
   "requestCommit": "068a876614a0f9f895f71409a48c12995a05a939",
-  "syncRunId": 36953952709
+  "syncRunId": 36953952709,
+  "releaseCommit": "590ed4046ed0ab1366954e4809e8b8df7bb02c41",
+  "pagesRunId": 36954085479
 }
