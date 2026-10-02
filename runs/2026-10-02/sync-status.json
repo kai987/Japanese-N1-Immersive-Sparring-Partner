@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "targetDate": "2026-10-02",
+  "state": "source_pending_promotion",
+  "sourceSha256": "97e6e13fdd319b870edc0c3788ac36681df8fc7554c087835e8aa2752818f7af",
+  "sourceBlobSha": "f5d56f7b3610518f609cac40b29761fa38edad0e",
+  "checkpointCommit": "953a8935922146d209bb9338dcbd40df5e61f9b2",
+  "recordedAtJST": "2026-10-02T09:06:15+09:00",
+  "blocker": {
+    "operation": "create main:n1-source/2026-10-02.md",
+    "error": "This tool call was blocked by OpenAI's safety checks. Please double check what you are sending."
+  }
+}
