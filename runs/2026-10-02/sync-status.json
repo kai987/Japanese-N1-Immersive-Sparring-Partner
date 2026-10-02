@@ -9,5 +9,18 @@
   "blocker": {
     "operation": "create main:n1-source/2026-10-02.md",
     "error": "This tool call was blocked by OpenAI's safety checks. Please double check what you are sending."
-  }
+  },
+  "status": "waiting_upstream",
+  "stage": "waiting_upstream",
+  "sourcePromotion": {
+    "targetDate": "2026-10-02",
+    "promotionCommit": "9965d2473bf1687f0698695e04c79c6875bda782",
+    "sourceBlobSha": "5247246c2f6847cbe752b11e7cd7fafeacaef658",
+    "sha256": "97e6e13fdd319b870edc0c3788ac36681df8fc7554c087835e8aa2752818f7af",
+    "bytes": 14732,
+    "verifiedAt": "2026-10-02T01:40:11.458Z"
+  },
+  "updatedAt": "2026-10-02T01:40:13.797Z",
+  "lastError": null,
+  "nextStep": "Prepare source-bound request after verified latest upstream release"
 }
