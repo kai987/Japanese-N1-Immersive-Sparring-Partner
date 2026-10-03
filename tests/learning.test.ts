@@ -63,6 +63,23 @@ test('valid daily file is merged once and overrides the same date', () => {
   assert.equal(catalog.lessons.length, 11)
   assert.equal(catalog.lessons[0].title, '差し替え')
 })
+
+test('raw daily vocabulary preserves every supported source level and rejects unknown levels', () => {
+  for (const level of ['N1', 'N2', 'N3', 'N5/N4', 'IT/AI'] as const) {
+    const file = daily()
+    file.lesson.vocabulary[0].word = '押す'
+    file.lesson.vocabulary[0].jlpt = level
+    const actual = validateArchive(file, '2026-09-10.json')
+    assert.equal(actual.lesson.vocabulary[0].jlpt, level)
+    assert.equal(actual.lesson.vocabulary[0].word, '押す')
+  }
+  for (const level of ['N4', 'N5', 'N6', '', null, 3, { toString: () => 'N3' }]) {
+    const file = daily()
+    Reflect.set(file.lesson.vocabulary[0], 'jlpt', level)
+    assert.throws(() => validateArchive(file, '2026-09-10.json'), /vocabulary\[0\].jlpt/)
+  }
+})
+
 test('invalid daily archives fail with the file and field in the error', () => {
   const missing = daily(); Reflect.deleteProperty(missing.lesson, 'vocabulary')
   assert.throws(() => validateArchive(missing, '2026-09-10.json'), /2026-09-10.json.lesson.vocabulary/)
@@ -97,6 +114,8 @@ test('import command updates one file and rejects invalid replacements without d
     const source = join(folder, '2026-09-10.json')
     const destination = join(folder, 'daily')
     const entry = daily()
+    entry.lesson.vocabulary[0].word = '押す'
+    entry.lesson.vocabulary[0].jlpt = 'N3'
     writeFileSync(source, JSON.stringify(entry))
     const imported = importDaily(source, destination)
     entry.lesson.title = '更新済み'
@@ -104,6 +123,7 @@ test('import command updates one file and rejects invalid replacements without d
     importDaily(source, destination)
     assert.deepEqual(readdirSync(destination), ['2026-09-10.json'])
     assert.equal(JSON.parse(readFileSync(imported, 'utf8')).lesson.title, '更新済み')
+    assert.equal(JSON.parse(readFileSync(imported, 'utf8')).lesson.vocabulary[0].jlpt, 'N3')
     entry.lesson.reading.question.answer = 99
     writeFileSync(source, JSON.stringify(entry))
     assert.throws(() => importDaily(source, destination), /question.answer/)
