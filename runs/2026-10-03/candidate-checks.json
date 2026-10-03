@@ -1,0 +1,37 @@
+{
+  "targetDate": "2026-10-03",
+  "sourceCommit": "3c905031187fbb234f10423a3e352c7a3cb571a4",
+  "sourceBlobSha": "cb46ceb581ec4f3749cb7330d6bfd7e13061225d",
+  "snapshotSha256": "c4030794369171d0998eafa0c80593eaf0107b64a31840ea16a3cf1ea9349a81",
+  "requestSha256": "afe5b1729a9a5f6e08ab45ccf50f142946b9b16d89d142407f79b6a5fddcbdc1",
+  "candidateRoot": "/tmp/japan-daily-20261003/n1-candidate-tree",
+  "candidateN1BaseCommit": "a8b60a45f0ed25400795dc9d26ceb859ab7cdc6f",
+  "sourceMappingAndRequest": true,
+  "validateContent": {
+    "passed": true,
+    "lessons": 35,
+    "dailyFiles": 25
+  },
+  "unit": {
+    "passed": true,
+    "tests": 41
+  },
+  "typecheck": {
+    "passed": true
+  },
+  "build": {
+    "passed": true
+  },
+  "browser": {
+    "passed": true,
+    "tests": 20
+  },
+  "rawVocabulary": 10,
+  "rawGrammar": 0,
+  "overlayVocabulary": 20,
+  "overlayGrammar": 8,
+  "fullGrammarDates": 53,
+  "repositoryWrites": false,
+  "remoteWrites": false,
+  "verifiedAt": "2026-10-03T06:12:25.379Z"
+}
