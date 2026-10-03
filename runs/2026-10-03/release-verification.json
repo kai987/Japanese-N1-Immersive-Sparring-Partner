@@ -1,0 +1,36 @@
+{
+  "targetDate": "2026-10-03",
+  "sourceCommit": "3c905031187fbb234f10423a3e352c7a3cb571a4",
+  "releaseCommit": "eb60dbdfa474629bbd7ac7b89747054a3ad43b83",
+  "sourceBlobSha": "cb46ceb581ec4f3749cb7330d6bfd7e13061225d",
+  "sourceSha256": "a233e58002e5ca0fa56ee53fba876661f5c425349f9f8184343bf1701aceac7e",
+  "snapshotSha256": "c4030794369171d0998eafa0c80593eaf0107b64a31840ea16a3cf1ea9349a81",
+  "storedSnapshotSha256": "7b18a01abf3a91a058c4249fb9c5adad91ada4a6f55d68cc9ac84852434674be",
+  "pagesRunId": 37102624253,
+  "syncRunId": 37102545382,
+  "issueNumber": 53,
+  "totalDays": 53,
+  "rawVocabulary": 10,
+  "rawGrammar": 0,
+  "displayVocabulary": 20,
+  "displayGrammar": 8,
+  "checks": {
+    "exactPages": true,
+    "postDeploy": true,
+    "originalUnchanged": true,
+    "snapshotExact": true,
+    "liveArtifactBytes": true,
+    "display": {
+      "date": "2026-10-03",
+      "day": 35,
+      "issue": 53,
+      "titleVisible": true,
+      "vocabularyCount": 20,
+      "grammarNew": 0,
+      "grammarReview": 8,
+      "frequencyDenominator": 53,
+      "readingParagraphs": 3
+    }
+  },
+  "verifiedAt": "2026-10-03T06:20:42.755Z"
+}
