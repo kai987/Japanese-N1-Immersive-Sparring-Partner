@@ -1,7 +1,7 @@
 {
   "targetDate": "2026-10-06",
-  "status": "waiting_upstream",
-  "stage": "awaiting_deploy",
+  "status": "published",
+  "stage": "published",
   "sourcePromotion": {
     "targetDate": "2026-10-06",
     "day": 38,
@@ -13,9 +13,9 @@
     "exactReadback": true,
     "at": "2026-10-06T01:46:30.788Z"
   },
-  "updatedAt": "2026-10-06T02:03:45.117Z",
+  "updatedAt": "2026-10-06T02:06:12.058Z",
   "lastError": null,
-  "nextStep": "Verify exact N1 Pages artifact and live Day 38 UI; sync success alone is not publication",
+  "nextStep": "Complete: original, exact N1 content, snapshot, Pages and live Day 38 verified",
   "sourceCommit": "3286365fdf4620222d349cbd8ad05e278a43ed4a",
   "sourceBlobSha": "24d467c1d5ff7dfe1ac85f14659bf7b94aaa5bbe",
   "snapshotSha256": "a5082ef003dc05bd9d47cd2546e56147417853af3b661a3b5577e318f83d9f1d",
@@ -26,5 +26,32 @@
   "requestCommit": "2b0c24bcc0410342ec88d265c245bfd6abe032dc",
   "releaseCommit": "bded58bf9e4553fb85405fb312b60181adc801b6",
   "n1PagesRunId": 37402164092,
-  "syncRunId": 37402035087
+  "syncRunId": 37402035087,
+  "sourceSha256": "05c6403ea7e251b818a4a393f80037b8ca0d07fa353f3e39ce32cbe7ece92ba9",
+  "storedSnapshotSha256": "29a9f772057c4c26e204d26e44e6761775a08fbdca92d0ba0ee6e2a7dd018275",
+  "pagesRunId": 37402164092,
+  "rawVocabulary": 10,
+  "rawGrammar": 1,
+  "displayVocabulary": 20,
+  "displayGrammar": 8,
+  "checks": {
+    "exactPages": true,
+    "postDeploy": true,
+    "originalUnchanged": true,
+    "snapshotExact": true,
+    "liveArtifactBytes": true,
+    "display": {
+      "date": "2026-10-06",
+      "day": 38,
+      "issue": 56,
+      "titleVisible": true,
+      "vocabularyCount": 20,
+      "grammarNew": 1,
+      "grammarReview": 7,
+      "frequencyDenominator": 56,
+      "readingParagraphs": 1
+    }
+  },
+  "verifiedAt": "2026-10-06T02:05:01.978Z",
+  "completedAt": "2026-10-06T02:06:09.648726+00:00"
 }
