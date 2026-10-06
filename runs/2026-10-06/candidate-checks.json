@@ -1,0 +1,47 @@
+{
+  "targetDate": "2026-10-06",
+  "candidateMain": "9711ea915d0400f22f8a2805799f54cfd814ce88",
+  "sourceCommit": "3286365fdf4620222d349cbd8ad05e278a43ed4a",
+  "checks": [
+    {
+      "name": "automation",
+      "status": "passed",
+      "startedAt": "2026-10-06T01:58:18.596Z",
+      "completedAt": "2026-10-06T01:58:18.697Z"
+    },
+    {
+      "name": "content",
+      "status": "passed",
+      "startedAt": "2026-10-06T01:58:18.699Z",
+      "completedAt": "2026-10-06T01:58:18.923Z"
+    },
+    {
+      "name": "unit",
+      "status": "passed",
+      "startedAt": "2026-10-06T01:58:18.923Z",
+      "completedAt": "2026-10-06T01:58:19.895Z"
+    },
+    {
+      "name": "build",
+      "status": "passed",
+      "startedAt": "2026-10-06T01:58:19.895Z",
+      "completedAt": "2026-10-06T01:58:21.938Z"
+    },
+    {
+      "name": "browser",
+      "status": "passed",
+      "startedAt": "2026-10-06T01:59:16.719Z",
+      "completedAt": "2026-10-06T01:59:40.317Z",
+      "resolvedTestEnvironmentIssue": {
+        "failure": {
+          "name": "browser",
+          "status": "failed",
+          "startedAt": "2026-10-06T01:58:21.939Z",
+          "error": "[WebServer] npm error code ENOENT\n[WebServer] npm error syscall open\n[WebServer] npm error path /private/tmp/japan-daily-20261006/package.json\n[WebServer] npm error errno -2\n[WebServer] npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/private/tmp/japan-daily-20261006/package.json'\n[WebServer] npm error enoent This is related to npm not being able to find a file.\n[WebServer] npm error enoent\n[WebServer] npm error A complete log of this run can be found in: /Users/paulasmith/.npm/_logs/2026-10-06T01_58_22_497Z-debug-0.log\n"
+        },
+        "log": "/tmp/japan-daily-20261006/logs/n1-browser-failed-cwd.log",
+        "cause": "External config resolves webServer working directory to config parent; fixed explicit candidate cwd and isolated port without application changes"
+      }
+    }
+  ]
+}
