@@ -1,7 +1,7 @@
 {
   "targetDate": "2026-10-06",
   "status": "waiting_upstream",
-  "stage": "validating",
+  "stage": "awaiting_deploy",
   "sourcePromotion": {
     "targetDate": "2026-10-06",
     "day": 38,
@@ -13,9 +13,9 @@
     "exactReadback": true,
     "at": "2026-10-06T01:46:30.788Z"
   },
-  "updatedAt": "2026-10-06T02:02:01.376Z",
+  "updatedAt": "2026-10-06T02:03:45.117Z",
   "lastError": null,
-  "nextStep": "Await exact source-bound sync, final N1 Pages and live target verification",
+  "nextStep": "Verify exact N1 Pages artifact and live Day 38 UI; sync success alone is not publication",
   "sourceCommit": "3286365fdf4620222d349cbd8ad05e278a43ed4a",
   "sourceBlobSha": "24d467c1d5ff7dfe1ac85f14659bf7b94aaa5bbe",
   "snapshotSha256": "a5082ef003dc05bd9d47cd2546e56147417853af3b661a3b5577e318f83d9f1d",
@@ -23,5 +23,8 @@
   "totalDays": 56,
   "sourcePagesRunId": 37401457701,
   "n1SyncRunId": 37402035087,
-  "requestCommit": "2b0c24bcc0410342ec88d265c245bfd6abe032dc"
+  "requestCommit": "2b0c24bcc0410342ec88d265c245bfd6abe032dc",
+  "releaseCommit": "bded58bf9e4553fb85405fb312b60181adc801b6",
+  "n1PagesRunId": 37402164092,
+  "syncRunId": 37402035087
 }
