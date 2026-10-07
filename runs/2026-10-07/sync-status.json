@@ -1,7 +1,7 @@
 {
   "targetDate": "2026-10-07",
-  "status": "awaiting_deploy",
-  "stage": "awaiting_deploy",
+  "status": "published",
+  "stage": "published",
   "sourcePromotion": {
     "targetDate": "2026-10-07",
     "day": 39,
@@ -13,9 +13,9 @@
     "exactReadback": true,
     "at": "2026-10-07T01:42:04.787Z"
   },
-  "updatedAt": "2026-10-07T01:54:57.925Z",
+  "updatedAt": "2026-10-07T02:00:59.107Z",
   "lastError": null,
-  "nextStep": "Verify exact final N1 Pages artifact bytes and real Day 39 cards, frequency and reading.",
+  "nextStep": "Complete: original, source-bound lesson/snapshot, exact Pages and live N1 Day 39 verified",
   "sourceCommit": "e4b34033d5757485e22f2ab1f71a0a3063849e9c",
   "sourceBlobSha": "db25b1be524c1adef49e4c129991ce92d99b309b",
   "snapshotSha256": "397a4748b5db46eb50300b14547821405f9800bbe7192d2f371187494b9ceeac",
@@ -23,5 +23,33 @@
   "totalDays": 57,
   "requestCommit": "83982122c9f706cc1c203e8c0175473da949816c",
   "n1ReleaseCommit": "34c68f75605d58cd5810f0b05be74d1d86f87da0",
-  "syncRunId": 37559255747
+  "syncRunId": 37559255747,
+  "releaseCommit": "34c68f75605d58cd5810f0b05be74d1d86f87da0",
+  "sourceSha256": "0be382c65d26b5d79c4874d57ca56a67b83d9be7ecb8034e0cee75e8d265b55c",
+  "storedSnapshotSha256": "606f82771834681142c2db3b68eae919aa4e00c2f76b1c76e0186dfb608d247c",
+  "pagesRunId": 37559383419,
+  "rawVocabulary": 10,
+  "rawGrammar": 2,
+  "displayVocabulary": 20,
+  "displayGrammar": 8,
+  "checks": {
+    "exactPages": true,
+    "postDeploy": true,
+    "originalUnchanged": true,
+    "snapshotExact": true,
+    "liveArtifactBytes": true,
+    "display": {
+      "date": "2026-10-07",
+      "day": 39,
+      "issue": 57,
+      "titleVisible": true,
+      "vocabularyCount": 20,
+      "grammarNew": 2,
+      "grammarReview": 6,
+      "frequencyDenominator": 57,
+      "readingParagraphs": 2
+    }
+  },
+  "verifiedAt": "2026-10-07T01:59:55.274Z",
+  "completedAt": "2026-10-07T01:59:56.205Z"
 }
