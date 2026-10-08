@@ -1,8 +1,8 @@
 {
   "targetDate": "2026-10-08",
   "day": 40,
-  "status": "waiting_request",
-  "stage": "waiting_request",
+  "status": "validating",
+  "stage": "validating",
   "sourceCommit": "0675f68a74bfbb94e1a8b1d2f61cbae8c80b4f53",
   "sourcePagesRunId": 37713623958,
   "snapshotSha256": "2a759bddfd40529934bd3c3580a441d17475563cc4bf22a9ad198ba807eb8515",
@@ -22,8 +22,8 @@
     "requestDate": "2026-10-07"
   },
   "lastError": null,
-  "nextStep": "Submit the complete source-bound request to the existing unique N1 sync workflow.",
-  "updatedAt": "2026-10-08T03:42:47.443Z",
+  "nextStep": "Wait for the existing exact-request sync and final Pages deployment; do not duplicate or replace the request.",
+  "updatedAt": "2026-10-08T03:43:47.974Z",
   "sourceBlobSha": "b7238a55b34cabf8b1275288a5c68ab6e9b9955b",
   "resumedAt": "2026-10-08T03:42:37.761336+00:00",
   "sourceVerification": {
@@ -92,5 +92,8 @@
         "completedAt": "2026-10-08T03:41:56.327Z"
       }
     ]
-  }
+  },
+  "requestCommit": "7bd4442ab9ec2a0a9cf0b6bc7d6b6a6416207949",
+  "requestBlobSha": "c2d0c7da009655107b53b39ac8caf6f2cb59cdbb",
+  "submittedAt": "2026-10-08T03:43:19.217Z"
 }
