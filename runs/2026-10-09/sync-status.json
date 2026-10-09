@@ -1,11 +1,11 @@
 {
   "targetDate": "2026-10-09",
   "day": 41,
-  "status": "waiting_source",
-  "stage": "waiting_source",
-  "sourceCommit": "a9fabec4f8eacaacb23be541f634bc5a1b16cf19",
+  "status": "request_ready",
+  "stage": "request_ready",
+  "sourceCommit": "797ef71eb815c8c473eb2a6bab2f5e8ad281e557",
   "sourcePagesRunId": 37869152912,
-  "snapshotSha256": "cfa248d52c6127e22682dc82f465f6fd62b64e54c00f2ee5fb4413603791bc8b",
+  "snapshotSha256": "c4d851dc863889846dbb1a95463061a35e61aa1da697b61edde68c1afd33f19b",
   "issueNumber": 59,
   "totalDays": 59,
   "handoffAttemptedAt": "2026-10-09T01:22:52.864Z",
@@ -21,10 +21,8 @@
     "finalDailyPresent": false,
     "requestDate": "2026-10-08"
   },
-  "lastError": {
-    "kind": "source_missing",
-    "message": "Neither target-date original nor full source outbox exists. No lesson or source reconstructed."
-  },
+  "lastError": null,
   "nextStep": "Existing N111:00/12:00 entrypoints resume after exact original/outbox becomes available.",
-  "updatedAt": "2026-10-09T01:22:52.864Z"
+  "updatedAt": "2026-10-09T02:55:01.340Z",
+  "sourceBlobSha": "c695f9dd2bfe082de509aab31b90b69962c74525"
 }
