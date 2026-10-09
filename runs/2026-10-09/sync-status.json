@@ -1,8 +1,8 @@
 {
   "targetDate": "2026-10-09",
   "day": 41,
-  "status": "request_ready",
-  "stage": "request_ready",
+  "status": "validating",
+  "stage": "validating",
   "sourceCommit": "797ef71eb815c8c473eb2a6bab2f5e8ad281e557",
   "sourcePagesRunId": 37869152912,
   "snapshotSha256": "c4d851dc863889846dbb1a95463061a35e61aa1da697b61edde68c1afd33f19b",
@@ -22,7 +22,10 @@
     "requestDate": "2026-10-08"
   },
   "lastError": null,
-  "nextStep": "Existing N111:00/12:00 entrypoints resume after exact original/outbox becomes available.",
-  "updatedAt": "2026-10-09T02:55:01.340Z",
-  "sourceBlobSha": "c695f9dd2bfe082de509aab31b90b69962c74525"
+  "nextStep": "Verify exact N1 sync and final Pages/live target",
+  "updatedAt": "2026-10-09T02:55:52.367Z",
+  "sourceBlobSha": "c695f9dd2bfe082de509aab31b90b69962c74525",
+  "requestCommit": "834ac3333e5a658fcb56564ac8f33b5a8dee39b0",
+  "requestBlobSha": "9542846879ec27d4824190474770302cae254c3c",
+  "submittedAt": "2026-10-09T02:55:28.209Z"
 }
