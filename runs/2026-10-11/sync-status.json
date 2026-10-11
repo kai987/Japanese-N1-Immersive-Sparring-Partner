@@ -1,30 +1,49 @@
 {
   "targetDate": "2026-10-11",
   "day": 43,
-  "status": "waiting_source",
-  "stage": "waiting_source",
+  "status": "published",
+  "stage": "published",
   "sourceCommit": "9b13632a4b6500f24ffb0884926a72c75365c361",
-  "sourcePagesRunId": 38101902507,
+  "sourceBlobSha": "2e3ea9b5e3d18b6d487629b580e7145c2e9e1bb8",
+  "sourceSha256": "c47c39281f4848dd80574a9770e1183b2de5ec3f7391c15d367eb2601647d1ec",
+  "sourceBytes": 17040,
+  "generatedAtJST": "2026-10-11T09:07:48+09:00",
+  "checkpointBlobSha": "1a97c34c144183081f38470c2b417c71e920a026",
   "snapshotSha256": "b85e5ba414874c8de822f3464b7f21a86eb5441a993a9ae39899676cdadb9d83",
   "issueNumber": 61,
   "totalDays": 61,
-  "handoffAttemptedAt": "2026-10-11T01:32:01.920Z",
-  "sourceObservation": {
-    "mainCommit": "f0699508b7da2ce3a18c2f3437c4f00031d21492",
-    "mainFileCount": 137,
-    "completeMainInventory": true,
-    "completeProgressInventory": true,
-    "originalPath": "n1-source/2026-10-11.md",
-    "originalPresent": false,
-    "outboxPath": "runs/2026-10-11/source.json",
-    "outboxPresent": false,
-    "finalDailyPresent": false,
-    "requestDate": "2026-10-10"
+  "requestBlobSha": "0a7c4b67107b80a5160caa0d5da9faec50195b04",
+  "releaseCommit": "9c43a53751909a27bf3bfb4e6c5316071ea7859d",
+  "syncRunId": 38110548464,
+  "pagesRunId": 38110632572,
+  "rawVocabulary": 10,
+  "rawGrammar": 2,
+  "displayVocabulary": 20,
+  "displayGrammar": 5,
+  "checks": {
+    "exactUpstreamPages": true,
+    "snapshotExact": true,
+    "sourceReadbackExact": true,
+    "contentValidation": true,
+    "unitTests": true,
+    "browserTests": true,
+    "exactPages": true,
+    "liveTargetDate": true,
+    "expectedChangedPaths": [
+      "src/data/daily/2026-10-11.json",
+      "src/data/it-study-snapshot.json"
+    ],
+    "display": {
+      "date": "2026-10-11",
+      "day": 43,
+      "issue": 61,
+      "vocabularyNew": 12,
+      "vocabularyReview": 8,
+      "grammarNew": 2,
+      "grammarReview": 3,
+      "frequencyDenominator": 61
+    }
   },
-  "lastError": {
-    "kind": "source_missing",
-    "message": "Neither target-date original nor full source outbox exists. No lesson or source reconstructed."
-  },
-  "nextStep": "Existing N1 11:00/12:00 entrypoints resume after exact original/outbox becomes available.",
-  "updatedAt": "2026-10-11T01:32:01.920Z"
+  "lastError": null,
+  "verifiedAt": "2026-10-11T04:10:01Z"
 }
