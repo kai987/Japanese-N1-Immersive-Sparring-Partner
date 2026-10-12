@@ -5,8 +5,12 @@
   "snapshotSha256": "d01bdb7d15f31c41bf90b5a0f562d745a29621ab9465ac99088abccc1b8c3b9f",
   "issueNumber": 62,
   "totalDays": 62,
-  "status": "validating",
+  "status": "awaiting_deploy",
   "lastError": null,
-  "stage": "validating",
-  "updatedAt": "2026-10-12T01:46:15.282Z"
+  "stage": "awaiting_deploy",
+  "updatedAt": "2026-10-12T01:49:39.527Z",
+  "syncRunId": 38193176476,
+  "pagesRunId": 38193278317,
+  "releaseCommit": "d211052f29581b40726069eea331adacc563e805",
+  "nextStep": "Verify exact N1 Pages and live Day44; sync success is not publication"
 }
