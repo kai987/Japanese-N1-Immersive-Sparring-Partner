@@ -1,0 +1,37 @@
+{
+  "targetDate": "2026-10-12",
+  "candidateMain": "7c8b359d3bad22cc72354d6b51cb8d5d84e1892c",
+  "sourceCommit": "593900fbfcd71ffe81588a3f4ff9563562db8cf7",
+  "checks": [
+    {
+      "name": "automation",
+      "status": "passed",
+      "startedAt": "2026-10-12T01:44:58.366Z",
+      "completedAt": "2026-10-12T01:44:58.471Z"
+    },
+    {
+      "name": "content",
+      "status": "passed",
+      "startedAt": "2026-10-12T01:44:58.472Z",
+      "completedAt": "2026-10-12T01:44:58.763Z"
+    },
+    {
+      "name": "unit",
+      "status": "passed",
+      "startedAt": "2026-10-12T01:44:58.763Z",
+      "completedAt": "2026-10-12T01:44:59.892Z"
+    },
+    {
+      "name": "build",
+      "status": "passed",
+      "startedAt": "2026-10-12T01:44:59.893Z",
+      "completedAt": "2026-10-12T01:45:01.330Z"
+    },
+    {
+      "name": "browser",
+      "status": "passed",
+      "startedAt": "2026-10-12T01:45:01.331Z",
+      "completedAt": "2026-10-12T01:45:30.015Z"
+    }
+  ]
+}
