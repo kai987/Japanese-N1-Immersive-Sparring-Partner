@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-10-13",
   "day": 45,
-  "status": "validating",
-  "stage": "validating",
+  "status": "published",
+  "stage": "published",
   "upstreamSourceCommit": "49e4d68910e6ab43524aafad515583465a8a1dc2",
   "sourcePagesRunId": 38333748323,
   "snapshotSha256": "d656b0ab8da38a8da27cb03c775e53ef635aca8a9ea725218b4c7a860714197d",
@@ -12,8 +12,8 @@
   "requestSubmitted": true,
   "priorRequestDate": "2026-10-12",
   "lastError": null,
-  "nextStep": "Wait for exact sync run 38364484377, verify data commit and then exact Pages deployment/live target. Do not dispatch duplicate workflow while active.",
-  "updatedAt": "2026-10-13T07:43:46.612Z",
+  "nextStep": "Published 2026-10-13 Day45. Preserve existing source, snapshot and saved user learning state; no duplicate sync on unchanged content.",
+  "updatedAt": "2026-10-13T07:47:24.881Z",
   "sourceCheckpointCommit": "47faa7e5bcb54ede554e5240cf0657cdbb668242",
   "sourceCheckpointBlobSha": "6a522e71958f23752ac4ae573864d3279e97340d",
   "sourceSha256": "ccd9f16588da5c82f2aad1c7ba032210418fe01c59c9014510a62196c91d4de7",
@@ -24,5 +24,30 @@
   "requestCommit": "2d168af277a515765d1a9bec83846bd63350e8e8",
   "requestBlobSha": "f5d56e801d32ad87d500e3922a6d1070e00e7b59",
   "requestDraftCommit": "6c0730556e91bd4f3d765a578446414aaa84b44c",
-  "syncRunId": 38364484377
+  "syncRunId": 38364484377,
+  "sourceCommit": "49e4d68910e6ab43524aafad515583465a8a1dc2",
+  "releaseCommit": "22c7190d004e291dfca5f4451d8b05979c9372bf",
+  "releaseRunId": 38364484377,
+  "pagesRunId": 38364663554,
+  "vocabularyCounts": {
+    "focusNew": 10,
+    "fullNewPlusReview": 20
+  },
+  "grammarCounts": {
+    "focusNew": 0,
+    "fullNewPlusReview": 5
+  },
+  "verification": {
+    "sourceCheckpointMatch": true,
+    "exactSourceHash": true,
+    "upstreamExactCommitPages": true,
+    "upstreamSnapshotHash": true,
+    "contentValidation": "success",
+    "unitTests": "success",
+    "build": "success",
+    "browserTests": "success",
+    "pagesBuild": "success",
+    "pagesDeploy": "success",
+    "liveTargetDate": "success"
+  }
 }
