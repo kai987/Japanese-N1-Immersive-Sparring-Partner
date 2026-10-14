@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-10-14",
   "day": 46,
-  "status": "waiting_upstream",
-  "stage": "waiting_upstream",
+  "status": "waiting_request",
+  "stage": "waiting_request",
   "sourceCommit": "a63c3f6f09ac64e4736fa7dd73a830cb4925a4be",
   "sourceBlobSha": "6017c87bea2e7e54820c8026058f1d6b313bc805",
   "sourceCheckpointBlobSha": "7804784ec34708666c9ea5bdfee14f66e7a55684",
@@ -13,11 +13,23 @@
   "upstreamPublished": false,
   "requestSubmitted": false,
   "priorRequestDate": "2026-10-13",
-  "lastError": {
-    "kind": "upstream_not_published",
-    "detail": "No 2026-10-14 daily/daily-ja/japanese/japanese-ja files in a complete main tree; no exact-commit successful target-date Pages publication verified",
-    "observedAt": "2026-10-14T04:38:55.283Z"
+  "lastError": null,
+  "nextStep": "Submit complete canonical request and verify exact sync/Pages/live date",
+  "updatedAt": "2026-10-14T05:08:47.854Z",
+  "upstreamSourceCommit": "6158bba5ef8b22b6e8f35d048dc7de604d3b2388",
+  "sourcePagesRunId": 38514629000,
+  "snapshotSha256": "8e0513be120e051b7d9da9cf5ff85318183d25cc5381711c6a4a013f3a065f85",
+  "issueNumber": 64,
+  "totalDays": 64,
+  "requestDraftBlobSha": "02809bbebca1fac12a72d5cabc321eff7e3794f1",
+  "rawC4": {
+    "newVocabulary": 10,
+    "newGrammar": 0
   },
-  "nextStep": "Use the same verified N1 original and wait for an exact successful published upstream 2026-10-14 report and complete sourceCommit-bound learning snapshot. Prepare a complete request only after verifying upstream and checking active workflows; do not reuse 2026-10-13 C.",
-  "updatedAt": "2026-10-14T04:38:55.283Z"
+  "display": {
+    "newVocabulary": 20,
+    "reviewVocabulary": 0,
+    "newGrammar": 0,
+    "reviewGrammar": 8
+  }
 }
