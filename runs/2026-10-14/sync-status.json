@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "targetDate": "2026-10-14",
+  "day": 46,
+  "status": "waiting_upstream",
+  "stage": "waiting_upstream",
+  "sourceCommit": "a63c3f6f09ac64e4736fa7dd73a830cb4925a4be",
+  "sourceBlobSha": "6017c87bea2e7e54820c8026058f1d6b313bc805",
+  "sourceCheckpointBlobSha": "7804784ec34708666c9ea5bdfee14f66e7a55684",
+  "sourceSha256": "03cf19111cde45b4963004a90564c4bdda5c01f5904276148fb00da6458ef0c1",
+  "sourceBytes": 19640,
+  "generatedAtJST": "2026-10-14T09:05:05+09:00",
+  "upstreamPublished": false,
+  "requestSubmitted": false,
+  "priorRequestDate": "2026-10-13",
+  "lastError": {
+    "kind": "upstream_not_published",
+    "detail": "No 2026-10-14 daily/daily-ja/japanese/japanese-ja files in a complete main tree; no exact-commit successful target-date Pages publication verified",
+    "observedAt": "2026-10-14T04:38:55.283Z"
+  },
+  "nextStep": "Use the same verified N1 original and wait for an exact successful published upstream 2026-10-14 report and complete sourceCommit-bound learning snapshot. Prepare a complete request only after verifying upstream and checking active workflows; do not reuse 2026-10-13 C.",
+  "updatedAt": "2026-10-14T04:38:55.283Z"
+}
