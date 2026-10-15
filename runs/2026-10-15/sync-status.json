@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "targetDate": "2026-10-15",
+  "day": 47,
+  "status": "source_missing",
+  "stage": "blocked",
+  "sourceSavedOnMain": false,
+  "sourceCheckpointVerified": false,
+  "expectedSourceSha256": "1361a32f334d199cba58049074b144d35d1a2d4a86a21eed75b09578286b1c00",
+  "expectedSourceBytes": 17284,
+  "error": "OpenAI platform safety check blocked two attempts to create runs/2026-10-15/source.json. No remote checkpoint or main source exists; local stage/restore succeeded but local files are not accessible to future scheduled runs.",
+  "nextStep": "Require authorized remote persistence of exact existing manuscript before any mapping; do not recreate it from a new prompt, yesterday, or excerpts.",
+  "upstreamTargetVerified": false
+}
