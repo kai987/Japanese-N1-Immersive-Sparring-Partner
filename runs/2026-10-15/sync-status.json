@@ -2,14 +2,14 @@
   "schemaVersion": 1,
   "targetDate": "2026-10-15",
   "day": 47,
-  "status": "validating",
-  "stage": "validating",
+  "status": "published",
+  "stage": "published",
   "sourceSavedOnMain": true,
   "sourceCheckpointVerified": true,
   "expectedSourceSha256": "1361a32f334d199cba58049074b144d35d1a2d4a86a21eed75b09578286b1c00",
   "expectedSourceBytes": 17284,
   "error": null,
-  "nextStep": "Verify exact canonical sync gates, final commit Pages and live Day47",
+  "nextStep": "Complete: Day47 source, canonical request, final Pages and live learning verified. Preserve originals and learning states; no duplicate handoff for audio recovery.",
   "upstreamTargetVerified": true,
   "upstreamSourceCommit": "406f7292885e505859a520034c3437221bac4185",
   "sourcePagesRunId": 38666613676,
@@ -26,7 +26,7 @@
     "observedAt": "2026-10-15T10:44:07.342Z"
   },
   "lastError": null,
-  "updatedAt": "2026-10-15T10:47:40.098Z",
+  "updatedAt": "2026-10-15T10:52:04.131Z",
   "sourceCommit": "aef98a060ad69110da1fdbc5d78e7366e12d6751",
   "sourceBlobSha": "d36ffba40643d4a396d679aeb019a70b94b01d80",
   "sourceCheckpointBlobSha": "a508e4d57317d6ca4abe75969801aa4934fd5209",
@@ -48,5 +48,88 @@
     "reviewGrammar": 8
   },
   "requestCommit": "07c1e69d1480386d3147f4ef09af625896697895",
-  "requestBlobSha": "9a6817cee31dd3b37b7ef2ef8966ac60f6672c15"
+  "requestBlobSha": "9a6817cee31dd3b37b7ef2ef8966ac60f6672c15",
+  "syncRunId": 38722776954,
+  "releaseCommit": "6e0e4a71a7c2447ccd857eafd45738dba4b5d8c9",
+  "pagesRunId": 38722980769,
+  "storedSnapshotSha256": "00a5253e1026eb1bc77e9db37529173e14220d35e8d80fb17011c6ae49039d69",
+  "verification": {
+    "originalMatchesOutbox": true,
+    "dailyMatchesRequest": true,
+    "fullSnapshotCanonicalImporterBytesEqual": true,
+    "fullGrammarDates": 65,
+    "upstreamSourceHashVerified": true,
+    "exactSyncGates": true,
+    "exactPages": true,
+    "liveAssets": {
+      "targetDate": "2026-10-15",
+      "releaseCommit": "6e0e4a71a7c2447ccd857eafd45738dba4b5d8c9",
+      "pagesRunId": 38722980769,
+      "artifactByteHashes": true,
+      "assets": [
+        {
+          "path": "index.html",
+          "sha256": "549e02e56ec1ef4b35e1a82a2578c1d739878bae6bc1c425364d1ef9696a4a98",
+          "bytes": 1596
+        },
+        {
+          "path": "assets/LiveReactions-BsNLJgSR.css",
+          "sha256": "1b3933ecb7c5675b05b217aa76300036378af6d1d907643a42ab6eaf1e9aca52",
+          "bytes": 7155
+        },
+        {
+          "path": "assets/LiveReactions-DHmmr6SL.js",
+          "sha256": "e8a40c306964cea67a5192a33d417c2d58a55809978b316a6cf8de0128481442",
+          "bytes": 48317
+        },
+        {
+          "path": "assets/index-Bzo3HEps.css",
+          "sha256": "0faad935774f798fecac3753fbc0a21da0276af998fe14b972677937da7a81ad",
+          "bytes": 34653
+        },
+        {
+          "path": "assets/index-cvUERePp.js",
+          "sha256": "d04dff0f9393ea6870f035b1a9f33a919c54d1426c83d33ee7cc0833de999539",
+          "bytes": 4187511
+        }
+      ],
+      "verifiedAt": "2026-10-15T10:51:29.846Z"
+    },
+    "liveUI": {
+      "identity": {
+        "title": "N1 Immersive Sparring Partner",
+        "actualUrl": "https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/",
+        "date": "2026年10月15日(木)\nDay 47 · 99日N1計画",
+        "titleText": "誤検知を減らせば、本当に良いモデルになるのか。（第65号）"
+      },
+      "vocabulary": {
+        "new": 15,
+        "review": 5,
+        "total": 20,
+        "allDetailedCardsChecked": true,
+        "frequencyDenominator": 65
+      },
+      "grammar": {
+        "new": 0,
+        "review": 8,
+        "total": 8,
+        "allDetailedCardsChecked": true
+      },
+      "reading": {
+        "originalText": true,
+        "fourOriginalOptions": true,
+        "noPrematureAnswer": true
+      },
+      "review": {
+        "fiveOriginalQuestions": true
+      },
+      "renderHealth": {
+        "notBlank": true,
+        "noFrameworkOverlay": true,
+        "pageErrors": [],
+        "consoleErrorsOrWarnings": [],
+        "mobileNoOverflow": true
+      }
+    }
+  }
 }
