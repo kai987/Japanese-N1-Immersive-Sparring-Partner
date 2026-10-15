@@ -9,11 +9,11 @@
   "expectedSourceSha256": "1361a32f334d199cba58049074b144d35d1a2d4a86a21eed75b09578286b1c00",
   "expectedSourceBytes": 17284,
   "error": null,
-  "nextStep": "原稿と上流第65号を検証済み。共有契約に従い、10/15の完全requestを作成して既存スロットをCAS更新し、sync-n1-daily.ymlと最終Pages/実サイトを検証する。要求が完成するまではpublishedとしない。",
+  "nextStep": "Submit complete canonical request and verify exact sync/Pages/live date",
   "upstreamTargetVerified": true,
-  "upstreamSourceCommit": "f45a97756cd3917d2dfcaf5b137f3e9a00c05a5d",
-  "sourcePagesRunId": 38665728139,
-  "snapshotSha256": "2491c044679bb8c5b48c0e8ec260920b6f8d3a10aab6bc966997a5e78983c94e",
+  "upstreamSourceCommit": "406f7292885e505859a520034c3437221bac4185",
+  "sourcePagesRunId": 38666613676,
+  "snapshotSha256": "360a96303c6093105af63344996861b1d5641017517cde2ad68d59c8cafb4666",
   "issueNumber": 65,
   "totalDays": 65,
   "requestSubmitted": false,
@@ -27,7 +27,7 @@
     "observedAt": "2026-10-15T01:31:26.127Z"
   },
   "lastError": null,
-  "updatedAt": "2026-10-15T05:32:46.110Z",
+  "updatedAt": "2026-10-15T10:47:33.572Z",
   "sourceCommit": "aef98a060ad69110da1fdbc5d78e7366e12d6751",
   "sourceBlobSha": "d36ffba40643d4a396d679aeb019a70b94b01d80",
   "sourceCheckpointBlobSha": "a508e4d57317d6ca4abe75969801aa4934fd5209",
@@ -36,5 +36,16 @@
   "sourceBytes": 17284,
   "generatedAtJST": "2026-10-15T09:03:32+09:00",
   "priorRequestDate": "2026-10-14",
-  "pagesSourceRunId": 38687051580
+  "pagesSourceRunId": 38687051580,
+  "requestDraftBlobSha": "9a6817cee31dd3b37b7ef2ef8966ac60f6672c15",
+  "rawC4": {
+    "newVocabulary": 10,
+    "newGrammar": 0
+  },
+  "display": {
+    "newVocabulary": 15,
+    "reviewVocabulary": 5,
+    "newGrammar": 0,
+    "reviewGrammar": 8
+  }
 }
