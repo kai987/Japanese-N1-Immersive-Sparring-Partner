@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "targetDate": "2026-10-16",
+  "day": 48,
+  "status": "waiting_source",
+  "stage": "blocked",
+  "sourceSavedOnMain": false,
+  "sourceCheckpointVerified": false,
+  "expectedSourceSha256": "8fd4ca1c1b622570aa28013df299dcedd4780f2254080a893a5e6a8c9b31882f",
+  "expectedSourceBytes": 21316,
+  "generatedAtJST": "2026-10-16T09:06:08+09:00",
+  "error": "Attempt to create complete runs/2026-10-16/source.json was blocked by OpenAI platform safety checks. GitHub did not create outbox. Per checkpoint-first contract, no main promotion was attempted. Both remote outbox and main source returned 404. Local stage and restore matched, but the local file is not remotely recoverable.",
+  "requestSubmitted": false,
+  "upstreamTargetVerified": false,
+  "sourceObservation": {
+    "mainSourceAbsent": true,
+    "outboxAbsent": true,
+    "observedAt": "2026-10-16T00:07:59.257Z"
+  },
+  "nextStep": "Require the exact complete Day48 source as a remotely readable, verified outbox or unchanged main file. Existing 11:00/noon entrypoints must not reconstruct it or substitute another day; manual explicit authorized save may resume.",
+  "updatedAt": "2026-10-16T00:07:59.262Z"
+}
