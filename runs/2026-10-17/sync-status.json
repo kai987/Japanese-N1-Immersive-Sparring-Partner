@@ -2,16 +2,26 @@
   "schemaVersion": 1,
   "targetDate": "2026-10-17",
   "day": 49,
-  "status": "waiting_source",
-  "stage": "blocked",
-  "sourceSavedOnMain": false,
-  "sourceCheckpointVerified": false,
+  "status": "waiting_upstream",
+  "stage": "waiting_upstream",
+  "sourceSavedOnMain": true,
+  "sourceCheckpointVerified": true,
   "expectedSourceSha256": "212a95697b51e4ae8dfce161edcf1f3b344f4a4bed2ed252ec313297ce27da1a",
   "expectedSourceBytes": 22640,
   "generatedAtJST": "2026-10-17T09:03:57+09:00",
-  "error": "GitHub create_file for complete runs/2026-10-17/source.json was rejected: This tool call was blocked by OpenAI's safety checks. Confirmed 404 for remote outbox and main source after the rejection. Per checkpoint-first policy, main promotion was not attempted. Local stage and restore matched, but there is no remotely recoverable complete source.",
+  "error": null,
   "requestSubmitted": false,
   "upstreamTargetVerified": false,
-  "nextStep": "Do not claim automatic recovery from local path or transcript. Requires an authorized subsequent run with the exact complete original; do not regenerate or copy another day's source.",
-  "updatedAt": "2026-10-17T00:09:53.956Z"
+  "nextStep": "Complete original is verified on both automation/n1-progress and main. Wait for successfully published and source-verified 2026-10-17 IT/AI C and snapshot; then use shared N1 sync request. No yesterday C fallback, no invented release.",
+  "updatedAt": "2026-10-17T08:09:28.977Z",
+  "sourceCommit": "c49a484a37168da2a37f8a302d3b3bfe32943162",
+  "sourceBlobSha": "a3514097a34d525d5c1bfb69be3afd57fa8e999c",
+  "sourceCheckpointBlobSha": "5afe8132c512ed2eceab35ae14ed3cf0ccf5b5fc",
+  "lastError": null,
+  "sourceObservation": {
+    "n1MainSourcePresent": true,
+    "outboxPresent": true,
+    "upstreamTargetDailyFilesPresent": false,
+    "observedAt": "2026-10-17T08:09:28.977Z"
+  }
 }
