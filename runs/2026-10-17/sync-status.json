@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "targetDate": "2026-10-17",
+  "day": 49,
+  "status": "waiting_source",
+  "stage": "blocked",
+  "sourceSavedOnMain": false,
+  "sourceCheckpointVerified": false,
+  "expectedSourceSha256": "212a95697b51e4ae8dfce161edcf1f3b344f4a4bed2ed252ec313297ce27da1a",
+  "expectedSourceBytes": 22640,
+  "generatedAtJST": "2026-10-17T09:03:57+09:00",
+  "error": "GitHub create_file for complete runs/2026-10-17/source.json was rejected: This tool call was blocked by OpenAI's safety checks. Confirmed 404 for remote outbox and main source after the rejection. Per checkpoint-first policy, main promotion was not attempted. Local stage and restore matched, but there is no remotely recoverable complete source.",
+  "requestSubmitted": false,
+  "upstreamTargetVerified": false,
+  "nextStep": "Do not claim automatic recovery from local path or transcript. Requires an authorized subsequent run with the exact complete original; do not regenerate or copy another day's source.",
+  "updatedAt": "2026-10-17T00:09:53.956Z"
+}
