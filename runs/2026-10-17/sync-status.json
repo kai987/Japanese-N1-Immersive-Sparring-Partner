@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-10-17",
   "day": 49,
-  "status": "validating",
-  "stage": "validating",
+  "status": "published",
+  "stage": "published",
   "sourceSavedOnMain": true,
   "sourceCheckpointVerified": true,
   "expectedSourceSha256": "212a95697b51e4ae8dfce161edcf1f3b344f4a4bed2ed252ec313297ce27da1a",
@@ -12,8 +12,8 @@
   "error": null,
   "requestSubmitted": true,
   "upstreamTargetVerified": false,
-  "nextStep": "Verify exact canonical sync gates, final commit Pages and live target Day",
-  "updatedAt": "2026-10-18T14:40:13.413Z",
+  "nextStep": "Complete: target N1 source, canonical request, final Pages and live learning verified. Preserve originals and learning states; no duplicate handoff for audio recovery.",
+  "updatedAt": "2026-10-18T14:44:23.125Z",
   "sourceCommit": "c49a484a37168da2a37f8a302d3b3bfe32943162",
   "sourceBlobSha": "a3514097a34d525d5c1bfb69be3afd57fa8e999c",
   "sourceCheckpointBlobSha": "5afe8132c512ed2eceab35ae14ed3cf0ccf5b5fc",
@@ -26,7 +26,7 @@
     "completeProgressInventory": true,
     "observedAt": "2026-10-18T14:37:51.588Z"
   },
-  "reason": "earlier_pending_n1_date",
+  "reason": null,
   "sourceReady": true,
   "sourceOutboxBlobSha": "5afe8132c512ed2eceab35ae14ed3cf0ccf5b5fc",
   "sourceSha256": "212a95697b51e4ae8dfce161edcf1f3b344f4a4bed2ed252ec313297ce27da1a",
@@ -36,20 +36,8 @@
   "snapshotSha256": "03d79aea751dc9cba90b37122d96b5e0ed44ca1c62396353235667abb4e35d06",
   "issueNumber": 67,
   "totalDays": 68,
-  "blockedBy": {
-    "date": "2026-10-16",
-    "stage": "waiting_upstream",
-    "status": "waiting_upstream",
-    "requestSubmitted": false
-  },
-  "pendingEarlierDates": [
-    {
-      "date": "2026-10-16",
-      "stage": "waiting_upstream",
-      "status": "waiting_upstream",
-      "requestSubmitted": false
-    }
-  ],
+  "blockedBy": null,
+  "pendingEarlierDates": [],
   "observedRequestDate": "2026-10-15",
   "requestDraftBlobSha": "bd4375141196274a2b4c1be86fc1534b9dcb7c7b",
   "rawC4": {
@@ -63,5 +51,90 @@
     "reviewGrammar": 7
   },
   "requestCommit": "0afb6878713c440b2af9e6d64bf1f8ad4fd0f99a",
-  "requestBlobSha": "bd4375141196274a2b4c1be86fc1534b9dcb7c7b"
+  "requestBlobSha": "bd4375141196274a2b4c1be86fc1534b9dcb7c7b",
+  "syncRunId": 39137033600,
+  "releaseCommit": "b38618f891e30fe17a8c49353a52e11f1bfa6642",
+  "pagesRunId": 39137163272,
+  "storedSnapshotSha256": "2bb21665e8d56c4fe74223f4542f717af634877bbdc33744678d9e1b28fed253",
+  "verification": {
+    "originalMatchesOutbox": true,
+    "dailyMatchesRequest": true,
+    "fullSnapshotCanonicalImporterBytesEqual": true,
+    "fullGrammarDates": 68,
+    "upstreamSourceHashVerified": true,
+    "exactSyncGates": true,
+    "exactPages": true,
+    "liveAssets": {
+      "targetDate": "2026-10-17",
+      "releaseCommit": "b38618f891e30fe17a8c49353a52e11f1bfa6642",
+      "pagesRunId": 39137163272,
+      "artifactByteHashes": true,
+      "assets": [
+        {
+          "path": "index.html",
+          "sha256": "f07e716e0fe54309daab7e0617d871b60ba9442a6c04821467ae572a57c37ef8",
+          "bytes": 1596
+        },
+        {
+          "path": "assets/LiveReactions-BsNLJgSR.css",
+          "sha256": "1b3933ecb7c5675b05b217aa76300036378af6d1d907643a42ab6eaf1e9aca52",
+          "bytes": 7155
+        },
+        {
+          "path": "assets/LiveReactions-YR74KRwo.js",
+          "sha256": "6f650c8cfafa6e6a77f0db7ba55e161f47d5590c6d19954105f1412c7b60f25e",
+          "bytes": 48317
+        },
+        {
+          "path": "assets/index-Bzo3HEps.css",
+          "sha256": "0faad935774f798fecac3753fbc0a21da0276af998fe14b972677937da7a81ad",
+          "bytes": 34653
+        },
+        {
+          "path": "assets/index-CsXPYDgV.js",
+          "sha256": "f880a464db50f936a651d27d0c1849bc08633cbc7df9fd6bf4a9af60b8a4b722",
+          "bytes": 4582493
+        }
+      ],
+      "verifiedAt": "2026-10-18T14:43:41.640Z"
+    },
+    "liveUI": {
+      "identity": {
+        "title": "N1 Immersive Sparring Partner",
+        "actualUrl": "https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/",
+        "date": "2026年10月17日(土)\nDay 49 · 99日N1計画",
+        "titleText": "マウスでは使えるのに、キーボードでは使えない（第67号）"
+      },
+      "vocabulary": {
+        "new": 10,
+        "review": 10,
+        "total": 20,
+        "allDetailedCardsChecked": true,
+        "frequencyDenominator": 68
+      },
+      "grammar": {
+        "new": 1,
+        "review": 7,
+        "total": 8,
+        "allDisplayedDetailedFieldsChecked": true,
+        "sourceMetadataRetainedInData": true,
+        "sourceMetadataVisibleInExistingUI": false
+      },
+      "reading": {
+        "originalText": true,
+        "fourOriginalOptions": true,
+        "noPrematureAnswer": true
+      },
+      "review": {
+        "fiveOriginalQuestions": true
+      },
+      "renderHealth": {
+        "notBlank": true,
+        "noFrameworkOverlay": true,
+        "pageErrors": [],
+        "consoleErrorsOrWarnings": [],
+        "mobileNoOverflow": true
+      }
+    }
+  }
 }
