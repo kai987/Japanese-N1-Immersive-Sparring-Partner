@@ -141,7 +141,7 @@ test('choosing C for every lesson is no longer a perfect score', async ({ page }
 test('search and mobile Japanese reading remain usable in dark mode', async ({ page }, testInfo) => {
   const logs: string[] = []; page.on('console', message => { if (['error', 'warning'].includes(message.type())) logs.push(message.text()) })
   await page.goto('/')
-  await page.getByRole('textbox', { name: '毎日のN1教材を検索' }).fill('かんかつ')
+  await page.getByRole('textbox', { name: '全站搜索' }).fill('かんかつ')
   // New daily review questions legitimately add search hits. Select the vocabulary
   // result by its meaning, not a fixed historical count or the first overall hit.
   const vocabularyResult = page.locator('.daily-search-result').filter({

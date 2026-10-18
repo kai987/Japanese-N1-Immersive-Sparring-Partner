@@ -1,4 +1,6 @@
 import type { LiveReactionGroup } from '../data/live-reactions.ts'
+import type { LiveUnitGroup } from '../data/live-reaction-units.ts'
+import { getSearchTerms, normalizeSearchText } from './searchHighlight.ts'
 
 export type LiveStatus = 'new' | 'review' | 'mastered'
 export interface LiveProgress { version: 1; groups: Record<string, LiveStatus> }
@@ -17,11 +19,13 @@ export function decodeLiveProgress(input: unknown): { value: LiveProgress; recov
   }
 }
 
-export function matchesLiveGroup(group: LiveReactionGroup, query: string): boolean {
-  const normalize = (text: string) => text.normalize('NFKC').toLowerCase()
-  const words = normalize(query).trim().split(/\s+/).filter(Boolean)
-  const text = normalize([group.title, group.subtitle, ...group.points,
+export function liveGroupSearchFields(group: LiveReactionGroup & Partial<Pick<LiveUnitGroup, 'source'>>): string[] {
+  return [group.title, group.subtitle, ...group.points,
     ...group.entries.flatMap(item => [item.expression, item.reading, item.meaning, item.note ?? '']),
-    ...group.examples.flatMap(item => [item.japanese, item.chinese])].join(' '))
-  return words.every(word => text.includes(word))
+    ...group.examples.flatMap(item => [item.japanese, item.chinese]),
+    ...(group.source ? [group.source.quote, group.source.translation] : [])]
+}
+export function matchesLiveGroup(group: LiveReactionGroup, query: string): boolean {
+  const fields = liveGroupSearchFields(group).map(normalizeSearchText)
+  return getSearchTerms(query).every(word => fields.some(text => text.includes(word)))
 }

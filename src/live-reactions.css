@@ -11,12 +11,11 @@
 .live-summary strong { font-size: 26px; font-variant-numeric: tabular-nums; }
 .live-summary small { font-size: 12px; font-weight: 400; color: var(--text-soft); }
 .live-progress-note { color: var(--text-soft); font-size: 12px; line-height: 1.8; margin: 0 0 28px; }
-.live-toolbar { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 16px; }
+.live-toolbar { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
 .live-toolbar label { display: grid; gap: 8px; min-width: 0; }
 .live-toolbar label > span { font-size: 12px; font-weight: 700; color: var(--text-soft); }
-.live-toolbar input, .live-toolbar select { width: 100%; min-width: 0; min-height: 44px; padding: 11px 12px; font: inherit; font-size: 14px; border: 1px solid var(--border-strong); border-radius: 9px; background: var(--surface); color: var(--text); }
-.live-toolbar input::placeholder { color: var(--text-soft); opacity: .85; }
-.live-toolbar input:focus-visible, .live-toolbar select:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.live-toolbar select { width: 100%; min-width: 0; min-height: 44px; padding: 11px 12px; font: inherit; font-size: 14px; border: 1px solid var(--border-strong); border-radius: 9px; background: var(--surface); color: var(--text); }
+.live-toolbar select:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .live-filter-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin: 16px 0 24px; }
 .live-status-filters { display: flex; gap: 6px; flex-wrap: wrap; }
 .live-status-filters button { border: 1px solid var(--border); background: var(--surface); border-radius: 8px; padding: 9px 12px; min-height: 40px; font-size: 12px; cursor: pointer; color: var(--text-soft); }
@@ -69,5 +68,5 @@
   .live-entry dt strong { font-size: 17px; }
   .live-group-detail { padding: 20px 16px; }
   .live-card-footer { margin: 0 16px; }
-  .live-toolbar input, .live-toolbar select { font-size: 16px; }
+  .live-toolbar select { font-size: 16px; }
 }

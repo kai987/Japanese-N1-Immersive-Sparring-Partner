@@ -117,7 +117,7 @@
 }
 
 .daily-search-result:last-of-type { border-bottom: 0; }
-.daily-search-result:hover, .daily-search-result:focus-visible { background: var(--surface-2); }
+.daily-search-result:hover, .daily-search-result:focus-visible, .daily-search-result.is-selected { background: var(--surface-2); }
 
 .daily-search-date b { display: block; color: var(--text); font-size: 12px; }
 .daily-search-date small { display: block; color: var(--muted); font-size: 9px; margin-top: 3px; }
@@ -170,3 +170,19 @@
   .daily-search-body strong { font-size: 11px; }
   .daily-search-body small { font-size: 10px; }
 }
+
+.project-search-group > h2 { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin: 0; padding: 10px; font-size: 12px; color: var(--accent); background: var(--surface-2); border-radius: 5px; }
+.project-search-group > h2 small { color: var(--muted); font-size: 10px; font-weight: 400; }
+.project-search-group + .project-search-group { margin-top: 8px; }
+.search-hit { background: #f1df99; color: var(--text); border-radius: 2px; padding: 0; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.app[data-theme="dark"] .search-hit { background: #625326; color: #fff5cc; }
+@media (max-width: 680px) {
+  .live-topbar-label { grid-column: 2; grid-row: 1; min-width: 0; }
+  .daily-search input { font-size: 16px; }
+}
+
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+
+.lesson-search-hit.is-current { background: #e9bc68; outline: 2px solid #8d5915; outline-offset: 2px; }
+.app[data-theme="dark"] .lesson-search-hit.is-current { background: #8b5b20; color: #fff8df; outline-color: #f2cb70; }
+[id^="grammar-"]:focus, [id^="review-"]:focus, [id^="immersion-"]:focus, [id^="reading-"]:focus, #lesson-theme:focus { outline: 2px solid var(--accent-2); outline-offset: 4px; }

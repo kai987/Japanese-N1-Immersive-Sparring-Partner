@@ -1,7 +1,9 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { liveCategories, liveUnits, liveUnitFromSearch, type LiveCategory } from '../data/live-reaction-units'
 import { useLocalStorage } from '../hooks/useLocalStorage'
 import { decodeLiveProgress, initialLiveProgress, liveProgressKey, matchesLiveGroup, type LiveStatus } from '../lib/liveReactions'
+import type { LiveSearchResult } from '../lib/projectSearch'
+import { SearchHighlight } from './SearchHighlight'
 import '../live-reactions.css'
 import '../live-units.css'
 
@@ -10,9 +12,13 @@ const statusFilters: { value: 'all' | LiveStatus; label: string }[] = [
   { value: 'review', label: '要復習' }, { value: 'mastered', label: '習得済み' },
 ]
 
-export default function LiveReactions() {
+export default function LiveReactions({ query, composing, onClear, searchTarget, onTargetLocated }: {
+  query: string; composing: boolean; onClear: () => void
+  searchTarget: (LiveSearchResult & { token: number }) | null; onTargetLocated: () => void
+}) {
   const [unitId, setUnitId] = useState(() => liveUnitFromSearch(window.location.search).id)
-  const [query, setQuery] = useState('')
+  const locatedTargetRef = useRef<number | null>(null)
+  const highlight = (text: string) => <SearchHighlight text={text} query={query} />
   const [groupId, setGroupId] = useState('all')
   const [category, setCategory] = useState<'all' | LiveCategory>('all')
   const [filter, setFilter] = useState<'all' | LiveStatus>('all')
@@ -24,8 +30,8 @@ export default function LiveReactions() {
   const categoryGroups = groups.filter(group => category === 'all' || group.category === category)
   const visible = categoryGroups.filter(group => (groupId === 'all' || group.id === groupId)
     && (filter === 'all' || (progress.groups[group.id] ?? 'new') === filter)
-    && matchesLiveGroup(group.source ? { ...group, points: [...group.points, group.source.quote, group.source.translation] } : group, query))
-  const resetFilters = () => { setQuery(''); setGroupId('all'); setFilter('all'); setCategory('all') }
+    && matchesLiveGroup(group, query))
+  const resetFilters = () => { onClear(); setGroupId('all'); setFilter('all'); setCategory('all') }
   const chooseUnit = (id: string) => { setUnitId(id); resetFilters() }
   const toggleStatus = (id: string, next: LiveStatus) => setProgress(prev => ({ version: 1,
     groups: { ...prev.groups, [id]: prev.groups[id] === next ? 'new' : next } }))
@@ -35,6 +41,26 @@ export default function LiveReactions() {
     url.searchParams.set('live-unit', unitId)
     if (url.href !== window.location.href) window.history.replaceState(window.history.state, '', url)
   }, [unitId])
+
+  useEffect(() => {
+    if (!searchTarget) return
+    setUnitId(searchTarget.unitId)
+    setGroupId('all'); setFilter('all'); setCategory('all')
+  }, [searchTarget])
+  useEffect(() => {
+    if (!searchTarget || composing || unitId !== searchTarget.unitId || locatedTargetRef.current === searchTarget.token) return
+    const frame = window.requestAnimationFrame(() => {
+      const card = document.querySelector<HTMLElement>(`[data-live-group="${CSS.escape(searchTarget.groupId)}"]`)
+      if (!card) return
+      locatedTargetRef.current = searchTarget.token
+      const target = card.querySelector('mark.search-hit') ?? card
+      target.scrollIntoView({ block: 'center', behavior: 'instant' })
+      const top = document.querySelector('.topbar')?.getBoundingClientRect().bottom ?? 0
+      if (target.getBoundingClientRect().top < top + 16) window.scrollBy({ top: target.getBoundingClientRect().top - top - 16, behavior: 'instant' })
+      onTargetLocated()
+    })
+    return () => window.cancelAnimationFrame(frame)
+  }, [searchTarget, unitId, groupId, filter, category, composing])
 
   return <section className="page-enter live-page" aria-labelledby="live-title" data-live-unit={unit.id}>
     <header className="live-header">
@@ -68,7 +94,6 @@ export default function LiveReactions() {
       </button>)}
     </div>
     <div className="live-toolbar">
-      <label className="live-search"><span>搜索本页笔记</span><input type="search" aria-label="搜索本页笔记" value={query} onChange={event => setQuery(event.target.value)} placeholder="在当前单元搜索日语、读音或中文" /></label>
       <label className="live-group-select"><span>选择知识组</span><select aria-label="选择知识组" value={groupId} onChange={event => setGroupId(event.target.value)}>
         <option value="all">全部 {categoryGroups.length} 组</option>
         {categoryGroups.map(group => <option key={group.id} value={group.id}>{String(groups.indexOf(group) + 1).padStart(2, '0')} · {group.title}</option>)}
@@ -85,17 +110,17 @@ export default function LiveReactions() {
         const index = groups.indexOf(group)
         const status = progress.groups[group.id] ?? 'new'
         return <article className="live-group-card" key={group.id} data-live-group={group.id} data-category={group.category} aria-labelledby={`${group.id}-title`}>
-          <header className="live-group-heading"><span className="live-group-number">{String(index + 1).padStart(2, '0')}</span><div><h2 id={`${group.id}-title`}>{group.title}</h2><p>{group.subtitle}</p><span className="live-category-caption">{liveCategories.find(item => item.id === group.category)?.label}{group.supplement ? ' · 补充辨析' : ''}</span></div><span className="tag">{group.entries.length} 条</span></header>
-          {group.source ? <blockquote className="live-source-quote"><div>{group.source.kind === 'manga' ? `漫画原句 · ${group.source.label}` : group.source.label}</div><p lang="ja">{group.source.quote}</p><p lang="zh-CN">{group.source.translation}</p></blockquote> : null}
+          <header className="live-group-heading"><span className="live-group-number">{String(index + 1).padStart(2, '0')}</span><div><h2 id={`${group.id}-title`}>{highlight(group.title)}</h2><p>{highlight(group.subtitle)}</p><span className="live-category-caption">{liveCategories.find(item => item.id === group.category)?.label}{group.supplement ? ' · 补充辨析' : ''}</span></div><span className="tag">{group.entries.length} 条</span></header>
+          {group.source ? <blockquote className="live-source-quote"><div>{group.source.kind === 'manga' ? `漫画原句 · ${group.source.label}` : group.source.label}</div><p lang="ja">{highlight(group.source.quote)}</p><p lang="zh-CN">{highlight(group.source.translation)}</p></blockquote> : null}
           <dl className="live-entries">{group.entries.map(item => <div className="live-entry" key={item.expression}>
-            <dt><strong lang="ja">{item.expression}</strong>{item.reading !== item.expression ? <span className="live-reading" lang="ja">{item.reading}</span> : null}</dt>
-            <dd><p lang="zh-CN">{item.meaning}</p>{item.note ? <p className="live-entry-note" lang="zh-CN">{item.note}</p> : null}</dd>
+            <dt><strong lang="ja">{highlight(item.expression)}</strong>{item.reading !== item.expression ? <span className="live-reading" lang="ja">{highlight(item.reading)}</span> : null}</dt>
+            <dd><p lang="zh-CN">{highlight(item.meaning)}</p>{item.note ? <p className="live-entry-note" lang="zh-CN">{highlight(item.note)}</p> : null}</dd>
           </div>)}</dl>
           <div className="live-group-detail">
-            <div className="live-points"><h3>用法与辨析</h3>{group.points.map(point => <p key={point}>{point}</p>)}</div>
-            <div className="live-examples"><h3>{group.source ? '学习例句 · 日中对照' : '例句 · 日中对照'}</h3>{group.examples.map(example => <div className="example-box" key={example.japanese}><p lang="ja">{example.japanese}</p><span lang="zh-CN">{example.chinese}</span></div>)}</div>
+            <div className="live-points"><h3>用法与辨析</h3>{group.points.map(point => <p key={point}>{highlight(point)}</p>)}</div>
+            <div className="live-examples"><h3>{group.source ? '学习例句 · 日中对照' : '例句 · 日中对照'}</h3>{group.examples.map(example => <div className="example-box" key={example.japanese}><p lang="ja">{highlight(example.japanese)}</p><span lang="zh-CN">{highlight(example.chinese)}</span></div>)}</div>
           </div>
-          <div className="live-card-footer"><span>{status === 'mastered' ? '已标记掌握' : status === 'review' ? '已加入本页复习' : '尚未标记'}</span><div className="status-actions" role="group" aria-label={`${group.title}的学习状态`}>
+          <div className="live-card-footer"><span>{status === 'mastered' ? '已标记掌握' : status === 'review' ? '已加入本页复习' : '尚未标记'}</span><div className="status-actions" role="group" aria-label={`${highlight(group.title)}的学习状态`}>
             <button className={status === 'review' ? 'status-btn active review' : 'status-btn'} aria-pressed={status === 'review'} onClick={() => toggleStatus(group.id, 'review')}>要復習</button>
             <button className={status === 'mastered' ? 'status-btn active mastered' : 'status-btn'} aria-pressed={status === 'mastered'} onClick={() => toggleStatus(group.id, 'mastered')}>習得済み</button>
           </div></div>

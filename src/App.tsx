@@ -1,5 +1,7 @@
-import { Fragment, lazy, Suspense, useEffect, useMemo, useState, type ReactNode } from 'react'
-import { DailySearch } from './components/DailySearch'
+import { Fragment, lazy, Suspense, useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
+import { ProjectSearch } from './components/ProjectSearch'
+import { SearchHighlight } from './components/SearchHighlight'
+import type { ProjectSearchResult, LiveSearchResult, LessonSearchResult } from './lib/projectSearch'
 import { DateDropdown } from './components/DateDropdown'
 import { getLessonByDate, historyItems, lesson as latestLesson, reviewFocusByDate } from './data/history'
 import { useLocalStorage } from './hooks/useLocalStorage'
@@ -8,14 +10,19 @@ import { ReadingExercise } from './components/ReadingExercise'
 import { initialProgress, decodeProgress, decodeCompleted, decodeTheme, recordStudy, streakFor, tokyoDate } from './lib/progress'
 import './history.css'
 import './study-reference.css'
+import './compound-verbs.css'
+import { compoundSeriesFromHash, getCompoundSeriesForWord } from './lib/compoundVerbs'
+import type { CompoundVocabularyOrigin } from './components/CompoundVerbs'
 import { StudyReference, ReviewEvidence } from './components/StudyReference'
 
+const CompoundVerbs = lazy(() => import('./components/CompoundVerbs'))
 const LiveReactions = lazy(() => import('./components/LiveReactions'))
 
 const navigation: { id: SectionId; label: string; short: string }[] = [
   { id: 'today', label: '今日の学習', short: '今日' },
   { id: 'immersion', label: '没入読解', short: '没入' },
   { id: 'vocabulary', label: 'N1 語彙', short: '語彙' },
+  { id: 'compound-verbs', label: '複合動詞', short: '複合' },
   { id: 'grammar', label: 'N1 文法', short: '文法' },
   { id: 'reading', label: '読解練習', short: '読解' },
   { id: 'review', label: '誤答復習', short: '復習' },
@@ -86,7 +93,27 @@ function SectionHeader({ eyebrow, title, description }: { eyebrow: string; title
 }
 
 export default function App() {
-  const [active, setActive] = useState<SectionId>(() => window.location.hash === '#live-reactions' ? 'live-reactions' : 'today')
+  const [active, setActive] = useState<SectionId>(() => compoundSeriesFromHash(window.location.hash) ? 'compound-verbs' : window.location.hash === '#live-reactions' ? 'live-reactions' : 'today')
+  const [compoundSeriesId, setCompoundSeriesId] = useState(() => compoundSeriesFromHash(window.location.hash) ?? 'au')
+  const [compoundOrigin, setCompoundOrigin] = useState<CompoundVocabularyOrigin | null>(null)
+  const [searchQuery, setSearchQuery] = useState('')
+  const [contentQuery, setContentQuery] = useState('')
+  const [searchComposing, setSearchComposing] = useState(false)
+  const [searchLocated, setSearchLocated] = useState(0)
+  const [searchSelection, setSearchSelection] = useState(0)
+  const [searchStep, setSearchStep] = useState({ id: 0, direction: 1 })
+  const [liveSearchTarget, setLiveSearchTarget] = useState<(LiveSearchResult & { token: number }) | null>(null)
+  const locatedLessonRef = useRef<LessonSearchResult | null>(null)
+  const [lessonSearchTarget, setLessonSearchTarget] = useState<(LessonSearchResult & { query: string }) | null>(null)
+  const changeSearch = (query: string, composing = false) => {
+    setSearchQuery(query)
+    setSearchComposing(composing)
+    if (!composing) {
+      setContentQuery(query)
+      if (lessonSearchTarget && query !== lessonSearchTarget.query) setLessonSearchTarget(null)
+    }
+  }
+  const [returnVocabularyId, setReturnVocabularyId] = useState<string | null>(null)
   const [selectedDate, setSelectedDate] = useState(latestLesson.date)
   const [readingMode, setReadingMode] = useState<ReadingMode>('japanese')
   const [mobileNavOpen, setMobileNavOpen] = useState(false)
@@ -97,10 +124,33 @@ export default function App() {
   const [today, setToday] = useState(tokyoDate)
   useEffect(() => {
     const url = new URL(window.location.href)
-    if (active === 'live-reactions') url.hash = 'live-reactions'
-    else if (url.hash === '#live-reactions') url.hash = ''
+    if (active === 'compound-verbs') url.hash = `compound-verbs/${compoundSeriesId}`
+    else if (active === 'live-reactions') url.hash = 'live-reactions'
+    else if (url.hash === '#live-reactions' || url.hash.startsWith('#compound-verbs')) url.hash = ''
     if (url.href !== window.location.href) window.history.replaceState(window.history.state, '', url)
-  }, [active])
+  }, [active, compoundSeriesId])
+  useEffect(() => {
+    const onHashChange = () => {
+      setLiveSearchTarget(null)
+      setLessonSearchTarget(null)
+      const id = compoundSeriesFromHash(window.location.hash)
+      if (id) { setCompoundSeriesId(id); setCompoundOrigin(null); setActive('compound-verbs') }
+      else if (window.location.hash === '#live-reactions') setActive('live-reactions')
+      else setActive(section => section === 'compound-verbs' || section === 'live-reactions' ? 'today' : section)
+    }
+    window.addEventListener('hashchange', onHashChange)
+    return () => window.removeEventListener('hashchange', onHashChange)
+  }, [])
+  useEffect(() => {
+    if (active !== 'vocabulary' || !returnVocabularyId) return
+    const frame = window.requestAnimationFrame(() => {
+      const card = document.getElementById(`vocabulary-${returnVocabularyId}`)
+      card?.scrollIntoView({ block: 'start', behavior: 'instant' })
+      card?.focus({ preventScroll: true })
+      setReturnVocabularyId(null)
+    })
+    return () => window.cancelAnimationFrame(frame)
+  }, [active, returnVocabularyId])
   useEffect(() => {
     const refresh = () => setToday(tokyoDate())
     const timer = window.setInterval(refresh, 60_000)
@@ -114,8 +164,37 @@ export default function App() {
   const streakDisplay = streakFor(progress.studyDates, today)
 
   useEffect(() => {
-    setReadingMode('japanese')
+    setReadingMode(lessonSearchTarget?.date === lesson.date ? lessonSearchTarget.readingMode ?? 'japanese' : 'japanese')
   }, [lesson.date])
+
+  const lessonHighlightQuery = lessonSearchTarget?.date === lesson.date && lessonSearchTarget.section === active && contentQuery === lessonSearchTarget.query ? contentQuery : ''
+  const highlight = (text: string) => <SearchHighlight text={text} query={lessonHighlightQuery} className="search-hit lesson-search-hit" />
+  useEffect(() => {
+    if (!lessonSearchTarget || searchComposing || !lessonHighlightQuery || locatedLessonRef.current === lessonSearchTarget) return
+    const frame = window.requestAnimationFrame(() => {
+      const section = document.getElementById(lessonSearchTarget.anchor)
+      if (!section) return
+      document.querySelectorAll('.lesson-search-hit.is-current').forEach(hit => { hit.classList.remove('is-current'); hit.removeAttribute('aria-current') })
+      const scope = lessonSearchTarget.readingMode === 'analysis' ? section.querySelector('.analysis-note') : lessonSearchTarget.readingMode === 'bilingual' ? section.querySelector('.zh-translation') : section
+      if (!scope) return
+      locatedLessonRef.current = lessonSearchTarget
+      const hit = scope.querySelector<HTMLElement>('mark.lesson-search-hit')
+      const target = hit ?? section
+      if (hit) { hit.classList.add('is-current'); hit.setAttribute('aria-current', 'true') }
+      // Skip the ordinary section-opening scroll-to-top and position the actual
+      // match after React has rendered the selected lesson and reading mode.
+      target.scrollIntoView({ block: hit ? 'center' : 'start', behavior: 'instant' })
+      const top = document.querySelector('.topbar')?.getBoundingClientRect().bottom ?? 0
+      const nav = document.querySelector('.mobile-bottom-nav')?.getBoundingClientRect()
+      const bottom = nav && nav.height > 0 ? nav.top : window.innerHeight
+      const rect = target.getBoundingClientRect()
+      if (rect.top < top + 12 || rect.bottom > bottom - 12) {
+        window.scrollBy({ top: rect.top - (top + 16), behavior: 'instant' })
+      }
+      section.focus({ preventScroll: true })
+    })
+    return () => window.cancelAnimationFrame(frame)
+  }, [lessonSearchTarget, lessonHighlightQuery, searchComposing, readingMode])
 
   const answered = progress.readingAnswers[lesson.reading.question.id]
   const answerIsCorrect = answered === lesson.reading.question.answer
@@ -144,16 +223,63 @@ export default function App() {
   }, [answered, answerIsCorrect, lesson, progress])
 
   const go = (section: SectionId) => {
+    setLessonSearchTarget(null)
+    setLiveSearchTarget(null)
     setActive(section)
     setMobileNavOpen(false)
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
+  const openCompoundSeries = (item: {id: string; word: string}) => {
+    const series = getCompoundSeriesForWord(item.word)[0]
+    if (!series) return
+    changeSearch('')
+    setCompoundSeriesId(series.id)
+    setCompoundOrigin({ date: lesson.date, id: item.id, word: item.word })
+    go('compound-verbs')
+  }
+
+  const returnToVocabulary = () => {
+    if (!compoundOrigin) return
+    setSelectedDate(compoundOrigin.date)
+    setReturnVocabularyId(compoundOrigin.id)
+    setActive('vocabulary')
+    setMobileNavOpen(false)
+  }
+
   const openLesson = (date: string, section: SectionId = 'today') => {
+    setLessonSearchTarget(null)
+    setLiveSearchTarget(null)
     setSelectedDate(date)
     setActive(section)
     setMobileNavOpen(false)
     window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  const openSearchResult = (result: ProjectSearchResult) => {
+    if (result.kind === 'lesson') {
+      setLiveSearchTarget(null)
+      setReturnVocabularyId(null)
+      setLessonSearchTarget({ ...result, query: contentQuery })
+      setSelectedDate(result.date)
+      setReadingMode(result.readingMode ?? 'japanese')
+      setActive(result.section)
+      setMobileNavOpen(false)
+    } else if (result.kind === 'compound') {
+      setLessonSearchTarget(null)
+      setLiveSearchTarget(null)
+      setCompoundSeriesId(result.seriesId)
+      setCompoundOrigin(null)
+      setSearchSelection(count => count + 1)
+      setActive('compound-verbs')
+      setMobileNavOpen(false)
+    } else {
+      setLessonSearchTarget(null)
+      setSearchSelection(count => count + 1)
+      setLiveSearchTarget({ ...result, token: searchSelection + 1 })
+      setActive('live-reactions')
+      setMobileNavOpen(false)
+    }
   }
 
   const updateStatus = (kind: 'vocab' | 'grammar', id: string, status: LearningStatus) => {
@@ -190,7 +316,7 @@ export default function App() {
         <nav className="side-nav" aria-label="メインナビゲーション">
           {navigation.map((item) => (
             <button key={item.id} className={active === item.id ? 'nav-item active' : 'nav-item'} aria-current={active === item.id ? 'page' : undefined} onClick={() => go(item.id)}>
-              <span className="nav-icon"><Icon name={item.id === 'live-reactions' ? 'live' : item.id === 'today' ? 'spark' : item.id === 'history' ? 'history' : item.id === 'reading' ? 'pen' : item.id === 'review' ? 'target' : 'book'} size={18} /></span>
+              <span className="nav-icon"><Icon name={item.id === 'compound-verbs' ? 'layers' : item.id === 'live-reactions' ? 'live' : item.id === 'today' ? 'spark' : item.id === 'history' ? 'history' : item.id === 'reading' ? 'pen' : item.id === 'review' ? 'target' : 'book'} size={18} /></span>
               <span>{item.label}</span>
             </button>
           ))}
@@ -210,12 +336,11 @@ export default function App() {
       <main className="main">
         <header className="topbar">
           <button className="mobile-menu" onClick={() => setMobileNavOpen(true)} aria-label="ナビゲーションを開く"><Icon name="menu" /></button>
-          {active === 'live-reactions' ? <div className="live-topbar-label"><strong>直播条反</strong><small>独立知识库 · 日中对照</small></div> : <>
-            <DateDropdown date={lesson.date} day={lesson.day} activeSection={active} onOpen={openLesson} />
-            <DailySearch onOpen={openLesson} />
-          </>}
+          {active === 'compound-verbs' ? <div className="compound-topbar-label"><strong>複合動詞</strong><small>構造と意味から広げる</small></div> : active === 'live-reactions' ? <div className="live-topbar-label"><strong>直播条反</strong><small>独立知识库 · 日中对照</small></div> : <DateDropdown date={lesson.date} day={lesson.day} activeSection={active} onOpen={openLesson} />}
+          <ProjectSearch query={searchQuery} contentQuery={contentQuery} onChange={changeSearch} onOpen={openSearchResult} located={searchLocated}
+            onNavigateMatches={active === 'compound-verbs' ? direction => setSearchStep(step => ({ id: step.id + 1, direction })) : undefined} />
           <div className="topbar-actions">
-            <div className="quiet-stat"><Icon name={active === 'live-reactions' ? 'book' : 'clock'} size={17} /><span>{active === 'live-reactions' ? '直播笔记' : `約 ${lesson.estimatedMinutes} 分`}</span></div>
+            <div className="quiet-stat"><Icon name={active === 'live-reactions' || active === 'compound-verbs' ? 'book' : 'clock'} size={17} /><span>{active === 'compound-verbs' ? '語彙を広げる' : active === 'live-reactions' ? '直播笔记' : `約 ${lesson.estimatedMinutes} 分`}</span></div>
             <button className="icon-button" onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')} aria-label="読解テーマを切り替える"><Icon name={theme === 'light' ? 'moon' : 'sun'} size={18} /></button>
           </div>
         </header>
@@ -228,7 +353,10 @@ export default function App() {
             <p>保存データの一部を読み込めなかったため、その部分を初期状態に戻しました。読み込めた学習記録は保持しています。</p>
             <button className="text-btn" onClick={() => storageStates.forEach(state => state.dismiss())}>閉じる</button>
           </div> : null}
-          {active === 'live-reactions' && <Suspense fallback={<p role="status">正在加载直播笔记…</p>}><LiveReactions /></Suspense>}
+          {active === 'compound-verbs' && <Suspense fallback={<p role="status">複合動詞を読み込んでいます…</p>}><CompoundVerbs selectedId={compoundSeriesId} onSelect={setCompoundSeriesId} origin={compoundOrigin} onReturn={returnToVocabulary}
+            query={contentQuery} composing={searchComposing} onClear={() => changeSearch('')}
+            selectionToken={searchSelection} step={searchStep} onLocated={() => setSearchLocated(count => count + 1)} /></Suspense>}
+          {active === 'live-reactions' && <Suspense fallback={<p role="status">正在加载直播笔记…</p>}><LiveReactions query={contentQuery} composing={searchComposing} onClear={() => changeSearch('')} searchTarget={liveSearchTarget} onTargetLocated={() => setLiveSearchTarget(null)} /></Suspense>}
           {active === 'today' && (
             <div className="page-enter">
               {!isLatest ? (
@@ -239,10 +367,10 @@ export default function App() {
               ) : null}
 
               <section className="hero">
-                <div className="hero-copy">
+                <div className="hero-copy" id="lesson-theme" tabIndex={-1}>
                   <div className="day-label">{lesson.date === today ? '今日のテーマ' : `DAY ${lesson.day} · ARCHIVE`}</div>
-                  <h1>{lesson.title}{lesson.issueNumber ? `（第${lesson.issueNumber}号）` : null}</h1>
-                  <p>{lesson.subtitle}</p>
+                  <h1>{highlight(lesson.title)}{lesson.issueNumber ? `（第${lesson.issueNumber}号）` : null}</h1>
+                  <p>{highlight(lesson.subtitle)}</p>
                   {lesson.issueNumber && <small className="source-issue">IT/AI 日报第{lesson.issueNumber}号 · N1 学習計画 Day {lesson.day}（別の番号です）</small>}
                   <div className="hero-actions">
                     <button className="primary-btn" onClick={() => go('immersion')}>{isLatest ? '学習を始める' : 'この日の学習を開く'} <Icon name="arrow" size={17} /></button>
@@ -296,12 +424,12 @@ export default function App() {
               </div>
 
               <article className="reading-paper">
-                <div className="article-head"><span>N1 IMMERSION · DAY {lesson.day}</span><h1>{lesson.immersion.title}</h1></div>
+                <div className="article-head" id="immersion-title" tabIndex={-1}><span>N1 IMMERSION · DAY {lesson.day}</span><h1>{highlight(lesson.immersion.title)}</h1></div>
                 {lesson.immersion.paragraphs.map((p, index) => (
-                  <div className="paragraph-block" key={`${lesson.date}-${index}`}>
-                    <p className="jp-body">{p}</p>
-                    {readingMode === 'bilingual' ? <p className="zh-translation">{lesson.immersion.translations[index]}</p> : null}
-                    {readingMode === 'analysis' ? <div className="analysis-note"><span>POINT {index + 1}</span><p>{lesson.immersion.analysis[index]}</p></div> : null}
+                  <div className="paragraph-block" id={`immersion-paragraph-${index}`} tabIndex={-1} key={`${lesson.date}-${index}`}>
+                    <p className="jp-body">{highlight(p)}</p>
+                    {readingMode === 'bilingual' ? <p className="zh-translation">{highlight(lesson.immersion.translations[index])}</p> : null}
+                    {readingMode === 'analysis' ? <div className="analysis-note"><span>POINT {index + 1}</span><p>{highlight(lesson.immersion.analysis[index])}</p></div> : null}
                   </div>
                 ))}
                 <div className="article-finish">
@@ -322,19 +450,26 @@ export default function App() {
               <div className="learning-list">
                 {lesson.vocabulary.map((item, index) => {
                   const status = progress.vocab[item.id] ?? 'new'
+                  const hasCompoundSeries = getCompoundSeriesForWord(item.word).length > 0
                   return (
                     <Fragment key={item.id}>
                     {item.studyKind==='review' && (index===0 || lesson.vocabulary[index-1].studyKind!=='review') && <h2 className="review-group-title">本文で復習できる既習語彙</h2>}
-                    <article className="learning-card" data-study-kind={item.studyKind}>
+                    <article className="learning-card" data-study-kind={item.studyKind} data-vocabulary-id={item.id} id={`vocabulary-${item.id}`} tabIndex={-1}>
                       <div className="card-index">{String(index + 1).padStart(2, '0')}</div>
                       <div className="card-content">
-                        <div className="word-line"><div><h3>{item.word}</h3><span className="reading">{item.reading}</span></div><span className="tag">{item.partOfSpeech}</span><StudyReference item={item} level={item.jlpt} /></div>
-                        <p className="meaning">{item.meaning}</p>
+                        <div className="word-line">
+                          <div className="vocabulary-heading"><h3>{highlight(item.word)}</h3><span className="reading">{highlight(item.reading)}</span></div>
+                          <div className="vocabulary-meta"><StudyReference item={item} level={item.jlpt} leadingTags={<>
+                            {hasCompoundSeries ? <button className="compound-verb-tag" onClick={() => openCompoundSeries(item)} aria-label={`${item.word}の複合動詞シリーズを開く`}>複合動詞</button> : null}
+                            <span className="tag">{highlight(item.partOfSpeech)}</span>
+                          </>} /></div>
+                        </div>
+                        <p className="meaning">{highlight(item.meaning)}</p>
                         <ReviewEvidence item={item} />
-                        <div className="example-box"><p>{item.example}</p><span>{item.translation}</span></div>
+                        <div className="example-box"><p>{highlight(item.example)}</p><span>{highlight(item.translation)}</span></div>
                         <div className="detail-grid">
-                          <div><span className="detail-label">よく使う組み合わせ</span><div className="collocations">{item.collocations.map((c) => <span key={c}>{c}</span>)}</div></div>
-                          <div><span className="detail-label">ニュアンス</span><p>{item.nuance}</p></div>
+                          <div><span className="detail-label">よく使う組み合わせ</span><div className="collocations">{item.collocations.map((c) => <span key={c}>{highlight(c)}</span>)}</div></div>
+                          <div><span className="detail-label">ニュアンス</span><p>{highlight(item.nuance)}</p></div>
                         </div>
                         <StatusButton status={status} onChange={(next) => updateStatus('vocab', item.id, next)} />
                       </div>
@@ -358,15 +493,15 @@ export default function App() {
                   return (
                     <Fragment key={item.id}>
                     {item.studyKind==='review' && (index===0 || lesson.grammar[index-1].studyKind!=='review') && <h2 className="review-group-title">本文で復習できる既習文法</h2>}
-                    <article className="learning-card" data-study-kind={item.studyKind}>
+                    <article className="learning-card" data-study-kind={item.studyKind} data-grammar-id={item.id} id={`grammar-${item.id}`} tabIndex={-1}>
                       <div className="card-index">{String(index + 1).padStart(2, '0')}</div>
                       <div className="card-content">
-                        <div className="grammar-top"><div><h3>{item.pattern}</h3><p className="meaning">{item.meaning}</p></div><StudyReference item={item} level={item.level ?? 'N1'} /><div className="frequency" title="読解・表現での実用度"><span>実用度</span><div>{[1,2,3,4,5].map((n) => <i key={n} className={n <= item.frequency ? 'on' : ''} />)}</div></div></div>
-                        <div className="grammar-meta"><span><b>接続</b>{item.form}</span><span><b>文体</b>{item.register}</span></div>
-                        <p className="grammar-explain">{item.explanation}</p>
+                        <div className="grammar-top"><div><h3>{highlight(item.pattern)}</h3><p className="meaning">{highlight(item.meaning)}</p></div><StudyReference item={item} level={item.level ?? 'N1'} /><div className="frequency" title="読解・表現での実用度"><span>実用度</span><div>{[1,2,3,4,5].map((n) => <i key={n} className={n <= item.frequency ? 'on' : ''} />)}</div></div></div>
+                        <div className="grammar-meta"><span><b>接続</b>{highlight(item.form)}</span><span><b>文体</b>{highlight(item.register)}</span></div>
+                        <p className="grammar-explain">{highlight(item.explanation)}</p>
                         <ReviewEvidence item={item} />
-                        <div className="example-box"><p>{item.example}</p><span>{item.translation}</span></div>
-                        <div className="compare-box"><span>類似表現との比較</span><p>{item.comparison}</p></div>
+                        <div className="example-box"><p>{highlight(item.example)}</p><span>{highlight(item.translation)}</span></div>
+                        <div className="compare-box"><span>類似表現との比較</span><p>{highlight(item.comparison)}</p></div>
                         <StatusButton status={status} onChange={(next) => updateStatus('grammar', item.id, next)} />
                       </div>
                     </article>
@@ -382,11 +517,11 @@ export default function App() {
             <div className="page-enter reading-page">
               <SectionHeader eyebrow="04" title="短文読解" description="筆者の主張・条件・逆接を確認してから、答えを選びましょう。" />
               <article className="reading-paper quiz-paper">
-                <div className="article-head"><span>JLPT N1 · 読解 · DAY {lesson.day}</span><h1>{lesson.reading.title}</h1></div>
-                {lesson.reading.paragraphs.map((p, index) => <p className="jp-body" key={`${lesson.date}-reading-${index}`}>{p}</p>)}
+                <div className="article-head" id="reading-title" tabIndex={-1}><span>JLPT N1 · 読解 · DAY {lesson.day}</span><h1>{highlight(lesson.reading.title)}</h1></div>
+                {lesson.reading.paragraphs.map((p, index) => <p className="jp-body" id={`reading-paragraph-${index}`} tabIndex={-1} key={`${lesson.date}-reading-${index}`}>{highlight(p)}</p>)}
                 <ReadingExercise key={lesson.reading.question.id} question={lesson.reading.question}
                   day={lesson.day} answered={answered} attempts={progress.readingAttempts[lesson.reading.question.id] ?? []}
-                  onSubmit={submitReading} />
+                  onSubmit={submitReading} searchQuery={lessonHighlightQuery} />
               </article>
             </div>
           )}
@@ -398,7 +533,7 @@ export default function App() {
                 <div className="empty-state"><div className="empty-icon"><Icon name="check" size={26} /></div><h3>この日の復習項目はありません</h3><p>語彙・文法で「要復習」を選ぶと追加されます。読解で間違えた問題もここに表示します。</p><button className="text-btn" onClick={() => go('vocabulary')}>学習へ</button></div>
               ) : (
                 <div className="review-list">
-                  {reviewItems.map((item, index) => <div className="review-row" key={`${item.type}-${item.title}-${index}`}><span className="review-number">{index + 1}</span><span className="review-type">{item.type}</span><div><strong>{item.title}</strong><p>{item.detail}</p></div>{item.section ? <button className="text-btn" onClick={() => go(item.section!)} aria-label={`${item.title}を復習する`}>復習する</button> : null}</div>)}
+                  {reviewItems.map((item, index) => <div className="review-row" id={`review-${index}`} tabIndex={-1} key={`${item.type}-${item.title}-${index}`}><span className="review-number">{index + 1}</span><span className="review-type">{item.type}</span><div><strong>{highlight(item.title)}</strong><p>{highlight(item.detail)}</p></div>{item.section ? <button className="text-btn" onClick={() => go(item.section!)} aria-label={`${item.title}を復習する`}>復習する</button> : null}</div>)}
                 </div>
               )}
               <section className="spaced-review">
@@ -438,7 +573,7 @@ export default function App() {
       </main>
 
       <nav className="mobile-bottom-nav" aria-label="モバイルクイックナビゲーション">
-        {navigation.slice(0, 5).map((item) => <button key={item.id} className={active === item.id ? 'active' : ''} onClick={() => go(item.id)}><span>{item.short}</span></button>)}
+        {navigation.filter(item => ['today', 'immersion', 'vocabulary', 'grammar', 'reading'].includes(item.id)).map((item) => <button key={item.id} className={active === item.id ? 'active' : ''} onClick={() => go(item.id)}><span>{item.short}</span></button>)}
       </nav>
     </div>
   )
