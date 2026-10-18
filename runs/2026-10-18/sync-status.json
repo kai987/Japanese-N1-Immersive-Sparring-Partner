@@ -22,8 +22,8 @@
   },
   "error": null,
   "lastError": null,
-  "nextStep": "Existing canonical N1 daily/recovery entrypoints must reconcile the earliest pending date before replacing the shared request. Preserve this exact original; then map the corresponding date against a verified covering snapshot.",
-  "updatedAt": "2026-10-18T04:40:50.104Z",
+  "nextStep": "Submit complete canonical request and verify exact sync/Pages/live date",
+  "updatedAt": "2026-10-18T14:46:45.508Z",
   "reason": "earlier_pending_n1_date",
   "sourceReady": true,
   "sourceOutboxBlobSha": "a51ee7358504a98315f8974af4d5df0c5db5806e",
@@ -54,5 +54,16 @@
       "requestSubmitted": false
     }
   ],
-  "observedRequestDate": "2026-10-15"
+  "observedRequestDate": "2026-10-15",
+  "requestDraftBlobSha": "0368055de561503dedb34dad059979dc1475d89b",
+  "rawC4": {
+    "newVocabulary": 10,
+    "newGrammar": 0
+  },
+  "display": {
+    "newVocabulary": 10,
+    "reviewVocabulary": 10,
+    "newGrammar": 0,
+    "reviewGrammar": 8
+  }
 }
