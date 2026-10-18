@@ -2,24 +2,26 @@
   "schemaVersion": 1,
   "targetDate": "2026-10-16",
   "day": 48,
-  "status": "waiting_request",
-  "stage": "waiting_request",
+  "status": "validating",
+  "stage": "validating",
   "sourceSavedOnMain": true,
   "sourceCheckpointVerified": true,
   "expectedSourceSha256": "8fd4ca1c1b622570aa28013df299dcedd4780f2254080a893a5e6a8c9b31882f",
   "expectedSourceBytes": 21316,
   "generatedAtJST": "2026-10-16T09:06:08+09:00",
   "error": null,
-  "requestSubmitted": false,
+  "requestSubmitted": true,
   "upstreamTargetVerified": false,
   "sourceObservation": {
+    "n1Main": "f5070da7123c68cbb7eccc43df0e2f26e8c98ee4",
     "mainSourceAbsent": false,
     "outboxAbsent": false,
-    "upstreamTargetDailyFilesAbsent": true,
-    "observedAt": "2026-10-16T04:44:09.475Z"
+    "completeMainInventory": true,
+    "completeProgressInventory": true,
+    "observedAt": "2026-10-18T14:25:39.808Z"
   },
-  "nextStep": "Submit complete canonical request and verify exact sync/Pages/live date",
-  "updatedAt": "2026-10-18T14:33:06.594Z",
+  "nextStep": "Verify exact canonical sync gates, final commit Pages and live target Day",
+  "updatedAt": "2026-10-18T14:33:12.195Z",
   "upstreamSourceCommit": "f06febc371feb92a303e6b6dc8436b267761e9d2",
   "sourcePagesRunId": 39097653219,
   "snapshotSha256": "03d79aea751dc9cba90b37122d96b5e0ed44ca1c62396353235667abb4e35d06",
@@ -40,5 +42,7 @@
     "reviewVocabulary": 8,
     "newGrammar": 2,
     "reviewGrammar": 6
-  }
+  },
+  "requestCommit": "dbd5ac4fd390914685a904efba7657203c975493",
+  "requestBlobSha": "8812a2196361bf0af6793ebf5b514f5a66db7955"
 }
