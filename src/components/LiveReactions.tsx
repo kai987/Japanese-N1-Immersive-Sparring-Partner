@@ -3,6 +3,8 @@ import { liveCategories, liveUnits, liveUnitFromSearch, type LiveCategory } from
 import { useLocalStorage } from '../hooks/useLocalStorage'
 import { decodeLiveProgress, initialLiveProgress, liveProgressKey, matchesLiveGroup, type LiveStatus } from '../lib/liveReactions'
 import type { LiveSearchResult } from '../lib/projectSearch'
+import { AudioButton, SentenceAudio } from './AudioButton'
+import { stopAudio } from '../lib/audioPlayer'
 import { SearchHighlight } from './SearchHighlight'
 import '../live-reactions.css'
 import '../live-units.css'
@@ -23,6 +25,7 @@ export default function LiveReactions({ query, composing, onClear, searchTarget,
   const [category, setCategory] = useState<'all' | LiveCategory>('all')
   const [filter, setFilter] = useState<'all' | LiveStatus>('all')
   const [progress, setProgress, storage] = useLocalStorage(liveProgressKey, initialLiveProgress, decodeLiveProgress)
+  useEffect(() => { stopAudio() }, [unitId, groupId, category, filter, query])
   const unit = liveUnits.find(item => item.id === unitId) ?? liveUnits[0]
   const groups = unit.groups
   const entries = groups.reduce((sum, group) => sum + group.entries.length, 0)
@@ -111,16 +114,16 @@ export default function LiveReactions({ query, composing, onClear, searchTarget,
         const status = progress.groups[group.id] ?? 'new'
         return <article className="live-group-card" key={group.id} data-live-group={group.id} data-category={group.category} aria-labelledby={`${group.id}-title`}>
           <header className="live-group-heading"><span className="live-group-number">{String(index + 1).padStart(2, '0')}</span><div><h2 id={`${group.id}-title`}>{highlight(group.title)}</h2><p>{highlight(group.subtitle)}</p><span className="live-category-caption">{liveCategories.find(item => item.id === group.category)?.label}{group.supplement ? ' · 补充辨析' : ''}</span></div><span className="tag">{group.entries.length} 条</span></header>
-          {group.source ? <blockquote className="live-source-quote"><div>{group.source.kind === 'manga' ? `漫画原句 · ${group.source.label}` : group.source.label}</div><p lang="ja">{highlight(group.source.quote)}</p><p lang="zh-CN">{highlight(group.source.translation)}</p></blockquote> : null}
+          {group.source ? <blockquote className="live-source-quote"><div>{group.source.kind === 'manga' ? `漫画原句 · ${group.source.label}` : group.source.label}</div><p lang="ja"><SentenceAudio text={group.source.quote} renderText={highlight} /></p><p lang="zh-CN">{highlight(group.source.translation)}</p></blockquote> : null}
           <dl className="live-entries">{group.entries.map(item => <div className="live-entry" key={item.expression}>
-            <dt><strong lang="ja">{highlight(item.expression)}</strong>{item.reading !== item.expression ? <span className="live-reading" lang="ja">{highlight(item.reading)}</span> : null}</dt>
+            <dt><strong lang="ja">{highlight(item.expression)}</strong>{item.reading !== item.expression ? <span className="live-reading" lang="ja">{highlight(item.reading)}</span> : null}<AudioButton text={item.expression} speechText={item.reading} /></dt>
             <dd><p lang="zh-CN">{highlight(item.meaning)}</p>{item.note ? <p className="live-entry-note" lang="zh-CN">{highlight(item.note)}</p> : null}</dd>
           </div>)}</dl>
           <div className="live-group-detail">
             <div className="live-points"><h3>用法与辨析</h3>{group.points.map(point => <p key={point}>{highlight(point)}</p>)}</div>
-            <div className="live-examples"><h3>{group.source ? '学习例句 · 日中对照' : '例句 · 日中对照'}</h3>{group.examples.map(example => <div className="example-box" key={example.japanese}><p lang="ja">{highlight(example.japanese)}</p><span lang="zh-CN">{highlight(example.chinese)}</span></div>)}</div>
+            <div className="live-examples"><h3>{group.source ? '学习例句 · 日中对照' : '例句 · 日中对照'}</h3>{group.examples.map(example => <div className="example-box" key={example.japanese}><p lang="ja"><SentenceAudio text={example.japanese} renderText={highlight} /></p><span lang="zh-CN">{highlight(example.chinese)}</span></div>)}</div>
           </div>
-          <div className="live-card-footer"><span>{status === 'mastered' ? '已标记掌握' : status === 'review' ? '已加入本页复习' : '尚未标记'}</span><div className="status-actions" role="group" aria-label={`${highlight(group.title)}的学习状态`}>
+          <div className="live-card-footer"><span>{status === 'mastered' ? '已标记掌握' : status === 'review' ? '已加入本页复习' : '尚未标记'}</span><div className="status-actions" role="group" aria-label={`${group.title}的学习状态`}>
             <button className={status === 'review' ? 'status-btn active review' : 'status-btn'} aria-pressed={status === 'review'} onClick={() => toggleStatus(group.id, 'review')}>要復習</button>
             <button className={status === 'mastered' ? 'status-btn active mastered' : 'status-btn'} aria-pressed={status === 'mastered'} onClick={() => toggleStatus(group.id, 'mastered')}>習得済み</button>
           </div></div>

@@ -1,7 +1,9 @@
 import { useEffect, useRef, useState } from 'react'
+import { stopAudio } from '../lib/audioPlayer'
 import { getSearchTerms } from '../lib/searchHighlight'
 import { compoundVerbSeries, getCompoundSeriesById, getCompoundSeriesForWord, searchCompoundSeries } from '../lib/compoundVerbs'
 
+import { AudioButton, SentenceAudio } from './AudioButton'
 import { SearchHighlight } from './SearchHighlight'
 
 const wordCount = new Set(compoundVerbSeries.flatMap(series => series.groups.flatMap(group => group.words.map(entry => entry.word)))).size
@@ -27,6 +29,8 @@ export default function CompoundVerbs({ selectedId, onSelect, origin, onReturn, 
   const matches = searchCompoundSeries(contentQuery)
   const selected = getCompoundSeriesById(selectedId) ?? compoundVerbSeries[0]
   const selectedVisible = matches.some(series => series.id === selected.id)
+
+  useEffect(() => { if (!selectedVisible) stopAudio() }, [selectedVisible])
 
   const activateHit = (index: number) => {
     const hits = hitsRef.current
@@ -151,9 +155,9 @@ export default function CompoundVerbs({ selectedId, onSelect, origin, onReturn, 
         {selected.groups.map((group, groupIndex) => <section className="compound-group" key={group.title}>
           <header><span>{String(groupIndex + 1).padStart(2, '0')}</span><div><h3>{highlight(group.title)}</h3><p>{highlight(group.description)}</p></div></header>
           <div>{group.words.map(entry => <article className={`compound-word-card ${origin?.word === entry.word ? 'is-origin' : ''}`} key={entry.word}>
-            <div className="compound-word-heading"><h3 lang="ja">{highlight(entry.word)}</h3><span lang="ja">{highlight(entry.reading)}</span>{origin?.word === entry.word ? <small>元の語彙</small> : null}</div>
+            <div className="compound-word-heading"><h3 lang="ja">{highlight(entry.word)}</h3><span lang="ja">{highlight(entry.reading)}</span>{origin?.word === entry.word ? <small>元の語彙</small> : null}<AudioButton text={entry.word} speechText={entry.reading} /></div>
             <p className="compound-meaning" lang="zh-CN">{highlight(entry.meaning)}</p>
-            <div className="compound-example"><p lang="ja">{highlight(entry.example)}</p><p lang="zh-CN">{highlight(entry.translation)}</p></div>
+            <div className="compound-example"><p lang="ja"><SentenceAudio text={entry.example} renderText={highlight} /></p><p lang="zh-CN">{highlight(entry.translation)}</p></div>
             {entry.note ? <p className="compound-word-note" lang="zh-CN"><strong>辨析</strong>{highlight(entry.note)}</p> : null}
           </article>)}</div>
         </section>)}

@@ -1,6 +1,8 @@
 import { Fragment, lazy, Suspense, useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
 import { ProjectSearch } from './components/ProjectSearch'
 import { SearchHighlight } from './components/SearchHighlight'
+import { AudioButton, SentenceAudio } from './components/AudioButton'
+import { stopAudio } from './lib/audioPlayer'
 import type { ProjectSearchResult, LiveSearchResult, LessonSearchResult } from './lib/projectSearch'
 import { DateDropdown } from './components/DateDropdown'
 import { getLessonByDate, historyItems, lesson as latestLesson, reviewFocusByDate } from './data/history'
@@ -78,6 +80,10 @@ function ProgressRing({ value }: { value: number }) {
       <div className="progress-ring-label"><strong>{value}%</strong><span>この日</span></div>
     </div>
   )
+}
+
+function scrollPageStart() {
+  window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' })
 }
 
 function SectionHeader({ eyebrow, title, description }: { eyebrow: string; title: string; description?: string }) {
@@ -159,6 +165,7 @@ export default function App() {
   }, [])
 
   const lesson = getLessonByDate(selectedDate)
+  useEffect(() => { stopAudio() }, [active, lesson.date, compoundSeriesId])
   const isLatest = lesson.date === latestLesson.date
   const historyEntry = historyItems.find((item) => item.date === lesson.date)
   const streakDisplay = streakFor(progress.studyDates, today)
@@ -227,7 +234,7 @@ export default function App() {
     setLiveSearchTarget(null)
     setActive(section)
     setMobileNavOpen(false)
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+    scrollPageStart()
   }
 
   const openCompoundSeries = (item: {id: string; word: string}) => {
@@ -253,7 +260,7 @@ export default function App() {
     setSelectedDate(date)
     setActive(section)
     setMobileNavOpen(false)
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+    scrollPageStart()
   }
 
   const openSearchResult = (result: ProjectSearchResult) => {
@@ -329,6 +336,7 @@ export default function App() {
             <span>{theme === 'light' ? 'ダークモード' : 'ライトモード'}</span>
           </button>
         </div>
+        <p className="audio-credit">音声：AivisSpeech / morioki（ノーマル）</p>
       </aside>
 
       {mobileNavOpen ? <button className="mobile-overlay" aria-label="ナビゲーションを閉じる" onClick={() => setMobileNavOpen(false)} /> : null}
@@ -369,7 +377,7 @@ export default function App() {
               <section className="hero">
                 <div className="hero-copy" id="lesson-theme" tabIndex={-1}>
                   <div className="day-label">{lesson.date === today ? '今日のテーマ' : `DAY ${lesson.day} · ARCHIVE`}</div>
-                  <h1>{highlight(lesson.title)}{lesson.issueNumber ? `（第${lesson.issueNumber}号）` : null}</h1>
+                  <div className="audio-heading"><h1>{highlight(lesson.title)}{lesson.issueNumber ? `（第${lesson.issueNumber}号）` : null}</h1><AudioButton text={lesson.title} /></div>
                   <p>{highlight(lesson.subtitle)}</p>
                   {lesson.issueNumber && <small className="source-issue">IT/AI 日报第{lesson.issueNumber}号 · N1 学習計画 Day {lesson.day}（別の番号です）</small>}
                   <div className="hero-actions">
@@ -424,10 +432,10 @@ export default function App() {
               </div>
 
               <article className="reading-paper">
-                <div className="article-head" id="immersion-title" tabIndex={-1}><span>N1 IMMERSION · DAY {lesson.day}</span><h1>{highlight(lesson.immersion.title)}</h1></div>
+                <div className="article-head" id="immersion-title" tabIndex={-1}><span>N1 IMMERSION · DAY {lesson.day}</span><div className="audio-heading"><h1>{highlight(lesson.immersion.title)}</h1><AudioButton text={lesson.immersion.title} /></div></div>
                 {lesson.immersion.paragraphs.map((p, index) => (
                   <div className="paragraph-block" id={`immersion-paragraph-${index}`} tabIndex={-1} key={`${lesson.date}-${index}`}>
-                    <p className="jp-body">{highlight(p)}</p>
+                    <p className="jp-body"><SentenceAudio text={p} renderText={highlight} /></p>
                     {readingMode === 'bilingual' ? <p className="zh-translation">{highlight(lesson.immersion.translations[index])}</p> : null}
                     {readingMode === 'analysis' ? <div className="analysis-note"><span>POINT {index + 1}</span><p>{highlight(lesson.immersion.analysis[index])}</p></div> : null}
                   </div>
@@ -458,7 +466,7 @@ export default function App() {
                       <div className="card-index">{String(index + 1).padStart(2, '0')}</div>
                       <div className="card-content">
                         <div className="word-line">
-                          <div className="vocabulary-heading"><h3>{highlight(item.word)}</h3><span className="reading">{highlight(item.reading)}</span></div>
+                          <div className="vocabulary-heading"><h3>{highlight(item.word)}</h3><span className="reading">{highlight(item.reading)}</span><AudioButton text={item.word} speechText={item.reading} /></div>
                           <div className="vocabulary-meta"><StudyReference item={item} level={item.jlpt} leadingTags={<>
                             {hasCompoundSeries ? <button className="compound-verb-tag" onClick={() => openCompoundSeries(item)} aria-label={`${item.word}の複合動詞シリーズを開く`}>複合動詞</button> : null}
                             <span className="tag">{highlight(item.partOfSpeech)}</span>
@@ -466,9 +474,9 @@ export default function App() {
                         </div>
                         <p className="meaning">{highlight(item.meaning)}</p>
                         <ReviewEvidence item={item} />
-                        <div className="example-box"><p>{highlight(item.example)}</p><span>{highlight(item.translation)}</span></div>
+                        <div className="example-box"><p><SentenceAudio text={item.example} renderText={highlight} /></p><span>{highlight(item.translation)}</span></div>
                         <div className="detail-grid">
-                          <div><span className="detail-label">よく使う組み合わせ</span><div className="collocations">{item.collocations.map((c) => <span key={c}>{highlight(c)}</span>)}</div></div>
+                          <div><span className="detail-label">よく使う組み合わせ</span><div className="collocations">{item.collocations.map((c) => <span key={c} className="audio-collocation"><span>{highlight(c)}</span><AudioButton text={c} /></span>)}</div></div>
                           <div><span className="detail-label">ニュアンス</span><p>{highlight(item.nuance)}</p></div>
                         </div>
                         <StatusButton status={status} onChange={(next) => updateStatus('vocab', item.id, next)} />
@@ -496,11 +504,11 @@ export default function App() {
                     <article className="learning-card" data-study-kind={item.studyKind} data-grammar-id={item.id} id={`grammar-${item.id}`} tabIndex={-1}>
                       <div className="card-index">{String(index + 1).padStart(2, '0')}</div>
                       <div className="card-content">
-                        <div className="grammar-top"><div><h3>{highlight(item.pattern)}</h3><p className="meaning">{highlight(item.meaning)}</p></div><StudyReference item={item} level={item.level ?? 'N1'} /><div className="frequency" title="読解・表現での実用度"><span>実用度</span><div>{[1,2,3,4,5].map((n) => <i key={n} className={n <= item.frequency ? 'on' : ''} />)}</div></div></div>
+                        <div className="grammar-top"><div><div className="audio-heading"><h3>{highlight(item.pattern)}</h3><AudioButton text={item.pattern} /></div><p className="meaning">{highlight(item.meaning)}</p></div><StudyReference item={item} level={item.level ?? 'N1'} /><div className="frequency" title="読解・表現での実用度"><span>実用度</span><div>{[1,2,3,4,5].map((n) => <i key={n} className={n <= item.frequency ? 'on' : ''} />)}</div></div></div>
                         <div className="grammar-meta"><span><b>接続</b>{highlight(item.form)}</span><span><b>文体</b>{highlight(item.register)}</span></div>
                         <p className="grammar-explain">{highlight(item.explanation)}</p>
                         <ReviewEvidence item={item} />
-                        <div className="example-box"><p>{highlight(item.example)}</p><span>{highlight(item.translation)}</span></div>
+                        <div className="example-box"><p><SentenceAudio text={item.example} renderText={highlight} /></p><span>{highlight(item.translation)}</span></div>
                         <div className="compare-box"><span>類似表現との比較</span><p>{highlight(item.comparison)}</p></div>
                         <StatusButton status={status} onChange={(next) => updateStatus('grammar', item.id, next)} />
                       </div>
@@ -517,8 +525,8 @@ export default function App() {
             <div className="page-enter reading-page">
               <SectionHeader eyebrow="04" title="短文読解" description="筆者の主張・条件・逆接を確認してから、答えを選びましょう。" />
               <article className="reading-paper quiz-paper">
-                <div className="article-head" id="reading-title" tabIndex={-1}><span>JLPT N1 · 読解 · DAY {lesson.day}</span><h1>{highlight(lesson.reading.title)}</h1></div>
-                {lesson.reading.paragraphs.map((p, index) => <p className="jp-body" id={`reading-paragraph-${index}`} tabIndex={-1} key={`${lesson.date}-reading-${index}`}>{highlight(p)}</p>)}
+                <div className="article-head" id="reading-title" tabIndex={-1}><span>JLPT N1 · 読解 · DAY {lesson.day}</span><div className="audio-heading"><h1>{highlight(lesson.reading.title)}</h1><AudioButton text={lesson.reading.title} /></div></div>
+                {lesson.reading.paragraphs.map((p, index) => <p className="jp-body" id={`reading-paragraph-${index}`} tabIndex={-1} key={`${lesson.date}-reading-${index}`}><SentenceAudio text={p} renderText={highlight} /></p>)}
                 <ReadingExercise key={lesson.reading.question.id} question={lesson.reading.question}
                   day={lesson.day} answered={answered} attempts={progress.readingAttempts[lesson.reading.question.id] ?? []}
                   onSubmit={submitReading} searchQuery={lessonHighlightQuery} />
@@ -533,7 +541,16 @@ export default function App() {
                 <div className="empty-state"><div className="empty-icon"><Icon name="check" size={26} /></div><h3>この日の復習項目はありません</h3><p>語彙・文法で「要復習」を選ぶと追加されます。読解で間違えた問題もここに表示します。</p><button className="text-btn" onClick={() => go('vocabulary')}>学習へ</button></div>
               ) : (
                 <div className="review-list">
-                  {reviewItems.map((item, index) => <div className="review-row" id={`review-${index}`} tabIndex={-1} key={`${item.type}-${item.title}-${index}`}><span className="review-number">{index + 1}</span><span className="review-type">{item.type}</span><div><strong>{highlight(item.title)}</strong><p>{highlight(item.detail)}</p></div>{item.section ? <button className="text-btn" onClick={() => go(item.section!)} aria-label={`${item.title}を復習する`}>復習する</button> : null}</div>)}
+                  {reviewItems.map((item, index) => {
+                    const vocabulary = item.section === 'vocabulary' ? lesson.vocabulary.find(word => word.word === item.title) : undefined
+                    const term = vocabulary || (item.section === 'grammar' ? lesson.grammar.find(grammar => grammar.pattern === item.title) : undefined)
+                    return <div className="review-row" id={`review-${index}`} tabIndex={-1} key={`${item.type}-${item.title}-${index}`}>
+                      <span className="review-number">{index + 1}</span><span className="review-type">{item.type}</span><div>
+                        <strong>{term ? <span className="audio-heading"><span>{highlight(item.title)}</span><AudioButton text={item.title} speechText={vocabulary?.reading} /></span> : <SentenceAudio text={item.title} renderText={highlight} japaneseOnly />}</strong>
+                        <p>{item.section ? highlight(item.detail) : <SentenceAudio text={item.detail} renderText={highlight} japaneseOnly />}</p>
+                      </div>{item.section ? <button className="text-btn" onClick={() => go(item.section!)} aria-label={`${item.title}を復習する`}>復習する</button> : null}
+                    </div>
+                  })}
                 </div>
               )}
               <section className="spaced-review">

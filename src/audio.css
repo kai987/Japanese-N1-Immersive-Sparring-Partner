@@ -1,0 +1,42 @@
+.audio-control { display: inline-flex; align-items: center; flex: 0 0 auto; position: relative; vertical-align: middle; line-height: 1; }
+.audio-play-button { display: inline-grid; place-items: center; width: 32px; height: 32px; flex: 0 0 32px; padding: 0; border: 1px solid var(--border); border-radius: 50%; color: var(--accent-2); background: transparent; cursor: pointer; transition: background .15s, border-color .15s; }
+.audio-play-button:hover { background: var(--accent-2-soft); border-color: var(--accent-2); }
+.audio-play-button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.audio-play-button.playing, .audio-play-button.loading { color: var(--accent); background: var(--accent-soft); border-color: var(--accent); }
+.audio-play-button:disabled { opacity: .35; cursor: default; }
+.audio-play-button.error { color: #a84533; border-color: currentColor; }
+.audio-play-error { position: absolute; z-index: 9; right: 0; top: calc(100% + 5px); width: min(230px, 65vw); padding: 9px 12px; border: 1px solid var(--border-strong); border-radius: 8px; color: var(--text); background: var(--surface); font: 12px/1.6 system-ui, sans-serif; box-shadow: var(--shadow); }
+.spoken-sentence { display: block; }
+.spoken-sentence.has-audio { display: grid; grid-template-columns: minmax(0, 1fr) 32px; align-items: start; gap: 10px; }
+.spoken-sentence + .spoken-sentence { margin-top: .3em; }
+.spoken-sentence > .audio-control { justify-self: end; margin-top: .1em; }
+.spoken-text { min-width: 0; }
+.audio-heading { display: flex; align-items: baseline; gap: 12px; min-width: 0; }
+.audio-heading > :first-child { min-width: 0; }
+.audio-heading > .audio-control { align-self: center; margin-left: auto; }
+.vocabulary-heading > .audio-control, .compound-word-heading > .audio-control { margin-left: auto; align-self: center; }
+.collocations .audio-collocation { display: inline-flex; align-items: center; gap: 8px; padding-right: 5px; }
+.collocations .audio-collocation .audio-play-button { width: 26px; height: 26px; flex-basis: 26px; border-color: transparent; }
+.answer-option-row { display: grid; grid-template-columns: minmax(0, 1fr) 32px; align-items: center; gap: 10px; }
+.answer-option-row > .answer-option { width: 100%; }
+.live-entry dt > .audio-control { margin-left: auto; align-self: center; }
+.audio-credit { color: var(--muted); font-size: 10px; text-align: center; margin: 10px 0 0; }
+.audio-loading-ring { transform-origin: center; animation: audio-spin .8s linear infinite; }
+@keyframes audio-spin { to { transform: rotate(360deg); } }
+@media (max-width: 680px) {
+  .audio-play-button { width: 34px; height: 34px; flex-basis: 34px; }
+  .spoken-sentence.has-audio { grid-template-columns: minmax(0, 1fr) 34px; gap: 8px; }
+  .audio-heading { gap: 8px; }
+  .collocations .audio-collocation .audio-play-button { width: 28px; height: 28px; flex-basis: 28px; }
+}
+@media (prefers-reduced-motion: reduce) { .audio-loading-ring { animation: none; } }
+/* Existing translation and collocation rules target every span. Keep the new
+   Japanese text and media controls in the surrounding text's typography. */
+.example-box p .spoken-sentence, .example-box p .spoken-text, .example-box p .audio-control { color: inherit; font: inherit; margin-top: 0; }
+.example-box p .audio-control { display: inline-flex; }
+.example-box p .spoken-sentence + .spoken-sentence { margin-top: .3em; }
+.collocations .audio-collocation > span { padding: 0; background: transparent; }
+.live-entry dt { display: grid; grid-template-columns: minmax(0, 1fr) 34px; column-gap: 8px; }
+.live-entry dt > strong, .live-entry dt > .live-reading { grid-column: 1; }
+.live-entry dt > .audio-control { grid-column: 2; grid-row: 1 / span 2; justify-self: end; }
+.answer-choice-audio { display: grid; gap: 7px; }

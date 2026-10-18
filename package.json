@@ -12,7 +12,15 @@
     "test": "node --test tests/*.test.ts",
     "test:e2e": "playwright test",
     "import:daily": "node scripts/import-daily.ts",
-    "import:study": "node scripts/import-study-snapshot.ts"
+    "import:study": "node scripts/import-study-snapshot.ts",
+    "audio:generate": "python3 scripts/generate-audio.py",
+    "audio:sync": "node scripts/sync-audio.ts",
+    "audio:catalog": "node scripts/collect-audio.ts",
+    "audio:validate": "node scripts/validate-audio.ts",
+    "audio:dedupe": "node scripts/plan-audio-storage.ts",
+    "audio:stage": "node scripts/stage-audio-upload.ts",
+    "audio:publish": "node scripts/verify-audio-storage.ts --publish",
+    "audio:validate:remote": "node scripts/verify-audio-storage.ts"
   },
   "dependencies": {
     "react": "19.2.8",

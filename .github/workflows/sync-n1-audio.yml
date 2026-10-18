@@ -1,0 +1,130 @@
+name: Sync shared N1 audio
+
+on:
+  workflow_run:
+    workflows: ['Deploy Vite site to GitHub Pages']
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      target_date:
+        description: Optional published N1 lesson date (YYYY-MM-DD)
+        required: false
+      source_audio_commit:
+        description: Optional exact successful upstream R2 commit (40 hex)
+        required: false
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: n1-content-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    if: >-
+      github.ref == 'refs/heads/main' &&
+      (github.event_name == 'workflow_dispatch' ||
+       (github.event.workflow_run.conclusion == 'success' &&
+        github.event.workflow_run.head_repository.full_name == github.repository))
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout current N1 main
+        uses: actions/checkout@v6
+        with:
+          ref: main
+          path: n1
+
+      - name: Lock a successful upstream R2 audio commit
+        id: source
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REQUESTED_COMMIT: ${{ inputs.source_audio_commit }}
+        run: |
+          node --input-type=module <<'NODE'
+          import { execFileSync } from 'node:child_process';
+          import { appendFileSync } from 'node:fs';
+          const requested = process.env.REQUESTED_COMMIT || '';
+          if (requested && !/^[a-f0-9]{40}$/.test(requested)) throw new Error('Invalid audio commit');
+          const query = 'repos/kai987/japan-it-ai-daily/actions/workflows/sync-r2-audio.yml/runs?branch=main&status=success&per_page=100' + (requested ? '&head_sha=' + requested : '');
+          const { workflow_runs: runs } = JSON.parse(execFileSync('gh', ['api', query], { encoding: 'utf8' }));
+          const run = runs.find(r => r.head_branch === 'main' && r.status === 'completed' && r.conclusion === 'success' && r.path === '.github/workflows/sync-r2-audio.yml' && r.head_repository?.full_name === 'kai987/japan-it-ai-daily' && (!requested || r.head_sha === requested));
+          if (!run) throw new Error('waiting_daily_audio: no matching successful upstream R2 run');
+          appendFileSync(process.env.GITHUB_OUTPUT, `commit=${run.head_sha}\n`);
+          appendFileSync(process.env.GITHUB_STEP_SUMMARY, `Upstream audio: ${run.html_url}\n`);
+          NODE
+
+      # Fetch metadata only; shared MP3s stay on R2.
+      - name: Checkout pinned upstream audio manifests
+        uses: actions/checkout@v6
+        with:
+          repository: kai987/japan-it-ai-daily
+          ref: ${{ steps.source.outputs.commit }}
+          path: daily
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /public/audio/japanese/**/manifest.json
+            /public/audio/japanese/**/interview-manifest.json
+
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+
+      - name: Install audio inspection tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
+      - name: Install dependencies
+        working-directory: n1
+        run: npm ci --no-audit --no-fund
+
+      - name: Verify and merge shared audio, record pending utterances
+        working-directory: n1
+        env:
+          SOURCE_COMMIT: ${{ steps.source.outputs.commit }}
+          TARGET_DATE: ${{ inputs.target_date }}
+        run: |
+          npm run audio:sync -- --daily-repo ../daily --ref "$SOURCE_COMMIT" --date "$TARGET_DATE" | tee /tmp/n1-audio-sync.log
+          cat /tmp/n1-audio-sync.log >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Validate audio snapshot, content and unit contracts
+        working-directory: n1
+        run: |
+          npm run audio:validate -- --snapshot
+          npm test
+          npm run build
+          git diff --check
+
+      - name: Commit audio metadata with fast-forward protection
+        id: commit
+        working-directory: n1
+        run: |
+          base=$(git rev-parse HEAD)
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$base"
+          git add public/audio/manifest.json src/data/audio-index.json src/data/audio-sources.json src/data/audio-pending.json
+          if ! git diff --cached --quiet; then
+            node scripts/verify-audio-changed-paths.ts "$(git diff --cached --name-only)"
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "content: sync verified shared N1 audio"
+            git push origin HEAD:main
+            echo 'changed=true' >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Deploy changed audio metadata
+        if: steps.commit.outputs.changed == 'true'
+        working-directory: n1
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$(git rev-parse HEAD)"
+          gh workflow run deploy-pages.yml --repo "$GITHUB_REPOSITORY" --ref main

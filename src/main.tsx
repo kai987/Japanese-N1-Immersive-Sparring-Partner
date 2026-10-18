@@ -6,6 +6,7 @@ import './readability.css'
 import './search.css'
 import './hero-title.css'
 import './navigation-theme.css'
+import './audio.css'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

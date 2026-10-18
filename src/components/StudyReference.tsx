@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { SentenceAudio } from './AudioButton'
 import type { StudyMetadata } from '../types'
 export function StudyReference({ item, level, leadingTags }: {item:StudyMetadata;level:string;leadingTags?:ReactNode}) {
   const f=item.reportFrequency
@@ -15,7 +16,7 @@ export function StudyReference({ item, level, leadingTags }: {item:StudyMetadata
 }
 export function ReviewEvidence({item}:{item:StudyMetadata}) {
   return item.studyKind==='review' && item.reviewEvidence ? <div className="review-evidence">
-    <strong>本文での用例</strong><p lang="ja">{item.reviewEvidence.excerpt}</p>
+    <strong>本文での用例</strong><p lang="ja"><SentenceAudio text={item.reviewEvidence.excerpt} /></p>
     <small>首次学习：{item.firstIntroducedDate} · {item.reviewEvidence.sourceKind==='article-summary'?'当日报道的推荐理由':item.reviewEvidence.sourceKind==='learning-example'?'当日学习例句':'当日日文正文'}</small>
   </div>:null
 }

@@ -9,3 +9,19 @@ vite.config.js
 vite.config.d.ts
 /test-results/
 /playwright-report/
+
+# Local audio-generation caches and atomic write intermediates
+__pycache__/
+*.py[cod]
+/public/audio/**/*.partial.mp3
+/public/audio/manifest.partial.json
+/src/data/audio-index.partial.json
+/src/data/audio-sources.partial.json
+/src/data/audio-pending.json.partial.json
+/src/data/audio-index.json.partial.json
+/src/data/audio-sources.json.partial.json
+/public/audio/manifest.json.partial.json
+
+# Generated recordings stay in the local cache; published media is served by
+# Supabase Storage or reused from the daily project's immutable R2 objects.
+/public/audio/morioki-normal/

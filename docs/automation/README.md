@@ -61,3 +61,22 @@ Since the upstream P1 architecture effective 2026-09-24, N1 sync/recovery MUST N
 Read failed run/job/step logs first, fix only evidenced direct causes and add regression tests. Never weaken schema, evidence, history, bilingual, quality, browser or security checks. Preserve unknown root causes as unknown.
 
 After a NEWLY verified publication, the IT primary/recovery task performs this same handoff once if the corresponding N1 original exists and the date is pending. This is publication continuation, not an hourly N1 scan. If sources are missing, record the handoff blocker for the existing daily entrypoints. A separate optional GitHub success callback replays matching ready requests and requires cross-repository credentials; absent credentials or missing requests must never be called end-to-end automatic success.
+
+## Incremental audio follow-up
+
+Effective 2026-10-19. The text request, source binding, schedules and two-file text commit allowlist above remain unchanged. Audio is a separate continuation, never another writer of daily JSON, N1 originals or the IT snapshot.
+
+After successful N1 main Pages deployment, `sync-n1-audio.yml` locks a successful main `kai987/japan-it-ai-daily/.github/workflows/sync-r2-audio.yml` commit and reads only its manifests. It matches the complete normalized utterance, morioki / ノーマル (497929760), model, speed, intonation and sample rate. New shared clips require a complete public R2 GET, exact SHA-256, decoded duration and non-silent PCM. Already verified hosted recordings remain intact. No MP3 is added to Git or the Pages build. `src/data/audio-pending.json` records all missing utterances and their lesson/card references; a green workflow with pendingClips > 0 is not complete audio coverage.
+
+N1 and upstream audio may finish in either order. After the local IT task has verified the exact upstream audio commit's R2, Pages and playback, invoke this once for the frozen date and commit:
+
+```sh
+gh workflow run sync-n1-audio.yml --repo kai987/Japanese-N1-Immersive-Sparring-Partner --ref main \
+  -f target_date=YYYY-MM-DD -f source_audio_commit=FULL_SUCCESSFUL_R2_COMMIT
+```
+
+Inspect the exact follow-up run and resulting N1 commit/Pages; `waiting_n1_lesson` means the existing N1 daily entrypoint must finish the lesson first. A completed N1 Pages run then retries the shared audio step. Resume failed/pending audio during existing daily invocations even if text is unchanged, without resending a text request or adding an hourly schedule. No cross-repository token or new storage credential is required for reading public manifests and audio. The local task needs its existing GitHub authorization to dispatch the N1 workflow; the upstream optional text callback is still unconfigured unless its own token is actually present.
+
+Unique N1 sentences need the local Mac, not GitHub-hosted Actions. After shared sync, use the current N1 checkout and `npm run audio:generate`; published cloud entries are reused even if local MP3s have been deleted. Then run `audio:dedupe -- --daily-repo /path/to/japan-it-ai-daily --ref FULL_SUCCESSFUL_R2_COMMIT --verify`, `audio:stage`, upload only the newly staged MP3s to `n1-audio/morioki-normal/`, and `audio:publish -- --plan /tmp/n1-audio-storage-plan.json`. Staging skips already published Supabase objects. Re-run `audio:sync` at that fixed upstream commit to clear covered pending entries, followed by `audio:validate`, full tests/build and browser playback from both providers. Never claim generation or upload alone as publication. If AivisSpeech or authenticated upload is unavailable, preserve awaiting_local_audio/awaiting_upload with the missing IDs; existing text and recordings remain usable. Never add a storage secret to frontend code.
+
+Audio-only automated commits permit exactly `public/audio/manifest.json`, `src/data/audio-index.json`, `src/data/audio-sources.json`, `src/data/audio-pending.json`, with the same `n1-content-sync` concurrency group, current-main fast-forward check, no force push, and explicit Pages dispatch only after a change. Local verified audio changes follow the same metadata scope. Use `audio:validate -- --snapshot` for a published snapshot while newer dates are pending; use plain `audio:validate` to claim full current coverage. Audio browser fixtures select a recorded archived date so text publication can proceed while new speech is pending. Delete local MP3 caches only after full remote byte verification; keep the manifests and voice license.
