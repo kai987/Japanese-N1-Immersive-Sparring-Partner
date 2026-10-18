@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-10-18",
   "day": 50,
-  "status": "waiting_upstream",
-  "stage": "waiting_upstream",
+  "status": "waiting_request",
+  "stage": "waiting_request",
   "sourceSavedOnMain": true,
   "sourceCheckpointVerified": true,
   "expectedSourceSha256": "9402ae2de769ad6e09d4890a28faf0ebabe5b41f914690b7f68109dae4955851",
@@ -22,6 +22,37 @@
   },
   "error": null,
   "lastError": null,
-  "nextStep": "N1 Day50 complete original checkpoint and main source are verified. Wait for a successful verified 2026-10-18 publication of all required IT/AI upstream documents and matching snapshot. Then prepare shared N1 sync request. Do not invent C or use another date.",
-  "updatedAt": "2026-10-18T03:42:13.493Z"
+  "nextStep": "Existing canonical N1 daily/recovery entrypoints must reconcile the earliest pending date before replacing the shared request. Preserve this exact original; then map the corresponding date against a verified covering snapshot.",
+  "updatedAt": "2026-10-18T04:40:50.104Z",
+  "reason": "earlier_pending_n1_date",
+  "sourceReady": true,
+  "sourceOutboxBlobSha": "a51ee7358504a98315f8974af4d5df0c5db5806e",
+  "sourceSha256": "9402ae2de769ad6e09d4890a28faf0ebabe5b41f914690b7f68109dae4955851",
+  "sourceBytes": 21916,
+  "upstreamSourceCommit": "f06febc371feb92a303e6b6dc8436b267761e9d2",
+  "sourcePagesRunId": 39097653219,
+  "snapshotSha256": "03d79aea751dc9cba90b37122d96b5e0ed44ca1c62396353235667abb4e35d06",
+  "issueNumber": 68,
+  "totalDays": 68,
+  "blockedBy": {
+    "date": "2026-10-16",
+    "stage": "waiting_upstream",
+    "status": "waiting_upstream",
+    "requestSubmitted": false
+  },
+  "pendingEarlierDates": [
+    {
+      "date": "2026-10-16",
+      "stage": "waiting_upstream",
+      "status": "waiting_upstream",
+      "requestSubmitted": false
+    },
+    {
+      "date": "2026-10-17",
+      "stage": "waiting_request",
+      "status": "waiting_request",
+      "requestSubmitted": false
+    }
+  ],
+  "observedRequestDate": "2026-10-15"
 }
