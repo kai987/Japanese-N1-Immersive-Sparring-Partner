@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-10-16",
   "day": 48,
-  "status": "waiting_upstream",
-  "stage": "waiting_upstream",
+  "status": "waiting_request",
+  "stage": "waiting_request",
   "sourceSavedOnMain": true,
   "sourceCheckpointVerified": true,
   "expectedSourceSha256": "8fd4ca1c1b622570aa28013df299dcedd4780f2254080a893a5e6a8c9b31882f",
@@ -18,15 +18,27 @@
     "upstreamTargetDailyFilesAbsent": true,
     "observedAt": "2026-10-16T04:44:09.475Z"
   },
-  "nextStep": "Day48 source is checkpointed and verified on main. Wait for successful and fully verified 2026-10-16 IT/AI daily upstream publication, then prepare matching N1 sync request through the shared workflow. Do not reuse previous-date source or mark published before exact Pages success.",
-  "updatedAt": "2026-10-16T04:44:09.475Z",
-  "upstreamSourceCommit": null,
-  "sourcePagesRunId": null,
-  "snapshotSha256": null,
-  "issueNumber": null,
-  "totalDays": null,
+  "nextStep": "Submit complete canonical request and verify exact sync/Pages/live date",
+  "updatedAt": "2026-10-18T14:33:06.594Z",
+  "upstreamSourceCommit": "f06febc371feb92a303e6b6dc8436b267761e9d2",
+  "sourcePagesRunId": 39097653219,
+  "snapshotSha256": "03d79aea751dc9cba90b37122d96b5e0ed44ca1c62396353235667abb4e35d06",
+  "issueNumber": 66,
+  "totalDays": 68,
   "lastError": null,
   "sourceCommit": "a71326fe2a66fa79a25585309b08c746f9cd53ab",
   "sourceBlobSha": "7b2bd9297b57b96d17464d75dad11f1658aa0b2b",
-  "sourceCheckpointBlobSha": "6cd7a0f7185c9af4a8140c5af3f81a7a334d74f3"
+  "sourceCheckpointBlobSha": "6cd7a0f7185c9af4a8140c5af3f81a7a334d74f3",
+  "sourceSha256": "8fd4ca1c1b622570aa28013df299dcedd4780f2254080a893a5e6a8c9b31882f",
+  "requestDraftBlobSha": "8812a2196361bf0af6793ebf5b514f5a66db7955",
+  "rawC4": {
+    "newVocabulary": 10,
+    "newGrammar": 2
+  },
+  "display": {
+    "newVocabulary": 12,
+    "reviewVocabulary": 8,
+    "newGrammar": 2,
+    "reviewGrammar": 6
+  }
 }
