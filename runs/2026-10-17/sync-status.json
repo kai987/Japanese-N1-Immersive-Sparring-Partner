@@ -12,8 +12,8 @@
   "error": null,
   "requestSubmitted": false,
   "upstreamTargetVerified": false,
-  "nextStep": "Existing canonical N1 daily/recovery entrypoints must reconcile the earliest pending date before replacing the shared request. Preserve this exact original; then map the corresponding date against a verified covering snapshot.",
-  "updatedAt": "2026-10-18T04:10:21.809Z",
+  "nextStep": "Submit complete canonical request and verify exact sync/Pages/live date",
+  "updatedAt": "2026-10-18T14:40:07.075Z",
   "sourceCommit": "c49a484a37168da2a37f8a302d3b3bfe32943162",
   "sourceBlobSha": "a3514097a34d525d5c1bfb69be3afd57fa8e999c",
   "sourceCheckpointBlobSha": "5afe8132c512ed2eceab35ae14ed3cf0ccf5b5fc",
@@ -29,11 +29,11 @@
   "sourceOutboxBlobSha": "5afe8132c512ed2eceab35ae14ed3cf0ccf5b5fc",
   "sourceSha256": "212a95697b51e4ae8dfce161edcf1f3b344f4a4bed2ed252ec313297ce27da1a",
   "sourceBytes": 22640,
-  "upstreamSourceCommit": "8add1bdb14f323f57df15f2e6fe23936f0d1ee75",
-  "sourcePagesRunId": 39095880862,
-  "snapshotSha256": "ca46796b6053541c355c5ec104b38785201a24670f1f3114cbcf8578173409ea",
+  "upstreamSourceCommit": "f06febc371feb92a303e6b6dc8436b267761e9d2",
+  "sourcePagesRunId": 39097653219,
+  "snapshotSha256": "03d79aea751dc9cba90b37122d96b5e0ed44ca1c62396353235667abb4e35d06",
   "issueNumber": 67,
-  "totalDays": 67,
+  "totalDays": 68,
   "blockedBy": {
     "date": "2026-10-16",
     "stage": "waiting_upstream",
@@ -48,5 +48,16 @@
       "requestSubmitted": false
     }
   ],
-  "observedRequestDate": "2026-10-15"
+  "observedRequestDate": "2026-10-15",
+  "requestDraftBlobSha": "bd4375141196274a2b4c1be86fc1534b9dcb7c7b",
+  "rawC4": {
+    "newVocabulary": 10,
+    "newGrammar": 1
+  },
+  "display": {
+    "newVocabulary": 10,
+    "reviewVocabulary": 10,
+    "newGrammar": 1,
+    "reviewGrammar": 7
+  }
 }
