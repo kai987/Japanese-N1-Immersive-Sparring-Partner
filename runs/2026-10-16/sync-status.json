@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-10-16",
   "day": 48,
-  "status": "validating",
-  "stage": "validating",
+  "status": "published",
+  "stage": "published",
   "sourceSavedOnMain": true,
   "sourceCheckpointVerified": true,
   "expectedSourceSha256": "8fd4ca1c1b622570aa28013df299dcedd4780f2254080a893a5e6a8c9b31882f",
@@ -20,8 +20,8 @@
     "completeProgressInventory": true,
     "observedAt": "2026-10-18T14:25:39.808Z"
   },
-  "nextStep": "Verify exact canonical sync gates, final commit Pages and live target Day",
-  "updatedAt": "2026-10-18T14:33:12.195Z",
+  "nextStep": "Complete: target N1 source, canonical request, final Pages and live learning verified. Preserve originals and learning states; no duplicate handoff for audio recovery.",
+  "updatedAt": "2026-10-18T14:37:37.644Z",
   "upstreamSourceCommit": "f06febc371feb92a303e6b6dc8436b267761e9d2",
   "sourcePagesRunId": 39097653219,
   "snapshotSha256": "03d79aea751dc9cba90b37122d96b5e0ed44ca1c62396353235667abb4e35d06",
@@ -44,5 +44,94 @@
     "reviewGrammar": 6
   },
   "requestCommit": "dbd5ac4fd390914685a904efba7657203c975493",
-  "requestBlobSha": "8812a2196361bf0af6793ebf5b514f5a66db7955"
+  "requestBlobSha": "8812a2196361bf0af6793ebf5b514f5a66db7955",
+  "reason": null,
+  "blockedBy": null,
+  "pendingEarlierDates": [],
+  "sourceReady": true,
+  "syncRunId": 39136511207,
+  "releaseCommit": "830582403e52c9829f2e7987f13b0466027b7edd",
+  "pagesRunId": 39136646093,
+  "storedSnapshotSha256": "2bb21665e8d56c4fe74223f4542f717af634877bbdc33744678d9e1b28fed253",
+  "verification": {
+    "originalMatchesOutbox": true,
+    "dailyMatchesRequest": true,
+    "fullSnapshotCanonicalImporterBytesEqual": true,
+    "fullGrammarDates": 68,
+    "upstreamSourceHashVerified": true,
+    "exactSyncGates": true,
+    "exactPages": true,
+    "liveAssets": {
+      "targetDate": "2026-10-16",
+      "releaseCommit": "830582403e52c9829f2e7987f13b0466027b7edd",
+      "pagesRunId": 39136646093,
+      "artifactByteHashes": true,
+      "assets": [
+        {
+          "path": "index.html",
+          "sha256": "73a1221bd8f36f1bdf8e86f931de8f0cddcf316c77d601bbfac45810cbbe1d2c",
+          "bytes": 1596
+        },
+        {
+          "path": "assets/LiveReactions-BsNLJgSR.css",
+          "sha256": "1b3933ecb7c5675b05b217aa76300036378af6d1d907643a42ab6eaf1e9aca52",
+          "bytes": 7155
+        },
+        {
+          "path": "assets/LiveReactions-C2p-NRaf.js",
+          "sha256": "705cc71f37f1383ff2c678cf1d105e205dd12f34c8def319874a09452d303641",
+          "bytes": 48317
+        },
+        {
+          "path": "assets/index-Bzo3HEps.css",
+          "sha256": "0faad935774f798fecac3753fbc0a21da0276af998fe14b972677937da7a81ad",
+          "bytes": 34653
+        },
+        {
+          "path": "assets/index-zXMjn8Aw.js",
+          "sha256": "5cd418f9ff34a42abb6881ca14d8d8ece1d6ed0f2b38d413d4b08f22442d9456",
+          "bytes": 4566147
+        }
+      ],
+      "verifiedAt": "2026-10-18T14:36:43.193Z"
+    },
+    "liveUI": {
+      "identity": {
+        "title": "N1 Immersive Sparring Partner",
+        "actualUrl": "https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/",
+        "date": "2026年10月16日(金)\nDay 48 · 99日N1計画",
+        "titleText": "画面は表示されたのに、なぜ操作しづらいのか（第66号）"
+      },
+      "vocabulary": {
+        "new": 12,
+        "review": 8,
+        "total": 20,
+        "allDetailedCardsChecked": true,
+        "frequencyDenominator": 68
+      },
+      "grammar": {
+        "new": 2,
+        "review": 6,
+        "total": 8,
+        "allDisplayedDetailedFieldsChecked": true,
+        "sourceMetadataRetainedInData": true,
+        "sourceMetadataVisibleInExistingUI": false
+      },
+      "reading": {
+        "originalText": true,
+        "fourOriginalOptions": true,
+        "noPrematureAnswer": true
+      },
+      "review": {
+        "fiveOriginalQuestions": true
+      },
+      "renderHealth": {
+        "notBlank": true,
+        "noFrameworkOverlay": true,
+        "pageErrors": [],
+        "consoleErrorsOrWarnings": [],
+        "mobileNoOverflow": true
+      }
+    }
+  }
 }
