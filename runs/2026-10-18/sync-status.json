@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "targetDate": "2026-10-18",
+  "day": 50,
+  "status": "waiting_upstream",
+  "stage": "waiting_upstream",
+  "sourceSavedOnMain": true,
+  "sourceCheckpointVerified": true,
+  "expectedSourceSha256": "9402ae2de769ad6e09d4890a28faf0ebabe5b41f914690b7f68109dae4955851",
+  "expectedSourceBytes": 21916,
+  "generatedAtJST": "2026-10-18T09:04:55+09:00",
+  "sourceCommit": "f5070da7123c68cbb7eccc43df0e2f26e8c98ee4",
+  "sourceBlobSha": "b01b0d04a1fd5c25e685000d09a65785e73df4d2",
+  "sourceCheckpointBlobSha": "a51ee7358504a98315f8974af4d5df0c5db5806e",
+  "requestSubmitted": false,
+  "upstreamTargetVerified": false,
+  "sourceObservation": {
+    "n1MainSourcePresent": true,
+    "outboxPresent": true,
+    "upstreamTargetDailyFilesPresent": false,
+    "observedAt": "2026-10-18T03:42:13.493Z"
+  },
+  "error": null,
+  "lastError": null,
+  "nextStep": "N1 Day50 complete original checkpoint and main source are verified. Wait for a successful verified 2026-10-18 publication of all required IT/AI upstream documents and matching snapshot. Then prepare shared N1 sync request. Do not invent C or use another date.",
+  "updatedAt": "2026-10-18T03:42:13.493Z"
+}
