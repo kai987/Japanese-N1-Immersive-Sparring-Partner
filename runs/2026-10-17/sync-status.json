@@ -2,27 +2,29 @@
   "schemaVersion": 1,
   "targetDate": "2026-10-17",
   "day": 49,
-  "status": "waiting_request",
-  "stage": "waiting_request",
+  "status": "validating",
+  "stage": "validating",
   "sourceSavedOnMain": true,
   "sourceCheckpointVerified": true,
   "expectedSourceSha256": "212a95697b51e4ae8dfce161edcf1f3b344f4a4bed2ed252ec313297ce27da1a",
   "expectedSourceBytes": 22640,
   "generatedAtJST": "2026-10-17T09:03:57+09:00",
   "error": null,
-  "requestSubmitted": false,
+  "requestSubmitted": true,
   "upstreamTargetVerified": false,
-  "nextStep": "Submit complete canonical request and verify exact sync/Pages/live date",
-  "updatedAt": "2026-10-18T14:40:07.075Z",
+  "nextStep": "Verify exact canonical sync gates, final commit Pages and live target Day",
+  "updatedAt": "2026-10-18T14:40:13.413Z",
   "sourceCommit": "c49a484a37168da2a37f8a302d3b3bfe32943162",
   "sourceBlobSha": "a3514097a34d525d5c1bfb69be3afd57fa8e999c",
   "sourceCheckpointBlobSha": "5afe8132c512ed2eceab35ae14ed3cf0ccf5b5fc",
   "lastError": null,
   "sourceObservation": {
-    "n1MainSourcePresent": true,
-    "outboxPresent": true,
-    "upstreamTargetDailyFilesPresent": false,
-    "observedAt": "2026-10-17T08:09:28.977Z"
+    "n1Main": "830582403e52c9829f2e7987f13b0466027b7edd",
+    "mainSourceAbsent": false,
+    "outboxAbsent": false,
+    "completeMainInventory": true,
+    "completeProgressInventory": true,
+    "observedAt": "2026-10-18T14:37:51.588Z"
   },
   "reason": "earlier_pending_n1_date",
   "sourceReady": true,
@@ -59,5 +61,7 @@
     "reviewVocabulary": 10,
     "newGrammar": 1,
     "reviewGrammar": 7
-  }
+  },
+  "requestCommit": "0afb6878713c440b2af9e6d64bf1f8ad4fd0f99a",
+  "requestBlobSha": "bd4375141196274a2b4c1be86fc1534b9dcb7c7b"
 }
