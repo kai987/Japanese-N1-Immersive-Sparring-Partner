@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-10-18",
   "day": 50,
-  "status": "waiting_request",
-  "stage": "waiting_request",
+  "status": "validating",
+  "stage": "validating",
   "sourceSavedOnMain": true,
   "sourceCheckpointVerified": true,
   "expectedSourceSha256": "9402ae2de769ad6e09d4890a28faf0ebabe5b41f914690b7f68109dae4955851",
@@ -12,18 +12,20 @@
   "sourceCommit": "f5070da7123c68cbb7eccc43df0e2f26e8c98ee4",
   "sourceBlobSha": "b01b0d04a1fd5c25e685000d09a65785e73df4d2",
   "sourceCheckpointBlobSha": "a51ee7358504a98315f8974af4d5df0c5db5806e",
-  "requestSubmitted": false,
+  "requestSubmitted": true,
   "upstreamTargetVerified": false,
   "sourceObservation": {
-    "n1MainSourcePresent": true,
-    "outboxPresent": true,
-    "upstreamTargetDailyFilesPresent": false,
-    "observedAt": "2026-10-18T03:42:13.493Z"
+    "n1Main": "b38618f891e30fe17a8c49353a52e11f1bfa6642",
+    "mainSourceAbsent": false,
+    "outboxAbsent": false,
+    "completeMainInventory": true,
+    "completeProgressInventory": true,
+    "observedAt": "2026-10-18T14:44:36.847Z"
   },
   "error": null,
   "lastError": null,
-  "nextStep": "Submit complete canonical request and verify exact sync/Pages/live date",
-  "updatedAt": "2026-10-18T14:46:45.508Z",
+  "nextStep": "Verify exact canonical sync gates, final commit Pages and live target Day",
+  "updatedAt": "2026-10-18T14:46:50.876Z",
   "reason": "earlier_pending_n1_date",
   "sourceReady": true,
   "sourceOutboxBlobSha": "a51ee7358504a98315f8974af4d5df0c5db5806e",
@@ -65,5 +67,7 @@
     "reviewVocabulary": 10,
     "newGrammar": 0,
     "reviewGrammar": 8
-  }
+  },
+  "requestCommit": "d9bc92980b74610eed04f40807719bc9e4db9b8b",
+  "requestBlobSha": "0368055de561503dedb34dad059979dc1475d89b"
 }
