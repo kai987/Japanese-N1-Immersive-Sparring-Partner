@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-10-18",
   "day": 50,
-  "status": "validating",
-  "stage": "validating",
+  "status": "published",
+  "stage": "published",
   "sourceSavedOnMain": true,
   "sourceCheckpointVerified": true,
   "expectedSourceSha256": "9402ae2de769ad6e09d4890a28faf0ebabe5b41f914690b7f68109dae4955851",
@@ -24,9 +24,9 @@
   },
   "error": null,
   "lastError": null,
-  "nextStep": "Verify exact canonical sync gates, final commit Pages and live target Day",
-  "updatedAt": "2026-10-18T14:46:50.876Z",
-  "reason": "earlier_pending_n1_date",
+  "nextStep": "Complete: target N1 source, canonical request, final Pages and live learning verified. Preserve originals and learning states; no duplicate handoff for audio recovery.",
+  "updatedAt": "2026-10-18T14:53:03.234Z",
+  "reason": null,
   "sourceReady": true,
   "sourceOutboxBlobSha": "a51ee7358504a98315f8974af4d5df0c5db5806e",
   "sourceSha256": "9402ae2de769ad6e09d4890a28faf0ebabe5b41f914690b7f68109dae4955851",
@@ -36,26 +36,8 @@
   "snapshotSha256": "03d79aea751dc9cba90b37122d96b5e0ed44ca1c62396353235667abb4e35d06",
   "issueNumber": 68,
   "totalDays": 68,
-  "blockedBy": {
-    "date": "2026-10-16",
-    "stage": "waiting_upstream",
-    "status": "waiting_upstream",
-    "requestSubmitted": false
-  },
-  "pendingEarlierDates": [
-    {
-      "date": "2026-10-16",
-      "stage": "waiting_upstream",
-      "status": "waiting_upstream",
-      "requestSubmitted": false
-    },
-    {
-      "date": "2026-10-17",
-      "stage": "waiting_request",
-      "status": "waiting_request",
-      "requestSubmitted": false
-    }
-  ],
+  "blockedBy": null,
+  "pendingEarlierDates": [],
   "observedRequestDate": "2026-10-15",
   "requestDraftBlobSha": "0368055de561503dedb34dad059979dc1475d89b",
   "rawC4": {
@@ -69,5 +51,90 @@
     "reviewGrammar": 8
   },
   "requestCommit": "d9bc92980b74610eed04f40807719bc9e4db9b8b",
-  "requestBlobSha": "0368055de561503dedb34dad059979dc1475d89b"
+  "requestBlobSha": "0368055de561503dedb34dad059979dc1475d89b",
+  "syncRunId": 39137522578,
+  "releaseCommit": "96f96020700e7c1798bdb53656cdd5e52dcd8fdd",
+  "pagesRunId": 39137636408,
+  "storedSnapshotSha256": "2bb21665e8d56c4fe74223f4542f717af634877bbdc33744678d9e1b28fed253",
+  "verification": {
+    "originalMatchesOutbox": true,
+    "dailyMatchesRequest": true,
+    "fullSnapshotCanonicalImporterBytesEqual": true,
+    "fullGrammarDates": 68,
+    "upstreamSourceHashVerified": true,
+    "exactSyncGates": true,
+    "exactPages": true,
+    "liveAssets": {
+      "targetDate": "2026-10-18",
+      "releaseCommit": "96f96020700e7c1798bdb53656cdd5e52dcd8fdd",
+      "pagesRunId": 39137636408,
+      "artifactByteHashes": true,
+      "assets": [
+        {
+          "path": "index.html",
+          "sha256": "3de90f5ffba224aed24e019de3dcf0a6a46ab368ff466e1c10f533d4edcb94fc",
+          "bytes": 1596
+        },
+        {
+          "path": "assets/LiveReactions-BsNLJgSR.css",
+          "sha256": "1b3933ecb7c5675b05b217aa76300036378af6d1d907643a42ab6eaf1e9aca52",
+          "bytes": 7155
+        },
+        {
+          "path": "assets/LiveReactions-DcC_7NGa.js",
+          "sha256": "5c41ee1b12bf700206e5aadc69d400925c47dbfd0caa84201386a6bc72d96513",
+          "bytes": 48317
+        },
+        {
+          "path": "assets/index-BNbg6cG-.js",
+          "sha256": "649dc3f73cc4ebe9cb3b687e706a6f43127298326f53b125f1eed9cf820cdd5c",
+          "bytes": 4598171
+        },
+        {
+          "path": "assets/index-Bzo3HEps.css",
+          "sha256": "0faad935774f798fecac3753fbc0a21da0276af998fe14b972677937da7a81ad",
+          "bytes": 34653
+        }
+      ],
+      "verifiedAt": "2026-10-18T14:50:20.373Z"
+    },
+    "liveUI": {
+      "identity": {
+        "title": "N1 Immersive Sparring Partner",
+        "actualUrl": "https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/",
+        "date": "2026年10月18日(日)\nDay 50 · 99日N1計画",
+        "titleText": "出典が示されれば、答えを信じてよいのか（第68号）"
+      },
+      "vocabulary": {
+        "new": 10,
+        "review": 10,
+        "total": 20,
+        "allDetailedCardsChecked": true,
+        "frequencyDenominator": 68
+      },
+      "grammar": {
+        "new": 0,
+        "review": 8,
+        "total": 8,
+        "allDisplayedDetailedFieldsChecked": true,
+        "sourceMetadataRetainedInData": true,
+        "sourceMetadataVisibleInExistingUI": false
+      },
+      "reading": {
+        "originalText": true,
+        "fourOriginalOptions": true,
+        "noPrematureAnswer": true
+      },
+      "review": {
+        "fiveOriginalQuestions": true
+      },
+      "renderHealth": {
+        "notBlank": true,
+        "noFrameworkOverlay": true,
+        "pageErrors": [],
+        "consoleErrorsOrWarnings": [],
+        "mobileNoOverflow": true
+      }
+    }
+  }
 }
