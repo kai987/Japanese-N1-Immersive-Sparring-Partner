@@ -12,7 +12,7 @@
   },
   "engineVersion": "1.1.0-dev",
   "modelVersion": "1.0.0",
-  "generatedAt": "2026-10-19T02:09:25.504674+00:00",
+  "generatedAt": "2026-10-19T19:30:03.093Z",
   "lessonDates": [
     "2026-10-19",
     "2026-10-18",
@@ -66,7 +66,7 @@
     "2026-08-31",
     "2026-08-30"
   ],
-  "expectedClips": 5406,
+  "expectedClips": 5407,
   "complete": true,
   "clips": {
     "000508138c45e52f": {
@@ -45640,6 +45640,18 @@
       "bytes": 8493,
       "sha256": "1476d9275936da782d8b8ba8ed10c44ba89e4ca420642577476dad96c51a2693",
       "rms": 0.10972
+    },
+    "ace462d7b58c8083": {
+      "id": "ace462d7b58c8083",
+      "text": "プロンプト本文に加えて、TemperatureやThinking Budgetなどのモデル設定も同じ版としてまとめて配布し、本文と設定のバージョンの食い違いを防いでいます。",
+      "label": "プロンプト本文に加えて、TemperatureやThinking Budgetなどのモデル設定も同じ版としてまとめて配布し、本文と設定のバージョンの食い違いを防いでいます。",
+      "references": [
+        "lesson/2026-10-19/grammar/2026-10-19-g-study-2c43f688/evidence/0"
+      ],
+      "duration": 11.184,
+      "bytes": 90093,
+      "sha256": "2d5e6bc747775c0f14d9a8c86d9983a8455c2a621bd30b89750a3a38f3140ca8",
+      "rms": 0.115071
     },
     "ace54f42f831d746": {
       "id": "ace54f42f831d746",

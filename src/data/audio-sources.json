@@ -21,12 +21,11 @@
     "supabase": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/"
   },
   "summary": {
-    "total": 5406,
-    "matchingText": 1289,
+    "total": 5407,
     "reused": 1288,
-    "uploads": 4118,
+    "uploads": 4119,
     "savedBytes": 31865160,
-    "uploadBytes": 135120798
+    "uploadBytes": 135210891
   },
   "clips": {
     "000508138c45e52f": {
@@ -25810,6 +25809,13 @@
       "bytes": 12141,
       "duration": 0.929
     },
+    "ace462d7b58c8083": {
+      "provider": "supabase",
+      "path": "morioki-normal/ace462d7b58c8083--2d5e6bc747775c0f14d9a8c86d9983a8455c2a621bd30b89750a3a38f3140ca8.mp3",
+      "sha256": "2d5e6bc747775c0f14d9a8c86d9983a8455c2a621bd30b89750a3a38f3140ca8",
+      "bytes": 90093,
+      "duration": 11.184
+    },
     "ace54f42f831d746": {
       "provider": "supabase",
       "path": "morioki-normal/ace54f42f831d746--ffcb8ae1787176548e8c39a0fe4239e94db78ad34029f4640beb441414133806.mp3",
@@ -37872,5 +37878,5 @@
       "duration": 2.104
     }
   },
-  "verifiedAt": "2026-10-19T02:15:13.125Z"
+  "verifiedAt": "2026-10-19T19:30:03.093Z"
 }
