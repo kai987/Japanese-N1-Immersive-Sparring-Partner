@@ -1,39 +1,42 @@
 {
   "targetDate": "2026-10-19",
   "day": 51,
-  "stage": "audio_awaiting_pages",
-  "reason": "User requested Day51 correction after upstream readable placeholder correction. Exact N1 original, reading, review and learning identities preserved. One new utterance needed before canonical snapshot sync can pass current audio gate.",
+  "reason": "User requested the same readable-placeholder correction for Day51. Replace obsolete mirrored reviewEvidence by the verified upstream snapshot; preserve exact N1 original, questions, identities and learned state.",
+  "stage": "validating",
   "upstreamSourceCommit": "4697399da64ab1f28db78794d232671db7fad510",
-  "newRecording": {
-    "id": "ace462d7b58c8083",
-    "path": "morioki-normal/ace462d7b58c8083--2d5e6bc747775c0f14d9a8c86d9983a8455c2a621bd30b89750a3a38f3140ca8.mp3",
-    "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/ace462d7b58c8083--2d5e6bc747775c0f14d9a8c86d9983a8455c2a621bd30b89750a3a38f3140ca8.mp3",
-    "sha256": "2d5e6bc747775c0f14d9a8c86d9983a8455c2a621bd30b89750a3a38f3140ca8",
-    "bytes": 90093,
-    "duration": 11.183667,
-    "verified": true,
-    "uploaded": true,
-    "verifiedAt": "2026-10-19T19:30:03.065Z"
-  },
-  "priorHostedPreserved": 5406,
-  "nextStep": "Verify exact audio prerequisite Pages and resulting shared-audio run, refresh N1 main and submit the canonical source-bound correction request.",
-  "updatedAt": "2026-10-19T19:30:32.861729+00:00",
-  "audioPrerequisite": {
-    "targetDate": "2026-10-19",
-    "day": 51,
-    "commit": "beac534e068700133c9fb36ce63221ec4fbf8295",
-    "parent": "867568e4799b1a985f0561c455accd996e29619b",
-    "paths": [
-      "public/audio/manifest.json",
-      "src/data/audio-index.json",
-      "src/data/audio-sources.json"
+  "sourcePagesRunId": 39309168605,
+  "snapshotSha256": "160a6ef58077a004b8fe257a1d8279fad14bcc5269db49677859e7b66abb7e5b",
+  "originalUnchanged": true,
+  "localChecks": {
+    "checks": [
+      {
+        "gate": "content.log",
+        "exitCode": 0,
+        "log": "/tmp/japan-n1-20261020-editorial/logs/content.log"
+      },
+      {
+        "gate": "unit.log",
+        "exitCode": 0,
+        "log": "/tmp/japan-n1-20261020-editorial/logs/unit.log"
+      },
+      {
+        "gate": "build.log",
+        "exitCode": 0,
+        "log": "/tmp/japan-n1-20261020-editorial/logs/build.log"
+      },
+      {
+        "gate": "browser.log",
+        "exitCode": 0,
+        "log": "/tmp/japan-n1-20261020-editorial/logs/browser.log"
+      }
     ],
-    "newClips": 1,
-    "priorHostedPreserved": 5406,
-    "verifiedRemoteRecordings": 5407,
-    "remoteBytes": 182384787,
-    "sourceAndLessonUnchanged": true,
-    "pushedAt": "2026-10-19T19:33:38.751Z"
+    "unitTests": 94,
+    "pythonTests": 12,
+    "browserTests": 48,
+    "validatedLessons": 51,
+    "checkedAt": "2026-10-19T19:31:36.244484+00:00"
   },
-  "remoteRecordingsVerified": 5407
+  "updatedAt": "2026-10-19T19:36:59.266Z",
+  "requestCommit": "92895af9255e54bb0625709d589a7615291e0a0f",
+  "requestBlobSha": "29dda0b9c7f01473e8efc758ef477427bdc32fbe"
 }
