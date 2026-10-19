@@ -25,7 +25,7 @@
   "error": null,
   "lastError": null,
   "nextStep": "N1 source-bound text and independent shared/unique audio verified; preserve hosted history and resume only new pending inputs.",
-  "updatedAt": "2026-10-19T02:19:38.616Z",
+  "updatedAt": "2026-10-19T19:36:53.248Z",
   "upstreamSourceCommit": "9f24afc638447a8b18b5a5e89845404fd8f28cda",
   "sourcePagesRunId": 39187290526,
   "sourceSha256": "038e65792ae6be83e4cf3836992dac5cdced4d17d0fac1c2259f6ef0225058ff",
@@ -162,5 +162,45 @@
       "supabase"
     ],
     "completedAt": "2026-10-19T02:19:01.403Z"
+  },
+  "editorialCorrection": {
+    "targetDate": "2026-10-19",
+    "day": 51,
+    "reason": "User requested the same readable-placeholder correction for Day51. Replace obsolete mirrored reviewEvidence by the verified upstream snapshot; preserve exact N1 original, questions, identities and learned state.",
+    "stage": "request_ready",
+    "upstreamSourceCommit": "4697399da64ab1f28db78794d232671db7fad510",
+    "sourcePagesRunId": 39309168605,
+    "snapshotSha256": "160a6ef58077a004b8fe257a1d8279fad14bcc5269db49677859e7b66abb7e5b",
+    "originalUnchanged": true,
+    "localChecks": {
+      "checks": [
+        {
+          "gate": "content.log",
+          "exitCode": 0,
+          "log": "/tmp/japan-n1-20261020-editorial/logs/content.log"
+        },
+        {
+          "gate": "unit.log",
+          "exitCode": 0,
+          "log": "/tmp/japan-n1-20261020-editorial/logs/unit.log"
+        },
+        {
+          "gate": "build.log",
+          "exitCode": 0,
+          "log": "/tmp/japan-n1-20261020-editorial/logs/build.log"
+        },
+        {
+          "gate": "browser.log",
+          "exitCode": 0,
+          "log": "/tmp/japan-n1-20261020-editorial/logs/browser.log"
+        }
+      ],
+      "unitTests": 94,
+      "pythonTests": 12,
+      "browserTests": 48,
+      "validatedLessons": 51,
+      "checkedAt": "2026-10-19T19:31:36.244484+00:00"
+    },
+    "updatedAt": "2026-10-19T19:36:53.248Z"
   }
 }
