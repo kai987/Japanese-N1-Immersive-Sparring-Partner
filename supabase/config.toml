@@ -1,0 +1,5 @@
+project_id = "flpmblfscgcbrprwwckz"
+
+[functions.n1-audio-upload]
+# The function authenticates a dedicated capability token before reading bytes.
+verify_jwt = false

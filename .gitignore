@@ -25,3 +25,9 @@ __pycache__/
 # Generated recordings stay in the local cache; published media is served by
 # Supabase Storage or reused from the daily project's immutable R2 objects.
 /public/audio/morioki-normal/
+
+# Credentials and local worker data never belong to the repository.
+.env
+.env.*
+!.env.example
+/supabase/.temp/
