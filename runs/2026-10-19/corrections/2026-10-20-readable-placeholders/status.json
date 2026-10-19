@@ -1,42 +1,30 @@
 {
   "targetDate": "2026-10-19",
   "day": 51,
-  "reason": "User requested the same readable-placeholder correction for Day51. Replace obsolete mirrored reviewEvidence by the verified upstream snapshot; preserve exact N1 original, questions, identities and learned state.",
-  "stage": "validating",
+  "stage": "published",
+  "reason": "Corrected Day51 mirrored review evidence from the verified upstream source; preserve source, all learning identities and questions. One corresponding recording added, with every historical hosted clip preserved.",
+  "requestCommit": "92895af9255e54bb0625709d589a7615291e0a0f",
+  "requestBlobSha": "29dda0b9c7f01473e8efc758ef477427bdc32fbe",
+  "releaseCommit": "9bbab2f6409e78cb076b7d6ab57566eab1da3afa",
+  "syncRunId": 39312468463,
+  "pagesRunId": 39312733499,
   "upstreamSourceCommit": "4697399da64ab1f28db78794d232671db7fad510",
   "sourcePagesRunId": 39309168605,
   "snapshotSha256": "160a6ef58077a004b8fe257a1d8279fad14bcc5269db49677859e7b66abb7e5b",
   "originalUnchanged": true,
-  "localChecks": {
-    "checks": [
-      {
-        "gate": "content.log",
-        "exitCode": 0,
-        "log": "/tmp/japan-n1-20261020-editorial/logs/content.log"
-      },
-      {
-        "gate": "unit.log",
-        "exitCode": 0,
-        "log": "/tmp/japan-n1-20261020-editorial/logs/unit.log"
-      },
-      {
-        "gate": "build.log",
-        "exitCode": 0,
-        "log": "/tmp/japan-n1-20261020-editorial/logs/build.log"
-      },
-      {
-        "gate": "browser.log",
-        "exitCode": 0,
-        "log": "/tmp/japan-n1-20261020-editorial/logs/browser.log"
-      }
-    ],
-    "unitTests": 94,
-    "pythonTests": 12,
-    "browserTests": 48,
-    "validatedLessons": 51,
-    "checkedAt": "2026-10-19T19:31:36.244484+00:00"
+  "readingReviewAndCardIdsUnchanged": true,
+  "display": {
+    "newVocabulary": 7,
+    "reviewVocabulary": 13,
+    "newGrammar": 0,
+    "reviewGrammar": 8
   },
-  "updatedAt": "2026-10-19T19:36:59.266Z",
-  "requestCommit": "92895af9255e54bb0625709d589a7615291e0a0f",
-  "requestBlobSha": "29dda0b9c7f01473e8efc758ef477427bdc32fbe"
+  "correctedExcerpt": "プロンプト本文に加えて、TemperatureやThinking Budgetなどのモデル設定も同じ版としてまとめて配布し、本文と設定のバージョンの食い違いを防いでいます。",
+  "newlyGeneratedClips": 1,
+  "priorHostedPreserved": 5406,
+  "verifiedHostedClips": 5407,
+  "finalSharedAudioVerificationRunId": 39313201323,
+  "playbackTests": 3,
+  "scheduleChanged": false,
+  "completedAt": "2026-10-19T19:43:43.638Z"
 }
