@@ -24,8 +24,8 @@
   },
   "error": null,
   "lastError": null,
-  "nextStep": "Complete: target N1 source, canonical request, final Pages and live learning verified. Preserve originals and learning states; no duplicate handoff for audio recovery.",
-  "updatedAt": "2026-10-19T02:06:28.474Z",
+  "nextStep": "N1 source-bound text and independent shared/unique audio verified; preserve hosted history and resume only new pending inputs.",
+  "updatedAt": "2026-10-19T02:19:38.616Z",
   "upstreamSourceCommit": "9f24afc638447a8b18b5a5e89845404fd8f28cda",
   "sourcePagesRunId": 39187290526,
   "sourceSha256": "038e65792ae6be83e4cf3836992dac5cdced4d17d0fac1c2259f6ef0225058ff",
@@ -50,8 +50,8 @@
   "pendingEarlierDates": [],
   "sourceReady": true,
   "syncRunId": 39187702696,
-  "releaseCommit": "72163e5255e43eddb6333e1b8a875c3311a1edb4",
-  "pagesRunId": 39188150816,
+  "releaseCommit": "32124fff7eca22dd5f4186deeb32401a077ced94",
+  "pagesRunId": 39189183791,
   "storedSnapshotSha256": "3154f6ee7b2cb4cb6c4d90fd6f9c01c97df728cbab99542e80cbacc9f08e515a",
   "verification": {
     "originalMatchesOutbox": true,
@@ -63,19 +63,24 @@
     "exactPages": true,
     "liveAssets": {
       "targetDate": "2026-10-19",
-      "releaseCommit": "72163e5255e43eddb6333e1b8a875c3311a1edb4",
-      "pagesRunId": 39188150816,
+      "releaseCommit": "32124fff7eca22dd5f4186deeb32401a077ced94",
+      "pagesRunId": 39189183791,
       "artifactByteHashes": true,
       "assets": [
         {
           "path": "index.html",
-          "sha256": "84391e2cf5b2cc42d452d482a0d11d3c17798cb089826fd33c28f5c736b34cee",
+          "sha256": "4ff8d8b696062525a13bc3c913c6be996b552f0f3a6216ad9a682e3e3fccf231",
           "bytes": 1596
         },
         {
-          "path": "assets/CompoundVerbs-DmCNwkiH.js",
-          "sha256": "a44d6490fe3cb7b1f8e4e0fcae026535fd3fa694cfb4d5e51ee54bd7a36722d1",
+          "path": "assets/CompoundVerbs-Bfv03K9G.js",
+          "sha256": "3fd1a4942a9d160c98ce29bee5ac394fd5cbe476aefdabd8b34571b870ae4115",
           "bytes": 7948
+        },
+        {
+          "path": "assets/LiveReactions-CUhzDLDd.js",
+          "sha256": "5a6321863890167568d2e9e9aa58216ac0b4af620fc7f8cb0237ac96457b8cac",
+          "bytes": 8904
         },
         {
           "path": "assets/LiveReactions-Dl0bhBTV.css",
@@ -83,22 +88,17 @@
           "bytes": 6997
         },
         {
-          "path": "assets/LiveReactions-EcEcJmcO.js",
-          "sha256": "13d05d553dffd083c264d241afbb67eaa76c3a28083391cb95023834d777489f",
-          "bytes": 8904
+          "path": "assets/index-BDI7fOjK.js",
+          "sha256": "053484f6a3755bb403cbbe912860cbd3e8c99b2defbe635359eea201dc366202",
+          "bytes": 6381335
         },
         {
           "path": "assets/index-BpdupM-0.css",
           "sha256": "ae591cc4f64aac982210bb9f9a30a84e9aab4eb1a7a4aa290611892d99ac1d4e",
           "bytes": 46788
-        },
-        {
-          "path": "assets/index-CPrIAMnm.js",
-          "sha256": "153eb8a193abcd7f5cd7138b8f4953b1275c872b9171cd2ddd9d8a50add0a8fa",
-          "bytes": 6358449
         }
       ],
-      "verifiedAt": "2026-10-19T02:06:18.854Z"
+      "verifiedAt": "2026-10-19T02:18:54.210Z"
     },
     "liveUI": {
       "identity": {
@@ -139,5 +139,28 @@
         "mobileNoOverflow": true
       }
     }
+  },
+  "audioCompletion": {
+    "stage": "playback_verified",
+    "targetDate": "2026-10-19",
+    "sourceAudioCommit": "9f24afc638447a8b18b5a5e89845404fd8f28cda",
+    "n1Commit": "32124fff7eca22dd5f4186deeb32401a077ced94",
+    "pagesRunId": 39189183791,
+    "sharedAudioRunId": 39188084986,
+    "addedSharedClips": 17,
+    "newlyGeneratedClips": 80,
+    "priorHostedPreserved": 5326,
+    "pendingClips": 0,
+    "fullPublicVerification": {
+      "verifiedClips": 5406,
+      "verifiedBytes": 182294694,
+      "hash": "SHA-256",
+      "published": true
+    },
+    "actualPlaybackProviders": [
+      "daily",
+      "supabase"
+    ],
+    "completedAt": "2026-10-19T02:19:01.403Z"
   }
 }
