@@ -1,0 +1,21 @@
+{
+  "targetDate": "2026-10-19",
+  "day": 51,
+  "stage": "audio_validating",
+  "reason": "User requested Day51 correction after upstream readable placeholder correction. Exact N1 original, reading, review and learning identities preserved. One new utterance needed before canonical snapshot sync can pass current audio gate.",
+  "upstreamSourceCommit": "4697399da64ab1f28db78794d232671db7fad510",
+  "newRecording": {
+    "id": "ace462d7b58c8083",
+    "path": "morioki-normal/ace462d7b58c8083--2d5e6bc747775c0f14d9a8c86d9983a8455c2a621bd30b89750a3a38f3140ca8.mp3",
+    "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/ace462d7b58c8083--2d5e6bc747775c0f14d9a8c86d9983a8455c2a621bd30b89750a3a38f3140ca8.mp3",
+    "sha256": "2d5e6bc747775c0f14d9a8c86d9983a8455c2a621bd30b89750a3a38f3140ca8",
+    "bytes": 90093,
+    "duration": 11.183667,
+    "verified": true,
+    "uploaded": true,
+    "verifiedAt": "2026-10-19T19:30:03.065Z"
+  },
+  "priorHostedPreserved": 5406,
+  "nextStep": "Finish metadata checks and publish audio prerequisites, then submit the complete source-bound snapshot correction through sync-n1-daily.yml.",
+  "updatedAt": "2026-10-19T19:30:32.861729+00:00"
+}
