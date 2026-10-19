@@ -1,7 +1,7 @@
 {
   "targetDate": "2026-10-19",
   "day": 51,
-  "stage": "audio_validating",
+  "stage": "audio_awaiting_pages",
   "reason": "User requested Day51 correction after upstream readable placeholder correction. Exact N1 original, reading, review and learning identities preserved. One new utterance needed before canonical snapshot sync can pass current audio gate.",
   "upstreamSourceCommit": "4697399da64ab1f28db78794d232671db7fad510",
   "newRecording": {
@@ -16,6 +16,24 @@
     "verifiedAt": "2026-10-19T19:30:03.065Z"
   },
   "priorHostedPreserved": 5406,
-  "nextStep": "Finish metadata checks and publish audio prerequisites, then submit the complete source-bound snapshot correction through sync-n1-daily.yml.",
-  "updatedAt": "2026-10-19T19:30:32.861729+00:00"
+  "nextStep": "Verify exact audio prerequisite Pages and resulting shared-audio run, refresh N1 main and submit the canonical source-bound correction request.",
+  "updatedAt": "2026-10-19T19:30:32.861729+00:00",
+  "audioPrerequisite": {
+    "targetDate": "2026-10-19",
+    "day": 51,
+    "commit": "beac534e068700133c9fb36ce63221ec4fbf8295",
+    "parent": "867568e4799b1a985f0561c455accd996e29619b",
+    "paths": [
+      "public/audio/manifest.json",
+      "src/data/audio-index.json",
+      "src/data/audio-sources.json"
+    ],
+    "newClips": 1,
+    "priorHostedPreserved": 5406,
+    "verifiedRemoteRecordings": 5407,
+    "remoteBytes": 182384787,
+    "sourceAndLessonUnchanged": true,
+    "pushedAt": "2026-10-19T19:33:38.751Z"
+  },
+  "remoteRecordingsVerified": 5407
 }
