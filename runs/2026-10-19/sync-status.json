@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-10-19",
   "day": 51,
-  "status": "validating",
-  "stage": "validating",
+  "status": "published",
+  "stage": "published",
   "sourceSavedOnMain": true,
   "sourceCheckpointVerified": true,
   "expectedSourceSha256": "038e65792ae6be83e4cf3836992dac5cdced4d17d0fac1c2259f6ef0225058ff",
@@ -24,8 +24,8 @@
   },
   "error": null,
   "lastError": null,
-  "nextStep": "Verify exact canonical sync gates, final commit Pages and live target Day",
-  "updatedAt": "2026-10-19T01:57:38.435Z",
+  "nextStep": "Complete: target N1 source, canonical request, final Pages and live learning verified. Preserve originals and learning states; no duplicate handoff for audio recovery.",
+  "updatedAt": "2026-10-19T02:06:28.474Z",
   "upstreamSourceCommit": "9f24afc638447a8b18b5a5e89845404fd8f28cda",
   "sourcePagesRunId": 39187290526,
   "sourceSha256": "038e65792ae6be83e4cf3836992dac5cdced4d17d0fac1c2259f6ef0225058ff",
@@ -44,5 +44,100 @@
     "reviewGrammar": 8
   },
   "requestCommit": "d72ee89c77056e62f4bc3d8dedaef0188e065301",
-  "requestBlobSha": "0d130a01c69155937e3fe769069cd70cdc357c76"
+  "requestBlobSha": "0d130a01c69155937e3fe769069cd70cdc357c76",
+  "reason": null,
+  "blockedBy": null,
+  "pendingEarlierDates": [],
+  "sourceReady": true,
+  "syncRunId": 39187702696,
+  "releaseCommit": "72163e5255e43eddb6333e1b8a875c3311a1edb4",
+  "pagesRunId": 39188150816,
+  "storedSnapshotSha256": "3154f6ee7b2cb4cb6c4d90fd6f9c01c97df728cbab99542e80cbacc9f08e515a",
+  "verification": {
+    "originalMatchesOutbox": true,
+    "dailyMatchesRequest": true,
+    "fullSnapshotCanonicalImporterBytesEqual": true,
+    "fullGrammarDates": 69,
+    "upstreamSourceHashVerified": true,
+    "exactSyncGates": true,
+    "exactPages": true,
+    "liveAssets": {
+      "targetDate": "2026-10-19",
+      "releaseCommit": "72163e5255e43eddb6333e1b8a875c3311a1edb4",
+      "pagesRunId": 39188150816,
+      "artifactByteHashes": true,
+      "assets": [
+        {
+          "path": "index.html",
+          "sha256": "84391e2cf5b2cc42d452d482a0d11d3c17798cb089826fd33c28f5c736b34cee",
+          "bytes": 1596
+        },
+        {
+          "path": "assets/CompoundVerbs-DmCNwkiH.js",
+          "sha256": "a44d6490fe3cb7b1f8e4e0fcae026535fd3fa694cfb4d5e51ee54bd7a36722d1",
+          "bytes": 7948
+        },
+        {
+          "path": "assets/LiveReactions-Dl0bhBTV.css",
+          "sha256": "f5485e02cd6d85486c9d041b525a14a5ea36281e08972de709770f38597932bd",
+          "bytes": 6997
+        },
+        {
+          "path": "assets/LiveReactions-EcEcJmcO.js",
+          "sha256": "13d05d553dffd083c264d241afbb67eaa76c3a28083391cb95023834d777489f",
+          "bytes": 8904
+        },
+        {
+          "path": "assets/index-BpdupM-0.css",
+          "sha256": "ae591cc4f64aac982210bb9f9a30a84e9aab4eb1a7a4aa290611892d99ac1d4e",
+          "bytes": 46788
+        },
+        {
+          "path": "assets/index-CPrIAMnm.js",
+          "sha256": "153eb8a193abcd7f5cd7138b8f4953b1275c872b9171cd2ddd9d8a50add0a8fa",
+          "bytes": 6358449
+        }
+      ],
+      "verifiedAt": "2026-10-19T02:06:18.854Z"
+    },
+    "liveUI": {
+      "identity": {
+        "title": "N1 Immersive Sparring Partner",
+        "actualUrl": "https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/",
+        "date": "2026年10月19日(月)\nDay 51 · 99日N1計画",
+        "titleText": "「何を使っているか」を知ることの先に（第69号）"
+      },
+      "vocabulary": {
+        "new": 7,
+        "review": 13,
+        "total": 20,
+        "allDetailedCardsChecked": true,
+        "frequencyDenominator": 69
+      },
+      "grammar": {
+        "new": 0,
+        "review": 8,
+        "total": 8,
+        "allDisplayedDetailedFieldsChecked": true,
+        "sourceMetadataRetainedInData": true,
+        "sourceMetadataVisibleInExistingUI": false
+      },
+      "reading": {
+        "originalText": true,
+        "fourOriginalOptions": true,
+        "noPrematureAnswer": true
+      },
+      "review": {
+        "fiveOriginalQuestions": true,
+        "normalization": "Only source line breaks omitted by SentenceAudio; all other characters exact; source/JSON remain unchanged"
+      },
+      "renderHealth": {
+        "notBlank": true,
+        "noFrameworkOverlay": true,
+        "pageErrors": [],
+        "consoleErrorsOrWarnings": [],
+        "mobileNoOverflow": true
+      }
+    }
+  }
 }
