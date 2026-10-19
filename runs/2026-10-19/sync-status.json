@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-10-19",
   "day": 51,
-  "status": "waiting_upstream",
-  "stage": "waiting_upstream",
+  "status": "waiting_request",
+  "stage": "waiting_request",
   "sourceSavedOnMain": true,
   "sourceCheckpointVerified": true,
   "expectedSourceSha256": "038e65792ae6be83e4cf3836992dac5cdced4d17d0fac1c2259f6ef0225058ff",
@@ -22,6 +22,23 @@
   },
   "error": null,
   "lastError": null,
-  "nextStep": "Complete exact 2026-10-19 N1 original is verified on both progress branch and main. Await successful source-locked 2026-10-19 IT/AI upstream daily publication and full snapshot verification, then resume via the existing shared N1 workflow. Do not reuse another date's C or mark published without Pages and live-date verification.",
-  "updatedAt": "2026-10-19T00:25:13.216Z"
+  "nextStep": "Submit complete canonical request and verify exact sync/Pages/live date",
+  "updatedAt": "2026-10-19T01:57:32.686Z",
+  "upstreamSourceCommit": "9f24afc638447a8b18b5a5e89845404fd8f28cda",
+  "sourcePagesRunId": 39187290526,
+  "sourceSha256": "038e65792ae6be83e4cf3836992dac5cdced4d17d0fac1c2259f6ef0225058ff",
+  "snapshotSha256": "df032432db5dfcb1623c24a6b78b71f7d80268da325770af22c310df19b1e2d2",
+  "issueNumber": 69,
+  "totalDays": 69,
+  "requestDraftBlobSha": "0d130a01c69155937e3fe769069cd70cdc357c76",
+  "rawC4": {
+    "newVocabulary": 7,
+    "newGrammar": 0
+  },
+  "display": {
+    "newVocabulary": 7,
+    "reviewVocabulary": 13,
+    "newGrammar": 0,
+    "reviewGrammar": 8
+  }
 }
