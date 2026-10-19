@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "targetDate": "2026-10-19",
+  "day": 51,
+  "status": "waiting_upstream",
+  "stage": "waiting_upstream",
+  "sourceSavedOnMain": true,
+  "sourceCheckpointVerified": true,
+  "expectedSourceSha256": "038e65792ae6be83e4cf3836992dac5cdced4d17d0fac1c2259f6ef0225058ff",
+  "expectedSourceBytes": 22664,
+  "generatedAtJST": "2026-10-19T09:04:30+09:00",
+  "sourceCommit": "67985ad125129cedb0d24d89c8824a588a6ec332",
+  "sourceBlobSha": "c6d97967a0e33eeecb175a9c6cc20a14e542c74b",
+  "sourceCheckpointBlobSha": "8d21026481cd069b957f66865392b0a499f12cfa",
+  "upstreamTargetVerified": false,
+  "requestSubmitted": false,
+  "sourceObservation": {
+    "n1MainSourcePresent": true,
+    "outboxPresent": true,
+    "upstreamTargetDailyFilesPresent": false,
+    "observedAt": "2026-10-19T00:25:13.216Z"
+  },
+  "error": null,
+  "lastError": null,
+  "nextStep": "Complete exact 2026-10-19 N1 original is verified on both progress branch and main. Await successful source-locked 2026-10-19 IT/AI upstream daily publication and full snapshot verification, then resume via the existing shared N1 workflow. Do not reuse another date's C or mark published without Pages and live-date verification.",
+  "updatedAt": "2026-10-19T00:25:13.216Z"
+}
