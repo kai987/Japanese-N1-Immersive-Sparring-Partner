@@ -24,12 +24,12 @@
   },
   "error": null,
   "lastError": null,
-  "nextStep": "N1 source-bound text and independent shared/unique audio verified; preserve hosted history and resume only new pending inputs.",
-  "updatedAt": "2026-10-19T19:36:53.248Z",
-  "upstreamSourceCommit": "9f24afc638447a8b18b5a5e89845404fd8f28cda",
-  "sourcePagesRunId": 39187290526,
+  "nextStep": "Completed source-bound Day51 editorial correction and its one incremental recording. Preserve original learning content, identities and immutable hosted history.",
+  "updatedAt": "2026-10-19T19:43:43.638Z",
+  "upstreamSourceCommit": "4697399da64ab1f28db78794d232671db7fad510",
+  "sourcePagesRunId": 39309168605,
   "sourceSha256": "038e65792ae6be83e4cf3836992dac5cdced4d17d0fac1c2259f6ef0225058ff",
-  "snapshotSha256": "df032432db5dfcb1623c24a6b78b71f7d80268da325770af22c310df19b1e2d2",
+  "snapshotSha256": "160a6ef58077a004b8fe257a1d8279fad14bcc5269db49677859e7b66abb7e5b",
   "issueNumber": 69,
   "totalDays": 69,
   "requestDraftBlobSha": "0d130a01c69155937e3fe769069cd70cdc357c76",
@@ -43,16 +43,16 @@
     "newGrammar": 0,
     "reviewGrammar": 8
   },
-  "requestCommit": "d72ee89c77056e62f4bc3d8dedaef0188e065301",
-  "requestBlobSha": "0d130a01c69155937e3fe769069cd70cdc357c76",
+  "requestCommit": "92895af9255e54bb0625709d589a7615291e0a0f",
+  "requestBlobSha": "29dda0b9c7f01473e8efc758ef477427bdc32fbe",
   "reason": null,
   "blockedBy": null,
   "pendingEarlierDates": [],
   "sourceReady": true,
-  "syncRunId": 39187702696,
-  "releaseCommit": "32124fff7eca22dd5f4186deeb32401a077ced94",
-  "pagesRunId": 39189183791,
-  "storedSnapshotSha256": "3154f6ee7b2cb4cb6c4d90fd6f9c01c97df728cbab99542e80cbacc9f08e515a",
+  "syncRunId": 39312468463,
+  "releaseCommit": "9bbab2f6409e78cb076b7d6ab57566eab1da3afa",
+  "pagesRunId": 39312733499,
+  "storedSnapshotSha256": "a7ba70c72c562ccf5f144da90674b640ab63b31b36fddcefb80467db02d9cef1",
   "verification": {
     "originalMatchesOutbox": true,
     "dailyMatchesRequest": true,
@@ -63,23 +63,23 @@
     "exactPages": true,
     "liveAssets": {
       "targetDate": "2026-10-19",
-      "releaseCommit": "32124fff7eca22dd5f4186deeb32401a077ced94",
-      "pagesRunId": 39189183791,
+      "releaseCommit": "9bbab2f6409e78cb076b7d6ab57566eab1da3afa",
+      "pagesRunId": 39312733499,
       "artifactByteHashes": true,
       "assets": [
         {
           "path": "index.html",
-          "sha256": "4ff8d8b696062525a13bc3c913c6be996b552f0f3a6216ad9a682e3e3fccf231",
+          "sha256": "2f42cce8b034a3344f1ff34b5449a2d226620cbe119bcfed9a822ae6b5995da3",
           "bytes": 1596
         },
         {
-          "path": "assets/CompoundVerbs-Bfv03K9G.js",
-          "sha256": "3fd1a4942a9d160c98ce29bee5ac394fd5cbe476aefdabd8b34571b870ae4115",
+          "path": "assets/CompoundVerbs-_7RrmKR9.js",
+          "sha256": "ea42e20b3fc25ec1372f9d331af26e59bd7bf3fd715f0f84931e5bc9c775e8a0",
           "bytes": 7948
         },
         {
-          "path": "assets/LiveReactions-CUhzDLDd.js",
-          "sha256": "5a6321863890167568d2e9e9aa58216ac0b4af620fc7f8cb0237ac96457b8cac",
+          "path": "assets/LiveReactions-DW7pT0uJ.js",
+          "sha256": "2ab6f2195b37bed87ae288791c72101ebf4a6f52c64b93444e52f4888b6928b8",
           "bytes": 8904
         },
         {
@@ -88,17 +88,17 @@
           "bytes": 6997
         },
         {
-          "path": "assets/index-BDI7fOjK.js",
-          "sha256": "053484f6a3755bb403cbbe912860cbd3e8c99b2defbe635359eea201dc366202",
-          "bytes": 6381335
-        },
-        {
           "path": "assets/index-BpdupM-0.css",
           "sha256": "ae591cc4f64aac982210bb9f9a30a84e9aab4eb1a7a4aa290611892d99ac1d4e",
           "bytes": 46788
+        },
+        {
+          "path": "assets/index-DZSEauxu.js",
+          "sha256": "8bbd3aec7ea1fc3e91393f5df66033ca2b958fe96829aece72148d5d3af57050",
+          "bytes": 6381800
         }
       ],
-      "verifiedAt": "2026-10-19T02:18:54.210Z"
+      "verifiedAt": "2026-10-19T19:41:11.080Z"
     },
     "liveUI": {
       "identity": {
@@ -138,14 +138,91 @@
         "consoleErrorsOrWarnings": [],
         "mobileNoOverflow": true
       }
+    },
+    "correctedCard": {
+      "targetDate": "2026-10-19",
+      "day": 51,
+      "releaseCommit": "9bbab2f6409e78cb076b7d6ab57566eab1da3afa",
+      "pagesRunId": 39312733499,
+      "correctedExcerpt": "プロンプト本文に加えて、TemperatureやThinking Budgetなどのモデル設定も同じ版としてまとめて配布し、本文と設定のバージョンの食い違いを防いでいます。",
+      "noUnexplainedPlaceholder": true,
+      "technicalTermsRetained": true,
+      "desktopMobileAndReload": true,
+      "reviewGrammarCards": 8,
+      "newRecording": {
+        "id": "ace462d7b58c8083",
+        "path": "morioki-normal/ace462d7b58c8083--2d5e6bc747775c0f14d9a8c86d9983a8455c2a621bd30b89750a3a38f3140ca8.mp3",
+        "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/ace462d7b58c8083--2d5e6bc747775c0f14d9a8c86d9983a8455c2a621bd30b89750a3a38f3140ca8.mp3",
+        "sha256": "2d5e6bc747775c0f14d9a8c86d9983a8455c2a621bd30b89750a3a38f3140ca8",
+        "bytes": 90093,
+        "duration": 11.183667,
+        "verified": true,
+        "uploaded": true,
+        "verifiedAt": "2026-10-19T19:30:03.065Z"
+      },
+      "playback": [
+        {
+          "label": "corrected grammar excerpt / desktop",
+          "expectedUrl": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/ace462d7b58c8083--2d5e6bc747775c0f14d9a8c86d9983a8455c2a621bd30b89750a3a38f3140ca8.mp3",
+          "sha256": "2d5e6bc747775c0f14d9a8c86d9983a8455c2a621bd30b89750a3a38f3140ca8",
+          "start": {
+            "src": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/ace462d7b58c8083--2d5e6bc747775c0f14d9a8c86d9983a8455c2a621bd30b89750a3a38f3140ca8.mp3",
+            "duration": 11.183667,
+            "currentTime": 0.062762,
+            "error": null
+          },
+          "end": {
+            "currentTime": 0.276987,
+            "paused": false,
+            "error": null
+          },
+          "actualMediaPlayback": true
+        },
+        {
+          "label": "corrected grammar excerpt / mobile",
+          "expectedUrl": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/ace462d7b58c8083--2d5e6bc747775c0f14d9a8c86d9983a8455c2a621bd30b89750a3a38f3140ca8.mp3",
+          "sha256": "2d5e6bc747775c0f14d9a8c86d9983a8455c2a621bd30b89750a3a38f3140ca8",
+          "start": {
+            "src": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/ace462d7b58c8083--2d5e6bc747775c0f14d9a8c86d9983a8455c2a621bd30b89750a3a38f3140ca8.mp3",
+            "duration": 11.183667,
+            "currentTime": 0.384,
+            "error": null
+          },
+          "end": {
+            "currentTime": 0.598831,
+            "paused": false,
+            "error": null
+          },
+          "actualMediaPlayback": true
+        },
+        {
+          "label": "shared daily vocabulary",
+          "expectedUrl": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-10-19/vocab-01--b96abb427608b7f1ae0db75f8e110c33deee112ea33a416582f5f84a9e54c0f7.mp3",
+          "sha256": "b96abb427608b7f1ae0db75f8e110c33deee112ea33a416582f5f84a9e54c0f7",
+          "start": {
+            "src": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-10-19/vocab-01--b96abb427608b7f1ae0db75f8e110c33deee112ea33a416582f5f84a9e54c0f7.mp3",
+            "duration": 1.15,
+            "currentTime": 0.059882,
+            "error": null
+          },
+          "end": {
+            "currentTime": 0.268214,
+            "paused": false,
+            "error": null
+          },
+          "actualMediaPlayback": true
+        }
+      ],
+      "consoleErrors": [],
+      "verifiedAt": "2026-10-19T19:41:17.886Z"
     }
   },
   "audioCompletion": {
     "stage": "playback_verified",
     "targetDate": "2026-10-19",
     "sourceAudioCommit": "9f24afc638447a8b18b5a5e89845404fd8f28cda",
-    "n1Commit": "32124fff7eca22dd5f4186deeb32401a077ced94",
-    "pagesRunId": 39189183791,
+    "n1Commit": "9bbab2f6409e78cb076b7d6ab57566eab1da3afa",
+    "pagesRunId": 39312733499,
     "sharedAudioRunId": 39188084986,
     "addedSharedClips": 17,
     "newlyGeneratedClips": 80,
@@ -161,48 +238,82 @@
       "daily",
       "supabase"
     ],
-    "completedAt": "2026-10-19T02:19:01.403Z"
+    "completedAt": "2026-10-19T19:43:43.638Z",
+    "latestSharedAudioVerification": {
+      "runId": 39313201323,
+      "headSha": "9bbab2f6409e78cb076b7d6ab57566eab1da3afa",
+      "sourceAudioCommit": "9f24afc638447a8b18b5a5e89845404fd8f28cda",
+      "pendingClips": 0
+    },
+    "incrementalEditorialAudio": {
+      "audioCommit": "beac534e068700133c9fb36ce63221ec4fbf8295",
+      "id": "ace462d7b58c8083",
+      "newlyGeneratedClips": 1,
+      "priorHostedPreserved": 5406,
+      "publicByteHashes": 5407,
+      "playbackTests": 3
+    }
   },
   "editorialCorrection": {
     "targetDate": "2026-10-19",
     "day": 51,
-    "reason": "User requested the same readable-placeholder correction for Day51. Replace obsolete mirrored reviewEvidence by the verified upstream snapshot; preserve exact N1 original, questions, identities and learned state.",
-    "stage": "validating",
+    "stage": "published",
+    "reason": "Corrected Day51 mirrored review evidence from the verified upstream source; preserve source, all learning identities and questions. One corresponding recording added, with every historical hosted clip preserved.",
+    "requestCommit": "92895af9255e54bb0625709d589a7615291e0a0f",
+    "requestBlobSha": "29dda0b9c7f01473e8efc758ef477427bdc32fbe",
+    "releaseCommit": "9bbab2f6409e78cb076b7d6ab57566eab1da3afa",
+    "syncRunId": 39312468463,
+    "pagesRunId": 39312733499,
     "upstreamSourceCommit": "4697399da64ab1f28db78794d232671db7fad510",
     "sourcePagesRunId": 39309168605,
     "snapshotSha256": "160a6ef58077a004b8fe257a1d8279fad14bcc5269db49677859e7b66abb7e5b",
     "originalUnchanged": true,
-    "localChecks": {
-      "checks": [
-        {
-          "gate": "content.log",
-          "exitCode": 0,
-          "log": "/tmp/japan-n1-20261020-editorial/logs/content.log"
-        },
-        {
-          "gate": "unit.log",
-          "exitCode": 0,
-          "log": "/tmp/japan-n1-20261020-editorial/logs/unit.log"
-        },
-        {
-          "gate": "build.log",
-          "exitCode": 0,
-          "log": "/tmp/japan-n1-20261020-editorial/logs/build.log"
-        },
-        {
-          "gate": "browser.log",
-          "exitCode": 0,
-          "log": "/tmp/japan-n1-20261020-editorial/logs/browser.log"
-        }
-      ],
-      "unitTests": 94,
-      "pythonTests": 12,
-      "browserTests": 48,
-      "validatedLessons": 51,
-      "checkedAt": "2026-10-19T19:31:36.244484+00:00"
+    "readingReviewAndCardIdsUnchanged": true,
+    "display": {
+      "newVocabulary": 7,
+      "reviewVocabulary": 13,
+      "newGrammar": 0,
+      "reviewGrammar": 8
     },
-    "updatedAt": "2026-10-19T19:36:59.266Z",
-    "requestCommit": "92895af9255e54bb0625709d589a7615291e0a0f",
-    "requestBlobSha": "29dda0b9c7f01473e8efc758ef477427bdc32fbe"
-  }
+    "correctedExcerpt": "プロンプト本文に加えて、TemperatureやThinking Budgetなどのモデル設定も同じ版としてまとめて配布し、本文と設定のバージョンの食い違いを防いでいます。",
+    "newlyGeneratedClips": 1,
+    "priorHostedPreserved": 5406,
+    "verifiedHostedClips": 5407,
+    "finalSharedAudioVerificationRunId": 39313201323,
+    "playbackTests": 3,
+    "scheduleChanged": false,
+    "completedAt": "2026-10-19T19:43:43.638Z"
+  },
+  "editorialCorrections": [
+    {
+      "targetDate": "2026-10-19",
+      "day": 51,
+      "stage": "published",
+      "reason": "Corrected Day51 mirrored review evidence from the verified upstream source; preserve source, all learning identities and questions. One corresponding recording added, with every historical hosted clip preserved.",
+      "requestCommit": "92895af9255e54bb0625709d589a7615291e0a0f",
+      "requestBlobSha": "29dda0b9c7f01473e8efc758ef477427bdc32fbe",
+      "releaseCommit": "9bbab2f6409e78cb076b7d6ab57566eab1da3afa",
+      "syncRunId": 39312468463,
+      "pagesRunId": 39312733499,
+      "upstreamSourceCommit": "4697399da64ab1f28db78794d232671db7fad510",
+      "sourcePagesRunId": 39309168605,
+      "snapshotSha256": "160a6ef58077a004b8fe257a1d8279fad14bcc5269db49677859e7b66abb7e5b",
+      "originalUnchanged": true,
+      "readingReviewAndCardIdsUnchanged": true,
+      "display": {
+        "newVocabulary": 7,
+        "reviewVocabulary": 13,
+        "newGrammar": 0,
+        "reviewGrammar": 8
+      },
+      "correctedExcerpt": "プロンプト本文に加えて、TemperatureやThinking Budgetなどのモデル設定も同じ版としてまとめて配布し、本文と設定のバージョンの食い違いを防いでいます。",
+      "newlyGeneratedClips": 1,
+      "priorHostedPreserved": 5406,
+      "verifiedHostedClips": 5407,
+      "finalSharedAudioVerificationRunId": 39313201323,
+      "playbackTests": 3,
+      "scheduleChanged": false,
+      "completedAt": "2026-10-19T19:43:43.638Z"
+    }
+  ]
 }
