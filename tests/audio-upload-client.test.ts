@@ -11,6 +11,34 @@ const clip = { id: '1234567890abcdef', sha256: createHash('sha256').update(mp3).
 const path = `morioki-normal/${clip.id}--${clip.sha256}.mp3`
 const publicUrl = new URL(path, AUDIO_PUBLIC_BASE).href
 
+test('a paused window prevents new requests and credential access', async () => {
+  const controller = new AbortController()
+  controller.abort()
+  await assert.rejects(ensureAudioUploaded(clip, '/unused.mp3', {
+    signal: controller.signal,
+    fetch: async () => { throw new Error('must not request') },
+    getToken: async () => { throw new Error('must not request credential') },
+  }), (error: unknown) => error instanceof AudioUploadError && error.code === 'INTERRUPTED' && !error.retryable)
+})
+
+test('window cancellation interrupts an in-flight request without retrying or uploading', async () => {
+  const controller = new AbortController()
+  let calls = 0
+  const result = ensureAudioUploaded(clip, '/unused.mp3', {
+    signal: controller.signal,
+    fetch: async (_url, init) => {
+      calls++
+      return await new Promise<Response>((_resolve, reject) => {
+        init!.signal!.addEventListener('abort', () => reject(new Error('cancelled')), { once: true })
+        controller.abort()
+      })
+    },
+    getToken: async () => { throw new Error('must not request credential') },
+  })
+  await assert.rejects(result, (error: unknown) => error instanceof AudioUploadError && error.code === 'INTERRUPTED' && !error.retryable)
+  assert.equal(calls, 1)
+})
+
 function scriptedFetch(steps: Array<Response | Error | ((url: string, init: RequestInit) => Response)>): { fetch: typeof fetch; calls: Array<{ url: string; init: RequestInit }> } {
   const calls: Array<{ url: string; init: RequestInit }> = []
   return {

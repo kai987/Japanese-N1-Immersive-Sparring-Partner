@@ -1,5 +1,6 @@
 import { createHash } from 'node:crypto'
 import { readFile } from 'node:fs/promises'
+import { setTimeout as delay } from 'node:timers/promises'
 
 export const AUDIO_UPLOAD_ENDPOINT = 'https://flpmblfscgcbrprwwckz.supabase.co/functions/v1/n1-audio-upload'
 export const AUDIO_PUBLIC_BASE = 'https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/'
@@ -17,6 +18,7 @@ export interface AudioUploadOptions {
   sleep?: (milliseconds: number) => Promise<void>
   maxAttempts?: number
   timeoutMs?: number
+  signal?: AbortSignal
 }
 
 export interface AudioUploadResult extends UploadClip {
@@ -72,16 +74,22 @@ export async function ensureAudioUploaded(clip: UploadClip, mp3Path: string, opt
     throw new AudioUploadError('INVALID_OPTIONS', 'Audio retry limits are invalid')
   }
   const fetcher = options.fetch ?? globalThis.fetch
-  const sleep = options.sleep ?? (milliseconds => new Promise(resolve => setTimeout(resolve, milliseconds)))
+  const sleep = options.sleep ?? (milliseconds => delay(milliseconds, undefined, { signal: options.signal }))
+  const checkInterrupted = () => {
+    if (options.signal?.aborted) throw new AudioUploadError('INTERRUPTED', 'Audio upload paused; verified progress retained')
+  }
   const path = `morioki-normal/${clip.id}--${clip.sha256}.mp3`
   const url = new URL(path, AUDIO_PUBLIC_BASE).href
   let localBody: ArrayBuffer | undefined
   let uploaded = false
 
   async function request(target: string, init: RequestInit): Promise<Response> {
+    checkInterrupted()
     try {
-      return await fetcher(target, { ...init, redirect: 'error', signal: AbortSignal.timeout(timeoutMs) })
+      const signal = options.signal ? AbortSignal.any([options.signal, AbortSignal.timeout(timeoutMs)]) : AbortSignal.timeout(timeoutMs)
+      return await fetcher(target, { ...init, redirect: 'error', signal })
     } catch {
+      checkInterrupted()
       throw new AudioUploadError('NETWORK_ERROR', 'Audio service request failed or timed out', true)
     }
   }
@@ -123,6 +131,7 @@ export async function ensureAudioUploaded(clip: UploadClip, mp3Path: string, opt
         hash.update(value)
       }
     } catch (error) {
+      checkInterrupted()
       if (error instanceof AudioUploadError) throw error
       throw new AudioUploadError('NETWORK_ERROR', 'Published audio could not be read completely', true)
     } finally {
@@ -172,6 +181,7 @@ export async function ensureAudioUploaded(clip: UploadClip, mp3Path: string, opt
       if (response.status === 409) throw httpError(409)
       throw new AudioUploadError('PUBLIC_OBJECT_PENDING', 'Uploaded audio is not yet publicly available', true)
     } catch (error) {
+      checkInterrupted()
       if (!(error instanceof AudioUploadError)) throw new AudioUploadError('UPLOAD_FAILED', 'Audio upload could not be completed')
       if (!error.retryable || attempt === maxAttempts) throw error
       await sleep(Math.min(500 * 2 ** (attempt - 1), 5_000))

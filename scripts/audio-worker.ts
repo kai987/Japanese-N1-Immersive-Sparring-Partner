@@ -5,11 +5,13 @@ import { homedir } from 'node:os'
 import { basename, dirname, join, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { createServer } from 'node:net'
+import { setTimeout as delay } from 'node:timers/promises'
 import { ensureAudioUploaded } from './lib/audioUpload.ts'
 import { mergeUploadedRecordings } from './lib/audioWorkerState.ts'
 import type { Manifest } from './validate-audio.ts'
 import type { AudioSources } from '../src/lib/audioSources.ts'
 import type { collectAudio } from './collect-audio.ts'
+import { audioSchedule, audioWorkReason, readAudioSchedule, unfinishedAudio } from './audio-worker-schedule.ts'
 
 const repository = 'https://github.com/kai987/Japanese-N1-Immersive-Sparring-Partner.git'
 const dailyRepository = 'https://github.com/kai987/japan-it-ai-daily.git'
@@ -17,6 +19,11 @@ const githubRepository = 'kai987/Japanese-N1-Immersive-Sparring-Partner'
 const metadataPaths = ['public/audio/manifest.json', 'src/data/audio-index.json', 'src/data/audio-sources.json', 'src/data/audio-pending.json']
 const sourceRoot = fileURLToPath(new URL('../', import.meta.url))
 const abort = new AbortController()
+let windowDeadline = Infinity
+function checkRunning() {
+  if (Date.now() >= windowDeadline) abort.abort('audio_window_ended')
+  if (abort.signal.aborted) throw new Error('Worker interrupted; verified cache retained')
+}
 for (const signal of ['SIGINT', 'SIGTERM'] as const) process.once(signal, () => abort.abort())
 
 export function atomicJson(path: string, value: unknown) {
@@ -30,21 +37,24 @@ export function pendingDeploymentForMain(state: Record<string, unknown>, main: s
   return state.phase !== 'complete' && typeof state.releaseCommit === 'string'
     && /^[a-f0-9]{40}$/.test(state.releaseCommit) && state.releaseCommit === main ? state.releaseCommit : null
 }
-async function run(command: string, args: string[], cwd = sourceRoot, environment: NodeJS.ProcessEnv = {}) {
-  if (abort.signal.aborted) throw new Error('Worker interrupted; verified cache retained')
+async function run(command: string, args: string[], cwd = sourceRoot, environment: NodeJS.ProcessEnv = {}, timeoutMs = 20 * 60_000) {
+  checkRunning()
   return await new Promise<string>((resolve, reject) => {
     const child = spawn(command, args, { cwd, env: { ...process.env, GIT_TERMINAL_PROMPT: '0', GH_PROMPT_DISABLED: '1', ...environment }, stdio: ['ignore', 'pipe', 'pipe'] })
-    const timeout = setTimeout(() => child.kill('SIGTERM'), 20 * 60_000)
+    let forceStop: ReturnType<typeof setTimeout> | undefined
+    const stop = () => { child.kill('SIGTERM'); forceStop ??= setTimeout(() => child.kill('SIGKILL'), 10_000) }
+    const timeout = setTimeout(stop, timeoutMs)
     let stdout = '', stderr = ''
-    const stop = () => child.kill('SIGTERM')
     abort.signal.addEventListener('abort', stop, { once: true })
     child.stdout.on('data', data => { stdout += data; if (stdout.length > 8_000_000) child.kill('SIGTERM') })
     child.stderr.on('data', data => { stderr = (stderr + data).slice(-6000) })
-    child.once('error', error => { clearTimeout(timeout); reject(error) })
+    child.once('error', error => { clearTimeout(timeout); clearTimeout(forceStop); reject(error) })
     child.once('close', code => {
       abort.signal.removeEventListener('abort', stop)
       clearTimeout(timeout)
-      if (code === 0) resolve(stdout.trim())
+      clearTimeout(forceStop)
+      if (abort.signal.aborted || Date.now() >= windowDeadline) reject(new Error('Worker interrupted; verified cache retained'))
+      else if (code === 0) resolve(stdout.trim())
       else reject(new Error(`${basename(command)} failed (${code ?? 'terminated'}): ${stderr.slice(-2000) || stdout.slice(-2000)}`))
     })
   })
@@ -108,14 +118,14 @@ async function ensureDailyCheckout(root: string, commit: string) {
 }
 async function ensureEngine() {
   const ready = async () => {
-    try { return (await fetch('http://127.0.0.1:10101/version', { signal: AbortSignal.timeout(3000) })).ok } catch { return false }
+    try { return (await fetch('http://127.0.0.1:10101/version', { signal: AbortSignal.any([abort.signal, AbortSignal.timeout(3000)]) })).ok } catch { return false }
   }
   if (await ready()) return
   if (process.platform !== 'darwin') throw new Error('awaiting_local_engine: local AivisSpeech is unavailable')
   await run('open', ['-g', '-a', 'AivisSpeech'])
   for (let attempt = 0; attempt < 20; attempt++) {
     if (abort.signal.aborted) throw new Error('Worker interrupted')
-    await new Promise(resolve => setTimeout(resolve, 2000))
+    await delay(2000, undefined, { signal: abort.signal })
     if (await ready()) return
   }
   throw new Error('awaiting_local_engine: AivisSpeech did not become ready')
@@ -128,12 +138,12 @@ async function verifyDeployment(commit: string, localDist?: string) {
     const runs = all.filter((r: { head_sha: string }) => r.head_sha === commit)
     if (runs.some((r: { status: string; conclusion: string }) => r.status === 'completed' && r.conclusion === 'success')) {
       const base = 'https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/'
-      const response = await fetch(base, { cache: 'no-store', signal: AbortSignal.timeout(30000) })
+      const response = await fetch(base, { cache: 'no-store', signal: AbortSignal.any([abort.signal, AbortSignal.timeout(30000)]) })
       if (!response.ok) throw new Error('awaiting_live_verification: N1 page unavailable')
       const html = await response.text()
       const script = /<script[^>]+src="([^"]+\.js[^"]*)"/.exec(html)?.[1]
       if (!script) throw new Error('awaiting_live_verification: no application bundle')
-      const asset = await fetch(new URL(script, base), { cache: 'no-store', signal: AbortSignal.timeout(30000) })
+      const asset = await fetch(new URL(script, base), { cache: 'no-store', signal: AbortSignal.any([abort.signal, AbortSignal.timeout(30000)]) })
       if (!asset.ok) throw new Error('awaiting_live_verification: application bundle unavailable')
       const body = Buffer.from(await asset.arrayBuffer())
       if (localDist) {
@@ -152,7 +162,7 @@ async function verifyDeployment(commit: string, localDist?: string) {
       dispatched = true
     }
     if (abort.signal.aborted) throw new Error('Worker interrupted')
-    await new Promise(resolve => setTimeout(resolve, 15000))
+    await delay(15000, undefined, { signal: abort.signal })
   }
   throw new Error('awaiting_deploy: exact commit is not yet verified')
 }
@@ -160,9 +170,14 @@ async function verifyDeployment(commit: string, localDist?: string) {
 async function main() {
   const args = process.argv.slice(2), at = args.indexOf('--state-dir')
   const root = resolve(at >= 0 ? args[at + 1] : join(homedir(), 'Library/Application Support/N1 Audio'))
+  const schedule = audioSchedule(new Date(), readAudioSchedule(root))
+  if (!schedule.allowed) {
+    console.log(JSON.stringify({ phase: 'scheduled_pause', reason: schedule.reason, nextOpening: schedule.nextOpening.toISOString() }))
+    return
+  }
   const lockAt = args.indexOf('--lock-fd')
   if (lockAt < 0) {
-    const result = await run('python3', [join(sourceRoot, 'scripts/audio-worker-lock.py'), root, process.execPath, fileURLToPath(import.meta.url)])
+    const result = await run('python3', [join(sourceRoot, 'scripts/audio-worker-lock.py'), root, process.execPath, fileURLToPath(import.meta.url)], sourceRoot, {}, schedule.deadline.getTime() - Date.now() + 30_000)
     if (result) console.log(result)
     return
   }
@@ -174,6 +189,8 @@ async function main() {
   delete process.env.N1_AUDIO_LOCK_FD
   delete process.env.N1_AUDIO_LOCK_OWNER
   const release = () => closeSync(lock)
+  windowDeadline = schedule.deadline.getTime()
+  const deadlineTimer = setTimeout(() => abort.abort('audio_window_ended'), Math.max(0, windowDeadline - Date.now()))
   const statePath = join(root, 'progress.json')
   let state: Record<string, unknown> = recoverableCheckpoint(statePath, { version: 1 })
   const phase = (value: string, fields: Record<string, unknown> = {}) => {
@@ -182,14 +199,26 @@ async function main() {
     console.log(JSON.stringify({ phase: value, ...fields }))
   }
   let attempt = ''
+  let claimed = false
+  const claim = (reason: string) => {
+    checkRunning()
+    // Called under the OS lock, before waiting for upstream audio or synthesis.
+    atomicJson(join(root, 'schedule.json'), { version: 1, claimedDate: schedule.date, reason, startedAt: new Date().toISOString() })
+    claimed = true
+    phase('detected', { jobPending: true, detectedReason: reason, nextAttempt: schedule.nextOpening.toISOString() })
+  }
   try {
+    // Recheck under the lock: simultaneous manual/login/calendar triggers share one latch.
+    if (!audioSchedule(new Date(), readAudioSchedule(root)).allowed) return
+    if (unfinishedAudio(state)) claim('resume_pending')
     if (state.releaseCommit && state.phase !== 'complete') {
       const main = await run('gh', ['api', `repos/${githubRepository}/git/ref/heads/main`, '--jq', '.object.sha'])
       const pending = pendingDeploymentForMain(state, main)
       if (pending) {
         phase('awaiting_deploy')
         await verifyDeployment(pending)
-        phase('complete', { lastError: null, lastVerifiedCommit: state.releaseCommit })
+        phase('complete', { jobPending: false, lastError: null, lastVerifiedCommit: state.releaseCommit })
+        return
       } else phase('reconciling', { releaseCommit: null })
     }
     phase('fetching', { lastError: null, attempt: Number(state.attempt ?? 0) + 1 })
@@ -199,8 +228,7 @@ async function main() {
     await run('git', ['fetch', '--no-tags', 'origin', 'main'], control)
     await run('git', ['merge', '--ff-only', 'origin/main'], control)
     const base = await run('git', ['rev-parse', 'HEAD'], control)
-    const sourceCommit = await successfulAudioCommit()
-    phase('catalog', { baseCommit: base, sourceAudioCommit: sourceCommit, releaseCommit: null })
+    phase('catalog', { baseCommit: base, releaseCommit: null })
     const attempts = join(root, 'attempts')
     mkdirSync(attempts, { recursive: true, mode: 0o700 })
     // Every attempt starts clean. Generated audio is retained separately.
@@ -213,7 +241,14 @@ async function main() {
     mkdirSync(work, { recursive: true, mode: 0o700 })
     await run(process.execPath, ['scripts/collect-audio.ts', planPath], attempt)
     const catalog = readJson(planPath) as ReturnType<typeof collectAudio>
-    phase('deduplicating', { requiredClips: catalog.entries.length })
+    const previousSources = readJson(join(attempt, 'src/data/audio-sources.json')) as AudioSources
+    if (!claimed) {
+      const reason = audioWorkReason(state, schedule.date, catalog.lessonDates, catalog.entries.filter(entry => !previousSources.clips[entry.id]).length, base)
+      if (!reason) { phase('idle', { jobPending: false }); return }
+      claim(reason)
+    }
+    const sourceCommit = await successfulAudioCommit()
+    phase('deduplicating', { sourceAudioCommit: sourceCommit, requiredClips: catalog.entries.length })
     const daily = await ensureDailyCheckout(root, sourceCommit)
     await run(process.execPath, ['scripts/sync-audio.ts', '--daily-repo', daily, '--ref', sourceCommit], attempt)
     const published = readJson(join(attempt, 'public/audio/manifest.json')) as Manifest
@@ -239,10 +274,10 @@ async function main() {
       const uploads = recoverableCheckpoint(progressPath)
       phase('uploading', { pendingClips: missing.length })
       for (const entry of missing) {
-        if (abort.signal.aborted) throw new Error('Worker interrupted; verified uploads retained')
+        checkRunning()
         const clip = candidate.clips[entry.id]
         if (!clip || clip.text !== entry.text) throw new Error(`Missing generated recording: ${entry.id}`)
-        const result = await ensureAudioUploaded(clip, join(work, 'morioki-normal', `${entry.id}.mp3`), { getToken })
+        const result = await ensureAudioUploaded(clip, join(work, 'morioki-normal', `${entry.id}.mp3`), { getToken, signal: abort.signal })
         verified[entry.id] = { path: result.path, sha256: result.sha256, bytes: result.bytes, verified: true }
         uploads[entry.id] = { ...verified[entry.id], verifiedAt: new Date().toISOString() }
         atomicJson(progressPath, uploads)
@@ -254,7 +289,7 @@ async function main() {
     if (!await run('git', ['diff', '--name-only', '--', ...metadataPaths], attempt)) {
       if (state.lastVerifiedCommit !== base) await verifyDeployment(base)
       cleanupPublishedCache(work, published)
-      phase('complete', { pendingClips: 0, releaseCommit: base, lastVerifiedCommit: base, lastError: null })
+      phase('complete', { jobPending: false, pendingClips: 0, releaseCommit: base, lastVerifiedCommit: base, lastError: null })
       return
     }
     phase('validating', { pendingClips: 0 })
@@ -291,11 +326,13 @@ async function main() {
     // All new bytes were remotely verified before commit, and the exact release
     // passed Pages plus real playback tests. Only now remove generated MP3s.
     cleanupPublishedCache(work, readJson(join(attempt, 'public/audio/manifest.json')) as Manifest)
-    phase('complete', { pendingClips: 0, lastVerifiedCommit: commit, lastError: null })
+    phase('complete', { jobPending: false, pendingClips: 0, lastVerifiedCommit: commit, lastError: null })
   } catch (error) {
-    phase('retry_pending', { failedPhase: state.phase, lastError: error instanceof Error ? error.message : 'Audio worker failed', nextAttempt: 'next background interval or login/wake' })
-    process.exitCode = 1
+    const windowEnded = abort.signal.reason === 'audio_window_ended' || Date.now() >= windowDeadline
+    phase(windowEnded ? 'paused_window' : 'retry_pending', { failedPhase: state.phase, lastError: windowEnded ? 'Japan time audio window ended; verified progress retained' : error instanceof Error ? error.message : 'Audio worker failed', nextAttempt: claimed || windowEnded ? schedule.nextOpening.toISOString() : 'next 15-minute check inside the Japan time window' })
+    if (!windowEnded) process.exitCode = 1
   } finally {
+    clearTimeout(deadlineTimer)
     if (attempt) rmSync(attempt, { recursive: true, force: true })
     release()
   }
