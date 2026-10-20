@@ -2,14 +2,14 @@
   "schemaVersion": 1,
   "targetDate": "2026-10-20",
   "day": 52,
-  "status": "request_ready",
-  "stage": "request_ready",
+  "status": "validating",
+  "stage": "validating",
   "upstreamSourceCommit": "7578cb37630faaa3ad56eea6ecf75d8e1a3c4320",
   "sourcePagesRunId": 39354207678,
   "snapshotSha256": "296e9712a369736e7201b0cf8013f75c0292fa8f022696775285601543737a05",
   "issueNumber": 70,
   "totalDays": 70,
-  "requestSubmitted": false,
+  "requestSubmitted": true,
   "sourceObservation": {
     "n1Main": "0a970f537091f2dff7cd6b11d3e59502a6cb3e0d",
     "mainSourcePresent": true,
@@ -20,7 +20,7 @@
   },
   "lastError": null,
   "nextStep": "Unique N1 sync workflow validates the complete source-bound request; then exact Pages and live acceptance.",
-  "updatedAt": "2026-10-20T03:47:50.510Z",
+  "updatedAt": "2026-10-20T03:47:56.327Z",
   "audioContinuation": {
     "targetDate": "2026-10-20",
     "day": 52,
@@ -79,5 +79,7 @@
       }
     },
     "checkedAt": "2026-10-20T03:47:34.633556+00:00"
-  }
+  },
+  "requestCommit": "a09fb0b8f20445409c056afba830adf500a7e665",
+  "requestBlobSha": "dd23d7a989e7a91a7b8b732d3e86b631bfad26ef"
 }
