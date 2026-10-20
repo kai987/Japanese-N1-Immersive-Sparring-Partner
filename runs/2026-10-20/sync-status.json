@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-10-20",
   "day": 52,
-  "status": "validating",
-  "stage": "validating",
+  "status": "published",
+  "stage": "published",
   "upstreamSourceCommit": "7578cb37630faaa3ad56eea6ecf75d8e1a3c4320",
   "sourcePagesRunId": 39354207678,
   "snapshotSha256": "296e9712a369736e7201b0cf8013f75c0292fa8f022696775285601543737a05",
@@ -19,17 +19,17 @@
     "observedAt": "2026-10-20T03:47:50.510Z"
   },
   "lastError": null,
-  "nextStep": "Unique N1 sync workflow validates the complete source-bound request; then exact Pages and live acceptance.",
-  "updatedAt": "2026-10-20T03:47:56.327Z",
+  "nextStep": "Text publication is complete; independent N1 audio continuation is in progress.",
+  "updatedAt": "2026-10-20T03:55:54.066Z",
   "audioContinuation": {
     "targetDate": "2026-10-20",
     "day": 52,
-    "stage": "waiting_n1_lesson",
+    "stage": "generating",
     "sourceAudioCommit": "7578cb37630faaa3ad56eea6ecf75d8e1a3c4320",
     "runId": 39355016978,
     "workflowConclusion": "success",
     "n1Commit": "9bbab2f6409e78cb076b7d6ab57566eab1da3afa",
-    "targetLessonPublished": false,
+    "targetLessonPublished": true,
     "noMetadataChanged": true,
     "workerPublishedCatalog": {
       "phase": "complete",
@@ -39,8 +39,15 @@
       "updatedAt": "2026-10-20T01:36:48.316Z",
       "coversPublishedLessonsOnly": true
     },
-    "observedAt": "2026-10-20T01:46:24.714Z",
-    "nextAction": "N1 Day52 original and canonical text sync must finish first; the existing successful N1 Pages event will retry shared audio. No text request replayed."
+    "observedAt": "2026-10-20T03:55:54.066Z",
+    "nextAction": "Existing OS-locked worker resumes the 75 missing unique utterances; verify metadata Pages/public bytes and actual two-provider playback.",
+    "n1TextCommit": "75bc918184bb813078c7b26d8085bdaf883f15a6",
+    "sharedReusedNew": 26,
+    "uniqueNew": 75,
+    "workerAttempt": 94,
+    "requiredClips": 5507,
+    "pendingClips": 75,
+    "lastError": null
   },
   "sourceBlobSha": "ea59214991b4e0e7af7dcf0a88b339e3f465dba1",
   "sourceSha256": "d473ba6f0a331c593bb0b4ed7a503af82a3ad71bec2c3237af1ecf7e065dcfc1",
@@ -81,5 +88,69 @@
     "checkedAt": "2026-10-20T03:47:34.633556+00:00"
   },
   "requestCommit": "a09fb0b8f20445409c056afba830adf500a7e665",
-  "requestBlobSha": "dd23d7a989e7a91a7b8b732d3e86b631bfad26ef"
+  "requestBlobSha": "dd23d7a989e7a91a7b8b732d3e86b631bfad26ef",
+  "releaseCommit": "75bc918184bb813078c7b26d8085bdaf883f15a6",
+  "syncRunId": 39366169950,
+  "pagesRunId": 39366350069,
+  "textVerified": true,
+  "publicationProof": {
+    "targetDate": "2026-10-20",
+    "releaseCommit": "75bc918184bb813078c7b26d8085bdaf883f15a6",
+    "syncRunId": 39366169950,
+    "requestCommit": "a09fb0b8f20445409c056afba830adf500a7e665",
+    "pagesRunId": 39366350069,
+    "pagesStatus": "completed",
+    "sourceBlobSha": "ea59214991b4e0e7af7dcf0a88b339e3f465dba1",
+    "snapshotSha256": "296e9712a369736e7201b0cf8013f75c0292fa8f022696775285601543737a05",
+    "allSyncStepsPassed": true,
+    "dailyMatchesRequest": true,
+    "originalUnchanged": true,
+    "fullSnapshotCanonicalImporterBytesEqual": true,
+    "sourceSnapshotHash": "296e9712a369736e7201b0cf8013f75c0292fa8f022696775285601543737a05",
+    "storedSnapshotHash": "787f72e476beef4e901b7953e7e8ba1fa918486c481b3e57b8065fcf11af09f9",
+    "canonicalImporterAddsTrailingNewline": true,
+    "verifiedAt": "2026-10-20T03:50:35.152Z",
+    "pagesConclusion": "success",
+    "exactPagesVerified": true,
+    "liveAssetsVerified": true,
+    "pagesVerifiedAt": "2026-10-20T03:53:17.688Z"
+  },
+  "liveBrowser": {
+    "date": "2026-10-20",
+    "day": 52,
+    "issueNumber": 70,
+    "engine": "Cua in-app Chromium",
+    "originalParagraphs": {
+      "count": 4,
+      "hash": "6ad29be2"
+    },
+    "translations": {
+      "count": 4,
+      "hash": "71a99225"
+    },
+    "vocabulary": {
+      "new": 12,
+      "review": 8,
+      "sourceOrderAndExamples": true,
+      "denominator": 70
+    },
+    "grammar": {
+      "new": 1,
+      "review": 4,
+      "sourceOrderAndExamples": true,
+      "denominator": 70
+    },
+    "reading": {
+      "sameOriginalParagraphs": true,
+      "fourOptions": true,
+      "noPrematureAnswer": true
+    },
+    "review": {
+      "originalQuestions": 5,
+      "hash": "f8c4d34e",
+      "answersNotAdded": true,
+      "normalization": "Existing Intl.Segmenter sentence-boundary trimming only; complete original/request bytes verified separately"
+    },
+    "verifiedAt": "2026-10-20T03:55:54.065Z"
+  }
 }
