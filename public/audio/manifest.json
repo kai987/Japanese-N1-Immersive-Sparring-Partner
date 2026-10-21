@@ -12,8 +12,10 @@
   },
   "engineVersion": "1.1.0-dev",
   "modelVersion": "1.0.0",
-  "generatedAt": "2026-10-21T04:05:35.338Z",
+  "generatedAt": "2026-10-21T08:16:59.868Z",
   "lessonDates": [
+    "2026-10-21",
+    "2026-10-20",
     "2026-10-19",
     "2026-10-18",
     "2026-10-17",
@@ -66,7 +68,7 @@
     "2026-08-31",
     "2026-08-30"
   ],
-  "expectedClips": 5471,
+  "expectedClips": 5631,
   "complete": true,
   "clips": {
     "000508138c45e52f": {
@@ -377,6 +379,18 @@
       "sha256": "03444d123efd0cd4f325fcbfbfe9df356562f6444e09a44724a806af7f67d331",
       "rms": 0.124804
     },
+    "013897aa85400bd6": {
+      "id": "013897aa85400bd6",
+      "text": "環境の割当、課金対象、実際の到着間隔を分けて確かめるのが、この記事から得られる判断手順です。",
+      "label": "環境の割当、課金対象、実際の到着間隔を分けて確かめるのが、この記事から得られる判断手順です。",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-study-1e18d506/evidence/0"
+      ],
+      "duration": 8.756,
+      "bytes": 70701,
+      "sha256": "20727532daaef450de64bf6b68a9d914b67ac21a40c26550d5e1ad2d517a4108",
+      "rms": 0.109767
+    },
     "014a62750c77f119": {
       "id": "014a62750c77f119",
       "text": "引用された文書そのものは実在し、内容も正確であったとしても、質問された年度に適用されるとは限らない。",
@@ -609,6 +623,18 @@
       "sha256": "bd8f102576bfe5395734d12d63c2c1783557b9184f0b151a861e610319683b57",
       "rms": 0.128108
     },
+    "01d72bd3744f48ff": {
+      "id": "01d72bd3744f48ff",
+      "text": "料金を前払いする",
+      "label": "料金を前払いする",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-969e1b49c230/collocation/0"
+      ],
+      "duration": 1.987,
+      "bytes": 16557,
+      "sha256": "7dcfe5d88a2a05400510328f0262e6ac19189096fefe76c3bccb127189fef419",
+      "rms": 0.133154
+    },
     "01ddbe3ff359da3b": {
       "id": "01ddbe3ff359da3b",
       "text": "実質ゼロ",
@@ -644,6 +670,18 @@
       "bytes": 31341,
       "sha256": "de76108c5e1ed08211e6737e4d9963b2e9bd244e27f86ec757b726d22f06b3fa",
       "rms": 0.123525
+    },
+    "020f1ac6639ae7ba": {
+      "id": "020f1ac6639ae7ba",
+      "text": "一字下げる",
+      "label": "一字下げる",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-fc09690c944a/collocation/0"
+      ],
+      "duration": 1.5,
+      "bytes": 12717,
+      "sha256": "2128c0a74bc0e53ac132cae9c7ff40d7babbd433436b8252eedbe4cedad5fafa",
+      "rms": 0.168152
     },
     "024641bd7add2781": {
       "id": "024641bd7add2781",
@@ -1019,6 +1057,18 @@
       "bytes": 109485,
       "sha256": "d18de94b46340839c40ae1b8a6f56502be9b129563a514fae13000b98004709a",
       "rms": 0.133876
+    },
+    "03746c84b4e20268": {
+      "id": "03746c84b4e20268",
+      "text": "念のため記録する",
+      "label": "念のため記録する",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-2602f143/collocation/1"
+      ],
+      "duration": 1.872,
+      "bytes": 15597,
+      "sha256": "32ce6aa8618d71f2780c6a16873260f277fe192cb3cabe27b4f7f13c7163330f",
+      "rms": 0.159474
     },
     "0398161b7f791de7": {
       "id": "0398161b7f791de7",
@@ -1647,6 +1697,19 @@
       "sha256": "1663f0a393b3b4c77681cb1e6f75fd687a7beff0dd5b88a53c5423476544e2ee",
       "rms": 0.16341
     },
+    "056a7119c614d0cd": {
+      "id": "056a7119c614d0cd",
+      "text": "性能を数値化することは必要だとしても、測っている対象と利用者が経験する一連の操作とを混同すべきではない。",
+      "label": "性能を数値化することは必要だとしても、測っている対象と利用者が経験する一連の操作とを混同すべきではない。",
+      "references": [
+        "lesson/2026-10-20/immersion/1/3",
+        "lesson/2026-10-20/reading/1/3"
+      ],
+      "duration": 9.046,
+      "bytes": 73005,
+      "sha256": "c3e3fcb837f06326ee29bfe4c0cbfd799648598e13fc4d7ae6dd33b02f021b0b",
+      "rms": 0.146739
+    },
     "056bc0401b590e2c": {
       "id": "056bc0401b590e2c",
       "text": "おもいだす",
@@ -2267,6 +2330,18 @@
       "sha256": "04d4e85dae28727aa9f0efa2aed56749402ba4830b96b88c43cd02cba3f1d17d",
       "rms": 0.154466
     },
+    "076202b7fb714f0b": {
+      "id": "076202b7fb714f0b",
+      "text": "1 いまに 2 さきごろ 3 ひとまず 4 いつしか",
+      "label": "① いまに　② さきごろ　③ ひとまず　④ いつしか",
+      "references": [
+        "lesson/2026-10-20/review/1/detail/1"
+      ],
+      "duration": 3.358,
+      "bytes": 27501,
+      "sha256": "78ab50e024ed46385d2089cf606530162c5770a5d0d37560e32645f4a763e1ee",
+      "rms": 0.171006
+    },
     "07652f9d6aa04f61": {
       "id": "07652f9d6aa04f61",
       "text": "代表的なWorkload",
@@ -2622,6 +2697,18 @@
       "sha256": "454420697346c79caf9119bbdcf275d513ee881fe178f3b0011bb270a9a0ef19",
       "rms": 0.166365
     },
+    "085a204841fbb774": {
+      "id": "085a204841fbb774",
+      "text": "「緻密」の用法として、最も自然な文はどれですか。",
+      "label": "「緻密」の用法として、最も自然な文はどれですか。",
+      "references": [
+        "lesson/2026-10-21/review/1/detail/0"
+      ],
+      "duration": 4.391,
+      "bytes": 35757,
+      "sha256": "9819618a115f1ee56d34654b2e5aa082105e2fe2bc0e9adc2b86e06add9fcef0",
+      "rms": 0.138853
+    },
     "086bcc4e2bdd82ea": {
       "id": "086bcc4e2bdd82ea",
       "text": "Docusign IAMは、契約ライフサイクル全体を一つの流れとして扱う考え方を示している。",
@@ -2766,6 +2853,19 @@
       "bytes": 70317,
       "sha256": "000c4bff8c7a4787f146fd5442c0b5060088a54f42d4bd66d7968f90a6f95486",
       "rms": 0.130923
+    },
+    "08c1fa65a06b0179": {
+      "id": "08c1fa65a06b0179",
+      "text": "いずれかの数値だけをよくしたところで、ほかの場面に負担が残っていれば、不満が解消するとは限らない。",
+      "label": "いずれかの数値だけをよくしたところで、ほかの場面に負担が残っていれば、不満が解消するとは限らない。",
+      "references": [
+        "lesson/2026-10-20/immersion/1/2",
+        "lesson/2026-10-20/reading/1/2"
+      ],
+      "duration": 7.688,
+      "bytes": 62253,
+      "sha256": "a40e3a2cd644a4fc7420b4200b0f518ddc8919c3654df1244e6bb2fb7046f021",
+      "rms": 0.121503
     },
     "08c7a003b431915f": {
       "id": "08c7a003b431915f",
@@ -2937,6 +3037,18 @@
       "sha256": "7022898d5947bc4fe26fcc2e3cc99fa71c0645e2a02ffa0032f33042c6dd9a18",
       "rms": 0.128227
     },
+    "094ed33b873e12ff": {
+      "id": "094ed33b873e12ff",
+      "text": "この変更を改善効果がある( )、まだ測定回数が足りない。",
+      "label": "この変更を改善効果がある（　）、まだ測定回数が足りない。",
+      "references": [
+        "lesson/2026-10-20/review/3/detail/0"
+      ],
+      "duration": 4.612,
+      "bytes": 37677,
+      "sha256": "65dfdbc6186c0754b99277a4b13eb86dccaf903527fb23bf14f0326499f43eac",
+      "rms": 0.138573
+    },
     "0957a53250868186": {
       "id": "0957a53250868186",
       "text": "ロックを保持したvCPUがhypervisorに奪われると、その処理だけでなく、待ち合わせる他のvCPUも進めなくなります。",
@@ -3021,6 +3133,18 @@
       "bytes": 15981,
       "sha256": "e693cf53ef86cb7d1fdd6c1fb4a3c1c0013d4c08d01a4de8b61e8b4440bc7601",
       "rms": 0.143867
+    },
+    "09d50842adb69bc6": {
+      "id": "09d50842adb69bc6",
+      "text": "筆者の考えに最も近いものはどれですか。",
+      "label": "筆者の考えに最も近いものはどれですか。",
+      "references": [
+        "lesson/2026-10-21/review/4/detail/3"
+      ],
+      "duration": 3.636,
+      "bytes": 29805,
+      "sha256": "29f90f50ece0ab92283ceddab6b46ffb2516e83e716f14a3454b104f2c6b4a6b",
+      "rms": 0.158718
     },
     "09dbfa96825edc3a": {
       "id": "09dbfa96825edc3a",
@@ -3744,6 +3868,18 @@
       "sha256": "fb7c091686fb9a9108e296d785031a49b6e617fcae736299f8218dfb349a5646",
       "rms": 0.146405
     },
+    "0c2169d8b0507e6c": {
+      "id": "0c2169d8b0507e6c",
+      "text": "段組みを保つ",
+      "label": "段組みを保つ",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-ee43a6dc2792/collocation/1"
+      ],
+      "duration": 1.616,
+      "bytes": 13677,
+      "sha256": "9b88923411e2d394c5f63e177070364183c72fd48a7bcefd063fcaaa7bdce08c",
+      "rms": 0.206777
+    },
     "0c2baf3fd53883a3": {
       "id": "0c2baf3fd53883a3",
       "text": "同じModelで同じPromptを繰り返せば独立Reviewになる。",
@@ -3995,6 +4131,18 @@
       "bytes": 11757,
       "sha256": "b7b29fdf6f270b63df2b000831073cc1ea5fb1d129d5601590a1c59f88ef78b4",
       "rms": 0.13749
+    },
+    "0d8538385e4ca92c": {
+      "id": "0d8538385e4ca92c",
+      "text": "心に刻む",
+      "label": "心に刻む",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-171931606123/collocation/1"
+      ],
+      "duration": 1.545,
+      "bytes": 13101,
+      "sha256": "9b349350aa5ede2d9291e4cb23b257771516b118b5fbf45097be53682b175171",
+      "rms": 0.119803
     },
     "0d8a443cad1f9e10": {
       "id": "0d8a443cad1f9e10",
@@ -4364,6 +4512,18 @@
       "sha256": "05679e1f1a5ed26e323a582863abe6db500007326d0dab8512b2cd9e98ea3ac8",
       "rms": 0.135125
     },
+    "0eb2ffb374baa4ff": {
+      "id": "0eb2ffb374baa4ff",
+      "text": "4 バスが緻密に遅れて到着した。",
+      "label": "④ バスが緻密に遅れて到着した。",
+      "references": [
+        "lesson/2026-10-21/review/1/detail/4"
+      ],
+      "duration": 3.184,
+      "bytes": 26157,
+      "sha256": "c1619c9addb6611c87529d43517f3549bd0413c1a6e9416bf9269bd94387d687",
+      "rms": 0.129708
+    },
     "0ebbcdf53f66a3a1": {
       "id": "0ebbcdf53f66a3a1",
       "text": "はんにんがつかまる",
@@ -4475,6 +4635,18 @@
       "sha256": "09044ef44d4e377a8fc2a2e86cb85f55bcc03702040e6ac5640b262a683cd404",
       "rms": 0.147901
     },
+    "0f2d67cb11f39957": {
+      "id": "0f2d67cb11f39957",
+      "text": "実装の肥大化を防ぐ",
+      "label": "実装の肥大化を防ぐ",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-c8c74821f69b/collocation/1"
+      ],
+      "duration": 2.069,
+      "bytes": 17325,
+      "sha256": "da5081d6e73cf9ee96df47bddfe6e72087904a531630f7f004a8f345305fb742",
+      "rms": 0.147311
+    },
     "0f4335ceaa63204a": {
       "id": "0f4335ceaa63204a",
       "text": "この落ち着いた色は、読みやすさを大切にした画面によく似合います。",
@@ -4510,6 +4682,18 @@
       "bytes": 8301,
       "sha256": "f6355d051e52aad3d2ce6b63fa36ab607b21b07ae34ae527627b77b6d6f861a7",
       "rms": 0.127199
+    },
+    "0f58a7e064818164": {
+      "id": "0f58a7e064818164",
+      "text": "一つ残らず確認する",
+      "label": "一つ残らず確認する",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-cba86781/collocation/0"
+      ],
+      "duration": 2.267,
+      "bytes": 18861,
+      "sha256": "3023c7b3713f866466f3d46f8e1fc8cf95b08c6d3f759d51b542281ee2edfd47",
+      "rms": 0.128298
     },
     "0f59f66af325bdce": {
       "id": "0f59f66af325bdce",
@@ -4683,6 +4867,18 @@
       "bytes": 36909,
       "sha256": "525f6fecf87876ccf07ad218f675a5ee6fb3b11f87cecfd7b9c5f03b2f21e1c3",
       "rms": 0.136643
+    },
+    "0fcbdd5abd638b6e": {
+      "id": "0fcbdd5abd638b6e",
+      "text": "議論のねじれ",
+      "label": "議論のねじれ",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-030d6c710fdf/collocation/1"
+      ],
+      "duration": 1.546,
+      "bytes": 13101,
+      "sha256": "f4482033e55cec7918b7748532e162b58e5afc5a02fe81f48809e219ddd396bc",
+      "rms": 0.144619
     },
     "0fd11526f4fd9f5a": {
       "id": "0fd11526f4fd9f5a",
@@ -5869,6 +6065,20 @@
       "sha256": "42d9c50759d276e34f4ad8c3b4eea12a0ffcde017ec7ab07eb7eaf9ba692fce4",
       "rms": 0.108448
     },
+    "14d9dc8365789f0f": {
+      "id": "14d9dc8365789f0f",
+      "text": "「速い」という評価は誰のためのものか",
+      "label": "「速い」という評価は誰のためのものか",
+      "references": [
+        "lesson/2026-10-20/title",
+        "lesson/2026-10-20/immersion/title",
+        "lesson/2026-10-20/reading/title"
+      ],
+      "duration": 3.266,
+      "bytes": 26925,
+      "sha256": "e3ca3c040db6333c9b38eb19b0d52dfaf6c8025dc269ee54bed67d79410e7e90",
+      "rms": 0.145849
+    },
     "150113356b7cc169": {
       "id": "150113356b7cc169",
       "text": "変化が非常に速く、次々と状況が移る場面での使い方を復習する。",
@@ -6050,6 +6260,18 @@
       "sha256": "e1416b05d8b0766cd8ebc810502eb60426f7cd1fb265da7f2e40dc401a1123e1",
       "rms": 0.165375
     },
+    "15ac1a23e6ae106f": {
+      "id": "15ac1a23e6ae106f",
+      "text": "要点を掴む",
+      "label": "要点を掴む",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-ef2018796bf6/collocation/0"
+      ],
+      "duration": 1.593,
+      "bytes": 13485,
+      "sha256": "75857efef664c0ad0504a56f666b42284d8e71beb995a7ed301d9c254e594a13",
+      "rms": 0.147543
+    },
     "15bc51cb122fb5d7": {
       "id": "15bc51cb122fb5d7",
       "text": "使い捨ての環境",
@@ -6210,6 +6432,18 @@
       "bytes": 33645,
       "sha256": "16f772f510f07593dee9328f6e7e65c22cdec02005adf8760350e9638ec09856",
       "rms": 0.153008
+    },
+    "169ac23f2d4bd343": {
+      "id": "169ac23f2d4bd343",
+      "text": "開発用の高性能なパソコンで問題がなければ、異なる端末や通信環境を調べる必要はない。",
+      "label": "開発用の高性能なパソコンで問題がなければ、異なる端末や通信環境を調べる必要はない。",
+      "references": [
+        "lesson/2026-10-20/option/3/0"
+      ],
+      "duration": 7.581,
+      "bytes": 61293,
+      "sha256": "77713829588f9dcbe5d8c135c2c435a37d5d7a2967c3207d227c7cb030438d90",
+      "rms": 0.14191
     },
     "16a1e213eb6601df": {
       "id": "16a1e213eb6601df",
@@ -6560,6 +6794,19 @@
       "bytes": 32493,
       "sha256": "eaa101b50981cc4152473dbea3cb8ec84aeaf1c9c84443fc246a36d803586674",
       "rms": 0.140898
+    },
+    "17fa32606e1248c4": {
+      "id": "17fa32606e1248c4",
+      "text": "利用者が検索語を入力し、候補を選び、結果を絞り込むまでを一つの流れとして捉え、どの操作で待ち時間が生じるかを記録した。",
+      "label": "利用者が検索語を入力し、候補を選び、結果を絞り込むまでを一つの流れとして捉え、どの操作で待ち時間が生じるかを記録した。",
+      "references": [
+        "lesson/2026-10-20/immersion/2/1",
+        "lesson/2026-10-20/reading/2/1"
+      ],
+      "duration": 10.39,
+      "bytes": 83757,
+      "sha256": "a8449b6173eb0d119b54e61afdba082558169d01bad747ea7b7ed2b71fc97cf9",
+      "rms": 0.133512
     },
     "1806dbcab4fa101e": {
       "id": "1806dbcab4fa101e",
@@ -7083,6 +7330,18 @@
       "bytes": 59373,
       "sha256": "19f15c04806000d4cf40d5d973a97a4e48edad19ebbb39da9353cea1e672aec9",
       "rms": 0.146612
+    },
+    "19fe031c336ec9f8": {
+      "id": "19fe031c336ec9f8",
+      "text": "题1|原Q6知识点・改编・漢字の読み",
+      "label": "题1｜原Q6知识点・改编・漢字の読み",
+      "references": [
+        "lesson/2026-10-20/review/0/title/0"
+      ],
+      "duration": 3.81,
+      "bytes": 31149,
+      "sha256": "c979689f1add76951c18dee773d4d4ae9edaa447eae4f77cf5a30737bec62acb",
+      "rms": 0.154547
     },
     "1a067531a15e344d": {
       "id": "1a067531a15e344d",
@@ -7905,6 +8164,18 @@
       "sha256": "56e5f7b6a1a349e0abd9570dfca7988ba9e523b1ac70a17146d48e4f5b04cc33",
       "rms": 0.156037
     },
+    "1d4eaeeb7a51eb2f": {
+      "id": "1d4eaeeb7a51eb2f",
+      "text": "3 このスープは緻密に熱いので飲めない。",
+      "label": "③ このスープは緻密に熱いので飲めない。",
+      "references": [
+        "lesson/2026-10-21/review/1/detail/3"
+      ],
+      "duration": 3.277,
+      "bytes": 26925,
+      "sha256": "d4532f353c00a8c47610472a1dcdc1fecac011c0cf518be0717773a49c2b2a60",
+      "rms": 0.192946
+    },
     "1d63e04d2cece2c1": {
       "id": "1d63e04d2cece2c1",
       "text": "新分野に挑む",
@@ -8181,6 +8452,18 @@
       "bytes": 11181,
       "sha256": "f211771672f996a557a68e5b98fa1c1e94fd70d63fdd87c8f120fe8ef7278915",
       "rms": 0.111521
+    },
+    "1e679761c80fe095": {
+      "id": "1e679761c80fe095",
+      "text": "新しい運用方法への切り替えには準備が必要なので、( )は今の手順を続ける方針だ。",
+      "label": "新しい運用方法への切り替えには準備が必要なので、（　）は今の手順を続ける方針だ。",
+      "references": [
+        "lesson/2026-10-21/review/0/detail/0"
+      ],
+      "duration": 7.119,
+      "bytes": 57645,
+      "sha256": "16db897ecf2cdf38b85f42ffd0769aac3c89255d7be666662d3b0d2f2ede8ea6",
+      "rms": 0.115687
     },
     "1e739d70a49fcfac": {
       "id": "1e739d70a49fcfac",
@@ -9382,6 +9665,18 @@
       "sha256": "bf0a89393bd1e5e2f05054de62f463b2fa07a27c937dcb4feeaa513957f71b15",
       "rms": 0.138281
     },
+    "228288dbf9f02217": {
+      "id": "228288dbf9f02217",
+      "text": "AIを利用する場合でも、機密情報を扱う際のルールは事前に確認しておく( )。",
+      "label": "AIを利用する場合でも、機密情報を扱う際のルールは事前に確認しておく（　）。",
+      "references": [
+        "lesson/2026-10-21/review/3/detail/0"
+      ],
+      "duration": 6.225,
+      "bytes": 50541,
+      "sha256": "6485caaa6d3c2d33db8eeea33f685626a331b81f36a9865b32ad7c7ab1769862",
+      "rms": 0.151224
+    },
     "2297d27db5c3e291": {
       "id": "2297d27db5c3e291",
       "text": "1 AIの回答が速くなれば、社内の閲覧権限は撤廃してもよい。",
@@ -9441,6 +9736,18 @@
       "bytes": 15597,
       "sha256": "f06b52c379f079922341330fb5a467e0d906e218dad0f1f47d9246fdc716430d",
       "rms": 0.1713
+    },
+    "22d3a834ad037290": {
+      "id": "22d3a834ad037290",
+      "text": "再読込の試験と強制終了の保証は別です。",
+      "label": "再読込の試験と強制終了の保証は別です。",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-study-68847e29/evidence/0"
+      ],
+      "duration": 4.006,
+      "bytes": 32685,
+      "sha256": "7b1abc978e2ed09ba4b061904f946378287f18a5646a08573fe5541b4664eba1",
+      "rms": 0.144277
     },
     "22f79fcc1d4a1eb8": {
       "id": "22f79fcc1d4a1eb8",
@@ -9873,6 +10180,18 @@
       "sha256": "6877a0e95ef0b5e8aa6b2aebf70c1820a5e43c7c2eef21456245f0d8b4cec8de",
       "rms": 0.139709
     },
+    "247197b5f1c08ff9": {
+      "id": "247197b5f1c08ff9",
+      "text": "不可逆の処理",
+      "label": "不可逆の処理",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-64de6163/collocation/1"
+      ],
+      "duration": 1.551,
+      "bytes": 13101,
+      "sha256": "8341b45ef3268e5a9d5fb2d3cd4dfb8965647f5e7ba881fe319bfc191c814ba8",
+      "rms": 0.110959
+    },
     "2471f5ed4304ff11": {
       "id": "2471f5ed4304ff11",
       "text": "3 みたいなことである",
@@ -10140,6 +10459,18 @@
       "bytes": 108909,
       "sha256": "eaf5e41ed3415f76b90e1abdf03db81b3fe3afeeb7afe468b2c2b09067b67067",
       "rms": 0.127777
+    },
+    "2598a198823d95d4": {
+      "id": "2598a198823d95d4",
+      "text": "2 緻密な検証計画を立て、例外条件も確認した。",
+      "label": "② 緻密な検証計画を立て、例外条件も確認した。",
+      "references": [
+        "lesson/2026-10-21/review/1/detail/2"
+      ],
+      "duration": 4.553,
+      "bytes": 37101,
+      "sha256": "a8502a3a143a8ab606b3aef4b1361b35820379719a6bea34a4e277617d51b76f",
+      "rms": 0.115145
     },
     "259c665325e424d7": {
       "id": "259c665325e424d7",
@@ -10415,6 +10746,18 @@
       "sha256": "c00d9c4811c767916f5bc340779abbdb445202a3a9069106dbe1475ef02a3f62",
       "rms": 0.140506
     },
+    "2664342dd732e491": {
+      "id": "2664342dd732e491",
+      "text": "従来の方式",
+      "label": "従来の方式",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-study-7f0d7d60/collocation/0"
+      ],
+      "duration": 1.64,
+      "bytes": 13869,
+      "sha256": "5d9711c53439bc1df70a34e5a20910ba03358dbb1fa615c293c7f0ffd204bbd7",
+      "rms": 0.137412
+    },
     "269a7508ecf6a144": {
       "id": "269a7508ecf6a144",
       "text": "3 午後から抜き打ちで雨が降り始めた。",
@@ -10511,6 +10854,18 @@
       "bytes": 10221,
       "sha256": "c38a07ff3b3bbf536a6666401a00daa8fdaaf2dd4e58898f7ac15dcee21c863e",
       "rms": 0.171664
+    },
+    "270bde79a5ac0fa5": {
+      "id": "270bde79a5ac0fa5",
+      "text": "生成AIによって開発作業が速くなったとき、筆者が人間に求めていることは何か。",
+      "label": "生成AIによって開発作業が速くなったとき、筆者が人間に求めていることは何か。",
+      "references": [
+        "lesson/2026-10-21/question/0"
+      ],
+      "duration": 6.585,
+      "bytes": 53421,
+      "sha256": "91038f05072bdcb2acd1166da511ed0fb370c9d95b2dc9e0a5e0d5a2dddf7e42",
+      "rms": 0.166693
     },
     "2715fe8ff03f92f3": {
       "id": "2715fe8ff03f92f3",
@@ -10694,6 +11049,18 @@
       "sha256": "1862bc68be9c757de6114b171a99003f6ee588bec2e2d1a63c731a281db1b618",
       "rms": 0.129432
     },
+    "27d2f874ab65e820": {
+      "id": "27d2f874ab65e820",
+      "text": "検索順位の評価実験ではなく手順の確認であり、検索語にはトークンや個人・組織を特定する情報を含めないという注意も残します。",
+      "label": "検索順位の評価実験ではなく手順の確認であり、検索語にはトークンや個人・組織を特定する情報を含めないという注意も残します。",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-study-66614293/evidence/0"
+      ],
+      "duration": 10.579,
+      "bytes": 85293,
+      "sha256": "2876da20568841e94bae328a4b5cf42f876fefca705e0744579d34d235d68698",
+      "rms": 0.146377
+    },
     "27d58401d605722d": {
       "id": "27d58401d605722d",
       "text": "攻撃に耐える",
@@ -10741,6 +11108,19 @@
       "bytes": 10221,
       "sha256": "8357f83009155fc0052e813ef7c333ab1ae2aedb02f7aeba6e3505e6b645c17c",
       "rms": 0.141873
+    },
+    "27f90cb63d99007a": {
+      "id": "27f90cb63d99007a",
+      "text": "最初の表示が速くなったという事実をもって、操作全体の使いやすさまで改善したと結論づけるのは早計だったのである。",
+      "label": "最初の表示が速くなったという事実をもって、操作全体の使いやすさまで改善したと結論づけるのは早計だったのである。",
+      "references": [
+        "lesson/2026-10-20/immersion/0/3",
+        "lesson/2026-10-20/reading/0/3"
+      ],
+      "duration": 8.582,
+      "bytes": 69357,
+      "sha256": "db287349c96d0a6a2495e9e6c270a7340df14d828b914a736ffc3a3a4dbddf49",
+      "rms": 0.132625
     },
     "2815e5da906c71be": {
       "id": "2815e5da906c71be",
@@ -11130,6 +11510,18 @@
       "sha256": "81d6411f9b0af3948e2bcd46bf3d1c0cefaeb371f659f31a13fcf49cb4e91af4",
       "rms": 0.150509
     },
+    "298bf1f55300c5e1": {
+      "id": "298bf1f55300c5e1",
+      "text": "抜本的な改革",
+      "label": "抜本的な改革",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-fe1d3ec0204b/collocation/0"
+      ],
+      "duration": 2.011,
+      "bytes": 16749,
+      "sha256": "05525b07c4e5d36ff3d66efb465b7b8686e0f6bc33524dc76c45666b6d6ac770",
+      "rms": 0.133385
+    },
     "2992b2840d75cf28": {
       "id": "2992b2840d75cf28",
       "text": "かんわ",
@@ -11214,6 +11606,18 @@
       "bytes": 16365,
       "sha256": "34e63199f984e7eb063fcff28d13057a0fe08241b44633dc3f7e183d48f5f49a",
       "rms": 0.157049
+    },
+    "2a07c9d82a89838c": {
+      "id": "2a07c9d82a89838c",
+      "text": "一方、CPU試験では20件がほぼ一つのNode.jsプロセスに集まり、直列処理によって最大20.6秒となりました。",
+      "label": "一方、CPU試験では20件がほぼ一つのNode.jsプロセスに集まり、直列処理によって最大20.6秒となりました。",
+      "references": [
+        "lesson/2026-10-20/grammar/2026-10-20-g-study-527f5226/evidence/0"
+      ],
+      "duration": 9.812,
+      "bytes": 79149,
+      "sha256": "6ef943f7fa5d692fb538a195c6cd33947ba280d81348d85ea0caf0c917e1cb66",
+      "rms": 0.140482
     },
     "2a091e22da2852b6": {
       "id": "2a091e22da2852b6",
@@ -11607,6 +12011,18 @@
       "bytes": 19437,
       "sha256": "9f734d9ba20f87dbb5a6f4f12c944abf364de7a5f30696cc1888fd0d0fc8c069",
       "rms": 0.124628
+    },
+    "2ba79dbf848ddb43": {
+      "id": "2ba79dbf848ddb43",
+      "text": "揺るぎない信頼",
+      "label": "揺るぎない信頼",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-8ac0a7e47853/collocation/0"
+      ],
+      "duration": 1.605,
+      "bytes": 13485,
+      "sha256": "83357acab4edb2e80c363f47c6fc63c0327cc758a2f49ccd69ca9c7b75a619df",
+      "rms": 0.188164
     },
     "2bbfba97885215b3": {
       "id": "2bbfba97885215b3",
@@ -12514,6 +12930,18 @@
       "sha256": "8d98774479ce8465002a616e831a4e627398cece57743603802a8004b4744a7f",
       "rms": 0.154435
     },
+    "2f53fd263a65c042": {
+      "id": "2f53fd263a65c042",
+      "text": "AWS Global Acceleratorを経由し、遅延を基に近い保存先へ振り分けます。",
+      "label": "AWS Global Acceleratorを経由し、遅延を基に近い保存先へ振り分けます。",
+      "references": [
+        "lesson/2026-10-21/grammar/2026-10-21-g-study-1673b8d8/evidence/0"
+      ],
+      "duration": 6.573,
+      "bytes": 53229,
+      "sha256": "d4ce0592684f120f718756049e56c61949e991722d747a974c34c529605eabf7",
+      "rms": 0.130997
+    },
     "2f720457923c7f53": {
       "id": "2f720457923c7f53",
       "text": "ほんもの",
@@ -12745,6 +13173,18 @@
       "sha256": "85847f95facdd68fc904ccbad70ca9bf843b990f386b627ece848d46996b7764",
       "rms": 0.151461
     },
+    "308726193bf67a8d": {
+      "id": "308726193bf67a8d",
+      "text": "基本を押さえる",
+      "label": "基本を押さえる",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-85377137/collocation/1"
+      ],
+      "duration": 1.431,
+      "bytes": 12141,
+      "sha256": "766b4d23a990e85507075ae2d3b62e29aa5a7782eff9ac152f1c51866bab6503",
+      "rms": 0.178142
+    },
     "30a957bdf0c2e809": {
       "id": "30a957bdf0c2e809",
       "text": "2|文法 Q34 对应知识点:みたいなところがある(改编)",
@@ -12865,6 +13305,18 @@
       "sha256": "7ab50ac47ba606793eb26a243160b3fb90cf6ba9b77c18c5ebbcc57ad94e15f9",
       "rms": 0.099033
     },
+    "31261456ec7979b2": {
+      "id": "31261456ec7979b2",
+      "text": "ただし、強制停止中の保存や複数ジョブの書込競合を検証した記事ではありません。",
+      "label": "ただし、強制停止中の保存や複数ジョブの書込競合を検証した記事ではありません。",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-a47c5cf6/evidence/0"
+      ],
+      "duration": 6.573,
+      "bytes": 53229,
+      "sha256": "31b41ced91ff60fccb4a0e13a52b907d19969ba52e99774d6728558ff7645190",
+      "rms": 0.13552
+    },
     "3136ee1c9c0ad1b0": {
       "id": "3136ee1c9c0ad1b0",
       "text": "また、AIに一次レビューやテスト生成を担当させ、人間は例外ケースや設計判断の確認に集中するよう役割を変更した。",
@@ -12888,6 +13340,18 @@
       "bytes": 39213,
       "sha256": "63d34195619e87a8534ca988e75e392962d31668aee598b20efb4c94934a5af4",
       "rms": 0.141005
+    },
+    "316b95a5c7dd6339": {
+      "id": "316b95a5c7dd6339",
+      "text": "原因を誤解する",
+      "label": "原因を誤解する",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-746fd27e/collocation/0"
+      ],
+      "duration": 1.674,
+      "bytes": 14061,
+      "sha256": "b6253a8dabfd021ceffeea5a8eb1c112376d97a0fdedabff241ac2ce4ba19dd4",
+      "rms": 0.184546
     },
     "316de922686d9806": {
       "id": "316de922686d9806",
@@ -13262,6 +13726,18 @@
       "sha256": "ade5e0cd8e968f6e13d6a4a22112bc900c65d8a70b00fa8f285b3e5fecfc2041",
       "rms": 0.162675
     },
+    "326b319d13dcd781": {
+      "id": "326b319d13dcd781",
+      "text": "要点を押さえる",
+      "label": "要点を押さえる",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-85377137/collocation/0"
+      ],
+      "duration": 1.535,
+      "bytes": 12909,
+      "sha256": "530421dde2e945d79a16b5f7219c357902af2a57ca19afe4506cacccea3ff477",
+      "rms": 0.156413
+    },
     "327b0016e6b228da": {
       "id": "327b0016e6b228da",
       "text": "条件を提示する",
@@ -13297,6 +13773,18 @@
       "bytes": 11757,
       "sha256": "0aab170030de509817fa7f582d975d5181f8b6967845cdf5c0e56c3887cef6c9",
       "rms": 0.156127
+    },
+    "329be710637c7d4c": {
+      "id": "329be710637c7d4c",
+      "text": "関係のねじれ",
+      "label": "関係のねじれ",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-030d6c710fdf/collocation/0"
+      ],
+      "duration": 1.651,
+      "bytes": 13869,
+      "sha256": "fbfa8498972cd1ebe1965955dc8d91ffda8eb132ec30e4028e93ff7e726c8ac8",
+      "rms": 0.17637
     },
     "329bfdd0e7ff42dc": {
       "id": "329bfdd0e7ff42dc",
@@ -14104,6 +14592,19 @@
       "sha256": "1589c6713b66bc4447ea8bfd9308695c1491d2ee9be17e2ffb594209a1cfa1a1",
       "rms": 0.145619
     },
+    "3604572f0b1531cb": {
+      "id": "3604572f0b1531cb",
+      "text": "求められるのは、何を改善したいのかという目的を明らかにしたうえで、その目的に即した指標を選び、変更後の利用体験を確かめることである。「",
+      "label": "求められるのは、何を改善したいのかという目的を明らかにしたうえで、その目的に即した指標を選び、変更後の利用体験を確かめることである。「",
+      "references": [
+        "lesson/2026-10-20/immersion/3/2",
+        "lesson/2026-10-20/reading/3/2"
+      ],
+      "duration": 10.927,
+      "bytes": 88173,
+      "sha256": "b09542bf21c1580ac18c767dec7b22f633fe61481476efc894c920fcde71e2f9",
+      "rms": 0.148197
+    },
     "362eeaef7b6a3d03": {
       "id": "362eeaef7b6a3d03",
       "text": "状態に応じて動作を修正する仕組み",
@@ -14359,6 +14860,19 @@
       "sha256": "126a7fa53a96a61922b1c078a9cdb2862ba4ea220519b337da9646c957c9f57b",
       "rms": 0.124364
     },
+    "36e146c54f0ed9e1": {
+      "id": "36e146c54f0ed9e1",
+      "text": "さらに、レビューの目的を「誤りを一つも出さないこと」だけに限定すると、別の問題が生じる。",
+      "label": "さらに、レビューの目的を「誤りを一つも出さないこと」だけに限定すると、別の問題が生じる。",
+      "references": [
+        "lesson/2026-10-21/immersion/2/0",
+        "lesson/2026-10-21/reading/2/0"
+      ],
+      "duration": 7.586,
+      "bytes": 61485,
+      "sha256": "9e780e157802de0d87e720c77a9f98017ced075fba719af6108572456ec47929",
+      "rms": 0.123563
+    },
     "36f5165c7cb32ef8": {
       "id": "36f5165c7cb32ef8",
       "text": "所在を把握する",
@@ -14538,6 +15052,18 @@
       "bytes": 36717,
       "sha256": "7c71fa6a21ddd5705b5a9ce116b833bb95d1a45eb9fc7e2e2f223724b13abb36",
       "rms": 0.160494
+    },
+    "37a08e518e070cfd": {
+      "id": "37a08e518e070cfd",
+      "text": "少し拝借する",
+      "label": "少し拝借する",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-22b5b2e4b9e1/collocation/1"
+      ],
+      "duration": 1.79,
+      "bytes": 15021,
+      "sha256": "a32861481d366995a41d932c3f5b57345586c22d1cd94071b70b5de3aea178f9",
+      "rms": 0.119278
     },
     "37a7e317ecfed123": {
       "id": "37a7e317ecfed123",
@@ -14852,6 +15378,19 @@
       "bytes": 16557,
       "sha256": "7e1185cd738c10475ddd8b50e420e1383832524b8f19dc8c9f0160065b40a362",
       "rms": 0.157173
+    },
+    "38fa7a822c8c29e6": {
+      "id": "38fa7a822c8c29e6",
+      "text": "ところが、完成したように見えるコードをそのまま組み込んだところ、入力欄が空の場合にだけ予期しない動作が生じた。",
+      "label": "ところが、完成したように見えるコードをそのまま組み込んだところ、入力欄が空の場合にだけ予期しない動作が生じた。",
+      "references": [
+        "lesson/2026-10-21/immersion/0/2",
+        "lesson/2026-10-21/reading/0/2"
+      ],
+      "duration": 8.618,
+      "bytes": 69741,
+      "sha256": "db3163ec0443975aa9f8c70ba555ec052deba90d8919aed4e6f1c7b92949a4d5",
+      "rms": 0.167519
     },
     "38feba0f7640229b": {
       "id": "38feba0f7640229b",
@@ -16965,6 +17504,19 @@
       "sha256": "98c4cdd967253bd03b977e52cb4c70f066ab80946ffe5d3d600041fa73fba88d",
       "rms": 0.116504
     },
+    "40f8d09d78c1d7d9": {
+      "id": "40f8d09d78c1d7d9",
+      "text": "ある開発チームでは、画面の実装を効率化するために生成AIを利用し始めた。",
+      "label": "ある開発チームでは、画面の実装を効率化するために生成AIを利用し始めた。",
+      "references": [
+        "lesson/2026-10-21/immersion/0/0",
+        "lesson/2026-10-21/reading/0/0"
+      ],
+      "duration": 6.492,
+      "bytes": 52653,
+      "sha256": "5ff2719ebc83363474093e9b52c75602686084e83e5df9d194dc6f8685cf2004",
+      "rms": 0.142536
+    },
     "40fb4ea57b430d19": {
       "id": "40fb4ea57b430d19",
       "text": "Latency優先なら最小1 Podを常時起動する設計もあります。",
@@ -17050,6 +17602,18 @@
       "bytes": 55341,
       "sha256": "2c38e4448c42f7fa662ce3cf1fc2ed3680af5d494381d00ed5b8f0b9b57868e7",
       "rms": 0.152892
+    },
+    "41222a12833a8b7e": {
+      "id": "41222a12833a8b7e",
+      "text": "枠に収める",
+      "label": "枠に収める",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-a6548078b61b/collocation/0"
+      ],
+      "duration": 1.593,
+      "bytes": 13485,
+      "sha256": "0bb269bf8accf82277ba1e1d206d1b30dc3bb121d87c53efc8adcadcd6bc8596",
+      "rms": 0.142378
     },
     "4125a93ed167f642": {
       "id": "4125a93ed167f642",
@@ -17632,6 +18196,19 @@
       "sha256": "4ac888ee67eaeec4c20b41575579a0c3d01e7718f5d92d2965f00b337aca579d",
       "rms": 0.12125
     },
+    "434acfe90e9820cd": {
+      "id": "434acfe90e9820cd",
+      "text": "品質を支えるのは完成したコードの見た目にほかならない、と言いたくなるかもしれない。",
+      "label": "品質を支えるのは完成したコードの見た目にほかならない、と言いたくなるかもしれない。",
+      "references": [
+        "lesson/2026-10-21/immersion/2/2",
+        "lesson/2026-10-21/reading/2/2"
+      ],
+      "duration": 6.214,
+      "bytes": 50349,
+      "sha256": "112019af248c76b39515123cb3d474f062e1db9f42f613f37dff0680b27e1974",
+      "rms": 0.148534
+    },
     "434b06115ed10c2d": {
       "id": "434b06115ed10c2d",
       "text": "ことなく",
@@ -17643,6 +18220,19 @@
       "bytes": 10413,
       "sha256": "69abe1d67f7125c5c6b3699b28e19953dc0bc25a700e4175478559e481140cf6",
       "rms": 0.128101
+    },
+    "434dbf931e21203f": {
+      "id": "434dbf931e21203f",
+      "text": "AIを利用するからには、人間がすべてを手作業で繰り返すべきだという話ではない。",
+      "label": "AIを利用するからには、人間がすべてを手作業で繰り返すべきだという話ではない。",
+      "references": [
+        "lesson/2026-10-21/immersion/3/0",
+        "lesson/2026-10-21/reading/3/0"
+      ],
+      "duration": 6.237,
+      "bytes": 50541,
+      "sha256": "5223ebc27d2e9383dea81878b6a524de4f0e9ea9a689caabcc397db9eedc306c",
+      "rms": 0.150473
     },
     "436999e73a7b069b": {
       "id": "436999e73a7b069b",
@@ -18308,6 +18898,18 @@
       "sha256": "27e66a52ce0e3040e7b15c18e57cac8266167c8d45915270bf49a4110a81ed09",
       "rms": 0.150037
     },
+    "4594b4713f2fcdfd": {
+      "id": "4594b4713f2fcdfd",
+      "text": "目盛りを刻む",
+      "label": "目盛りを刻む",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-171931606123/collocation/0"
+      ],
+      "duration": 1.593,
+      "bytes": 13485,
+      "sha256": "71225a7bcd50ebd1d36b87a944eacc7b29c9f1cdfc6da3eac7ce41e646b6d667",
+      "rms": 0.172436
+    },
     "45a1077eef58e40a": {
       "id": "45a1077eef58e40a",
       "text": "ふぐあい",
@@ -18575,6 +19177,19 @@
       "bytes": 43629,
       "sha256": "56c26dcc5ec05b61b0e25fe12bd6eab710c43eb3c676d2cddb4906e93acda2b6",
       "rms": 0.139627
+    },
+    "46c2fdc60857cd72": {
+      "id": "46c2fdc60857cd72",
+      "text": "もっとも、測定項目が増えれば増えるほど、適切な判断に近づくというわけでもない。",
+      "label": "もっとも、測定項目が増えれば増えるほど、適切な判断に近づくというわけでもない。",
+      "references": [
+        "lesson/2026-10-20/immersion/3/0",
+        "lesson/2026-10-20/reading/3/0"
+      ],
+      "duration": 6.643,
+      "bytes": 53805,
+      "sha256": "4c5c2e955e976e1862d86a35c461a1a4423d25d0add3e610c97184cb0c3efbdc",
+      "rms": 0.127609
     },
     "46c39f49842188f5": {
       "id": "46c39f49842188f5",
@@ -19615,6 +20230,18 @@
       "sha256": "e37774a11638e8575fa396199c41edbe51e07b9938310b869507e442818c33a0",
       "rms": 0.162104
     },
+    "4a79938f814ceb4b": {
+      "id": "4a79938f814ceb4b",
+      "text": "に伴って",
+      "label": "～に伴って",
+      "references": [
+        "lesson/2026-10-20/grammar/2026-10-20-g-study-f5fb9331/pattern"
+      ],
+      "duration": 1.466,
+      "bytes": 12525,
+      "sha256": "67aaa80d898f1932d7af4d384b4263993fb6288f509acb741d4dea44cac59985",
+      "rms": 0.158713
+    },
     "4a94e9fabd3af786": {
       "id": "4a94e9fabd3af786",
       "text": "高性能モデルを使えば価値も必ず高くなると考え、利用上限を設けないこと。",
@@ -19797,6 +20424,19 @@
       "sha256": "d07b5a8e82800b74e5f804913717a10af1a579abbd1a3201c5583dfbde1aa64d",
       "rms": 0.130147
     },
+    "4b50f4355e761b69": {
+      "id": "4b50f4355e761b69",
+      "text": "手順が速くなったというだけでは、判断の責任まで道具に移ったことにはならない。",
+      "label": "手順が速くなったというだけでは、判断の責任まで道具に移ったことにはならない。",
+      "references": [
+        "lesson/2026-10-21/immersion/3/2",
+        "lesson/2026-10-21/reading/3/2"
+      ],
+      "duration": 5.889,
+      "bytes": 47853,
+      "sha256": "3163f1e654c52ce4b67fbee9c78557255b151887d90106a2fe3b25e1aa2caa78",
+      "rms": 0.16707
+    },
     "4b538318e16af0e4": {
       "id": "4b538318e16af0e4",
       "text": "つうわ",
@@ -19808,6 +20448,18 @@
       "bytes": 8877,
       "sha256": "57ad2d9d5f143c18de3b57d607b1dfc1f8abab7e9d28ad7be62e21a072beb6e9",
       "rms": 0.155323
+    },
+    "4b5e9eb252c7004e": {
+      "id": "4b5e9eb252c7004e",
+      "text": "コードを書く速さが上がる一方、アラート調査やブランチ運用など周辺作業が詰まり始めていました。",
+      "label": "コードを書く速さが上がる一方、アラート調査やブランチ運用など周辺作業が詰まり始めていました。",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-study-966a7d9e/evidence/0"
+      ],
+      "duration": 7.512,
+      "bytes": 60717,
+      "sha256": "a3a8b03b3d01775b811b13eb8f88751230aaadbb7744eee5e1c88987937a8b0d",
+      "rms": 0.132287
     },
     "4b6dfcdeab75c65a": {
       "id": "4b6dfcdeab75c65a",
@@ -19880,6 +20532,18 @@
       "bytes": 10413,
       "sha256": "9dac40e6fd8ccaaa59dcdb2905bf0ee7468241c9c0ff0cb1ecc5283225a16403",
       "rms": 0.176567
+    },
+    "4bd4acb259c70a36": {
+      "id": "4bd4acb259c70a36",
+      "text": "既存の仕組みを流用する",
+      "label": "既存の仕組みを流用する",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-3b3e7393/collocation/0"
+      ],
+      "duration": 2.139,
+      "bytes": 17901,
+      "sha256": "2c308ef97d21b35a82639eeb1a5ed896513935ac4f19c81c8867e98235f14b57",
+      "rms": 0.129556
     },
     "4bd7382157897425": {
       "id": "4bd7382157897425",
@@ -20085,6 +20749,18 @@
       "bytes": 39789,
       "sha256": "d0fdd31f133a3ca2a37788ac920051fa35a5ea6acd8f3b8f1710309d43e5bdf4",
       "rms": 0.154339
+    },
+    "4cc9cfe9b05b1535": {
+      "id": "4cc9cfe9b05b1535",
+      "text": "1 に越したことはない 2 といったところだ 3 べくもない 4 にとどまらない",
+      "label": "① に越したことはない　② といったところだ　③ べくもない　④ にとどまらない",
+      "references": [
+        "lesson/2026-10-21/review/3/detail/1"
+      ],
+      "duration": 5.198,
+      "bytes": 42285,
+      "sha256": "bd0d1be1ed56b5475c379b2657e05747440c87b205f86d5da7dd71d487853707",
+      "rms": 0.17859
     },
     "4ccefe07432f7f7b": {
       "id": "4ccefe07432f7f7b",
@@ -20590,6 +21266,18 @@
       "sha256": "9a90f00f262b04a6be95ca850c7616a4f4eb1e2f3d366a8cadf71396f590eb9c",
       "rms": 0.105876
     },
+    "4e89278757b95733": {
+      "id": "4e89278757b95733",
+      "text": "限り",
+      "label": "～限り",
+      "references": [
+        "lesson/2026-10-20/grammar/2026-10-20-g-4fbd684e1b3e/pattern"
+      ],
+      "duration": 1.036,
+      "bytes": 9069,
+      "sha256": "73ed6cbf8af813ab864a6a8b5f10ee7de6103f4443c6e495f7711a8a55dd7293",
+      "rms": 0.169357
+    },
     "4e8cac462d4fd8da": {
       "id": "4e8cac462d4fd8da",
       "text": "履歴を読み込んだ後に、保存先が想定したセッションのものかを確認します。",
@@ -20769,6 +21457,18 @@
       "bytes": 52077,
       "sha256": "7fe7e1a73c7e2824d29791964f47ed9477913306b9dcd53a69ed900e81d7cae8",
       "rms": 0.132808
+    },
+    "4ee7907a60a5f9b6": {
+      "id": "4ee7907a60a5f9b6",
+      "text": "Gemini NanoのPrompt APIがSQLと説明を作り、DuckDB-WASMが集計し、pi-durableが会話と実行記録をSQLite-WASMへ保存します。",
+      "label": "Gemini NanoのPrompt APIがSQLと説明を作り、DuckDB-WASMが集計し、pi-durableが会話と実行記録をSQLite-WASMへ保存します。",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-study-d898be90/evidence/0"
+      ],
+      "duration": 12.042,
+      "bytes": 97005,
+      "sha256": "9919688c3223926009e25b289aed80e5da0fc7c58471a5740c2bef682b90fb42",
+      "rms": 0.148227
     },
     "4eef4cd9cbdf087d": {
       "id": "4eef4cd9cbdf087d",
@@ -21227,6 +21927,18 @@
       "bytes": 34989,
       "sha256": "b2aed477654c1bea57467f5d248519427a38d721904aacf33854e7decad06a55",
       "rms": 0.146107
+    },
+    "508b8d321194ba5e": {
+      "id": "508b8d321194ba5e",
+      "text": "抜本的に見直す",
+      "label": "抜本的に見直す",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-fe1d3ec0204b/collocation/1"
+      ],
+      "duration": 1.86,
+      "bytes": 15597,
+      "sha256": "758986a9d109a759ddbb4c9eb02d5b047b6e52a4b17f97ffc8862f75a49027b8",
+      "rms": 0.152761
     },
     "509463c7ff1959bb": {
       "id": "509463c7ff1959bb",
@@ -21841,6 +22553,30 @@
       "sha256": "1cda7fdabf1e9c58ab898f220d8cacb7c142bb7d53961e3aadec1734a3c958f0",
       "rms": 0.141884
     },
+    "52bff704d37d34a0": {
+      "id": "52bff704d37d34a0",
+      "text": "3 記憶力さえ高ければ、仕事で必要な能力は十分に備わっている。",
+      "label": "③ 記憶力さえ高ければ、仕事で必要な能力は十分に備わっている。",
+      "references": [
+        "lesson/2026-10-21/review/4/detail/6"
+      ],
+      "duration": 5.703,
+      "bytes": 46317,
+      "sha256": "01d398d4b915dea14ab7719f879c8f266b51f8d6cca4a22ef0961291a74c4f7b",
+      "rms": 0.175064
+    },
+    "52c04ca915dcb80d": {
+      "id": "52c04ca915dcb80d",
+      "text": "手慣れた作業",
+      "label": "手慣れた作業",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-f3740741d6a8/collocation/0"
+      ],
+      "duration": 1.547,
+      "bytes": 13101,
+      "sha256": "37a16fa5c726784e66565db7f11623650a78d17174e4258afd5da941b1a62ef0",
+      "rms": 0.157115
+    },
     "52cea863c10bdd0f": {
       "id": "52cea863c10bdd0f",
       "text": "速度改善の代償",
@@ -21901,6 +22637,18 @@
       "bytes": 98349,
       "sha256": "a25f8196a9745a3aa2a9e834da29c94e426665eaf1edb0e9ab9ab729b9468610",
       "rms": 0.1374
+    },
+    "532d1468c992df2c": {
+      "id": "532d1468c992df2c",
+      "text": "食事を作り置きする",
+      "label": "食事を作り置きする",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-898953c3/collocation/0"
+      ],
+      "duration": 2.092,
+      "bytes": 17517,
+      "sha256": "3605653048fda67e1130ae5af77b18c65668a8275abe19fafe68f296e24e0421",
+      "rms": 0.166679
     },
     "532e6e2afb3f7466": {
       "id": "532e6e2afb3f7466",
@@ -22013,6 +22761,18 @@
       "bytes": 9837,
       "sha256": "55a538bd52b2d8404ea5676d7a7463c773e35c136d1c3201b92e8a5acd1b39b4",
       "rms": 0.136692
+    },
+    "539c98f7c050ce9b": {
+      "id": "539c98f7c050ce9b",
+      "text": "目盛りを読む",
+      "label": "目盛りを読む",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-42c40b407796/collocation/0"
+      ],
+      "duration": 1.454,
+      "bytes": 12333,
+      "sha256": "5cff54673d114837f1bde15f8e602514fae38c776d164f6e4ee20d21ac649f8f",
+      "rms": 0.186071
     },
     "53ac90c8cadad67c": {
       "id": "53ac90c8cadad67c",
@@ -22134,6 +22894,20 @@
       "bytes": 48621,
       "sha256": "272a4bdb212d86b9518b090ecab49a3ea50bb02feb96512b986bc18f41bd2ad6",
       "rms": 0.145161
+    },
+    "543aa3250a243f99": {
+      "id": "543aa3250a243f99",
+      "text": "「提案を受け入れること」と「判断を任せること」",
+      "label": "「提案を受け入れること」と「判断を任せること」",
+      "references": [
+        "lesson/2026-10-21/title",
+        "lesson/2026-10-21/immersion/title",
+        "lesson/2026-10-21/reading/title"
+      ],
+      "duration": 3.74,
+      "bytes": 30573,
+      "sha256": "0b6c99545fecb46dbf0a5c1fa75f4680d1be6af198990016c1aab6e72a2cd093",
+      "rms": 0.116901
     },
     "543fc7391137a4a5": {
       "id": "543fc7391137a4a5",
@@ -22407,6 +23181,18 @@
       "sha256": "9b9d9accc6e1999a5c2a9da55328bddf190064ba171cfea38b278b6b830dc606",
       "rms": 0.142363
     },
+    "54cd224b04d18127": {
+      "id": "54cd224b04d18127",
+      "text": "1 ところを 2 どころか 3 くらいなら 4 ことから",
+      "label": "① ところを　② どころか　③ くらいなら　④ ことから",
+      "references": [
+        "lesson/2026-10-21/review/2/detail/1"
+      ],
+      "duration": 3.567,
+      "bytes": 29229,
+      "sha256": "9f91940ca2df66ea58cdd8c12d965d233a1ceca2c41abfbf4c85027298367aeb",
+      "rms": 0.123702
+    },
     "54d2548a601f6c26": {
       "id": "54d2548a601f6c26",
       "text": "れいきゃく",
@@ -22442,6 +23228,18 @@
       "bytes": 11181,
       "sha256": "2329fccff330bfd141d95671597c6945062078e43dd04647fbb5d663c4ab137e",
       "rms": 0.087737
+    },
+    "54e3c5be1d5b50ea": {
+      "id": "54e3c5be1d5b50ea",
+      "text": "完了表示の後も最終ステータス・終了コード・費用を確認するため、ログが途切れただけで成功とは答えません。",
+      "label": "完了表示の後も最終ステータス・終了コード・費用を確認するため、ログが途切れただけで成功とは答えません。",
+      "references": [
+        "lesson/2026-10-21/grammar/2026-10-21-g-study-48e1043d/evidence/0"
+      ],
+      "duration": 8.954,
+      "bytes": 72429,
+      "sha256": "710c4ea21305792e778a907c9db5cf0322d11113ff8369e1fcae551a8f341ade",
+      "rms": 0.137309
     },
     "54fc801f707ad5c3": {
       "id": "54fc801f707ad5c3",
@@ -24395,6 +25193,18 @@
       "sha256": "be08b7627e1d2bb6817fb79dd2333ce962f5c37302de5145ee12fe9d97f19bd0",
       "rms": 0.14344
     },
+    "5c660a1145388715": {
+      "id": "5c660a1145388715",
+      "text": "散発的な要求",
+      "label": "散発的な要求",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-f45c0fcb57e7/collocation/0"
+      ],
+      "duration": 1.988,
+      "bytes": 16557,
+      "sha256": "3a51a7728584c2afa4eb865223cd4482aac3f4caaa057aca53abb3e46e3818c9",
+      "rms": 0.156331
+    },
     "5c706657e5475d5b": {
       "id": "5c706657e5475d5b",
       "text": "地の文を読む",
@@ -24601,6 +25411,18 @@
       "sha256": "092bd2a5d921d726e1b092624e78d26d75700c187f56ddcd89be36517e2f0ddd",
       "rms": 0.133531
     },
+    "5cec99ce69642aca": {
+      "id": "5cec99ce69642aca",
+      "text": "機器をつなぐ",
+      "label": "機器をつなぐ",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-f5f31793/collocation/0"
+      ],
+      "duration": 1.454,
+      "bytes": 12333,
+      "sha256": "c1b49ded8310419519cd91ceb25ae240e600a22496876de6355134d6b3ec99df",
+      "rms": 0.123122
+    },
     "5cf26c4a6fa36276": {
       "id": "5cf26c4a6fa36276",
       "text": "今日の錯題 Q2|とするには",
@@ -24674,6 +25496,18 @@
       "sha256": "94cbc9a6e75673662ec887d7bf6f9365c7b697e2a8b52cf06df4e3977a807c88",
       "rms": 0.165248
     },
+    "5d1fc192574150be": {
+      "id": "5d1fc192574150be",
+      "text": "文章A: サイトの性能を判断する際には、開発機で出た数字だけでなく、利用者が実際に操作したときの反応も見るべきだ。",
+      "label": "文章A： サイトの性能を判断する際には、開発機で出た数字だけでなく、利用者が実際に操作したときの反応も見るべきだ。",
+      "references": [
+        "lesson/2026-10-20/review/4/detail/0"
+      ],
+      "duration": 9.546,
+      "bytes": 77037,
+      "sha256": "038b77ef53d2c4d19273beef9dae36ade7829e8f3b6b236a5799d96f8fbbf37e",
+      "rms": 0.135756
+    },
     "5d2e08e96c1d4ab5": {
       "id": "5d2e08e96c1d4ab5",
       "text": "新しいデータを取り込み、集計を更新しました。",
@@ -24685,6 +25519,18 @@
       "bytes": 32109,
       "sha256": "0b995f7afef49260cdee317c1e6ef821e3c4f9f858609dc7d56dbefeced6df39",
       "rms": 0.141727
+    },
+    "5d3d5696a239c812": {
+      "id": "5d3d5696a239c812",
+      "text": "物怖じせずに話す",
+      "label": "物怖じせずに話す",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-cc370c67ea38/collocation/0"
+      ],
+      "duration": 1.976,
+      "bytes": 16557,
+      "sha256": "af697e67b866cd54aec7405fb4297b54a62ec100df1778167436dca4d4f4e993",
+      "rms": 0.14448
     },
     "5d452a82d632f0fe": {
       "id": "5d452a82d632f0fe",
@@ -25225,6 +26071,18 @@
       "sha256": "f8c955f2774d20b6af4968988a18b37c1fe07dddfb6837ced507d76b4817511e",
       "rms": 0.141038
     },
+    "5ed905f79eee4163": {
+      "id": "5ed905f79eee4163",
+      "text": "組織が肥大化する",
+      "label": "組織が肥大化する",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-c8c74821f69b/collocation/0"
+      ],
+      "duration": 1.918,
+      "bytes": 15981,
+      "sha256": "4e9e1eca318a26de9962dea2d7993383e0219a600f430613ece6a4a0b5fa7e3c",
+      "rms": 0.128627
+    },
     "5f078cd805341bb4": {
       "id": "5f078cd805341bb4",
       "text": "協調して制御する",
@@ -25764,6 +26622,18 @@
       "sha256": "5ce416071a8475d69b2792491224db49ba592c35161fac03229c9db5dad1cca0",
       "rms": 0.135291
     },
+    "614d9523aec3720f": {
+      "id": "614d9523aec3720f",
+      "text": "読む価値: 画面の復帰と処理の二重実行防止を区別し、保存する結果と表示上の状態をどう分けるかを具体的に学べます。",
+      "label": "読む価値: 画面の復帰と処理の二重実行防止を区別し、保存する結果と表示上の状態をどう分けるかを具体的に学べます。",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-study-7deda27e/evidence/0"
+      ],
+      "duration": 10.103,
+      "bytes": 81453,
+      "sha256": "bbcb156c3ff07ef64ce67bafa057023f3f5adbc16945cbce1b4420c291b33473",
+      "rms": 0.164308
+    },
     "615f782dc3e328a9": {
       "id": "615f782dc3e328a9",
       "text": "人手による確認から自動照合と優先順位付けへ",
@@ -26201,6 +27071,18 @@
       "sha256": "f508ede56baf6c37d17436697af59657de4b8cc6864f3eb09ea5d431b3947d8c",
       "rms": 0.130642
     },
+    "62a42f7ddb1673e9": {
+      "id": "62a42f7ddb1673e9",
+      "text": "文章B: 数値を取ること自体に意味があるのではない。",
+      "label": "文章B： 数値を取ること自体に意味があるのではない。",
+      "references": [
+        "lesson/2026-10-20/review/4/detail/1"
+      ],
+      "duration": 4.333,
+      "bytes": 35373,
+      "sha256": "36df8fccccce1aaf2dbf67be9c1623b6398fb8a0ba355357e4803d26a167b59d",
+      "rms": 0.146406
+    },
     "62a7a7e0be71f4bc": {
       "id": "62a7a7e0be71f4bc",
       "text": "通貨が異なる",
@@ -26384,6 +27266,18 @@
       "sha256": "c8b77f1fe6276405bfe55d760697e906221c8a85fce98c0354120ed7ee3d0978",
       "rms": 0.160817
     },
+    "63363b3bd9429eb7": {
+      "id": "63363b3bd9429eb7",
+      "text": "作り置きの品",
+      "label": "作り置きの品",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-898953c3/collocation/1"
+      ],
+      "duration": 1.721,
+      "bytes": 14445,
+      "sha256": "fd1e8377635df46ae46fe42577720f2e881c859516cf145801ed091bff42b006",
+      "rms": 0.184703
+    },
     "6344532f381957e3": {
       "id": "6344532f381957e3",
       "text": "期待だけで導入を決めない",
@@ -26551,6 +27445,18 @@
       "bytes": 39597,
       "sha256": "2a6a4fc7ed91349ad8b363ebbd3ce5d8f9bf4aa49a25e35ef2eaaa4d93aee1cf",
       "rms": 0.149921
+    },
+    "640b9c4e368288a2": {
+      "id": "640b9c4e368288a2",
+      "text": "前払いの残高",
+      "label": "前払いの残高",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-969e1b49c230/collocation/1"
+      ],
+      "duration": 1.837,
+      "bytes": 15405,
+      "sha256": "30f087c8fb51b187f9587a2c9d0459ef50e456f403e8ff8345eb4ddd1cd71bc0",
+      "rms": 0.153351
     },
     "640dc7b63339ea8a": {
       "id": "640dc7b63339ea8a",
@@ -27201,6 +28107,18 @@
       "bytes": 20205,
       "sha256": "18aabe698d747f1cc0008a777308a384ea8e8b9159d7e90b75107b0821a5bd3c",
       "rms": 0.183328
+    },
+    "668dcc1385d4e657": {
+      "id": "668dcc1385d4e657",
+      "text": "印を付け直す",
+      "label": "印を付け直す",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-a5a3e799e489/collocation/1"
+      ],
+      "duration": 1.826,
+      "bytes": 15405,
+      "sha256": "3b7236191afe14a00dfaa4d965b14e6a4083e5e5a0f7bf3e4e0baf1e7c8c3d4a",
+      "rms": 0.140691
     },
     "66b145b007202164": {
       "id": "66b145b007202164",
@@ -28369,6 +29287,18 @@
       "bytes": 59181,
       "sha256": "1c5447c69fac38c10c45e9b67711c678f8f578a3ff02bc037c09e2e0af72a8fe",
       "rms": 0.124381
+    },
+    "6ad20d52d802a736": {
+      "id": "6ad20d52d802a736",
+      "text": "測定値を取り直す",
+      "label": "測定値を取り直す",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-study-5c4ce4ff/collocation/0"
+      ],
+      "duration": 1.929,
+      "bytes": 16173,
+      "sha256": "5f4d5949b05c98d26161afeb687f4bfd9becd011dd7f50087a4f0973860186e8",
+      "rms": 0.151713
     },
     "6ad4c06000b84154": {
       "id": "6ad4c06000b84154",
@@ -29562,6 +30492,18 @@
       "sha256": "442dbab7e2aa08f6a96b50e3be3f98e8df282df469460672429b573676619b2c",
       "rms": 0.141234
     },
+    "6e7fcdf6291adaea": {
+      "id": "6e7fcdf6291adaea",
+      "text": "予算の枠",
+      "label": "予算の枠",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-a6548078b61b/collocation/1"
+      ],
+      "duration": 1.535,
+      "bytes": 12909,
+      "sha256": "e6e4eca304a535de71ca15c8b09d2835ef105bcf613f8dea2d1f81fc55d00432",
+      "rms": 0.126429
+    },
     "6e8d3d8f222aa18b": {
       "id": "6e8d3d8f222aa18b",
       "text": "つける",
@@ -30323,6 +31265,18 @@
       "bytes": 90669,
       "sha256": "b20d17ec1d6fdc1f34f72e15a55361ec4d772ea1bd46dd727cb604c31567232c",
       "rms": 0.112143
+    },
+    "708df73527144a71": {
+      "id": "708df73527144a71",
+      "text": "成功の条件を明らかにし、確認済みの事実と未確認の条件を区別して判断の根拠を伝えること。",
+      "label": "成功の条件を明らかにし、確認済みの事実と未確認の条件を区別して判断の根拠を伝えること。",
+      "references": [
+        "lesson/2026-10-21/option/2/0"
+      ],
+      "duration": 8.361,
+      "bytes": 67629,
+      "sha256": "9a1bd3bffeedcb7ec94746c32d45e38866c32e9ce2e7bac31108e4b7e6875921",
+      "rms": 0.141091
     },
     "70bb379a9cfab64e": {
       "id": "70bb379a9cfab64e",
@@ -31348,6 +32302,19 @@
       "bytes": 30189,
       "sha256": "835faf5683576aa997e37c05450cc3a9badec672a17a7d563bcef48cff0f5ca1",
       "rms": 0.144623
+    },
+    "74966c138e401c17": {
+      "id": "74966c138e401c17",
+      "text": "そもそも、利用者が「遅い」と感じる場面は一つではない。",
+      "label": "そもそも、利用者が「遅い」と感じる場面は一つではない。",
+      "references": [
+        "lesson/2026-10-20/immersion/1/0",
+        "lesson/2026-10-20/reading/1/0"
+      ],
+      "duration": 4.623,
+      "bytes": 37677,
+      "sha256": "19e9247b8df40ed536888468af30106f7c2e0d7b35542d4e6b2e3037be76d7af",
+      "rms": 0.153777
     },
     "749a0f5d2a9b1c29": {
       "id": "749a0f5d2a9b1c29",
@@ -32470,6 +33437,18 @@
       "sha256": "4cc3967dd03bdc49620cb033cf888a66e36494b5186d061bcf9c4d280d1ccc7c",
       "rms": 0.136566
     },
+    "781462ea60726dee": {
+      "id": "781462ea60726dee",
+      "text": "字義通りの解釈",
+      "label": "字義通りの解釈",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-f23e9fc21971/collocation/1"
+      ],
+      "duration": 1.86,
+      "bytes": 15597,
+      "sha256": "6ee96328c028d467fd5b41d7fe58f393ccaee0f83e32476206a1ff998a6a9e6b",
+      "rms": 0.122718
+    },
     "781d9d57f6ef3f3b": {
       "id": "781d9d57f6ef3f3b",
       "text": "ゆくゆく検討する",
@@ -32505,6 +33484,18 @@
       "bytes": 10221,
       "sha256": "55bff50b5c08e9347976fc8472693307de3af7e8ec1ca21ea7700f4033b9b245",
       "rms": 0.168874
+    },
+    "786b163b74b46ccf": {
+      "id": "786b163b74b46ccf",
+      "text": "1 すでに 2 当面 3 必ずしも 4 やがて",
+      "label": "① すでに　② 当面　③ 必ずしも　④ やがて",
+      "references": [
+        "lesson/2026-10-21/review/0/detail/1"
+      ],
+      "duration": 3.59,
+      "bytes": 29421,
+      "sha256": "31ebe1656e99dbb7944f1850cfcb7fec4a2f8aa67377936991ed187728a0b7fb",
+      "rms": 0.133276
     },
     "786d39ad4cffe1e1": {
       "id": "786d39ad4cffe1e1",
@@ -32938,6 +33929,18 @@
       "sha256": "819b0749d8b6ac431f25c0a20b1b0735fd748642832ac47b760d0932ab66e1ce",
       "rms": 0.165975
     },
+    "79d50c9d451f8529": {
+      "id": "79d50c9d451f8529",
+      "text": "資料を拝借する",
+      "label": "資料を拝借する",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-22b5b2e4b9e1/collocation/0"
+      ],
+      "duration": 1.732,
+      "bytes": 14637,
+      "sha256": "8bf020f1016d1d893666300d8522d6433d0cffe83f2698e3ad804ea6cb1c1c53",
+      "rms": 0.130625
+    },
     "79da6ae715858303": {
       "id": "79da6ae715858303",
       "text": "範囲を定める",
@@ -33216,6 +34219,18 @@
       "sha256": "2e0da9c6687e72861733293bc6ef468cba284e48b383691bb325bfd9f947822f",
       "rms": 0.150403
     },
+    "7b36afe5c84b0371": {
+      "id": "7b36afe5c84b0371",
+      "text": "読む価値: フロントエンドの面接で、待ち時間の内訳、キャッシュの失効、分割後の検査維持を実数とともに説明できます。",
+      "label": "読む価値: フロントエンドの面接で、待ち時間の内訳、キャッシュの失効、分割後の検査維持を実数とともに説明できます。",
+      "references": [
+        "lesson/2026-10-20/grammar/2026-10-20-g-study-99ab9a8c/evidence/0"
+      ],
+      "duration": 9.719,
+      "bytes": 78381,
+      "sha256": "8da4d3bf95f9848f7ff8724c1eacca8be0bc76b3d1b143ec94b877623b15f0fc",
+      "rms": 0.116978
+    },
     "7b3cd09aad79cd7e": {
       "id": "7b3cd09aad79cd7e",
       "text": "下線部の読み方として最も適切なものを選びなさい。",
@@ -33336,6 +34351,18 @@
       "sha256": "a74a25d4739e9b65f015e1fcdcbd9f8079ea654e90877fe64c21019353cd0543",
       "rms": 0.167711
     },
+    "7ba0b4936ab59177": {
+      "id": "7ba0b4936ab59177",
+      "text": "1 遠くの山が緻密に青く見えた。",
+      "label": "① 遠くの山が緻密に青く見えた。",
+      "references": [
+        "lesson/2026-10-21/review/1/detail/1"
+      ],
+      "duration": 3.091,
+      "bytes": 25389,
+      "sha256": "12f20b8b33f81f7600c1a2d6e5abbe6ee59fc364b4c692d9bd7fe8ca1695751d",
+      "rms": 0.133684
+    },
     "7bb19f01861f60f5": {
       "id": "7bb19f01861f60f5",
       "text": "地上の試験やシミュレーションで良い結果が出ても、未知の条件やFailure Modeが残るため、実環境で段階的に検証する必要があります。",
@@ -33361,6 +34388,18 @@
       "bytes": 63021,
       "sha256": "51356b91ad5b1cf93ea8c44bb1ba64ee6db4a516d2b5bc151c8e088bdfae425c",
       "rms": 0.149991
+    },
+    "7bdb4c6c99058508": {
+      "id": "7bdb4c6c99058508",
+      "text": "4 仕事の能力を正確に測るには、すべてを暗記させる必要がある。",
+      "label": "④ 仕事の能力を正確に測るには、すべてを暗記させる必要がある。",
+      "references": [
+        "lesson/2026-10-21/review/4/detail/7"
+      ],
+      "duration": 5.39,
+      "bytes": 43821,
+      "sha256": "b6eddb36648700498ca229bd47811a939c7cfea5df57b7ebd88ec77145fc816c",
+      "rms": 0.127064
     },
     "7be661760f557ba2": {
       "id": "7be661760f557ba2",
@@ -33953,6 +34992,18 @@
       "bytes": 43821,
       "sha256": "e3a5bccea1234f6cb65d518b1fd6a0e83f0dc0d2232413e896cbc2e14ebaf227",
       "rms": 0.170268
+    },
+    "7e3b85f28d4a624e": {
+      "id": "7e3b85f28d4a624e",
+      "text": "項目を書き出す",
+      "label": "項目を書き出す",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-aed33b0d/collocation/1"
+      ],
+      "duration": 1.79,
+      "bytes": 15021,
+      "sha256": "edfbd8bf8ae22e9cb6010ae45e331cb8843d896aaa6db1a8048b6d97202bbe7b",
+      "rms": 0.151167
     },
     "7e3c4dd22de9acce": {
       "id": "7e3c4dd22de9acce",
@@ -34744,6 +35795,18 @@
       "sha256": "350890f8a5c406358562f7952c2841ddd0be7fd9b89a492a93ce069ffcec3d32",
       "rms": 0.142837
     },
+    "81362cccbd670aa0": {
+      "id": "81362cccbd670aa0",
+      "text": "1 開発機での測定値は一切使うべきではない。",
+      "label": "① 開発機での測定値は一切使うべきではない。",
+      "references": [
+        "lesson/2026-10-20/review/4/detail/4"
+      ],
+      "duration": 4.193,
+      "bytes": 34221,
+      "sha256": "db252c746d97d3170c3db80a0fff509e6688f18141105f83def33db4e55bdc70",
+      "rms": 0.124221
+    },
     "8142cbeff36a7f03": {
       "id": "8142cbeff36a7f03",
       "text": "この設計の考え方として最も適切なものはどれか。",
@@ -35273,6 +36336,19 @@
       "sha256": "5db08549ecd18d951b8637e8b8c570322485fb5f3e5014de998722ea5f9dce0f",
       "rms": 0.130996
     },
+    "837806518ee78b85": {
+      "id": "837806518ee78b85",
+      "text": "とはいえ、提案された処理が現在の仕様に合っているか、他の機能に影響しないかは、実際の条件を照らし合わせないことには分からない。",
+      "label": "とはいえ、提案された処理が現在の仕様に合っているか、他の機能に影響しないかは、実際の条件を照らし合わせないことには分からない。",
+      "references": [
+        "lesson/2026-10-21/immersion/1/2",
+        "lesson/2026-10-21/reading/1/2"
+      ],
+      "duration": 10.042,
+      "bytes": 81069,
+      "sha256": "3538fe3d71e5a59663c52b874499cba1cddb8db7a457d7265b3cdf9d3f83f69d",
+      "rms": 0.137936
+    },
     "8384cafb3c1534b7": {
       "id": "8384cafb3c1534b7",
       "text": "監視体制が整っていないままAIエージェントに重要なデータを更新させる( )、対象業務を絞って検証を続けたほうがいい。",
@@ -35380,6 +36456,18 @@
       "bytes": 13293,
       "sha256": "cdf3f4d172904e4dcc57b2fafd6e24e0929de9821a633dd0cf5b66810e251ed7",
       "rms": 0.156602
+    },
+    "83dcb840f69c0894": {
+      "id": "83dcb840f69c0894",
+      "text": "検索ツールが身近になった現在、必要な情報をすべて暗記できる人だけを優秀だと評価するのは適切なのだろうか。",
+      "label": "検索ツールが身近になった現在、必要な情報をすべて暗記できる人だけを優秀だと評価するのは適切なのだろうか。",
+      "references": [
+        "lesson/2026-10-21/review/4/detail/1"
+      ],
+      "duration": 8.733,
+      "bytes": 70509,
+      "sha256": "09a5bbf9eccab3245ee5cb222598e00f30cc5f696a75803040730ef851ff1d4c",
+      "rms": 0.156654
     },
     "83f9a3a7db6e78f3": {
       "id": "83f9a3a7db6e78f3",
@@ -35647,6 +36735,18 @@
       "bytes": 13101,
       "sha256": "207262d805841b724fa52d206cc24606508dc89b72eb19a594a4072260d0c3e6",
       "rms": 0.141338
+    },
+    "8517ac0dad092d21": {
+      "id": "8517ac0dad092d21",
+      "text": "上限を引き下げる",
+      "label": "上限を引き下げる",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-47ad8972a984/collocation/0"
+      ],
+      "duration": 1.837,
+      "bytes": 15405,
+      "sha256": "9f8af6370b8a4cbb2979d74bd2bb2f63c8bed8b995b4e39a021e161012dcdb98",
+      "rms": 0.169999
     },
     "851b792dbac2ac11": {
       "id": "851b792dbac2ac11",
@@ -36372,6 +37472,19 @@
       "sha256": "9eb4f536086bf37bdcf6c3dca2f1ac67f8d20c8f4ed0b7675d4e512979319fbe",
       "rms": 0.190312
     },
+    "883b6da35552b57f": {
+      "id": "883b6da35552b57f",
+      "text": "この経験をきっかけに、チームはAIが生成した部分を一律に疑うのでも、反対に全面的に信用するのでもなく、変更内容に応じて確認方法を選ぶことにした。",
+      "label": "この経験をきっかけに、チームはAIが生成した部分を一律に疑うのでも、反対に全面的に信用するのでもなく、変更内容に応じて確認方法を選ぶことにした。",
+      "references": [
+        "lesson/2026-10-21/immersion/1/0",
+        "lesson/2026-10-21/reading/1/0"
+      ],
+      "duration": 12.796,
+      "bytes": 103149,
+      "sha256": "2e5ddbd86ea28e90861e38c88d973af5c2668499846cd59a435e761690bea7d9",
+      "rms": 0.148103
+    },
     "883b998f8249b6eb": {
       "id": "883b998f8249b6eb",
       "text": "だってつくづく思うんだもの。",
@@ -36711,6 +37824,18 @@
       "bytes": 14829,
       "sha256": "86e3e840329d1a96fcff73e5a0e7c247c941467eb21ed1f8cd92266f81c99e25",
       "rms": 0.153924
+    },
+    "8996b48b776f70ff": {
+      "id": "8996b48b776f70ff",
+      "text": "念のため確認する",
+      "label": "念のため確認する",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-2602f143/collocation/0"
+      ],
+      "duration": 2.011,
+      "bytes": 16749,
+      "sha256": "8f8d21d805a339b79cefd3b6e21b550cfc5a979bb3bb4c87bf2f838901a3a5dd",
+      "rms": 0.164101
     },
     "899c5058f0c2f97c": {
       "id": "899c5058f0c2f97c",
@@ -37181,6 +38306,19 @@
       "bytes": 13293,
       "sha256": "f3d45ae88111cd8843b4ed6eb41b6bf68bc3d26a8a09c5d96f524a9edebdb081",
       "rms": 0.122445
+    },
+    "8adf39e915895285": {
+      "id": "8adf39e915895285",
+      "text": "説明が流暢だからといって、根拠まで十分であるとは限らないのだ。",
+      "label": "説明が流暢だからといって、根拠まで十分であるとは限らないのだ。",
+      "references": [
+        "lesson/2026-10-21/immersion/1/3",
+        "lesson/2026-10-21/reading/1/3"
+      ],
+      "duration": 5.399,
+      "bytes": 43821,
+      "sha256": "c2da1b6a6db42882647c7342e6f63bd63bd41594979429bcee08bb238921a4d7",
+      "rms": 0.125981
     },
     "8ae9045b9822d16f": {
       "id": "8ae9045b9822d16f",
@@ -37679,6 +38817,18 @@
       "sha256": "ea30888568d5c7aaa0dd2906a016bf0aa242e7542aa5add4b836088bbce399ff",
       "rms": 0.113139
     },
+    "8c2e0a7872ae5cf4": {
+      "id": "8c2e0a7872ae5cf4",
+      "text": "実際の利用者の操作と改善の目的を踏まえて指標を選び、変更後の体験を確かめるべきだ。",
+      "label": "実際の利用者の操作と改善の目的を踏まえて指標を選び、変更後の体験を確かめるべきだ。",
+      "references": [
+        "lesson/2026-10-20/option/1/0"
+      ],
+      "duration": 7.653,
+      "bytes": 61869,
+      "sha256": "49f3d40e0e85eaddd5cd7fe678f799a909958f4349f39df33d1f4722abd72dd5",
+      "rms": 0.153241
+    },
     "8c34e06c2880ae18": {
       "id": "8c34e06c2880ae18",
       "text": "すべてのタスクで同じモデルを使い続けるため。",
@@ -37897,6 +39047,18 @@
       "sha256": "c2d9893c3e9b5d98f1810dd1effc8d983caeb80402d3ffce0dc8ac223ecbac0f",
       "rms": 0.133369
     },
+    "8cf80d2c549aa7f0": {
+      "id": "8cf80d2c549aa7f0",
+      "text": "資料を流用する",
+      "label": "資料を流用する",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-3b3e7393/collocation/1"
+      ],
+      "duration": 1.756,
+      "bytes": 14829,
+      "sha256": "95573b581573e95236493ba417b37666a089e62a6481087a2552999b2b5d6bc1",
+      "rms": 0.128699
+    },
     "8cfed4cb56d1d9a7": {
       "id": "8cfed4cb56d1d9a7",
       "text": "しゅんびんせい",
@@ -37932,6 +39094,19 @@
       "bytes": 24045,
       "sha256": "3391a76da75cd12dc51ed2a9e05f05323858cf29e37d0b3655d7132cab3a1fc8",
       "rms": 0.133399
+    },
+    "8d0a0d40327cfdbc": {
+      "id": "8d0a0d40327cfdbc",
+      "text": "速いサイト」という評価は、開発者に都合のよい一つの数字ではなく、利用者の行動に目を向けて初めて意味を持つのではないだろうか。",
+      "label": "速いサイト」という評価は、開発者に都合のよい一つの数字ではなく、利用者の行動に目を向けて初めて意味を持つのではないだろうか。",
+      "references": [
+        "lesson/2026-10-20/immersion/3/3",
+        "lesson/2026-10-20/reading/3/3"
+      ],
+      "duration": 9.917,
+      "bytes": 80109,
+      "sha256": "b6939f77f0d82103b5f64b05cb1cf21b416da291f197c72388336fb617610710",
+      "rms": 0.157962
     },
     "8d4bc1232bf8b82f": {
       "id": "8d4bc1232bf8b82f",
@@ -39233,6 +40408,18 @@
       "sha256": "5662d7eec0ef6e1897109f12b07b1552932a8810290b0ffaede2b9892f267cd9",
       "rms": 0.12005
     },
+    "91c8224507518bf9": {
+      "id": "91c8224507518bf9",
+      "text": "字義通りに受け取る",
+      "label": "字義通りに受け取る",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-f23e9fc21971/collocation/0"
+      ],
+      "duration": 1.837,
+      "bytes": 15405,
+      "sha256": "581a81db6b3a8c7cd36e6f6918bfbf448787c896956dbe7abe3745d6dca0343e",
+      "rms": 0.148537
+    },
     "91d00e7b4f6a81e7": {
       "id": "91d00e7b4f6a81e7",
       "text": "しかし、調査を進めると、二度取得する現象は開発環境でのみ再現し、本番環境では別の操作をしたときに遅延が目立つことが分かった。",
@@ -39513,6 +40700,19 @@
       "sha256": "aad4ac9829fa50e3d08c1177cce6f72605c7eda545b5c447febaad4f425aa30f",
       "rms": 0.157191
     },
+    "92eb67314d79de65": {
+      "id": "92eb67314d79de65",
+      "text": "画像を小さくし、不要な処理を減らした結果、社内の測定値は大幅に改善された。",
+      "label": "画像を小さくし、不要な処理を減らした結果、社内の測定値は大幅に改善された。",
+      "references": [
+        "lesson/2026-10-20/immersion/0/1",
+        "lesson/2026-10-20/reading/0/1"
+      ],
+      "duration": 6.676,
+      "bytes": 54189,
+      "sha256": "f159a2da0ca38d54253cc4f7f18207768c11add5b7b8a75ce925688712cb6cb9",
+      "rms": 0.127719
+    },
     "93022c8697ff6972": {
       "id": "93022c8697ff6972",
       "text": "第5题|原Q59知识点・改编(筆者の最終主張)",
@@ -39742,6 +40942,18 @@
       "sha256": "698d6eea9124cb43a47ed026d7c4b75c415e27e8326a96852135cfb3d9a97b5b",
       "rms": 0.153538
     },
+    "9433d58dc61fd981": {
+      "id": "9433d58dc61fd981",
+      "text": "新勢力の台頭",
+      "label": "新勢力の台頭",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-928df6802841/collocation/1"
+      ],
+      "duration": 1.894,
+      "bytes": 15789,
+      "sha256": "a471b1716e5f66329c2d9d3a7f882bee8719b524a3fa2fcaa180a7cc062f86de",
+      "rms": 0.147135
+    },
     "9434a597cd7e68f3": {
       "id": "9434a597cd7e68f3",
       "text": "4 警告の確認は担当者ではなく、モデルだけに任せるべきだ。",
@@ -39898,6 +41110,18 @@
       "sha256": "3a417adf0bfd1c062dc46e81f2756a532a428faedba5eed329bef6ee5ebaa2f9",
       "rms": 0.104641
     },
+    "94b2452f5169d76b": {
+      "id": "94b2452f5169d76b",
+      "text": "揺るぎないものにする",
+      "label": "揺るぎないものにする",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-8ac0a7e47853/collocation/1"
+      ],
+      "duration": 1.872,
+      "bytes": 15597,
+      "sha256": "92c5694f54b1fe5b3bf7f2fc6024ed43c4ef46dbae5877e09ae0acdff5206c59",
+      "rms": 0.176755
+    },
     "94b6ebc1be009135": {
       "id": "94b6ebc1be009135",
       "text": "「目まぐるしい」の使い方として最も自然な文はどれか。",
@@ -40043,6 +41267,18 @@
       "sha256": "ee5e73268e8581988c88d90cfc073209e2573583cd6122c522c2c6f938701343",
       "rms": 0.124132
     },
+    "9536d6a86990341c": {
+      "id": "9536d6a86990341c",
+      "text": "誤解を解く",
+      "label": "誤解を解く",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-746fd27e/collocation/1"
+      ],
+      "duration": 1.593,
+      "bytes": 13485,
+      "sha256": "0da6b8dd0ef9cb5532536b3dbb825bfd96567842f9077a5357321ce2c2b7cd14",
+      "rms": 0.141984
+    },
     "9537d1e0da46158c": {
       "id": "9537d1e0da46158c",
       "text": "くよくよしたって仕方ない。",
@@ -40139,6 +41375,18 @@
       "bytes": 14253,
       "sha256": "dee07fed028b10d8f11141baef8f3ce9fda6bb4495202bf7d810153a0886a106",
       "rms": 0.107516
+    },
+    "959f36d262880e1e": {
+      "id": "959f36d262880e1e",
+      "text": "価格を引き下げる",
+      "label": "価格を引き下げる",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-47ad8972a984/collocation/1"
+      ],
+      "duration": 1.814,
+      "bytes": 15213,
+      "sha256": "0b672d7eb57073b56fc93e62c1ce87fce52c88022a0140f0bdb994bea90390fb",
+      "rms": 0.159516
     },
     "95a7c8cef5b8905a": {
       "id": "95a7c8cef5b8905a",
@@ -40309,6 +41557,19 @@
       "bytes": 46893,
       "sha256": "eb9ca52e2b9728965ef4fc1baf35cdf45c1676f735624143501c054867d7f3b6",
       "rms": 0.127403
+    },
+    "967762135dde38d7": {
+      "id": "967762135dde38d7",
+      "text": "ある通販サイトの開発チームは、画面が表示されるまでの時間を短縮することに力を入れていた。",
+      "label": "ある通販サイトの開発チームは、画面が表示されるまでの時間を短縮することに力を入れていた。",
+      "references": [
+        "lesson/2026-10-20/immersion/0/0",
+        "lesson/2026-10-20/reading/0/0"
+      ],
+      "duration": 7.202,
+      "bytes": 58413,
+      "sha256": "264bd7c388d886c9ffdda718e8232b73a1b9a40a71041ab8cb1bac046be19a81",
+      "rms": 0.131083
     },
     "967dab874ce2d733": {
       "id": "967dab874ce2d733",
@@ -40564,6 +41825,18 @@
       "sha256": "f7291aad943d30acb0962f30abfbf57d438f7b653d96ce6198193f515fb086d4",
       "rms": 0.140105
     },
+    "97a91308c16cc5c4": {
+      "id": "97a91308c16cc5c4",
+      "text": "話をつなぐ",
+      "label": "話をつなぐ",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-f5f31793/collocation/1"
+      ],
+      "duration": 1.605,
+      "bytes": 13485,
+      "sha256": "ffc38d8f49f3d7c2a86a77c63ae9a469e17dd97570d595123fe974f60928ba9c",
+      "rms": 0.129822
+    },
     "97b3acf4ab8ba360": {
       "id": "97b3acf4ab8ba360",
       "text": "悪意のあるExtensionを前提にPermission Boundaryを点検します。",
@@ -40805,6 +42078,18 @@
       "bytes": 122541,
       "sha256": "61569c7c9e487f3699676a8ab4d6f4743e8eaf1b2b6d2338aa74579e0833d472",
       "rms": 0.112106
+    },
+    "98a91978b1382d0c": {
+      "id": "98a91978b1382d0c",
+      "text": "社内で最初の表示時間が短くなれば、操作全体の改善も確認できたと考えてよい。",
+      "label": "社内で最初の表示時間が短くなれば、操作全体の改善も確認できたと考えてよい。",
+      "references": [
+        "lesson/2026-10-20/option/0/0"
+      ],
+      "duration": 6.713,
+      "bytes": 54381,
+      "sha256": "b59bb7a8d669e6496d2dcb6257223174cbef8af515fe1f831fe821d49137f509",
+      "rms": 0.151669
     },
     "98ade2d1584f9115": {
       "id": "98ade2d1584f9115",
@@ -41098,6 +42383,18 @@
       "bytes": 56109,
       "sha256": "45eb3c5839fe09d5bc44e910036d63b4b1ceedaf97dc55033d0e0947ea0f21af",
       "rms": 0.141654
+    },
+    "99a49e50d1e31bcc": {
+      "id": "99a49e50d1e31bcc",
+      "text": "二段組みの論文",
+      "label": "二段組みの論文",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-ee43a6dc2792/collocation/0"
+      ],
+      "duration": 1.779,
+      "bytes": 15021,
+      "sha256": "93a8c08bce58096c837062cb278502750e5c0d16337b2e97a35ce50a6cba68ca",
+      "rms": 0.231736
     },
     "99a79d1a5cc9ff4e": {
       "id": "99a79d1a5cc9ff4e",
@@ -43034,6 +44331,18 @@
       "sha256": "631ca835598d5544096bc3bef5dd6cf905bc17f95ed0293a73e2d3142eff2167",
       "rms": 0.138854
     },
+    "a103f619570d4bf5": {
+      "id": "a103f619570d4bf5",
+      "text": "1 かんがつ 2 かんかつ 3 かんかい 4 かんがい",
+      "label": "① かんがつ　② かんかつ　③ かんかい　④ かんがい",
+      "references": [
+        "lesson/2026-10-20/review/0/detail/1"
+      ],
+      "duration": 3.16,
+      "bytes": 25965,
+      "sha256": "d15f75eac51872ff0d641c85ceaab7f8865b6c8af184068e10eed1f91da4d1cb",
+      "rms": 0.118555
+    },
     "a11db2a0ddea8344": {
       "id": "a11db2a0ddea8344",
       "text": "せまい",
@@ -43957,6 +45266,18 @@
       "bytes": 37677,
       "sha256": "81c644f45618bf5cf44cc6b4e7cbc1dc2e0fcf6e25a9408c1f762b9dc774a912",
       "rms": 0.169564
+    },
+    "a3dd5be2bd08e1b6": {
+      "id": "a3dd5be2bd08e1b6",
+      "text": "新しい設備の管理は、どの部署の管轄に当たりますか。",
+      "label": "新しい設備の管理は、どの部署の管轄に当たりますか。",
+      "references": [
+        "lesson/2026-10-20/review/0/detail/0"
+      ],
+      "duration": 4.6,
+      "bytes": 37485,
+      "sha256": "aa9326522286f8c965b87a71cd38dcafd0526a3a45f5aea96d7dd553965c36ab",
+      "rms": 0.150874
     },
     "a3dd96e65ca9c502": {
       "id": "a3dd96e65ca9c502",
@@ -44943,6 +46264,19 @@
       "sha256": "861b35f08bd785b9ca4c8bcc0cb17a64fa854f173e80c4aa97bff6d114efcf45",
       "rms": 0.11037
     },
+    "a7d7f4b639941122": {
+      "id": "a7d7f4b639941122",
+      "text": "必要に応じて、前提条件そのものを見直す姿勢が求められる。",
+      "label": "必要に応じて、前提条件そのものを見直す姿勢が求められる。",
+      "references": [
+        "lesson/2026-10-21/immersion/2/4",
+        "lesson/2026-10-21/reading/2/4"
+      ],
+      "duration": 4.983,
+      "bytes": 40557,
+      "sha256": "f97254ce796a16d6a933ee63dfd82021c0d0f11a26d0f8b670f226904c5c73c9",
+      "rms": 0.184125
+    },
     "a7dc777624f719ca": {
       "id": "a7dc777624f719ca",
       "text": "本文はData量ではなく、意味・粒度・責任・出典をそろえるGovernanceを重視している。",
@@ -44954,6 +46288,19 @@
       "bytes": 56493,
       "sha256": "802f8ef92e285a5763d4fe38fac68abb77dca13b9a586140bb1e40a8870d2015",
       "rms": 0.143565
+    },
+    "a7dd4ed13ad519a5": {
+      "id": "a7dd4ed13ad519a5",
+      "text": "担当者は成果を報告したが、その直後に、利用者から「検索ボタンを押しても反応が遅い」という声が寄せられた。",
+      "label": "担当者は成果を報告したが、その直後に、利用者から「検索ボタンを押しても反応が遅い」という声が寄せられた。",
+      "references": [
+        "lesson/2026-10-20/immersion/0/2",
+        "lesson/2026-10-20/reading/0/2"
+      ],
+      "duration": 8.803,
+      "bytes": 71085,
+      "sha256": "0ece5801226771d8a88ccb6b573502f8feb8993df5db54e8da89898689e61e5f",
+      "rms": 0.137783
     },
     "a7e13c04089810e8": {
       "id": "a7e13c04089810e8",
@@ -45052,6 +46399,18 @@
       "bytes": 10221,
       "sha256": "47466a149bd2e28d87399d616dd28f4dad117ad1eb4d682639686d01457b71af",
       "rms": 0.1753
+    },
+    "a80f8816bce5b532": {
+      "id": "a80f8816bce5b532",
+      "text": "1 暗記は一切不要になったので、知識を確認する試験は廃止すべきだ。",
+      "label": "① 暗記は一切不要になったので、知識を確認する試験は廃止すべきだ。",
+      "references": [
+        "lesson/2026-10-21/review/4/detail/4"
+      ],
+      "duration": 5.726,
+      "bytes": 46509,
+      "sha256": "fb68f9c79638babd2369926dfe3970247b7905bbda3debfdfd55fa5cf6f8c514",
+      "rms": 0.159884
     },
     "a818a46414b2cca8": {
       "id": "a818a46414b2cca8",
@@ -45200,6 +46559,19 @@
       "bytes": 48429,
       "sha256": "6e657c4a104d78565133d2bfe8f7a3f2ecce47fcef0a4be7a63a811a07ba65e1",
       "rms": 0.150529
+    },
+    "a87513bdc95e4d11": {
+      "id": "a87513bdc95e4d11",
+      "text": "効率化の価値は、浮いた時間を何のために使うかによって初めて問われるのではないだろうか。",
+      "label": "効率化の価値は、浮いた時間を何のために使うかによって初めて問われるのではないだろうか。",
+      "references": [
+        "lesson/2026-10-21/immersion/3/3",
+        "lesson/2026-10-21/reading/3/3"
+      ],
+      "duration": 6.527,
+      "bytes": 52845,
+      "sha256": "7ad4f6245f29cb624688764cd1897cdcbaee62f1bab1b7a2b0b8eedd8c132fab",
+      "rms": 0.167462
     },
     "a883f85234f448ee": {
       "id": "a883f85234f448ee",
@@ -45506,6 +46878,18 @@
       "sha256": "978ec8ed999467fa74f4605a9fe4e00eeb9400778c5a9528f3610cd10853083a",
       "rms": 0.225744
     },
+    "a98daa874747a63b": {
+      "id": "a98daa874747a63b",
+      "text": "2 指標は多ければ多いほどよい。",
+      "label": "② 指標は多ければ多いほどよい。",
+      "references": [
+        "lesson/2026-10-20/review/4/detail/5"
+      ],
+      "duration": 2.557,
+      "bytes": 21165,
+      "sha256": "4d49c9b469831ef03a46ba5066d8e8d49b2666f3f30f65a469e890a19a646bfa",
+      "rms": 0.13762
+    },
     "a993566714163cbb": {
       "id": "a993566714163cbb",
       "text": "2 だけあって",
@@ -45810,6 +47194,19 @@
       "bytes": 10413,
       "sha256": "fe627d50a2c8fba8610aa7e45f2f01ada057ee52106730b4bfe0826dce301daa",
       "rms": 0.157661
+    },
+    "aae5ec50f687905c": {
+      "id": "aae5ec50f687905c",
+      "text": "通常の操作では問題が表れなかったため、担当者はレビュー時にその条件を見落としていたのである。",
+      "label": "通常の操作では問題が表れなかったため、担当者はレビュー時にその条件を見落としていたのである。",
+      "references": [
+        "lesson/2026-10-21/immersion/0/3",
+        "lesson/2026-10-21/reading/0/3"
+      ],
+      "duration": 7.421,
+      "bytes": 60141,
+      "sha256": "1b5cf777bfdc3848f8da45fa61a7e30b0eaa3d97e6e2c83fe5df33ab38a473ad",
+      "rms": 0.140408
     },
     "aaef6cee27a3ce5a": {
       "id": "aaef6cee27a3ce5a",
@@ -46589,6 +47986,18 @@
       "sha256": "1d24778c8e255837e41d8964b9ac7612cef523fcee3030fa8755ffad95b3ef39",
       "rms": 0.132108
     },
+    "ae1939c91639a4a5": {
+      "id": "ae1939c91639a4a5",
+      "text": "目盛りを確かめる",
+      "label": "目盛りを確かめる",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-42c40b407796/collocation/1"
+      ],
+      "duration": 1.72,
+      "bytes": 14445,
+      "sha256": "81660fce4d18d7699ac87054e8ec80eb332bd842e122f02aa687ae5df529e3bf",
+      "rms": 0.155572
+    },
     "ae207d610a5f71a5": {
       "id": "ae207d610a5f71a5",
       "text": "たたむ",
@@ -46600,6 +48009,18 @@
       "bytes": 9453,
       "sha256": "40c2760dcfbd4024b4d09564cc7beff6c54ae6bd0836a9cc0e00cf3d1180616c",
       "rms": 0.106751
+    },
+    "ae276a845ebc5d28": {
+      "id": "ae276a845ebc5d28",
+      "text": "バージニアの一つのS3を遠くから読む遅延に対し、作者は東京・オレゴン・フランクフルトへ複製し、四つのバケットをMRAPへまとめました。",
+      "label": "バージニアの一つのS3を遠くから読む遅延に対し、作者は東京・オレゴン・フランクフルトへ複製し、四つのバケットをMRAPへまとめました。",
+      "references": [
+        "lesson/2026-10-21/grammar/2026-10-21-g-study-f9bbc75/evidence/0"
+      ],
+      "duration": 11.027,
+      "bytes": 88941,
+      "sha256": "f7b30c1afc1abf4197cc6c232b82941277a1e2f35c31c529a1b3b42fab6a09e9",
+      "rms": 0.116468
     },
     "ae2a14abf08330c7": {
       "id": "ae2a14abf08330c7",
@@ -46709,6 +48130,18 @@
       "bytes": 9837,
       "sha256": "f091a3fcf5db5b0615d14d07048ed3f1b72e0b08783762a768069f2439c51478",
       "rms": 0.140643
+    },
+    "ae992fab5d9717e7": {
+      "id": "ae992fab5d9717e7",
+      "text": "4 利用者への聞き取りだけで十分である。",
+      "label": "④ 利用者への聞き取りだけで十分である。",
+      "references": [
+        "lesson/2026-10-20/review/4/detail/7"
+      ],
+      "duration": 3.091,
+      "bytes": 25389,
+      "sha256": "e80b38aae629805f77b5ea7780f7b5eabd1d7522261ec7aac184dfa4550d885b",
+      "rms": 0.173251
     },
     "ae9a214d80484109": {
       "id": "ae9a214d80484109",
@@ -46901,6 +48334,18 @@
       "bytes": 9069,
       "sha256": "fe4a4cd3844390b002af62ac083794e6431282ae302d3daa361117830a42fa68",
       "rms": 0.0925
+    },
+    "af1cf05377c75867": {
+      "id": "af1cf05377c75867",
+      "text": "原因がまだ分からないので、( )影響の大きい操作を止め、ログを確認しましょう。",
+      "label": "原因がまだ分からないので、（　）影響の大きい操作を止め、ログを確認しましょう。",
+      "references": [
+        "lesson/2026-10-20/review/1/detail/0"
+      ],
+      "duration": 5.921,
+      "bytes": 48045,
+      "sha256": "5f4b07003e748b69e09403fcb428de229d916511f22947a30025755178a5c271",
+      "rms": 0.161021
     },
     "af23b532574c81f6": {
       "id": "af23b532574c81f6",
@@ -47533,6 +48978,18 @@
       "sha256": "8cb4cd94b928bb0c324c91d2f1bc40017d060f5217bfd254ec6aacc7bd6a9b93",
       "rms": 0.11516
     },
+    "b14356f0d9dfa1ec": {
+      "id": "b14356f0d9dfa1ec",
+      "text": "何を改善したいかを明確にし、実際の利用体験に結び付く指標を選ぶ必要がある。",
+      "label": "何を改善したいかを明確にし、実際の利用体験に結び付く指標を選ぶ必要がある。",
+      "references": [
+        "lesson/2026-10-20/review/4/detail/2"
+      ],
+      "duration": 6.783,
+      "bytes": 54957,
+      "sha256": "eaed96e1c8bf4e2b708606a2e74260a81014d2ed84599ae666d49331ddfe57e2",
+      "rms": 0.131626
+    },
     "b147148838dabbbc": {
       "id": "b147148838dabbbc",
       "text": "3 かねないものだ",
@@ -47580,6 +49037,19 @@
       "bytes": 13677,
       "sha256": "615b2680141f5b10d1b6ebb6c79809d1c219d261c3c43310f03b27cba83cfcd8",
       "rms": 0.151697
+    },
+    "b175095d4e6f9831": {
+      "id": "b175095d4e6f9831",
+      "text": "実機で得られる情報と開発環境での測定結果を照らし合わせ、原因を絞り込む必要があった。",
+      "label": "実機で得られる情報と開発環境での測定結果を照らし合わせ、原因を絞り込む必要があった。",
+      "references": [
+        "lesson/2026-10-20/immersion/2/3",
+        "lesson/2026-10-20/reading/2/3"
+      ],
+      "duration": 7.41,
+      "bytes": 59949,
+      "sha256": "d601bdbef9d5edc5c66279f2e9d50398f1354adcffcc2252cdbbc0b198f729ea",
+      "rms": 0.126661
     },
     "b17ab256d3f844d2": {
       "id": "b17ab256d3f844d2",
@@ -47640,6 +49110,18 @@
       "bytes": 67053,
       "sha256": "122228e086e6452f3da16d5ab250aede514b0736048379259cf32b168d95e138",
       "rms": 0.149128
+    },
+    "b1b93c7296d7ec06": {
+      "id": "b1b93c7296d7ec06",
+      "text": "従来どおり進める",
+      "label": "従来どおり進める",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-study-7f0d7d60/collocation/1"
+      ],
+      "duration": 1.85,
+      "bytes": 15597,
+      "sha256": "3e9cafef50be28351e12811c821e58ab529c60eb0b74cd8b3a0867c8b0a806ab",
+      "rms": 0.12482
     },
     "b1bec3e20f44dad6": {
       "id": "b1bec3e20f44dad6",
@@ -48354,6 +49836,18 @@
       "sha256": "239ad12ec0d984da0b9c7f54608605feca439223df94a19fc12313a0caabe75a",
       "rms": 0.1487
     },
+    "b48b3d285b97ac7c": {
+      "id": "b48b3d285b97ac7c",
+      "text": "AとBに共通する考えはどれか。",
+      "label": "AとBに共通する考えはどれか。",
+      "references": [
+        "lesson/2026-10-20/review/4/detail/3"
+      ],
+      "duration": 3.079,
+      "bytes": 25389,
+      "sha256": "cb50577239164e51596d191c1f208878c6efb98fa24efd654b462f981a02af8f",
+      "rms": 0.128526
+    },
     "b48ed472ebd8131e": {
       "id": "b48ed472ebd8131e",
       "text": "原因を切り分けるに当たり、開発者はまず、問題が生じる操作と端末の条件を整理した。",
@@ -48728,6 +50222,19 @@
       "bytes": 15405,
       "sha256": "ccce495896dbafc3494c998ba7c1f9a74193352a721c4e2ca7f8fd8d35d01e84",
       "rms": 0.125759
+    },
+    "b66aa60ab2c2042e": {
+      "id": "b66aa60ab2c2042e",
+      "text": "そこでチームは、実際の操作の流れを改めて確認することにした。",
+      "label": "そこでチームは、実際の操作の流れを改めて確認することにした。",
+      "references": [
+        "lesson/2026-10-20/immersion/2/0",
+        "lesson/2026-10-20/reading/2/0"
+      ],
+      "duration": 5.575,
+      "bytes": 45357,
+      "sha256": "70e4273cf31f896161d16cce216a348ef8380f5ab3491bd7e2d31bb917e923ad",
+      "rms": 0.138596
     },
     "b672e67eefb19dca": {
       "id": "b672e67eefb19dca",
@@ -49106,6 +50613,19 @@
       "sha256": "15cec7ceafee602d0abff73e142371fbf0bf7195af6a0dd5a8a35a654cb59c0a",
       "rms": 0.116972
     },
+    "b7b56bb52885a849": {
+      "id": "b7b56bb52885a849",
+      "text": "ただしブラウザ全体の強制終了や、書き込みツールの中断は未検証です。",
+      "label": "ただしブラウザ全体の強制終了や、書き込みツールの中断は未検証です。",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-study-a47c5cf6/evidence/0",
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-study-73083d1e/evidence/0"
+      ],
+      "duration": 5.819,
+      "bytes": 47277,
+      "sha256": "172ab139358611b9aad0e2b525d95eeb032921e7e37c594cefcfe32755d811c9",
+      "rms": 0.13392
+    },
     "b7bc88aaf6d5e776": {
       "id": "b7bc88aaf6d5e776",
       "text": "Q4 芳しい",
@@ -49139,6 +50659,18 @@
       "bytes": 11757,
       "sha256": "5387d1d5464abf4d8fd3953a176efec152e4a1a3afdb2a2a02a995e1ddefe2ce",
       "rms": 0.159521
+    },
+    "b7e05cf965e4eb9d": {
+      "id": "b7e05cf965e4eb9d",
+      "text": "測定項目をできるだけ増やし、集めた数値の量を改善の成果として評価すべきだ。",
+      "label": "測定項目をできるだけ増やし、集めた数値の量を改善の成果として評価すべきだ。",
+      "references": [
+        "lesson/2026-10-20/option/2/0"
+      ],
+      "duration": 6.782,
+      "bytes": 54957,
+      "sha256": "be6e94e6add42b3d04c7d3156b6acf5273d2460a88d0cca2a16d176c164e1ce8",
+      "rms": 0.133947
     },
     "b7e4fe9d51f8a399": {
       "id": "b7e4fe9d51f8a399",
@@ -49914,6 +51446,18 @@
       "sha256": "cba46e0e5500ea4cd1b931dc1cac0d801137cf34509e822031ccaf7f38ae43f5",
       "rms": 0.13666
     },
+    "bb4633c3bde7e8ff": {
+      "id": "bb4633c3bde7e8ff",
+      "text": "名前を付け直す",
+      "label": "名前を付け直す",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-a5a3e799e489/collocation/0"
+      ],
+      "duration": 1.732,
+      "bytes": 14637,
+      "sha256": "a82370b7af731f4a2882cb42bba65acf05e33a61f43ff4991e2b5d93b6e1234a",
+      "rms": 0.163237
+    },
     "bb4accf63d902322": {
       "id": "bb4accf63d902322",
       "text": "エネルギーを使い果たす",
@@ -50095,6 +51639,18 @@
       "bytes": 15789,
       "sha256": "3968759983bb5cc3c4bb185f976103ad66b082aed591a9ec50c28d0cc28e5746",
       "rms": 0.133836
+    },
+    "bc07da6aa4deda7e": {
+      "id": "bc07da6aa4deda7e",
+      "text": "不可逆な変化",
+      "label": "不可逆な変化",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-64de6163/collocation/0"
+      ],
+      "duration": 1.744,
+      "bytes": 14637,
+      "sha256": "04f34c116a93b16d9c2fa474dd159f9857c4419d28065d2935b13275e3f74f3d",
+      "rms": 0.146316
     },
     "bc0b61eb77675277": {
       "id": "bc0b61eb77675277",
@@ -50599,6 +52155,18 @@
       "sha256": "e74a7da3a825a16d497733cba5686e45946353935b621e2efd52b71791cab54b",
       "rms": 0.133562
     },
+    "be6c317bb1af99af": {
+      "id": "be6c317bb1af99af",
+      "text": "2 情報検索の普及に伴い、記憶力だけでなく知識を使う力も評価すべきだ。",
+      "label": "② 情報検索の普及に伴い、記憶力だけでなく知識を使う力も評価すべきだ。",
+      "references": [
+        "lesson/2026-10-21/review/4/detail/5"
+      ],
+      "duration": 6.932,
+      "bytes": 56109,
+      "sha256": "687e5d118b490e2d40b637dfdd2bead79de7624cfc18a0ed51fa24a6eaf3f227",
+      "rms": 0.140604
+    },
     "be7aebc4483c6248": {
       "id": "be7aebc4483c6248",
       "text": "TPUを搭載する",
@@ -50610,6 +52178,18 @@
       "bytes": 16557,
       "sha256": "774690b493d89b9ed764bf1c90e8eb319b0f0cf71f9c8af5e3ecaebd1be0ec0b",
       "rms": 0.188721
+    },
+    "be7dd3334c238a97": {
+      "id": "be7dd3334c238a97",
+      "text": "余白を残す",
+      "label": "余白を残す",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-856145d77758/collocation/1"
+      ],
+      "duration": 1.64,
+      "bytes": 13869,
+      "sha256": "8281c5cffeaf46bd544fabb74476024a16e3742813876db3b7e915b48c367743",
+      "rms": 0.146242
     },
     "be872bfd634aa199": {
       "id": "be872bfd634aa199",
@@ -50824,6 +52404,19 @@
       "bytes": 30765,
       "sha256": "1066debf80ac6496ec970b6a2b435eecedeba2a811223d405bd382ea2d00d013",
       "rms": 0.173734
+    },
+    "bf24cdc01b5ff62c": {
+      "id": "bf24cdc01b5ff62c",
+      "text": "以前なら時間がかかっていたフォームの入力チェックやテストコードの下書きも、短い指示から候補を作れるようになった。",
+      "label": "以前なら時間がかかっていたフォームの入力チェックやテストコードの下書きも、短い指示から候補を作れるようになった。",
+      "references": [
+        "lesson/2026-10-21/immersion/0/1",
+        "lesson/2026-10-21/reading/0/1"
+      ],
+      "duration": 8.393,
+      "bytes": 67821,
+      "sha256": "06825764f0dff4cf11ea60cc4edbfb3ebe9ff5b42362dc53a93e1fd202c14c48",
+      "rms": 0.11144
     },
     "bf292579c90455f5": {
       "id": "bf292579c90455f5",
@@ -51269,6 +52862,18 @@
       "bytes": 15981,
       "sha256": "27ff00cb8ff43f3683df9d3cabbf424727191035c43ba351cff6291fc7b96b46",
       "rms": 0.126097
+    },
+    "c0ef9a3b7484212f": {
+      "id": "c0ef9a3b7484212f",
+      "text": "一つ残らず記録する",
+      "label": "一つ残らず記録する",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-cba86781/collocation/1"
+      ],
+      "duration": 2.186,
+      "bytes": 18285,
+      "sha256": "408dd48934876d549fdf7d983c80383487f59018fb28d62e04885ad92778970b",
+      "rms": 0.102802
     },
     "c10203faacbf15c6": {
       "id": "c10203faacbf15c6",
@@ -52118,6 +53723,18 @@
       "sha256": "d997cdf72228f0d62c730ac853cb55365867b18916abc5bcab80f382b943169e",
       "rms": 0.171715
     },
+    "c440e0d0171f1ba4": {
+      "id": "c440e0d0171f1ba4",
+      "text": "作者は性能の改善を認めつつ、必要な速さを既に満たすOrigin Shieldを当面続ける判断でした。",
+      "label": "作者は性能の改善を認めつつ、必要な速さを既に満たすOrigin Shieldを当面続ける判断でした。",
+      "references": [
+        "lesson/2026-10-21/grammar/2026-10-21-g-study-356b3c79/evidence/0"
+      ],
+      "duration": 8.245,
+      "bytes": 66669,
+      "sha256": "6bcfe8bf9f88c4da19b91ac7cea21ae34611b56e6b9562b0fd9cd90b0842df51",
+      "rms": 0.149903
+    },
     "c4450d5908093b35": {
       "id": "c4450d5908093b35",
       "text": "てれくさい",
@@ -52225,6 +53842,18 @@
       "bytes": 13677,
       "sha256": "30ebb80d58fccf624ae4ace3930dd771778765c7749d3a0a80be4e8e496aff5b",
       "rms": 0.084096
+    },
+    "c4e680546783c050": {
+      "id": "c4e680546783c050",
+      "text": "3 利用者の実際の体験を考慮して性能を評価するべきだ。",
+      "label": "③ 利用者の実際の体験を考慮して性能を評価するべきだ。",
+      "references": [
+        "lesson/2026-10-20/review/4/detail/6"
+      ],
+      "duration": 4.843,
+      "bytes": 39405,
+      "sha256": "e7bcfcf484d31a005744c900aff7883e14217ca94c1c66b9a69406a7c7ea184b",
+      "rms": 0.144539
     },
     "c50155fd6ab53711": {
       "id": "c50155fd6ab53711",
@@ -52381,6 +54010,18 @@
       "bytes": 61485,
       "sha256": "77955360f135c31ad385870eb03d9f4c9a76f7878d37d6d6a2d08b405d24b34d",
       "rms": 0.149663
+    },
+    "c5a8f8fcb467c418": {
+      "id": "c5a8f8fcb467c418",
+      "text": "GPUの起動だけでなく、上限と終了結果を確認します。",
+      "label": "> GPUの起動だけでなく、上限と終了結果を確認します。",
+      "references": [
+        "lesson/2026-10-21/grammar/2026-10-21-g-study-61aee9b6/evidence/0"
+      ],
+      "duration": 5.134,
+      "bytes": 41709,
+      "sha256": "4004d1153c7252f50064de6977e39a245bbab1a553f2d4fbdd896ea7615cec5b",
+      "rms": 0.148007
     },
     "c5c2187edbc6e75a": {
       "id": "c5c2187edbc6e75a",
@@ -52634,6 +54275,18 @@
       "sha256": "6c5cccaaad2523b4c1d497bdf1f5239b4f5db06da1eaa55b7db24f06622aa32b",
       "rms": 0.098543
     },
+    "c69e734b6c4dc887": {
+      "id": "c69e734b6c4dc887",
+      "text": "利用者の協力( )、実際の使用感を十分に調べることはできない。",
+      "label": "利用者の協力（　）、実際の使用感を十分に調べることはできない。",
+      "references": [
+        "lesson/2026-10-20/review/2/detail/0"
+      ],
+      "duration": 5.285,
+      "bytes": 43053,
+      "sha256": "902e7f4351d0c975a264a172e1dcd7679e11e3b55bf55b1c77e9f2b61301e1a2",
+      "rms": 0.161861
+    },
     "c6ce961e4667285a": {
       "id": "c6ce961e4667285a",
       "text": "調査で得た知見を、ほかのチームにも還元します。",
@@ -52645,6 +54298,18 @@
       "bytes": 31533,
       "sha256": "d3c5b91f4a2a416905f733874dfb1120fd752ec59659ba93638d109549cb9fef",
       "rms": 0.136878
+    },
+    "c6ce98071ffdbd03": {
+      "id": "c6ce98071ffdbd03",
+      "text": "コードが通常の操作で動けば、説明やテスト条件の共有を省くこと。",
+      "label": "コードが通常の操作で動けば、説明やテスト条件の共有を省くこと。",
+      "references": [
+        "lesson/2026-10-21/option/1/0"
+      ],
+      "duration": 5.866,
+      "bytes": 47661,
+      "sha256": "d1d29578cd4f3c5d691f1c4db6068f4b9c9a382231ceec1f7cd94eca6e7c84d3",
+      "rms": 0.135837
     },
     "c6d0d8a5fbe92ff1": {
       "id": "c6d0d8a5fbe92ff1",
@@ -53639,6 +55304,18 @@
       "sha256": "84b9b8e31c9e3e2f03ecaf45de2b217a0277f9332736e336e043324058e6dd09",
       "rms": 0.104993
     },
+    "ca07d957871065d3": {
+      "id": "ca07d957871065d3",
+      "text": "もちろん基礎知識は必要だが、それをどう確かめ、どう使うかという力も評価しなければ、仕事の実態を十分に捉えられない。",
+      "label": "もちろん基礎知識は必要だが、それをどう確かめ、どう使うかという力も評価しなければ、仕事の実態を十分に捉えられない。",
+      "references": [
+        "lesson/2026-10-21/review/4/detail/2"
+      ],
+      "duration": 9.708,
+      "bytes": 78381,
+      "sha256": "5b28cbb9e74a8cea8f1b1e656b48be79fdb265b7b3b50fa19aa54748d274fb56",
+      "rms": 0.132568
+    },
     "ca0a73a1b5080f0d": {
       "id": "ca0a73a1b5080f0d",
       "text": "即時性が重要",
@@ -53711,6 +55388,19 @@
       "sha256": "f67db27840a045c6a7b0afcbd24f1cff25dc111dfef1bf6bdc9a1ef49f2a2554",
       "rms": 0.106684
     },
+    "ca291c98fa6758cc": {
+      "id": "ca291c98fa6758cc",
+      "text": "ある実装が偶然うまく動いたとしても、なぜその方法を選び、どのような条件で確認したのかが共有されなければ、次の担当者は変更の妥当性を判断できない。",
+      "label": "ある実装が偶然うまく動いたとしても、なぜその方法を選び、どのような条件で確認したのかが共有されなければ、次の担当者は変更の妥当性を判断できない。",
+      "references": [
+        "lesson/2026-10-21/immersion/2/1",
+        "lesson/2026-10-21/reading/2/1"
+      ],
+      "duration": 11.915,
+      "bytes": 96045,
+      "sha256": "5e3656d436a12e82f19389be9c26b22bc9e1d1d9a13880deaf82a62f48600315",
+      "rms": 0.098223
+    },
     "ca2bb08be638aee7": {
       "id": "ca2bb08be638aee7",
       "text": "自己申告に頼る",
@@ -53746,6 +55436,18 @@
       "bytes": 52461,
       "sha256": "c7f9c773ab48b95a4cc14bb553dee2d566e3c601cd6c0f1bbaec59656b88996a",
       "rms": 0.123514
+    },
+    "ca7103b17498f905": {
+      "id": "ca7103b17498f905",
+      "text": "一方で、状態や失効の管理は増えます。",
+      "label": "一方で、状態や失効の管理は増えます。",
+      "references": [
+        "lesson/2026-10-20/grammar/2026-10-20-g-study-73890ec9/evidence/0"
+      ],
+      "duration": 3.508,
+      "bytes": 28845,
+      "sha256": "b058744df4a0911770bbb1e25406c785f1925b103b296b36caa17460a8ecc476",
+      "rms": 0.145029
     },
     "ca76f35e1d572f82": {
       "id": "ca76f35e1d572f82",
@@ -54706,6 +56408,19 @@
       "sha256": "2835b0e49026e1d86fb3eac6f52d4c4e45cc445380048d3908c6ef99326192c4",
       "rms": 0.140216
     },
+    "cd8f5a4a95b25d1e": {
+      "id": "cd8f5a4a95b25d1e",
+      "text": "重要でない数値を大量に集めても、改善すべき箇所を見失うおそれがあるからだ。",
+      "label": "重要でない数値を大量に集めても、改善すべき箇所を見失うおそれがあるからだ。",
+      "references": [
+        "lesson/2026-10-20/immersion/3/1",
+        "lesson/2026-10-20/reading/3/1"
+      ],
+      "duration": 6.122,
+      "bytes": 49773,
+      "sha256": "e14254b8c8c5acec350898e8f9b078086358ecc8922d2ff31ff25c8edfd0cb1f",
+      "rms": 0.160572
+    },
     "cd9e3c10a6af94ac": {
       "id": "cd9e3c10a6af94ac",
       "text": "ある開発チームは、AIが提案した設定によって一回の処理速度が向上したと報告した。",
@@ -54730,6 +56445,19 @@
       "bytes": 15213,
       "sha256": "32450bc273bdf1555c3a2b431aa9b0b5583c63e9df32607d138a549e0fc008b4",
       "rms": 0.13038
+    },
+    "cda6f082288f9cae": {
+      "id": "cda6f082288f9cae",
+      "text": "開発用の高性能なパソコンでは問題が見つからなかったものの、通信環境や端末が異なると状況も変わり得る。",
+      "label": "開発用の高性能なパソコンでは問題が見つからなかったものの、通信環境や端末が異なると状況も変わり得る。",
+      "references": [
+        "lesson/2026-10-20/immersion/2/2",
+        "lesson/2026-10-20/reading/2/2"
+      ],
+      "duration": 8.8,
+      "bytes": 71085,
+      "sha256": "a0ac24dad9e94c23b0f4fdac4b1e8c06b69e9ce13239f5a4835c260a1164d194",
+      "rms": 0.128593
     },
     "cdb8980a3245ac86": {
       "id": "cdb8980a3245ac86",
@@ -55355,6 +57083,30 @@
       "bytes": 13869,
       "sha256": "aab95a2cab8f30c7a45b31c6c15fd8c11cc7a61bd28e8c0786f25c897743e8f2",
       "rms": 0.1103
+    },
+    "d081444638747d5a": {
+      "id": "d081444638747d5a",
+      "text": "写真を取り直す",
+      "label": "写真を取り直す",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-study-5c4ce4ff/collocation/1"
+      ],
+      "duration": 1.663,
+      "bytes": 14061,
+      "sha256": "0b2c85677eb38d5d9cc03846b39d69d9d090b85c6856bfd9f11243d551c36e20",
+      "rms": 0.175633
+    },
+    "d08b3524dc7f6d58": {
+      "id": "d08b3524dc7f6d58",
+      "text": "Vitest4.1を使う私有リポジトリのubuntu-latestは2CPUで、テストの増加に伴い中央値が約15分、長い時は18分を超えていました。",
+      "label": "Vitest4.1を使う私有リポジトリのubuntu-latestは2CPUで、テストの増加に伴い中央値が約15分、長い時は18分を超えていました。",
+      "references": [
+        "lesson/2026-10-20/grammar/2026-10-20-g-study-f5fb9331/evidence/0"
+      ],
+      "duration": 11.614,
+      "bytes": 93549,
+      "sha256": "40f5cf3ef4b07bc6ce54c6bf9ba258cc561c97e4d9b1e2f42f3a672587671521",
+      "rms": 0.105782
     },
     "d095561d2ac131f1": {
       "id": "d095561d2ac131f1",
@@ -56795,6 +58547,19 @@
       "sha256": "f3febc31933fe0eff866718b828682a1667ef94f1e1e9daaa0e7095e98da187a",
       "rms": 0.137936
     },
+    "d662dafd15935d49": {
+      "id": "d662dafd15935d49",
+      "text": "ページが開くまでの待ち時間だけでなく、文字を入力したときの反応や、商品を選んで次の画面に移る際の滑らかさも関係する。",
+      "label": "ページが開くまでの待ち時間だけでなく、文字を入力したときの反応や、商品を選んで次の画面に移る際の滑らかさも関係する。",
+      "references": [
+        "lesson/2026-10-20/immersion/1/1",
+        "lesson/2026-10-20/reading/1/1"
+      ],
+      "duration": 9.929,
+      "bytes": 80109,
+      "sha256": "993b8be2dd66d2fe9ef5f2b84d86d066dd3116bd193b9faf57ab2f78af59181d",
+      "rms": 0.129491
+    },
     "d66342db7a34c1e7": {
       "id": "d66342db7a34c1e7",
       "text": "現場利用者の協力を前提とする文脈で再確認する。",
@@ -57026,6 +58791,18 @@
       "bytes": 63213,
       "sha256": "4883be80a6cf95b6903208f1253003cbcfc52e6535015f37d03fc9818ea100df",
       "rms": 0.142228
+    },
+    "d7514981a10ac70d": {
+      "id": "d7514981a10ac70d",
+      "text": "初対面でも物怖じしない",
+      "label": "初対面でも物怖じしない",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-cc370c67ea38/collocation/1"
+      ],
+      "duration": 2.186,
+      "bytes": 18285,
+      "sha256": "18924fc58e2ed37953f6f9e901ce4e989fa06dff4ab21a947ecbe76e8e05d969",
+      "rms": 0.154044
     },
     "d761919375bdc71f": {
       "id": "d761919375bdc71f",
@@ -57929,6 +59706,18 @@
       "sha256": "558a8ed89e0510b07b73316369b39bc26c58b48fd45b02273bbf143cab814fb8",
       "rms": 0.136074
     },
+    "da6770ae3fecca5a": {
+      "id": "da6770ae3fecca5a",
+      "text": "手慣れた様子",
+      "label": "手慣れた様子",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-f3740741d6a8/collocation/1"
+      ],
+      "duration": 1.558,
+      "bytes": 13101,
+      "sha256": "f6dfe0c89c13a6b0fc6da1b7696cc22983d577d2732a11bdc49bb65468bafbd5",
+      "rms": 0.118466
+    },
     "da80c415b4244319": {
       "id": "da80c415b4244319",
       "text": "くわわる",
@@ -58458,6 +60247,18 @@
       "bytes": 26541,
       "sha256": "65f969d0d7a0d8906962412aaaa40e01e536a8e642989c0bbc8dc9f81144287a",
       "rms": 0.15572
+    },
+    "dc7c8d5bb05bda5f": {
+      "id": "dc7c8d5bb05bda5f",
+      "text": "1 をはじめ 2 なくしては 3 のみならず 4 に際して",
+      "label": "① をはじめ　② なくしては　③ のみならず　④ に際して",
+      "references": [
+        "lesson/2026-10-20/review/2/detail/1"
+      ],
+      "duration": 4.031,
+      "bytes": 32877,
+      "sha256": "719029aaa9f6b1d837790c3c810c8ace3306b9cd51bd771953f7de8476fdc491",
+      "rms": 0.153061
     },
     "dc80a5d0f69eaec4": {
       "id": "dc80a5d0f69eaec4",
@@ -60084,6 +61885,18 @@
       "sha256": "689a11956f6d78bb63fb9536e3aa9a431e8c8b509f047026ed619ed6baa98c6d",
       "rms": 0.125025
     },
+    "e226cceda47a8811": {
+      "id": "e226cceda47a8811",
+      "text": "提案の説明が流暢であれば、実装の妥当性の判断をAIに任せること。",
+      "label": "提案の説明が流暢であれば、実装の妥当性の判断をAIに任せること。",
+      "references": [
+        "lesson/2026-10-21/option/3/0"
+      ],
+      "duration": 5.935,
+      "bytes": 48237,
+      "sha256": "edc81d518d565c799d9ccb6dc3a829eeb8ec5f565b8ed05625fddcb51dc60867",
+      "rms": 0.169031
+    },
     "e227a1c335a334ff": {
       "id": "e227a1c335a334ff",
       "text": "にどとこられない",
@@ -60703,6 +62516,18 @@
       "bytes": 42285,
       "sha256": "d95dc3fbfa1ad86003a612b352bbe55c8e0d79c3171ffcbb51109b2e74a3faf0",
       "rms": 0.147777
+    },
+    "e47f07c28e63a2a6": {
+      "id": "e47f07c28e63a2a6",
+      "text": "散発的に発生する",
+      "label": "散発的に発生する",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-f45c0fcb57e7/collocation/1"
+      ],
+      "duration": 2.15,
+      "bytes": 17901,
+      "sha256": "568e4ef3d61bd50e5504fe1dba836c27bf338a507556ce188d9fbea315551ae4",
+      "rms": 0.153005
     },
     "e48a3307cefb9cfb": {
       "id": "e48a3307cefb9cfb",
@@ -61513,6 +63338,19 @@
       "sha256": "b4973e2bfa16e5fddd296c1b737e2825cf55ee2b3a7340b77e5c7ee97a1aee28",
       "rms": 0.133262
     },
+    "e78674884d478e1c": {
+      "id": "e78674884d478e1c",
+      "text": "AIの提案は、開発者が検討を始める際の有力な手掛かりとなり得る。",
+      "label": "AIの提案は、開発者が検討を始める際の有力な手掛かりとなり得る。",
+      "references": [
+        "lesson/2026-10-21/immersion/1/1",
+        "lesson/2026-10-21/reading/1/1"
+      ],
+      "duration": 5.842,
+      "bytes": 47469,
+      "sha256": "dbd91f8a629d442625728c9c0100e14609f520a992f90cebf2fa25a809033cd7",
+      "rms": 0.140727
+    },
     "e78f992fb1638823": {
       "id": "e78f992fb1638823",
       "text": "成長を後押しする",
@@ -62106,6 +63944,31 @@
       "sha256": "408b1a0436caa0ce693fcf48e3f9e778baf719cb6100f3b2c1baf2e5645cea11",
       "rms": 0.149529
     },
+    "e9b969ac5073ca10": {
+      "id": "e9b969ac5073ca10",
+      "text": "定型的な作業を機械に任せる一方で、何を成功とみなすのかを明らかにし、確認した事実と未確認の条件を分けて伝えることが重要なのである。",
+      "label": "定型的な作業を機械に任せる一方で、何を成功とみなすのかを明らかにし、確認した事実と未確認の条件を分けて伝えることが重要なのである。",
+      "references": [
+        "lesson/2026-10-21/immersion/3/1",
+        "lesson/2026-10-21/reading/3/1"
+      ],
+      "duration": 11.542,
+      "bytes": 92973,
+      "sha256": "e4616d6cdfc1d1a395cbb7eaf670270cb2c60a9366a3ecde9f4c346246ddecfe",
+      "rms": 0.130875
+    },
+    "e9bb02411c540f8d": {
+      "id": "e9bb02411c540f8d",
+      "text": "新技術が台頭する",
+      "label": "新技術が台頭する",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-928df6802841/collocation/0"
+      ],
+      "duration": 2.058,
+      "bytes": 17133,
+      "sha256": "60d4497126c1af41a69e2683d0ab5e4aba63c14fbc58e05095322b3ff4d12e23",
+      "rms": 0.168213
+    },
     "e9e23be3619b850f": {
       "id": "e9e23be3619b850f",
       "text": "ふせつする",
@@ -62562,6 +64425,19 @@
       "bytes": 34413,
       "sha256": "27bbd4ac8984867286db168cbcf482b9b8a7c62ce0fb34c531952943828ee2d5",
       "rms": 0.144528
+    },
+    "ebf4ec414cdc5225": {
+      "id": "ebf4ec414cdc5225",
+      "text": "しかし実際には、判断の根拠やテストの範囲を他者がたどれることも欠かせない。",
+      "label": "しかし実際には、判断の根拠やテストの範囲を他者がたどれることも欠かせない。",
+      "references": [
+        "lesson/2026-10-21/immersion/2/3",
+        "lesson/2026-10-21/reading/2/3"
+      ],
+      "duration": 6.146,
+      "bytes": 49965,
+      "sha256": "3bdab291322fc4cdf78c8e80bede21ebaa5242825afb4a083b1565221b8cd636",
+      "rms": 0.145689
     },
     "ebf7ace70dbbfba3": {
       "id": "ebf7ace70dbbfba3",
@@ -63145,6 +65021,18 @@
       "duration": 1.224,
       "rms": 0.149717,
       "sha256": "f8faab0aa098f283f05f7bf46cd6bfaecb3faf607e1c9bb2114cb6519bcf3d29"
+    },
+    "ee981149a281673d": {
+      "id": "ee981149a281673d",
+      "text": "右端の余白",
+      "label": "右端の余白",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-856145d77758/collocation/0"
+      ],
+      "duration": 1.814,
+      "bytes": 15213,
+      "sha256": "5772d4901b366bebc4992a759e4a408d46d854f9c1ca094eca54b3633f285ffe",
+      "rms": 0.204429
     },
     "ee9aa5dad010191e": {
       "id": "ee9aa5dad010191e",
@@ -64381,6 +66269,18 @@
       "sha256": "bbc1b20f4c2918b6648ca29e96ea833d9906b5d5bc05b7530220c137a5ff5115",
       "rms": 0.176874
     },
+    "f3976c0e9bb9efea": {
+      "id": "f3976c0e9bb9efea",
+      "text": "根拠が分からない修正案をそのまま採用する( )、少し時間をかけて仕様を確認したい。",
+      "label": "根拠が分からない修正案をそのまま採用する（　）、少し時間をかけて仕様を確認したい。",
+      "references": [
+        "lesson/2026-10-21/review/2/detail/0"
+      ],
+      "duration": 6.513,
+      "bytes": 52845,
+      "sha256": "1618c4d9d187a12721e39abab27dc4dff0b85f819f254cd74733777f62b8f26c",
+      "rms": 0.095655
+    },
     "f3ad50df66bea94b": {
       "id": "f3ad50df66bea94b",
       "text": "AI導入効果を自己申告だけで判断せず、Delivery データと照合します。",
@@ -65335,6 +67235,18 @@
       "sha256": "e4f77181ef29d4f9623f39ddf8f6ee22979ccd4519119e4163fe82f790ded60a",
       "rms": 0.166764
     },
+    "f73d2d716b27589d": {
+      "id": "f73d2d716b27589d",
+      "text": "データを書き出す",
+      "label": "データを書き出す",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-aed33b0d/collocation/0"
+      ],
+      "duration": 1.604,
+      "bytes": 13485,
+      "sha256": "c440ee70bd816fbf578af609905ad76177c482df094d3bc97e4533873113b967",
+      "rms": 0.127448
+    },
     "f73f29af3a9496bb": {
       "id": "f73f29af3a9496bb",
       "text": "ローカル CLI の任意の構成まで同じだと推奨する根拠にはなりません。",
@@ -65658,6 +67570,18 @@
       "bytes": 13677,
       "sha256": "d8f8050b815b7798b1bb01b8dd4775dac4ee1d50868a6e92bf9479f3ce65ad3c",
       "rms": 0.170629
+    },
+    "f8e704e031d0405c": {
+      "id": "f8e704e031d0405c",
+      "text": "字下げをそろえる",
+      "label": "字下げをそろえる",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-fc09690c944a/collocation/1"
+      ],
+      "duration": 1.616,
+      "bytes": 13677,
+      "sha256": "98cef097f52e0d020fdbcfb0f9eb7025060c2f5cdf798228469cde6896cdaa12",
+      "rms": 0.178933
     },
     "f8e83a0432247af8": {
       "id": "f8e83a0432247af8",
@@ -66057,6 +67981,18 @@
       "sha256": "6f39d660f90630ae3aad70ea7d09b3cf5524525169ea0873c4ea36eec6f4f911",
       "rms": 0.179179
     },
+    "fa3b3b5fcac0a13b": {
+      "id": "fa3b3b5fcac0a13b",
+      "text": "AIの誤りを防ぐため、生成した処理をすべて人間が手作業で作り直すこと。",
+      "label": "AIの誤りを防ぐため、生成した処理をすべて人間が手作業で作り直すこと。",
+      "references": [
+        "lesson/2026-10-21/option/0/0"
+      ],
+      "duration": 6.353,
+      "bytes": 51501,
+      "sha256": "88aec949ff1c5f5ab388160abe4c4720ea3e52b8a22f59c21f5dbb9e5cd782f2",
+      "rms": 0.138365
+    },
     "fa46fae68b2b9ca2": {
       "id": "fa46fae68b2b9ca2",
       "text": "記録から必要な項目だけを抜き出します。",
@@ -66224,6 +68160,18 @@
       "bytes": 64749,
       "sha256": "b6f7e87d57bf9f7cc241efe24df127c5c2f9c83dcb0876d8028f642f585b7c89",
       "rms": 0.155955
+    },
+    "fa9b02168dc6b4ca": {
+      "id": "fa9b02168dc6b4ca",
+      "text": "感覚を掴む",
+      "label": "感覚を掴む",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-ef2018796bf6/collocation/1"
+      ],
+      "duration": 1.604,
+      "bytes": 13485,
+      "sha256": "b3e7518ba87ea56ed65ae15dbb58a3ad9aaff2455b0baa73f8bfdc191b16491e",
+      "rms": 0.120219
     },
     "faa2c2a5d24eeda9": {
       "id": "faa2c2a5d24eeda9",
@@ -66709,6 +68657,18 @@
       "bytes": 19629,
       "sha256": "99dbb3fc240f99eb7e71ece9e4d10df845cb4d17996d4cb1d6c06d123a08c8de",
       "rms": 0.108439
+    },
+    "fc4ae34b0fee3daf": {
+      "id": "fc4ae34b0fee3daf",
+      "text": "本文で筆者が最も言いたいことは何ですか。",
+      "label": "本文で筆者が最も言いたいことは何ですか。",
+      "references": [
+        "lesson/2026-10-20/question/0"
+      ],
+      "duration": 3.49,
+      "bytes": 28653,
+      "sha256": "630fed6460fbf343013d1bbf870f99a380eac50145667c7933731e3a027036e0",
+      "rms": 0.139779
     },
     "fc4c0080576d6064": {
       "id": "fc4c0080576d6064",
