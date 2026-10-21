@@ -10,8 +10,630 @@
     "sampleRate": 24000,
     "codec": "mp3-64k"
   },
-  "requiredClips": 5406,
-  "pendingClips": 0,
-  "incompleteLessonDates": [],
-  "entries": []
+  "requiredClips": 5507,
+  "pendingClips": 75,
+  "incompleteLessonDates": [
+    "2026-10-20"
+  ],
+  "entries": [
+    {
+      "id": "14d9dc8365789f0f",
+      "text": "「速い」という評価は誰のためのものか",
+      "label": "「速い」という評価は誰のためのものか",
+      "references": [
+        "lesson/2026-10-20/title",
+        "lesson/2026-10-20/immersion/title",
+        "lesson/2026-10-20/reading/title"
+      ]
+    },
+    {
+      "id": "967762135dde38d7",
+      "text": "ある通販サイトの開発チームは、画面が表示されるまでの時間を短縮することに力を入れていた。",
+      "label": "ある通販サイトの開発チームは、画面が表示されるまでの時間を短縮することに力を入れていた。",
+      "references": [
+        "lesson/2026-10-20/immersion/0/0",
+        "lesson/2026-10-20/reading/0/0"
+      ]
+    },
+    {
+      "id": "92eb67314d79de65",
+      "text": "画像を小さくし、不要な処理を減らした結果、社内の測定値は大幅に改善された。",
+      "label": "画像を小さくし、不要な処理を減らした結果、社内の測定値は大幅に改善された。",
+      "references": [
+        "lesson/2026-10-20/immersion/0/1",
+        "lesson/2026-10-20/reading/0/1"
+      ]
+    },
+    {
+      "id": "a7dd4ed13ad519a5",
+      "text": "担当者は成果を報告したが、その直後に、利用者から「検索ボタンを押しても反応が遅い」という声が寄せられた。",
+      "label": "担当者は成果を報告したが、その直後に、利用者から「検索ボタンを押しても反応が遅い」という声が寄せられた。",
+      "references": [
+        "lesson/2026-10-20/immersion/0/2",
+        "lesson/2026-10-20/reading/0/2"
+      ]
+    },
+    {
+      "id": "27f90cb63d99007a",
+      "text": "最初の表示が速くなったという事実をもって、操作全体の使いやすさまで改善したと結論づけるのは早計だったのである。",
+      "label": "最初の表示が速くなったという事実をもって、操作全体の使いやすさまで改善したと結論づけるのは早計だったのである。",
+      "references": [
+        "lesson/2026-10-20/immersion/0/3",
+        "lesson/2026-10-20/reading/0/3"
+      ]
+    },
+    {
+      "id": "74966c138e401c17",
+      "text": "そもそも、利用者が「遅い」と感じる場面は一つではない。",
+      "label": "そもそも、利用者が「遅い」と感じる場面は一つではない。",
+      "references": [
+        "lesson/2026-10-20/immersion/1/0",
+        "lesson/2026-10-20/reading/1/0"
+      ]
+    },
+    {
+      "id": "d662dafd15935d49",
+      "text": "ページが開くまでの待ち時間だけでなく、文字を入力したときの反応や、商品を選んで次の画面に移る際の滑らかさも関係する。",
+      "label": "ページが開くまでの待ち時間だけでなく、文字を入力したときの反応や、商品を選んで次の画面に移る際の滑らかさも関係する。",
+      "references": [
+        "lesson/2026-10-20/immersion/1/1",
+        "lesson/2026-10-20/reading/1/1"
+      ]
+    },
+    {
+      "id": "08c1fa65a06b0179",
+      "text": "いずれかの数値だけをよくしたところで、ほかの場面に負担が残っていれば、不満が解消するとは限らない。",
+      "label": "いずれかの数値だけをよくしたところで、ほかの場面に負担が残っていれば、不満が解消するとは限らない。",
+      "references": [
+        "lesson/2026-10-20/immersion/1/2",
+        "lesson/2026-10-20/reading/1/2"
+      ]
+    },
+    {
+      "id": "056a7119c614d0cd",
+      "text": "性能を数値化することは必要だとしても、測っている対象と利用者が経験する一連の操作とを混同すべきではない。",
+      "label": "性能を数値化することは必要だとしても、測っている対象と利用者が経験する一連の操作とを混同すべきではない。",
+      "references": [
+        "lesson/2026-10-20/immersion/1/3",
+        "lesson/2026-10-20/reading/1/3"
+      ]
+    },
+    {
+      "id": "b66aa60ab2c2042e",
+      "text": "そこでチームは、実際の操作の流れを改めて確認することにした。",
+      "label": "そこでチームは、実際の操作の流れを改めて確認することにした。",
+      "references": [
+        "lesson/2026-10-20/immersion/2/0",
+        "lesson/2026-10-20/reading/2/0"
+      ]
+    },
+    {
+      "id": "17fa32606e1248c4",
+      "text": "利用者が検索語を入力し、候補を選び、結果を絞り込むまでを一つの流れとして捉え、どの操作で待ち時間が生じるかを記録した。",
+      "label": "利用者が検索語を入力し、候補を選び、結果を絞り込むまでを一つの流れとして捉え、どの操作で待ち時間が生じるかを記録した。",
+      "references": [
+        "lesson/2026-10-20/immersion/2/1",
+        "lesson/2026-10-20/reading/2/1"
+      ]
+    },
+    {
+      "id": "cda6f082288f9cae",
+      "text": "開発用の高性能なパソコンでは問題が見つからなかったものの、通信環境や端末が異なると状況も変わり得る。",
+      "label": "開発用の高性能なパソコンでは問題が見つからなかったものの、通信環境や端末が異なると状況も変わり得る。",
+      "references": [
+        "lesson/2026-10-20/immersion/2/2",
+        "lesson/2026-10-20/reading/2/2"
+      ]
+    },
+    {
+      "id": "b175095d4e6f9831",
+      "text": "実機で得られる情報と開発環境での測定結果を照らし合わせ、原因を絞り込む必要があった。",
+      "label": "実機で得られる情報と開発環境での測定結果を照らし合わせ、原因を絞り込む必要があった。",
+      "references": [
+        "lesson/2026-10-20/immersion/2/3",
+        "lesson/2026-10-20/reading/2/3"
+      ]
+    },
+    {
+      "id": "46c2fdc60857cd72",
+      "text": "もっとも、測定項目が増えれば増えるほど、適切な判断に近づくというわけでもない。",
+      "label": "もっとも、測定項目が増えれば増えるほど、適切な判断に近づくというわけでもない。",
+      "references": [
+        "lesson/2026-10-20/immersion/3/0",
+        "lesson/2026-10-20/reading/3/0"
+      ]
+    },
+    {
+      "id": "cd8f5a4a95b25d1e",
+      "text": "重要でない数値を大量に集めても、改善すべき箇所を見失うおそれがあるからだ。",
+      "label": "重要でない数値を大量に集めても、改善すべき箇所を見失うおそれがあるからだ。",
+      "references": [
+        "lesson/2026-10-20/immersion/3/1",
+        "lesson/2026-10-20/reading/3/1"
+      ]
+    },
+    {
+      "id": "3604572f0b1531cb",
+      "text": "求められるのは、何を改善したいのかという目的を明らかにしたうえで、その目的に即した指標を選び、変更後の利用体験を確かめることである。「",
+      "label": "求められるのは、何を改善したいのかという目的を明らかにしたうえで、その目的に即した指標を選び、変更後の利用体験を確かめることである。「",
+      "references": [
+        "lesson/2026-10-20/immersion/3/2",
+        "lesson/2026-10-20/reading/3/2"
+      ]
+    },
+    {
+      "id": "8d0a0d40327cfdbc",
+      "text": "速いサイト」という評価は、開発者に都合のよい一つの数字ではなく、利用者の行動に目を向けて初めて意味を持つのではないだろうか。",
+      "label": "速いサイト」という評価は、開発者に都合のよい一つの数字ではなく、利用者の行動に目を向けて初めて意味を持つのではないだろうか。",
+      "references": [
+        "lesson/2026-10-20/immersion/3/3",
+        "lesson/2026-10-20/reading/3/3"
+      ]
+    },
+    {
+      "id": "fc4ae34b0fee3daf",
+      "text": "本文で筆者が最も言いたいことは何ですか。",
+      "label": "本文で筆者が最も言いたいことは何ですか。",
+      "references": [
+        "lesson/2026-10-20/question/0"
+      ]
+    },
+    {
+      "id": "98a91978b1382d0c",
+      "text": "社内で最初の表示時間が短くなれば、操作全体の改善も確認できたと考えてよい。",
+      "label": "社内で最初の表示時間が短くなれば、操作全体の改善も確認できたと考えてよい。",
+      "references": [
+        "lesson/2026-10-20/option/0/0"
+      ]
+    },
+    {
+      "id": "8c2e0a7872ae5cf4",
+      "text": "実際の利用者の操作と改善の目的を踏まえて指標を選び、変更後の体験を確かめるべきだ。",
+      "label": "実際の利用者の操作と改善の目的を踏まえて指標を選び、変更後の体験を確かめるべきだ。",
+      "references": [
+        "lesson/2026-10-20/option/1/0"
+      ]
+    },
+    {
+      "id": "b7e05cf965e4eb9d",
+      "text": "測定項目をできるだけ増やし、集めた数値の量を改善の成果として評価すべきだ。",
+      "label": "測定項目をできるだけ増やし、集めた数値の量を改善の成果として評価すべきだ。",
+      "references": [
+        "lesson/2026-10-20/option/2/0"
+      ]
+    },
+    {
+      "id": "169ac23f2d4bd343",
+      "text": "開発用の高性能なパソコンで問題がなければ、異なる端末や通信環境を調べる必要はない。",
+      "label": "開発用の高性能なパソコンで問題がなければ、異なる端末や通信環境を調べる必要はない。",
+      "references": [
+        "lesson/2026-10-20/option/3/0"
+      ]
+    },
+    {
+      "id": "2ba79dbf848ddb43",
+      "text": "揺るぎない信頼",
+      "label": "揺るぎない信頼",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-8ac0a7e47853/collocation/0"
+      ]
+    },
+    {
+      "id": "94b2452f5169d76b",
+      "text": "揺るぎないものにする",
+      "label": "揺るぎないものにする",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-8ac0a7e47853/collocation/1"
+      ]
+    },
+    {
+      "id": "5d3d5696a239c812",
+      "text": "物怖じせずに話す",
+      "label": "物怖じせずに話す",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-cc370c67ea38/collocation/0"
+      ]
+    },
+    {
+      "id": "d7514981a10ac70d",
+      "text": "初対面でも物怖じしない",
+      "label": "初対面でも物怖じしない",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-cc370c67ea38/collocation/1"
+      ]
+    },
+    {
+      "id": "52c04ca915dcb80d",
+      "text": "手慣れた作業",
+      "label": "手慣れた作業",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-f3740741d6a8/collocation/0"
+      ]
+    },
+    {
+      "id": "da6770ae3fecca5a",
+      "text": "手慣れた様子",
+      "label": "手慣れた様子",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-f3740741d6a8/collocation/1"
+      ]
+    },
+    {
+      "id": "5ed905f79eee4163",
+      "text": "組織が肥大化する",
+      "label": "組織が肥大化する",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-c8c74821f69b/collocation/0"
+      ]
+    },
+    {
+      "id": "0f2d67cb11f39957",
+      "text": "実装の肥大化を防ぐ",
+      "label": "実装の肥大化を防ぐ",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-c8c74821f69b/collocation/1"
+      ]
+    },
+    {
+      "id": "e9bb02411c540f8d",
+      "text": "新技術が台頭する",
+      "label": "新技術が台頭する",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-928df6802841/collocation/0"
+      ]
+    },
+    {
+      "id": "9433d58dc61fd981",
+      "text": "新勢力の台頭",
+      "label": "新勢力の台頭",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-928df6802841/collocation/1"
+      ]
+    },
+    {
+      "id": "5c660a1145388715",
+      "text": "散発的な要求",
+      "label": "散発的な要求",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-f45c0fcb57e7/collocation/0"
+      ]
+    },
+    {
+      "id": "e47f07c28e63a2a6",
+      "text": "散発的に発生する",
+      "label": "散発的に発生する",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-f45c0fcb57e7/collocation/1"
+      ]
+    },
+    {
+      "id": "8517ac0dad092d21",
+      "text": "上限を引き下げる",
+      "label": "上限を引き下げる",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-47ad8972a984/collocation/0"
+      ]
+    },
+    {
+      "id": "959f36d262880e1e",
+      "text": "価格を引き下げる",
+      "label": "価格を引き下げる",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-47ad8972a984/collocation/1"
+      ]
+    },
+    {
+      "id": "bb4633c3bde7e8ff",
+      "text": "名前を付け直す",
+      "label": "名前を付け直す",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-a5a3e799e489/collocation/0"
+      ]
+    },
+    {
+      "id": "668dcc1385d4e657",
+      "text": "印を付け直す",
+      "label": "印を付け直す",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-a5a3e799e489/collocation/1"
+      ]
+    },
+    {
+      "id": "15ac1a23e6ae106f",
+      "text": "要点を掴む",
+      "label": "要点を掴む",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-ef2018796bf6/collocation/0"
+      ]
+    },
+    {
+      "id": "fa9b02168dc6b4ca",
+      "text": "感覚を掴む",
+      "label": "感覚を掴む",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-ef2018796bf6/collocation/1"
+      ]
+    },
+    {
+      "id": "298bf1f55300c5e1",
+      "text": "抜本的な改革",
+      "label": "抜本的な改革",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-fe1d3ec0204b/collocation/0"
+      ]
+    },
+    {
+      "id": "508b8d321194ba5e",
+      "text": "抜本的に見直す",
+      "label": "抜本的に見直す",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-fe1d3ec0204b/collocation/1"
+      ]
+    },
+    {
+      "id": "2664342dd732e491",
+      "text": "従来の方式",
+      "label": "従来の方式",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-study-7f0d7d60/collocation/0"
+      ]
+    },
+    {
+      "id": "b1b93c7296d7ec06",
+      "text": "従来どおり進める",
+      "label": "従来どおり進める",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-study-7f0d7d60/collocation/1"
+      ]
+    },
+    {
+      "id": "6ad20d52d802a736",
+      "text": "測定値を取り直す",
+      "label": "測定値を取り直す",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-study-5c4ce4ff/collocation/0"
+      ]
+    },
+    {
+      "id": "d081444638747d5a",
+      "text": "写真を取り直す",
+      "label": "写真を取り直す",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-study-5c4ce4ff/collocation/1"
+      ]
+    },
+    {
+      "id": "b7b56bb52885a849",
+      "text": "ただしブラウザ全体の強制終了や、書き込みツールの中断は未検証です。",
+      "label": "ただしブラウザ全体の強制終了や、書き込みツールの中断は未検証です。",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-study-a47c5cf6/evidence/0",
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-study-73083d1e/evidence/0"
+      ]
+    },
+    {
+      "id": "013897aa85400bd6",
+      "text": "環境の割当、課金対象、実際の到着間隔を分けて確かめるのが、この記事から得られる判断手順です。",
+      "label": "環境の割当、課金対象、実際の到着間隔を分けて確かめるのが、この記事から得られる判断手順です。",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-study-1e18d506/evidence/0"
+      ]
+    },
+    {
+      "id": "4ee7907a60a5f9b6",
+      "text": "Gemini NanoのPrompt APIがSQLと説明を作り、DuckDB-WASMが集計し、pi-durableが会話と実行記録をSQLite-WASMへ保存します。",
+      "label": "Gemini NanoのPrompt APIがSQLと説明を作り、DuckDB-WASMが集計し、pi-durableが会話と実行記録をSQLite-WASMへ保存します。",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-study-d898be90/evidence/0"
+      ]
+    },
+    {
+      "id": "27d2f874ab65e820",
+      "text": "検索順位の評価実験ではなく手順の確認であり、検索語にはトークンや個人・組織を特定する情報を含めないという注意も残します。",
+      "label": "検索順位の評価実験ではなく手順の確認であり、検索語にはトークンや個人・組織を特定する情報を含めないという注意も残します。",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-study-66614293/evidence/0"
+      ]
+    },
+    {
+      "id": "4b5e9eb252c7004e",
+      "text": "コードを書く速さが上がる一方、アラート調査やブランチ運用など周辺作業が詰まり始めていました。",
+      "label": "コードを書く速さが上がる一方、アラート調査やブランチ運用など周辺作業が詰まり始めていました。",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-study-966a7d9e/evidence/0"
+      ]
+    },
+    {
+      "id": "22d3a834ad037290",
+      "text": "再読込の試験と強制終了の保証は別です。",
+      "label": "再読込の試験と強制終了の保証は別です。",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-study-68847e29/evidence/0"
+      ]
+    },
+    {
+      "id": "614d9523aec3720f",
+      "text": "読む価値: 画面の復帰と処理の二重実行防止を区別し、保存する結果と表示上の状態をどう分けるかを具体的に学べます。",
+      "label": "読む価値: 画面の復帰と処理の二重実行防止を区別し、保存する結果と表示上の状態をどう分けるかを具体的に学べます。",
+      "references": [
+        "lesson/2026-10-20/vocabulary/2026-10-20-v-study-7deda27e/evidence/0"
+      ]
+    },
+    {
+      "id": "4e89278757b95733",
+      "text": "限り",
+      "label": "～限り",
+      "references": [
+        "lesson/2026-10-20/grammar/2026-10-20-g-4fbd684e1b3e/pattern"
+      ]
+    },
+    {
+      "id": "ca7103b17498f905",
+      "text": "一方で、状態や失効の管理は増えます。",
+      "label": "一方で、状態や失効の管理は増えます。",
+      "references": [
+        "lesson/2026-10-20/grammar/2026-10-20-g-study-73890ec9/evidence/0"
+      ]
+    },
+    {
+      "id": "7b36afe5c84b0371",
+      "text": "読む価値: フロントエンドの面接で、待ち時間の内訳、キャッシュの失効、分割後の検査維持を実数とともに説明できます。",
+      "label": "読む価値: フロントエンドの面接で、待ち時間の内訳、キャッシュの失効、分割後の検査維持を実数とともに説明できます。",
+      "references": [
+        "lesson/2026-10-20/grammar/2026-10-20-g-study-99ab9a8c/evidence/0"
+      ]
+    },
+    {
+      "id": "4a79938f814ceb4b",
+      "text": "に伴って",
+      "label": "～に伴って",
+      "references": [
+        "lesson/2026-10-20/grammar/2026-10-20-g-study-f5fb9331/pattern"
+      ]
+    },
+    {
+      "id": "d08b3524dc7f6d58",
+      "text": "Vitest4.1を使う私有リポジトリのubuntu-latestは2CPUで、テストの増加に伴い中央値が約15分、長い時は18分を超えていました。",
+      "label": "Vitest4.1を使う私有リポジトリのubuntu-latestは2CPUで、テストの増加に伴い中央値が約15分、長い時は18分を超えていました。",
+      "references": [
+        "lesson/2026-10-20/grammar/2026-10-20-g-study-f5fb9331/evidence/0"
+      ]
+    },
+    {
+      "id": "2a07c9d82a89838c",
+      "text": "一方、CPU試験では20件がほぼ一つのNode.jsプロセスに集まり、直列処理によって最大20.6秒となりました。",
+      "label": "一方、CPU試験では20件がほぼ一つのNode.jsプロセスに集まり、直列処理によって最大20.6秒となりました。",
+      "references": [
+        "lesson/2026-10-20/grammar/2026-10-20-g-study-527f5226/evidence/0"
+      ]
+    },
+    {
+      "id": "19fe031c336ec9f8",
+      "text": "题1|原Q6知识点・改编・漢字の読み",
+      "label": "题1｜原Q6知识点・改编・漢字の読み",
+      "references": [
+        "lesson/2026-10-20/review/0/title/0"
+      ]
+    },
+    {
+      "id": "a3dd5be2bd08e1b6",
+      "text": "新しい設備の管理は、どの部署の管轄に当たりますか。",
+      "label": "新しい設備の管理は、どの部署の管轄に当たりますか。",
+      "references": [
+        "lesson/2026-10-20/review/0/detail/0"
+      ]
+    },
+    {
+      "id": "a103f619570d4bf5",
+      "text": "1 かんがつ 2 かんかつ 3 かんかい 4 かんがい",
+      "label": "① かんがつ　② かんかつ　③ かんかい　④ かんがい",
+      "references": [
+        "lesson/2026-10-20/review/0/detail/1"
+      ]
+    },
+    {
+      "id": "af1cf05377c75867",
+      "text": "原因がまだ分からないので、( )影響の大きい操作を止め、ログを確認しましょう。",
+      "label": "原因がまだ分からないので、（　）影響の大きい操作を止め、ログを確認しましょう。",
+      "references": [
+        "lesson/2026-10-20/review/1/detail/0"
+      ]
+    },
+    {
+      "id": "076202b7fb714f0b",
+      "text": "1 いまに 2 さきごろ 3 ひとまず 4 いつしか",
+      "label": "① いまに　② さきごろ　③ ひとまず　④ いつしか",
+      "references": [
+        "lesson/2026-10-20/review/1/detail/1"
+      ]
+    },
+    {
+      "id": "c69e734b6c4dc887",
+      "text": "利用者の協力( )、実際の使用感を十分に調べることはできない。",
+      "label": "利用者の協力（　）、実際の使用感を十分に調べることはできない。",
+      "references": [
+        "lesson/2026-10-20/review/2/detail/0"
+      ]
+    },
+    {
+      "id": "dc7c8d5bb05bda5f",
+      "text": "1 をはじめ 2 なくしては 3 のみならず 4 に際して",
+      "label": "① をはじめ　② なくしては　③ のみならず　④ に際して",
+      "references": [
+        "lesson/2026-10-20/review/2/detail/1"
+      ]
+    },
+    {
+      "id": "094ed33b873e12ff",
+      "text": "この変更を改善効果がある( )、まだ測定回数が足りない。",
+      "label": "この変更を改善効果がある（　）、まだ測定回数が足りない。",
+      "references": [
+        "lesson/2026-10-20/review/3/detail/0"
+      ]
+    },
+    {
+      "id": "5d1fc192574150be",
+      "text": "文章A: サイトの性能を判断する際には、開発機で出た数字だけでなく、利用者が実際に操作したときの反応も見るべきだ。",
+      "label": "文章A： サイトの性能を判断する際には、開発機で出た数字だけでなく、利用者が実際に操作したときの反応も見るべきだ。",
+      "references": [
+        "lesson/2026-10-20/review/4/detail/0"
+      ]
+    },
+    {
+      "id": "62a42f7ddb1673e9",
+      "text": "文章B: 数値を取ること自体に意味があるのではない。",
+      "label": "文章B： 数値を取ること自体に意味があるのではない。",
+      "references": [
+        "lesson/2026-10-20/review/4/detail/1"
+      ]
+    },
+    {
+      "id": "b14356f0d9dfa1ec",
+      "text": "何を改善したいかを明確にし、実際の利用体験に結び付く指標を選ぶ必要がある。",
+      "label": "何を改善したいかを明確にし、実際の利用体験に結び付く指標を選ぶ必要がある。",
+      "references": [
+        "lesson/2026-10-20/review/4/detail/2"
+      ]
+    },
+    {
+      "id": "b48b3d285b97ac7c",
+      "text": "AとBに共通する考えはどれか。",
+      "label": "AとBに共通する考えはどれか。",
+      "references": [
+        "lesson/2026-10-20/review/4/detail/3"
+      ]
+    },
+    {
+      "id": "81362cccbd670aa0",
+      "text": "1 開発機での測定値は一切使うべきではない。",
+      "label": "① 開発機での測定値は一切使うべきではない。",
+      "references": [
+        "lesson/2026-10-20/review/4/detail/4"
+      ]
+    },
+    {
+      "id": "a98daa874747a63b",
+      "text": "2 指標は多ければ多いほどよい。",
+      "label": "② 指標は多ければ多いほどよい。",
+      "references": [
+        "lesson/2026-10-20/review/4/detail/5"
+      ]
+    },
+    {
+      "id": "c4e680546783c050",
+      "text": "3 利用者の実際の体験を考慮して性能を評価するべきだ。",
+      "label": "③ 利用者の実際の体験を考慮して性能を評価するべきだ。",
+      "references": [
+        "lesson/2026-10-20/review/4/detail/6"
+      ]
+    },
+    {
+      "id": "ae992fab5d9717e7",
+      "text": "4 利用者への聞き取りだけで十分である。",
+      "label": "④ 利用者への聞き取りだけで十分である。",
+      "references": [
+        "lesson/2026-10-20/review/4/detail/7"
+      ]
+    }
+  ]
 }
