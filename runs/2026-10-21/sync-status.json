@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-10-21",
   "day": 53,
-  "status": "waiting_source",
-  "stage": "waiting_source",
+  "status": "waiting_upstream",
+  "stage": "waiting_upstream",
   "upstreamSourceCommit": "6ac6e17bf1456996a675042f397406abfed80312",
   "sourcePagesRunId": 39528017742,
   "snapshotSha256": "89b321f86a5487d779524aa68b5d5fee7e2b1395eaa7e30cccc9c1c946ec2322",
@@ -12,14 +12,24 @@
   "requestSubmitted": false,
   "sourceObservation": {
     "n1Main": "8412e2680761b9d6e836667d5c7776e100de403a",
-    "mainSourceAbsent": true,
-    "outboxAbsent": true,
+    "mainSourceAbsent": false,
+    "outboxAbsent": false,
     "completeMainInventory": true,
     "completeProgressInventory": true,
     "requestTargetDate": "2026-10-20",
-    "observedAt": "2026-10-21T01:37:37.370Z"
+    "observedAt": "2026-10-21T03:51:50.561Z",
+    "upstreamTargetDailyFilesAbsent": true
   },
   "lastError": null,
-  "nextStep": "Wait for the exact Day53 original in n1-source or verified outbox; existing daily N1 entrypoints may resume. Do not reconstruct or reuse another date.",
-  "updatedAt": "2026-10-21T01:37:37.370Z"
+  "nextStep": "Exact Day53 original verified in progress outbox and main. Wait for verified 2026-10-21 upstream IT/AI publication and complete matching snapshot before shared N1 sync request. Preserve existing 2026-10-20 request.",
+  "updatedAt": "2026-10-21T03:51:50.564Z",
+  "sourceSavedOnMain": true,
+  "sourceCheckpointVerified": true,
+  "expectedSourceSha256": "3fa0aa495dd9abf2e42adfd3f25a6b002d5dfbcf19d65ecfbe199921b5f3f35f",
+  "expectedSourceBytes": 24265,
+  "generatedAtJST": "2026-10-21T09:07:49+09:00",
+  "sourceCommit": "636d53e5234d567a0f6e6733d0bdc4aebdfc0942",
+  "sourceBlobSha": "8a99b38d32c12946659aa8c156c8815e2cd76b74",
+  "sourceCheckpointBlobSha": "d77a17033ee8660eb8d9110b4c82c9f1e5489c5b",
+  "upstreamTargetVerified": false
 }
