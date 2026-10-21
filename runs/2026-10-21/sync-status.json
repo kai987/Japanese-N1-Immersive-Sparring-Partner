@@ -2,27 +2,25 @@
   "schemaVersion": 1,
   "targetDate": "2026-10-21",
   "day": 53,
-  "status": "waiting_upstream",
-  "stage": "waiting_upstream",
-  "upstreamSourceCommit": "6ac6e17bf1456996a675042f397406abfed80312",
-  "sourcePagesRunId": 39528017742,
-  "snapshotSha256": "89b321f86a5487d779524aa68b5d5fee7e2b1395eaa7e30cccc9c1c946ec2322",
+  "status": "request_ready",
+  "stage": "request_ready",
+  "upstreamSourceCommit": "1fb027ba34a87862867be104bc74bd5afd8e74cb",
+  "sourcePagesRunId": 39528720774,
+  "snapshotSha256": "9cd57f4eb7494c56a5e826ae0c7c728cb0a4b664b631ed0c50603074d195e98d",
   "issueNumber": 71,
   "totalDays": 71,
   "requestSubmitted": false,
   "sourceObservation": {
-    "n1Main": "8412e2680761b9d6e836667d5c7776e100de403a",
-    "mainSourceAbsent": false,
-    "outboxAbsent": false,
-    "completeMainInventory": true,
-    "completeProgressInventory": true,
-    "requestTargetDate": "2026-10-20",
-    "observedAt": "2026-10-21T03:51:50.561Z",
-    "upstreamTargetDailyFilesAbsent": true
+    "n1Main": "dbe54f4f88f3184cfb60c987067e500350d03dfc",
+    "mainSourcePresent": true,
+    "outboxVerified": true,
+    "exactSourceBytes": 24265,
+    "sourceSha256": "3fa0aa495dd9abf2e42adfd3f25a6b002d5dfbcf19d65ecfbe199921b5f3f35f",
+    "observedAt": "2026-10-21T03:57:21.798Z"
   },
   "lastError": null,
-  "nextStep": "Exact Day53 original verified in progress outbox and main. Wait for verified 2026-10-21 upstream IT/AI publication and complete matching snapshot before shared N1 sync request. Preserve existing 2026-10-20 request.",
-  "updatedAt": "2026-10-21T03:51:50.564Z",
+  "nextStep": "Unique N1 sync workflow validates the complete source-bound request; then exact Pages and live acceptance.",
+  "updatedAt": "2026-10-21T03:57:21.798Z",
   "sourceSavedOnMain": true,
   "sourceCheckpointVerified": true,
   "expectedSourceSha256": "3fa0aa495dd9abf2e42adfd3f25a6b002d5dfbcf19d65ecfbe199921b5f3f35f",
@@ -31,5 +29,41 @@
   "sourceCommit": "636d53e5234d567a0f6e6733d0bdc4aebdfc0942",
   "sourceBlobSha": "8a99b38d32c12946659aa8c156c8815e2cd76b74",
   "sourceCheckpointBlobSha": "d77a17033ee8660eb8d9110b4c82c9f1e5489c5b",
-  "upstreamTargetVerified": false
+  "upstreamTargetVerified": false,
+  "sourceSha256": "3fa0aa495dd9abf2e42adfd3f25a6b002d5dfbcf19d65ecfbe199921b5f3f35f",
+  "counts": {
+    "newVocabulary": 19,
+    "reviewVocabulary": 1,
+    "newGrammar": 0,
+    "reviewGrammar": 6
+  },
+  "localChecks": {
+    "allPassed": true,
+    "content": {
+      "lessons": 53,
+      "passed": true
+    },
+    "unit": {
+      "passed": true,
+      "nodeTests": 103,
+      "pythonTests": 12
+    },
+    "build": {
+      "passed": true
+    },
+    "browser": {
+      "passed": 48,
+      "failed": 0,
+      "port": 54217
+    },
+    "sourceOriginalUnchanged": true,
+    "fullHistorySnapshotDates": 71,
+    "logHashes": {
+      "content": "c67df1b5716d468e52a76ae6e71b851d721d37327e6275e4acdcb4833e2316b3",
+      "test": "e4ae5bf5d7757ded06577faf606347e7f9b522e343ba82e590aafb63a1816c08",
+      "build": "97cafb24a06f7b96e094f15fe1e70ef959d580b67b32ad008b256dcafdab9496",
+      "browser": "689f8631ef1866f58cfe6f3669a3a2cd54253251e9910e0693a58c756b7eae65"
+    },
+    "verifiedAt": "2026-10-21T03:56:53.201203+00:00"
+  }
 }
