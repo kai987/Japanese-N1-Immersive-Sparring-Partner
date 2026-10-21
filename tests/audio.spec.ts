@@ -6,11 +6,12 @@ import { validateContent } from '../scripts/validate-content'
 // New daily text can be published before its local speech generation finishes.
 // Exercise a recorded lesson instead of assuming today's lesson has audio.
 const recordedDates = new Set<string>(JSON.parse(readFileSync(new URL('../public/audio/manifest.json', import.meta.url), 'utf8')).lessonDates)
-const recordedLesson = validateContent().lessons.find(lesson => recordedDates.has(lesson.date))!
-async function openRecordedLesson(page: Page) {
+const lessons = validateContent().lessons
+const recordedLesson = lessons.find(lesson => recordedDates.has(lesson.date))!
+async function openRecordedLesson(page: Page, lesson = recordedLesson) {
   await page.goto('/')
   await page.locator('.date-dropdown-trigger').click()
-  await page.getByRole('option', { name: new RegExp(`^Day ${recordedLesson.day}\\b`) }).click()
+  await page.getByRole('option', { name: new RegExp(`^Day ${lesson.day}\\b`) }).click()
 }
 
 // Browser plugin not available. Verify real MP3 responses and actual media
@@ -129,3 +130,23 @@ test('changing live note filters stops audio from the previous visible group', a
   await expect.poll(() => player(page).evaluate(element => (element as HTMLAudioElement).paused)).toBe(true)
   await expect(player(page)).not.toHaveAttribute('src')
 })
+
+// A repair must exercise each newly completed lesson, not only older shared audio.
+const requestedDates = process.env.N1_AUDIO_VERIFY_DATES?.split(',')
+const recentLessons = requestedDates ? requestedDates.map(date => {
+  const lesson = lessons.find(lesson => lesson.date === date)
+  if (!lesson || !recordedDates.has(date)) throw new Error(`Requested audio lesson is incomplete: ${date}`)
+  return lesson
+}) : lessons.filter(lesson => recordedDates.has(lesson.date)).slice(0, 2)
+for (const lesson of recentLessons) {
+  test(`completed Day ${lesson.day} (${lesson.date}) immersion recording really plays`, async ({ page }) => {
+    await openRecordedLesson(page, lesson)
+    await page.getByRole('navigation', { name: 'メインナビゲーション', exact: true }).getByRole('button', { name: '没入読解', exact: true }).click()
+    const button = page.locator('#immersion-title .audio-play-button')
+    await expect(button).toBeEnabled()
+    await button.click()
+    await playing(page)
+    await expect(button).toHaveAttribute('aria-pressed', 'true')
+    await expect.poll(() => player(page).evaluate(element => (element as HTMLAudioElement).error?.code ?? null)).toBe(null)
+  })
+}

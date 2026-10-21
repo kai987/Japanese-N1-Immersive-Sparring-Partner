@@ -11,6 +11,7 @@ import { mergeUploadedRecordings } from './lib/audioWorkerState.ts'
 import type { Manifest } from './validate-audio.ts'
 import type { AudioSources } from '../src/lib/audioSources.ts'
 import type { collectAudio } from './collect-audio.ts'
+import { runAudioValidation } from './lib/audioValidation.ts'
 import { audioSchedule, audioWorkReason, readAudioSchedule, unfinishedAudio } from './audio-worker-schedule.ts'
 
 const repository = 'https://github.com/kai987/Japanese-N1-Immersive-Sparring-Partner.git'
@@ -20,8 +21,9 @@ const metadataPaths = ['public/audio/manifest.json', 'src/data/audio-index.json'
 const sourceRoot = fileURLToPath(new URL('../', import.meta.url))
 const abort = new AbortController()
 let windowDeadline = Infinity
+let deadlineReason = 'audio_window_ended'
 function checkRunning() {
-  if (Date.now() >= windowDeadline) abort.abort('audio_window_ended')
+  if (Date.now() >= windowDeadline) abort.abort(deadlineReason)
   if (abort.signal.aborted) throw new Error('Worker interrupted; verified cache retained')
 }
 for (const signal of ['SIGINT', 'SIGTERM'] as const) process.once(signal, () => abort.abort())
@@ -167,17 +169,28 @@ async function verifyDeployment(commit: string, localDist?: string) {
   throw new Error('awaiting_deploy: exact commit is not yet verified')
 }
 
-async function main() {
+export type AudioRepair = { dates: string[]; evidenceDirectory: string; entrypoint: string; deadline: number }
+export function assertRepairScope(catalog: ReturnType<typeof collectAudio>, sources: AudioSources, dates: string[]) {
+  if (!dates.length || new Set(dates).size !== dates.length || dates.some(date => !/^\d{4}-\d{2}-\d{2}$/.test(date) || !catalog.lessonDates.includes(date))) {
+    throw new Error('Repair requires explicit existing lesson dates')
+  }
+  for (const entry of catalog.entries.filter(entry => !sources.clips[entry.id])) {
+    if (!entry.references.length || entry.references.some(reference => !reference.startsWith('lesson/') || !dates.includes(reference.split('/')[1]))) throw new Error(`Repair would include unapproved audio: ${entry.id}`)
+  }
+}
+export async function audioWorker(repair?: AudioRepair) {
   const args = process.argv.slice(2), at = args.indexOf('--state-dir')
   const root = resolve(at >= 0 ? args[at + 1] : join(homedir(), 'Library/Application Support/N1 Audio'))
-  const schedule = audioSchedule(new Date(), readAudioSchedule(root))
+  const regularSchedule = audioSchedule(new Date(), readAudioSchedule(root))
+  // Explicit repair is a bounded foreground transaction, not a new calendar or latch reset.
+  const schedule = repair ? { ...regularSchedule, allowed: true, deadline: new Date(repair.deadline) } : regularSchedule
   if (!schedule.allowed) {
     console.log(JSON.stringify({ phase: 'scheduled_pause', reason: schedule.reason, nextOpening: schedule.nextOpening.toISOString() }))
     return
   }
   const lockAt = args.indexOf('--lock-fd')
   if (lockAt < 0) {
-    const result = await run('python3', [join(sourceRoot, 'scripts/audio-worker-lock.py'), root, process.execPath, fileURLToPath(import.meta.url)], sourceRoot, {}, schedule.deadline.getTime() - Date.now() + 30_000)
+    const result = await run('python3', [join(sourceRoot, 'scripts/audio-worker-lock.py'), root, process.execPath, repair?.entrypoint ?? fileURLToPath(import.meta.url)], sourceRoot, repair ? { N1_AUDIO_REPAIR_CONFIG: JSON.stringify(repair) } : {}, schedule.deadline.getTime() - Date.now() + 30_000)
     if (result) console.log(result)
     return
   }
@@ -190,7 +203,8 @@ async function main() {
   delete process.env.N1_AUDIO_LOCK_OWNER
   const release = () => closeSync(lock)
   windowDeadline = schedule.deadline.getTime()
-  const deadlineTimer = setTimeout(() => abort.abort('audio_window_ended'), Math.max(0, windowDeadline - Date.now()))
+  deadlineReason = repair ? 'audio_repair_timeout' : 'audio_window_ended'
+  const deadlineTimer = setTimeout(() => abort.abort(deadlineReason), Math.max(0, windowDeadline - Date.now()))
   const statePath = join(root, 'progress.json')
   let state: Record<string, unknown> = recoverableCheckpoint(statePath, { version: 1 })
   const phase = (value: string, fields: Record<string, unknown> = {}) => {
@@ -199,19 +213,20 @@ async function main() {
     console.log(JSON.stringify({ phase: value, ...fields }))
   }
   let attempt = ''
+  let diagnostics = ''
   let claimed = false
   const claim = (reason: string) => {
     checkRunning()
     // Called under the OS lock, before waiting for upstream audio or synthesis.
-    atomicJson(join(root, 'schedule.json'), { version: 1, claimedDate: schedule.date, reason, startedAt: new Date().toISOString() })
+    if (!repair) atomicJson(join(root, 'schedule.json'), { version: 1, claimedDate: schedule.date, reason, startedAt: new Date().toISOString() })
     claimed = true
     phase('detected', { jobPending: true, detectedReason: reason, nextAttempt: schedule.nextOpening.toISOString() })
   }
   try {
     // Recheck under the lock: simultaneous manual/login/calendar triggers share one latch.
-    if (!audioSchedule(new Date(), readAudioSchedule(root)).allowed) return
+    if (!repair && !audioSchedule(new Date(), readAudioSchedule(root)).allowed) return
     if (unfinishedAudio(state)) claim('resume_pending')
-    if (state.releaseCommit && state.phase !== 'complete') {
+    if (!repair && state.releaseCommit && state.phase !== 'complete') {
       const main = await run('gh', ['api', `repos/${githubRepository}/git/ref/heads/main`, '--jq', '.object.sha'])
       const pending = pendingDeploymentForMain(state, main)
       if (pending) {
@@ -234,6 +249,7 @@ async function main() {
     // Every attempt starts clean. Generated audio is retained separately.
     for (const name of readdirSync(attempts)) if (/^run-\d+-\d+$/.test(name)) rmSync(join(attempts, name), { recursive: true, force: true })
     attempt = join(attempts, `run-${Date.now()}-${process.pid}`)
+    diagnostics = repair?.evidenceDirectory ?? join(root, 'logs/validation', basename(attempt))
     await run('git', ['clone', '--shared', '--no-hardlinks', control, attempt], root)
     await run('git', ['remote', 'set-url', 'origin', repository], attempt)
     await run('git', ['checkout', '--detach', base], attempt)
@@ -242,6 +258,10 @@ async function main() {
     await run(process.execPath, ['scripts/collect-audio.ts', planPath], attempt)
     const catalog = readJson(planPath) as ReturnType<typeof collectAudio>
     const previousSources = readJson(join(attempt, 'src/data/audio-sources.json')) as AudioSources
+    if (repair) {
+      assertRepairScope(catalog, previousSources, repair.dates)
+      atomicJson(join(repair.evidenceDirectory, 'repair-scope.json'), { dates: repair.dates, baseCommit: base, requiredClips: catalog.entries.length, missingIds: catalog.entries.filter(entry => !previousSources.clips[entry.id]).map(entry => entry.id), startedAt: new Date().toISOString() })
+    }
     if (!claimed) {
       const reason = audioWorkReason(state, schedule.date, catalog.lessonDates, catalog.entries.filter(entry => !previousSources.clips[entry.id]).length, base)
       if (!reason) { phase('idle', { jobPending: false }); return }
@@ -254,6 +274,7 @@ async function main() {
     const published = readJson(join(attempt, 'public/audio/manifest.json')) as Manifest
     const sources = readJson(join(attempt, 'src/data/audio-sources.json')) as AudioSources
     const index = readJson(join(attempt, 'src/data/audio-index.json'))
+    if (repair) assertRepairScope(catalog, sources, repair.dates)
     const missing = catalog.entries.filter(entry => !sources.clips[entry.id])
     if (missing.length) {
       const neededDates = [...new Set(missing.flatMap(entry => entry.references.filter(ref => ref.startsWith('lesson/')).map(ref => ref.split('/')[1])))]
@@ -264,7 +285,7 @@ async function main() {
       }
       phase('generating', { pendingClips: missing.length })
       await ensureEngine()
-      await run('python3', ['scripts/generate-audio.py', '--plan', planPath, '--work-dir', work, '--workers', '4'], attempt)
+      await runAudioValidation('python3', ['scripts/generate-audio.py', '--plan', planPath, '--work-dir', work, '--workers', '4'], { cwd: attempt, directory: join(diagnostics, 'generation'), signal: abort.signal, timeoutMs: Math.min(20 * 60_000, windowDeadline - Date.now()) })
       const candidate = readJson(join(work, 'manifest.json')) as Manifest
       const verified: Record<string, { path: string; sha256: string; bytes: number; verified: true }> = {}
       const helper = join(root, 'bin/n1-audio-keychain')
@@ -279,16 +300,17 @@ async function main() {
         if (!clip || clip.text !== entry.text) throw new Error(`Missing generated recording: ${entry.id}`)
         const result = await ensureAudioUploaded(clip, join(work, 'morioki-normal', `${entry.id}.mp3`), { getToken, signal: abort.signal })
         verified[entry.id] = { path: result.path, sha256: result.sha256, bytes: result.bytes, verified: true }
-        uploads[entry.id] = { ...verified[entry.id], verifiedAt: new Date().toISOString() }
+        uploads[entry.id] = { ...verified[entry.id], verifiedAt: new Date().toISOString(), uploaded: result.uploaded, uploadAttempts: result.attempts }
         atomicJson(progressPath, uploads)
         phase('uploading', { pendingClips: missing.length - Object.keys(verified).length })
       }
+      if (repair) atomicJson(join(diagnostics, 'verified-uploads.json'), Object.fromEntries(missing.map(entry => [entry.id, { ...uploads[entry.id] as object, references: entry.references }])))
       const merged = mergeUploadedRecordings(catalog, published, index, sources, candidate, verified, new Date().toISOString())
       for (const [path, value] of metadataPaths.map((path, i) => [path, [merged.manifest, merged.index, merged.sources, merged.pending][i]] as const)) atomicJson(join(attempt, path), value)
     }
     if (!await run('git', ['diff', '--name-only', '--', ...metadataPaths], attempt)) {
       if (state.lastVerifiedCommit !== base) await verifyDeployment(base)
-      cleanupPublishedCache(work, published)
+      if (!repair) cleanupPublishedCache(work, published)
       phase('complete', { jobPending: false, pendingClips: 0, releaseCommit: base, lastVerifiedCommit: base, lastError: null })
       return
     }
@@ -304,10 +326,20 @@ async function main() {
       atomicJson(join(dependencies, 'complete.json'), { lockHash, installedAt: new Date().toISOString() })
     }
     symlinkSync(join(dependencies, 'node_modules'), join(attempt, 'node_modules'), 'dir')
-    await run(process.execPath, ['scripts/validate-audio.ts'], attempt)
-    await run('npm', ['test'], attempt)
-    await run('npm', ['run', 'build'], attempt)
-    await run('npm', ['run', 'test:e2e'], attempt, { N1_PREVIEW_PORT: String(await freePort()), N1_TEST_OUTPUT_DIR: join(attempt, 'test-results') })
+    const validate = (name: string, command: string, args: string[], env: NodeJS.ProcessEnv = {}) => runAudioValidation(command, args, {
+      cwd: attempt, directory: join(diagnostics, name), env, signal: abort.signal,
+      timeoutMs: Math.min(20 * 60_000, windowDeadline - Date.now()),
+    })
+    phase('validating', { validationDirectory: diagnostics })
+    await validate('audio', process.execPath, ['scripts/validate-audio.ts'])
+    await validate('unit', 'npm', ['test'])
+    await validate('build', 'npm', ['run', 'build'])
+    await validate('e2e', 'npm', ['run', 'test:e2e', '--', '--reporter=line,json,html', '--trace=retain-on-failure'], {
+      N1_PREVIEW_PORT: String(await freePort()), N1_TEST_OUTPUT_DIR: join(diagnostics, 'e2e/test-results'),
+      PLAYWRIGHT_HTML_REPORT: join(diagnostics, 'e2e/playwright-report'), PLAYWRIGHT_HTML_OPEN: 'never',
+      PLAYWRIGHT_JSON_OUTPUT_FILE: join(diagnostics, 'e2e/playwright.json'),
+      ...(repair ? { N1_AUDIO_VERIFY_DATES: repair.dates.join(',') } : {}),
+    })
     await run('git', ['diff', '--check'], attempt)
     await run('git', ['add', '--', ...metadataPaths], attempt)
     const changed = await run('git', ['diff', '--cached', '--name-only'], attempt)
@@ -325,10 +357,10 @@ async function main() {
     await verifyDeployment(commit, join(attempt, 'dist'))
     // All new bytes were remotely verified before commit, and the exact release
     // passed Pages plus real playback tests. Only now remove generated MP3s.
-    cleanupPublishedCache(work, readJson(join(attempt, 'public/audio/manifest.json')) as Manifest)
+    if (!repair) cleanupPublishedCache(work, readJson(join(attempt, 'public/audio/manifest.json')) as Manifest)
     phase('complete', { jobPending: false, pendingClips: 0, lastVerifiedCommit: commit, lastError: null })
   } catch (error) {
-    const windowEnded = abort.signal.reason === 'audio_window_ended' || Date.now() >= windowDeadline
+    const windowEnded = !repair && (abort.signal.reason === 'audio_window_ended' || Date.now() >= windowDeadline)
     phase(windowEnded ? 'paused_window' : 'retry_pending', { failedPhase: state.phase, lastError: windowEnded ? 'Japan time audio window ended; verified progress retained' : error instanceof Error ? error.message : 'Audio worker failed', nextAttempt: claimed || windowEnded ? schedule.nextOpening.toISOString() : 'next 15-minute check inside the Japan time window' })
     if (!windowEnded) process.exitCode = 1
   } finally {
@@ -337,4 +369,4 @@ async function main() {
     release()
   }
 }
-if (process.argv[1] === fileURLToPath(import.meta.url)) await main()
+if (process.argv[1] === fileURLToPath(import.meta.url)) await audioWorker()

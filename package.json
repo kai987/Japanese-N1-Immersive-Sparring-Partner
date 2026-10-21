@@ -15,6 +15,7 @@
     "import:study": "node scripts/import-study-snapshot.ts",
     "audio:generate": "python3 scripts/generate-audio.py",
     "audio:auto": "node scripts/audio-worker.ts",
+    "audio:repair": "node scripts/repair-audio.ts",
     "audio:worker:install": "node scripts/install-audio-worker.ts",
     "audio:sync": "node scripts/sync-audio.ts",
     "audio:catalog": "node scripts/collect-audio.ts",

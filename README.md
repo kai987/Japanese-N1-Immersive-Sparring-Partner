@@ -123,3 +123,13 @@ npm run build
 - `src/lib/archive.ts`：教材検証と日付別の統合
 - `scripts/import-daily.ts`：検証付きの日次取り込み
 - `tests/`：単体・ブラウザー回帰テスト
+
+## 明示的な一回限りの音声修復
+
+利用者が対象日を指定して修復を承認した場合だけ、前景で一度実行します。通常の `audio:auto` とLaunchAgentの時間帯・当日制限は変更しません。
+
+```sh
+npm run audio:repair -- --dates 2026-10-20,2026-10-21 --evidence-dir /absolute/path/to/repair-evidence
+```
+
+同じOSロックを保持し、最新mainに対象日以外の未収録音声があれば生成・アップロード前に停止します。最大2時間で中断し、既存キャッシュと公開バイトの照合を再利用します。schedule.jsonは変更せず、生成済みキャッシュも削除しません。検証のstdout・stderr、終了情報、Playwright JSON/HTMLと失敗traceは指定した永続フォルダーに残します。鍵や環境変数はログに保存しません。音声4ファイルだけの通常push、正確なPagesコミットと実再生の検証を省略しません。
