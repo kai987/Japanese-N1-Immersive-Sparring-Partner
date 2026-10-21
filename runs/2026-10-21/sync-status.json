@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "targetDate": "2026-10-21",
+  "day": 53,
+  "status": "waiting_source",
+  "stage": "waiting_source",
+  "upstreamSourceCommit": "6ac6e17bf1456996a675042f397406abfed80312",
+  "sourcePagesRunId": 39528017742,
+  "snapshotSha256": "89b321f86a5487d779524aa68b5d5fee7e2b1395eaa7e30cccc9c1c946ec2322",
+  "issueNumber": 71,
+  "totalDays": 71,
+  "requestSubmitted": false,
+  "sourceObservation": {
+    "n1Main": "8412e2680761b9d6e836667d5c7776e100de403a",
+    "mainSourceAbsent": true,
+    "outboxAbsent": true,
+    "completeMainInventory": true,
+    "completeProgressInventory": true,
+    "requestTargetDate": "2026-10-20",
+    "observedAt": "2026-10-21T01:37:37.370Z"
+  },
+  "lastError": null,
+  "nextStep": "Wait for the exact Day53 original in n1-source or verified outbox; existing daily N1 entrypoints may resume. Do not reconstruct or reuse another date.",
+  "updatedAt": "2026-10-21T01:37:37.370Z"
+}
