@@ -10,12 +10,712 @@
     "sampleRate": 24000,
     "codec": "mp3-64k"
   },
-  "requiredClips": 5507,
-  "pendingClips": 75,
+  "requiredClips": 5630,
+  "pendingClips": 160,
   "incompleteLessonDates": [
+    "2026-10-21",
     "2026-10-20"
   ],
   "entries": [
+    {
+      "id": "543aa3250a243f99",
+      "text": "「提案を受け入れること」と「判断を任せること」",
+      "label": "「提案を受け入れること」と「判断を任せること」",
+      "references": [
+        "lesson/2026-10-21/title",
+        "lesson/2026-10-21/immersion/title",
+        "lesson/2026-10-21/reading/title"
+      ]
+    },
+    {
+      "id": "40f8d09d78c1d7d9",
+      "text": "ある開発チームでは、画面の実装を効率化するために生成AIを利用し始めた。",
+      "label": "ある開発チームでは、画面の実装を効率化するために生成AIを利用し始めた。",
+      "references": [
+        "lesson/2026-10-21/immersion/0/0",
+        "lesson/2026-10-21/reading/0/0"
+      ]
+    },
+    {
+      "id": "bf24cdc01b5ff62c",
+      "text": "以前なら時間がかかっていたフォームの入力チェックやテストコードの下書きも、短い指示から候補を作れるようになった。",
+      "label": "以前なら時間がかかっていたフォームの入力チェックやテストコードの下書きも、短い指示から候補を作れるようになった。",
+      "references": [
+        "lesson/2026-10-21/immersion/0/1",
+        "lesson/2026-10-21/reading/0/1"
+      ]
+    },
+    {
+      "id": "38fa7a822c8c29e6",
+      "text": "ところが、完成したように見えるコードをそのまま組み込んだところ、入力欄が空の場合にだけ予期しない動作が生じた。",
+      "label": "ところが、完成したように見えるコードをそのまま組み込んだところ、入力欄が空の場合にだけ予期しない動作が生じた。",
+      "references": [
+        "lesson/2026-10-21/immersion/0/2",
+        "lesson/2026-10-21/reading/0/2"
+      ]
+    },
+    {
+      "id": "aae5ec50f687905c",
+      "text": "通常の操作では問題が表れなかったため、担当者はレビュー時にその条件を見落としていたのである。",
+      "label": "通常の操作では問題が表れなかったため、担当者はレビュー時にその条件を見落としていたのである。",
+      "references": [
+        "lesson/2026-10-21/immersion/0/3",
+        "lesson/2026-10-21/reading/0/3"
+      ]
+    },
+    {
+      "id": "883b6da35552b57f",
+      "text": "この経験をきっかけに、チームはAIが生成した部分を一律に疑うのでも、反対に全面的に信用するのでもなく、変更内容に応じて確認方法を選ぶことにした。",
+      "label": "この経験をきっかけに、チームはAIが生成した部分を一律に疑うのでも、反対に全面的に信用するのでもなく、変更内容に応じて確認方法を選ぶことにした。",
+      "references": [
+        "lesson/2026-10-21/immersion/1/0",
+        "lesson/2026-10-21/reading/1/0"
+      ]
+    },
+    {
+      "id": "e78674884d478e1c",
+      "text": "AIの提案は、開発者が検討を始める際の有力な手掛かりとなり得る。",
+      "label": "AIの提案は、開発者が検討を始める際の有力な手掛かりとなり得る。",
+      "references": [
+        "lesson/2026-10-21/immersion/1/1",
+        "lesson/2026-10-21/reading/1/1"
+      ]
+    },
+    {
+      "id": "837806518ee78b85",
+      "text": "とはいえ、提案された処理が現在の仕様に合っているか、他の機能に影響しないかは、実際の条件を照らし合わせないことには分からない。",
+      "label": "とはいえ、提案された処理が現在の仕様に合っているか、他の機能に影響しないかは、実際の条件を照らし合わせないことには分からない。",
+      "references": [
+        "lesson/2026-10-21/immersion/1/2",
+        "lesson/2026-10-21/reading/1/2"
+      ]
+    },
+    {
+      "id": "8adf39e915895285",
+      "text": "説明が流暢だからといって、根拠まで十分であるとは限らないのだ。",
+      "label": "説明が流暢だからといって、根拠まで十分であるとは限らないのだ。",
+      "references": [
+        "lesson/2026-10-21/immersion/1/3",
+        "lesson/2026-10-21/reading/1/3"
+      ]
+    },
+    {
+      "id": "36e146c54f0ed9e1",
+      "text": "さらに、レビューの目的を「誤りを一つも出さないこと」だけに限定すると、別の問題が生じる。",
+      "label": "さらに、レビューの目的を「誤りを一つも出さないこと」だけに限定すると、別の問題が生じる。",
+      "references": [
+        "lesson/2026-10-21/immersion/2/0",
+        "lesson/2026-10-21/reading/2/0"
+      ]
+    },
+    {
+      "id": "ca291c98fa6758cc",
+      "text": "ある実装が偶然うまく動いたとしても、なぜその方法を選び、どのような条件で確認したのかが共有されなければ、次の担当者は変更の妥当性を判断できない。",
+      "label": "ある実装が偶然うまく動いたとしても、なぜその方法を選び、どのような条件で確認したのかが共有されなければ、次の担当者は変更の妥当性を判断できない。",
+      "references": [
+        "lesson/2026-10-21/immersion/2/1",
+        "lesson/2026-10-21/reading/2/1"
+      ]
+    },
+    {
+      "id": "434acfe90e9820cd",
+      "text": "品質を支えるのは完成したコードの見た目にほかならない、と言いたくなるかもしれない。",
+      "label": "品質を支えるのは完成したコードの見た目にほかならない、と言いたくなるかもしれない。",
+      "references": [
+        "lesson/2026-10-21/immersion/2/2",
+        "lesson/2026-10-21/reading/2/2"
+      ]
+    },
+    {
+      "id": "ebf4ec414cdc5225",
+      "text": "しかし実際には、判断の根拠やテストの範囲を他者がたどれることも欠かせない。",
+      "label": "しかし実際には、判断の根拠やテストの範囲を他者がたどれることも欠かせない。",
+      "references": [
+        "lesson/2026-10-21/immersion/2/3",
+        "lesson/2026-10-21/reading/2/3"
+      ]
+    },
+    {
+      "id": "a7d7f4b639941122",
+      "text": "必要に応じて、前提条件そのものを見直す姿勢が求められる。",
+      "label": "必要に応じて、前提条件そのものを見直す姿勢が求められる。",
+      "references": [
+        "lesson/2026-10-21/immersion/2/4",
+        "lesson/2026-10-21/reading/2/4"
+      ]
+    },
+    {
+      "id": "434dbf931e21203f",
+      "text": "AIを利用するからには、人間がすべてを手作業で繰り返すべきだという話ではない。",
+      "label": "AIを利用するからには、人間がすべてを手作業で繰り返すべきだという話ではない。",
+      "references": [
+        "lesson/2026-10-21/immersion/3/0",
+        "lesson/2026-10-21/reading/3/0"
+      ]
+    },
+    {
+      "id": "e9b969ac5073ca10",
+      "text": "定型的な作業を機械に任せる一方で、何を成功とみなすのかを明らかにし、確認した事実と未確認の条件を分けて伝えることが重要なのである。",
+      "label": "定型的な作業を機械に任せる一方で、何を成功とみなすのかを明らかにし、確認した事実と未確認の条件を分けて伝えることが重要なのである。",
+      "references": [
+        "lesson/2026-10-21/immersion/3/1",
+        "lesson/2026-10-21/reading/3/1"
+      ]
+    },
+    {
+      "id": "4b50f4355e761b69",
+      "text": "手順が速くなったというだけでは、判断の責任まで道具に移ったことにはならない。",
+      "label": "手順が速くなったというだけでは、判断の責任まで道具に移ったことにはならない。",
+      "references": [
+        "lesson/2026-10-21/immersion/3/2",
+        "lesson/2026-10-21/reading/3/2"
+      ]
+    },
+    {
+      "id": "a87513bdc95e4d11",
+      "text": "効率化の価値は、浮いた時間を何のために使うかによって初めて問われるのではないだろうか。",
+      "label": "効率化の価値は、浮いた時間を何のために使うかによって初めて問われるのではないだろうか。",
+      "references": [
+        "lesson/2026-10-21/immersion/3/3",
+        "lesson/2026-10-21/reading/3/3"
+      ]
+    },
+    {
+      "id": "270bde79a5ac0fa5",
+      "text": "生成AIによって開発作業が速くなったとき、筆者が人間に求めていることは何か。",
+      "label": "生成AIによって開発作業が速くなったとき、筆者が人間に求めていることは何か。",
+      "references": [
+        "lesson/2026-10-21/question/0"
+      ]
+    },
+    {
+      "id": "fa3b3b5fcac0a13b",
+      "text": "AIの誤りを防ぐため、生成した処理をすべて人間が手作業で作り直すこと。",
+      "label": "AIの誤りを防ぐため、生成した処理をすべて人間が手作業で作り直すこと。",
+      "references": [
+        "lesson/2026-10-21/option/0/0"
+      ]
+    },
+    {
+      "id": "c6ce98071ffdbd03",
+      "text": "コードが通常の操作で動けば、説明やテスト条件の共有を省くこと。",
+      "label": "コードが通常の操作で動けば、説明やテスト条件の共有を省くこと。",
+      "references": [
+        "lesson/2026-10-21/option/1/0"
+      ]
+    },
+    {
+      "id": "708df73527144a71",
+      "text": "成功の条件を明らかにし、確認済みの事実と未確認の条件を区別して判断の根拠を伝えること。",
+      "label": "成功の条件を明らかにし、確認済みの事実と未確認の条件を区別して判断の根拠を伝えること。",
+      "references": [
+        "lesson/2026-10-21/option/2/0"
+      ]
+    },
+    {
+      "id": "e226cceda47a8811",
+      "text": "提案の説明が流暢であれば、実装の妥当性の判断をAIに任せること。",
+      "label": "提案の説明が流暢であれば、実装の妥当性の判断をAIに任せること。",
+      "references": [
+        "lesson/2026-10-21/option/3/0"
+      ]
+    },
+    {
+      "id": "01d72bd3744f48ff",
+      "text": "料金を前払いする",
+      "label": "料金を前払いする",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-969e1b49c230/collocation/0"
+      ]
+    },
+    {
+      "id": "640b9c4e368288a2",
+      "text": "前払いの残高",
+      "label": "前払いの残高",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-969e1b49c230/collocation/1"
+      ]
+    },
+    {
+      "id": "79d50c9d451f8529",
+      "text": "資料を拝借する",
+      "label": "資料を拝借する",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-22b5b2e4b9e1/collocation/0"
+      ]
+    },
+    {
+      "id": "37a08e518e070cfd",
+      "text": "少し拝借する",
+      "label": "少し拝借する",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-22b5b2e4b9e1/collocation/1"
+      ]
+    },
+    {
+      "id": "329be710637c7d4c",
+      "text": "関係のねじれ",
+      "label": "関係のねじれ",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-030d6c710fdf/collocation/0"
+      ]
+    },
+    {
+      "id": "0fcbdd5abd638b6e",
+      "text": "議論のねじれ",
+      "label": "議論のねじれ",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-030d6c710fdf/collocation/1"
+      ]
+    },
+    {
+      "id": "91c8224507518bf9",
+      "text": "字義通りに受け取る",
+      "label": "字義通りに受け取る",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-f23e9fc21971/collocation/0"
+      ]
+    },
+    {
+      "id": "781462ea60726dee",
+      "text": "字義通りの解釈",
+      "label": "字義通りの解釈",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-f23e9fc21971/collocation/1"
+      ]
+    },
+    {
+      "id": "539c98f7c050ce9b",
+      "text": "目盛りを読む",
+      "label": "目盛りを読む",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-42c40b407796/collocation/0"
+      ]
+    },
+    {
+      "id": "ae1939c91639a4a5",
+      "text": "目盛りを確かめる",
+      "label": "目盛りを確かめる",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-42c40b407796/collocation/1"
+      ]
+    },
+    {
+      "id": "4594b4713f2fcdfd",
+      "text": "目盛りを刻む",
+      "label": "目盛りを刻む",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-171931606123/collocation/0"
+      ]
+    },
+    {
+      "id": "0d8538385e4ca92c",
+      "text": "心に刻む",
+      "label": "心に刻む",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-171931606123/collocation/1"
+      ]
+    },
+    {
+      "id": "ee981149a281673d",
+      "text": "右端の余白",
+      "label": "右端の余白",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-856145d77758/collocation/0"
+      ]
+    },
+    {
+      "id": "be7dd3334c238a97",
+      "text": "余白を残す",
+      "label": "余白を残す",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-856145d77758/collocation/1"
+      ]
+    },
+    {
+      "id": "020f1ac6639ae7ba",
+      "text": "一字下げる",
+      "label": "一字下げる",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-fc09690c944a/collocation/0"
+      ]
+    },
+    {
+      "id": "f8e704e031d0405c",
+      "text": "字下げをそろえる",
+      "label": "字下げをそろえる",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-fc09690c944a/collocation/1"
+      ]
+    },
+    {
+      "id": "41222a12833a8b7e",
+      "text": "枠に収める",
+      "label": "枠に収める",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-a6548078b61b/collocation/0"
+      ]
+    },
+    {
+      "id": "6e7fcdf6291adaea",
+      "text": "予算の枠",
+      "label": "予算の枠",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-a6548078b61b/collocation/1"
+      ]
+    },
+    {
+      "id": "99a49e50d1e31bcc",
+      "text": "二段組みの論文",
+      "label": "二段組みの論文",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-ee43a6dc2792/collocation/0"
+      ]
+    },
+    {
+      "id": "0c2169d8b0507e6c",
+      "text": "段組みを保つ",
+      "label": "段組みを保つ",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-ee43a6dc2792/collocation/1"
+      ]
+    },
+    {
+      "id": "5cec99ce69642aca",
+      "text": "機器をつなぐ",
+      "label": "機器をつなぐ",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-f5f31793/collocation/0"
+      ]
+    },
+    {
+      "id": "97a91308c16cc5c4",
+      "text": "話をつなぐ",
+      "label": "話をつなぐ",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-f5f31793/collocation/1"
+      ]
+    },
+    {
+      "id": "326b319d13dcd781",
+      "text": "要点を押さえる",
+      "label": "要点を押さえる",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-85377137/collocation/0"
+      ]
+    },
+    {
+      "id": "308726193bf67a8d",
+      "text": "基本を押さえる",
+      "label": "基本を押さえる",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-85377137/collocation/1"
+      ]
+    },
+    {
+      "id": "f73d2d716b27589d",
+      "text": "データを書き出す",
+      "label": "データを書き出す",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-aed33b0d/collocation/0"
+      ]
+    },
+    {
+      "id": "7e3b85f28d4a624e",
+      "text": "項目を書き出す",
+      "label": "項目を書き出す",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-aed33b0d/collocation/1"
+      ]
+    },
+    {
+      "id": "532d1468c992df2c",
+      "text": "食事を作り置きする",
+      "label": "食事を作り置きする",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-898953c3/collocation/0"
+      ]
+    },
+    {
+      "id": "63363b3bd9429eb7",
+      "text": "作り置きの品",
+      "label": "作り置きの品",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-898953c3/collocation/1"
+      ]
+    },
+    {
+      "id": "bc07da6aa4deda7e",
+      "text": "不可逆な変化",
+      "label": "不可逆な変化",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-64de6163/collocation/0"
+      ]
+    },
+    {
+      "id": "247197b5f1c08ff9",
+      "text": "不可逆の処理",
+      "label": "不可逆の処理",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-64de6163/collocation/1"
+      ]
+    },
+    {
+      "id": "4bd4acb259c70a36",
+      "text": "既存の仕組みを流用する",
+      "label": "既存の仕組みを流用する",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-3b3e7393/collocation/0"
+      ]
+    },
+    {
+      "id": "8cf80d2c549aa7f0",
+      "text": "資料を流用する",
+      "label": "資料を流用する",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-3b3e7393/collocation/1"
+      ]
+    },
+    {
+      "id": "316b95a5c7dd6339",
+      "text": "原因を誤解する",
+      "label": "原因を誤解する",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-746fd27e/collocation/0"
+      ]
+    },
+    {
+      "id": "9536d6a86990341c",
+      "text": "誤解を解く",
+      "label": "誤解を解く",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-746fd27e/collocation/1"
+      ]
+    },
+    {
+      "id": "8996b48b776f70ff",
+      "text": "念のため確認する",
+      "label": "念のため確認する",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-2602f143/collocation/0"
+      ]
+    },
+    {
+      "id": "03746c84b4e20268",
+      "text": "念のため記録する",
+      "label": "念のため記録する",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-2602f143/collocation/1"
+      ]
+    },
+    {
+      "id": "0f58a7e064818164",
+      "text": "一つ残らず確認する",
+      "label": "一つ残らず確認する",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-cba86781/collocation/0"
+      ]
+    },
+    {
+      "id": "c0ef9a3b7484212f",
+      "text": "一つ残らず記録する",
+      "label": "一つ残らず記録する",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-cba86781/collocation/1"
+      ]
+    },
+    {
+      "id": "31261456ec7979b2",
+      "text": "ただし、強制停止中の保存や複数ジョブの書込競合を検証した記事ではありません。",
+      "label": "ただし、強制停止中の保存や複数ジョブの書込競合を検証した記事ではありません。",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-a47c5cf6/evidence/0"
+      ]
+    },
+    {
+      "id": "c440e0d0171f1ba4",
+      "text": "作者は性能の改善を認めつつ、必要な速さを既に満たすOrigin Shieldを当面続ける判断でした。",
+      "label": "作者は性能の改善を認めつつ、必要な速さを既に満たすOrigin Shieldを当面続ける判断でした。",
+      "references": [
+        "lesson/2026-10-21/grammar/2026-10-21-g-study-356b3c79/evidence/0"
+      ]
+    },
+    {
+      "id": "2f53fd263a65c042",
+      "text": "AWS Global Acceleratorを経由し、遅延を基に近い保存先へ振り分けます。",
+      "label": "AWS Global Acceleratorを経由し、遅延を基に近い保存先へ振り分けます。",
+      "references": [
+        "lesson/2026-10-21/grammar/2026-10-21-g-study-1673b8d8/evidence/0"
+      ]
+    },
+    {
+      "id": "54e3c5be1d5b50ea",
+      "text": "完了表示の後も最終ステータス・終了コード・費用を確認するため、ログが途切れただけで成功とは答えません。",
+      "label": "完了表示の後も最終ステータス・終了コード・費用を確認するため、ログが途切れただけで成功とは答えません。",
+      "references": [
+        "lesson/2026-10-21/grammar/2026-10-21-g-study-48e1043d/evidence/0"
+      ]
+    },
+    {
+      "id": "c5a8f8fcb467c418",
+      "text": "GPUの起動だけでなく、上限と終了結果を確認します。",
+      "label": "> GPUの起動だけでなく、上限と終了結果を確認します。",
+      "references": [
+        "lesson/2026-10-21/grammar/2026-10-21-g-study-61aee9b6/evidence/0"
+      ]
+    },
+    {
+      "id": "ae276a845ebc5d28",
+      "text": "バージニアの一つのS3を遠くから読む遅延に対し、作者は東京・オレゴン・フランクフルトへ複製し、四つのバケットをMRAPへまとめました。",
+      "label": "バージニアの一つのS3を遠くから読む遅延に対し、作者は東京・オレゴン・フランクフルトへ複製し、四つのバケットをMRAPへまとめました。",
+      "references": [
+        "lesson/2026-10-21/grammar/2026-10-21-g-study-f9bbc75/evidence/0"
+      ]
+    },
+    {
+      "id": "1e679761c80fe095",
+      "text": "新しい運用方法への切り替えには準備が必要なので、( )は今の手順を続ける方針だ。",
+      "label": "新しい運用方法への切り替えには準備が必要なので、（　）は今の手順を続ける方針だ。",
+      "references": [
+        "lesson/2026-10-21/review/0/detail/0"
+      ]
+    },
+    {
+      "id": "786b163b74b46ccf",
+      "text": "1 すでに 2 当面 3 必ずしも 4 やがて",
+      "label": "① すでに　② 当面　③ 必ずしも　④ やがて",
+      "references": [
+        "lesson/2026-10-21/review/0/detail/1"
+      ]
+    },
+    {
+      "id": "085a204841fbb774",
+      "text": "「緻密」の用法として、最も自然な文はどれですか。",
+      "label": "「緻密」の用法として、最も自然な文はどれですか。",
+      "references": [
+        "lesson/2026-10-21/review/1/detail/0"
+      ]
+    },
+    {
+      "id": "7ba0b4936ab59177",
+      "text": "1 遠くの山が緻密に青く見えた。",
+      "label": "① 遠くの山が緻密に青く見えた。",
+      "references": [
+        "lesson/2026-10-21/review/1/detail/1"
+      ]
+    },
+    {
+      "id": "2598a198823d95d4",
+      "text": "2 緻密な検証計画を立て、例外条件も確認した。",
+      "label": "② 緻密な検証計画を立て、例外条件も確認した。",
+      "references": [
+        "lesson/2026-10-21/review/1/detail/2"
+      ]
+    },
+    {
+      "id": "1d4eaeeb7a51eb2f",
+      "text": "3 このスープは緻密に熱いので飲めない。",
+      "label": "③ このスープは緻密に熱いので飲めない。",
+      "references": [
+        "lesson/2026-10-21/review/1/detail/3"
+      ]
+    },
+    {
+      "id": "0eb2ffb374baa4ff",
+      "text": "4 バスが緻密に遅れて到着した。",
+      "label": "④ バスが緻密に遅れて到着した。",
+      "references": [
+        "lesson/2026-10-21/review/1/detail/4"
+      ]
+    },
+    {
+      "id": "f3976c0e9bb9efea",
+      "text": "根拠が分からない修正案をそのまま採用する( )、少し時間をかけて仕様を確認したい。",
+      "label": "根拠が分からない修正案をそのまま採用する（　）、少し時間をかけて仕様を確認したい。",
+      "references": [
+        "lesson/2026-10-21/review/2/detail/0"
+      ]
+    },
+    {
+      "id": "54cd224b04d18127",
+      "text": "1 ところを 2 どころか 3 くらいなら 4 ことから",
+      "label": "① ところを　② どころか　③ くらいなら　④ ことから",
+      "references": [
+        "lesson/2026-10-21/review/2/detail/1"
+      ]
+    },
+    {
+      "id": "228288dbf9f02217",
+      "text": "AIを利用する場合でも、機密情報を扱う際のルールは事前に確認しておく( )。",
+      "label": "AIを利用する場合でも、機密情報を扱う際のルールは事前に確認しておく（　）。",
+      "references": [
+        "lesson/2026-10-21/review/3/detail/0"
+      ]
+    },
+    {
+      "id": "4cc9cfe9b05b1535",
+      "text": "1 に越したことはない 2 といったところだ 3 べくもない 4 にとどまらない",
+      "label": "① に越したことはない　② といったところだ　③ べくもない　④ にとどまらない",
+      "references": [
+        "lesson/2026-10-21/review/3/detail/1"
+      ]
+    },
+    {
+      "id": "83dcb840f69c0894",
+      "text": "検索ツールが身近になった現在、必要な情報をすべて暗記できる人だけを優秀だと評価するのは適切なのだろうか。",
+      "label": "検索ツールが身近になった現在、必要な情報をすべて暗記できる人だけを優秀だと評価するのは適切なのだろうか。",
+      "references": [
+        "lesson/2026-10-21/review/4/detail/1"
+      ]
+    },
+    {
+      "id": "ca07d957871065d3",
+      "text": "もちろん基礎知識は必要だが、それをどう確かめ、どう使うかという力も評価しなければ、仕事の実態を十分に捉えられない。",
+      "label": "もちろん基礎知識は必要だが、それをどう確かめ、どう使うかという力も評価しなければ、仕事の実態を十分に捉えられない。",
+      "references": [
+        "lesson/2026-10-21/review/4/detail/2"
+      ]
+    },
+    {
+      "id": "09d50842adb69bc6",
+      "text": "筆者の考えに最も近いものはどれですか。",
+      "label": "筆者の考えに最も近いものはどれですか。",
+      "references": [
+        "lesson/2026-10-21/review/4/detail/3"
+      ]
+    },
+    {
+      "id": "a80f8816bce5b532",
+      "text": "1 暗記は一切不要になったので、知識を確認する試験は廃止すべきだ。",
+      "label": "① 暗記は一切不要になったので、知識を確認する試験は廃止すべきだ。",
+      "references": [
+        "lesson/2026-10-21/review/4/detail/4"
+      ]
+    },
+    {
+      "id": "be6c317bb1af99af",
+      "text": "2 情報検索の普及に伴い、記憶力だけでなく知識を使う力も評価すべきだ。",
+      "label": "② 情報検索の普及に伴い、記憶力だけでなく知識を使う力も評価すべきだ。",
+      "references": [
+        "lesson/2026-10-21/review/4/detail/5"
+      ]
+    },
+    {
+      "id": "52bff704d37d34a0",
+      "text": "3 記憶力さえ高ければ、仕事で必要な能力は十分に備わっている。",
+      "label": "③ 記憶力さえ高ければ、仕事で必要な能力は十分に備わっている。",
+      "references": [
+        "lesson/2026-10-21/review/4/detail/6"
+      ]
+    },
+    {
+      "id": "7bdb4c6c99058508",
+      "text": "4 仕事の能力を正確に測るには、すべてを暗記させる必要がある。",
+      "label": "④ 仕事の能力を正確に測るには、すべてを暗記させる必要がある。",
+      "references": [
+        "lesson/2026-10-21/review/4/detail/7"
+      ]
+    },
     {
       "id": "14d9dc8365789f0f",
       "text": "「速い」という評価は誰のためのものか",

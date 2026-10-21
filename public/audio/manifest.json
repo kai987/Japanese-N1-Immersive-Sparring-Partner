@@ -12,7 +12,7 @@
   },
   "engineVersion": "1.1.0-dev",
   "modelVersion": "1.0.0",
-  "generatedAt": "2026-10-21T03:53:52.381Z",
+  "generatedAt": "2026-10-21T04:05:35.338Z",
   "lessonDates": [
     "2026-10-19",
     "2026-10-18",
@@ -66,7 +66,7 @@
     "2026-08-31",
     "2026-08-30"
   ],
-  "expectedClips": 5433,
+  "expectedClips": 5471,
   "complete": true,
   "clips": {
     "000508138c45e52f": {
@@ -106,6 +106,18 @@
       "bytes": 10797,
       "sha256": "dc7366661e217dbefb4ccb479f49d062e0d692917d238644bd2fd0f56848f446",
       "rms": 0.139213
+    },
+    "003589306f45ea5c": {
+      "id": "003589306f45ea5c",
+      "text": "前払いでも、使った金額の確認は必要です。",
+      "label": "前払いでも、使った金額の確認は必要です。",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-969e1b49c230/example/0"
+      ],
+      "bytes": 50733,
+      "duration": 4.2,
+      "rms": 0.134454,
+      "sha256": "3372c79b60783810e8a2c14ed1c5cb14fd4ffde64fd6d2b4d2fe4e170daeb9b7"
     },
     "0036cd4651c0b952": {
       "id": "0036cd4651c0b952",
@@ -3989,6 +4001,7 @@
       "text": "をもとに",
       "label": "～をもとに",
       "references": [
+        "lesson/2026-10-21/grammar/2026-10-21-g-study-1673b8d8/pattern",
         "lesson/2026-10-13/grammar/2026-10-13-g-study-1673b8d8/pattern",
         "lesson/2026-09-29/grammar/2026-09-29-g-study-1673b8d8/pattern",
         "lesson/2026-09-19/grammar/2026-09-19-g-study-1673b8d8/pattern",
@@ -4108,6 +4121,18 @@
       "bytes": 8493,
       "sha256": "70c5c71c07f3bb01fe33fb4a02d7b5f06959ad20ad686e5823a5d9a7345b3f19",
       "rms": 0.189569
+    },
+    "0dd7c7408593508c": {
+      "id": "0dd7c7408593508c",
+      "text": "枠を広げても、隣の文章を隠さないか確認します。",
+      "label": "枠を広げても、隣の文章を隠さないか確認します。",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-a6548078b61b/example/0"
+      ],
+      "bytes": 55341,
+      "duration": 4.584,
+      "rms": 0.147495,
+      "sha256": "3d28b141a96b90d37c387fcc0c86cd23bce5da2401db6fa573895374400194ab"
     },
     "0de3e0d8680df45c": {
       "id": "0de3e0d8680df45c",
@@ -5217,6 +5242,18 @@
       "sha256": "4b4e25d1d358fdc7f9a0a3c09b973a3b04eeb938d03ad3cd3f4191e4dc3fe719",
       "rms": 0.161199
     },
+    "11e56269c89457ad": {
+      "id": "11e56269c89457ad",
+      "text": "つなぐ",
+      "label": "つなぐ",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-f5f31793/word"
+      ],
+      "bytes": 13005,
+      "duration": 1.056,
+      "rms": 0.171289,
+      "sha256": "d51202d4f8f8b99ff8a14e6c5196c96ac7e23ea304ecc22fd50f5ebc735f9944"
+    },
     "11f27c66e028c4a2": {
       "id": "11f27c66e028c4a2",
       "text": "二者の能力や品質がほぼ同程度である意味を、モデル比較の文脈で復習する。",
@@ -5446,6 +5483,18 @@
       "bytes": 13101,
       "sha256": "6cf3d85a89959ec7cd6145a4eb796cb07a081b4d8353126c668cb77634481430",
       "rms": 0.134024
+    },
+    "1313bcb117a3a1b5": {
+      "id": "1313bcb117a3a1b5",
+      "text": "二つの説明にねじれがあるので、前提を整理します。",
+      "label": "二つの説明にねじれがあるので、前提を整理します。",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-030d6c710fdf/example/0"
+      ],
+      "bytes": 52173,
+      "duration": 4.32,
+      "rms": 0.138153,
+      "sha256": "eb66089b169c8b40cd353b880c4dae9f2e4d61e3395eca603dd178d50a0b2b86"
     },
     "131c87f56126d0e9": {
       "id": "131c87f56126d0e9",
@@ -6650,6 +6699,7 @@
       "text": "発話のタイミングに合わせて、画面上の状態表示を切り替えます。",
       "label": "発話のタイミングに合わせて、画面上の状態表示を切り替えます。",
       "references": [
+        "lesson/2026-10-21/grammar/2026-10-21-g-study-6635022f/example/0",
         "lesson/2026-09-30/grammar/2026-09-30-g-study-6635022f/example/0",
         "lesson/2026-09-26/grammar/2026-09-26-g-ed99abf5cfd7/example/0"
       ],
@@ -8461,6 +8511,18 @@
       "bytes": 16557,
       "sha256": "7d88212add364629e8506627af64aaf68911e18bc88f78dbc6dd771fe000e648",
       "rms": 0.137275
+    },
+    "1f5705ef7c16538b": {
+      "id": "1f5705ef7c16538b",
+      "text": "つくりおき",
+      "label": "作り置き",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-898953c3/word"
+      ],
+      "bytes": 15597,
+      "duration": 1.272,
+      "rms": 0.150597,
+      "sha256": "26c9ede305ebe8f4ceb4e313da95fec9f933ef335cd310ae0f955152377f84cf"
     },
     "1f5aacca6a61ff56": {
       "id": "1f5aacca6a61ff56",
@@ -11249,6 +11311,18 @@
       "sha256": "83b3ca3cea21fcd7c4a9043fa48abcc6bbceff4679aff62f87273958f069de38",
       "rms": 0.168187
     },
+    "2a659c368ad19b8a": {
+      "id": "2a659c368ad19b8a",
+      "text": "念のため、公開する日付をもう一度見ました。",
+      "label": "念のため、公開する日付をもう一度見ました。",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-2602f143/example/0"
+      ],
+      "bytes": 48429,
+      "duration": 4.008,
+      "rms": 0.131544,
+      "sha256": "f59b2601a1750f0929af8f2bc15669b2c6676200435a6e9a325752ae49a27dec"
+    },
     "2a6d93d4ded6dd10": {
       "id": "2a6d93d4ded6dd10",
       "text": "出力Tokenを減らしてもなお、内部ReasoningのCostが残る場合があります。",
@@ -11955,6 +12029,19 @@
       "bytes": 12525,
       "sha256": "18f966bfbeddb206b81dbc068db0cb8624218642d0f1e92ac68ec1a3b264da64",
       "rms": 0.113879
+    },
+    "2d521c7e2e262822": {
+      "id": "2d521c7e2e262822",
+      "text": "以前の資料を流用する場合も、今回の条件に合わせて確認します。",
+      "label": "以前の資料を流用する場合も、今回の条件に合わせて確認します。",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-3b3e7393/example/0",
+        "lesson/2026-10-21/grammar/2026-10-21-g-study-6635022f/evidence/0"
+      ],
+      "bytes": 63693,
+      "duration": 5.28,
+      "rms": 0.108245,
+      "sha256": "8e008d9977902f40dc3d65a2f8502c35969dc8e0cf1dbfa15581d0a00b9215bf"
     },
     "2d7124c3ba916997": {
       "id": "2d7124c3ba916997",
@@ -12944,6 +13031,18 @@
       "bytes": 15597,
       "sha256": "3839c3a41c3425ad96ac28c3f7e94efbdf458d82555db422cdb3250c082f8652",
       "rms": 0.155003
+    },
+    "31a89847683d3f8b": {
+      "id": "31a89847683d3f8b",
+      "text": "ふかぎゃく",
+      "label": "不可逆",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-64de6163/word"
+      ],
+      "bytes": 15309,
+      "duration": 1.248,
+      "rms": 0.105636,
+      "sha256": "a0b6e280e0a3fdf90125eedee2f09f849c3f92e7594886626acd5b932df4bb6c"
     },
     "31aaaed65c5f9862": {
       "id": "31aaaed65c5f9862",
@@ -14392,6 +14491,18 @@
       "sha256": "2d99a7bad307b37fa2790988f4b272537b649e1de858323e7d26999efdd889fc",
       "rms": 0.121934
     },
+    "3778bedbb9624b2f": {
+      "id": "3778bedbb9624b2f",
+      "text": "右側の余白だけでは、段落の終わりを決められません。",
+      "label": "右側の余白だけでは、段落の終わりを決められません。",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-856145d77758/example/0"
+      ],
+      "bytes": 54477,
+      "duration": 4.512,
+      "rms": 0.167164,
+      "sha256": "b486908f9f2875cad7aee172e39f37021305e332122898d832e502c99b42268a"
+    },
     "3783a0a35f9098c7": {
       "id": "3783a0a35f9098c7",
       "text": "自動では残らない情報を、ログに書き足します。",
@@ -15569,6 +15680,18 @@
       "sha256": "6b72d991d51d2efb8a7748547feed11a2774f52cfc048dfea88aff461f42f8ec",
       "rms": 0.141286
     },
+    "3c655ea97930131d": {
+      "id": "3c655ea97930131d",
+      "text": "ひとつのこらず",
+      "label": "一つ残らず",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-cba86781/word"
+      ],
+      "bytes": 20205,
+      "duration": 1.656,
+      "rms": 0.124577,
+      "sha256": "371a8b77a34521e4f9a5a9d54c55282c2890029ef7ee325bd468d8f73bb1d5ac"
+    },
     "3c8143b82d1284a4": {
       "id": "3c8143b82d1284a4",
       "text": "2 ならでは",
@@ -16640,6 +16763,18 @@
       "sha256": "a99379b242e38b86dbdfc7e3780c17e3aa0b9e324910b6439610c94b0cdae90a",
       "rms": 0.130131
     },
+    "406214a3819546d7": {
+      "id": "406214a3819546d7",
+      "text": "確認した条件を、一つ残らず記録しました。",
+      "label": "確認した条件を、一つ残らず記録しました。",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-cba86781/example/0"
+      ],
+      "bytes": 47853,
+      "duration": 3.96,
+      "rms": 0.145776,
+      "sha256": "25c6cba4c7bc3f0f7c07c607a33b5be3bf1897a1f199cd4239d7f6d3faca8423"
+    },
     "4066fc2ef9ce244a": {
       "id": "4066fc2ef9ce244a",
       "text": "また、AIの利用を広げようとしても、使う人が操作方法を理解できなければ、期待した効果は得られない。",
@@ -16683,6 +16818,7 @@
       "text": "品質を維持しつつ、Model Costを削減します。",
       "label": "品質を維持しつつ、Model Costを削減します。",
       "references": [
+        "lesson/2026-10-21/grammar/2026-10-21-g-study-356b3c79/example/0",
         "lesson/2026-10-05/grammar/2026-10-05-g-study-356b3c79/example/0",
         "lesson/2026-09-24/grammar/2026-09-24-g-study-356b3c79/example/0",
         "lesson/2026-09-23/grammar/2026-09-23-g-study-356b3c79/example/0",
@@ -17119,6 +17255,18 @@
       "bytes": 10413,
       "sha256": "5eeb4f2d1c507806111b14a7f3c9988d7e20ee6cf1ffdaaec755b76bedd0efea",
       "rms": 0.17141
+    },
+    "41d6710d9336d6b1": {
+      "id": "41d6710d9336d6b1",
+      "text": "ねんのため",
+      "label": "念のため",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-2602f143/word"
+      ],
+      "bytes": 16749,
+      "duration": 1.368,
+      "rms": 0.171104,
+      "sha256": "c09fa8a4ac34d20617e5624e41e28494d84af91860da4e21f15d016fbf95e4e0"
     },
     "41e73fa917a6a315": {
       "id": "41e73fa917a6a315",
@@ -17700,6 +17848,18 @@
       "bytes": 15405,
       "sha256": "9cd3113936583b6b0a4d236ac096bb61f19ac637d49782730d53671b95ba1bfe",
       "rms": 0.134799
+    },
+    "4436e60d59f29ed1": {
+      "id": "4436e60d59f29ed1",
+      "text": "必要な項目だけを書き出し、秘密の値は含めません。",
+      "label": "必要な項目だけを書き出し、秘密の値は含めません。",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-aed33b0d/example/0"
+      ],
+      "bytes": 57357,
+      "duration": 4.752,
+      "rms": 0.151452,
+      "sha256": "418d25cfc7f35af1f70c86ebc1a6b09a2120bd1f3ee25264a0c49a046ab4070b"
     },
     "444a241bcfe358af": {
       "id": "444a241bcfe358af",
@@ -18587,6 +18747,18 @@
       "bytes": 9645,
       "sha256": "f4ddee09597faf09db318c92097a26ec00438e50bdebf2d7d87e44e6d976d1ee",
       "rms": 0.187654
+    },
+    "4772b13d504c60c1": {
+      "id": "4772b13d504c60c1",
+      "text": "よはく",
+      "label": "余白",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-856145d77758/word"
+      ],
+      "bytes": 14157,
+      "duration": 1.152,
+      "rms": 0.123912,
+      "sha256": "cc86e668d4f93393d97238d26d394201fcfae03d2f596a450b5f7e8a191dd33c"
     },
     "4784fb72578a0836": {
       "id": "4784fb72578a0836",
@@ -19817,6 +19989,18 @@
       "bytes": 28653,
       "sha256": "1a12bb0842a9f179e4c034c941b36791c3f6587bcdcaca97c30f1d40d0e3eb54",
       "rms": 0.118533
+    },
+    "4c774c517c2e9ecd": {
+      "id": "4c774c517c2e9ecd",
+      "text": "目盛りがずれていれば、比較の結果もずれます。",
+      "label": "目盛りがずれていれば、比較の結果もずれます。",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-42c40b407796/example/0"
+      ],
+      "bytes": 44685,
+      "duration": 3.696,
+      "rms": 0.11254,
+      "sha256": "b8619a5b848cdedb84026e279a2bcbfa62c1b4db9f823ad50f9fcd6673b32422"
     },
     "4c7eaf58973d9dfc": {
       "id": "4c7eaf58973d9dfc",
@@ -21585,6 +21769,18 @@
       "sha256": "96de3bbb6d264c00d0ea453026bb772318341228c6186f2a5e8a28a99ce78229",
       "rms": 0.148117
     },
+    "52800b7123d67155": {
+      "id": "52800b7123d67155",
+      "text": "不可逆な変更の前には、必要な記録を残します。",
+      "label": "不可逆な変更の前には、必要な記録を残します。",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-64de6163/example/0"
+      ],
+      "bytes": 52749,
+      "duration": 4.368,
+      "rms": 0.13781,
+      "sha256": "d1d1763e1a5f974b1649ab1e07d745f8db52e4fb15d0c143ff16756ef26a0712"
+    },
     "528ac9fd22cc4261": {
       "id": "528ac9fd22cc4261",
       "text": "わずか",
@@ -23025,6 +23221,18 @@
       "sha256": "21249c1b3f60b976b2415cdc622abb96609451fa33c411cafb36732b2321536c",
       "rms": 0.153484
     },
+    "584b2d22c92e346e": {
+      "id": "584b2d22c92e346e",
+      "text": "段組みが違う資料でも、文のつながりを確認します。",
+      "label": "段組みが違う資料でも、文のつながりを確認します。",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-ee43a6dc2792/example/0"
+      ],
+      "bytes": 52749,
+      "duration": 4.368,
+      "rms": 0.133499,
+      "sha256": "559488c4f7d1b2ba50c9d0f48dadbaa60d739f406d612867aa94a3d49fdb4552"
+    },
     "5857b33e2a16879a": {
       "id": "5857b33e2a16879a",
       "text": "時間が余る",
@@ -23512,6 +23720,7 @@
       "text": "に対して",
       "label": "～に対して",
       "references": [
+        "lesson/2026-10-21/grammar/2026-10-21-g-study-f9bbc75/pattern",
         "lesson/2026-10-18/grammar/2026-10-18-g-study-f9bbc75/pattern",
         "lesson/2026-10-10/grammar/2026-10-10-g-study-f9bbc75/pattern",
         "lesson/2026-10-07/grammar/2026-10-07-g-study-f9bbc75/pattern",
@@ -23537,6 +23746,18 @@
       "bytes": 40557,
       "sha256": "60d18b113d23f7808853c19870d6ab0f17b433f85154ce2167c3b8936215200e",
       "rms": 0.151116
+    },
+    "59fb80c42dd4e778": {
+      "id": "59fb80c42dd4e778",
+      "text": "じさげ",
+      "label": "字下げ",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-fc09690c944a/word"
+      ],
+      "bytes": 14157,
+      "duration": 1.152,
+      "rms": 0.13437,
+      "sha256": "8eaa2cbcb19ce8c6632301587e9d792398ac5e38e06d04f233eb8362f1e0d78f"
     },
     "5a090d6b07cfd78f": {
       "id": "5a090d6b07cfd78f",
@@ -23992,6 +24213,18 @@
       "bytes": 17133,
       "sha256": "1e43c0a29d337cb6d24481a8e661ffac06fd161b20ce76d8656a3d4ef8a3cfe3",
       "rms": 0.146059
+    },
+    "5bdbc4db0019ce8f": {
+      "id": "5bdbc4db0019ce8f",
+      "text": "わく",
+      "label": "枠",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-a6548078b61b/word"
+      ],
+      "bytes": 12717,
+      "duration": 1.032,
+      "rms": 0.112469,
+      "sha256": "770c631789d297c8cc81505019483dc2189e2291a46617f501b28e27e77a6241"
     },
     "5bdc9fe4455f0798": {
       "id": "5bdc9fe4455f0798",
@@ -26420,6 +26653,7 @@
       "text": "仮説を検証する",
       "label": "仮説を検証する",
       "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-a47c5cf6/collocation/1",
         "lesson/2026-10-20/vocabulary/2026-10-20-v-study-a47c5cf6/collocation/1",
         "lesson/2026-10-19/vocabulary/2026-10-19-v-study-a47c5cf6/collocation/1",
         "lesson/2026-10-18/vocabulary/2026-10-18-v-study-a47c5cf6/collocation/1",
@@ -26629,6 +26863,18 @@
       "bytes": 14445,
       "sha256": "13e11cd76a0306e4bbd780d85f42dcc55a9f1681d0a72db4bf0035ac77cb7d09",
       "rms": 0.144743
+    },
+    "65458e2cad6fe010": {
+      "id": "65458e2cad6fe010",
+      "text": "ごかいする",
+      "label": "誤解する",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-746fd27e/word"
+      ],
+      "bytes": 15885,
+      "duration": 1.296,
+      "rms": 0.140587,
+      "sha256": "d119d238b772e4ab0d56c856c26687d229e3f2eb3603b6ddacc1598d741dae8b"
     },
     "65494a7fc4d5af3b": {
       "id": "65494a7fc4d5af3b",
@@ -27937,6 +28183,7 @@
       "text": "品質を検証する",
       "label": "品質を検証する",
       "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-a47c5cf6/collocation/0",
         "lesson/2026-10-20/vocabulary/2026-10-20-v-study-a47c5cf6/collocation/0",
         "lesson/2026-10-19/vocabulary/2026-10-19-v-study-a47c5cf6/collocation/0",
         "lesson/2026-10-18/vocabulary/2026-10-18-v-study-a47c5cf6/collocation/0",
@@ -29399,6 +29646,18 @@
       "sha256": "cbc00fb98e9a5ff86d7c92bc09dbe874a6ffd608860966314f0ea710b72f5306",
       "rms": 0.132867
     },
+    "6ede4d96f4a5438a": {
+      "id": "6ede4d96f4a5438a",
+      "text": "きざむ",
+      "label": "刻む",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-171931606123/word"
+      ],
+      "bytes": 13293,
+      "duration": 1.08,
+      "rms": 0.128529,
+      "sha256": "7c8890f92035ea20db42cd58d70648a1e0021caae9bfc8515af094a3f7e77da7"
+    },
     "6ee67a19fe8d4eed": {
       "id": "6ee67a19fe8d4eed",
       "text": "一括アップロード",
@@ -30082,6 +30341,7 @@
       "text": "実データで検証する",
       "label": "実データで検証する",
       "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-a47c5cf6/collocation/2",
         "lesson/2026-10-20/vocabulary/2026-10-20-v-study-a47c5cf6/collocation/2",
         "lesson/2026-10-19/vocabulary/2026-10-19-v-study-a47c5cf6/collocation/2",
         "lesson/2026-10-18/vocabulary/2026-10-18-v-study-a47c5cf6/collocation/2",
@@ -32126,6 +32386,18 @@
       "sha256": "2ea630477503688b150583c50a7c3b117493d8c6d06ac765c6f090cc0bbbd9b1",
       "rms": 0.128567
     },
+    "77cdc80e2d8a826a": {
+      "id": "77cdc80e2d8a826a",
+      "text": "字下げの違いも見て、読む順を確認します。",
+      "label": "字下げの違いも見て、読む順を確認します。",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-fc09690c944a/example/0"
+      ],
+      "bytes": 45549,
+      "duration": 3.768,
+      "rms": 0.138928,
+      "sha256": "2df5900f5c8462d7d83af5029a9112f1c48f8bc9aab93aaa4bda7709b5dabb9d"
+    },
     "77d534a657a6e612": {
       "id": "77d534a657a6e612",
       "text": "料金を請求する",
@@ -32980,6 +33252,18 @@
       "sha256": "4bd589e8c3d81df0f3e43f761b68311c8f896f828e1060f7553f83f96ed6c572",
       "rms": 0.141192
     },
+    "7b5680f8ff07a37c": {
+      "id": "7b5680f8ff07a37c",
+      "text": "めもり",
+      "label": "目盛り",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-42c40b407796/word"
+      ],
+      "bytes": 13869,
+      "duration": 1.128,
+      "rms": 0.196245,
+      "sha256": "655d872a65032b1008ac5a68ba00c827cca59368d53a2c2452072ffc5286bdc6"
+    },
     "7b653efc33d02450": {
       "id": "7b653efc33d02450",
       "text": "複数のスレッドでgoroutineを動かせることに加え、長く動くgoroutineをランタイムが切り替える仕組みが背景にあります。",
@@ -33174,6 +33458,7 @@
       "text": "検索結果の品質を実データで検証します。",
       "label": "検索結果の品質を実データで検証します。",
       "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-a47c5cf6/example/0",
         "lesson/2026-10-20/vocabulary/2026-10-20-v-study-a47c5cf6/example/0",
         "lesson/2026-10-19/vocabulary/2026-10-19-v-study-a47c5cf6/example/0",
         "lesson/2026-10-18/vocabulary/2026-10-18-v-study-a47c5cf6/example/0",
@@ -35688,6 +35973,18 @@
       "sha256": "5ca45413dba9b6ce838e935a947d78e30f5b50db49a6131e183a3635bd326f9b",
       "rms": 0.161838
     },
+    "8673fea9a82d6455": {
+      "id": "8673fea9a82d6455",
+      "text": "注意書きを字義通りに読むだけでは、対象の違いを見落とします。",
+      "label": "注意書きを字義通りに読むだけでは、対象の違いを見落とします。",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-f23e9fc21971/example/0"
+      ],
+      "bytes": 58797,
+      "duration": 4.872,
+      "rms": 0.176331,
+      "sha256": "38a18873a71664ca1441db7e9bc7f5d08a1179e56fc7da4b3d48d3c8c9987e1f"
+    },
     "867b0d8bae422b4f": {
       "id": "867b0d8bae422b4f",
       "text": "ぶじ",
@@ -35791,6 +36088,7 @@
       "text": "つつ",
       "label": "～つつ",
       "references": [
+        "lesson/2026-10-21/grammar/2026-10-21-g-study-356b3c79/pattern",
         "lesson/2026-10-05/grammar/2026-10-05-g-study-356b3c79/pattern",
         "lesson/2026-09-24/grammar/2026-09-24-g-study-356b3c79/pattern",
         "lesson/2026-09-23/grammar/2026-09-23-g-study-356b3c79/pattern",
@@ -36342,6 +36640,18 @@
       "sha256": "da4998007e1399b9aab337de6d7ec25f6dace3a795a66549c68ae0b8863228a6",
       "rms": 0.117385
     },
+    "8956670f462af67b": {
+      "id": "8956670f462af67b",
+      "text": "基本を押さえてから、細かな設定を見ます。",
+      "label": "基本を押さえてから、細かな設定を見ます。",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-85377137/example/0"
+      ],
+      "bytes": 40365,
+      "duration": 3.336,
+      "rms": 0.123268,
+      "sha256": "830fbdafc49cd9322f9a7170c9fb0aa3eb02594bc6dc347e948d5f14daa659cb"
+    },
     "896a7fee7103221a": {
       "id": "896a7fee7103221a",
       "text": "Siri AIの日本語展開と、AIを業務に組み込むときの設計",
@@ -36474,6 +36784,18 @@
       "sha256": "0145d91cac94cd70541d21af23a57be22687d851c904264f0e67a23e46ca8040",
       "rms": 0.149137
     },
+    "89d87d412c0dd8a5": {
+      "id": "89d87d412c0dd8a5",
+      "text": "二つの処理をつなぐ前に、受け渡す内容を確かめます。",
+      "label": "二つの処理をつなぐ前に、受け渡す内容を確かめます。",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-f5f31793/example/0"
+      ],
+      "bytes": 53901,
+      "duration": 4.464,
+      "rms": 0.112517,
+      "sha256": "241bdf280d65e0fbdd5bd863d828fd72dbfa61ab4e2eca3616950ff4ea737e6f"
+    },
     "89da4421e2fd9a8d": {
       "id": "89da4421e2fd9a8d",
       "text": "ささえあう",
@@ -36515,6 +36837,7 @@
       "text": "に合わせて",
       "label": "～に合わせて",
       "references": [
+        "lesson/2026-10-21/grammar/2026-10-21-g-study-6635022f/pattern",
         "lesson/2026-09-30/grammar/2026-09-30-g-study-6635022f/pattern",
         "lesson/2026-09-26/grammar/2026-09-26-g-ed99abf5cfd7/pattern"
       ],
@@ -40932,6 +41255,18 @@
       "sha256": "2e0dd4953d383d9934ff70856054e66c801de5c7d840d8fef8c7baa937f41a6a",
       "rms": 0.158656
     },
+    "9a5f0b30eb33cd9c": {
+      "id": "9a5f0b30eb33cd9c",
+      "text": "基準を一つずつ刻み、変化を追えるようにします。",
+      "label": "基準を一つずつ刻み、変化を追えるようにします。",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-171931606123/example/0"
+      ],
+      "bytes": 48717,
+      "duration": 4.032,
+      "rms": 0.137625,
+      "sha256": "bc84f77785b2413689dab27011124af822c6a8bba2f8caca75a4aec5be1f331f"
+    },
     "9a6174c878ec41c4": {
       "id": "9a6174c878ec41c4",
       "text": "チョコレートは、いつもすきなだけ食べほうだい。",
@@ -43275,6 +43610,7 @@
       "text": "利用データをもとに、改善の傾向を調べます。",
       "label": "利用データをもとに、改善の傾向を調べます。",
       "references": [
+        "lesson/2026-10-21/grammar/2026-10-21-g-study-1673b8d8/example/0",
         "lesson/2026-10-13/grammar/2026-10-13-g-study-1673b8d8/example/0",
         "lesson/2026-09-29/grammar/2026-09-29-g-study-1673b8d8/example/0",
         "lesson/2026-09-19/grammar/2026-09-19-g-study-1673b8d8/example/0",
@@ -43743,6 +44079,18 @@
       "sha256": "807002b186d7fbe40c812744d5d1cb01e8501d12ab194ec2039d75ca6ad04992",
       "rms": 0.158037
     },
+    "a4436762e726c4f6": {
+      "id": "a4436762e726c4f6",
+      "text": "作り置きした資料も、使う前に日付を確認します。",
+      "label": "作り置きした資料も、使う前に日付を確認します。",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-898953c3/example/0"
+      ],
+      "bytes": 53037,
+      "duration": 4.392,
+      "rms": 0.137258,
+      "sha256": "ad048aa245ed5395fa99ac6e31a0a5d4042f3601975ff2e45a3981c601afe992"
+    },
     "a444d45bc4f2f927": {
       "id": "a444d45bc4f2f927",
       "text": "ものだから",
@@ -43772,6 +44120,7 @@
       "text": "音質だけでなく、同意管理と利用権も確認します。",
       "label": "音質だけでなく、同意管理と利用権も確認します。",
       "references": [
+        "lesson/2026-10-21/grammar/2026-10-21-g-study-61aee9b6/example/0",
         "lesson/2026-10-19/grammar/2026-10-19-g-study-61aee9b6/example/0",
         "lesson/2026-10-18/grammar/2026-10-18-g-study-61aee9b6/example/0",
         "lesson/2026-10-15/grammar/2026-10-15-g-study-61aee9b6/example/0",
@@ -44121,6 +44470,18 @@
       "bytes": 37485,
       "sha256": "2e64f18ee19b21881129cfd3b95eaded79cc161c95f10921ad28c2f9d7d8cba9",
       "rms": 0.147388
+    },
+    "a603127c19a447d0": {
+      "id": "a603127c19a447d0",
+      "text": "ねじれ",
+      "label": "ねじれ",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-030d6c710fdf/word"
+      ],
+      "bytes": 13293,
+      "duration": 1.08,
+      "rms": 0.147216,
+      "sha256": "50d436914f09bc282d68951a2706c7aac954051861301911509f2af001400fcb"
     },
     "a60d50fa7426694e": {
       "id": "a60d50fa7426694e",
@@ -44915,6 +45276,18 @@
       "sha256": "6c3153566651ea2f0f0c696d2cc90a70459ddb05edbaca3be2b529ec683027c0",
       "rms": 0.126797
     },
+    "a8aa4795dfcdf621": {
+      "id": "a8aa4795dfcdf621",
+      "text": "はいしゃくする",
+      "label": "拝借する",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-22b5b2e4b9e1/word"
+      ],
+      "bytes": 17037,
+      "duration": 1.392,
+      "rms": 0.127848,
+      "sha256": "73731ea492f3dda7ca2b8ac2747a9d73cff531e6590309c7b3cf1329bd03a9e9"
+    },
     "a8b25f8d8d8e06d1": {
       "id": "a8b25f8d8d8e06d1",
       "text": "読み上げ技術を使う場合や、画面を拡大した場合など、条件を変えた確認も欠かせない。",
@@ -45367,6 +45740,7 @@
       "text": "設定を変えるだけで、今回の三つの入力は遮断されました。",
       "label": "設定を変えるだけで、今回の三つの入力は遮断されました。",
       "references": [
+        "lesson/2026-10-21/grammar/2026-10-21-g-study-48e1043d/example/0",
         "lesson/2026-10-19/grammar/2026-10-19-g-study-48e1043d/example/0",
         "lesson/2026-10-18/grammar/2026-10-18-g-study-48e1043d/example/0",
         "lesson/2026-10-16/grammar/2026-10-16-g-study-48e1043d/example/0",
@@ -45497,6 +45871,18 @@
       "bytes": 47469,
       "sha256": "4dcede917805431b59f88e20aaf8e8139203ed2e99f6da0bf2c2442b2c3608bf",
       "rms": 0.162199
+    },
+    "ab0bcdc2a1f7abfe": {
+      "id": "ab0bcdc2a1f7abfe",
+      "text": "じぎどおり",
+      "label": "字義通り",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-f23e9fc21971/word"
+      ],
+      "bytes": 15021,
+      "duration": 1.224,
+      "rms": 0.15615,
+      "sha256": "af6ec1996d0ca7d281582f153b494da3d16491d869078a431a4b816c4ee96aa7"
     },
     "ab328db3ff4e8b27": {
       "id": "ab328db3ff4e8b27",
@@ -48913,6 +49299,18 @@
       "sha256": "9aaf4f7b8c462366df3ce5678be0b6f190790f5172c7d226e812d19a55cde688",
       "rms": 0.172196
     },
+    "b8b76ca1674844f5": {
+      "id": "b8b76ca1674844f5",
+      "text": "だんぐみ",
+      "label": "段組み",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-ee43a6dc2792/word"
+      ],
+      "bytes": 14157,
+      "duration": 1.152,
+      "rms": 0.175677,
+      "sha256": "6c601089e4af7ad761575169483967051ab65ee0a952681bc7099ed7b030332c"
+    },
     "b8bcae88e930f414": {
       "id": "b8bcae88e930f414",
       "text": "A: 異常を少しでも見逃したくないからといって、警告を際限なく増やせばよいわけではない。",
@@ -49334,6 +49732,18 @@
       "bytes": 18669,
       "sha256": "3764fc01f4467be11cbd0fe1c071624c3372968c9f59c417ac7753bef5839cbe",
       "rms": 0.127824
+    },
+    "ba73f65a8987155e": {
+      "id": "ba73f65a8987155e",
+      "text": "かきだす",
+      "label": "書き出す",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-aed33b0d/word"
+      ],
+      "bytes": 14157,
+      "duration": 1.152,
+      "rms": 0.089886,
+      "sha256": "46ceb45a4619efd31dd5c682a5c819e2094d892c6829cbe131a80ac77d0fc76e"
     },
     "ba9305d400ce1920": {
       "id": "ba9305d400ce1920",
@@ -50230,6 +50640,7 @@
       "text": "管理者に対しても、同じアクセス制御を適用します。",
       "label": "管理者に対しても、同じアクセス制御を適用します。",
       "references": [
+        "lesson/2026-10-21/grammar/2026-10-21-g-study-f9bbc75/example/0",
         "lesson/2026-10-18/grammar/2026-10-18-g-study-f9bbc75/example/0",
         "lesson/2026-10-10/grammar/2026-10-10-g-study-f9bbc75/example/0",
         "lesson/2026-10-07/grammar/2026-10-07-g-study-f9bbc75/example/0",
@@ -51743,6 +52154,18 @@
       "sha256": "46cfe7fdd1f489b215502b2b7bd722c63582fe9c54b1160d3ae6ba20e738c8de",
       "rms": 0.113555
     },
+    "c4921e899e971f7d": {
+      "id": "c4921e899e971f7d",
+      "text": "おさえる",
+      "label": "押さえる",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-85377137/word"
+      ],
+      "bytes": 13293,
+      "duration": 1.08,
+      "rms": 0.126674,
+      "sha256": "3dc47b5526f1ecd82d9ac479ae177d5d1133be84418981c1551d399f410828d5"
+    },
     "c4a709a2b5d26fd6": {
       "id": "c4a709a2b5d26fd6",
       "text": "行末を確認すると、改行の直前に余ったバイトがありました。",
@@ -52187,6 +52610,18 @@
       "sha256": "d9a99775bb6914bb0b0288c69a34ece8f862edb468cf47928496a92c8cc2c249",
       "rms": 0.137996
     },
+    "c6896e4ce6c226a8": {
+      "id": "c6896e4ce6c226a8",
+      "text": "まえばらい",
+      "label": "前払い",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-969e1b49c230/word"
+      ],
+      "bytes": 15021,
+      "duration": 1.224,
+      "rms": 0.167925,
+      "sha256": "b1adfe4c075d1767c96d05e2a4d02d120e054ce37c0e77079e3aa66b5fdd569c"
+    },
     "c697a8e2570962de": {
       "id": "c697a8e2570962de",
       "text": "通貨を指定する",
@@ -52258,6 +52693,18 @@
       "bytes": 103725,
       "sha256": "c4e763424fc84b033008dc127754320249a7f435790ec07f57137376ce009193",
       "rms": 0.177226
+    },
+    "c707e88032308e04": {
+      "id": "c707e88032308e04",
+      "text": "資料を拝借する前に、利用条件を確認しました。",
+      "label": "資料を拝借する前に、利用条件を確認しました。",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-22b5b2e4b9e1/example/0"
+      ],
+      "bytes": 51309,
+      "duration": 4.248,
+      "rms": 0.147369,
+      "sha256": "2d5ce2e589b7ea87b8f80e5a3822e7beb37e9a000581f3233d1f77b8e3eecacb"
     },
     "c709ab3d7cedd141": {
       "id": "c709ab3d7cedd141",
@@ -53239,6 +53686,18 @@
       "bytes": 38445,
       "sha256": "45c9ae35e3938836661422496dd5c193a461b746a462d932466ad091b766ba4a",
       "rms": 0.142323
+    },
+    "ca176e111a6893d5": {
+      "id": "ca176e111a6893d5",
+      "text": "失敗の理由を誤解しないように、記録を読みます。",
+      "label": "失敗の理由を誤解しないように、記録を読みます。",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-746fd27e/example/0"
+      ],
+      "bytes": 48717,
+      "duration": 4.032,
+      "rms": 0.126033,
+      "sha256": "d2b7d5c5c55e5d1f6242d21f1ead8a81097f652cecb675b07efdbe78889d6221"
     },
     "ca1d3e1ddbe745e9": {
       "id": "ca1d3e1ddbe745e9",
@@ -56521,6 +56980,7 @@
       "text": "だけで",
       "label": "～だけで",
       "references": [
+        "lesson/2026-10-21/grammar/2026-10-21-g-study-48e1043d/pattern",
         "lesson/2026-10-19/grammar/2026-10-19-g-study-48e1043d/pattern",
         "lesson/2026-10-18/grammar/2026-10-18-g-study-48e1043d/pattern",
         "lesson/2026-10-16/grammar/2026-10-16-g-study-48e1043d/pattern",
@@ -57498,6 +57958,7 @@
       "text": "だけでなく",
       "label": "～だけでなく",
       "references": [
+        "lesson/2026-10-21/grammar/2026-10-21-g-study-61aee9b6/pattern",
         "lesson/2026-10-19/grammar/2026-10-19-g-study-61aee9b6/pattern",
         "lesson/2026-10-18/grammar/2026-10-18-g-study-61aee9b6/pattern",
         "lesson/2026-10-15/grammar/2026-10-15-g-study-61aee9b6/pattern",
@@ -61105,6 +61566,7 @@
       "text": "けんしょうする",
       "label": "検証する",
       "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-a47c5cf6/word",
         "lesson/2026-10-20/vocabulary/2026-10-20-v-study-a47c5cf6/word",
         "lesson/2026-10-19/vocabulary/2026-10-19-v-study-a47c5cf6/word",
         "lesson/2026-10-18/vocabulary/2026-10-18-v-study-a47c5cf6/word",
@@ -66513,6 +66975,18 @@
       "bytes": 80685,
       "sha256": "7685d7c78c491a6de2eb54d7bf1091ba36c027bc87d28a6bcc9a314082512aad",
       "rms": 0.117103
+    },
+    "fdf5cd58702c3584": {
+      "id": "fdf5cd58702c3584",
+      "text": "りゅうようする",
+      "label": "流用する",
+      "references": [
+        "lesson/2026-10-21/vocabulary/2026-10-21-v-study-3b3e7393/word"
+      ],
+      "bytes": 16749,
+      "duration": 1.368,
+      "rms": 0.194973,
+      "sha256": "9fed9b2e5e276d31d966360e9502a832a5c3419ff2feb5264f7cfb486b9b57f0"
     },
     "fe245e297225c525": {
       "id": "fe245e297225c525",
