@@ -20,7 +20,7 @@
   },
   "lastError": null,
   "nextStep": "Text publication complete. Shared audio continuation and time-gated unique audio remain separate.",
-  "updatedAt": "2026-10-21T04:04:08.594Z",
+  "updatedAt": "2026-10-21T04:05:13.033Z",
   "sourceSavedOnMain": true,
   "sourceCheckpointVerified": true,
   "expectedSourceSha256": "3fa0aa495dd9abf2e42adfd3f25a6b002d5dfbcf19d65ecfbe199921b5f3f35f",
@@ -29,7 +29,7 @@
   "sourceCommit": "636d53e5234d567a0f6e6733d0bdc4aebdfc0942",
   "sourceBlobSha": "8a99b38d32c12946659aa8c156c8815e2cd76b74",
   "sourceCheckpointBlobSha": "d77a17033ee8660eb8d9110b4c82c9f1e5489c5b",
-  "upstreamTargetVerified": false,
+  "upstreamTargetVerified": true,
   "sourceSha256": "3fa0aa495dd9abf2e42adfd3f25a6b002d5dfbcf19d65ecfbe199921b5f3f35f",
   "counts": {
     "newVocabulary": 19,
@@ -150,5 +150,14 @@
     "n1TextCommit": "8be51745b2919dd77235189cacc43eb620bbcb87",
     "earlierWaitingRun": 39529386839,
     "nextAction": "Resume shared audio after verified Day53 Pages; preserve time-gated local worker checkpoints."
+  },
+  "upstreamVerification": {
+    "sourceCommit": "1fb027ba34a87862867be104bc74bd5afd8e74cb",
+    "pagesRunId": 39528720774,
+    "snapshotSha256": "9cd57f4eb7494c56a5e826ae0c7c728cb0a4b664b631ed0c50603074d195e98d",
+    "fullHistoryDates": 71,
+    "grammarLessonDates": 71,
+    "bilingualLiveBytes": true,
+    "verifiedAt": "2026-10-21T03:55:26.957Z"
   }
 }
