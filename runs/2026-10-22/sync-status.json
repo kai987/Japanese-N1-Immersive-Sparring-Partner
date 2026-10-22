@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-10-22",
   "day": 54,
-  "status": "validating",
-  "stage": "validating",
+  "status": "published",
+  "stage": "published",
   "sourceCommit": "49d3587dd173fcdb1278435bb8b5bf960020bcee",
   "upstreamSourceCommit": "49d3587dd173fcdb1278435bb8b5bf960020bcee",
   "sourceBlobSha": "db48eb27643652a52332546c72d829c827082bff",
@@ -15,13 +15,124 @@
   "sourcePresent": true,
   "upstreamTargetVerified": true,
   "lastError": null,
-  "nextStep": "Wait for canonical sync and exact N1 Pages; retain original and learning states",
-  "updatedAt": "2026-10-22T02:54:00.479Z",
+  "nextStep": "Text published. Verify independent shared audio and retain normal local-worker time/latch boundaries.",
+  "updatedAt": "2026-10-22T03:02:59.323Z",
   "requestSha256": "3c2f8d9ef000cd244de427835595d5f7525af00a17e6b353de8fdfb34a63c41f",
   "requestCommit": "7c8ac5fc8a89b204581cba199b042d67f12cbb99",
   "requestBlobSha": "4781c60a973d28924fce80d104864a90dee3f6d0",
   "n1BaseCommit": "c4831d845aa4f7f062f85d5a5b889d6ea89fbacb",
   "submittedAt": "2026-10-22T02:53:47.297Z",
   "syncRunId": 39713870876,
-  "syncUrl": "https://github.com/kai987/Japanese-N1-Immersive-Sparring-Partner/actions/runs/39713870876"
+  "syncUrl": "https://github.com/kai987/Japanese-N1-Immersive-Sparring-Partner/actions/runs/39713870876",
+  "releaseCommit": "9b0c9b18b28f32e07641ffdca4d9fdf6e060e0b6",
+  "pagesRunId": 39714034683,
+  "sourceUnchanged": true,
+  "rawVocabulary": 10,
+  "rawGrammar": 1,
+  "vocabulary": 20,
+  "grammar": 8,
+  "newVocabulary": 13,
+  "reviewVocabulary": 7,
+  "newGrammar": 1,
+  "reviewGrammar": 7,
+  "originalParagraphs": 5,
+  "readingOptions": 4,
+  "reviewQuestions": 5,
+  "verification": {
+    "pages": {
+      "label": "text",
+      "targetDate": "2026-10-22",
+      "day": 54,
+      "releaseCommit": "9b0c9b18b28f32e07641ffdca4d9fdf6e060e0b6",
+      "pagesRunId": 39714034683,
+      "sourceCommit": "49d3587dd173fcdb1278435bb8b5bf960020bcee",
+      "sourceBlobSha": "db48eb27643652a52332546c72d829c827082bff",
+      "snapshotSha256": "8c2abdf89a47336ca604ff1be94b0fbd33232476bca40fdf2953ff3fb297d71a",
+      "artifact": {
+        "id": 12398616492,
+        "name": "github-pages",
+        "digest": "sha256:810ddfa69f0409b7ec4b5eb4d79ed17dc93bb75ba8b507ff3dc1298217178d0c"
+      },
+      "site": "/tmp/n1-day54-20261022/text-release-39714034683/site",
+      "checks": [
+        {
+          "path": "index.html",
+          "url": "https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/?acceptance=9b0c9b18b28f32e07641ffdca4d9fdf6e060e0b6",
+          "sha256": "09fc31eb429671892a29987e5e50734503443bb9daac71c6f8bdf1d67a2d93bc",
+          "bytes": 1596,
+          "attempt": 1
+        },
+        {
+          "path": "assets/index-DJkP_8nS.js",
+          "url": "https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/assets/index-DJkP_8nS.js?acceptance=9b0c9b18b28f32e07641ffdca4d9fdf6e060e0b6",
+          "sha256": "676257b28392dd6f479f3b9eeaf9c899b5161c72a9a0fd48cb6e0768c944c430",
+          "bytes": 6835806,
+          "attempt": 1
+        },
+        {
+          "path": "assets/index-BpdupM-0.css",
+          "url": "https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/assets/index-BpdupM-0.css?acceptance=9b0c9b18b28f32e07641ffdca4d9fdf6e060e0b6",
+          "sha256": "ae591cc4f64aac982210bb9f9a30a84e9aab4eb1a7a4aa290611892d99ac1d4e",
+          "bytes": 46788,
+          "attempt": 1
+        }
+      ],
+      "fullPublicAssetBytes": true,
+      "allOriginalParagraphsPresent": true,
+      "verifiedAt": "2026-10-22T02:58:03.221Z"
+    },
+    "live": {
+      "targetDate": "2026-10-22",
+      "day": 54,
+      "textCommit": "9b0c9b18b28f32e07641ffdca4d9fdf6e060e0b6",
+      "title": "「数字が見える工場」に必要なもの",
+      "issueNumber": 72,
+      "estimatedMinutes": 210,
+      "immersionParagraphs": 5,
+      "translations": 5,
+      "analysis": 5,
+      "domHashes": {
+        "algorithm": "DJB2 XOR32 of JSON arrays, alongside exact full deployed-asset SHA256 verification",
+        "observed": {
+          "immersion": "7670f83e",
+          "translations": "365c59e2",
+          "analysis": "b8297a7f",
+          "reviewTitles": "99a054d5",
+          "reviewQuestions": "6253b905"
+        },
+        "expected": {
+          "immersion": "7670f83e",
+          "translations": "365c59e2",
+          "analysis": "b8297a7f",
+          "reviewTitles": "99a054d5",
+          "reviewQuestions": "6253b905"
+        },
+        "reviewDisplayRule": "Actual SentenceAudio splitAudioSentences trims only segment boundary whitespace; original question bytes and all substantive text are preserved."
+      },
+      "vocabulary": {
+        "count": 20,
+        "new": 13,
+        "review": 7,
+        "frequencyDenominator": 72
+      },
+      "grammar": {
+        "count": 8,
+        "new": 1,
+        "review": 7,
+        "frequencyDenominator": 72
+      },
+      "reading": {
+        "choices": 4,
+        "unansweredSubmitDisabled": true
+      },
+      "review": {
+        "questions": 5,
+        "starPreserved": true,
+        "answerLeak": false
+      },
+      "consoleErrors": [],
+      "learningProgressChanged": false,
+      "observedAt": "2026-10-22T03:02:01.994Z"
+    }
+  }
 }
