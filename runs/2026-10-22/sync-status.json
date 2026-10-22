@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-10-22",
   "day": 54,
-  "status": "request_ready",
-  "stage": "request_ready",
+  "status": "validating",
+  "stage": "validating",
   "sourceCommit": "49d3587dd173fcdb1278435bb8b5bf960020bcee",
   "upstreamSourceCommit": "49d3587dd173fcdb1278435bb8b5bf960020bcee",
   "sourceBlobSha": "db48eb27643652a52332546c72d829c827082bff",
@@ -15,7 +15,13 @@
   "sourcePresent": true,
   "upstreamTargetVerified": true,
   "lastError": null,
-  "nextStep": "CAS submit exact complete canonical request",
-  "updatedAt": "2026-10-22T02:53:37.224Z",
-  "requestSha256": "3c2f8d9ef000cd244de427835595d5f7525af00a17e6b353de8fdfb34a63c41f"
+  "nextStep": "Wait for canonical sync and exact N1 Pages; retain original and learning states",
+  "updatedAt": "2026-10-22T02:54:00.479Z",
+  "requestSha256": "3c2f8d9ef000cd244de427835595d5f7525af00a17e6b353de8fdfb34a63c41f",
+  "requestCommit": "7c8ac5fc8a89b204581cba199b042d67f12cbb99",
+  "requestBlobSha": "4781c60a973d28924fce80d104864a90dee3f6d0",
+  "n1BaseCommit": "c4831d845aa4f7f062f85d5a5b889d6ea89fbacb",
+  "submittedAt": "2026-10-22T02:53:47.297Z",
+  "syncRunId": 39713870876,
+  "syncUrl": "https://github.com/kai987/Japanese-N1-Immersive-Sparring-Partner/actions/runs/39713870876"
 }
