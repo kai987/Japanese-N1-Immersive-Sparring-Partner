@@ -2,83 +2,222 @@
   "schemaVersion": 1,
   "targetDate": "2026-10-22",
   "day": 54,
-  "stage": "waiting_n1_lesson",
-  "sourceAudioCommit": "3b091a50386cd5f729c0649d7729aaeb13090385",
+  "stage": "generating",
+  "sourceAudioCommit": "439cd781ebe7f0e0e75af87eebb1af9c542895de",
+  "dailyAudioCommit": "3b091a50386cd5f729c0649d7729aaeb13090385",
   "dailyAudioVerification": {
     "r2RunId": 39708370635,
     "pagesRunId": 39708370619,
     "publicSha256Verified": 61,
     "realPlaybackTests": 20
   },
-  "createdAt": "2026-10-22T02:19:10.992Z",
-  "error": null,
-  "n1BaseCommit": "959b018100ae913d7928ff126948f125f74ec9a1",
-  "dispatchRequestedAt": "2026-10-22T02:19:13.482Z",
-  "nextAction": "N1 Day54 original and canonical text sync must finish first; the existing successful N1 Pages event will retry shared audio. No text request replayed.",
-  "updatedAt": "2026-10-22T02:20:23.890Z",
-  "sharedAudioRunId": 39710723633,
-  "sharedAudioRunHead": "959b018100ae913d7928ff126948f125f74ec9a1",
-  "runUrl": "https://github.com/kai987/Japanese-N1-Immersive-Sparring-Partner/actions/runs/39710723633",
-  "n1Commit": "959b018100ae913d7928ff126948f125f74ec9a1",
-  "workflowConclusion": "success",
-  "targetLessonPublished": false,
-  "noMetadataChanged": true,
-  "priorPerDateStates": [
-    {
-      "targetDate": "2026-10-19",
-      "recordedStage": "playback_verified",
-      "updatedAt": "2026-10-19T19:43:43.638Z",
-      "observation": "Older per-date checkpoint; worker global completion is recorded independently. No repair or remote unique-audio check triggered."
+  "targetLessonPublished": true,
+  "n1TextCommit": "9b0c9b18b28f32e07641ffdca4d9fdf6e060e0b6",
+  "sharedAudio": {
+    "stage": "playback_verified",
+    "added": 27,
+    "pendingBeforeLocal": 89,
+    "runId": 39714665037,
+    "releaseCommit": "f6eb5629a501f84c9c0110c97ac7c0809d3473d5",
+    "pagesRunId": 39714763884,
+    "pages": {
+      "label": "shared-audio",
+      "targetDate": "2026-10-22",
+      "day": 54,
+      "releaseCommit": "f6eb5629a501f84c9c0110c97ac7c0809d3473d5",
+      "pagesRunId": 39714763884,
+      "sourceCommit": "49d3587dd173fcdb1278435bb8b5bf960020bcee",
+      "sourceBlobSha": "db48eb27643652a52332546c72d829c827082bff",
+      "snapshotSha256": "8c2abdf89a47336ca604ff1be94b0fbd33232476bca40fdf2953ff3fb297d71a",
+      "artifact": {
+        "id": 12399075060,
+        "name": "github-pages",
+        "digest": "sha256:65a48c641bccc68347ebe4c7ac2caa556e111648125d769ece1122a936d82fa3"
+      },
+      "site": "/tmp/n1-day54-20261022/shared-audio-release-39714763884/site",
+      "checks": [
+        {
+          "path": "index.html",
+          "url": "https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/?acceptance=f6eb5629a501f84c9c0110c97ac7c0809d3473d5",
+          "sha256": "e97d8d3b39e77798ebe6d8caffcccb70b1966956a72b3ea25ae2f100adcb2796",
+          "bytes": 1596,
+          "attempt": 1
+        },
+        {
+          "path": "assets/index-i45icXyr.js",
+          "url": "https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/assets/index-i45icXyr.js?acceptance=f6eb5629a501f84c9c0110c97ac7c0809d3473d5",
+          "sha256": "28abd92198a38cb40d8140e546a09ee2865ac4530de97a409ab8fc5069da5f21",
+          "bytes": 6843386,
+          "attempt": 1
+        },
+        {
+          "path": "assets/index-BpdupM-0.css",
+          "url": "https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/assets/index-BpdupM-0.css?acceptance=f6eb5629a501f84c9c0110c97ac7c0809d3473d5",
+          "sha256": "ae591cc4f64aac982210bb9f9a30a84e9aab4eb1a7a4aa290611892d99ac1d4e",
+          "bytes": 46788,
+          "attempt": 1
+        }
+      ],
+      "fullPublicAssetBytes": true,
+      "allOriginalParagraphsPresent": true,
+      "verifiedAt": "2026-10-22T03:07:37.957Z"
     },
-    {
-      "targetDate": "2026-10-20",
-      "recordedStage": "validating",
-      "updatedAt": "2026-10-20T04:05:49.610724+00:00",
-      "observation": "Older per-date checkpoint; worker global completion is recorded independently. No repair or remote unique-audio check triggered."
+    "live": {
+      "targetDate": "2026-10-22",
+      "day": 54,
+      "releaseCommit": "f6eb5629a501f84c9c0110c97ac7c0809d3473d5",
+      "pagesRunId": 39714763884,
+      "provider": "daily",
+      "audioId": "82aae17460be0640",
+      "label": "履歴を挿入する前に、対象の時点を確かめます。",
+      "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-10-22/example-01--9f85275334355174198dd445924522dae493f8a58f6c6d2133aa1cdd45e39203.mp3",
+      "duration": 4.248,
+      "currentTimes": [
+        0.329669,
+        3.649516
+      ],
+      "paused": false,
+      "mediaError": null,
+      "speechSynthesisActive": false,
+      "consoleErrors": [],
+      "realPlayback": true,
+      "uniqueAudioStage": "generating"
     },
-    {
-      "targetDate": "2026-10-21",
-      "recordedStage": "awaiting_local_audio",
-      "updatedAt": "2026-10-21T04:10:11.142Z",
-      "observation": "Older per-date checkpoint; worker global completion is recorded independently. No repair or remote unique-audio check triggered."
+    "audit": {
+      "observedAt": "2026-10-22T03:08:06.715564+00:00",
+      "targetDate": "2026-10-22",
+      "day": 54,
+      "workflowRunId": 39714665037,
+      "workflowConclusion": "success",
+      "workflowHead": "9b0c9b18b28f32e07641ffdca4d9fdf6e060e0b6",
+      "sourceAudioCommit": "439cd781ebe7f0e0e75af87eebb1af9c542895de",
+      "sharedCommit": "f6eb5629a501f84c9c0110c97ac7c0809d3473d5",
+      "parent": "9b0c9b18b28f32e07641ffdca4d9fdf6e060e0b6",
+      "changedPaths": [
+        "public/audio/manifest.json",
+        "src/data/audio-index.json",
+        "src/data/audio-pending.json",
+        "src/data/audio-sources.json"
+      ],
+      "unchangedBlobCount": 218,
+      "unchangedProtectedPaths": {
+        "n1-source/2026-10-22.md": "db48eb27643652a52332546c72d829c827082bff",
+        "src/data/daily/2026-10-22.json": "308058fb64d0a1eebff2e6f4fbc76debb3f3b302",
+        "src/data/it-study-snapshot.json": "e5ed139a51f89009fc3b45e620b8e2457b836770"
+      },
+      "allNonAudioBlobsUnchanged": true,
+      "stats": {
+        "added": 27,
+        "pending": 89,
+        "sourceCommit": "439cd781ebe7f0e0e75af87eebb1af9c542895de",
+        "status": "awaiting_local_audio"
+      },
+      "pages": {
+        "id": 39714763884,
+        "head_sha": "f6eb5629a501f84c9c0110c97ac7c0809d3473d5",
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/kai987/Japanese-N1-Immersive-Sparring-Partner/actions/runs/39714763884"
+      },
+      "pagesJobs": [
+        {
+          "name": "build",
+          "conclusion": "success",
+          "steps": []
+        },
+        {
+          "name": "deploy",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Verify live target date",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ],
+      "metadata": {
+        "public/audio/manifest.json": {
+          "blobSha": "0a9023ab246ed195c589ddf4b1aa7847f3b8bd39",
+          "bytes": 2777931,
+          "sha256": "81a72ab78186891562f76256e709f4aec0307eee52495ed1667e9ee2b129ca6e"
+        },
+        "src/data/audio-index.json": {
+          "blobSha": "3227c01aae7dc9079c4cf81e1e42ed57300ced16",
+          "bytes": 175157,
+          "sha256": "2198c512a10fb77dffa431ae96d3acf319e3b152f3bd1e10f83b1c4480b04da9"
+        },
+        "src/data/audio-pending.json": {
+          "blobSha": "91b5a54c5ac360724ef0cc4e3ebec58ae8b15873",
+          "bytes": 31563,
+          "sha256": "1ecabd2e34261ec71c23e1483b7eb37297609da1e4d8eaabfbaf226a4e2ff3a1"
+        },
+        "src/data/audio-sources.json": {
+          "blobSha": "f605e1968887bc05c6332ebfbaab38fe68287490",
+          "bytes": 1759528,
+          "sha256": "0dc966cb6d73f4489cb3418772209ee8d0ea274b655f6da1c6c4f2db594decbb"
+        }
+      }
     }
-  ],
+  },
   "localWorkerObservation": {
-    "scope": "Prior N1 catalog; not a completion claim for Day54",
-    "phase": "idle",
-    "pendingClips": 0,
-    "requiredClips": 5630,
-    "jobPending": false,
+    "version": 1,
     "lastError": null,
-    "updatedAt": "2026-10-22T02:25:21.934Z",
+    "attempt": 107,
+    "phase": "generating",
+    "updatedAt": "2026-10-22T03:07:52.092Z",
+    "baseCommit": "f6eb5629a501f84c9c0110c97ac7c0809d3473d5",
+    "sourceAudioCommit": "439cd781ebe7f0e0e75af87eebb1af9c542895de",
     "releaseCommit": null,
+    "requiredClips": 5746,
+    "pendingClips": 89,
     "lastVerifiedCommit": "959b018100ae913d7928ff126948f125f74ec9a1",
-    "observedAt": "2026-10-22T02:32:35.103Z",
+    "failedPhase": "validating",
+    "nextAttempt": "2026-10-23T02:10:00.000Z",
+    "jobPending": true,
+    "detectedReason": "missing_audio",
+    "validationDirectory": "/Users/paulasmith/Documents/Codex/2026-10-20/task/n1-audio-repair-20261021/evidence/authorized-repair-20261021T0814Z/validation",
+    "candidateCommit": "959b018100ae913d7928ff126948f125f74ec9a1",
     "schedule": {
       "version": 1,
-      "claimedDate": "2026-10-21",
-      "reason": "resume_pending",
-      "startedAt": "2026-10-21T02:10:10.117Z"
+      "claimedDate": "2026-10-22",
+      "reason": "missing_audio",
+      "startedAt": "2026-10-22T03:07:46.496Z"
     },
-    "window": "11:10-13:10 Asia/Tokyo; only local worker files inspected; no worker triggered",
-    "workerNextAttempt": "2026-10-22T02:10:00.000Z",
-    "localLogObservation": {
-      "observedAt": "2026-10-22T02:26:37.865730+00:00",
-      "stdoutTail": [
-        "{\"phase\":\"scheduled_pause\",\"reason\":\"already_checked_today\",\"nextOpening\":\"2026-10-22T02:10:00.000Z\"}",
-        "{\"phase\":\"scheduled_pause\",\"reason\":\"already_checked_today\",\"nextOpening\":\"2026-10-22T02:10:00.000Z\"}",
-        "{\"phase\":\"scheduled_pause\",\"reason\":\"already_checked_today\",\"nextOpening\":\"2026-10-22T02:10:00.000Z\"}",
-        "{\"phase\":\"scheduled_pause\",\"reason\":\"already_checked_today\",\"nextOpening\":\"2026-10-22T02:10:00.000Z\"}",
-        "{\"phase\":\"scheduled_pause\",\"reason\":\"already_checked_today\",\"nextOpening\":\"2026-10-22T02:10:00.000Z\"}",
-        "{\"phase\":\"scheduled_pause\",\"reason\":\"already_checked_today\",\"nextOpening\":\"2026-10-22T02:10:00.000Z\"}",
-        "{\"phase\":\"fetching\",\"lastError\":null,\"attempt\":103}",
-        "{\"phase\":\"catalog\",\"baseCommit\":\"959b018100ae913d7928ff126948f125f74ec9a1\",\"releaseCommit\":null}",
-        "{\"phase\":\"idle\",\"jobPending\":false}",
-        "{\"phase\":\"fetching\",\"lastError\":null,\"attempt\":104}",
-        "{\"phase\":\"catalog\",\"baseCommit\":\"959b018100ae913d7928ff126948f125f74ec9a1\",\"releaseCommit\":null}",
-        "{\"phase\":\"idle\",\"jobPending\":false}"
-      ],
-      "scope": "Local read-only log; latest checks idle. Historical stderr is not a current failure."
-    }
-  }
+    "observedAt": "2026-10-22T03:09:57.263Z"
+  },
+  "uniqueAudio": {
+    "stage": "generating",
+    "pendingClips": 89,
+    "requiredClips": 5746,
+    "lastError": null
+  },
+  "previousAttempt": {
+    "schemaVersion": 1,
+    "targetDate": "2026-10-22",
+    "day": 54,
+    "stage": "waiting_n1_lesson",
+    "sourceAudioCommit": "3b091a50386cd5f729c0649d7729aaeb13090385",
+    "dailyAudioVerification": {
+      "r2RunId": 39708370635,
+      "pagesRunId": 39708370619,
+      "publicSha256Verified": 61,
+      "realPlaybackTests": 20
+    },
+    "createdAt": "2026-10-22T02:19:10.992Z",
+    "error": null,
+    "n1BaseCommit": "959b018100ae913d7928ff126948f125f74ec9a1",
+    "dispatchRequestedAt": "2026-10-22T02:19:13.482Z",
+    "nextAction": "N1 Day54 original and canonical text sync must finish first; the existing successful N1 Pages event will retry shared audio. No text request replayed.",
+    "updatedAt": "2026-10-22T02:20:23.890Z",
+    "sharedAudioRunId": 39710723633,
+    "sharedAudioRunHead": "959b018100ae913d7928ff126948f125f74ec9a1",
+    "runUrl": "https://github.com/kai987/Japanese-N1-Immersive-Sparring-Partner/actions/runs/39710723633",
+    "n1Commit": "959b018100ae913d7928ff126948f125f74ec9a1",
+    "workflowConclusion": "success",
+    "targetLessonPublished": false,
+    "noMetadataChanged": true
+  },
+  "updatedAt": "2026-10-22T03:09:57.263Z",
+  "nextAction": "Observe existing OS-locked worker; preserve schedule and candidates. No repair or repeat text request."
 }
