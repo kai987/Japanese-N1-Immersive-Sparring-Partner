@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "targetDate": "2026-10-22",
   "day": 54,
-  "stage": "generating",
+  "stage": "playback_verified",
   "sourceAudioCommit": "439cd781ebe7f0e0e75af87eebb1af9c542895de",
   "dailyAudioCommit": "3b091a50386cd5f729c0649d7729aaeb13090385",
   "dailyAudioVerification": {
@@ -157,6 +157,56 @@
           "bytes": 1759528,
           "sha256": "0dc966cb6d73f4489cb3418772209ee8d0ea274b655f6da1c6c4f2db594decbb"
         }
+      },
+      "newClipByteVerification": {
+        "observedAt": "2026-10-22T03:10:11.388832+00:00",
+        "sharedCommit": "f6eb5629a501f84c9c0110c97ac7c0809d3473d5",
+        "sourceAudioCommit": "439cd781ebe7f0e0e75af87eebb1af9c542895de",
+        "newClipCount": 27,
+        "providerCounts": {
+          "daily": 27
+        },
+        "all27ExactFrozenPathHashSizeVerified": true,
+        "sourceManifestsByteEquivalentToVerifiedAudioCommit": [
+          {
+            "path": "public/audio/japanese/2026-10-22/manifest.json",
+            "sha256": "73267017f4de84aea2fe7901c310f3bb223a2f2b90dec6fc4e7f0c78d1cad2f3",
+            "audioSynthesisCommit": "3b091a50386cd5f729c0649d7729aaeb13090385",
+            "requestedSourceAudioCommit": "439cd781ebe7f0e0e75af87eebb1af9c542895de",
+            "byteEquivalent": true
+          },
+          {
+            "path": "public/audio/japanese/2026-10-22/interview-manifest.json",
+            "sha256": "58328c9ddae377dd65d6a61916919fbc305906bc1272499069f36c82c9e099d2",
+            "audioSynthesisCommit": "3b091a50386cd5f729c0649d7729aaeb13090385",
+            "requestedSourceAudioCommit": "439cd781ebe7f0e0e75af87eebb1af9c542895de",
+            "byteEquivalent": true
+          }
+        ],
+        "reusedPublicByteEvidence": {
+          "checkpointPath": "/Users/paulasmith/.codex/automations/it-ai-codex/audio-progress/2026-10-22.json",
+          "audioCommit": "3b091a50386cd5f729c0649d7729aaeb13090385",
+          "count": 61,
+          "hashAlgorithm": "SHA-256",
+          "changedFileScope": [
+            "public/audio/japanese/2026-10-22/manifest.json",
+            "public/audio/japanese/2026-10-22/interview-manifest.json"
+          ],
+          "output": "Audio integrity: 72/72 generated dates, bilingual text mappings and 3555 referenced local recordings verified; full local inventory 3774 MP3s; 0 vocabulary cards explicitly use browser Japanese speech (not recordings).\nRemote audio scope: changed files and manifest references; 61 recording(s).\nVerified 61 deployed MP3 SHA-256 hashes.",
+          "verifiedAt": "2026-10-22T02:32:31.448Z"
+        },
+        "freshLocalPublicGet": {
+          "client": "Python urllib default client",
+          "status": 403,
+          "server": "Cloudflare",
+          "errorCode": 1010,
+          "reason": "Access denied - browser signature restriction",
+          "firstUrl": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-10-22/example-06--4474e7f47f26e45c8ca538e57279ac3210bd3c35d22ba81adad44403ccfecc4d.mp3",
+          "freshLocal27GetVerified": false,
+          "action": "Stopped after reading exact failure; no fingerprint, UA, proxy or access-control changes",
+          "observedAt": "2026-10-22T03:08:46Z"
+        },
+        "proofPath": "/tmp/n1-day54-20261022/shared-public-bytes-audit.json"
       }
     }
   },
@@ -164,33 +214,3000 @@
     "version": 1,
     "lastError": null,
     "attempt": 107,
-    "phase": "generating",
-    "updatedAt": "2026-10-22T03:07:52.092Z",
+    "phase": "complete",
+    "updatedAt": "2026-10-22T03:14:02.909Z",
     "baseCommit": "f6eb5629a501f84c9c0110c97ac7c0809d3473d5",
     "sourceAudioCommit": "439cd781ebe7f0e0e75af87eebb1af9c542895de",
-    "releaseCommit": null,
+    "releaseCommit": "fdadc14fc10cbde377688df51f288070992a300c",
     "requiredClips": 5746,
-    "pendingClips": 89,
-    "lastVerifiedCommit": "959b018100ae913d7928ff126948f125f74ec9a1",
+    "pendingClips": 0,
+    "lastVerifiedCommit": "fdadc14fc10cbde377688df51f288070992a300c",
     "failedPhase": "validating",
     "nextAttempt": "2026-10-23T02:10:00.000Z",
-    "jobPending": true,
+    "jobPending": false,
     "detectedReason": "missing_audio",
-    "validationDirectory": "/Users/paulasmith/Documents/Codex/2026-10-20/task/n1-audio-repair-20261021/evidence/authorized-repair-20261021T0814Z/validation",
-    "candidateCommit": "959b018100ae913d7928ff126948f125f74ec9a1",
+    "validationDirectory": "/Users/paulasmith/Library/Application Support/N1 Audio/logs/validation/run-1792638466118-5695",
+    "candidateCommit": "fdadc14fc10cbde377688df51f288070992a300c",
     "schedule": {
       "version": 1,
       "claimedDate": "2026-10-22",
       "reason": "missing_audio",
       "startedAt": "2026-10-22T03:07:46.496Z"
     },
-    "observedAt": "2026-10-22T03:09:57.263Z"
+    "observedAt": "2026-10-22T03:15:39.952Z"
   },
   "uniqueAudio": {
-    "stage": "generating",
-    "pendingClips": 89,
-    "requiredClips": 5746,
-    "lastError": null
+    "stage": "playback_verified",
+    "pages": {
+      "label": "audio",
+      "targetDate": "2026-10-22",
+      "day": 54,
+      "releaseCommit": "fdadc14fc10cbde377688df51f288070992a300c",
+      "pagesRunId": 39715541982,
+      "sourceCommit": "49d3587dd173fcdb1278435bb8b5bf960020bcee",
+      "sourceBlobSha": "db48eb27643652a52332546c72d829c827082bff",
+      "snapshotSha256": "8c2abdf89a47336ca604ff1be94b0fbd33232476bca40fdf2953ff3fb297d71a",
+      "artifact": {
+        "id": 12398643894,
+        "name": "github-pages",
+        "digest": "sha256:245b14e857ff5a705f5663f5dcb54305e60e4ffd123555bd1b03adbc25966cde"
+      },
+      "site": "/tmp/n1-day54-20261022/audio-release-39715541982/site",
+      "checks": [
+        {
+          "path": "index.html",
+          "url": "https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/?acceptance=fdadc14fc10cbde377688df51f288070992a300c",
+          "sha256": "2c0d8ccddb2084e29a316dd5c37d57dd277ad7e644172c00fe3a032713626315",
+          "bytes": 1596,
+          "attempt": 1
+        },
+        {
+          "path": "assets/index-BRh6kJC4.js",
+          "url": "https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/assets/index-BRh6kJC4.js?acceptance=fdadc14fc10cbde377688df51f288070992a300c",
+          "sha256": "c9da59c91583e982fde0e16d47fa1c58073f627495f60e83ee7dd3672047f284",
+          "bytes": 6868848,
+          "attempt": 1
+        },
+        {
+          "path": "assets/index-BpdupM-0.css",
+          "url": "https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/assets/index-BpdupM-0.css?acceptance=fdadc14fc10cbde377688df51f288070992a300c",
+          "sha256": "ae591cc4f64aac982210bb9f9a30a84e9aab4eb1a7a4aa290611892d99ac1d4e",
+          "bytes": 46788,
+          "attempt": 1
+        }
+      ],
+      "fullPublicAssetBytes": true,
+      "allOriginalParagraphsPresent": true,
+      "verifiedAt": "2026-10-22T03:14:30.314Z"
+    },
+    "live": {
+      "targetDate": "2026-10-22",
+      "day": 54,
+      "releaseCommit": "fdadc14fc10cbde377688df51f288070992a300c",
+      "pagesRunId": 39715541982,
+      "realPlayback": true,
+      "voice": "AivisSpeech / morioki（ノーマル）",
+      "styleId": 497929760,
+      "cases": [
+        {
+          "provider": "supabase",
+          "audioId": "bb8f218811cda104",
+          "label": "ある工場では、設備の温度や振動を監視するセンサーを導入し、稼働状況を一覧できる画面を整えた。",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/bb8f218811cda104--f68f0512af5672e098c274fda408f776764662ef26416b2de9ad12169bbc8c2d.mp3",
+          "duration": 7.952708,
+          "currentTimes": [
+            0,
+            3.215198
+          ],
+          "paused": false,
+          "error": null,
+          "speechActive": false
+        },
+        {
+          "provider": "daily",
+          "audioId": "846ce5c315163457",
+          "label": "小さな変更も、無秩序に重ねると把握が難しくなります。",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-10-22/example-05--3c446cc58fb4f0cb03a9f1ddcea93b99640890c505efb5caffca0ecdaef04b87.mp3",
+          "duration": 5.037667,
+          "currentTimes": [
+            0.374264,
+            0.785256
+          ],
+          "paused": false,
+          "error": null,
+          "speechActive": false
+        }
+      ],
+      "vocabularyAudioButtons": 95,
+      "vocabularyDisabledAudioButtons": 0,
+      "consoleErrors": [],
+      "learningAnswersOrMasteryChanged": false
+    },
+    "bytes": {
+      "mergedAt": "2026-10-22T03:13:11.668Z",
+      "targetDate": "2026-10-22",
+      "day": 54,
+      "metadataCommit": "fdadc14fc10cbde377688df51f288070992a300c",
+      "targetUnique": 166,
+      "targetUses": 187,
+      "providers": {
+        "daily": 47,
+        "supabase": 119
+      },
+      "originalSupabase": 30,
+      "newlyUploaded": 89,
+      "globalPending": 0,
+      "allTargetBytesVerified": true,
+      "fullPublicationVerified": false,
+      "note": "Pages and native playback are independent acceptance steps; this file certifies bytes only.",
+      "evidenceFiles": [
+        {
+          "path": "/tmp/n1-day54-20261022/final-audio-sources.json",
+          "sha256": "a4af8d61af085e37943cf2f3450191f86a5ce705773c74db7d832bbf21b65d68"
+        },
+        {
+          "path": "/tmp/n1-day54-20261022/final-audio-pending.json",
+          "sha256": "38d0ed14d665f072a64e45d742c6a8efbd4bdccd5c8de08fbc75c58da5353a9b"
+        },
+        {
+          "path": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json",
+          "sha256": "c1000b714fbc57be95991c97a4b69a64d7eae462236d5c606e5b6466a608c479"
+        },
+        {
+          "path": "/tmp/n1-day54-20261022/existing-day54-supabase-bytes.json",
+          "sha256": "de5da259362cd17150eac95a481dd2818f383bb0c06f8fb203fa9cbcb1c3dd42"
+        },
+        {
+          "path": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json",
+          "sha256": "7f96e2603662f49eb6339d3dd605f99e1c7392ef91eed6178176788f15bd2236"
+        }
+      ],
+      "clips": [
+        {
+          "id": "31b33bf115fbf425",
+          "text": "「数字が見える工場」に必要なもの",
+          "provider": "supabase",
+          "path": "morioki-normal/31b33bf115fbf425--40109d06b08b682e01d2a756a716bcf1112126a810fd1fe6704c5b938714fd40.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/31b33bf115fbf425--40109d06b08b682e01d2a756a716bcf1112126a810fd1fe6704c5b938714fd40.mp3",
+          "sha256": "40109d06b08b682e01d2a756a716bcf1112126a810fd1fe6704c5b938714fd40",
+          "bytes": 24621,
+          "duration": 2.986,
+          "targetReferences": [
+            "lesson/2026-10-22/title",
+            "lesson/2026-10-22/immersion/title",
+            "lesson/2026-10-22/reading/title"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:03.719Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "bb8f218811cda104",
+          "text": "ある工場では、設備の温度や振動を監視するセンサーを導入し、稼働状況を一覧できる画面を整えた。",
+          "provider": "supabase",
+          "path": "morioki-normal/bb8f218811cda104--f68f0512af5672e098c274fda408f776764662ef26416b2de9ad12169bbc8c2d.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/bb8f218811cda104--f68f0512af5672e098c274fda408f776764662ef26416b2de9ad12169bbc8c2d.mp3",
+          "sha256": "f68f0512af5672e098c274fda408f776764662ef26416b2de9ad12169bbc8c2d",
+          "bytes": 64365,
+          "duration": 7.953,
+          "targetReferences": [
+            "lesson/2026-10-22/immersion/0/0",
+            "lesson/2026-10-22/reading/0/0"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:04.745Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "6b30064e44e1417a",
+          "text": "それまでは担当者が定期的に現場を回り、機械の音や計器の表示を確かめていたが、新しい仕組みによって離れた場所からも変化を把握できるようになった。",
+          "provider": "supabase",
+          "path": "morioki-normal/6b30064e44e1417a--9aba4f85720e953678a3252debc92ae9fa67bc0f409bb0eccd73bf0e4f366570.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/6b30064e44e1417a--9aba4f85720e953678a3252debc92ae9fa67bc0f409bb0eccd73bf0e4f366570.mp3",
+          "sha256": "9aba4f85720e953678a3252debc92ae9fa67bc0f409bb0eccd73bf0e4f366570",
+          "bytes": 96045,
+          "duration": 11.914,
+          "targetReferences": [
+            "lesson/2026-10-22/immersion/0/1",
+            "lesson/2026-10-22/reading/0/1"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:05.878Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "df3080fdd1e783f9",
+          "text": "管理者は、異常があればすぐに知らせる通知機能にも期待を寄せていた。",
+          "provider": "supabase",
+          "path": "morioki-normal/df3080fdd1e783f9--527574b77f7117741e6079181d90525fab103479595a1dab378351e44ff4d83b.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/df3080fdd1e783f9--527574b77f7117741e6079181d90525fab103479595a1dab378351e44ff4d83b.mp3",
+          "sha256": "527574b77f7117741e6079181d90525fab103479595a1dab378351e44ff4d83b",
+          "bytes": 42477,
+          "duration": 5.227,
+          "targetReferences": [
+            "lesson/2026-10-22/immersion/0/2",
+            "lesson/2026-10-22/reading/0/2"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:07.064Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "037b6e544bb944a8",
+          "text": "ところが、通知が増えるにつれ、現場から「何を優先して確かめればよいのか分からない」という声が出始めた。",
+          "provider": "supabase",
+          "path": "morioki-normal/037b6e544bb944a8--41fa226d684cb18b83b5ffa29179bdbe415ecc51f3db7ff0deeed03e10de239b.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/037b6e544bb944a8--41fa226d684cb18b83b5ffa29179bdbe415ecc51f3db7ff0deeed03e10de239b.mp3",
+          "sha256": "41fa226d684cb18b83b5ffa29179bdbe415ecc51f3db7ff0deeed03e10de239b",
+          "bytes": 64941,
+          "duration": 8.025,
+          "targetReferences": [
+            "lesson/2026-10-22/immersion/0/3",
+            "lesson/2026-10-22/reading/0/3"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:08.141Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "f75a3d05f136b2a1",
+          "text": "その理由の一つは、普段とは異なる数値が必ずしも故障を意味しないことにある。",
+          "provider": "supabase",
+          "path": "morioki-normal/f75a3d05f136b2a1--75d7c2dc1561509378fa35dff83483b66eb5b376eec91195b07d6e08ed64da25.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/f75a3d05f136b2a1--75d7c2dc1561509378fa35dff83483b66eb5b376eec91195b07d6e08ed64da25.mp3",
+          "sha256": "75d7c2dc1561509378fa35dff83483b66eb5b376eec91195b07d6e08ed64da25",
+          "bytes": 50925,
+          "duration": 6.283,
+          "targetReferences": [
+            "lesson/2026-10-22/immersion/1/0",
+            "lesson/2026-10-22/reading/1/0"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:09.156Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "6f6603677f9c5093",
+          "text": "たとえば、設備の立ち上げ直後には温度が一時的に上がる場合がある。",
+          "provider": "supabase",
+          "path": "morioki-normal/6f6603677f9c5093--df28437a1a0aad88c4411076ea46f5f8662ab77071479e3ab19c75e0fdf14d11.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/6f6603677f9c5093--df28437a1a0aad88c4411076ea46f5f8662ab77071479e3ab19c75e0fdf14d11.mp3",
+          "sha256": "df28437a1a0aad88c4411076ea46f5f8662ab77071479e3ab19c75e0fdf14d11",
+          "bytes": 44781,
+          "duration": 5.511,
+          "targetReferences": [
+            "lesson/2026-10-22/immersion/1/1",
+            "lesson/2026-10-22/reading/1/1"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:11.037Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "2b408f8775380ddb",
+          "text": "こうした運転条件を考慮しないまま閾値を設定すると、正常な変化にまで警告を出しかねない。",
+          "provider": "supabase",
+          "path": "morioki-normal/2b408f8775380ddb--f751945353da9c3da075f377641f605cd1e9f3081bb566cc1fc27879c15fcd04.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/2b408f8775380ddb--f751945353da9c3da075f377641f605cd1e9f3081bb566cc1fc27879c15fcd04.mp3",
+          "sha256": "f751945353da9c3da075f377641f605cd1e9f3081bb566cc1fc27879c15fcd04",
+          "bytes": 57453,
+          "duration": 7.085,
+          "targetReferences": [
+            "lesson/2026-10-22/immersion/1/2",
+            "lesson/2026-10-22/reading/1/2"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:11.928Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "4eda64a935322095",
+          "text": "一方、警告を減らそうと閾値を緩めすぎれば、見逃してはならない兆候まで埋もれるおそれがある。",
+          "provider": "supabase",
+          "path": "morioki-normal/4eda64a935322095--c85fb1cc4581ab340e32f71e1539281dc44c2bc39a6d0fdeb39279753119eb69.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/4eda64a935322095--c85fb1cc4581ab340e32f71e1539281dc44c2bc39a6d0fdeb39279753119eb69.mp3",
+          "sha256": "c85fb1cc4581ab340e32f71e1539281dc44c2bc39a6d0fdeb39279753119eb69",
+          "bytes": 59949,
+          "duration": 7.409,
+          "targetReferences": [
+            "lesson/2026-10-22/immersion/1/3",
+            "lesson/2026-10-22/reading/1/3"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:13.073Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "90caea5ad224b3c6",
+          "text": "通知の数が多いことと、危険を正しく捉えられることは、同じではないのである。",
+          "provider": "supabase",
+          "path": "morioki-normal/90caea5ad224b3c6--2b9cf93a557f40516c88b6b2145adc755cce582b11df88594fcedb2ea9197882.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/90caea5ad224b3c6--2b9cf93a557f40516c88b6b2145adc755cce582b11df88594fcedb2ea9197882.mp3",
+          "sha256": "2b9cf93a557f40516c88b6b2145adc755cce582b11df88594fcedb2ea9197882",
+          "bytes": 49773,
+          "duration": 6.144,
+          "targetReferences": [
+            "lesson/2026-10-22/immersion/1/4",
+            "lesson/2026-10-22/reading/1/4"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:14.474Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "39cc7838b4669644",
+          "text": "さらに、センサーから情報が集まることと、その情報に基づいて適切に行動できることの間にも隔たりがある。",
+          "provider": "supabase",
+          "path": "morioki-normal/39cc7838b4669644--efbca55ab8eda02321e1f9622e9f48a7c3521ce5fc8a98c3f25d029223d93b7c.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/39cc7838b4669644--efbca55ab8eda02321e1f9622e9f48a7c3521ce5fc8a98c3f25d029223d93b7c.mp3",
+          "sha256": "efbca55ab8eda02321e1f9622e9f48a7c3521ce5fc8a98c3f25d029223d93b7c",
+          "bytes": 69741,
+          "duration": 8.618,
+          "targetReferences": [
+            "lesson/2026-10-22/immersion/2/0",
+            "lesson/2026-10-22/reading/2/0"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:15.449Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "fec20c52781057ee",
+          "text": "警告が出た際、誰が設備の状態を確認し、どの条件なら運転を止め、どの部署へ連絡するのかが決まっていなければ、表示が詳しくなったところで混乱は残る。",
+          "provider": "supabase",
+          "path": "morioki-normal/fec20c52781057ee--2b9b6f232f3a78a2ae726286f9cf69f8b6434a2863126c3812f2dfd76c7c6fb1.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/fec20c52781057ee--2b9b6f232f3a78a2ae726286f9cf69f8b6434a2863126c3812f2dfd76c7c6fb1.mp3",
+          "sha256": "2b9b6f232f3a78a2ae726286f9cf69f8b6434a2863126c3812f2dfd76c7c6fb1",
+          "bytes": 97581,
+          "duration": 12.102,
+          "targetReferences": [
+            "lesson/2026-10-22/immersion/2/1",
+            "lesson/2026-10-22/reading/2/1"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:16.342Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "492240c15b3c5765",
+          "text": "現場ごとの運転方法を踏まえて対応手順を定めるとともに、誤った警告が続く場合には設定を見直せるようにしておく必要がある。",
+          "provider": "supabase",
+          "path": "morioki-normal/492240c15b3c5765--cbedbb509b840f694bdc82804b8458d225b958417998afdb208525ba24c59f2e.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/492240c15b3c5765--cbedbb509b840f694bdc82804b8458d225b958417998afdb208525ba24c59f2e.mp3",
+          "sha256": "cbedbb509b840f694bdc82804b8458d225b958417998afdb208525ba24c59f2e",
+          "bytes": 79149,
+          "duration": 9.799,
+          "targetReferences": [
+            "lesson/2026-10-22/immersion/2/2",
+            "lesson/2026-10-22/reading/2/2"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:17.551Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "8d588e46c7ae1b92",
+          "text": "もっとも、こうした問題を理由に、データの収集そのものを否定すべきではない。",
+          "provider": "supabase",
+          "path": "morioki-normal/8d588e46c7ae1b92--564c659f8572e43211d9f63bda6270c29b4c9c1a0a0c25a741be91c969c41ccf.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/8d588e46c7ae1b92--564c659f8572e43211d9f63bda6270c29b4c9c1a0a0c25a741be91c969c41ccf.mp3",
+          "sha256": "564c659f8572e43211d9f63bda6270c29b4c9c1a0a0c25a741be91c969c41ccf",
+          "bytes": 46509,
+          "duration": 5.726,
+          "targetReferences": [
+            "lesson/2026-10-22/immersion/3/0",
+            "lesson/2026-10-22/reading/3/0"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:18.701Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "9eff420f93c6c623",
+          "text": "温度や振動を継続的に記録することは、経験だけでは気づきにくい変化を発見する手掛かりになる。",
+          "provider": "supabase",
+          "path": "morioki-normal/9eff420f93c6c623--de82172324a1f8c340158fc74b4a8aa5a4e866bcfaf43e2621fd634f8f563b16.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/9eff420f93c6c623--de82172324a1f8c340158fc74b4a8aa5a4e866bcfaf43e2621fd634f8f563b16.mp3",
+          "sha256": "de82172324a1f8c340158fc74b4a8aa5a4e866bcfaf43e2621fd634f8f563b16",
+          "bytes": 61677,
+          "duration": 7.631,
+          "targetReferences": [
+            "lesson/2026-10-22/immersion/3/1",
+            "lesson/2026-10-22/reading/3/1"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:19.763Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "73f8dd314e95827d",
+          "text": "ただし、記録された数値だけをもって原因を断定するわけにはいかない。",
+          "provider": "supabase",
+          "path": "morioki-normal/73f8dd314e95827d--086382f59743b14d51961b2654867db56d1d6f43b0a32ff98d7c0f6f5044d138.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/73f8dd314e95827d--086382f59743b14d51961b2654867db56d1d6f43b0a32ff98d7c0f6f5044d138.mp3",
+          "sha256": "086382f59743b14d51961b2654867db56d1d6f43b0a32ff98d7c0f6f5044d138",
+          "bytes": 43629,
+          "duration": 5.366,
+          "targetReferences": [
+            "lesson/2026-10-22/immersion/3/2",
+            "lesson/2026-10-22/reading/3/2"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:21.771Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "068599561b61356a",
+          "text": "設備の点検結果や作業条件と照らし合わせ、説明できる範囲と未確認の部分を区別することが欠かせない。",
+          "provider": "supabase",
+          "path": "morioki-normal/068599561b61356a--f49395122d813bd77b2bb2c4b0cf743b47789dbe2070c9c097c40c3569cdb008.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/068599561b61356a--f49395122d813bd77b2bb2c4b0cf743b47789dbe2070c9c097c40c3569cdb008.mp3",
+          "sha256": "f49395122d813bd77b2bb2c4b0cf743b47789dbe2070c9c097c40c3569cdb008",
+          "bytes": 68397,
+          "duration": 8.466,
+          "targetReferences": [
+            "lesson/2026-10-22/immersion/3/3",
+            "lesson/2026-10-22/reading/3/3"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:22.828Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "3fb93a4058c6a854",
+          "text": "スマート工場に必要なのは、機械をつなぐ技術に加え、数値が示していることを正しく読み取り、必要な人が行動できるようにする仕組みではないだろうか。「",
+          "provider": "supabase",
+          "path": "morioki-normal/3fb93a4058c6a854--ae88f6cb5fef80c7ab5145afe039f84615a0ddbbc09b59f8426830a9004247e6.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/3fb93a4058c6a854--ae88f6cb5fef80c7ab5145afe039f84615a0ddbbc09b59f8426830a9004247e6.mp3",
+          "sha256": "ae88f6cb5fef80c7ab5145afe039f84615a0ddbbc09b59f8426830a9004247e6",
+          "bytes": 93165,
+          "duration": 11.566,
+          "targetReferences": [
+            "lesson/2026-10-22/immersion/4/0",
+            "lesson/2026-10-22/reading/4/0"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:23.871Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "3ce97773896f024f",
+          "text": "見える」ことは判断の出発点にはなるが、それだけで安全な運用が完成するわけではない。",
+          "provider": "supabase",
+          "path": "morioki-normal/3ce97773896f024f--af489fa2ffe43f1389b869675c77de74f438f3e9001921f8368a7342c30ad892.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/3ce97773896f024f--af489fa2ffe43f1389b869675c77de74f438f3e9001921f8368a7342c30ad892.mp3",
+          "sha256": "af489fa2ffe43f1389b869675c77de74f438f3e9001921f8368a7342c30ad892",
+          "bytes": 56109,
+          "duration": 6.922,
+          "targetReferences": [
+            "lesson/2026-10-22/immersion/4/1",
+            "lesson/2026-10-22/reading/4/1"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:24.718Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "47659090acee410c",
+          "text": "本文の最後の二段落から読み取れる筆者の考えとして、最も適切なものはどれか。",
+          "provider": "supabase",
+          "path": "morioki-normal/47659090acee410c--479ddc31ce3aa29615e3c349ed313dbc73168ca6f483c2e88a0c3723f6d77300.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/47659090acee410c--479ddc31ce3aa29615e3c349ed313dbc73168ca6f483c2e88a0c3723f6d77300.mp3",
+          "sha256": "479ddc31ce3aa29615e3c349ed313dbc73168ca6f483c2e88a0c3723f6d77300",
+          "bytes": 54381,
+          "duration": 6.699,
+          "targetReferences": [
+            "lesson/2026-10-22/question/0"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:25.625Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "0604736f0a7fbc1b",
+          "text": "警告が多いと現場が混乱するため、温度や振動の継続的な記録はやめるべきだ。",
+          "provider": "supabase",
+          "path": "morioki-normal/0604736f0a7fbc1b--b16567badcbd3481168f504134540fca7a735cb86d7ccbc803fdf734b9270280.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/0604736f0a7fbc1b--b16567badcbd3481168f504134540fca7a735cb86d7ccbc803fdf734b9270280.mp3",
+          "sha256": "b16567badcbd3481168f504134540fca7a735cb86d7ccbc803fdf734b9270280",
+          "bytes": 54189,
+          "duration": 6.678,
+          "targetReferences": [
+            "lesson/2026-10-22/option/0/0"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:26.596Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "63fa1b352b67d551",
+          "text": "数値を詳しく表示できれば、点検結果や作業条件を確認しなくても安全に運用できる。",
+          "provider": "supabase",
+          "path": "morioki-normal/63fa1b352b67d551--538f14bfd97dfc15bd4918951439b5315c615b9323ced2c0e7edd7865a7e597f.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/63fa1b352b67d551--538f14bfd97dfc15bd4918951439b5315c615b9323ced2c0e7edd7865a7e597f.mp3",
+          "sha256": "538f14bfd97dfc15bd4918951439b5315c615b9323ced2c0e7edd7865a7e597f",
+          "bytes": 57453,
+          "duration": 7.085,
+          "targetReferences": [
+            "lesson/2026-10-22/option/1/0"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:27.631Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "c3a7fb6117bf1845",
+          "text": "データを判断の手掛かりとし、点検結果や作業条件と照らし合わせ、必要な人が行動できる仕組みを整えるべきだ。",
+          "provider": "supabase",
+          "path": "morioki-normal/c3a7fb6117bf1845--935965cfbe585210293dc3c829976f4ccd0110f24211dad317c45c8d984683e4.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/c3a7fb6117bf1845--935965cfbe585210293dc3c829976f4ccd0110f24211dad317c45c8d984683e4.mp3",
+          "sha256": "935965cfbe585210293dc3c829976f4ccd0110f24211dad317c45c8d984683e4",
+          "bytes": 73005,
+          "duration": 9.033,
+          "targetReferences": [
+            "lesson/2026-10-22/option/2/0"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:28.571Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "b55c1d4e7c411322",
+          "text": "設備をネットワークにつなげば原因も特定できるので、現場の判断や対応手順は不要になる。",
+          "provider": "supabase",
+          "path": "morioki-normal/b55c1d4e7c411322--b4835197f44203591524c3ec35bd4f8c5638873a96d64f8ecebc5fc845b0f842.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/b55c1d4e7c411322--b4835197f44203591524c3ec35bd4f8c5638873a96d64f8ecebc5fc845b0f842.mp3",
+          "sha256": "b4835197f44203591524c3ec35bd4f8c5638873a96d64f8ecebc5fc845b0f842",
+          "bytes": 56877,
+          "duration": 7.026,
+          "targetReferences": [
+            "lesson/2026-10-22/option/3/0"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:29.604Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "ebcb1354c5d73fb8",
+          "text": "そうにゅうする",
+          "provider": "daily",
+          "path": "japanese/2026-10-22/vocab-01--61c438296183065427b10010239cc996e9b026428336a142af76e31f01d022f6.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-10-22/vocab-01--61c438296183065427b10010239cc996e9b026428336a142af76e31f01d022f6.mp3",
+          "sha256": "61c438296183065427b10010239cc996e9b026428336a142af76e31f01d022f6",
+          "bytes": 16173,
+          "duration": 1.32,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-043f6c8ed74b/word"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "82aae17460be0640",
+          "text": "履歴を挿入する前に、対象の時点を確かめます。",
+          "provider": "daily",
+          "path": "japanese/2026-10-22/example-01--9f85275334355174198dd445924522dae493f8a58f6c6d2133aa1cdd45e39203.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-10-22/example-01--9f85275334355174198dd445924522dae493f8a58f6c6d2133aa1cdd45e39203.mp3",
+          "sha256": "9f85275334355174198dd445924522dae493f8a58f6c6d2133aa1cdd45e39203",
+          "bytes": 51885,
+          "duration": 4.296,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-043f6c8ed74b/example/0"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "1329423f6e8f2d63",
+          "text": "行を挿入する",
+          "provider": "supabase",
+          "path": "morioki-normal/1329423f6e8f2d63--0bc51696c77cbd46423a5ad6239a8ff955e772fd175a358380ed7ca164240706.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/1329423f6e8f2d63--0bc51696c77cbd46423a5ad6239a8ff955e772fd175a358380ed7ca164240706.mp3",
+          "sha256": "0bc51696c77cbd46423a5ad6239a8ff955e772fd175a358380ed7ca164240706",
+          "bytes": 13677,
+          "duration": 1.628,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-043f6c8ed74b/collocation/0"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:30.648Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "13f480bb4c101be7",
+          "text": "記録を挿入する",
+          "provider": "supabase",
+          "path": "morioki-normal/13f480bb4c101be7--25ee265fa5115e85e277a4af192d7168993650bafa33dea89626ce1f663f3251.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/13f480bb4c101be7--25ee265fa5115e85e277a4af192d7168993650bafa33dea89626ce1f663f3251.mp3",
+          "sha256": "25ee265fa5115e85e277a4af192d7168993650bafa33dea89626ce1f663f3251",
+          "bytes": 15213,
+          "duration": 1.814,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-043f6c8ed74b/collocation/1"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:31.607Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "813a45da050d4b7e",
+          "text": "しゅじゅ",
+          "provider": "daily",
+          "path": "japanese/2026-10-22/vocab-02--009f597bdeefe4c840511267e78f0ad78da221008cd725af73293cf91ae5a871.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-10-22/vocab-02--009f597bdeefe4c840511267e78f0ad78da221008cd725af73293cf91ae5a871.mp3",
+          "sha256": "009f597bdeefe4c840511267e78f0ad78da221008cd725af73293cf91ae5a871",
+          "bytes": 12141,
+          "duration": 0.984,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-83fde254ff68/word"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "b8b7891419429768",
+          "text": "種々の条件を整理してから、移行方法を決めます。",
+          "provider": "daily",
+          "path": "japanese/2026-10-22/example-02--0434e99c506aab920601b7d92e2b1e839a15e6ec3db26c4f22da7e24460900b4.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-10-22/example-02--0434e99c506aab920601b7d92e2b1e839a15e6ec3db26c4f22da7e24460900b4.mp3",
+          "sha256": "0434e99c506aab920601b7d92e2b1e839a15e6ec3db26c4f22da7e24460900b4",
+          "bytes": 50733,
+          "duration": 4.2,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-83fde254ff68/example/0"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "1472fc3d9ffa72d1",
+          "text": "種々の問題",
+          "provider": "supabase",
+          "path": "morioki-normal/1472fc3d9ffa72d1--fcabcd6ab9dff4adfc9b1da197b97ccb9d5c74ab33a5b7fb3f1f3a359f9c4e38.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/1472fc3d9ffa72d1--fcabcd6ab9dff4adfc9b1da197b97ccb9d5c74ab33a5b7fb3f1f3a359f9c4e38.mp3",
+          "sha256": "fcabcd6ab9dff4adfc9b1da197b97ccb9d5c74ab33a5b7fb3f1f3a359f9c4e38",
+          "bytes": 12525,
+          "duration": 1.477,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-83fde254ff68/collocation/0"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:32.556Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "2e8b7c3049418784",
+          "text": "種々の方法",
+          "provider": "supabase",
+          "path": "morioki-normal/2e8b7c3049418784--b6134f780d000b79b915410eb3a14c713fd2bcd69174562842ed0eaef52b0eb6.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/2e8b7c3049418784--b6134f780d000b79b915410eb3a14c713fd2bcd69174562842ed0eaef52b0eb6.mp3",
+          "sha256": "b6134f780d000b79b915410eb3a14c713fd2bcd69174562842ed0eaef52b0eb6",
+          "bytes": 13293,
+          "duration": 1.581,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-83fde254ff68/collocation/1"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:33.556Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "1024b6cc79b20a18",
+          "text": "たいしょする",
+          "provider": "daily",
+          "path": "japanese/2026-10-22/vocab-03--3cd80b54b82a5c29a94ec2903ac8fa503b078926b0e17d036bfa530f22023f09.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-10-22/vocab-03--3cd80b54b82a5c29a94ec2903ac8fa503b078926b0e17d036bfa530f22023f09.mp3",
+          "sha256": "3cd80b54b82a5c29a94ec2903ac8fa503b078926b0e17d036bfa530f22023f09",
+          "bytes": 15597,
+          "duration": 1.272,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-189e90a0d533/word"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "63f42371f2135abd",
+          "text": "目の前の不具合に対処しながら、根本の構造も見直します。",
+          "provider": "daily",
+          "path": "japanese/2026-10-22/example-03--960dd5fa608db38eca3c239bbef2a6fe7f137ad9cfa8f25d316912a6ce00cfe3.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-10-22/example-03--960dd5fa608db38eca3c239bbef2a6fe7f137ad9cfa8f25d316912a6ce00cfe3.mp3",
+          "sha256": "960dd5fa608db38eca3c239bbef2a6fe7f137ad9cfa8f25d316912a6ce00cfe3",
+          "bytes": 59085,
+          "duration": 4.896,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-189e90a0d533/example/0"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "081fa58bb3cddc1f",
+          "text": "問題に対処する",
+          "provider": "supabase",
+          "path": "morioki-normal/081fa58bb3cddc1f--20f9b1060e73b95e50c0af978c8af8e1b52fb51549fa762263b899e29cee5175.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/081fa58bb3cddc1f--20f9b1060e73b95e50c0af978c8af8e1b52fb51549fa762263b899e29cee5175.mp3",
+          "sha256": "20f9b1060e73b95e50c0af978c8af8e1b52fb51549fa762263b899e29cee5175",
+          "bytes": 15405,
+          "duration": 1.837,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-189e90a0d533/collocation/0"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:34.618Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "08ca4349315a397d",
+          "text": "状況に対処する",
+          "provider": "supabase",
+          "path": "morioki-normal/08ca4349315a397d--3a90f2db818580114edefc53bcf3b0705c48309db969dfc4ec3c3b984166c45b.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/08ca4349315a397d--3a90f2db818580114edefc53bcf3b0705c48309db969dfc4ec3c3b984166c45b.mp3",
+          "sha256": "3a90f2db818580114edefc53bcf3b0705c48309db969dfc4ec3c3b984166c45b",
+          "bytes": 15981,
+          "duration": 1.918,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-189e90a0d533/collocation/1"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:35.956Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "8b84f57eb44a1b52",
+          "text": "かきすて",
+          "provider": "daily",
+          "path": "japanese/2026-10-22/vocab-04--1c4e12169dac9d09c0ece2b292d549bcb186bb4291dac904e7daaec85caa13c9.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-10-22/vocab-04--1c4e12169dac9d09c0ece2b292d549bcb186bb4291dac904e7daaec85caa13c9.mp3",
+          "sha256": "1c4e12169dac9d09c0ece2b292d549bcb186bb4291dac904e7daaec85caa13c9",
+          "bytes": 15021,
+          "duration": 1.224,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-5ed0d0c156dc/word"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "19e4f6d22ecffe3e",
+          "text": "一度使う処理でも、書き捨てにせず意図を残します。",
+          "provider": "daily",
+          "path": "japanese/2026-10-22/example-04--7ca5a9a681ce623baec467df68c4c74415b5913b673e72a0c34697cc5562f130.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-10-22/example-04--7ca5a9a681ce623baec467df68c4c74415b5913b673e72a0c34697cc5562f130.mp3",
+          "sha256": "7ca5a9a681ce623baec467df68c4c74415b5913b673e72a0c34697cc5562f130",
+          "bytes": 51885,
+          "duration": 4.296,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-5ed0d0c156dc/example/0"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "0376e4b82d3feb0c",
+          "text": "書き捨てのコード",
+          "provider": "supabase",
+          "path": "morioki-normal/0376e4b82d3feb0c--5bd4f353819f9a664fa3efd508a867b92614580302949e95dd015cb3ebe6ea7e.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/0376e4b82d3feb0c--5bd4f353819f9a664fa3efd508a867b92614580302949e95dd015cb3ebe6ea7e.mp3",
+          "sha256": "5bd4f353819f9a664fa3efd508a867b92614580302949e95dd015cb3ebe6ea7e",
+          "bytes": 15405,
+          "duration": 1.837,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-5ed0d0c156dc/collocation/0"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:36.784Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "0d6037b8c72cd604",
+          "text": "書き捨てにしない",
+          "provider": "supabase",
+          "path": "morioki-normal/0d6037b8c72cd604--d4e2643d5972ee532c2380db9fc98a213654ebaca20d238318dbdd8c26a25091.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/0d6037b8c72cd604--d4e2643d5972ee532c2380db9fc98a213654ebaca20d238318dbdd8c26a25091.mp3",
+          "sha256": "d4e2643d5972ee532c2380db9fc98a213654ebaca20d238318dbdd8c26a25091",
+          "bytes": 13485,
+          "duration": 1.593,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-5ed0d0c156dc/collocation/1"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:37.710Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "152ef46bd3bf3c8f",
+          "text": "むちつじょ",
+          "provider": "daily",
+          "path": "japanese/2026-10-22/vocab-05--1d2a25ba477b0271c1d51a3ef81507bbf9f4f5177199e495631107f197e596e7.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-10-22/vocab-05--1d2a25ba477b0271c1d51a3ef81507bbf9f4f5177199e495631107f197e596e7.mp3",
+          "sha256": "1d2a25ba477b0271c1d51a3ef81507bbf9f4f5177199e495631107f197e596e7",
+          "bytes": 15597,
+          "duration": 1.272,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-faa5d627ef5b/word"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "846ce5c315163457",
+          "text": "小さな変更も、無秩序に重ねると把握が難しくなります。",
+          "provider": "daily",
+          "path": "japanese/2026-10-22/example-05--3c446cc58fb4f0cb03a9f1ddcea93b99640890c505efb5caffca0ecdaef04b87.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-10-22/example-05--3c446cc58fb4f0cb03a9f1ddcea93b99640890c505efb5caffca0ecdaef04b87.mp3",
+          "sha256": "3c446cc58fb4f0cb03a9f1ddcea93b99640890c505efb5caffca0ecdaef04b87",
+          "bytes": 61389,
+          "duration": 5.088,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-faa5d627ef5b/example/0"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "9794d6e733fb8b63",
+          "text": "無秩序に増える",
+          "provider": "supabase",
+          "path": "morioki-normal/9794d6e733fb8b63--91b828817a2663901d1d2a13cce9f8fb9e0f73b3707e32e2c423d701d4416341.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/9794d6e733fb8b63--91b828817a2663901d1d2a13cce9f8fb9e0f73b3707e32e2c423d701d4416341.mp3",
+          "sha256": "91b828817a2663901d1d2a13cce9f8fb9e0f73b3707e32e2c423d701d4416341",
+          "bytes": 14637,
+          "duration": 1.744,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-faa5d627ef5b/collocation/0"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:38.727Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "4823667b15abca9f",
+          "text": "無秩序な変更",
+          "provider": "supabase",
+          "path": "morioki-normal/4823667b15abca9f--61b60d47536cf466e18b1260eaeb8dbc7cdbe682d3f3f8f61d3564151176c4f2.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/4823667b15abca9f--61b60d47536cf466e18b1260eaeb8dbc7cdbe682d3f3f8f61d3564151176c4f2.mp3",
+          "sha256": "61b60d47536cf466e18b1260eaeb8dbc7cdbe682d3f3f8f61d3564151176c4f2",
+          "bytes": 14637,
+          "duration": 1.744,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-faa5d627ef5b/collocation/1"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:39.840Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "38f4dabf5e6e633b",
+          "text": "めいかい",
+          "provider": "daily",
+          "path": "japanese/2026-10-22/vocab-06--bb04e5f899fbcb6305592c7ae8b33fea9c652d57fe51a75b279b078c73bc8d74.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-10-22/vocab-06--bb04e5f899fbcb6305592c7ae8b33fea9c652d57fe51a75b279b078c73bc8d74.mp3",
+          "sha256": "bb04e5f899fbcb6305592c7ae8b33fea9c652d57fe51a75b279b078c73bc8d74",
+          "bytes": 14157,
+          "duration": 1.152,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-d814fdc72682/word"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "06486e132b7a12af",
+          "text": "責任の分担が明快なら、変更する場所を選びやすくなります。",
+          "provider": "daily",
+          "path": "japanese/2026-10-22/example-06--4474e7f47f26e45c8ca538e57279ac3210bd3c35d22ba81adad44403ccfecc4d.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-10-22/example-06--4474e7f47f26e45c8ca538e57279ac3210bd3c35d22ba81adad44403ccfecc4d.mp3",
+          "sha256": "4474e7f47f26e45c8ca538e57279ac3210bd3c35d22ba81adad44403ccfecc4d",
+          "bytes": 61389,
+          "duration": 5.088,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-d814fdc72682/example/0"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "b89df522f69406e6",
+          "text": "明快な説明",
+          "provider": "supabase",
+          "path": "morioki-normal/b89df522f69406e6--9fb46122231b6c9538dec700c630db7d24c1acc7bc2a1701aed2c9cf5967996b.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/b89df522f69406e6--9fb46122231b6c9538dec700c630db7d24c1acc7bc2a1701aed2c9cf5967996b.mp3",
+          "sha256": "9fb46122231b6c9538dec700c630db7d24c1acc7bc2a1701aed2c9cf5967996b",
+          "bytes": 14637,
+          "duration": 1.732,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-d814fdc72682/collocation/0"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:40.755Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "1026b00e0a93e2b2",
+          "text": "明快な方針",
+          "provider": "supabase",
+          "path": "morioki-normal/1026b00e0a93e2b2--e20d1fd291714c70f6a3df9ba1daa70b08045a145fbe5a94033ff37438853a9c.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/1026b00e0a93e2b2--e20d1fd291714c70f6a3df9ba1daa70b08045a145fbe5a94033ff37438853a9c.mp3",
+          "sha256": "e20d1fd291714c70f6a3df9ba1daa70b08045a145fbe5a94033ff37438853a9c",
+          "bytes": 13293,
+          "duration": 1.581,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-d814fdc72682/collocation/1"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:41.552Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "1a66dbcf20f5811b",
+          "text": "まれ",
+          "provider": "daily",
+          "path": "japanese/2026-10-22/vocab-07--68667cf3dae4c786e8847487bce4f9b8ebed820c31d16f619fecd019f6cfc80a.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-10-22/vocab-07--68667cf3dae4c786e8847487bce4f9b8ebed820c31d16f619fecd019f6cfc80a.mp3",
+          "sha256": "68667cf3dae4c786e8847487bce4f9b8ebed820c31d16f619fecd019f6cfc80a",
+          "bytes": 11853,
+          "duration": 0.96,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-d3cae8076bbf/word"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "c7014bf81c2fcfac",
+          "text": "まれな不整合でも、原因と影響を調べます。",
+          "provider": "daily",
+          "path": "japanese/2026-10-22/example-07--5b385e65c4b0c19d09b75c82b1d49e5da04d2a9d284851c2f63192e91e758b16.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-10-22/example-07--5b385e65c4b0c19d09b75c82b1d49e5da04d2a9d284851c2f63192e91e758b16.mp3",
+          "sha256": "5b385e65c4b0c19d09b75c82b1d49e5da04d2a9d284851c2f63192e91e758b16",
+          "bytes": 44973,
+          "duration": 3.72,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-d3cae8076bbf/example/0"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "a76178f5ac117149",
+          "text": "まれな事例",
+          "provider": "supabase",
+          "path": "morioki-normal/a76178f5ac117149--16c694ad49eccafd6442393c2c7550afe1e8158efa15e849475dd882a650db7c.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/a76178f5ac117149--16c694ad49eccafd6442393c2c7550afe1e8158efa15e849475dd882a650db7c.mp3",
+          "sha256": "16c694ad49eccafd6442393c2c7550afe1e8158efa15e849475dd882a650db7c",
+          "bytes": 12141,
+          "duration": 1.419,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-d3cae8076bbf/collocation/0"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:42.603Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "5606e0e72e65b8eb",
+          "text": "まれに起こる",
+          "provider": "supabase",
+          "path": "morioki-normal/5606e0e72e65b8eb--f66d0b914d10b60fdad08bccdfa0315f19eccd481ecbfb5a8e2eb03a02d44cb9.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/5606e0e72e65b8eb--f66d0b914d10b60fdad08bccdfa0315f19eccd481ecbfb5a8e2eb03a02d44cb9.mp3",
+          "sha256": "f66d0b914d10b60fdad08bccdfa0315f19eccd481ecbfb5a8e2eb03a02d44cb9",
+          "bytes": 12141,
+          "duration": 1.419,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-d3cae8076bbf/collocation/1"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:43.774Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "8e566d7f140b32eb",
+          "text": "しゅざいする",
+          "provider": "daily",
+          "path": "japanese/2026-10-22/vocab-08--c1272d08e58dda99cbc63b960721874d9f703baa579dac5f75b480f036f88a38.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-10-22/vocab-08--c1272d08e58dda99cbc63b960721874d9f703baa579dac5f75b480f036f88a38.mp3",
+          "sha256": "c1272d08e58dda99cbc63b960721874d9f703baa579dac5f75b480f036f88a38",
+          "bytes": 16461,
+          "duration": 1.344,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-f2bdeb7a3787/word"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "71e73d052d3f3121",
+          "text": "実装担当者を取材し、検証した範囲を確かめます。",
+          "provider": "daily",
+          "path": "japanese/2026-10-22/example-08--7089342bd81d84f1a232ee45cf4bb45a46ee30e85abf580fc9871c1e275d7ea7.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-10-22/example-08--7089342bd81d84f1a232ee45cf4bb45a46ee30e85abf580fc9871c1e275d7ea7.mp3",
+          "sha256": "7089342bd81d84f1a232ee45cf4bb45a46ee30e85abf580fc9871c1e275d7ea7",
+          "bytes": 53037,
+          "duration": 4.392,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-f2bdeb7a3787/example/0"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "ae968f59a84f86e5",
+          "text": "現場を取材する",
+          "provider": "supabase",
+          "path": "morioki-normal/ae968f59a84f86e5--be9e80dcbb13138558cee11c248a43036dfcf9a586a35d2e611a12807b17a572.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/ae968f59a84f86e5--be9e80dcbb13138558cee11c248a43036dfcf9a586a35d2e611a12807b17a572.mp3",
+          "sha256": "be9e80dcbb13138558cee11c248a43036dfcf9a586a35d2e611a12807b17a572",
+          "bytes": 14253,
+          "duration": 1.686,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-f2bdeb7a3787/collocation/0"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:44.806Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "ee29edda9e60cd5e",
+          "text": "取材を重ねる",
+          "provider": "supabase",
+          "path": "morioki-normal/ee29edda9e60cd5e--f126037dc857f9d7449f0fb33dbb292a9de14ad9e8ad55ba60f918ac279ae036.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/ee29edda9e60cd5e--f126037dc857f9d7449f0fb33dbb292a9de14ad9e8ad55ba60f918ac279ae036.mp3",
+          "sha256": "f126037dc857f9d7449f0fb33dbb292a9de14ad9e8ad55ba60f918ac279ae036",
+          "bytes": 14445,
+          "duration": 1.709,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-f2bdeb7a3787/collocation/1"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:45.854Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "1e0f1edde0a3e851",
+          "text": "ちゃくそう",
+          "provider": "daily",
+          "path": "japanese/2026-10-22/vocab-09--560def0a6a27e56eb54f39478593da7dc465553698cbcad7c18a78511cf68869.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-10-22/vocab-09--560def0a6a27e56eb54f39478593da7dc465553698cbcad7c18a78511cf68869.mp3",
+          "sha256": "560def0a6a27e56eb54f39478593da7dc465553698cbcad7c18a78511cf68869",
+          "bytes": 14157,
+          "duration": 1.152,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-daa87da894f1/word"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "ea5edc0b74b920a7",
+          "text": "現場の困り事から着想を得て、小さな試作を作りました。",
+          "provider": "daily",
+          "path": "japanese/2026-10-22/example-09--c17aa1ffd15fd70e6fa91791dcb7ec1034c432415506bf60825f8707ad74a1c2.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-10-22/example-09--c17aa1ffd15fd70e6fa91791dcb7ec1034c432415506bf60825f8707ad74a1c2.mp3",
+          "sha256": "c17aa1ffd15fd70e6fa91791dcb7ec1034c432415506bf60825f8707ad74a1c2",
+          "bytes": 60237,
+          "duration": 4.992,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-daa87da894f1/example/0"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "8414e7e469d37800",
+          "text": "着想を得る",
+          "provider": "supabase",
+          "path": "morioki-normal/8414e7e469d37800--7a52b6c9a910c5f9981e27ab78df2008caa69a7d7841d9103cc4076281fd157d.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/8414e7e469d37800--7a52b6c9a910c5f9981e27ab78df2008caa69a7d7841d9103cc4076281fd157d.mp3",
+          "sha256": "7a52b6c9a910c5f9981e27ab78df2008caa69a7d7841d9103cc4076281fd157d",
+          "bytes": 11757,
+          "duration": 1.373,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-daa87da894f1/collocation/0"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:47.728Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "6614c58a32a24a36",
+          "text": "着想につながる",
+          "provider": "supabase",
+          "path": "morioki-normal/6614c58a32a24a36--4c0a25a62a761c22ff1e3ec55b0ab6074700e0183afa87e9138e2fe848af6030.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/6614c58a32a24a36--4c0a25a62a761c22ff1e3ec55b0ab6074700e0183afa87e9138e2fe848af6030.mp3",
+          "sha256": "4c0a25a62a761c22ff1e3ec55b0ab6074700e0183afa87e9138e2fe848af6030",
+          "bytes": 14445,
+          "duration": 1.721,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-daa87da894f1/collocation/1"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:48.680Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "931d5fd65605535a",
+          "text": "そくおうせい",
+          "provider": "daily",
+          "path": "japanese/2026-10-22/vocab-10--b7e54f84c6ea09888ec5771b0d6aa683b4565f668b556335a2e891114456dfef.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-10-22/vocab-10--b7e54f84c6ea09888ec5771b0d6aa683b4565f668b556335a2e891114456dfef.mp3",
+          "sha256": "b7e54f84c6ea09888ec5771b0d6aa683b4565f668b556335a2e891114456dfef",
+          "bytes": 17613,
+          "duration": 1.44,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-f8adb8d9b8a7/word"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "f249336dca993d31",
+          "text": "即応性だけでなく、結果の適切さも確かめます。",
+          "provider": "daily",
+          "path": "japanese/2026-10-22/example-10--ce3b2afc4a53459ca0b4895569b7960b0d360f3b28f4e9ebcd262a5c26d20671.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-10-22/example-10--ce3b2afc4a53459ca0b4895569b7960b0d360f3b28f4e9ebcd262a5c26d20671.mp3",
+          "sha256": "ce3b2afc4a53459ca0b4895569b7960b0d360f3b28f4e9ebcd262a5c26d20671",
+          "bytes": 51885,
+          "duration": 4.296,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-f8adb8d9b8a7/example/0"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "7033a3ee0a66a99a",
+          "text": "即応性を保つ",
+          "provider": "supabase",
+          "path": "morioki-normal/7033a3ee0a66a99a--3f8c1b5659c5428cbaabcc72723d8d06786ddef296f87bf1f53031795a7f07fe.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/7033a3ee0a66a99a--3f8c1b5659c5428cbaabcc72723d8d06786ddef296f87bf1f53031795a7f07fe.mp3",
+          "sha256": "3f8c1b5659c5428cbaabcc72723d8d06786ddef296f87bf1f53031795a7f07fe",
+          "bytes": 15405,
+          "duration": 1.826,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-f8adb8d9b8a7/collocation/0"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:49.663Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "15ebbf0dfde70491",
+          "text": "即応性を高める",
+          "provider": "supabase",
+          "path": "morioki-normal/15ebbf0dfde70491--a3ced5ec8128befc5fe36f11053193de39e62790221f492641da73a97aa89e27.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/15ebbf0dfde70491--a3ced5ec8128befc5fe36f11053193de39e62790221f492641da73a97aa89e27.mp3",
+          "sha256": "a3ced5ec8128befc5fe36f11053193de39e62790221f492641da73a97aa89e27",
+          "bytes": 16365,
+          "duration": 1.965,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-f8adb8d9b8a7/collocation/1"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:50.711Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "82e62e9cdc0bac20",
+          "text": "どうこんする",
+          "provider": "daily",
+          "path": "japanese/2026-10-22/vocab-11--99b50856d64a204eb75e2f2afeff8da7fdab097caf2e544ce616e96925916590.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-10-22/vocab-11--99b50856d64a204eb75e2f2afeff8da7fdab097caf2e544ce616e96925916590.mp3",
+          "sha256": "99b50856d64a204eb75e2f2afeff8da7fdab097caf2e544ce616e96925916590",
+          "bytes": 16461,
+          "duration": 1.344,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-abf2ae14/word"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "43654c9b6c368537",
+          "text": "再現用の小さなデータを同梱し、使い方も記します。",
+          "provider": "daily",
+          "path": "japanese/2026-10-22/example-11--04a10fdadd518304a06eb864c9a927a235e724130e5633880fee2c89edb46378.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-10-22/example-11--04a10fdadd518304a06eb864c9a927a235e724130e5633880fee2c89edb46378.mp3",
+          "sha256": "04a10fdadd518304a06eb864c9a927a235e724130e5633880fee2c89edb46378",
+          "bytes": 57069,
+          "duration": 4.728,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-abf2ae14/example/0"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "3b2f64ba12d1290e",
+          "text": "資料を同梱する",
+          "provider": "supabase",
+          "path": "morioki-normal/3b2f64ba12d1290e--e7a66b236832c94e401f99e0ab2c0be12e92e5915665437299dc25bd28957349.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/3b2f64ba12d1290e--e7a66b236832c94e401f99e0ab2c0be12e92e5915665437299dc25bd28957349.mp3",
+          "sha256": "e7a66b236832c94e401f99e0ab2c0be12e92e5915665437299dc25bd28957349",
+          "bytes": 15021,
+          "duration": 1.779,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-abf2ae14/collocation/0"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:51.719Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "1204b4dbf28e1e3f",
+          "text": "例を同梱する",
+          "provider": "supabase",
+          "path": "morioki-normal/1204b4dbf28e1e3f--3e74b1561400b26cfb02cac6f6654aab7c5c7fa851fb8e6b49c21475c936d662.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/1204b4dbf28e1e3f--3e74b1561400b26cfb02cac6f6654aab7c5c7fa851fb8e6b49c21475c936d662.mp3",
+          "sha256": "3e74b1561400b26cfb02cac6f6654aab7c5c7fa851fb8e6b49c21475c936d662",
+          "bytes": 13869,
+          "duration": 1.651,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-abf2ae14/collocation/1"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:52.691Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "49247af9601c2cd5",
+          "text": "いっさい",
+          "provider": "daily",
+          "path": "japanese/2026-10-22/vocab-12--3e78322ae9fb30dd69e37b2e500d4c93bcf8e8b5abd240bf39015f466f19fbc6.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-10-22/vocab-12--3e78322ae9fb30dd69e37b2e500d4c93bcf8e8b5abd240bf39015f466f19fbc6.mp3",
+          "sha256": "3e78322ae9fb30dd69e37b2e500d4c93bcf8e8b5abd240bf39015f466f19fbc6",
+          "bytes": 12141,
+          "duration": 0.984,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-21d9abc3/word"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "e4eb32028405c19e",
+          "text": "公開資料には、秘密の値を一切含めません。",
+          "provider": "daily",
+          "path": "japanese/2026-10-22/example-12--068051af400e20119165da47f610ddcac9ee8ff98ac74e7d6c5652bc2db72074.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-10-22/example-12--068051af400e20119165da47f610ddcac9ee8ff98ac74e7d6c5652bc2db72074.mp3",
+          "sha256": "068051af400e20119165da47f610ddcac9ee8ff98ac74e7d6c5652bc2db72074",
+          "bytes": 48141,
+          "duration": 3.984,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-21d9abc3/example/0"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "3e0cb4f8e22631e4",
+          "text": "一切変更しない",
+          "provider": "supabase",
+          "path": "morioki-normal/3e0cb4f8e22631e4--b17f0a08eb6bd81048742183167ee82ea76c94e3f3fb50aa702e41463576db5e.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/3e0cb4f8e22631e4--b17f0a08eb6bd81048742183167ee82ea76c94e3f3fb50aa702e41463576db5e.mp3",
+          "sha256": "b17f0a08eb6bd81048742183167ee82ea76c94e3f3fb50aa702e41463576db5e",
+          "bytes": 14445,
+          "duration": 1.709,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-21d9abc3/collocation/0"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:53.572Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "8d89205e73efecea",
+          "text": "一切含めない",
+          "provider": "supabase",
+          "path": "morioki-normal/8d89205e73efecea--d15160847a7474cd875afa2f2e53d74be8f3bb59fa24f8c7f6e7c5a53a93ac9f.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/8d89205e73efecea--d15160847a7474cd875afa2f2e53d74be8f3bb59fa24f8c7f6e7c5a53a93ac9f.mp3",
+          "sha256": "d15160847a7474cd875afa2f2e53d74be8f3bb59fa24f8c7f6e7c5a53a93ac9f",
+          "bytes": 13293,
+          "duration": 1.57,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-21d9abc3/collocation/1"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:54.950Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "80b7725ca93c7de0",
+          "text": "いちよう",
+          "provider": "daily",
+          "path": "japanese/2026-10-22/vocab-13--1cfeb9c68fba4922fa392dbdaf5b8cb9be14f198ba49474b7166ea0be4b247da.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-10-22/vocab-13--1cfeb9c68fba4922fa392dbdaf5b8cb9be14f198ba49474b7166ea0be4b247da.mp3",
+          "sha256": "1cfeb9c68fba4922fa392dbdaf5b8cb9be14f198ba49474b7166ea0be4b247da",
+          "bytes": 13293,
+          "duration": 1.08,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-13a7a91/word"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "ffba71db40c089ef",
+          "text": "同じ方式でも、必要な条件は一様ではありません。",
+          "provider": "daily",
+          "path": "japanese/2026-10-22/example-13--66052bc2f45c106860aedb696a8b8f98eed09b74c316f67376550f8800fbc01f.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-10-22/example-13--66052bc2f45c106860aedb696a8b8f98eed09b74c316f67376550f8800fbc01f.mp3",
+          "sha256": "66052bc2f45c106860aedb696a8b8f98eed09b74c316f67376550f8800fbc01f",
+          "bytes": 56205,
+          "duration": 4.656,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-13a7a91/example/0"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "f2ea791ddb94f679",
+          "text": "一様ではない",
+          "provider": "supabase",
+          "path": "morioki-normal/f2ea791ddb94f679--595f570da9aa45c577ce5daf0e127fab2f0024a7ec9919e04c2de5757b767d7e.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/f2ea791ddb94f679--595f570da9aa45c577ce5daf0e127fab2f0024a7ec9919e04c2de5757b767d7e.mp3",
+          "sha256": "595f570da9aa45c577ce5daf0e127fab2f0024a7ec9919e04c2de5757b767d7e",
+          "bytes": 12717,
+          "duration": 1.511,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-13a7a91/collocation/0"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:55.994Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "1cc59f291180382d",
+          "text": "一様な結果",
+          "provider": "supabase",
+          "path": "morioki-normal/1cc59f291180382d--f1cb04b2e4feae1ff0098de497293dbd4deb8e73f3d72fc5e6c9c9fa98cd5356.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/1cc59f291180382d--f1cb04b2e4feae1ff0098de497293dbd4deb8e73f3d72fc5e6c9c9fa98cd5356.mp3",
+          "sha256": "f1cb04b2e4feae1ff0098de497293dbd4deb8e73f3d72fc5e6c9c9fa98cd5356",
+          "bytes": 13677,
+          "duration": 1.628,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-13a7a91/collocation/1"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:57.195Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "e7d84ceb7febd147",
+          "text": "けんしょうする",
+          "provider": "daily",
+          "path": "japanese/2026-08-12/vocab-07--6879988dfa0086fb52b8a1f25a5b19b8322dc9b7b757911e5a486cf42a8680b8.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-08-12/vocab-07--6879988dfa0086fb52b8a1f25a5b19b8322dc9b7b757911e5a486cf42a8680b8.mp3",
+          "sha256": "6879988dfa0086fb52b8a1f25a5b19b8322dc9b7b757911e5a486cf42a8680b8",
+          "bytes": 15885,
+          "duration": 1.243,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-a47c5cf6/word"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "7c7c8124f73fdb80",
+          "text": "検索結果の品質を実データで検証します。",
+          "provider": "daily",
+          "path": "japanese/2026-08-12/example-07--5ce3e28acf4b398dc0182a740f6947c245674edc53a6c29ba34de4e9fa5092ff.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-08-12/example-07--5ce3e28acf4b398dc0182a740f6947c245674edc53a6c29ba34de4e9fa5092ff.mp3",
+          "sha256": "5ce3e28acf4b398dc0182a740f6947c245674edc53a6c29ba34de4e9fa5092ff",
+          "bytes": 46989,
+          "duration": 3.819,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-a47c5cf6/example/0"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "6a3096e03c948f8c",
+          "text": "品質を検証する",
+          "provider": "supabase",
+          "path": "morioki-normal/6a3096e03c948f8c--d8a119e51a223303a3ef3faa75159c8834e25322f57eb28e15e0fffa635449b0.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/6a3096e03c948f8c--d8a119e51a223303a3ef3faa75159c8834e25322f57eb28e15e0fffa635449b0.mp3",
+          "sha256": "d8a119e51a223303a3ef3faa75159c8834e25322f57eb28e15e0fffa635449b0",
+          "bytes": 14637,
+          "duration": 1.744,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-a47c5cf6/collocation/0"
+          ],
+          "verified": true,
+          "method": "fresh full public GET",
+          "verifiedAt": "2026-10-22T03:11:11.958Z",
+          "proofPath": "/tmp/n1-day54-20261022/existing-day54-supabase-bytes.json"
+        },
+        {
+          "id": "647abe93bc0506f7",
+          "text": "仮説を検証する",
+          "provider": "supabase",
+          "path": "morioki-normal/647abe93bc0506f7--d43d1d422f5ae208381b67fb63a9428d8ba635c53e699d0efcd0c4d5aca40088.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/647abe93bc0506f7--d43d1d422f5ae208381b67fb63a9428d8ba635c53e699d0efcd0c4d5aca40088.mp3",
+          "sha256": "d43d1d422f5ae208381b67fb63a9428d8ba635c53e699d0efcd0c4d5aca40088",
+          "bytes": 15597,
+          "duration": 1.86,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-a47c5cf6/collocation/1"
+          ],
+          "verified": true,
+          "method": "fresh full public GET",
+          "verifiedAt": "2026-10-22T03:11:11.911Z",
+          "proofPath": "/tmp/n1-day54-20261022/existing-day54-supabase-bytes.json"
+        },
+        {
+          "id": "70ca79af0d45708b",
+          "text": "実データで検証する",
+          "provider": "supabase",
+          "path": "morioki-normal/70ca79af0d45708b--60432f92423f2e5b89a4bbbccb0ae6a91b88a14fa11059b60a651e65c52e830c.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/70ca79af0d45708b--60432f92423f2e5b89a4bbbccb0ae6a91b88a14fa11059b60a651e65c52e830c.mp3",
+          "sha256": "60432f92423f2e5b89a4bbbccb0ae6a91b88a14fa11059b60a651e65c52e830c",
+          "bytes": 17133,
+          "duration": 2.058,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-a47c5cf6/collocation/2"
+          ],
+          "verified": true,
+          "method": "fresh full public GET",
+          "verifiedAt": "2026-10-22T03:11:11.919Z",
+          "proofPath": "/tmp/n1-day54-20261022/existing-day54-supabase-bytes.json"
+        },
+        {
+          "id": "3834db411a080dad",
+          "text": "実験の条件と未検証範囲を残し、独立した追試はしていません。",
+          "provider": "supabase",
+          "path": "morioki-normal/3834db411a080dad--406c0e9c719cbd41174211d04b560f826c572d0e324da85206aacfa8b629cc5d.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/3834db411a080dad--406c0e9c719cbd41174211d04b560f826c572d0e324da85206aacfa8b629cc5d.mp3",
+          "sha256": "406c0e9c719cbd41174211d04b560f826c572d0e324da85206aacfa8b629cc5d",
+          "bytes": 44013,
+          "duration": 5.413,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-a47c5cf6/evidence/0"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:58.176Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "8018bd5648e885c2",
+          "text": "はんだんする",
+          "provider": "daily",
+          "path": "japanese/2026-08-13/vocab-08--900c19c4ccc4563be3d9b917ad98406e941982e26e15497f7c62353eee452f4c.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-08-13/vocab-08--900c19c4ccc4563be3d9b917ad98406e941982e26e15497f7c62353eee452f4c.mp3",
+          "sha256": "900c19c4ccc4563be3d9b917ad98406e941982e26e15497f7c62353eee452f4c",
+          "bytes": 15885,
+          "duration": 1.243,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-1e18d506/word"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "0c0006d35864dfbf",
+          "text": "判定モデルが軽量側で解けるかを判断します。",
+          "provider": "daily",
+          "path": "japanese/2026-08-13/example-08--d9bc33e39f22c3079dbd96ec3caecfce945df7151cbceff8c214e20cdc544425.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-08-13/example-08--d9bc33e39f22c3079dbd96ec3caecfce945df7151cbceff8c214e20cdc544425.mp3",
+          "sha256": "d9bc33e39f22c3079dbd96ec3caecfce945df7151cbceff8c214e20cdc544425",
+          "bytes": 47565,
+          "duration": 3.876,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-1e18d506/example/0"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "7e64f04430a3e160",
+          "text": "難易度を判断する",
+          "provider": "supabase",
+          "path": "morioki-normal/7e64f04430a3e160--abc2cb0a7ea5f840e57deb05c52ec0e61fb9bbd495294aabacf331fec09534c8.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/7e64f04430a3e160--abc2cb0a7ea5f840e57deb05c52ec0e61fb9bbd495294aabacf331fec09534c8.mp3",
+          "sha256": "abc2cb0a7ea5f840e57deb05c52ec0e61fb9bbd495294aabacf331fec09534c8",
+          "bytes": 15597,
+          "duration": 1.85,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-1e18d506/collocation/0"
+          ],
+          "verified": true,
+          "method": "fresh full public GET",
+          "verifiedAt": "2026-10-22T03:11:11.898Z",
+          "proofPath": "/tmp/n1-day54-20261022/existing-day54-supabase-bytes.json"
+        },
+        {
+          "id": "2258f5ca2a938026",
+          "text": "リスクを判断する",
+          "provider": "supabase",
+          "path": "morioki-normal/2258f5ca2a938026--7b79f24ab7b75fd640d9c84dc9fd9666dcb6da6a3a0fc75e2207e73d38c4422e.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/2258f5ca2a938026--7b79f24ab7b75fd640d9c84dc9fd9666dcb6da6a3a0fc75e2207e73d38c4422e.mp3",
+          "sha256": "7b79f24ab7b75fd640d9c84dc9fd9666dcb6da6a3a0fc75e2207e73d38c4422e",
+          "bytes": 15213,
+          "duration": 1.814,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-1e18d506/collocation/1"
+          ],
+          "verified": true,
+          "method": "fresh full public GET",
+          "verifiedAt": "2026-10-22T03:11:12.314Z",
+          "proofPath": "/tmp/n1-day54-20261022/existing-day54-supabase-bytes.json"
+        },
+        {
+          "id": "0bf39723892933b7",
+          "text": "判断基準を設ける",
+          "provider": "supabase",
+          "path": "morioki-normal/0bf39723892933b7--ba09043a0379a9ba2138dbf99e25ab41d1777f67c6ee21f9d6d24f63ca13a12a.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/0bf39723892933b7--ba09043a0379a9ba2138dbf99e25ab41d1777f67c6ee21f9d6d24f63ca13a12a.mp3",
+          "sha256": "ba09043a0379a9ba2138dbf99e25ab41d1777f67c6ee21f9d6d24f63ca13a12a",
+          "bytes": 16557,
+          "duration": 1.976,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-1e18d506/collocation/2"
+          ],
+          "verified": true,
+          "method": "fresh full public GET",
+          "verifiedAt": "2026-10-22T03:11:12.431Z",
+          "proofPath": "/tmp/n1-day54-20261022/existing-day54-supabase-bytes.json"
+        },
+        {
+          "id": "4b12a97e59c94d3a",
+          "text": "専用拡張を採用しなかった判断には測定があります。",
+          "provider": "supabase",
+          "path": "morioki-normal/4b12a97e59c94d3a--74de5773a4366f156f5e4343d374ac4b1ef958ef99520f883dd6e20930e340cb.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/4b12a97e59c94d3a--74de5773a4366f156f5e4343d374ac4b1ef958ef99520f883dd6e20930e340cb.mp3",
+          "sha256": "74de5773a4366f156f5e4343d374ac4b1ef958ef99520f883dd6e20930e340cb",
+          "bytes": 36333,
+          "duration": 4.449,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-1e18d506/evidence/0"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:10:59.249Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "4ed337bf34b5373b",
+          "text": "ただし",
+          "provider": "daily",
+          "path": "japanese/2026-09-07/vocab-18--2aafc6dc1194127543c1f0bfa0ad2dd510a10ed9e60218c7112521dd7259f938.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-09-07/vocab-18--2aafc6dc1194127543c1f0bfa0ad2dd510a10ed9e60218c7112521dd7259f938.mp3",
+          "sha256": "2aafc6dc1194127543c1f0bfa0ad2dd510a10ed9e60218c7112521dd7259f938",
+          "bytes": 13293,
+          "duration": 1.011,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-73083d1e/word"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "9cfcdcde6eef219a",
+          "text": "Latencyは改善しました。",
+          "provider": "supabase",
+          "path": "morioki-normal/9cfcdcde6eef219a--0cd458f122b048c1372126dd6d71d75547aa93f9fa4aa8feecc8101d13a7bc75.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/9cfcdcde6eef219a--0cd458f122b048c1372126dd6d71d75547aa93f9fa4aa8feecc8101d13a7bc75.mp3",
+          "sha256": "0cd458f122b048c1372126dd6d71d75547aa93f9fa4aa8feecc8101d13a7bc75",
+          "bytes": 19437,
+          "duration": 2.348,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-73083d1e/example/0"
+          ],
+          "verified": true,
+          "method": "fresh full public GET",
+          "verifiedAt": "2026-10-22T03:11:12.257Z",
+          "proofPath": "/tmp/n1-day54-20261022/existing-day54-supabase-bytes.json"
+        },
+        {
+          "id": "244114933ff37c1f",
+          "text": "ただし、一回の測定なので一般化できません。",
+          "provider": "supabase",
+          "path": "morioki-normal/244114933ff37c1f--1d2681bb091c4390464f6f0580fcf38df4e3bb8efcb8025754627d376c02490f.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/244114933ff37c1f--1d2681bb091c4390464f6f0580fcf38df4e3bb8efcb8025754627d376c02490f.mp3",
+          "sha256": "1d2681bb091c4390464f6f0580fcf38df4e3bb8efcb8025754627d376c02490f",
+          "bytes": 31725,
+          "duration": 3.868,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-73083d1e/example/1"
+          ],
+          "verified": true,
+          "method": "fresh full public GET",
+          "verifiedAt": "2026-10-22T03:11:12.305Z",
+          "proofPath": "/tmp/n1-day54-20261022/existing-day54-supabase-bytes.json"
+        },
+        {
+          "id": "6cc55d9f83bf4c4b",
+          "text": "ただし条件がある",
+          "provider": "supabase",
+          "path": "morioki-normal/6cc55d9f83bf4c4b--bd31d3f14058ec36386cb8b6bfb5d8e8c30041e30a7087ae314957b259ae06a8.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/6cc55d9f83bf4c4b--bd31d3f14058ec36386cb8b6bfb5d8e8c30041e30a7087ae314957b259ae06a8.mp3",
+          "sha256": "bd31d3f14058ec36386cb8b6bfb5d8e8c30041e30a7087ae314957b259ae06a8",
+          "bytes": 15021,
+          "duration": 1.79,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-73083d1e/collocation/0"
+          ],
+          "verified": true,
+          "method": "fresh full public GET",
+          "verifiedAt": "2026-10-22T03:11:12.698Z",
+          "proofPath": "/tmp/n1-day54-20261022/existing-day54-supabase-bytes.json"
+        },
+        {
+          "id": "3178af782af5c88c",
+          "text": "ただし注意が必要だ",
+          "provider": "supabase",
+          "path": "morioki-normal/3178af782af5c88c--dfb4b4fafdb7fd9de0402aa9a4c568f53cdccb660bcb9128e314abec0a846576.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/3178af782af5c88c--dfb4b4fafdb7fd9de0402aa9a4c568f53cdccb660bcb9128e314abec0a846576.mp3",
+          "sha256": "dfb4b4fafdb7fd9de0402aa9a4c568f53cdccb660bcb9128e314abec0a846576",
+          "bytes": 17709,
+          "duration": 2.116,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-73083d1e/collocation/1"
+          ],
+          "verified": true,
+          "method": "fresh full public GET",
+          "verifiedAt": "2026-10-22T03:11:12.839Z",
+          "proofPath": "/tmp/n1-day54-20261022/existing-day54-supabase-bytes.json"
+        },
+        {
+          "id": "5d7c90e4ebdd37c8",
+          "text": "ただし今回は",
+          "provider": "supabase",
+          "path": "morioki-normal/5d7c90e4ebdd37c8--92a7ddbefe0018d2ccbfc0393321ba4857a17fe84739b77fadac87e1905e02db.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/5d7c90e4ebdd37c8--92a7ddbefe0018d2ccbfc0393321ba4857a17fe84739b77fadac87e1905e02db.mp3",
+          "sha256": "92a7ddbefe0018d2ccbfc0393321ba4857a17fe84739b77fadac87e1905e02db",
+          "bytes": 13293,
+          "duration": 1.57,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-73083d1e/collocation/2"
+          ],
+          "verified": true,
+          "method": "fresh full public GET",
+          "verifiedAt": "2026-10-22T03:11:12.643Z",
+          "proofPath": "/tmp/n1-day54-20261022/existing-day54-supabase-bytes.json"
+        },
+        {
+          "id": "7152c8d4de5dd910",
+          "text": "ただし、ネイティブはReactコンポーネントで宣言し、Webは地図のインスタンスを操作するため、イベント形式や生成・破棄の処理まで同一になるわけではありません。",
+          "provider": "supabase",
+          "path": "morioki-normal/7152c8d4de5dd910--207f6bf1e0eb036c582308f98d96a1855d4c89e5d1533b57103527037beffd3f.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/7152c8d4de5dd910--207f6bf1e0eb036c582308f98d96a1855d4c89e5d1533b57103527037beffd3f.mp3",
+          "sha256": "207f6bf1e0eb036c582308f98d96a1855d4c89e5d1533b57103527037beffd3f",
+          "bytes": 95661,
+          "duration": 11.867,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-73083d1e/evidence/0"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:11:00.486Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "dd9695d1610aa495",
+          "text": "じっこうする",
+          "provider": "daily",
+          "path": "japanese/2026-08-15/vocab-06--bb0757f24e97c8b591f1636889600071af616be88a2bf3006f8313f7848d6bf9.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-08-15/vocab-06--bb0757f24e97c8b591f1636889600071af616be88a2bf3006f8313f7848d6bf9.mp3",
+          "sha256": "bb0757f24e97c8b591f1636889600071af616be88a2bf3006f8313f7848d6bf9",
+          "bytes": 16461,
+          "duration": 1.278,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-d898be90/word"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "48762d4bdf9688d7",
+          "text": "危険なCommandは隔離されたSandboxで実行します。",
+          "provider": "daily",
+          "path": "japanese/2026-08-15/example-06--a2b1eabedd2ea98f6a0c5ad13968fd62c0a7ddab5949c5cacc99e2e84894463d.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-08-15/example-06--a2b1eabedd2ea98f6a0c5ad13968fd62c0a7ddab5949c5cacc99e2e84894463d.mp3",
+          "sha256": "a2b1eabedd2ea98f6a0c5ad13968fd62c0a7ddab5949c5cacc99e2e84894463d",
+          "bytes": 52461,
+          "duration": 4.283,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-d898be90/example/0"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "e372e0278ef69873",
+          "text": "Commandを実行する",
+          "provider": "supabase",
+          "path": "morioki-normal/e372e0278ef69873--7595e572fff1f44703e30a4658dc74801806077c5aefbe22668889437e97ded4.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/e372e0278ef69873--7595e572fff1f44703e30a4658dc74801806077c5aefbe22668889437e97ded4.mp3",
+          "sha256": "7595e572fff1f44703e30a4658dc74801806077c5aefbe22668889437e97ded4",
+          "bytes": 15213,
+          "duration": 1.802,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-d898be90/collocation/0"
+          ],
+          "verified": true,
+          "method": "fresh full public GET",
+          "verifiedAt": "2026-10-22T03:11:12.787Z",
+          "proofPath": "/tmp/n1-day54-20261022/existing-day54-supabase-bytes.json"
+        },
+        {
+          "id": "22f79fcc1d4a1eb8",
+          "text": "Toolを実行する",
+          "provider": "supabase",
+          "path": "morioki-normal/22f79fcc1d4a1eb8--76b92098c2aa7d3d3f0942a722b9296c8c45c8715ef0733538eaa7599b45ea73.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/22f79fcc1d4a1eb8--76b92098c2aa7d3d3f0942a722b9296c8c45c8715ef0733538eaa7599b45ea73.mp3",
+          "sha256": "76b92098c2aa7d3d3f0942a722b9296c8c45c8715ef0733538eaa7599b45ea73",
+          "bytes": 14445,
+          "duration": 1.709,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-d898be90/collocation/1"
+          ],
+          "verified": true,
+          "method": "fresh full public GET",
+          "verifiedAt": "2026-10-22T03:11:13.217Z",
+          "proofPath": "/tmp/n1-day54-20261022/existing-day54-supabase-bytes.json"
+        },
+        {
+          "id": "de654d82ee8993c6",
+          "text": "処理を実行する",
+          "provider": "supabase",
+          "path": "morioki-normal/de654d82ee8993c6--26986462a913ade6e8e30752dcc3a1bedbdda6490f7353dacdb4a593af5d5ce3.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/de654d82ee8993c6--26986462a913ade6e8e30752dcc3a1bedbdda6490f7353dacdb4a593af5d5ce3.mp3",
+          "sha256": "26986462a913ade6e8e30752dcc3a1bedbdda6490f7353dacdb4a593af5d5ce3",
+          "bytes": 14253,
+          "duration": 1.698,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-d898be90/collocation/2"
+          ],
+          "verified": true,
+          "method": "fresh full public GET",
+          "verifiedAt": "2026-10-22T03:11:13.046Z",
+          "proofPath": "/tmp/n1-day54-20261022/existing-day54-supabase-bytes.json"
+        },
+        {
+          "id": "f3331154036225c0",
+          "text": "実行時にファイルを選ぶMetroとTypeScriptの既定の解決方法は違うので、型チェック用のファイルも用意しています。",
+          "provider": "supabase",
+          "path": "morioki-normal/f3331154036225c0--1a5340b9a6f099e73adcf29a851ba3a2421829a1a6411a9287d5a8bdfd850be3.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/f3331154036225c0--1a5340b9a6f099e73adcf29a851ba3a2421829a1a6411a9287d5a8bdfd850be3.mp3",
+          "sha256": "1a5340b9a6f099e73adcf29a851ba3a2421829a1a6411a9287d5a8bdfd850be3",
+          "bytes": 70317,
+          "duration": 8.71,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-d898be90/evidence/0"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:11:01.696Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "80b6f2c10e805ac5",
+          "text": "ひょうかする",
+          "provider": "daily",
+          "path": "japanese/2026-08-15/vocab-08--2c38e3ecba1061053fd3caa072f71b3c82609966685da6749d3a98415181f2e6.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-08-15/vocab-08--2c38e3ecba1061053fd3caa072f71b3c82609966685da6749d3a98415181f2e6.mp3",
+          "sha256": "2c38e3ecba1061053fd3caa072f71b3c82609966685da6749d3a98415181f2e6",
+          "bytes": 16461,
+          "duration": 1.278,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-66614293/word"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "dfdab207766f6db3",
+          "text": "Model性能だけでなくHarnessの安全性も評価します。",
+          "provider": "daily",
+          "path": "japanese/2026-08-15/example-08--f081d39e7f4210335bb596cdacdf4ccd8366da573056d4c97f65962c11c4b6ef.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-08-15/example-08--f081d39e7f4210335bb596cdacdf4ccd8366da573056d4c97f65962c11c4b6ef.mp3",
+          "sha256": "f081d39e7f4210335bb596cdacdf4ccd8366da573056d4c97f65962c11c4b6ef",
+          "bytes": 53901,
+          "duration": 4.399,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-66614293/example/0"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "18a0024320e0ab4f",
+          "text": "性能を評価する",
+          "provider": "supabase",
+          "path": "morioki-normal/18a0024320e0ab4f--89f67a457de8006dc24ae125c365aaf67856a04e873366e804415ec411853380.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/18a0024320e0ab4f--89f67a457de8006dc24ae125c365aaf67856a04e873366e804415ec411853380.mp3",
+          "sha256": "89f67a457de8006dc24ae125c365aaf67856a04e873366e804415ec411853380",
+          "bytes": 15021,
+          "duration": 1.779,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-66614293/collocation/0"
+          ],
+          "verified": true,
+          "method": "fresh full public GET",
+          "verifiedAt": "2026-10-22T03:11:13.704Z",
+          "proofPath": "/tmp/n1-day54-20261022/existing-day54-supabase-bytes.json"
+        },
+        {
+          "id": "6ad9c15b1c4875ef",
+          "text": "実務Taskで評価する",
+          "provider": "supabase",
+          "path": "morioki-normal/6ad9c15b1c4875ef--92be038cedf090253bcb45843f342a3dc32138adc923422d0ee81925ad0af560.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/6ad9c15b1c4875ef--92be038cedf090253bcb45843f342a3dc32138adc923422d0ee81925ad0af560.mp3",
+          "sha256": "92be038cedf090253bcb45843f342a3dc32138adc923422d0ee81925ad0af560",
+          "bytes": 17901,
+          "duration": 2.15,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-66614293/collocation/1"
+          ],
+          "verified": true,
+          "method": "fresh full public GET",
+          "verifiedAt": "2026-10-22T03:11:13.140Z",
+          "proofPath": "/tmp/n1-day54-20261022/existing-day54-supabase-bytes.json"
+        },
+        {
+          "id": "6f3339c8ffe56de4",
+          "text": "耐性を評価する",
+          "provider": "supabase",
+          "path": "morioki-normal/6f3339c8ffe56de4--54c0a736398d318259fdef78a5921969936945d56697bf91febe9355db9d3488.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/6f3339c8ffe56de4--54c0a736398d318259fdef78a5921969936945d56697bf91febe9355db9d3488.mp3",
+          "sha256": "54c0a736398d318259fdef78a5921969936945d56697bf91febe9355db9d3488",
+          "bytes": 15213,
+          "duration": 1.814,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-66614293/collocation/2"
+          ],
+          "verified": true,
+          "method": "fresh full public GET",
+          "verifiedAt": "2026-10-22T03:11:13.392Z",
+          "proofPath": "/tmp/n1-day54-20261022/existing-day54-supabase-bytes.json"
+        },
+        {
+          "id": "7c2878d30ac02947",
+          "text": "検索品質は、実データの6問を目視した確認と、架空の課題19件・文書6件に対する22問の評価を分けて読む必要があります。",
+          "provider": "supabase",
+          "path": "morioki-normal/7c2878d30ac02947--cc25a4c46ac4e1196f9e7f6f2ffd53c4cb80bec068a6eeb61407c5a54a36cbeb.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/7c2878d30ac02947--cc25a4c46ac4e1196f9e7f6f2ffd53c4cb80bec068a6eeb61407c5a54a36cbeb.mp3",
+          "sha256": "cc25a4c46ac4e1196f9e7f6f2ffd53c4cb80bec068a6eeb61407c5a54a36cbeb",
+          "bytes": 88749,
+          "duration": 11.008,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-66614293/evidence/0",
+            "lesson/2026-10-22/grammar/2026-10-22-g-study-f9bbc75/evidence/0"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:11:02.521Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "47683c348d510988",
+          "text": "うんよう",
+          "provider": "daily",
+          "path": "japanese/2026-08-12/vocab-01--0309949d36f58b3cf682035295c3ad80489fda71cfeab05ecb1f92d4279847f3.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-08-12/vocab-01--0309949d36f58b3cf682035295c3ad80489fda71cfeab05ecb1f92d4279847f3.mp3",
+          "sha256": "0309949d36f58b3cf682035295c3ad80489fda71cfeab05ecb1f92d4279847f3",
+          "bytes": 12717,
+          "duration": 0.976,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-966a7d9e/word"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "835fb283bd09f187",
+          "text": "本番運用ではLatencyとError Rateを継続的に確認します。",
+          "provider": "daily",
+          "path": "japanese/2026-08-12/example-01--6b972674d80d9c2079fe1381a33d895d591c9a435bdeb0fa34d62578f215b82c.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-08-12/example-01--6b972674d80d9c2079fe1381a33d895d591c9a435bdeb0fa34d62578f215b82c.mp3",
+          "sha256": "6b972674d80d9c2079fe1381a33d895d591c9a435bdeb0fa34d62578f215b82c",
+          "bytes": 63693,
+          "duration": 5.212,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-966a7d9e/example/0"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "3f1be8d835d8c55c",
+          "text": "本番運用",
+          "provider": "supabase",
+          "path": "morioki-normal/3f1be8d835d8c55c--18a148c373c28e0216edf446be4da735d71d41849d3d7abc3c47355961e88597.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/3f1be8d835d8c55c--18a148c373c28e0216edf446be4da735d71d41849d3d7abc3c47355961e88597.mp3",
+          "sha256": "18a148c373c28e0216edf446be4da735d71d41849d3d7abc3c47355961e88597",
+          "bytes": 12141,
+          "duration": 1.43,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-966a7d9e/collocation/0"
+          ],
+          "verified": true,
+          "method": "fresh full public GET",
+          "verifiedAt": "2026-10-22T03:11:13.457Z",
+          "proofPath": "/tmp/n1-day54-20261022/existing-day54-supabase-bytes.json"
+        },
+        {
+          "id": "208b7c66bbaf4b02",
+          "text": "運用コスト",
+          "provider": "supabase",
+          "path": "morioki-normal/208b7c66bbaf4b02--ad48645be2f70d06a211de203bc7b26b1e1ab99672301a02d59eb1ced2077d62.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/208b7c66bbaf4b02--ad48645be2f70d06a211de203bc7b26b1e1ab99672301a02d59eb1ced2077d62.mp3",
+          "sha256": "ad48645be2f70d06a211de203bc7b26b1e1ab99672301a02d59eb1ced2077d62",
+          "bytes": 11949,
+          "duration": 1.407,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-966a7d9e/collocation/1"
+          ],
+          "verified": true,
+          "method": "fresh full public GET",
+          "verifiedAt": "2026-10-22T03:11:13.535Z",
+          "proofPath": "/tmp/n1-day54-20261022/existing-day54-supabase-bytes.json"
+        },
+        {
+          "id": "2311cac9b8071785",
+          "text": "安定運用",
+          "provider": "supabase",
+          "path": "morioki-normal/2311cac9b8071785--b27d158309949331929a960ed114a3b298a4de392f98da745e69e404e1e9ed52.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/2311cac9b8071785--b27d158309949331929a960ed114a3b298a4de392f98da745e69e404e1e9ed52.mp3",
+          "sha256": "b27d158309949331929a960ed114a3b298a4de392f98da745e69e404e1e9ed52",
+          "bytes": 12333,
+          "duration": 1.442,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-966a7d9e/collocation/2"
+          ],
+          "verified": true,
+          "method": "fresh full public GET",
+          "verifiedAt": "2026-10-22T03:11:13.782Z",
+          "proofPath": "/tmp/n1-day54-20261022/existing-day54-supabase-bytes.json"
+        },
+        {
+          "id": "a655241504fb5399",
+          "text": "その同じ判断基準を使い、前日以降の作成・更新分を調べる日次チェックと、並列処理で過去分も調べる全件チェック用CLIを運用します。",
+          "provider": "supabase",
+          "path": "morioki-normal/a655241504fb5399--e5adfb69049afa6aa0f6f58b78a1a46865a88c501fac24342770ef2cc3a44dc3.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/a655241504fb5399--e5adfb69049afa6aa0f6f58b78a1a46865a88c501fac24342770ef2cc3a44dc3.mp3",
+          "sha256": "e5adfb69049afa6aa0f6f58b78a1a46865a88c501fac24342770ef2cc3a44dc3",
+          "bytes": 92589,
+          "duration": 11.484,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-966a7d9e/evidence/0"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:11:03.598Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "c737160ade649c66",
+          "text": "ほしょう",
+          "provider": "daily",
+          "path": "japanese/2026-08-16/vocab-04--ee9b50d1b819770b571822b9b99d399d9f4b65b9f7518f37ec7629602a818551.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-08-16/vocab-04--ee9b50d1b819770b571822b9b99d399d9f4b65b9f7518f37ec7629602a818551.mp3",
+          "sha256": "ee9b50d1b819770b571822b9b99d399d9f4b65b9f7518f37ec7629602a818551",
+          "bytes": 13581,
+          "duration": 1.034,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-68847e29/word"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "8a422c08f53f7094",
+          "text": "自動Testだけで完全な品質を保証できるとは限りません。",
+          "provider": "daily",
+          "path": "japanese/2026-08-16/example-04--d49f386095be7e97a6b20adf6e9508f26d4d14a45fe13fdfb15a89fea50f1241.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-08-16/example-04--d49f386095be7e97a6b20adf6e9508f26d4d14a45fe13fdfb15a89fea50f1241.mp3",
+          "sha256": "d49f386095be7e97a6b20adf6e9508f26d4d14a45fe13fdfb15a89fea50f1241",
+          "bytes": 56205,
+          "duration": 4.597,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-68847e29/example/0"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "b7c5487b1561fee7",
+          "text": "品質保証",
+          "provider": "supabase",
+          "path": "morioki-normal/b7c5487b1561fee7--5387d1d5464abf4d8fd3953a176efec152e4a1a3afdb2a2a02a995e1ddefe2ce.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/b7c5487b1561fee7--5387d1d5464abf4d8fd3953a176efec152e4a1a3afdb2a2a02a995e1ddefe2ce.mp3",
+          "sha256": "5387d1d5464abf4d8fd3953a176efec152e4a1a3afdb2a2a02a995e1ddefe2ce",
+          "bytes": 11757,
+          "duration": 1.384,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-68847e29/collocation/0"
+          ],
+          "verified": true,
+          "method": "fresh full public GET",
+          "verifiedAt": "2026-10-22T03:11:13.755Z",
+          "proofPath": "/tmp/n1-day54-20261022/existing-day54-supabase-bytes.json"
+        },
+        {
+          "id": "e4b258823a83a476",
+          "text": "互換性を保証する",
+          "provider": "supabase",
+          "path": "morioki-normal/e4b258823a83a476--5300e45c812a7e82517b13c38319f179902b2a0341bfc8cdaaf6446471ec4c0c.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/e4b258823a83a476--5300e45c812a7e82517b13c38319f179902b2a0341bfc8cdaaf6446471ec4c0c.mp3",
+          "sha256": "5300e45c812a7e82517b13c38319f179902b2a0341bfc8cdaaf6446471ec4c0c",
+          "bytes": 15213,
+          "duration": 1.813,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-68847e29/collocation/1"
+          ],
+          "verified": true,
+          "method": "fresh full public GET",
+          "verifiedAt": "2026-10-22T03:11:13.910Z",
+          "proofPath": "/tmp/n1-day54-20261022/existing-day54-supabase-bytes.json"
+        },
+        {
+          "id": "199ed96df3f3ba39",
+          "text": "動作保証",
+          "provider": "supabase",
+          "path": "morioki-normal/199ed96df3f3ba39--42172e1fbcaaad5aab127b83035fb736eddfe3fb683801ec464b76025ec6613c.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/199ed96df3f3ba39--42172e1fbcaaad5aab127b83035fb736eddfe3fb683801ec464b76025ec6613c.mp3",
+          "sha256": "42172e1fbcaaad5aab127b83035fb736eddfe3fb683801ec464b76025ec6613c",
+          "bytes": 11181,
+          "duration": 1.314,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-68847e29/collocation/2"
+          ],
+          "verified": true,
+          "method": "fresh full public GET",
+          "verifiedAt": "2026-10-22T03:11:14.038Z",
+          "proofPath": "/tmp/n1-day54-20261022/existing-day54-supabase-bytes.json"
+        },
+        {
+          "id": "db128c82d70d1956",
+          "text": "呼び直して読めたのは今回の順序での結果であり、呼び直した後の読み取り中に再び更新されない保証ではありません。",
+          "provider": "supabase",
+          "path": "morioki-normal/db128c82d70d1956--7ab4c4a6417e7b35523ac689d7a59a06bdbe56932b95e12e0a2a2a679902a41b.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/db128c82d70d1956--7ab4c4a6417e7b35523ac689d7a59a06bdbe56932b95e12e0a2a2a679902a41b.mp3",
+          "sha256": "7ab4c4a6417e7b35523ac689d7a59a06bdbe56932b95e12e0a2a2a679902a41b",
+          "bytes": 72045,
+          "duration": 8.907,
+          "targetReferences": [
+            "lesson/2026-10-22/vocabulary/2026-10-22-v-study-68847e29/evidence/0"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:11:04.894Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "d1a7a9688d956fac",
+          "text": "わけにはいかない",
+          "provider": "supabase",
+          "path": "morioki-normal/d1a7a9688d956fac--aa1a5a0a7cae08bea9ecabde9a3a4fa04bbfff92718d2e1d8b74bffb33715ecb.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/d1a7a9688d956fac--aa1a5a0a7cae08bea9ecabde9a3a4fa04bbfff92718d2e1d8b74bffb33715ecb.mp3",
+          "sha256": "aa1a5a0a7cae08bea9ecabde9a3a4fa04bbfff92718d2e1d8b74bffb33715ecb",
+          "bytes": 13293,
+          "duration": 1.581,
+          "targetReferences": [
+            "lesson/2026-10-22/grammar/2026-10-22-g-17ba976623ba/pattern"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:11:05.776Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "600ddb852175ee79",
+          "text": "旧実装へ戻す可能性があるので、今すぐ古いデータを消すわけにはいきません。",
+          "provider": "daily",
+          "path": "japanese/2026-10-22/grammar-example-01--247bb6b4292f4846d7d03fa279191094a9b21749942b555113a8af40fc2da92f.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-10-22/grammar-example-01--247bb6b4292f4846d7d03fa279191094a9b21749942b555113a8af40fc2da92f.mp3",
+          "sha256": "247bb6b4292f4846d7d03fa279191094a9b21749942b555113a8af40fc2da92f",
+          "bytes": 69453,
+          "duration": 5.76,
+          "targetReferences": [
+            "lesson/2026-10-22/grammar/2026-10-22-g-17ba976623ba/example/0"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "623cbc60238322bc",
+          "text": "に応じて",
+          "provider": "supabase",
+          "path": "morioki-normal/623cbc60238322bc--81807cf1c5c32862215f318a3849cfeb91868899eb021d90e01107a15638a505.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/623cbc60238322bc--81807cf1c5c32862215f318a3849cfeb91868899eb021d90e01107a15638a505.mp3",
+          "sha256": "81807cf1c5c32862215f318a3849cfeb91868899eb021d90e01107a15638a505",
+          "bytes": 11373,
+          "duration": 1.338,
+          "targetReferences": [
+            "lesson/2026-10-22/grammar/2026-10-22-g-study-4f13d335/pattern"
+          ],
+          "verified": true,
+          "method": "fresh full public GET",
+          "verifiedAt": "2026-10-22T03:11:14.076Z",
+          "proofPath": "/tmp/n1-day54-20261022/existing-day54-supabase-bytes.json"
+        },
+        {
+          "id": "a2bff230c32f04e4",
+          "text": "データの機密性に応じてCloudとLocal Modelを使い分けます。",
+          "provider": "daily",
+          "path": "japanese/2026-08-12/grammar-example-04--310dedda3a58dd3aeb153fbb2326144a3307da4ea6a17ede76b36109c051930f.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-08-12/grammar-example-04--310dedda3a58dd3aeb153fbb2326144a3307da4ea6a17ede76b36109c051930f.mp3",
+          "sha256": "310dedda3a58dd3aeb153fbb2326144a3307da4ea6a17ede76b36109c051930f",
+          "bytes": 59949,
+          "duration": 4.91,
+          "targetReferences": [
+            "lesson/2026-10-22/grammar/2026-10-22-g-study-4f13d335/example/0"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "6151a038210ec17c",
+          "text": "利用側が従来と同じ方法で子データへアクセスすると、その抽象がフィーチャーフラグに応じた処理を選びます。",
+          "provider": "supabase",
+          "path": "morioki-normal/6151a038210ec17c--8e61ab6d71c428b2051ba08edf155b6d110dec6f88013852d4a2ac9fa405c7a9.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/6151a038210ec17c--8e61ab6d71c428b2051ba08edf155b6d110dec6f88013852d4a2ac9fa405c7a9.mp3",
+          "sha256": "8e61ab6d71c428b2051ba08edf155b6d110dec6f88013852d4a2ac9fa405c7a9",
+          "bytes": 67245,
+          "duration": 8.326,
+          "targetReferences": [
+            "lesson/2026-10-22/grammar/2026-10-22-g-study-4f13d335/evidence/0"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:11:07.606Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "87025fcd43896a99",
+          "text": "つつ",
+          "provider": "supabase",
+          "path": "morioki-normal/87025fcd43896a99--e4ab28f0b9d3f99a4f3240099886987b2d2d744109e615a98491b6f3ec4c24c8.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/87025fcd43896a99--e4ab28f0b9d3f99a4f3240099886987b2d2d744109e615a98491b6f3ec4c24c8.mp3",
+          "sha256": "e4ab28f0b9d3f99a4f3240099886987b2d2d744109e615a98491b6f3ec4c24c8",
+          "bytes": 7533,
+          "duration": 0.862,
+          "targetReferences": [
+            "lesson/2026-10-22/grammar/2026-10-22-g-study-356b3c79/pattern"
+          ],
+          "verified": true,
+          "method": "fresh full public GET",
+          "verifiedAt": "2026-10-22T03:11:14.227Z",
+          "proofPath": "/tmp/n1-day54-20261022/existing-day54-supabase-bytes.json"
+        },
+        {
+          "id": "407a71fbbdcf1bcf",
+          "text": "品質を維持しつつ、Model Costを削減します。",
+          "provider": "daily",
+          "path": "japanese/2026-08-18/grammar-example-01--31c15f99bccd58c5c2dbd68c0b50f9fe01ec20695c7c2e24ed14ad79c4f10f83.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-08-18/grammar-example-01--31c15f99bccd58c5c2dbd68c0b50f9fe01ec20695c7c2e24ed14ad79c4f10f83.mp3",
+          "sha256": "31c15f99bccd58c5c2dbd68c0b50f9fe01ec20695c7c2e24ed14ad79c4f10f83",
+          "bytes": 44973,
+          "duration": 3.656,
+          "targetReferences": [
+            "lesson/2026-10-22/grammar/2026-10-22-g-study-356b3c79/example/0"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "db1f0d60e231ee94",
+          "text": "件名の言葉を忘れても症状を言い換えて探せるようにしつつ、課題キーや固有名詞に強い既存のキーワード検索は残しています。",
+          "provider": "supabase",
+          "path": "morioki-normal/db1f0d60e231ee94--27fe222b708e5068fbc43f31f4b6a7899c1216d8d0e6308f941a61ac70fdc5f5.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/db1f0d60e231ee94--27fe222b708e5068fbc43f31f4b6a7899c1216d8d0e6308f941a61ac70fdc5f5.mp3",
+          "sha256": "27fe222b708e5068fbc43f31f4b6a7899c1216d8d0e6308f941a61ac70fdc5f5",
+          "bytes": 76653,
+          "duration": 9.487,
+          "targetReferences": [
+            "lesson/2026-10-22/grammar/2026-10-22-g-study-356b3c79/evidence/0"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:11:09.199Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "600c20c2ccf5e9a6",
+          "text": "を踏まえて",
+          "provider": "supabase",
+          "path": "morioki-normal/600c20c2ccf5e9a6--99538a2030c75f1b3da8b65236f3a7aa164a1cc48ff10a09f0d3314e18f78b3a.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/600c20c2ccf5e9a6--99538a2030c75f1b3da8b65236f3a7aa164a1cc48ff10a09f0d3314e18f78b3a.mp3",
+          "sha256": "99538a2030c75f1b3da8b65236f3a7aa164a1cc48ff10a09f0d3314e18f78b3a",
+          "bytes": 10989,
+          "duration": 1.28,
+          "targetReferences": [
+            "lesson/2026-10-22/grammar/2026-10-22-g-study-1759f7c5/pattern"
+          ],
+          "verified": true,
+          "method": "fresh full public GET",
+          "verifiedAt": "2026-10-22T03:11:15.507Z",
+          "proofPath": "/tmp/n1-day54-20261022/existing-day54-supabase-bytes.json"
+        },
+        {
+          "id": "532e6e2afb3f7466",
+          "text": "Evaluation結果と契約条件を踏まえて、複数ProviderへのFallbackを設計します。",
+          "provider": "daily",
+          "path": "japanese/2026-08-30/grammar-example-02--e9e0b2de1a78ef4432ccc67c734dfee70747e547a80bfe6bc65dc4089939a202.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-08-30/grammar-example-02--e9e0b2de1a78ef4432ccc67c734dfee70747e547a80bfe6bc65dc4089939a202.mp3",
+          "sha256": "e9e0b2de1a78ef4432ccc67c734dfee70747e547a80bfe6bc65dc4089939a202",
+          "bytes": 80109,
+          "duration": 6.582,
+          "targetReferences": [
+            "lesson/2026-10-22/grammar/2026-10-22-g-study-1759f7c5/example/0"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "fc3d003527ef6c29",
+          "text": "これは各記事を踏まえた設計上の整理で、新たに得た測定結果ではありません。",
+          "provider": "supabase",
+          "path": "morioki-normal/fc3d003527ef6c29--3c4d7bd4121e5a448b74aeb84f5688ff47cac1641f26791b450a190c6b50e607.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/fc3d003527ef6c29--3c4d7bd4121e5a448b74aeb84f5688ff47cac1641f26791b450a190c6b50e607.mp3",
+          "sha256": "3c4d7bd4121e5a448b74aeb84f5688ff47cac1641f26791b450a190c6b50e607",
+          "bytes": 49773,
+          "duration": 6.144,
+          "targetReferences": [
+            "lesson/2026-10-22/grammar/2026-10-22-g-study-1759f7c5/evidence/0"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:11:10.332Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "0d8a443cad1f9e10",
+          "text": "をもとに",
+          "provider": "supabase",
+          "path": "morioki-normal/0d8a443cad1f9e10--96334374896eed4b7c1ad0b1f1247fe5039ed6b70da33312c5b81ab3866e0d55.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/0d8a443cad1f9e10--96334374896eed4b7c1ad0b1f1247fe5039ed6b70da33312c5b81ab3866e0d55.mp3",
+          "sha256": "96334374896eed4b7c1ad0b1f1247fe5039ed6b70da33312c5b81ab3866e0d55",
+          "bytes": 10413,
+          "duration": 1.21,
+          "targetReferences": [
+            "lesson/2026-10-22/grammar/2026-10-22-g-study-1673b8d8/pattern"
+          ],
+          "verified": true,
+          "method": "fresh full public GET",
+          "verifiedAt": "2026-10-22T03:11:14.353Z",
+          "proofPath": "/tmp/n1-day54-20261022/existing-day54-supabase-bytes.json"
+        },
+        {
+          "id": "a2d9a733eece79c7",
+          "text": "利用データをもとに、改善の傾向を調べます。",
+          "provider": "daily",
+          "path": "japanese/2026-09-16/grammar-example-02--ae57c4811ea3605430f29b9dbc6f0a6d83c5650f1f418edf5f0d068c277e9848.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-09-16/grammar-example-02--ae57c4811ea3605430f29b9dbc6f0a6d83c5650f1f418edf5f0d068c277e9848.mp3",
+          "sha256": "ae57c4811ea3605430f29b9dbc6f0a6d83c5650f1f418edf5f0d068c277e9848",
+          "bytes": 47853,
+          "duration": 3.89,
+          "targetReferences": [
+            "lesson/2026-10-22/grammar/2026-10-22-g-study-1673b8d8/example/0"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "bcd475a5531ed899",
+          "text": "記事が扱うopenAsBlobはファイルを基にしたBlobを返すため、作成時点と実際に読み取る時点を分ける必要があります。",
+          "provider": "supabase",
+          "path": "morioki-normal/bcd475a5531ed899--0e1f0364f099ee3984e141924c2e14a20f512cdc1633a947c64c85ae996ab489.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/bcd475a5531ed899--0e1f0364f099ee3984e141924c2e14a20f512cdc1633a947c64c85ae996ab489.mp3",
+          "sha256": "0e1f0364f099ee3984e141924c2e14a20f512cdc1633a947c64c85ae996ab489",
+          "bytes": 80301,
+          "duration": 9.952,
+          "targetReferences": [
+            "lesson/2026-10-22/grammar/2026-10-22-g-study-1673b8d8/evidence/0"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:11:11.278Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "d70df39f5bdd4b8b",
+          "text": "だけで",
+          "provider": "supabase",
+          "path": "morioki-normal/d70df39f5bdd4b8b--fe191703ade3d33e10c343e959f2e1b1f57f4907894c160291098ac3f7a59a02.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/d70df39f5bdd4b8b--fe191703ade3d33e10c343e959f2e1b1f57f4907894c160291098ac3f7a59a02.mp3",
+          "sha256": "fe191703ade3d33e10c343e959f2e1b1f57f4907894c160291098ac3f7a59a02",
+          "bytes": 10029,
+          "duration": 1.175,
+          "targetReferences": [
+            "lesson/2026-10-22/grammar/2026-10-22-g-study-48e1043d/pattern"
+          ],
+          "verified": true,
+          "method": "fresh full public GET",
+          "verifiedAt": "2026-10-22T03:11:14.480Z",
+          "proofPath": "/tmp/n1-day54-20261022/existing-day54-supabase-bytes.json"
+        },
+        {
+          "id": "aaa9d7650ab07629",
+          "text": "設定を変えるだけで、今回の三つの入力は遮断されました。",
+          "provider": "daily",
+          "path": "japanese/2026-10-01/grammar-example-02--fdef0362bb34fe894828fce5e27b18c1c4c251aa353e0717e71fb7e6e1b6b6c7.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-10-01/grammar-example-02--fdef0362bb34fe894828fce5e27b18c1c4c251aa353e0717e71fb7e6e1b6b6c7.mp3",
+          "sha256": "fdef0362bb34fe894828fce5e27b18c1c4c251aa353e0717e71fb7e6e1b6b6c7",
+          "bytes": 59661,
+          "duration": 4.874,
+          "targetReferences": [
+            "lesson/2026-10-22/grammar/2026-10-22-g-study-48e1043d/example/0"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "7152187071834c34",
+          "text": "キーワードと意味検索の順位を融合する方法も実装しましたが、追加した12問では意味検索だけで全問1位となり、融合の優位性を判別できませんでした。",
+          "provider": "supabase",
+          "path": "morioki-normal/7152187071834c34--9240956f2ec95c23fef63eea6c9d369fc716b1dda7172a90c60ec338c5cabbe5.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/7152187071834c34--9240956f2ec95c23fef63eea6c9d369fc716b1dda7172a90c60ec338c5cabbe5.mp3",
+          "sha256": "9240956f2ec95c23fef63eea6c9d369fc716b1dda7172a90c60ec338c5cabbe5",
+          "bytes": 95661,
+          "duration": 11.879,
+          "targetReferences": [
+            "lesson/2026-10-22/grammar/2026-10-22-g-study-48e1043d/evidence/0"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:11:12.449Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "daa6dea0ffb34f6c",
+          "text": "だけでなく",
+          "provider": "supabase",
+          "path": "morioki-normal/daa6dea0ffb34f6c--f1727d5472be84655481ebd214eddf88d4342be6c82906df49002d5732e2dde7.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/daa6dea0ffb34f6c--f1727d5472be84655481ebd214eddf88d4342be6c82906df49002d5732e2dde7.mp3",
+          "sha256": "f1727d5472be84655481ebd214eddf88d4342be6c82906df49002d5732e2dde7",
+          "bytes": 12141,
+          "duration": 1.431,
+          "targetReferences": [
+            "lesson/2026-10-22/grammar/2026-10-22-g-study-61aee9b6/pattern"
+          ],
+          "verified": true,
+          "method": "fresh full public GET",
+          "verifiedAt": "2026-10-22T03:11:14.667Z",
+          "proofPath": "/tmp/n1-day54-20261022/existing-day54-supabase-bytes.json"
+        },
+        {
+          "id": "a46251718155dad5",
+          "text": "音質だけでなく、同意管理と利用権も確認します。",
+          "provider": "daily",
+          "path": "japanese/2026-09-25/grammar-example-01--3eb6c6458f6896d5828376dac74ecb2126d58dd46e7fe8c4a769f9e62de3e6b5.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-09-25/grammar-example-01--3eb6c6458f6896d5828376dac74ecb2126d58dd46e7fe8c4a769f9e62de3e6b5.mp3",
+          "sha256": "3eb6c6458f6896d5828376dac74ecb2126d58dd46e7fe8c4a769f9e62de3e6b5",
+          "bytes": 56493,
+          "duration": 4.631,
+          "targetReferences": [
+            "lesson/2026-10-22/grammar/2026-10-22-g-study-61aee9b6/example/0"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "3b3cd40afdd632d6",
+          "text": "読む価値: 意味検索を導入するだけでなく、既存の操作を保つ方法、測定から構成を選ぶ理由、小さな評価の限界を具体的に説明できます。",
+          "provider": "supabase",
+          "path": "morioki-normal/3b3cd40afdd632d6--c41e75ef93fa9f177353dc4d1694c2b59edd392cb2b542237e6ebb293fef63dd.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/3b3cd40afdd632d6--c41e75ef93fa9f177353dc4d1694c2b59edd392cb2b542237e6ebb293fef63dd.mp3",
+          "sha256": "c41e75ef93fa9f177353dc4d1694c2b59edd392cb2b542237e6ebb293fef63dd",
+          "bytes": 95853,
+          "duration": 11.884,
+          "targetReferences": [
+            "lesson/2026-10-22/grammar/2026-10-22-g-study-61aee9b6/evidence/0"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:11:13.641Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "59e7d3ed773601c1",
+          "text": "に対して",
+          "provider": "supabase",
+          "path": "morioki-normal/59e7d3ed773601c1--2cacc017315b80ae6c2e827137175434617423c60482da5f8f98f4eab0759de4.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/59e7d3ed773601c1--2cacc017315b80ae6c2e827137175434617423c60482da5f8f98f4eab0759de4.mp3",
+          "sha256": "2cacc017315b80ae6c2e827137175434617423c60482da5f8f98f4eab0759de4",
+          "bytes": 11565,
+          "duration": 1.361,
+          "targetReferences": [
+            "lesson/2026-10-22/grammar/2026-10-22-g-study-f9bbc75/pattern"
+          ],
+          "verified": true,
+          "method": "fresh full public GET",
+          "verifiedAt": "2026-10-22T03:11:14.672Z",
+          "proofPath": "/tmp/n1-day54-20261022/existing-day54-supabase-bytes.json"
+        },
+        {
+          "id": "be974d9b3e947bdf",
+          "text": "管理者に対しても、同じアクセス制御を適用します。",
+          "provider": "daily",
+          "path": "japanese/2026-09-09/grammar-example-01--f61be0408d3234abb021c4ff5247eca90dd9d457d7fc7c6e4f27014890873a9f.mp3",
+          "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-09-09/grammar-example-01--f61be0408d3234abb021c4ff5247eca90dd9d457d7fc7c6e4f27014890873a9f.mp3",
+          "sha256": "f61be0408d3234abb021c4ff5247eca90dd9d457d7fc7c6e4f27014890873a9f",
+          "bytes": 51309,
+          "duration": 4.179,
+          "targetReferences": [
+            "lesson/2026-10-22/grammar/2026-10-22-g-study-f9bbc75/example/0"
+          ],
+          "verified": true,
+          "method": "prior full public GET with immutable path and SHA-256 equality",
+          "verifiedAt": "2026-10-22T02:16:34.3208346Z",
+          "proofPath": "/tmp/n1-day54-20261022/day54-r2-byte-evidence.json"
+        },
+        {
+          "id": "99d60adebb43ef3a",
+          "text": "题1|原Q5知识点・改编|漢字の読み",
+          "provider": "supabase",
+          "path": "morioki-normal/99d60adebb43ef3a--65b87db34782761ea011fb86ad6601fe80f774cbf9c9715b157e313fc96d194f.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/99d60adebb43ef3a--65b87db34782761ea011fb86ad6601fe80f774cbf9c9715b157e313fc96d194f.mp3",
+          "sha256": "65b87db34782761ea011fb86ad6601fe80f774cbf9c9715b157e313fc96d194f",
+          "bytes": 29613,
+          "duration": 3.613,
+          "targetReferences": [
+            "lesson/2026-10-22/review/0/title/0"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:11:14.715Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "1686ff5fc79d9803",
+          "text": "新しい装置を導入したものの、稼働状況はまだ芳しくない。",
+          "provider": "supabase",
+          "path": "morioki-normal/1686ff5fc79d9803--9c9ec3cef59fce17b1d6a47064fa1950626a0bfb170247db5c85bbcc94a2e338.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/1686ff5fc79d9803--9c9ec3cef59fce17b1d6a47064fa1950626a0bfb170247db5c85bbcc94a2e338.mp3",
+          "sha256": "9c9ec3cef59fce17b1d6a47064fa1950626a0bfb170247db5c85bbcc94a2e338",
+          "bytes": 39597,
+          "duration": 4.867,
+          "targetReferences": [
+            "lesson/2026-10-22/review/0/detail/0"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:11:17.134Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "e2304052264278b6",
+          "text": "出題対象「芳しくない」の読み方として最もよいものを選びなさい。",
+          "provider": "supabase",
+          "path": "morioki-normal/e2304052264278b6--ca4d4c08a1554e93735d3e8bd99e7de58cc391cb9f539d87960466c12c5ed051.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/e2304052264278b6--ca4d4c08a1554e93735d3e8bd99e7de58cc391cb9f539d87960466c12c5ed051.mp3",
+          "sha256": "ca4d4c08a1554e93735d3e8bd99e7de58cc391cb9f539d87960466c12c5ed051",
+          "bytes": 44013,
+          "duration": 5.402,
+          "targetReferences": [
+            "lesson/2026-10-22/review/0/detail/1"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:11:18.048Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "ae7829eaae88d946",
+          "text": "1 かんばしくない 2 よろしくない 3 ほうしくない 4 はなばなしくない",
+          "provider": "supabase",
+          "path": "morioki-normal/ae7829eaae88d946--298bec3b7ec135529976a2c2b4a1a5f4b5f9c4dfd30d2e6722cf72b073e31f22.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/ae7829eaae88d946--298bec3b7ec135529976a2c2b4a1a5f4b5f9c4dfd30d2e6722cf72b073e31f22.mp3",
+          "sha256": "298bec3b7ec135529976a2c2b4a1a5f4b5f9c4dfd30d2e6722cf72b073e31f22",
+          "bytes": 36909,
+          "duration": 4.53,
+          "targetReferences": [
+            "lesson/2026-10-22/review/0/detail/2"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:11:19.096Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "84f2855a8b551fc6",
+          "text": "题2|原Q9知识点・改编|語彙の文脈",
+          "provider": "supabase",
+          "path": "morioki-normal/84f2855a8b551fc6--a358a26f9af2ef12fe5ab530d9ed6cde01d26b1eea61befde5b72dcb8c0b19cf.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/84f2855a8b551fc6--a358a26f9af2ef12fe5ab530d9ed6cde01d26b1eea61befde5b72dcb8c0b19cf.mp3",
+          "sha256": "a358a26f9af2ef12fe5ab530d9ed6cde01d26b1eea61befde5b72dcb8c0b19cf",
+          "bytes": 29997,
+          "duration": 3.671,
+          "targetReferences": [
+            "lesson/2026-10-22/review/1/title/0"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:11:20.351Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "ebe58f281cb9b7d4",
+          "text": "両社の技術力は( )で、今回の案件をどちらが受注するか予想できない。",
+          "provider": "supabase",
+          "path": "morioki-normal/ebe58f281cb9b7d4--51da4a49d25ed404d7afddeebb4e1a27b28fd79e4b226a771cdd156c721447e9.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/ebe58f281cb9b7d4--51da4a49d25ed404d7afddeebb4e1a27b28fd79e4b226a771cdd156c721447e9.mp3",
+          "sha256": "51da4a49d25ed404d7afddeebb4e1a27b28fd79e4b226a771cdd156c721447e9",
+          "bytes": 46509,
+          "duration": 5.726,
+          "targetReferences": [
+            "lesson/2026-10-22/review/1/detail/0"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:11:21.532Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "87bd8ac078acc15c",
+          "text": "题3|原Q25知识点・改编|語の用法",
+          "provider": "supabase",
+          "path": "morioki-normal/87bd8ac078acc15c--1cd22311f477d4253af9aabf7163f38bdd1f2ab322d9c9f0d091ac2ba15af107.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/87bd8ac078acc15c--1cd22311f477d4253af9aabf7163f38bdd1f2ab322d9c9f0d091ac2ba15af107.mp3",
+          "sha256": "1cd22311f477d4253af9aabf7163f38bdd1f2ab322d9c9f0d091ac2ba15af107",
+          "bytes": 28845,
+          "duration": 3.509,
+          "targetReferences": [
+            "lesson/2026-10-22/review/2/title/0"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:11:22.616Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "b81ce77c4e0307a0",
+          "text": "「目まぐるしい」の使い方として最も自然なものはどれか。",
+          "provider": "supabase",
+          "path": "morioki-normal/b81ce77c4e0307a0--55cc49962112fc5a6ba448377833b29d941f8d1c72e1a1e83933c60744887924.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/b81ce77c4e0307a0--55cc49962112fc5a6ba448377833b29d941f8d1c72e1a1e83933c60744887924.mp3",
+          "sha256": "55cc49962112fc5a6ba448377833b29d941f8d1c72e1a1e83933c60744887924",
+          "bytes": 35565,
+          "duration": 4.346,
+          "targetReferences": [
+            "lesson/2026-10-22/review/2/detail/0"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:11:23.631Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "b0259d64ba1ede80",
+          "text": "1 目まぐるしい温度計を新しく買った。",
+          "provider": "supabase",
+          "path": "morioki-normal/b0259d64ba1ede80--3aac9dbf9049f04eaabba4e73873eee27006b3a93e6d040313e933e25a607694.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/b0259d64ba1ede80--3aac9dbf9049f04eaabba4e73873eee27006b3a93e6d040313e933e25a607694.mp3",
+          "sha256": "3aac9dbf9049f04eaabba4e73873eee27006b3a93e6d040313e933e25a607694",
+          "bytes": 25389,
+          "duration": 3.079,
+          "targetReferences": [
+            "lesson/2026-10-22/review/2/detail/1"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:11:24.631Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "d90921e948d313b5",
+          "text": "2 目まぐるしく変わる生産計画に対応する。",
+          "provider": "supabase",
+          "path": "morioki-normal/d90921e948d313b5--1b3f5fcdb5e1bd024235bd72cb5708defec4375587b97afae75003f099e974a0.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/d90921e948d313b5--1b3f5fcdb5e1bd024235bd72cb5708defec4375587b97afae75003f099e974a0.mp3",
+          "sha256": "1b3f5fcdb5e1bd024235bd72cb5708defec4375587b97afae75003f099e974a0",
+          "bytes": 29613,
+          "duration": 3.613,
+          "targetReferences": [
+            "lesson/2026-10-22/review/2/detail/2"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:11:25.575Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "a991159515122549",
+          "text": "3 この椅子は目まぐるしく重い。",
+          "provider": "supabase",
+          "path": "morioki-normal/a991159515122549--03bb4d447ecbb8a9ebe48095765cf00a33f3c0d7ba648f9efeb50fc58dcecfef.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/a991159515122549--03bb4d447ecbb8a9ebe48095765cf00a33f3c0d7ba648f9efeb50fc58dcecfef.mp3",
+          "sha256": "03bb4d447ecbb8a9ebe48095765cf00a33f3c0d7ba648f9efeb50fc58dcecfef",
+          "bytes": 21741,
+          "duration": 2.638,
+          "targetReferences": [
+            "lesson/2026-10-22/review/2/detail/3"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:11:26.560Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "2b2809f30d919ac7",
+          "text": "4 昨日は目まぐるしい眠りだった。",
+          "provider": "supabase",
+          "path": "morioki-normal/2b2809f30d919ac7--ed120bbf5976a43308facf06182d8b915a5e7c1db8985edb48540d6b253720da.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/2b2809f30d919ac7--ed120bbf5976a43308facf06182d8b915a5e7c1db8985edb48540d6b253720da.mp3",
+          "sha256": "ed120bbf5976a43308facf06182d8b915a5e7c1db8985edb48540d6b253720da",
+          "bytes": 23469,
+          "duration": 2.847,
+          "targetReferences": [
+            "lesson/2026-10-22/review/2/detail/4"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:11:27.580Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "3da34acdc28aa009",
+          "text": "题4|原Q38知识点・改编|文の組み立て",
+          "provider": "supabase",
+          "path": "morioki-normal/3da34acdc28aa009--6f1d18dd0dce34e00e860c8a4edc2a832dd2c8dd150f3ee809c81a0665bd1ecd.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/3da34acdc28aa009--6f1d18dd0dce34e00e860c8a4edc2a832dd2c8dd150f3ee809c81a0665bd1ecd.mp3",
+          "sha256": "6f1d18dd0dce34e00e860c8a4edc2a832dd2c8dd150f3ee809c81a0665bd1ecd",
+          "bytes": 32685,
+          "duration": 4.008,
+          "targetReferences": [
+            "lesson/2026-10-22/review/3/title/0"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:11:28.780Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "208a7be494567f98",
+          "text": "この仕組みは、長年現場で働いてきた ___ ___ ★ ___ といえる。",
+          "provider": "supabase",
+          "path": "morioki-normal/208a7be494567f98--2fdb5b645b43de45a737bf34649235b67238acf3a6e8edbc8cb8ec16f264a317.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/208a7be494567f98--2fdb5b645b43de45a737bf34649235b67238acf3a6e8edbc8cb8ec16f264a317.mp3",
+          "sha256": "2fdb5b645b43de45a737bf34649235b67238acf3a6e8edbc8cb8ec16f264a317",
+          "bytes": 35565,
+          "duration": 4.368,
+          "targetReferences": [
+            "lesson/2026-10-22/review/3/detail/0"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:11:30.041Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "52556e1ed8a808c2",
+          "text": "1 提案だ 2 彼 3 ならではの 4 実践的な",
+          "provider": "supabase",
+          "path": "morioki-normal/52556e1ed8a808c2--b613409ddf98ce5cd033781135407e8d19be7ea509f278823d1478ab1b46cdac.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/52556e1ed8a808c2--b613409ddf98ce5cd033781135407e8d19be7ea509f278823d1478ab1b46cdac.mp3",
+          "sha256": "b613409ddf98ce5cd033781135407e8d19be7ea509f278823d1478ab1b46cdac",
+          "bytes": 30765,
+          "duration": 3.752,
+          "targetReferences": [
+            "lesson/2026-10-22/review/3/detail/1"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:11:30.897Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "4931672131b352ad",
+          "text": "★に入る語句として最もよいものを選びなさい。",
+          "provider": "supabase",
+          "path": "morioki-normal/4931672131b352ad--b23b37c51ec61d02b8dfef37ead41270010d541c54b5c1ed77abf2ebd007e865.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/4931672131b352ad--b23b37c51ec61d02b8dfef37ead41270010d541c54b5c1ed77abf2ebd007e865.mp3",
+          "sha256": "b23b37c51ec61d02b8dfef37ead41270010d541c54b5c1ed77abf2ebd007e865",
+          "bytes": 29421,
+          "duration": 3.59,
+          "targetReferences": [
+            "lesson/2026-10-22/review/3/detail/2"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:11:31.851Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "46069e88bb538a3c",
+          "text": "まず四つを自然な順序に並べてから選ぶこと。",
+          "provider": "supabase",
+          "path": "morioki-normal/46069e88bb538a3c--bdfe386bbae7ada59ba28b5cddd308c183229a32f1adbbae3c68af24b329e892.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/46069e88bb538a3c--bdfe386bbae7ada59ba28b5cddd308c183229a32f1adbbae3c68af24b329e892.mp3",
+          "sha256": "bdfe386bbae7ada59ba28b5cddd308c183229a32f1adbbae3c68af24b329e892",
+          "bytes": 30765,
+          "duration": 3.752,
+          "targetReferences": [
+            "lesson/2026-10-22/review/3/detail/3"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:11:33.140Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "94f93cce7cbc50da",
+          "text": "ある観察装置は、対象物の細かな色の違いまでは安定して区別できない。",
+          "provider": "supabase",
+          "path": "morioki-normal/94f93cce7cbc50da--96ef76a60c0dbee970f8017f8eb9d4b0af0230357736b268303a54ad0dea892d.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/94f93cce7cbc50da--96ef76a60c0dbee970f8017f8eb9d4b0af0230357736b268303a54ad0dea892d.mp3",
+          "sha256": "96ef76a60c0dbee970f8017f8eb9d4b0af0230357736b268303a54ad0dea892d",
+          "bytes": 51693,
+          "duration": 6.364,
+          "targetReferences": [
+            "lesson/2026-10-22/review/4/detail/0"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:11:34.223Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "4ab329bab5a2d266",
+          "text": "しかし、明るさが急に変化したことは検知できる。",
+          "provider": "supabase",
+          "path": "morioki-normal/4ab329bab5a2d266--fa9fb4c8c92b19eebf1c640f4a34bb9ace384a73b4be078e4c569beec25a2845.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/4ab329bab5a2d266--fa9fb4c8c92b19eebf1c640f4a34bb9ace384a73b4be078e4c569beec25a2845.mp3",
+          "sha256": "fa9fb4c8c92b19eebf1c640f4a34bb9ace384a73b4be078e4c569beec25a2845",
+          "bytes": 35373,
+          "duration": 4.322,
+          "targetReferences": [
+            "lesson/2026-10-22/review/4/detail/1"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:11:35.579Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "bdcd5c33d0737297",
+          "text": "そのため、色ごとの分類を任せるのではなく、照明条件の変化を知らせる用途で使うことにした。",
+          "provider": "supabase",
+          "path": "morioki-normal/bdcd5c33d0737297--68915ea1e7011c6add9ab8a13b755b5d6823b3a59298270b7832969efad03fe1.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/bdcd5c33d0737297--68915ea1e7011c6add9ab8a13b755b5d6823b3a59298270b7832969efad03fe1.mp3",
+          "sha256": "68915ea1e7011c6add9ab8a13b755b5d6823b3a59298270b7832969efad03fe1",
+          "bytes": 60909,
+          "duration": 7.525,
+          "targetReferences": [
+            "lesson/2026-10-22/review/4/detail/2"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:11:36.639Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "61273e31cbbde7dd",
+          "text": "文章の内容と合うものはどれか。",
+          "provider": "supabase",
+          "path": "morioki-normal/61273e31cbbde7dd--6acef140772db5013c047f92fccb1a3276760c14c6a794b19241eb033d96f44a.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/61273e31cbbde7dd--6acef140772db5013c047f92fccb1a3276760c14c6a794b19241eb033d96f44a.mp3",
+          "sha256": "6acef140772db5013c047f92fccb1a3276760c14c6a794b19241eb033d96f44a",
+          "bytes": 21549,
+          "duration": 2.615,
+          "targetReferences": [
+            "lesson/2026-10-22/review/4/detail/3"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:11:37.718Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "bd9e75c76ed6ccab",
+          "text": "1 装置は色の細かな違いを最も正確に分類できる。",
+          "provider": "supabase",
+          "path": "morioki-normal/bd9e75c76ed6ccab--3fbea70fea1350c974233328961c6edc99fdbe00f227d772f27ee16bb4dfb7b9.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/bd9e75c76ed6ccab--3fbea70fea1350c974233328961c6edc99fdbe00f227d772f27ee16bb4dfb7b9.mp3",
+          "sha256": "3fbea70fea1350c974233328961c6edc99fdbe00f227d772f27ee16bb4dfb7b9",
+          "bytes": 40557,
+          "duration": 4.983,
+          "targetReferences": [
+            "lesson/2026-10-22/review/4/detail/4"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:11:38.592Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "ea5f1193c8171727",
+          "text": "2 装置は照明の明暗変化を検知できるので、その用途に使う。",
+          "provider": "supabase",
+          "path": "morioki-normal/ea5f1193c8171727--02b702708e79dfc24e4aae72ad2e859eb9adca719a5755734be3417768fa4896.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/ea5f1193c8171727--02b702708e79dfc24e4aae72ad2e859eb9adca719a5755734be3417768fa4896.mp3",
+          "sha256": "02b702708e79dfc24e4aae72ad2e859eb9adca719a5755734be3417768fa4896",
+          "bytes": 43437,
+          "duration": 5.332,
+          "targetReferences": [
+            "lesson/2026-10-22/review/4/detail/5"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:11:39.891Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "6b66c959827ada85",
+          "text": "3 装置は明るさの変化も、色の違いも全く検知できない。",
+          "provider": "supabase",
+          "path": "morioki-normal/6b66c959827ada85--d6614f481b94f671d0c3861a7b75f276d0abada2d2125b21ee5ed0cc2d56e1d8.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/6b66c959827ada85--d6614f481b94f671d0c3861a7b75f276d0abada2d2125b21ee5ed0cc2d56e1d8.mp3",
+          "sha256": "d6614f481b94f671d0c3861a7b75f276d0abada2d2125b21ee5ed0cc2d56e1d8",
+          "bytes": 44013,
+          "duration": 5.413,
+          "targetReferences": [
+            "lesson/2026-10-22/review/4/detail/6"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:11:40.854Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        },
+        {
+          "id": "d1c13e5a2f014966",
+          "text": "4 装置は検知結果だけで原因を必ず特定できる。",
+          "provider": "supabase",
+          "path": "morioki-normal/d1c13e5a2f014966--8ace7e4a99c2a4792b1ef2d173581c909f57ed45bddf1d23b978970877f7fd61.mp3",
+          "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/d1c13e5a2f014966--8ace7e4a99c2a4792b1ef2d173581c909f57ed45bddf1d23b978970877f7fd61.mp3",
+          "sha256": "8ace7e4a99c2a4792b1ef2d173581c909f57ed45bddf1d23b978970877f7fd61",
+          "bytes": 35181,
+          "duration": 4.309,
+          "targetReferences": [
+            "lesson/2026-10-22/review/4/detail/7"
+          ],
+          "verified": true,
+          "method": "existing worker full public GET after immutable upload",
+          "verifiedAt": "2026-10-22T03:11:41.900Z",
+          "proofPath": "/tmp/n1-day54-20261022/worker-day54-upload-proof.json"
+        }
+      ]
+    }
   },
   "previousAttempt": {
     "schemaVersion": 1,
@@ -218,6 +3235,6 @@
     "targetLessonPublished": false,
     "noMetadataChanged": true
   },
-  "updatedAt": "2026-10-22T03:09:57.263Z",
-  "nextAction": "Observe existing OS-locked worker; preserve schedule and candidates. No repair or repeat text request."
+  "updatedAt": "2026-10-22T03:15:39.953Z",
+  "nextAction": "No action; exact text, shared audio and unique audio verified."
 }
