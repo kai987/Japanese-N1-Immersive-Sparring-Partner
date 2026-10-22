@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-10-22",
   "day": 54,
-  "status": "validating",
-  "stage": "validating",
+  "status": "request_ready",
+  "stage": "request_ready",
   "sourceCommit": "49d3587dd173fcdb1278435bb8b5bf960020bcee",
   "upstreamSourceCommit": "49d3587dd173fcdb1278435bb8b5bf960020bcee",
   "sourceBlobSha": "db48eb27643652a52332546c72d829c827082bff",
@@ -15,6 +15,7 @@
   "sourcePresent": true,
   "upstreamTargetVerified": true,
   "lastError": null,
-  "nextStep": "Finish local gates and save exact canonical request before submitting",
-  "updatedAt": "2026-10-22T02:52:04.505Z"
+  "nextStep": "CAS submit exact complete canonical request",
+  "updatedAt": "2026-10-22T02:53:37.224Z",
+  "requestSha256": "3c2f8d9ef000cd244de427835595d5f7525af00a17e6b353de8fdfb34a63c41f"
 }
