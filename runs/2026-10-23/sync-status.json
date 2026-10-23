@@ -3,24 +3,25 @@
   "targetDate": "2026-10-23",
   "day": 55,
   "status": "waiting_source",
-  "stage": "source_missing",
+  "stage": "waiting_source",
   "requestSubmitted": false,
   "sourceSavedOnMain": false,
   "sourceCheckpointVerified": false,
   "sourceObservation": {
+    "n1Main": "fdadc14fc10cbde377688df51f288070992a300c",
     "mainSourceAbsent": true,
     "outboxAbsent": true,
-    "checkedAgainst": [
-      "main:n1-source/2026-10-23.md",
-      "automation/n1-progress:runs/2026-10-23/source.json"
-    ],
-    "observedAt": "2026-10-23T00:10:20.040Z"
+    "completeMainInventory": true,
+    "completeProgressInventory": true,
+    "requestTargetDate": "2026-10-22",
+    "observedAt": "2026-10-23T01:38:26.207Z"
   },
-  "lastError": {
-    "operation": "create_file progress outbox",
-    "classification": "OpenAI platform safety checks",
-    "message": "This tool call was blocked by OpenAI's safety checks. Please double check what you are sending."
-  },
-  "nextStep": "The full Day55 public source was delivered as a user-facing attachment, but no remotely readable original or checkpoint exists. Do not reconstruct from snippets or other dates. Requires original full-byte source in an authorized run before checkpoint and main promotion.",
-  "updatedAt": "2026-10-23T00:10:20.042Z"
+  "lastError": null,
+  "nextStep": "Wait for the exact Day55 original in n1-source or verified outbox; existing daily N1 entrypoints may resume. Do not reconstruct or reuse another date.",
+  "updatedAt": "2026-10-23T01:38:26.207Z",
+  "upstreamSourceCommit": "763b6f2f6840dcd8308f82b68eb3cdc79d0dc0d4",
+  "sourcePagesRunId": 39884560731,
+  "snapshotSha256": "417a226ca7446cec154329ff26d51dc0817e6ea5d566a4638b7ea80ee6f6e8c3",
+  "issueNumber": 73,
+  "totalDays": 73
 }
