@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-10-23",
   "day": 55,
-  "status": "waiting_upstream",
-  "stage": "waiting_upstream",
+  "status": "request_ready",
+  "stage": "request_ready",
   "requestSubmitted": false,
   "sourceSavedOnMain": true,
   "sourceCheckpointVerified": true,
@@ -16,11 +16,11 @@
     "observedAt": "2026-10-23T02:42:50.370Z"
   },
   "lastError": null,
-  "nextStep": "Source has been checkpointed and promoted byte-for-byte. Existing 11:00/12:00 N1 sync entrypoints must reverify successful same-day upstream publication, exact snapshot, build and Pages before reporting published. No rewrite of the original.",
-  "updatedAt": "2026-10-23T02:42:50.370Z",
-  "upstreamSourceCommit": "763b6f2f6840dcd8308f82b68eb3cdc79d0dc0d4",
-  "sourcePagesRunId": 39884560731,
-  "snapshotSha256": "417a226ca7446cec154329ff26d51dc0817e6ea5d566a4638b7ea80ee6f6e8c3",
+  "nextStep": "CAS submit exact complete canonical request",
+  "updatedAt": "2026-10-23T03:52:14.340Z",
+  "upstreamSourceCommit": "f870ab9a5554a6988b81806221bfadd298a651c9",
+  "sourcePagesRunId": 39896146200,
+  "snapshotSha256": "d79ec4b31ebba6cbbc86b12fa8715d22de8e9530353d1d8f95bb7a0996fbb34b",
   "issueNumber": 73,
   "totalDays": 73,
   "sourcePresent": true,
@@ -30,5 +30,8 @@
   "expectedSourceSha256": "61bc81669ed37955efa636af7518600f20033a04bdfca2090cd20d4e8da982d3",
   "expectedSourceBytes": 24671,
   "generatedAtJST": "2026-10-23T09:04:41+09:00",
-  "originalCommit": "b772fe733f765d5f741a6bc116a3dc36ea78b26a"
+  "originalCommit": "b772fe733f765d5f741a6bc116a3dc36ea78b26a",
+  "sourceCommit": "f870ab9a5554a6988b81806221bfadd298a651c9",
+  "upstreamTargetVerified": true,
+  "requestSha256": "34cc26feea24e1ed898bc093d0d6d2cfdce0575fb553db17e6fa892899f298f3"
 }
