@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "targetDate": "2026-10-23",
   "day": 55,
-  "status": "request_ready",
-  "stage": "request_ready",
-  "requestSubmitted": false,
+  "status": "validating",
+  "stage": "validating",
+  "requestSubmitted": true,
   "sourceSavedOnMain": true,
   "sourceCheckpointVerified": true,
   "sourceObservation": {
@@ -16,8 +16,8 @@
     "observedAt": "2026-10-23T02:42:50.370Z"
   },
   "lastError": null,
-  "nextStep": "CAS submit exact complete canonical request",
-  "updatedAt": "2026-10-23T03:52:14.340Z",
+  "nextStep": "Wait for canonical sync and exact N1 Pages; retain original and learning states",
+  "updatedAt": "2026-10-23T03:52:38.811Z",
   "upstreamSourceCommit": "f870ab9a5554a6988b81806221bfadd298a651c9",
   "sourcePagesRunId": 39896146200,
   "snapshotSha256": "d79ec4b31ebba6cbbc86b12fa8715d22de8e9530353d1d8f95bb7a0996fbb34b",
@@ -33,5 +33,11 @@
   "originalCommit": "b772fe733f765d5f741a6bc116a3dc36ea78b26a",
   "sourceCommit": "f870ab9a5554a6988b81806221bfadd298a651c9",
   "upstreamTargetVerified": true,
-  "requestSha256": "34cc26feea24e1ed898bc093d0d6d2cfdce0575fb553db17e6fa892899f298f3"
+  "requestSha256": "34cc26feea24e1ed898bc093d0d6d2cfdce0575fb553db17e6fa892899f298f3",
+  "requestCommit": "9d7d0099b0ea7df7d4fe179cbd2f15ad1119eb0d",
+  "requestBlobSha": "25b010fc569b5c7b0d1736249c0cd32d04227803",
+  "n1BaseCommit": "b772fe733f765d5f741a6bc116a3dc36ea78b26a",
+  "submittedAt": "2026-10-23T03:52:24.991Z",
+  "syncRunId": 39897308778,
+  "syncUrl": "https://github.com/kai987/Japanese-N1-Immersive-Sparring-Partner/actions/runs/39897308778"
 }
