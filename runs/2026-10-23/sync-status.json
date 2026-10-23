@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-10-23",
   "day": 55,
-  "status": "validating",
-  "stage": "validating",
+  "status": "published",
+  "stage": "published",
   "requestSubmitted": true,
   "sourceSavedOnMain": true,
   "sourceCheckpointVerified": true,
@@ -16,8 +16,8 @@
     "observedAt": "2026-10-23T02:42:50.370Z"
   },
   "lastError": null,
-  "nextStep": "Wait for canonical sync and exact N1 Pages; retain original and learning states",
-  "updatedAt": "2026-10-23T03:52:38.811Z",
+  "nextStep": "Text published. Verify independent shared audio and retain normal local-worker time/latch boundaries.",
+  "updatedAt": "2026-10-23T03:59:47.128Z",
   "upstreamSourceCommit": "f870ab9a5554a6988b81806221bfadd298a651c9",
   "sourcePagesRunId": 39896146200,
   "snapshotSha256": "d79ec4b31ebba6cbbc86b12fa8715d22de8e9530353d1d8f95bb7a0996fbb34b",
@@ -39,5 +39,91 @@
   "n1BaseCommit": "b772fe733f765d5f741a6bc116a3dc36ea78b26a",
   "submittedAt": "2026-10-23T03:52:24.991Z",
   "syncRunId": 39897308778,
-  "syncUrl": "https://github.com/kai987/Japanese-N1-Immersive-Sparring-Partner/actions/runs/39897308778"
+  "syncUrl": "https://github.com/kai987/Japanese-N1-Immersive-Sparring-Partner/actions/runs/39897308778",
+  "releaseCommit": "d016e0a2d4f408cd1554f2f69f64b2e779c471ce",
+  "pagesRunId": 39897485827,
+  "sourceUnchanged": true,
+  "rawVocabulary": 9,
+  "rawGrammar": 1,
+  "vocabulary": 20,
+  "grammar": 8,
+  "newVocabulary": 9,
+  "reviewVocabulary": 11,
+  "newGrammar": 1,
+  "reviewGrammar": 7,
+  "originalParagraphs": 5,
+  "readingOptions": 4,
+  "reviewQuestions": 5,
+  "verification": {
+    "pages": {
+      "label": "text",
+      "targetDate": "2026-10-23",
+      "day": 55,
+      "releaseCommit": "d016e0a2d4f408cd1554f2f69f64b2e779c471ce",
+      "pagesRunId": 39897485827,
+      "sourceCommit": "f870ab9a5554a6988b81806221bfadd298a651c9",
+      "sourceBlobSha": "740fc10023f75468678a90087824957f4d463ec8",
+      "snapshotSha256": "d79ec4b31ebba6cbbc86b12fa8715d22de8e9530353d1d8f95bb7a0996fbb34b",
+      "artifact": {
+        "id": 12477492328,
+        "name": "github-pages",
+        "digest": "sha256:21e89b70ace92bdbbad490d0c65a9b09bc73126995d414cd8bd939b4a0b34056"
+      },
+      "site": "/tmp/n1-day55-20261023/text-release-39897485827/site",
+      "checks": [
+        {
+          "path": "index.html",
+          "url": "https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/?acceptance=d016e0a2d4f408cd1554f2f69f64b2e779c471ce",
+          "sha256": "c7db8d41d0959f33b74db2c517e344874aa1246bdfdd1c5525f6047c44f2991c",
+          "bytes": 1596,
+          "attempt": 1
+        },
+        {
+          "path": "assets/index-6eWYEA79.js",
+          "url": "https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/assets/index-6eWYEA79.js?acceptance=d016e0a2d4f408cd1554f2f69f64b2e779c471ce",
+          "sha256": "5195cb25d6aaddffdceb2413f031bae8bd310271b45f54a4c3d992574f43b62e",
+          "bytes": 7019067,
+          "attempt": 1
+        },
+        {
+          "path": "assets/index-BpdupM-0.css",
+          "url": "https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/assets/index-BpdupM-0.css?acceptance=d016e0a2d4f408cd1554f2f69f64b2e779c471ce",
+          "sha256": "ae591cc4f64aac982210bb9f9a30a84e9aab4eb1a7a4aa290611892d99ac1d4e",
+          "bytes": 46788,
+          "attempt": 1
+        }
+      ],
+      "fullPublicAssetBytes": true,
+      "allOriginalParagraphsPresent": true,
+      "verifiedAt": "2026-10-23T03:56:37.252Z"
+    },
+    "live": {
+      "targetDate": "2026-10-23",
+      "day": 55,
+      "textCommit": "d016e0a2d4f408cd1554f2f69f64b2e779c471ce",
+      "titleVisible": true,
+      "dayVisible": true,
+      "issueVisible": true,
+      "paragraphs": 5,
+      "exactOriginalParagraphs": true,
+      "translations": 5,
+      "exactTranslations": true,
+      "analysis": 5,
+      "exactAnalysis": true,
+      "vocabulary": 20,
+      "newVocabulary": 9,
+      "reviewVocabulary": 11,
+      "grammar": 8,
+      "newGrammar": 1,
+      "reviewGrammar": 7,
+      "readingOptions": 4,
+      "answerExplanationHidden": true,
+      "reviewQuestions": 5,
+      "exactUnansweredReviews": false,
+      "verifiedAt": "2026-10-23T03:59:04.126Z",
+      "unansweredReviewsVerified": true,
+      "reviewDisplayNormalization": "SentenceAudio removes only the stored line breaks; question and option characters are preserved.",
+      "reviewAnswerLeakage": false
+    }
+  }
 }
