@@ -63,3 +63,9 @@ npm run audio:repair -- --dates 2026-10-20,2026-10-21 --evidence-dir /absolute/p
 同じOSロックを保持し、最新mainに対象日以外の未収録音声があれば生成・アップロード前に停止します。最大2時間で中断し、既存キャッシュと公開バイトの照合を再利用します。`schedule.json` は変更せず、生成済みキャッシュも削除しません。
 
 検証のstdout・stderr、終了情報、Playwright JSON/HTMLと失敗traceは指定した永続フォルダーに残します。鍵や環境変数はログに保存しません。音声4ファイルだけの通常push、正確なPagesコミットと実際の再生の検証を省略しません。
+
+## 録音終了後のアプリ終了
+
+録音バッチは日報と共通のOSロックで保護し、終了後はmacOSの通常終了APIでAivisSpeechを閉じます。画面操作に依存しないため、ロック画面でも終了要求を送れます。アプリとエンジンの終了を確認し、結果は進捗の `appCleanup` と `~/Library/Application Support/AivisSpeech Automation/last-shutdown.json` に残します。
+
+別の録音・接続中・未保存確認待ちの場合は終了を保留します。強制終了や未保存内容の破棄は行いません。録音、アップロード証明、復旧データ、確認時間帯は保持します。手動で安全な終了だけ再試行する場合は `python3 scripts/aivis-session.py --quit-only` を使います。この操作は音声生成やリモート確認を行いません。

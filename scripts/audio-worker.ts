@@ -118,19 +118,11 @@ async function ensureDailyCheckout(root: string, commit: string) {
   await run('git', ['checkout', '--detach', commit], path)
   return path
 }
-async function ensureEngine() {
-  const ready = async () => {
-    try { return (await fetch('http://127.0.0.1:10101/version', { signal: AbortSignal.any([abort.signal, AbortSignal.timeout(3000)]) })).ok } catch { return false }
-  }
-  if (await ready()) return
-  if (process.platform !== 'darwin') throw new Error('awaiting_local_engine: local AivisSpeech is unavailable')
-  await run('open', ['-g', '-a', 'AivisSpeech'])
-  for (let attempt = 0; attempt < 20; attempt++) {
-    if (abort.signal.aborted) throw new Error('Worker interrupted')
-    await delay(2000, undefined, { signal: abort.signal })
-    if (await ready()) return
-  }
-  throw new Error('awaiting_local_engine: AivisSpeech did not become ready')
+function shutdownEvidence(output: string) {
+  const line = output.split('\n').filter(line => line.startsWith('AIVIS_LIFECYCLE_JSON=')).at(-1)
+  if (!line) return { status: 'deferred', reason: 'missing_shutdown_evidence' }
+  try { return JSON.parse(line.slice('AIVIS_LIFECYCLE_JSON='.length)) as Record<string, unknown> }
+  catch { return { status: 'deferred', reason: 'invalid_shutdown_evidence' } }
 }
 async function verifyDeployment(commit: string, localDist?: string) {
   const path = `repos/${githubRepository}/actions/workflows/deploy-pages.yml/runs?head_sha=${commit}&branch=main&per_page=100`
@@ -214,6 +206,7 @@ export async function audioWorker(repair?: AudioRepair) {
   }
   let attempt = ''
   let diagnostics = ''
+  let usedEngine = false
   let claimed = false
   const claim = (reason: string) => {
     checkRunning()
@@ -284,8 +277,8 @@ export async function audioWorker(repair?: AudioRepair) {
         return
       }
       phase('generating', { pendingClips: missing.length })
-      await ensureEngine()
-      await runAudioValidation('python3', ['scripts/generate-audio.py', '--plan', planPath, '--work-dir', work, '--workers', '4'], { cwd: attempt, directory: join(diagnostics, 'generation'), signal: abort.signal, timeoutMs: Math.min(20 * 60_000, windowDeadline - Date.now()) })
+      usedEngine = true
+      await runAudioValidation('python3', [join(sourceRoot, 'scripts/aivis-session.py'), '--', 'python3', 'scripts/generate-audio.py', '--plan', planPath, '--work-dir', work, '--workers', '4'], { cwd: attempt, directory: join(diagnostics, 'generation'), signal: abort.signal, timeoutMs: Math.min(20 * 60_000, windowDeadline - Date.now()) })
       const candidate = readJson(join(work, 'manifest.json')) as Manifest
       const verified: Record<string, { path: string; sha256: string; bytes: number; verified: true }> = {}
       const helper = join(root, 'bin/n1-audio-keychain')
@@ -365,6 +358,26 @@ export async function audioWorker(repair?: AudioRepair) {
     if (!windowEnded) process.exitCode = 1
   } finally {
     clearTimeout(deadlineTimer)
+    if (usedEngine) {
+      const log = join(diagnostics, 'generation/stdout.log')
+      let cleanup = shutdownEvidence(existsSync(log) ? readFileSync(log, 'utf8') : '')
+      // A different batch may have been recording when synthesis finished.
+      // Retry only normal local cleanup; never restart synthesis or reset the latch.
+      if (cleanup.status !== 'closed' && !abort.signal.aborted) {
+        try {
+          const output = await runAudioValidation('python3', [join(sourceRoot, 'scripts/aivis-session.py'), '--quit-only'], {
+            cwd: sourceRoot, directory: join(diagnostics, 'shutdown'), timeoutMs: 45_000,
+          })
+          cleanup = shutdownEvidence(output)
+        } catch {
+          const shutdownLog = join(diagnostics, 'shutdown/stdout.log')
+          cleanup = shutdownEvidence(existsSync(shutdownLog) ? readFileSync(shutdownLog, 'utf8') : '')
+        }
+      }
+      state = { ...state, appCleanup: cleanup, updatedAt: new Date().toISOString() }
+      atomicJson(statePath, state)
+      console.log(JSON.stringify({ appCleanup: cleanup }))
+    }
     if (attempt) rmSync(attempt, { recursive: true, force: true })
     release()
   }
