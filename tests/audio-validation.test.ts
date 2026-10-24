@@ -13,13 +13,13 @@ async function directory(t: test.TestContext) {
 }
 const record = async (root: string) => JSON.parse(await readFile(join(root, 'run.json'), 'utf8'))
 
-async function waitForOutput(root: string, expected: string) {
+async function waitForOutput(root: string, stream: 'stdout' | 'stderr', expected: string) {
   for (let attempt = 0; attempt < 500; attempt++) {
-    try { if ((await readFile(join(root, 'stdout.log'), 'utf8')).includes(expected)) return }
+    try { if ((await readFile(join(root, `${stream}.log`), 'utf8')).includes(expected)) return }
     catch (error) { if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error }
     await delay(10)
   }
-  assert.fail('The validation fixture did not become ready')
+  assert.fail(`The validation fixture's ${stream} did not become ready`)
 }
 
 test('failed validation retains full stdout despite npm stderr notices, with both error tails', async t => {
@@ -65,22 +65,31 @@ test('successful validation returns stdout and preserves both complete streams a
   assert.equal(run.timedOut, false)
 })
 
-test('abort terminates the owned validation and keeps its pre-abort output', async t => {
-  const root = await directory(t), controller = new AbortController()
-  const result = runAudioValidation(process.execPath, ['-e', "process.stdout.write('ready\\n');process.stderr.write('before abort\\n');setInterval(()=>{},1000)"], {
-    cwd: root, directory: root, signal: controller.signal,
+for (const first of ['stdout', 'stderr'] as const) {
+  test(`abort terminates the owned validation and keeps its pre-abort output (${first} first)`, async t => {
+    const root = await directory(t), controller = new AbortController()
+    const second = first === 'stdout' ? 'stderr' : 'stdout'
+    const markers = { stdout: 'ready\n', stderr: 'before abort\n' }
+    // Separate the writes so observing one stream cannot imply the other is ready.
+    const script = `process.${first}.write(${JSON.stringify(markers[first])});setTimeout(()=>process.${second}.write(${JSON.stringify(markers[second])}),100);setInterval(()=>{},1000)`
+    const result = runAudioValidation(process.execPath, ['-e', script], {
+      cwd: root, directory: root, signal: controller.signal,
+    })
+    const rejected = assert.rejects(result, /validation failed \(aborted\)/)
+    await Promise.all([
+      waitForOutput(root, 'stdout', markers.stdout),
+      waitForOutput(root, 'stderr', markers.stderr),
+    ])
+    controller.abort('The reason is deliberately not stored in diagnostics')
+    await rejected
+    const run = await record(root)
+    assert.equal(run.aborted, true)
+    assert.equal(run.timedOut, false)
+    assert.ok(run.signal || run.exitCode !== 0)
+    assert.equal(await readFile(join(root, 'stdout.log'), 'utf8'), 'ready\n')
+    assert.equal(await readFile(join(root, 'stderr.log'), 'utf8'), 'before abort\n')
   })
-  const rejected = assert.rejects(result, /validation failed \(aborted\)/)
-  await waitForOutput(root, 'ready')
-  controller.abort('The reason is deliberately not stored in diagnostics')
-  await rejected
-  const run = await record(root)
-  assert.equal(run.aborted, true)
-  assert.equal(run.timedOut, false)
-  assert.ok(run.signal || run.exitCode !== 0)
-  assert.equal(await readFile(join(root, 'stdout.log'), 'utf8'), 'ready\n')
-  assert.equal(await readFile(join(root, 'stderr.log'), 'utf8'), 'before abort\n')
-})
+}
 
 test('a pre-aborted validation is recorded without starting a child', async t => {
   const root = await directory(t), controller = new AbortController()
