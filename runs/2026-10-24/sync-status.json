@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-10-24",
   "day": 56,
-  "status": "waiting_upstream",
-  "stage": "waiting_upstream",
+  "status": "waiting_request",
+  "stage": "request_ready",
   "sourceSavedOnMain": true,
   "sourceCheckpointVerified": true,
   "sourcePresent": true,
@@ -22,6 +22,20 @@
     "observedAt": "2026-10-24T00:02:30.563Z"
   },
   "lastError": null,
-  "nextStep": "Verify a completed same-day upstream deploy on main and the complete locked snapshot before composing the shared N1 sync request; do not regenerate or modify the original. 11:00 is a check, not a publication guarantee.",
-  "updatedAt": "2026-10-24T00:02:30.563Z"
+  "nextStep": "Submit complete source-bound request while shared slot is free",
+  "updatedAt": "2026-10-24T02:03:01.337Z",
+  "upstreamSourceCommit": "39401c4946538f9da9e604c877553d1d6916bd33",
+  "sourcePagesRunId": 40050806258,
+  "snapshotSha256": "c550f112d31b8cc4b7952a0655bf7bd882a9ab10d638497a8571762e0f4497f8",
+  "issueNumber": 74,
+  "totalDays": 74,
+  "requestSha256": "27cc7c5bcf748773f6e20b9bd8b6014a233fd42a40f981560d4eb4711633a1e0",
+  "localValidation": {
+    "content": true,
+    "unit": true,
+    "python": true,
+    "build": true,
+    "browserTests": 50,
+    "allPassed": true
+  }
 }
