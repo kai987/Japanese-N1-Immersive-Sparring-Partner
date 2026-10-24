@@ -23,7 +23,7 @@
   },
   "lastError": null,
   "nextStep": "Text complete; preserve uploaded unique clips and failed validation logs for the next scheduled worker window; no latch override",
-  "updatedAt": "2026-10-24T05:32:40.917Z",
+  "updatedAt": "2026-10-24T05:45:19.886415+00:00",
   "upstreamSourceCommit": "39401c4946538f9da9e604c877553d1d6916bd33",
   "sourcePagesRunId": 40050806258,
   "snapshotSha256": "c550f112d31b8cc4b7952a0655bf7bd882a9ab10d638497a8571762e0f4497f8",
@@ -167,13 +167,14 @@
     "livePlaybackSamples": 4,
     "codeFixCommit": "9b8526d0dc3309571fc1de2b21ceaf555ade0102",
     "appCleanup": {
-      "stage": "awaiting_unlock",
-      "recordingBatchFinished": true,
-      "activeOtherRecordingTasksObserved": false,
-      "normalNativeQuitBlockedBy": "Mac locked",
-      "userUnlockRequested": true,
-      "appQuitVerified": false,
-      "engineExitVerified": false
+      "stage": "quit_verified",
+      "verifiedAt": "2026-10-24T05:45:19.886415+00:00",
+      "method": "Cua native AivisSpeech menu > Quit AivisSpeech",
+      "appQuitVerified": true,
+      "engineExitVerified": true,
+      "forceQuitUsed": false,
+      "unsavedProjectDiscarded": false,
+      "recordingsAndRecoveryDataPreserved": true
     }
   }
 }
