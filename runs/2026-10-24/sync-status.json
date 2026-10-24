@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "targetDate": "2026-10-24",
+  "day": 56,
+  "status": "waiting_upstream",
+  "stage": "waiting_upstream",
+  "sourceSavedOnMain": true,
+  "sourceCheckpointVerified": true,
+  "sourcePresent": true,
+  "requestSubmitted": false,
+  "sourceSha256": "b443a634b2abe20a9f340ac8ce4afb6021475f17828d0eb13e155a2309a89ea7",
+  "sourceBlobSha": "977a483ea206dcdaeb167f84c5ff106d10f6dcf4",
+  "sourceCheckpointBlobSha": "eaa4ce3863b6992bdeec8a5d24050319d6095c40",
+  "expectedSourceBytes": 25271,
+  "generatedAtJST": "2026-10-24T09:00:20+09:00",
+  "mainSourceCommit": "5a152d5eed597748756488f45bc2b466be9176a1",
+  "sourceObservation": {
+    "mainSourcePresent": true,
+    "outboxVerified": true,
+    "exactSourceBytes": 25271,
+    "sourceSha256": "b443a634b2abe20a9f340ac8ce4afb6021475f17828d0eb13e155a2309a89ea7",
+    "observedAt": "2026-10-24T00:02:30.563Z"
+  },
+  "lastError": null,
+  "nextStep": "Verify a completed same-day upstream deploy on main and the complete locked snapshot before composing the shared N1 sync request; do not regenerate or modify the original. 11:00 is a check, not a publication guarantee.",
+  "updatedAt": "2026-10-24T00:02:30.563Z"
+}
