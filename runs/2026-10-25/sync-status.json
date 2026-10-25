@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-10-25",
   "day": 57,
-  "status": "validating",
-  "stage": "validating",
+  "status": "published",
+  "stage": "published",
   "requestSubmitted": true,
   "sourceSavedOnMain": true,
   "sourceCheckpointVerified": true,
@@ -17,8 +17,8 @@
   "generatedAtJST": "2026-10-25T09:02:20+09:00",
   "upstreamTargetVerified": false,
   "lastError": null,
-  "nextStep": "Verify exact sync run, final lesson+snapshot commit, Pages and live target date",
-  "updatedAt": "2026-10-25T01:42:20.812Z",
+  "nextStep": "Text published and live Day57 verified. Daily audio failed duration gate; preserve generated recordings and wait for reviewed resolution before shared follow-up. Keep N1 worker original schedule/latch.",
+  "updatedAt": "2026-10-25T01:48:50.029Z",
   "upstreamSourceCommit": "d3c98532e3622a23c36b08c0885630f1e53a4b5f",
   "sourcePagesRunId": 40151189910,
   "snapshotSha256": "4190a054028ba509977b530491ac60295f17605fd78b431c102c9573d9f6049e",
@@ -34,5 +34,127 @@
     "allPassed": true
   },
   "requestCommit": "c4202715f0257d069115b4bf838279d84dadecb9",
-  "requestBlobSha": "74c0720cb00752b45747a983d6cb62ec45de6232"
+  "requestBlobSha": "74c0720cb00752b45747a983d6cb62ec45de6232",
+  "publishedCommit": "3aa677d258d213e32890fe62d1ec8835fe673aea",
+  "pagesRunId": 40151809197,
+  "textVerification": {
+    "label": "text",
+    "targetDate": "2026-10-25",
+    "day": 57,
+    "releaseCommit": "3aa677d258d213e32890fe62d1ec8835fe673aea",
+    "pagesRunId": 40151809197,
+    "sourceCommit": "d3c98532e3622a23c36b08c0885630f1e53a4b5f",
+    "sourceBlobSha": "9ff907ca094cce942e02ea6d70069bca254c12f3",
+    "snapshotSha256": "4190a054028ba509977b530491ac60295f17605fd78b431c102c9573d9f6049e",
+    "totalDays": 75,
+    "issueNumber": 75,
+    "fullGrammarLessonDates": 75,
+    "artifact": {
+      "id": 12583161466,
+      "name": "github-pages",
+      "digest": "sha256:f45484cdd1d1a485b989b714a1b964262551b7560a77decc415a04b215c487ac",
+      "downloadedZipSha256": "f45484cdd1d1a485b989b714a1b964262551b7560a77decc415a04b215c487ac",
+      "digestVerified": true
+    },
+    "site": "/tmp/japan-daily-20261025/n1/text-release-40151809197/site",
+    "checks": [
+      {
+        "path": "index.html",
+        "url": "https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/?acceptance=3aa677d258d213e32890fe62d1ec8835fe673aea",
+        "status": 200,
+        "sha256": "5366b9e541d7ee0391f168726049969a29a51a820f7682a30f6c7cfb4f76a88b",
+        "bytes": 1596,
+        "attempt": 1
+      },
+      {
+        "path": "assets/index-CwTgcu-5.js",
+        "url": "https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/assets/index-CwTgcu-5.js?acceptance=3aa677d258d213e32890fe62d1ec8835fe673aea",
+        "status": 200,
+        "sha256": "886762b9ce57ab5334f99500f71dd563cec62b4404ae5e3d3e09baf652a9ad92",
+        "bytes": 7401835,
+        "attempt": 1
+      },
+      {
+        "path": "assets/index-BpdupM-0.css",
+        "url": "https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/assets/index-BpdupM-0.css?acceptance=3aa677d258d213e32890fe62d1ec8835fe673aea",
+        "status": 200,
+        "sha256": "ae591cc4f64aac982210bb9f9a30a84e9aab4eb1a7a4aa290611892d99ac1d4e",
+        "bytes": 46788,
+        "attempt": 1
+      }
+    ],
+    "fullPublicAssetBytes": true,
+    "allOriginalParagraphsPresent": true,
+    "originalOptionsPresent": true,
+    "contentVerification": {
+      "observedAt": "2026-10-25T01:45:07.817Z",
+      "commit": "3aa677d258d213e32890fe62d1ec8835fe673aea",
+      "parent": "c4202715f0257d069115b4bf838279d84dadecb9",
+      "changedPaths": [
+        "src/data/daily/2026-10-25.json",
+        "src/data/it-study-snapshot.json"
+      ],
+      "onlyTwoPaths": true,
+      "sourceBlobUnchanged": true,
+      "sourceBlobSha": "9ff907ca094cce942e02ea6d70069bca254c12f3",
+      "sourceSha256": "fa29a81ff5a52bb7c12fe1e2cab3d3cd85d22910c0f0767c862f11b8e1f853b9",
+      "sourceBytes": 23481,
+      "dailyCandidateBytesExact": true,
+      "dailySha256": "a54543380824aa2bee2482ac2e8822101bb22350ec9a72dccc8945ecfc805cf6",
+      "snapshotSourceCommit": "d3c98532e3622a23c36b08c0885630f1e53a4b5f",
+      "snapshotInputSha256": "4190a054028ba509977b530491ac60295f17605fd78b431c102c9573d9f6049e",
+      "snapshotCommittedSha256": "00bcde20fd1c80e0aba38a78a5cb3bd1aa36049683064f356e26b80b5603b361",
+      "snapshotDataExact": true,
+      "snapshotSerializationDifference": "Exactly one importer trailing LF; no other difference ignored",
+      "totalDays": 75,
+      "issueNumber": 75,
+      "fullGrammarDates": 75,
+      "requestSha256": "fc517ea7689835ba4bb18bdba4f957cd50a5580b327660d08a82442f43168258"
+    },
+    "staticPublicationVerified": true,
+    "visibleBrowserDateVerified": true,
+    "visibleBrowserBoundary": "Root performs independent Cua actual Day57 UI date acceptance; static source inclusion alone does not establish current visible route or audio playback.",
+    "observedCurrentMain": "3aa677d258d213e32890fe62d1ec8835fe673aea",
+    "sharedAudioFollowups": [],
+    "sharedAudioBoundary": "Shared audio workflow or later metadata commit is distinct from this verified text commit; not a unique-audio completion result.",
+    "verifiedAt": "2026-10-25T01:47:03.171Z",
+    "visibleBrowserVerification": {
+      "targetDate": "2026-10-25",
+      "day": 57,
+      "issueNumber": 75,
+      "url": "https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/",
+      "sectionsChecked": [
+        "home",
+        "immersion",
+        "vocabulary",
+        "grammar"
+      ],
+      "visibleDate": "2026年10月25日(日)",
+      "visibleDay": "Day 57",
+      "title": "配送ロボットの最短ルートと現場の判断",
+      "originalParagraphsVisible": 5,
+      "newVocabulary": 4,
+      "reviewVocabulary": 16,
+      "newGrammar": 0,
+      "reviewGrammar": 8,
+      "unexplainedPlaceholder": false,
+      "badObjectString": false,
+      "audioPlaybackTested": false,
+      "observedAt": "2026-10-25T01:47:50.406618+00:00",
+      "method": "Cua navigation and UI buttons; read-only rendered DOM observations"
+    }
+  },
+  "independentAudio": {
+    "status": "waiting_daily_audio",
+    "sourceAudioCommit": null,
+    "dailyFailure": {
+      "stage": "duration-write",
+      "message": "Command failed: node scripts/validate-interview-audio-duration.mjs --date 2026-10-25 --write\n  WARN: answer 2: actual 23.82s is outside ideal range 24–34s\n  WARN: answer 4: actual 23.46s is outside ideal range 24–34s\n  ERROR: answer 1: actual 20.25s is outside hard range 22–40s\n  ERROR: answer 3: actual 19.92s is outside hard range 22–40s\n  ERROR: answer 5: actual 20.83s is outside hard range 22–40s\n",
+      "log": "/Users/paulasmith/.codex/automations/it-ai-codex/audio-progress/logs/2026-10-25/duration-write-failed.log",
+      "at": "2026-10-25T01:44:28.642Z"
+    },
+    "sharedAudioDispatchAttempted": false,
+    "uniqueWorkerTriggered": false,
+    "scheduleUnchanged": true
+  }
 }
