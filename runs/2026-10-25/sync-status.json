@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-10-25",
   "day": 57,
-  "status": "waiting_upstream",
-  "stage": "waiting_upstream",
+  "status": "waiting_request",
+  "stage": "request_ready",
   "requestSubmitted": false,
   "sourceSavedOnMain": true,
   "sourceCheckpointVerified": true,
@@ -17,6 +17,20 @@
   "generatedAtJST": "2026-10-25T09:02:20+09:00",
   "upstreamTargetVerified": false,
   "lastError": null,
-  "nextStep": "Read actual target-date upstream reports and matching verified snapshot after source deployment; 11:00 is a check, not guaranteed publication. Do not remap or regenerate the original. Final daily JSON, snapshots and UI are unchanged.",
-  "updatedAt": "2026-10-25T00:05:51.023Z"
+  "nextStep": "Submit complete source-bound request while shared slot is free",
+  "updatedAt": "2026-10-25T01:42:13.774Z",
+  "upstreamSourceCommit": "d3c98532e3622a23c36b08c0885630f1e53a4b5f",
+  "sourcePagesRunId": 40151189910,
+  "snapshotSha256": "4190a054028ba509977b530491ac60295f17605fd78b431c102c9573d9f6049e",
+  "issueNumber": 75,
+  "totalDays": 75,
+  "requestSha256": "fc517ea7689835ba4bb18bdba4f957cd50a5580b327660d08a82442f43168258",
+  "localValidation": {
+    "content": true,
+    "unit": 114,
+    "python": 26,
+    "build": true,
+    "browserTests": 50,
+    "allPassed": true
+  }
 }
