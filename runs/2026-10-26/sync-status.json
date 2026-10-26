@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "targetDate": "2026-10-26",
+  "day": 58,
+  "status": "waiting_upstream",
+  "stage": "waiting_upstream",
+  "requestSubmitted": false,
+  "sourceSavedOnMain": true,
+  "sourceCheckpointVerified": true,
+  "sourcePresent": true,
+  "sourceCommit": "60eb0fcf2a817783e9eefd23aaf97f513b08fbc6",
+  "sourceBlobSha": "83469588de12ad3616864c74fdd58b202ba6f096",
+  "sourceCheckpointBlobSha": "80e01df4ea1a7ab13ec18f7da955898633782bf1",
+  "sourceSha256": "185fa25cf2d0ccb907b9f9896a2a8498da3dd20cce333b21b8e472f8bdb6d642",
+  "expectedSourceSha256": "185fa25cf2d0ccb907b9f9896a2a8498da3dd20cce333b21b8e472f8bdb6d642",
+  "expectedSourceBytes": 25600,
+  "generatedAtJST": "2026-10-26T09:11:41+09:00",
+  "sourceObservation": {
+    "n1Main": "60eb0fcf2a817783e9eefd23aaf97f513b08fbc6",
+    "mainSourcePresent": true,
+    "outboxVerified": true,
+    "exactSourceBytes": 25600,
+    "sourceSha256": "185fa25cf2d0ccb907b9f9896a2a8498da3dd20cce333b21b8e472f8bdb6d642",
+    "observedAt": "2026-10-26T00:16:08.496Z"
+  },
+  "lastError": null,
+  "nextStep": "At 11:00/12:00 reverify the exact successful same-day upstream IT publication and full snapshot before mapping; do not create a different original or claim webpage published until Pages and live content verified.",
+  "updatedAt": "2026-10-26T00:16:08.496Z"
+}
