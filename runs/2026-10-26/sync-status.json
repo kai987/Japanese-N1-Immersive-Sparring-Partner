@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-10-26",
   "day": 58,
-  "status": "waiting_upstream",
-  "stage": "waiting_upstream",
+  "status": "waiting_request",
+  "stage": "request_ready",
   "requestSubmitted": false,
   "sourceSavedOnMain": true,
   "sourceCheckpointVerified": true,
@@ -24,6 +24,20 @@
     "observedAt": "2026-10-26T00:16:08.496Z"
   },
   "lastError": null,
-  "nextStep": "At 11:00/12:00 reverify the exact successful same-day upstream IT publication and full snapshot before mapping; do not create a different original or claim webpage published until Pages and live content verified.",
-  "updatedAt": "2026-10-26T00:16:08.496Z"
+  "nextStep": "Submit complete source-bound request while shared slot is free",
+  "updatedAt": "2026-10-26T02:04:34.656Z",
+  "upstreamSourceCommit": "536e1d547682b9a87813af7b1970373140533698",
+  "sourcePagesRunId": 40256021181,
+  "snapshotSha256": "4410890bf6145561d096d67e13b0de604ed9eb59fa27c5207a01b3818d267fab",
+  "issueNumber": 76,
+  "totalDays": 76,
+  "requestSha256": "ad86625bcda217561982fc976327d66b32f2dff662475391f5d0d52e0a9a4e19",
+  "localValidation": {
+    "content": true,
+    "unit": 114,
+    "python": 26,
+    "build": true,
+    "browserTests": 50,
+    "allPassed": true
+  }
 }
