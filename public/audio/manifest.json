@@ -12,7 +12,7 @@
   },
   "engineVersion": "1.1.0-dev",
   "modelVersion": "1.0.0",
-  "generatedAt": "2026-10-24T05:25:04.717Z",
+  "generatedAt": "2026-10-26T00:18:36.273Z",
   "lessonDates": [
     "2026-10-24",
     "2026-10-23",
@@ -71,7 +71,7 @@
     "2026-08-31",
     "2026-08-30"
   ],
-  "expectedClips": 5943,
+  "expectedClips": 5949,
   "complete": true,
   "clips": {
     "000508138c45e52f": {
@@ -3520,6 +3520,7 @@
       "text": "仕組みを作る",
       "label": "仕組みを作る",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-4785c5c0/collocation/0",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-4785c5c0/collocation/0",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-4785c5c0/collocation/0",
         "lesson/2026-10-19/vocabulary/2026-10-19-v-study-4785c5c0/collocation/0",
@@ -3946,6 +3947,7 @@
       "text": "判断基準を設ける",
       "label": "判断基準を設ける",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-1e18d506/collocation/2",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-1e18d506/collocation/2",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-1e18d506/collocation/2",
         "lesson/2026-10-22/vocabulary/2026-10-22-v-study-1e18d506/collocation/2",
@@ -3995,6 +3997,7 @@
       "text": "判定モデルが軽量側で解けるかを判断します。",
       "label": "判定モデルが軽量側で解けるかを判断します。",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-1e18d506/example/0",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-1e18d506/example/0",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-1e18d506/example/0",
         "lesson/2026-10-22/vocabulary/2026-10-22-v-study-1e18d506/example/0",
@@ -5617,6 +5620,7 @@
       "text": "からといって",
       "label": "～からといって",
       "references": [
+        "lesson/2026-10-25/grammar/2026-10-25-g-study-ac3d07f0/pattern",
         "lesson/2026-10-09/grammar/2026-10-09-g-study-ac3d07f0/pattern",
         "lesson/2026-10-05/grammar/2026-10-05-g-study-ac3d07f0/pattern",
         "lesson/2026-10-04/grammar/2026-10-04-g-study-ac3d07f0/pattern",
@@ -6804,6 +6808,7 @@
       "text": "とともに",
       "label": "～とともに",
       "references": [
+        "lesson/2026-10-25/grammar/2026-10-25-g-study-99ab9a8c/pattern",
         "lesson/2026-10-20/grammar/2026-10-20-g-study-99ab9a8c/pattern",
         "lesson/2026-10-17/grammar/2026-10-17-g-study-99ab9a8c/pattern",
         "lesson/2026-10-04/grammar/2026-10-04-g-study-99ab9a8c/pattern",
@@ -7268,6 +7273,7 @@
       "text": "Parameter数が多ければ実務性能が高いとは限りません。",
       "label": "Parameter数が多ければ実務性能が高いとは限りません。",
       "references": [
+        "lesson/2026-10-25/grammar/2026-10-25-g-study-ccec99c0/example/0",
         "lesson/2026-10-24/grammar/2026-10-24-g-study-ccec99c0/example/0",
         "lesson/2026-10-23/grammar/2026-10-23-g-study-ccec99c0/example/0",
         "lesson/2026-10-17/grammar/2026-10-17-g-study-ccec99c0/example/0",
@@ -7478,6 +7484,7 @@
       "text": "性能を評価する",
       "label": "性能を評価する",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-66614293/collocation/0",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-66614293/collocation/0",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-66614293/collocation/0",
         "lesson/2026-10-22/vocabulary/2026-10-22-v-study-66614293/collocation/0",
@@ -7552,6 +7559,18 @@
       "bytes": 46509,
       "sha256": "2276b2ef13173f0602a5bd46c07feae2957045f228dd6d88c8301faa6303f2e8",
       "rms": 0.128164
+    },
+    "18bd44148ec3a3d8": {
+      "id": "18bd44148ec3a3d8",
+      "text": "特定MCP Serverだけに依存しない構成を検討します。",
+      "label": "特定MCP Serverだけに依存しない構成を検討します。",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-a20c26b7/example/0"
+      ],
+      "bytes": 53037,
+      "duration": 4.392,
+      "rms": 0.122,
+      "sha256": "911ea98b26003c356e638ed6675640579d702f5c50f1d01f1773a09b12fdaa4c"
     },
     "18cf7e419ad22ebd": {
       "id": "18cf7e419ad22ebd",
@@ -7690,6 +7709,7 @@
       "text": "動作保証",
       "label": "動作保証",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-68847e29/collocation/2",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-68847e29/collocation/2",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-68847e29/collocation/2",
         "lesson/2026-10-22/vocabulary/2026-10-22-v-study-68847e29/collocation/2",
@@ -7824,6 +7844,7 @@
       "text": "原因を区別する",
       "label": "原因を区別する",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-7deda27e/collocation/0",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-7deda27e/collocation/0",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-7deda27e/collocation/0",
         "lesson/2026-10-20/vocabulary/2026-10-20-v-study-7deda27e/collocation/0",
@@ -8100,6 +8121,7 @@
       "text": "Agentが危険なActionを実行できない仕組みをRuntime側に作ります。",
       "label": "Agentが危険なActionを実行できない仕組みをRuntime側に作ります。",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-4785c5c0/example/0",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-4785c5c0/example/0",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-4785c5c0/example/0",
         "lesson/2026-10-19/vocabulary/2026-10-19-v-study-4785c5c0/example/0",
@@ -9334,6 +9356,7 @@
       "text": "セルフホスト環境を導入する前に、運用の担当を決めます。",
       "label": "セルフホスト環境を導入する前に、運用の担当を決めます。",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-339df203/example/0",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-339df203/example/0",
         "lesson/2026-10-19/vocabulary/2026-10-19-v-study-339df203/example/0",
         "lesson/2026-10-17/vocabulary/2026-10-17-v-study-339df203/example/0",
@@ -9704,6 +9727,7 @@
       "text": "運用コスト",
       "label": "運用コスト",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-966a7d9e/collocation/1",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-966a7d9e/collocation/1",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-966a7d9e/collocation/1",
         "lesson/2026-10-22/vocabulary/2026-10-22-v-study-966a7d9e/collocation/1",
@@ -10243,6 +10267,7 @@
       "text": "リスクを判断する",
       "label": "リスクを判断する",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-1e18d506/collocation/1",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-1e18d506/collocation/1",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-1e18d506/collocation/1",
         "lesson/2026-10-22/vocabulary/2026-10-22-v-study-1e18d506/collocation/1",
@@ -10388,6 +10413,7 @@
       "text": "Toolを実行する",
       "label": "Toolを実行する",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-d898be90/collocation/1",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-d898be90/collocation/1",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-d898be90/collocation/1",
         "lesson/2026-10-22/vocabulary/2026-10-22-v-study-d898be90/collocation/1",
@@ -10447,6 +10473,7 @@
       "text": "安定運用",
       "label": "安定運用",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-966a7d9e/collocation/2",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-966a7d9e/collocation/2",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-966a7d9e/collocation/2",
         "lesson/2026-10-22/vocabulary/2026-10-22-v-study-966a7d9e/collocation/2",
@@ -10744,6 +10771,7 @@
       "text": "ただし、一回の測定なので一般化できません。",
       "label": "ただし、一回の測定なので一般化できません。",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-73083d1e/example/1",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-73083d1e/example/1",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-73083d1e/example/1",
         "lesson/2026-10-22/vocabulary/2026-10-22-v-study-73083d1e/example/1",
@@ -12377,6 +12405,7 @@
       "text": "ために",
       "label": "～ために",
       "references": [
+        "lesson/2026-10-25/grammar/2026-10-25-g-study-1739e8be/pattern",
         "lesson/2026-10-19/grammar/2026-10-19-g-study-1739e8be/pattern",
         "lesson/2026-10-18/grammar/2026-10-18-g-study-1739e8be/pattern",
         "lesson/2026-10-15/grammar/2026-10-15-g-study-1739e8be/pattern",
@@ -12646,6 +12675,7 @@
       "text": "各プラグインは共通のイベントを通じて連携します。",
       "label": "各プラグインは共通のイベントを通じて連携します。",
       "references": [
+        "lesson/2026-10-25/grammar/2026-10-25-g-study-60d5c5d/example/0",
         "lesson/2026-10-24/grammar/2026-10-24-g-study-60d5c5d/example/0",
         "lesson/2026-10-17/grammar/2026-10-17-g-study-60d5c5d/example/0",
         "lesson/2026-10-15/grammar/2026-10-15-g-study-60d5c5d/example/0",
@@ -14175,6 +14205,7 @@
       "text": "ただし注意が必要だ",
       "label": "ただし注意が必要だ",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-73083d1e/collocation/1",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-73083d1e/collocation/1",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-73083d1e/collocation/1",
         "lesson/2026-10-22/vocabulary/2026-10-22-v-study-73083d1e/collocation/1",
@@ -16353,6 +16384,7 @@
       "text": "認証の仕組み",
       "label": "認証の仕組み",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-4785c5c0/collocation/1",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-4785c5c0/collocation/1",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-4785c5c0/collocation/1",
         "lesson/2026-10-19/vocabulary/2026-10-19-v-study-4785c5c0/collocation/1",
@@ -16528,6 +16560,7 @@
       "text": "せつぞくする",
       "label": "接続する",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-72cf604e/word",
         "lesson/2026-10-18/vocabulary/2026-10-18-v-study-72cf604e/word",
         "lesson/2026-10-09/vocabulary/2026-10-09-v-study-72cf604e/word",
         "lesson/2026-10-08/vocabulary/2026-10-08-v-study-72cf604e/word",
@@ -17404,6 +17437,7 @@
       "text": "自動的に生成する",
       "label": "自動的に生成する",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-41640d3b/collocation/2",
         "lesson/2026-10-19/vocabulary/2026-10-19-v-study-41640d3b/collocation/2"
       ],
       "duration": 1.999,
@@ -17440,6 +17474,7 @@
       "text": "APIに接続する",
       "label": "APIに接続する",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-72cf604e/collocation/0",
         "lesson/2026-10-18/vocabulary/2026-10-18-v-study-72cf604e/collocation/0",
         "lesson/2026-10-09/vocabulary/2026-10-09-v-study-72cf604e/collocation/0",
         "lesson/2026-10-08/vocabulary/2026-10-08-v-study-72cf604e/collocation/0",
@@ -17888,6 +17923,7 @@
       "text": "本番運用",
       "label": "本番運用",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-966a7d9e/collocation/0",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-966a7d9e/collocation/0",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-966a7d9e/collocation/0",
         "lesson/2026-10-22/vocabulary/2026-10-22-v-study-966a7d9e/collocation/0",
@@ -19568,6 +19604,7 @@
       "text": "外部Serviceへ接続する",
       "label": "外部Serviceへ接続する",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-72cf604e/collocation/1",
         "lesson/2026-10-18/vocabulary/2026-10-18-v-study-72cf604e/collocation/1",
         "lesson/2026-10-09/vocabulary/2026-10-09-v-study-72cf604e/collocation/1",
         "lesson/2026-10-08/vocabulary/2026-10-08-v-study-72cf604e/collocation/1",
@@ -20432,6 +20469,7 @@
       "text": "ハイブリッド構成",
       "label": "ハイブリッド構成",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-d20f029e/collocation/2",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-d20f029e/collocation/2",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-d20f029e/collocation/2",
         "lesson/2026-10-19/vocabulary/2026-10-19-v-study-d20f029e/collocation/2",
@@ -20479,6 +20517,7 @@
       "text": "うんよう",
       "label": "運用",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-966a7d9e/word",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-966a7d9e/word",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-966a7d9e/word",
         "lesson/2026-10-22/vocabulary/2026-10-22-v-study-966a7d9e/word",
@@ -20838,6 +20877,7 @@
       "text": "危険なCommandは隔離されたSandboxで実行します。",
       "label": "危険なCommandは隔離されたSandboxで実行します。",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-d898be90/example/0",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-d898be90/example/0",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-d898be90/example/0",
         "lesson/2026-10-22/vocabulary/2026-10-22-v-study-d898be90/example/0",
@@ -22501,6 +22541,7 @@
       "text": "自動化の仕組み",
       "label": "自動化の仕組み",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-4785c5c0/collocation/2",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-4785c5c0/collocation/2",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-4785c5c0/collocation/2",
         "lesson/2026-10-19/vocabulary/2026-10-19-v-study-4785c5c0/collocation/2",
@@ -22604,6 +22645,7 @@
       "text": "しくみ",
       "label": "仕組み",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-4785c5c0/word",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-4785c5c0/word",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-4785c5c0/word",
         "lesson/2026-10-19/vocabulary/2026-10-19-v-study-4785c5c0/word",
@@ -22645,6 +22687,7 @@
       "text": "ただし",
       "label": "ただし",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-73083d1e/word",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-73083d1e/word",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-73083d1e/word",
         "lesson/2026-10-22/vocabulary/2026-10-22-v-study-73083d1e/word",
@@ -22966,6 +23009,18 @@
       "sha256": "95dcba1ea4991b767b9441e7a320b9c86d027ad6cb1de6202be31180023ae840",
       "rms": 0.122724
     },
+    "4f85f406f2ff1652": {
+      "id": "4f85f406f2ff1652",
+      "text": "管理者はコネクタごとに操作権限を確認します。",
+      "label": "管理者はコネクタごとに操作権限を確認します。",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-8cdb27ff/example/0"
+      ],
+      "bytes": 51021,
+      "duration": 4.224,
+      "rms": 0.138208,
+      "sha256": "d0e6670fdc8d3793ec8e96af7563f4782b0a93db2a27fddc1bbc7befded93db7"
+    },
     "4f8bc7f1cf085535": {
       "id": "4f8bc7f1cf085535",
       "text": "Embedded Dashboardを表示できても、AI Inferenceがその内部Dataを読めるとは限りません。",
@@ -23275,6 +23330,7 @@
       "text": "くべつする",
       "label": "区別する",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-7deda27e/word",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-7deda27e/word",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-7deda27e/word",
         "lesson/2026-10-20/vocabulary/2026-10-20-v-study-7deda27e/word",
@@ -26090,6 +26146,7 @@
       "text": "二つを区別する",
       "label": "二つを区別する",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-7deda27e/collocation/1",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-7deda27e/collocation/1",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-7deda27e/collocation/1",
         "lesson/2026-10-20/vocabulary/2026-10-20-v-study-7deda27e/collocation/1",
@@ -26505,6 +26562,18 @@
       "bytes": 13677,
       "sha256": "b4969d44ea152cac1e4c1a645ced011da12adc6859a48c28c4e629a0e85de141",
       "rms": 0.178552
+    },
+    "5bef553ecd81fa8a": {
+      "id": "5bef553ecd81fa8a",
+      "text": "Agentがすべての社内ルールを知っているという前提で設計してはいけません。",
+      "label": "Agentがすべての社内ルールを知っているという前提で設計してはいけません。",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-dd565aef/example/0"
+      ],
+      "bytes": 63981,
+      "duration": 5.304,
+      "rms": 0.096099,
+      "sha256": "f19460702deca0f6f41367ecb0c2901ba1c647f3cba78ffb4a29ee098a314260"
     },
     "5bef85a39086f4af": {
       "id": "5bef85a39086f4af",
@@ -27139,6 +27208,7 @@
       "text": "ただし今回は",
       "label": "ただし今回は～",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-73083d1e/collocation/2",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-73083d1e/collocation/2",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-73083d1e/collocation/2",
         "lesson/2026-10-22/vocabulary/2026-10-22-v-study-73083d1e/collocation/2",
@@ -28450,6 +28520,7 @@
       "text": "に応じて",
       "label": "～に応じて",
       "references": [
+        "lesson/2026-10-25/grammar/2026-10-25-g-study-4f13d335/pattern",
         "lesson/2026-10-23/grammar/2026-10-23-g-study-4f13d335/pattern",
         "lesson/2026-10-22/grammar/2026-10-22-g-study-4f13d335/pattern",
         "lesson/2026-10-19/grammar/2026-10-19-g-study-4f13d335/pattern",
@@ -29119,6 +29190,7 @@
       "text": "仮説を検証する",
       "label": "仮説を検証する",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-a47c5cf6/collocation/1",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-a47c5cf6/collocation/1",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-a47c5cf6/collocation/1",
         "lesson/2026-10-22/vocabulary/2026-10-22-v-study-a47c5cf6/collocation/1",
@@ -30558,6 +30630,7 @@
       "text": "OpenAPIを生成する",
       "label": "OpenAPIを生成する",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-41640d3b/collocation/1",
         "lesson/2026-10-19/vocabulary/2026-10-19-v-study-41640d3b/collocation/1"
       ],
       "duration": 2.324,
@@ -30714,6 +30787,7 @@
       "text": "品質を検証する",
       "label": "品質を検証する",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-a47c5cf6/collocation/0",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-a47c5cf6/collocation/0",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-a47c5cf6/collocation/0",
         "lesson/2026-10-22/vocabulary/2026-10-22-v-study-a47c5cf6/collocation/0",
@@ -30933,6 +31007,7 @@
       "text": "実務Taskで評価する",
       "label": "実務Taskで評価する",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-66614293/collocation/1",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-66614293/collocation/1",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-66614293/collocation/1",
         "lesson/2026-10-22/vocabulary/2026-10-22-v-study-66614293/collocation/1",
@@ -31558,6 +31633,7 @@
       "text": "組織へ導入する",
       "label": "組織へ導入する",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-339df203/collocation/2",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-339df203/collocation/2",
         "lesson/2026-10-19/vocabulary/2026-10-19-v-study-339df203/collocation/2",
         "lesson/2026-10-17/vocabulary/2026-10-17-v-study-339df203/collocation/2",
@@ -31661,6 +31737,7 @@
       "text": "ただし条件がある",
       "label": "ただし条件がある",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-73083d1e/collocation/0",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-73083d1e/collocation/0",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-73083d1e/collocation/0",
         "lesson/2026-10-22/vocabulary/2026-10-22-v-study-73083d1e/collocation/0",
@@ -32447,6 +32524,7 @@
       "text": "耐性を評価する",
       "label": "耐性を評価する",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-66614293/collocation/2",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-66614293/collocation/2",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-66614293/collocation/2",
         "lesson/2026-10-22/vocabulary/2026-10-22-v-study-66614293/collocation/2",
@@ -32779,6 +32857,7 @@
       "text": "Taskを達成するために、許可されていない手段を選ばないようGuardrailを設計します。",
       "label": "Taskを達成するために、許可されていない手段を選ばないようGuardrailを設計します。",
       "references": [
+        "lesson/2026-10-25/grammar/2026-10-25-g-study-1739e8be/example/0",
         "lesson/2026-10-19/grammar/2026-10-19-g-study-1739e8be/example/0",
         "lesson/2026-10-18/grammar/2026-10-18-g-study-1739e8be/example/0",
         "lesson/2026-10-15/grammar/2026-10-15-g-study-1739e8be/example/0",
@@ -32996,6 +33075,7 @@
       "text": "実データで検証する",
       "label": "実データで検証する",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-a47c5cf6/collocation/2",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-a47c5cf6/collocation/2",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-a47c5cf6/collocation/2",
         "lesson/2026-10-22/vocabulary/2026-10-22-v-study-a47c5cf6/collocation/2",
@@ -33876,6 +33956,7 @@
       "text": "筆者の考えに最も近いものはどれか。",
       "label": "筆者の考えに最も近いものはどれか。",
       "references": [
+        "lesson/2026-10-25/question/0",
         "lesson/2026-10-18/review/4/detail/5",
         "lesson/2026-10-16/review/4/detail/4"
       ],
@@ -34374,6 +34455,7 @@
       "text": "どうにゅうする",
       "label": "導入する",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-339df203/word",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-339df203/word",
         "lesson/2026-10-19/vocabulary/2026-10-19-v-study-339df203/word",
         "lesson/2026-10-17/vocabulary/2026-10-17-v-study-339df203/word",
@@ -34768,6 +34850,7 @@
       "text": "TypeSpecからOpenAPIとFrontend Clientを生成します。",
       "label": "TypeSpecからOpenAPIとFrontend Clientを生成します。",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-41640d3b/example/0",
         "lesson/2026-10-19/vocabulary/2026-10-19-v-study-41640d3b/example/0"
       ],
       "bytes": 65709,
@@ -34909,6 +34992,7 @@
       "text": "冗長構成",
       "label": "冗長構成",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-d20f029e/collocation/1",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-d20f029e/collocation/1",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-d20f029e/collocation/1",
         "lesson/2026-10-19/vocabulary/2026-10-19-v-study-d20f029e/collocation/1",
@@ -35597,6 +35681,7 @@
       "text": "区別がつく",
       "label": "区別がつく",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-7deda27e/collocation/2",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-7deda27e/collocation/2",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-7deda27e/collocation/2",
         "lesson/2026-10-20/vocabulary/2026-10-20-v-study-7deda27e/collocation/2",
@@ -36150,6 +36235,7 @@
       "text": "せいせいする",
       "label": "生成する",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-41640d3b/word",
         "lesson/2026-10-19/vocabulary/2026-10-19-v-study-41640d3b/word"
       ],
       "bytes": 17613,
@@ -36280,6 +36366,18 @@
       "sha256": "cc25a4c46ac4e1196f9e7f6f2ffd53c4cb80bec068a6eeb61407c5a54a36cbeb",
       "rms": 0.131461
     },
+    "7c3001e43c6b7258": {
+      "id": "7c3001e43c6b7258",
+      "text": "いぞん",
+      "label": "依存",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-a20c26b7/word"
+      ],
+      "bytes": 11565,
+      "duration": 0.936,
+      "rms": 0.137081,
+      "sha256": "40376047ea65a5d3ec831c486cb7319ebae1fbf7a5aeb074cba17c9c938dff64"
+    },
     "7c3377f67b83d76a": {
       "id": "7c3377f67b83d76a",
       "text": "たなおろし",
@@ -36328,6 +36426,7 @@
       "text": "検索結果の品質を実データで検証します。",
       "label": "検索結果の品質を実データで検証します。",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-a47c5cf6/example/0",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-a47c5cf6/example/0",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-a47c5cf6/example/0",
         "lesson/2026-10-22/vocabulary/2026-10-22-v-study-a47c5cf6/example/0",
@@ -36607,6 +36706,7 @@
       "text": "を通じて",
       "label": "～を通じて",
       "references": [
+        "lesson/2026-10-25/grammar/2026-10-25-g-study-60d5c5d/pattern",
         "lesson/2026-10-24/grammar/2026-10-24-g-study-60d5c5d/pattern",
         "lesson/2026-10-17/grammar/2026-10-17-g-study-60d5c5d/pattern",
         "lesson/2026-10-15/grammar/2026-10-15-g-study-60d5c5d/pattern",
@@ -36941,6 +37041,7 @@
       "text": "難易度を判断する",
       "label": "難易度を判断する",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-1e18d506/collocation/0",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-1e18d506/collocation/0",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-1e18d506/collocation/0",
         "lesson/2026-10-22/vocabulary/2026-10-22-v-study-1e18d506/collocation/0",
@@ -37379,6 +37480,7 @@
       "text": "はんだんする",
       "label": "判断する",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-1e18d506/word",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-1e18d506/word",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-1e18d506/word",
         "lesson/2026-10-22/vocabulary/2026-10-22-v-study-1e18d506/word",
@@ -37600,6 +37702,7 @@
       "text": "ひょうかする",
       "label": "評価する",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-66614293/word",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-66614293/word",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-66614293/word",
         "lesson/2026-10-22/vocabulary/2026-10-22-v-study-66614293/word",
@@ -38301,6 +38404,7 @@
       "text": "本番運用ではLatencyとError Rateを継続的に確認します。",
       "label": "本番運用ではLatencyとError Rateを継続的に確認します。",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-966a7d9e/example/0",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-966a7d9e/example/0",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-966a7d9e/example/0",
         "lesson/2026-10-22/vocabulary/2026-10-22-v-study-966a7d9e/example/0",
@@ -40214,6 +40318,7 @@
       "text": "自動Testだけで完全な品質を保証できるとは限りません。",
       "label": "自動Testだけで完全な品質を保証できるとは限りません。",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-68847e29/example/0",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-68847e29/example/0",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-68847e29/example/0",
         "lesson/2026-10-22/vocabulary/2026-10-22-v-study-68847e29/example/0",
@@ -41571,6 +41676,7 @@
       "text": "対談に加えて、企業の導入事例も紹介します。",
       "label": "対談に加えて、企業の導入事例も紹介します。",
       "references": [
+        "lesson/2026-10-25/grammar/2026-10-25-g-study-2c43f688/example/0",
         "lesson/2026-10-24/grammar/2026-10-24-g-study-2c43f688/example/0",
         "lesson/2026-10-19/grammar/2026-10-19-g-study-2c43f688/example/0",
         "lesson/2026-10-18/grammar/2026-10-18-g-study-2c43f688/example/0",
@@ -45469,6 +45575,7 @@
       "text": "Latencyは改善しました。",
       "label": "Latencyは改善しました。",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-73083d1e/example/0",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-73083d1e/example/0",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-73083d1e/example/0",
         "lesson/2026-10-22/vocabulary/2026-10-22-v-study-73083d1e/example/0",
@@ -46780,6 +46887,7 @@
       "text": "とは限らない",
       "label": "～とは限らない",
       "references": [
+        "lesson/2026-10-25/grammar/2026-10-25-g-study-ccec99c0/pattern",
         "lesson/2026-10-24/grammar/2026-10-24-g-study-ccec99c0/pattern",
         "lesson/2026-10-23/grammar/2026-10-23-g-study-ccec99c0/pattern",
         "lesson/2026-10-17/grammar/2026-10-17-g-study-ccec99c0/pattern",
@@ -47376,6 +47484,7 @@
       "text": "データの機密性に応じてCloudとLocal Modelを使い分けます。",
       "label": "データの機密性に応じてCloudとLocal Modelを使い分けます。",
       "references": [
+        "lesson/2026-10-25/grammar/2026-10-25-g-study-4f13d335/example/0",
         "lesson/2026-10-23/grammar/2026-10-23-g-study-4f13d335/example/0",
         "lesson/2026-10-22/grammar/2026-10-22-g-study-4f13d335/example/0",
         "lesson/2026-10-19/grammar/2026-10-19-g-study-4f13d335/example/0",
@@ -48882,6 +48991,7 @@
       "text": "に加えて",
       "label": "～に加えて",
       "references": [
+        "lesson/2026-10-25/grammar/2026-10-25-g-study-2c43f688/pattern",
         "lesson/2026-10-24/grammar/2026-10-24-g-study-2c43f688/pattern",
         "lesson/2026-10-19/grammar/2026-10-19-g-study-2c43f688/pattern",
         "lesson/2026-10-18/grammar/2026-10-18-g-study-2c43f688/pattern",
@@ -49739,6 +49849,7 @@
       "text": "設定を変えるだけで、今回の三つの入力は遮断されました。",
       "label": "設定を変えるだけで、今回の三つの入力は遮断されました。",
       "references": [
+        "lesson/2026-10-25/grammar/2026-10-25-g-study-48e1043d/example/0",
         "lesson/2026-10-22/grammar/2026-10-22-g-study-48e1043d/example/0",
         "lesson/2026-10-21/grammar/2026-10-21-g-study-48e1043d/example/0",
         "lesson/2026-10-19/grammar/2026-10-19-g-study-48e1043d/example/0",
@@ -50601,6 +50712,7 @@
       "text": "AIを導入する",
       "label": "AIを導入する",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-339df203/collocation/0",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-339df203/collocation/0",
         "lesson/2026-10-19/vocabulary/2026-10-19-v-study-339df203/collocation/0",
         "lesson/2026-10-17/vocabulary/2026-10-17-v-study-339df203/collocation/0",
@@ -51414,6 +51526,7 @@
       "text": "振動とともに大きな加速度も発生する条件を検証します。",
       "label": "振動とともに大きな加速度も発生する条件を検証します。",
       "references": [
+        "lesson/2026-10-25/grammar/2026-10-25-g-study-99ab9a8c/example/0",
         "lesson/2026-10-20/grammar/2026-10-20-g-study-99ab9a8c/example/0",
         "lesson/2026-10-17/grammar/2026-10-17-g-study-99ab9a8c/example/0",
         "lesson/2026-10-04/grammar/2026-10-04-g-study-99ab9a8c/example/0",
@@ -53453,6 +53566,7 @@
       "text": "Codeを生成する",
       "label": "Codeを生成する",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-41640d3b/collocation/0",
         "lesson/2026-10-19/vocabulary/2026-10-19-v-study-41640d3b/collocation/0"
       ],
       "duration": 1.674,
@@ -53490,6 +53604,7 @@
       "text": "品質保証",
       "label": "品質保証",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-68847e29/collocation/0",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-68847e29/collocation/0",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-68847e29/collocation/0",
         "lesson/2026-10-22/vocabulary/2026-10-22-v-study-68847e29/collocation/0",
@@ -53587,6 +53702,7 @@
       "text": "検知精度が上がったからといって、確認作業が減るとは限りません。",
       "label": "検知精度が上がったからといって、確認作業が減るとは限りません。",
       "references": [
+        "lesson/2026-10-25/grammar/2026-10-25-g-study-ac3d07f0/example/0",
         "lesson/2026-10-09/grammar/2026-10-09-g-study-ac3d07f0/example/0",
         "lesson/2026-10-05/grammar/2026-10-05-g-study-ac3d07f0/example/0",
         "lesson/2026-10-04/grammar/2026-10-04-g-study-ac3d07f0/example/0",
@@ -54768,6 +54884,18 @@
       "sha256": "39a6aa19c049facde89eb4109d77aae47a79257d04e6c07d741c2128b10cec80",
       "rms": 0.12377
     },
+    "bca2ebe27e1803be": {
+      "id": "bca2ebe27e1803be",
+      "text": "けんげん",
+      "label": "権限",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-8cdb27ff/word"
+      ],
+      "bytes": 13293,
+      "duration": 1.08,
+      "rms": 0.19673,
+      "sha256": "8f1c3039265110ccd8ef8e19469b143ae472245132591165384ebfa55041b373"
+    },
     "bcab9a6f0d4a4533": {
       "id": "bcab9a6f0d4a4533",
       "text": "どうやら原因は",
@@ -55616,6 +55744,7 @@
       "text": "DLPの拒否とファイル処理の失敗を区別します。",
       "label": "DLPの拒否とファイル処理の失敗を区別します。",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-7deda27e/example/0",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-7deda27e/example/0",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-7deda27e/example/0",
         "lesson/2026-10-20/vocabulary/2026-10-20-v-study-7deda27e/example/0",
@@ -57619,6 +57748,7 @@
       "text": "ほしょう",
       "label": "保証",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-68847e29/word",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-68847e29/word",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-68847e29/word",
         "lesson/2026-10-22/vocabulary/2026-10-22-v-study-68847e29/word",
@@ -58085,6 +58215,7 @@
       "text": "機密データだけLocal LLMで処理する構成を検討します。",
       "label": "機密データだけLocal LLMで処理する構成を検討します。",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-d20f029e/example/0",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-d20f029e/example/0",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-d20f029e/example/0",
         "lesson/2026-10-19/vocabulary/2026-10-19-v-study-d20f029e/example/0",
@@ -61055,6 +61186,7 @@
       "text": "仕組みを理解する",
       "label": "仕組みを理解する",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-4785c5c0/collocation/3",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-4785c5c0/collocation/3",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-4785c5c0/collocation/3",
         "lesson/2026-10-19/vocabulary/2026-10-19-v-study-4785c5c0/collocation/3",
@@ -62078,6 +62210,7 @@
       "text": "だけで",
       "label": "～だけで",
       "references": [
+        "lesson/2026-10-25/grammar/2026-10-25-g-study-48e1043d/pattern",
         "lesson/2026-10-22/grammar/2026-10-22-g-study-48e1043d/pattern",
         "lesson/2026-10-21/grammar/2026-10-21-g-study-48e1043d/pattern",
         "lesson/2026-10-19/grammar/2026-10-19-g-study-48e1043d/pattern",
@@ -62678,6 +62811,7 @@
       "text": "段階的に導入する",
       "label": "段階的に導入する",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-339df203/collocation/1",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-339df203/collocation/1",
         "lesson/2026-10-19/vocabulary/2026-10-19-v-study-339df203/collocation/1",
         "lesson/2026-10-17/vocabulary/2026-10-17-v-study-339df203/collocation/1",
@@ -64076,6 +64210,7 @@
       "text": "じっこうする",
       "label": "実行する",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-d898be90/word",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-d898be90/word",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-d898be90/word",
         "lesson/2026-10-22/vocabulary/2026-10-22-v-study-d898be90/word",
@@ -64196,6 +64331,7 @@
       "text": "こうせい",
       "label": "構成",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-d20f029e/word",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-d20f029e/word",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-d20f029e/word",
         "lesson/2026-10-19/vocabulary/2026-10-19-v-study-d20f029e/word",
@@ -64412,6 +64548,7 @@
       "text": "処理を実行する",
       "label": "処理を実行する",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-d898be90/collocation/2",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-d898be90/collocation/2",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-d898be90/collocation/2",
         "lesson/2026-10-22/vocabulary/2026-10-22-v-study-d898be90/collocation/2",
@@ -64882,6 +65019,7 @@
       "text": "Model性能だけでなくHarnessの安全性も評価します。",
       "label": "Model性能だけでなくHarnessの安全性も評価します。",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-66614293/example/0",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-66614293/example/0",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-66614293/example/0",
         "lesson/2026-10-22/vocabulary/2026-10-22-v-study-66614293/example/0",
@@ -65855,6 +65993,7 @@
       "text": "Commandを実行する",
       "label": "Commandを実行する",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-d898be90/collocation/0",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-d898be90/collocation/0",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-d898be90/collocation/0",
         "lesson/2026-10-22/vocabulary/2026-10-22-v-study-d898be90/collocation/0",
@@ -66178,6 +66317,7 @@
       "text": "互換性を保証する",
       "label": "互換性を保証する",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-68847e29/collocation/1",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-68847e29/collocation/1",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-68847e29/collocation/1",
         "lesson/2026-10-22/vocabulary/2026-10-22-v-study-68847e29/collocation/1",
@@ -67053,6 +67193,7 @@
       "text": "けんしょうする",
       "label": "検証する",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-a47c5cf6/word",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-a47c5cf6/word",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-a47c5cf6/word",
         "lesson/2026-10-22/vocabulary/2026-10-22-v-study-a47c5cf6/word",
@@ -67397,6 +67538,7 @@
       "text": "システム構成",
       "label": "システム構成",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-d20f029e/collocation/0",
         "lesson/2026-10-24/vocabulary/2026-10-24-v-study-d20f029e/collocation/0",
         "lesson/2026-10-23/vocabulary/2026-10-23-v-study-d20f029e/collocation/0",
         "lesson/2026-10-19/vocabulary/2026-10-19-v-study-d20f029e/collocation/0",
@@ -67928,6 +68070,18 @@
       "bytes": 122349,
       "sha256": "8d29eae6c0f3e9a1bf699f615cd956336f2fb62ae0bb2b316588cb5a318129f9",
       "rms": 0.159973
+    },
+    "eaf76a221401881e": {
+      "id": "eaf76a221401881e",
+      "text": "ぜんてい",
+      "label": "前提",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-dd565aef/word"
+      ],
+      "bytes": 13869,
+      "duration": 1.128,
+      "rms": 0.181008,
+      "sha256": "e404b2b6b7fdd4259b7f8bf6a9ff30d7247cdb8d2fcd29072356e95d23166a2d"
     },
     "eb09c05b1d13db77": {
       "id": "eb09c05b1d13db77",
@@ -72426,6 +72580,7 @@
       "text": "AgentはMCPを通じて社内APIへ接続します。",
       "label": "AgentはMCPを通じて社内APIへ接続します。",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-72cf604e/example/0",
         "lesson/2026-10-18/vocabulary/2026-10-18-v-study-72cf604e/example/0",
         "lesson/2026-10-09/vocabulary/2026-10-09-v-study-72cf604e/example/0",
         "lesson/2026-10-08/vocabulary/2026-10-08-v-study-72cf604e/example/0",
@@ -72948,6 +73103,7 @@
       "text": "MCP経由で接続する",
       "label": "MCP経由で接続する",
       "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-72cf604e/collocation/2",
         "lesson/2026-10-18/vocabulary/2026-10-18-v-study-72cf604e/collocation/2",
         "lesson/2026-10-09/vocabulary/2026-10-09-v-study-72cf604e/collocation/2",
         "lesson/2026-10-08/vocabulary/2026-10-08-v-study-72cf604e/collocation/2",

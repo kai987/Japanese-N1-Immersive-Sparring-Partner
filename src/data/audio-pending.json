@@ -10,8 +10,875 @@
     "sampleRate": 24000,
     "codec": "mp3-64k"
   },
-  "requiredClips": 5942,
-  "pendingClips": 0,
-  "incompleteLessonDates": [],
-  "entries": []
+  "requiredClips": 6053,
+  "pendingClips": 105,
+  "incompleteLessonDates": [
+    "2026-10-25"
+  ],
+  "entries": [
+    {
+      "id": "72350a9433248000",
+      "text": "配送ロボットの最短ルートと現場の判断",
+      "label": "配送ロボットの最短ルートと現場の判断",
+      "references": [
+        "lesson/2026-10-25/title"
+      ]
+    },
+    {
+      "id": "fea359d836b8a62c",
+      "text": "遠回りが最適解になるとき",
+      "label": "遠回りが最適解になるとき",
+      "references": [
+        "lesson/2026-10-25/immersion/title",
+        "lesson/2026-10-25/reading/title"
+      ]
+    },
+    {
+      "id": "851abfe3f461f027",
+      "text": "ある物流施設では、荷物を運ぶロボットの経路を短くすることで、作業時間を減らそうとしていた。",
+      "label": "ある物流施設では、荷物を運ぶロボットの経路を短くすることで、作業時間を減らそうとしていた。",
+      "references": [
+        "lesson/2026-10-25/immersion/0/0",
+        "lesson/2026-10-25/reading/0/0"
+      ]
+    },
+    {
+      "id": "4134bb660cad4a0a",
+      "text": "試験用の画面では、出発点から目的地までの距離が最も短い経路が強調され、担当者もその分かりやすさを評価した。",
+      "label": "試験用の画面では、出発点から目的地までの距離が最も短い経路が強調され、担当者もその分かりやすさを評価した。",
+      "references": [
+        "lesson/2026-10-25/immersion/0/1",
+        "lesson/2026-10-25/reading/0/1"
+      ]
+    },
+    {
+      "id": "af33fc8f9953d96b",
+      "text": "しかし、実際の作業場では人が台車を押して通り、荷物の積み下ろしによって通路の幅も一時的に変わる。",
+      "label": "しかし、実際の作業場では人が台車を押して通り、荷物の積み下ろしによって通路の幅も一時的に変わる。",
+      "references": [
+        "lesson/2026-10-25/immersion/0/2",
+        "lesson/2026-10-25/reading/0/2"
+      ]
+    },
+    {
+      "id": "bf8f2e3147512875",
+      "text": "地図上の距離が短いというだけで、現場で安全かつ速く移動できるとは限らない。",
+      "label": "地図上の距離が短いというだけで、現場で安全かつ速く移動できるとは限らない。",
+      "references": [
+        "lesson/2026-10-25/immersion/0/3",
+        "lesson/2026-10-25/reading/0/3"
+      ]
+    },
+    {
+      "id": "4458af2e835a159a",
+      "text": "そもそも「最適」という言葉は、何を重視するかによって意味が変わる。",
+      "label": "そもそも「最適」という言葉は、何を重視するかによって意味が変わる。",
+      "references": [
+        "lesson/2026-10-25/immersion/1/0",
+        "lesson/2026-10-25/reading/1/0"
+      ]
+    },
+    {
+      "id": "c2c41e8257724d26",
+      "text": "移動距離だけを減らすのであれば近道を選べばよいものの、人とのすれ違いに時間がかかったり、特定の通路にロボットが集中したりすれば、結果として運行全体は遅くなり得る。",
+      "label": "移動距離だけを減らすのであれば近道を選べばよいものの、人とのすれ違いに時間がかかったり、特定の通路にロボットが集中したりすれば、結果として運行全体は遅くなり得る。",
+      "references": [
+        "lesson/2026-10-25/immersion/1/1",
+        "lesson/2026-10-25/reading/1/1"
+      ]
+    },
+    {
+      "id": "51cd1359f8e93915",
+      "text": "さらに、作業者の負担や非常時の避難経路まで考えるなら、評価すべき条件は増える。",
+      "label": "さらに、作業者の負担や非常時の避難経路まで考えるなら、評価すべき条件は増える。",
+      "references": [
+        "lesson/2026-10-25/immersion/1/2",
+        "lesson/2026-10-25/reading/1/2"
+      ]
+    },
+    {
+      "id": "a7fc328f254a7553",
+      "text": "どの条件を必須の制約とし、どの指標を改善の対象にするのかを明らかにしない限り、互いに異なる案を比べようがない。",
+      "label": "どの条件を必須の制約とし、どの指標を改善の対象にするのかを明らかにしない限り、互いに異なる案を比べようがない。",
+      "references": [
+        "lesson/2026-10-25/immersion/1/3",
+        "lesson/2026-10-25/reading/1/3"
+      ]
+    },
+    {
+      "id": "df2fca310d848a6d",
+      "text": "もっとも、すべての条件を完全に予測することはできない。",
+      "label": "もっとも、すべての条件を完全に予測することはできない。",
+      "references": [
+        "lesson/2026-10-25/immersion/2/0",
+        "lesson/2026-10-25/reading/2/0"
+      ]
+    },
+    {
+      "id": "d8961b3aecef1706",
+      "text": "現場で人の動きが変われば、事前に立てた計画どおりに進まない場合もある。",
+      "label": "現場で人の動きが変われば、事前に立てた計画どおりに進まない場合もある。",
+      "references": [
+        "lesson/2026-10-25/immersion/2/1",
+        "lesson/2026-10-25/reading/2/1"
+      ]
+    },
+    {
+      "id": "d86b923d92053859",
+      "text": "だからといって、計画を放棄して現場の勘だけに任せてよいわけではない。",
+      "label": "だからといって、計画を放棄して現場の勘だけに任せてよいわけではない。",
+      "references": [
+        "lesson/2026-10-25/immersion/2/2",
+        "lesson/2026-10-25/reading/2/2"
+      ]
+    },
+    {
+      "id": "0202eca8ac506e94",
+      "text": "過去の運行記録と作業者からの報告を踏まえて、見落としやすい場所を確認し、最短ではないまでも、一定の安全条件を満たす案を比較することはできる。",
+      "label": "過去の運行記録と作業者からの報告を踏まえて、見落としやすい場所を確認し、最短ではないまでも、一定の安全条件を満たす案を比較することはできる。",
+      "references": [
+        "lesson/2026-10-25/immersion/2/3",
+        "lesson/2026-10-25/reading/2/3"
+      ]
+    },
+    {
+      "id": "3ef4472f4bf50343",
+      "text": "ここで重要なのは、画面に示された数字だけではなく、その数字を算出した前提を共有することである。",
+      "label": "ここで重要なのは、画面に示された数字だけではなく、その数字を算出した前提を共有することである。",
+      "references": [
+        "lesson/2026-10-25/immersion/2/4",
+        "lesson/2026-10-25/reading/2/4"
+      ]
+    },
+    {
+      "id": "6672f9c18ef9e885",
+      "text": "管理画面を設計する側にも工夫の余地がある。",
+      "label": "管理画面を設計する側にも工夫の余地がある。",
+      "references": [
+        "lesson/2026-10-25/immersion/3/0",
+        "lesson/2026-10-25/reading/3/0"
+      ]
+    },
+    {
+      "id": "ad426222d4c4bb4e",
+      "text": "たとえば、経路だけを色分けして表示するのではなく、現在の通行制限、停止理由、手動介入の有無、更新された時刻を利用者がたどれるようにする。",
+      "label": "たとえば、経路だけを色分けして表示するのではなく、現在の通行制限、停止理由、手動介入の有無、更新された時刻を利用者がたどれるようにする。",
+      "references": [
+        "lesson/2026-10-25/immersion/3/1",
+        "lesson/2026-10-25/reading/3/1"
+      ]
+    },
+    {
+      "id": "d579d155708045c1",
+      "text": "異常が生じた際、なぜロボットが止まったのかを把握できなければ、担当者は対応の優先順位を決めにくい。",
+      "label": "異常が生じた際、なぜロボットが止まったのかを把握できなければ、担当者は対応の優先順位を決めにくい。",
+      "references": [
+        "lesson/2026-10-25/immersion/3/2",
+        "lesson/2026-10-25/reading/3/2"
+      ]
+    },
+    {
+      "id": "f7af35994962fd7d",
+      "text": "反対に、理由が確認できれば、再開を急ぐべき場面と、人の確認を待つべき場面の折り合いをつけやすくなる。",
+      "label": "反対に、理由が確認できれば、再開を急ぐべき場面と、人の確認を待つべき場面の折り合いをつけやすくなる。",
+      "references": [
+        "lesson/2026-10-25/immersion/3/3",
+        "lesson/2026-10-25/reading/3/3"
+      ]
+    },
+    {
+      "id": "73c3098ed8f6591a",
+      "text": "ただし、学習用画面の提案を根拠に実機の安全条件を変更してよいということではない。",
+      "label": "ただし、学習用画面の提案を根拠に実機の安全条件を変更してよいということではない。",
+      "references": [
+        "lesson/2026-10-25/immersion/3/4",
+        "lesson/2026-10-25/reading/3/4"
+      ]
+    },
+    {
+      "id": "766f7d203f816814",
+      "text": "効率化とは、単に「近い」「速い」を追求することではない。",
+      "label": "効率化とは、単に「近い」「速い」を追求することではない。",
+      "references": [
+        "lesson/2026-10-25/immersion/4/0",
+        "lesson/2026-10-25/reading/4/0"
+      ]
+    },
+    {
+      "id": "85879a322adb9256",
+      "text": "安全上の制約に即して判断材料を整理し、人が介入すべき局面を明確にすることにほかならない。",
+      "label": "安全上の制約に即して判断材料を整理し、人が介入すべき局面を明確にすることにほかならない。",
+      "references": [
+        "lesson/2026-10-25/immersion/4/1",
+        "lesson/2026-10-25/reading/4/1"
+      ]
+    },
+    {
+      "id": "126c26f0f4f52164",
+      "text": "機械が得意な計算と、現場の人が担う判断の双方を生かせてこそ、運行は続けられる。",
+      "label": "機械が得意な計算と、現場の人が担う判断の双方を生かせてこそ、運行は続けられる。",
+      "references": [
+        "lesson/2026-10-25/immersion/4/2",
+        "lesson/2026-10-25/reading/4/2"
+      ]
+    },
+    {
+      "id": "6e677fc6d8459eca",
+      "text": "最適化の成果は、一つの数字だけでは語れないのである。",
+      "label": "最適化の成果は、一つの数字だけでは語れないのである。",
+      "references": [
+        "lesson/2026-10-25/immersion/4/3",
+        "lesson/2026-10-25/reading/4/3"
+      ]
+    },
+    {
+      "id": "f115befe8eb463ea",
+      "text": "距離が短ければ、安全条件を別に評価する必要はない。",
+      "label": "距離が短ければ、安全条件を別に評価する必要はない。",
+      "references": [
+        "lesson/2026-10-25/option/0/0"
+      ]
+    },
+    {
+      "id": "7b3c25dcd140d8b8",
+      "text": "現場の変化を予測できない以上、計画自体に意味はない。",
+      "label": "現場の変化を予測できない以上、計画自体に意味はない。",
+      "references": [
+        "lesson/2026-10-25/option/1/0"
+      ]
+    },
+    {
+      "id": "14f9bd2973c6832d",
+      "text": "安全条件と判断の根拠を共有したうえで、経路を評価すべきだ。",
+      "label": "安全条件と判断の根拠を共有したうえで、経路を評価すべきだ。",
+      "references": [
+        "lesson/2026-10-25/option/2/0"
+      ]
+    },
+    {
+      "id": "75c6587340ad34e7",
+      "text": "管理画面に数値さえあれば、現場担当者の確認は不要になる。",
+      "label": "管理画面に数値さえあれば、現場担当者の確認は不要になる。",
+      "references": [
+        "lesson/2026-10-25/option/3/0"
+      ]
+    },
+    {
+      "id": "92b0442fb1ff8c4b",
+      "text": "だいほん",
+      "label": "台本",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-8422e82d2c17/word"
+      ]
+    },
+    {
+      "id": "16621d3d5ae7d0d9",
+      "text": "台本を保持したまま、読み間違えた一文の合成入力だけを直します。",
+      "label": "台本を保持したまま、読み間違えた一文の合成入力だけを直します。",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-8422e82d2c17/example/0"
+      ]
+    },
+    {
+      "id": "964427c49210aae0",
+      "text": "台本を読む",
+      "label": "台本を読む",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-8422e82d2c17/collocation/0"
+      ]
+    },
+    {
+      "id": "916046f1a943e66d",
+      "text": "台本と音声を照合する",
+      "label": "台本と音声を照合する",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-8422e82d2c17/collocation/1"
+      ]
+    },
+    {
+      "id": "d029af63e4286d7f",
+      "text": "台本を保持する",
+      "label": "台本を保持する",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-8422e82d2c17/collocation/2"
+      ]
+    },
+    {
+      "id": "ebfa084f6dd24ed3",
+      "text": "ごまかす",
+      "label": "誤魔化す",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-d3b2fbd304ed/word"
+      ]
+    },
+    {
+      "id": "3d57a0e373a5c6d7",
+      "text": "音声の自然さで読みの誤りを誤魔化してはいけません。",
+      "label": "音声の自然さで読みの誤りを誤魔化してはいけません。",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-d3b2fbd304ed/example/0"
+      ]
+    },
+    {
+      "id": "a806b462672af546",
+      "text": "誤りを誤魔化す",
+      "label": "誤りを誤魔化す",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-d3b2fbd304ed/collocation/0"
+      ]
+    },
+    {
+      "id": "5879348ba5de163f",
+      "text": "数字を誤魔化す",
+      "label": "数字を誤魔化す",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-d3b2fbd304ed/collocation/1"
+      ]
+    },
+    {
+      "id": "775a72c258736156",
+      "text": "曖昧な説明で誤魔化す",
+      "label": "曖昧な説明で誤魔化す",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-d3b2fbd304ed/collocation/2"
+      ]
+    },
+    {
+      "id": "b6d1cf91c45fc56d",
+      "text": "うめる",
+      "label": "埋める",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-54749c1b39a8/word"
+      ]
+    },
+    {
+      "id": "3c104139f960118d",
+      "text": "送信に成功した後で、完了時刻の欄を埋めます。",
+      "label": "送信に成功した後で、完了時刻の欄を埋めます。",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-54749c1b39a8/example/0"
+      ]
+    },
+    {
+      "id": "73c6a74027677594",
+      "text": "空欄を埋める",
+      "label": "空欄を埋める",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-54749c1b39a8/collocation/0"
+      ]
+    },
+    {
+      "id": "951b1921aa3710bd",
+      "text": "項目を埋める",
+      "label": "項目を埋める",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-54749c1b39a8/collocation/1"
+      ]
+    },
+    {
+      "id": "0ab7759b0861144f",
+      "text": "時刻の欄を埋める",
+      "label": "時刻の欄を埋める",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-54749c1b39a8/collocation/2"
+      ]
+    },
+    {
+      "id": "5b653110995be67c",
+      "text": "だまる",
+      "label": "黙る",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-89aa6485a8d0/word"
+      ]
+    },
+    {
+      "id": "b6a64d95a62f0a39",
+      "text": "競合を見つけたら、黙って保存を続けず、利用者へ知らせます。",
+      "label": "競合を見つけたら、黙って保存を続けず、利用者へ知らせます。",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-89aa6485a8d0/example/0"
+      ]
+    },
+    {
+      "id": "a01419be97d9ae6a",
+      "text": "しばらく黙る",
+      "label": "しばらく黙る",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-89aa6485a8d0/collocation/0"
+      ]
+    },
+    {
+      "id": "84bdc5e155fa5cd5",
+      "text": "黙って続ける",
+      "label": "黙って続ける",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-89aa6485a8d0/collocation/1"
+      ]
+    },
+    {
+      "id": "1ba0bb517d40d5cd",
+      "text": "黙って上書きしない",
+      "label": "黙って上書きしない",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-89aa6485a8d0/collocation/2"
+      ]
+    },
+    {
+      "id": "b7b2fa2fb181218b",
+      "text": "検証は米国東部のus-east-1で行い、主系には正常応答、503、10秒の待機を切り替えられるLambdaを置いています。",
+      "label": "検証は米国東部のus-east-1で行い、主系には正常応答、503、10秒の待機を切り替えられるLambdaを置いています。",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-a47c5cf6/evidence/0"
+      ]
+    },
+    {
+      "id": "0e9ae01631a07482",
+      "text": "これは人の確認をなくす仕組みではなく、確認する場所と、その判断を保持する仕組みです。",
+      "label": "これは人の確認をなくす仕組みではなく、確認する場所と、その判断を保持する仕組みです。",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-1e18d506/evidence/0"
+      ]
+    },
+    {
+      "id": "bf6ce50cd970e218",
+      "text": "ただし、トークン倍率を費用の順位へそのまま置き換えることはできません。",
+      "label": "ただし、トークン倍率を費用の順位へそのまま置き換えることはできません。",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-73083d1e/evidence/0"
+      ]
+    },
+    {
+      "id": "c7207e3e574bef32",
+      "text": "原文のロック検査は模擬実行で、Reactとの接続にはソースの条件や文字列を調べるテストも含まれます。",
+      "label": "原文のロック検査は模擬実行で、Reactとの接続にはソースの条件や文字列を調べるテストも含まれます。",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-d898be90/evidence/0"
+      ]
+    },
+    {
+      "id": "9ec31defb3fb6bd3",
+      "text": "ただし、試用版の実音声確認はApple Silicon Macで行われ、検出率や適合率はまだ数値で評価されていません。",
+      "label": "ただし、試用版の実音声確認はApple Silicon Macで行われ、検出率や適合率はまだ数値で評価されていません。",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-66614293/evidence/0"
+      ]
+    },
+    {
+      "id": "2cc8799d6b517a11",
+      "text": "DBの変更ログを読むCDCはその負荷を分けられますが、権限やコネクターの運用が必要です。",
+      "label": "DBの変更ログを読むCDCはその負荷を分けられますが、権限やコネクターの運用が必要です。",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-966a7d9e/evidence/0",
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-8cdb27ff/evidence/0"
+      ]
+    },
+    {
+      "id": "8048d9a5342738b1",
+      "text": "Outboxは重複しないことまで保証する仕組みではありません。",
+      "label": "Outboxは重複しないことまで保証する仕組みではありません。",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-68847e29/evidence/0"
+      ]
+    },
+    {
+      "id": "0801005b74f614bf",
+      "text": "診断用の退避ファイルには学習履歴が入るので、通常のバックアップとは区別します。",
+      "label": "診断用の退避ファイルには学習履歴が入るので、通常のバックアップとは区別します。",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-7deda27e/evidence/0"
+      ]
+    },
+    {
+      "id": "7fe3b2b9adad53cd",
+      "text": "比較の直後に別タブが書ける隙間が残るため、Web Locksの同じ排他ロックの中で、再読込、比較、保存を一続きに行う構成です。",
+      "label": "比較の直後に別タブが書ける隙間が残るため、Web Locksの同じ排他ロックの中で、再読込、比較、保存を一続きに行う構成です。",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-d20f029e/evidence/0"
+      ]
+    },
+    {
+      "id": "dc40585d9ec6ed51",
+      "text": "この仕組みが保護するのは、同一オリジンで同じロックを守る書き込み同士です。",
+      "label": "この仕組みが保護するのは、同一オリジンで同じロックを守る書き込み同士です。",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-4785c5c0/evidence/0"
+      ]
+    },
+    {
+      "id": "c6897d7b373e209f",
+      "text": "送信待ちの行を定期的に読む方式は導入しやすい一方、待ち時間と走査負荷が生じます。",
+      "label": "送信待ちの行を定期的に読む方式は導入しやすい一方、待ち時間と走査負荷が生じます。",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-339df203/evidence/0"
+      ]
+    },
+    {
+      "id": "d89187a106849ffd",
+      "text": "DevelopersIOの神野雄大氏は、Amazon Bedrock AgentCore Gatewayに追加されたBedrock Runtimeへの接続と、ルールによるフォールバックを試しています。",
+      "label": "DevelopersIOの神野雄大氏は、Amazon Bedrock AgentCore Gatewayに追加されたBedrock Runtimeへの接続と、ルールによるフォールバックを試しています。",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-72cf604e/evidence/0"
+      ]
+    },
+    {
+      "id": "eb53f3d081bbd7d4",
+      "text": "権限を付与する",
+      "label": "権限を付与する",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-8cdb27ff/collocation/0"
+      ]
+    },
+    {
+      "id": "5003bda4b561f3b8",
+      "text": "権限を制限する",
+      "label": "権限を制限する",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-8cdb27ff/collocation/1"
+      ]
+    },
+    {
+      "id": "3fe35110cac7347c",
+      "text": "管理者権限",
+      "label": "管理者権限",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-8cdb27ff/collocation/2"
+      ]
+    },
+    {
+      "id": "580e2fd4a82630a8",
+      "text": "依存関係",
+      "label": "依存関係",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-a20c26b7/collocation/0"
+      ]
+    },
+    {
+      "id": "a4402a19ce46faf5",
+      "text": "特定Versionへの依存",
+      "label": "特定Versionへの依存",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-a20c26b7/collocation/1"
+      ]
+    },
+    {
+      "id": "fbdf52c97f305b7d",
+      "text": "外部Serviceへの依存",
+      "label": "外部Serviceへの依存",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-a20c26b7/collocation/2"
+      ]
+    },
+    {
+      "id": "2cfbaf9e7e85d8c2",
+      "text": "版番号だけに依存しない。",
+      "label": "版番号だけに依存しない。",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-a20c26b7/evidence/0"
+      ]
+    },
+    {
+      "id": "04b1c18a88647d5e",
+      "text": "Chitoku氏は、台本と生成済み音声の読みを突き合わせ、読み間違いの候補を人が聴いて確認する日本語TTS点検ツールを公開しています。",
+      "label": "Chitoku氏は、台本と生成済み音声の読みを突き合わせ、読み間違いの候補を人が聴いて確認する日本語TTS点検ツールを公開しています。",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-41640d3b/evidence/0"
+      ]
+    },
+    {
+      "id": "b7b5b188183cdb2c",
+      "text": "を前提とする",
+      "label": "～を前提とする",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-dd565aef/collocation/0"
+      ]
+    },
+    {
+      "id": "8b753bbe4bec8bc2",
+      "text": "前提が崩れる",
+      "label": "前提が崩れる",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-dd565aef/collocation/1"
+      ]
+    },
+    {
+      "id": "542991ff2120d2fb",
+      "text": "前提条件",
+      "label": "前提条件",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-dd565aef/collocation/2"
+      ]
+    },
+    {
+      "id": "bae7fd30a6da6c2c",
+      "text": "前提を見直す",
+      "label": "前提を見直す",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-dd565aef/collocation/3"
+      ]
+    },
+    {
+      "id": "74c2c05f4efc9f1b",
+      "text": "切り替え先のモデル名もルールで置き換えられますが、別モデルなら何でもよいわけではなく、同じ要求本文を受け取れる形式が前提です。",
+      "label": "切り替え先のモデル名もルールで置き換えられますが、別モデルなら何でもよいわけではなく、同じ要求本文を受け取れる形式が前提です。",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-study-dd565aef/evidence/0"
+      ]
+    },
+    {
+      "id": "9c9bcaa0df1a9ffc",
+      "text": "日本語の文章が英語より短く見えても、APIへ送るトークン数が少ないとは限らない点に注意が必要です。",
+      "label": "日本語の文章が英語より短く見えても、APIへ送るトークン数が少ないとは限らない点に注意が必要です。",
+      "references": [
+        "lesson/2026-10-25/grammar/2026-10-25-g-study-ccec99c0/evidence/0"
+      ]
+    },
+    {
+      "id": "89e1b86e5b859e12",
+      "text": "読む価値: 切り替えの成功例に加え、ストリーミング、認可、呼び出し費用の境界まで説明でき、AIアプリの障害設計に使えます。",
+      "label": "読む価値: 切り替えの成功例に加え、ストリーミング、認可、呼び出し費用の境界まで説明でき、AIアプリの障害設計に使えます。",
+      "references": [
+        "lesson/2026-10-25/grammar/2026-10-25-g-study-2c43f688/evidence/0"
+      ]
+    },
+    {
+      "id": "0714f15fa5231f6b",
+      "text": "状態に応じて停止・再読込・再送のどれを選ぶかを決め、同じ処理を二度行った時の結果も検討します。",
+      "label": "状態に応じて停止・再読込・再送のどれを選ぶかを決め、同じ処理を二度行った時の結果も検討します。",
+      "references": [
+        "lesson/2026-10-25/grammar/2026-10-25-g-study-4f13d335/evidence/0"
+      ]
+    },
+    {
+      "id": "3027ba8e11a7d6d2",
+      "text": "五つの記事を通して考えられるのは、成功を一つの真偽値だけで持たない設計です。",
+      "label": "五つの記事を通して考えられるのは、成功を一つの真偽値だけで持たない設計です。",
+      "references": [
+        "lesson/2026-10-25/grammar/2026-10-25-g-study-60d5c5d/evidence/0"
+      ]
+    },
+    {
+      "id": "a51ef64c1b0e42e8",
+      "text": "差がある場所は、台本、波形、認識された読みとともに確認画面へ並びます。",
+      "label": "差がある場所は、台本、波形、認識された読みとともに確認画面へ並びます。",
+      "references": [
+        "lesson/2026-10-25/grammar/2026-10-25-g-study-99ab9a8c/evidence/0"
+      ]
+    },
+    {
+      "id": "475ad0e2f1f1e476",
+      "text": "Gateway自身のレート制限による429やPolicyの拒否による403も、設定したからといって別経路へ回るものではありません。",
+      "label": "Gateway自身のレート制限による429やPolicyの拒否による403も、設定したからといって別経路へ回るものではありません。",
+      "references": [
+        "lesson/2026-10-25/grammar/2026-10-25-g-study-ac3d07f0/evidence/0"
+      ]
+    },
+    {
+      "id": "e2cac7947079edd0",
+      "text": "推論に使った分が含まれるため、見えている文字数だけでは費用を説明できません。",
+      "label": "推論に使った分が含まれるため、見えている文字数だけでは費用を説明できません。",
+      "references": [
+        "lesson/2026-10-25/grammar/2026-10-25-g-study-48e1043d/evidence/0"
+      ]
+    },
+    {
+      "id": "46db5ca562197321",
+      "text": "別タブの更新を早く知るためにstorageイベントも使います。",
+      "label": "別タブの更新を早く知るためにstorageイベントも使います。",
+      "references": [
+        "lesson/2026-10-25/grammar/2026-10-25-g-study-1739e8be/evidence/0"
+      ]
+    },
+    {
+      "id": "919e2b09da8a204d",
+      "text": "独立复习1|管轄の読み",
+      "label": "独立复习1｜管轄の読み",
+      "references": [
+        "lesson/2026-10-25/review/0/title/0"
+      ]
+    },
+    {
+      "id": "474264ee2782ab2a",
+      "text": "第1题|原Q6知识点・改编|読み: この道路区間は、別の管理機関の管轄となっている。",
+      "label": "第1题｜原Q6知识点・改编｜読み： `この道路区間は、別の管理機関の管轄となっている。",
+      "references": [
+        "lesson/2026-10-25/review/0/detail/0"
+      ]
+    },
+    {
+      "id": "29502ba15b38cfbd",
+      "text": "「管轄」の読みとして正しいものはどれか。",
+      "label": "` 「管轄」の読みとして正しいものはどれか。",
+      "references": [
+        "lesson/2026-10-25/review/0/detail/1"
+      ]
+    },
+    {
+      "id": "ad239c059dd27291",
+      "text": "1 かんがつ 2 かんかつ 3 かんがい 4 かんこつ 请先独立作答,作答后再核对;这里不预告正确选项。",
+      "label": "① かんがつ　② かんかつ　③ かんがい　④ かんこつ 请先独立作答，作答后再核对；这里不预告正确选项。",
+      "references": [
+        "lesson/2026-10-25/review/0/detail/2"
+      ]
+    },
+    {
+      "id": "7d45e7c24f4cf51e",
+      "text": "独立复习2|目まぐるしいの用法",
+      "label": "独立复习2｜目まぐるしいの用法",
+      "references": [
+        "lesson/2026-10-25/review/1/title/0"
+      ]
+    },
+    {
+      "id": "ed70d76ed275f2a2",
+      "text": "第2题|原Q25知识点・改编|語の用法: 「目まぐるしい」の使い方として最も自然なのはどれか。",
+      "label": "第2题｜原Q25知识点・改编｜語の用法： 「目まぐるしい」の使い方として最も自然なのはどれか。",
+      "references": [
+        "lesson/2026-10-25/review/1/detail/0"
+      ]
+    },
+    {
+      "id": "a50f6f1302617717",
+      "text": "1 ロボットが目まぐるしい荷物を運ぶ。",
+      "label": "① ロボットが目まぐるしい荷物を運ぶ。",
+      "references": [
+        "lesson/2026-10-25/review/1/detail/1"
+      ]
+    },
+    {
+      "id": "eb8d9042aa2dbe26",
+      "text": "2 休日の机は目まぐるしい色だった。",
+      "label": "② 休日の机は目まぐるしい色だった。",
+      "references": [
+        "lesson/2026-10-25/review/1/detail/2"
+      ]
+    },
+    {
+      "id": "85f276655a6f8541",
+      "text": "3 運行条件が目まぐるしく変わり、担当者は確認を続けた。",
+      "label": "③ 運行条件が目まぐるしく変わり、担当者は確認を続けた。",
+      "references": [
+        "lesson/2026-10-25/review/1/detail/3"
+      ]
+    },
+    {
+      "id": "7884527f9190065b",
+      "text": "4 その資料は目まぐるしく正確だ。",
+      "label": "④ その資料は目まぐるしく正確だ。",
+      "references": [
+        "lesson/2026-10-25/review/1/detail/4"
+      ]
+    },
+    {
+      "id": "644245dddaa0fbf1",
+      "text": "独立复习3|なくしては",
+      "label": "独立复习3｜なくしては",
+      "references": [
+        "lesson/2026-10-25/review/2/title/0"
+      ]
+    },
+    {
+      "id": "3c79c3216d56433d",
+      "text": "第3题|原Q27知识点・改编|文法: 現場で働く人々の協力( )、運行計画を安全に改善することは難しい。",
+      "label": "第3题｜原Q27知识点・改编｜文法： `現場で働く人々の協力（　）、運行計画を安全に改善することは難しい。",
+      "references": [
+        "lesson/2026-10-25/review/2/detail/0"
+      ]
+    },
+    {
+      "id": "98474b770208c07b",
+      "text": "1 に先立って 2 を問わず 3 なくしては 4 だけに 请先独立作答,作答后再核对;这里不预告正确选项。",
+      "label": "`　① に先立って　② を問わず　③ なくしては　④ だけに 请先独立作答，作答后再核对；这里不预告正确选项。",
+      "references": [
+        "lesson/2026-10-25/review/2/detail/1"
+      ]
+    },
+    {
+      "id": "013ccc1adfdda1ae",
+      "text": "独立复习4|ならでは",
+      "label": "独立复习4｜ならでは",
+      "references": [
+        "lesson/2026-10-25/review/3/title/0"
+      ]
+    },
+    {
+      "id": "701d17ffe8544583",
+      "text": "第4题|原Q38知识点・改编|語順・表現: 熟練した担当者( )、細かな変化に気づける場合がある。",
+      "label": "第4题｜原Q38知识点・改编｜語順・表現： `熟練した担当者（　）、細かな変化に気づける場合がある。",
+      "references": [
+        "lesson/2026-10-25/review/3/detail/0"
+      ]
+    },
+    {
+      "id": "eaa55dc467a24818",
+      "text": "1 に限って 2 ならではの判断で 3 に反して 4 のあげく 请先独立作答,作答后再核对;这里不预告正确选项。",
+      "label": "`　① に限って　② ならではの判断で　③ に反して　④ のあげく 请先独立作答，作答后再核对；这里不预告正确选项。",
+      "references": [
+        "lesson/2026-10-25/review/3/detail/1"
+      ]
+    },
+    {
+      "id": "fd7fc642bc1ec1e6",
+      "text": "独立复习5|広告と差別化の因果",
+      "label": "独立复习5｜広告と差別化の因果",
+      "references": [
+        "lesson/2026-10-25/review/4/title/0"
+      ]
+    },
+    {
+      "id": "bb42046ecfade9e2",
+      "text": "第5题|原Q62知识点・改编|因果読解: 同じ性能をうたう商品が増えると、商品の機能だけで違いを説明しにくくなる。",
+      "label": "第5题｜原Q62知识点・改编｜因果読解： `同じ性能をうたう商品が増えると、商品の機能だけで違いを説明しにくくなる。",
+      "references": [
+        "lesson/2026-10-25/review/4/detail/0"
+      ]
+    },
+    {
+      "id": "774f85acf35e8a40",
+      "text": "そのため、広告では実際の製品の特徴よりも、使う人が抱く印象を前面に出すようになった。",
+      "label": "そのため、広告では実際の製品の特徴よりも、使う人が抱く印象を前面に出すようになった。",
+      "references": [
+        "lesson/2026-10-25/review/4/detail/1"
+      ]
+    },
+    {
+      "id": "64f5f9f41ef6c690",
+      "text": "この変化が起こった理由として最も適切なものはどれか。",
+      "label": "` この変化が起こった理由として最も適切なものはどれか。",
+      "references": [
+        "lesson/2026-10-25/review/4/detail/2"
+      ]
+    },
+    {
+      "id": "cfb9d7219ccce565",
+      "text": "1 商品の機能差を明確に示しやすくなったから。",
+      "label": "① 商品の機能差を明確に示しやすくなったから。",
+      "references": [
+        "lesson/2026-10-25/review/4/detail/3"
+      ]
+    },
+    {
+      "id": "4624521ca4a74d40",
+      "text": "2 同質化が進み、商品の機能だけでは差別化しにくくなったから。",
+      "label": "② 同質化が進み、商品の機能だけでは差別化しにくくなったから。",
+      "references": [
+        "lesson/2026-10-25/review/4/detail/4"
+      ]
+    },
+    {
+      "id": "7f916b9e33d68eda",
+      "text": "3 広告で商品の機能を説明することが法律で禁止されたから。",
+      "label": "③ 広告で商品の機能を説明することが法律で禁止されたから。",
+      "references": [
+        "lesson/2026-10-25/review/4/detail/5"
+      ]
+    },
+    {
+      "id": "ab93a17dd6135a19",
+      "text": "4 印象を重視すれば、製品の品質確認が不要になるから。",
+      "label": "④ 印象を重視すれば、製品の品質確認が不要になるから。",
+      "references": [
+        "lesson/2026-10-25/review/4/detail/6"
+      ]
+    }
+  ]
 }
