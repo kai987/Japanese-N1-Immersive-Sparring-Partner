@@ -12,7 +12,7 @@
   },
   "engineVersion": "1.1.0-dev",
   "modelVersion": "1.0.0",
-  "generatedAt": "2026-10-26T02:37:54.341Z",
+  "generatedAt": "2026-10-26T04:13:16.554Z",
   "lessonDates": [
     "2026-10-26",
     "2026-10-24",
@@ -72,7 +72,7 @@
     "2026-08-31",
     "2026-08-30"
   ],
-  "expectedClips": 6060,
+  "expectedClips": 6068,
   "complete": true,
   "clips": {
     "000508138c45e52f": {
@@ -6928,6 +6928,18 @@
       "bytes": 10029,
       "sha256": "a7fe591860cec1e0f1ee06b3499264ab46fc1dfe7c705739ba13096f71bfbeb9",
       "rms": 0.144963
+    },
+    "16621d3d5ae7d0d9": {
+      "id": "16621d3d5ae7d0d9",
+      "text": "台本を保持したまま、読み間違えた一文の合成入力だけを直します。",
+      "label": "台本を保持したまま、読み間違えた一文の合成入力だけを直します。",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-8422e82d2c17/example/0"
+      ],
+      "bytes": 66861,
+      "duration": 5.544,
+      "rms": 0.146279,
+      "sha256": "6fbddbda5d8458cd015b809208939e66b44f820ef062ffa343098c0f906d2dde"
     },
     "16786203aa8d47bf": {
       "id": "16786203aa8d47bf",
@@ -17410,6 +17422,18 @@
       "sha256": "a4264272a0862879da05b349dac4bae184fe4d46cc696f969118d09cbfd9db85",
       "rms": 0.17924
     },
+    "3c104139f960118d": {
+      "id": "3c104139f960118d",
+      "text": "送信に成功した後で、完了時刻の欄を埋めます。",
+      "label": "送信に成功した後で、完了時刻の欄を埋めます。",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-54749c1b39a8/example/0"
+      ],
+      "bytes": 50733,
+      "duration": 4.2,
+      "rms": 0.127367,
+      "sha256": "8b0919b9378640b71efd567209b35998ca90f04180ce5cb5374daffa699dcf04"
+    },
     "3c10a3b00be764a4": {
       "id": "3c10a3b00be764a4",
       "text": "そぐ",
@@ -17764,6 +17788,18 @@
       "bytes": 13485,
       "sha256": "96a2ad1de04a96ed77a0d924579abefc7c74b18b6a168627edc95f73eb363e71",
       "rms": 0.154943
+    },
+    "3d57a0e373a5c6d7": {
+      "id": "3d57a0e373a5c6d7",
+      "text": "音声の自然さで読みの誤りを誤魔化してはいけません。",
+      "label": "音声の自然さで読みの誤りを誤魔化してはいけません。",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-d3b2fbd304ed/example/0"
+      ],
+      "bytes": 50733,
+      "duration": 4.2,
+      "rms": 0.136437,
+      "sha256": "aabf5dccb4b1d2fe1eb0d59aebad9cf7114f524627e462ed70fa20ad98534d66"
     },
     "3d5c4c96424f6042": {
       "id": "3d5c4c96424f6042",
@@ -26975,6 +27011,18 @@
       "bytes": 39981,
       "sha256": "ade96dce8821fb73605b5f275e639b6753c6206522eda1e36974328daa4f9cee",
       "rms": 0.1939
+    },
+    "5b653110995be67c": {
+      "id": "5b653110995be67c",
+      "text": "だまる",
+      "label": "黙る",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-89aa6485a8d0/word"
+      ],
+      "bytes": 13005,
+      "duration": 1.056,
+      "rms": 0.150818,
+      "sha256": "4ff33b92662c77ec4631917d0ba4b658f8fc640647ee4135c4751e5177d43a71"
     },
     "5b68f1e32018193f": {
       "id": "5b68f1e32018193f",
@@ -43951,6 +43999,18 @@
       "sha256": "c0b2f0d14e42c8373a4faa7d837a11636659a632ea9f1b5b2aac04961aeb1bd9",
       "rms": 0.163991
     },
+    "92b0442fb1ff8c4b": {
+      "id": "92b0442fb1ff8c4b",
+      "text": "だいほん",
+      "label": "台本",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-8422e82d2c17/word"
+      ],
+      "bytes": 13581,
+      "duration": 1.104,
+      "rms": 0.124553,
+      "sha256": "900e989c0bb8bb25cd1b36084da16c0101a1edeba0490b7d7472444cec69bfd9"
+    },
     "92bd7665e3b96341": {
       "id": "92bd7665e3b96341",
       "text": "対策が空振りに終わる",
@@ -54345,6 +54405,18 @@
       "sha256": "826496c48c4b66cf91f8c5089de37b8304057347f036d3a0e32a8f6097ad8de1",
       "rms": 0.17718
     },
+    "b6a64d95a62f0a39": {
+      "id": "b6a64d95a62f0a39",
+      "text": "競合を見つけたら、黙って保存を続けず、利用者へ知らせます。",
+      "label": "競合を見つけたら、黙って保存を続けず、利用者へ知らせます。",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-89aa6485a8d0/example/0"
+      ],
+      "bytes": 60525,
+      "duration": 5.016,
+      "rms": 0.1191,
+      "sha256": "6dceac08d8c6d76709cd2ba0b4e9cf30e2d03c3b034fdc3f1735a247e402fc8b"
+    },
     "b6b837a29f54e356": {
       "id": "b6b837a29f54e356",
       "text": "はたして予定どおりに完成するだろうか。",
@@ -54368,6 +54440,18 @@
       "bytes": 32685,
       "sha256": "e9a736cd94ad9c281de6dba9af30d688745dfd0135cc58a562346cd5d4df2ec3",
       "rms": 0.144365
+    },
+    "b6d1cf91c45fc56d": {
+      "id": "b6d1cf91c45fc56d",
+      "text": "うめる",
+      "label": "埋める",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-54749c1b39a8/word"
+      ],
+      "bytes": 13005,
+      "duration": 1.056,
+      "rms": 0.159966,
+      "sha256": "05fed29ecfed551f0aba5b29f65be29f0b3ea0b01b932c08b94082cad5ddb694"
     },
     "b6d9a19b0c93afc7": {
       "id": "b6d9a19b0c93afc7",
@@ -69659,6 +69743,18 @@
       "bytes": 63597,
       "sha256": "2b093ef17872522e461349269393edb76c18d79ebbfab7ed0b0efdc18613e9da",
       "rms": 0.155873
+    },
+    "ebfa084f6dd24ed3": {
+      "id": "ebfa084f6dd24ed3",
+      "text": "ごまかす",
+      "label": "誤魔化す",
+      "references": [
+        "lesson/2026-10-25/vocabulary/2026-10-25-v-d3b2fbd304ed/word"
+      ],
+      "bytes": 14445,
+      "duration": 1.176,
+      "rms": 0.138837,
+      "sha256": "81db33785c32fe9984c1372ffe5bf78e13ccd9380b4055007a00b5f0e1ba9a88"
     },
     "ec02ec49556d4115": {
       "id": "ec02ec49556d4115",
