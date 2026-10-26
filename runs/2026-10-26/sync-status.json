@@ -24,8 +24,8 @@
     "observedAt": "2026-10-26T00:16:08.496Z"
   },
   "lastError": null,
-  "nextStep": "Text and shared audio verified. Unique audio remains pending under the existing worker and upstream 2026-10-25 gate; no duplicate text request or forced worker run.",
-  "updatedAt": "2026-10-26T02:17:24.409Z",
+  "nextStep": "Day58 text and all audio verified; preserve independent Day57 unique audio and the unchanged worker window/latch.",
+  "updatedAt": "2026-10-26T04:18:31.796Z",
   "upstreamSourceCommit": "536e1d547682b9a87813af7b1970373140533698",
   "sourcePagesRunId": 40256021181,
   "snapshotSha256": "4410890bf6145561d096d67e13b0de604ed9eb59fa27c5207a01b3818d267fab",
@@ -60,12 +60,91 @@
     "sharedVerified": true,
     "newSharedClips": 8,
     "playbackTests": 2,
-    "uniquePending": 97,
-    "uniqueAudioComplete": false,
+    "uniquePending": 0,
+    "uniqueAudioComplete": true,
     "workerPhase": "waiting_daily_audio",
     "waitingDates": [
       "2026-10-25"
     ],
-    "claimedDate": "2026-10-26"
+    "claimedDate": "2026-10-26",
+    "newUniqueRecordings": 97,
+    "audioMetadataCommit": "62106097669cb278068f5c1338ac268bebf6485b",
+    "verifiedReleaseCommit": "321efddadb43ec85b9f94f1a34a5e628adcfad53",
+    "pagesRunId": 40267945971,
+    "fullCloudRecordingsVerified": 6068,
+    "targetUtterances": 196,
+    "livePlayback": [
+      {
+        "id": "0ff5acf276f010ae",
+        "provider": "supabase",
+        "url": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/0ff5acf276f010ae--b85f0cdd3ccf7a144ed6181d53065b1029b8f8be137249ecf129914b62092a61.mp3",
+        "src": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/morioki-normal/0ff5acf276f010ae--b85f0cdd3ccf7a144ed6181d53065b1029b8f8be137249ecf129914b62092a61.mp3",
+        "currentTime": 0.259162,
+        "endTime": 0.268796,
+        "duration": 3.670708,
+        "paused": false,
+        "error": null,
+        "observedAt": "2026-10-26T04:16:49.489Z"
+      },
+      {
+        "id": "a03c494af73cd5de",
+        "provider": "daily",
+        "url": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-10-26/vocab-02--aad214d3536e11d4450bb8159aa3861d483620b723106719b2e24d4a261555b9.mp3",
+        "src": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/japanese/2026-10-26/vocab-02--aad214d3536e11d4450bb8159aa3861d483620b723106719b2e24d4a261555b9.mp3",
+        "currentTime": 0.373106,
+        "endTime": 0.384483,
+        "duration": 1.277667,
+        "paused": false,
+        "error": null,
+        "observedAt": "2026-10-26T04:17:02.999Z"
+      }
+    ],
+    "verification": {
+      "targetDate": "2026-10-26",
+      "day": 58,
+      "newGeneratedAndUploaded": 97,
+      "existingRecordingsUnchanged": true,
+      "fullCloudRecordingsVerified": 6068,
+      "fullCloudBytes": 209776836,
+      "sourceAudioCommit": "5809b72e32a7d6e92efa8484c122fcbb5703f7ad",
+      "audioMetadataCommit": "62106097669cb278068f5c1338ac268bebf6485b",
+      "latestReleaseCommit": "321efddadb43ec85b9f94f1a34a5e628adcfad53",
+      "pagesRunId": 40267945971,
+      "publicManifest": {
+        "sha256": "0522a555973fc463a777e860dd1ac40f4a18cb6e77537a0be5c3d05c44285b5c",
+        "bytes": 3017644,
+        "exactCommittedBytes": true
+      },
+      "targetTotalUtterances": 196,
+      "targetPending": 0,
+      "otherDatePending": 97,
+      "originalLessonSnapshotUnchanged": true,
+      "voice": {
+        "engine": "AivisSpeech",
+        "name": "morioki",
+        "style": "ノーマル",
+        "styleId": 497929760,
+        "speakerUuid": "396a746d-742f-4e43-b722-1182a7fab9af",
+        "speed": 1,
+        "sampleRate": 24000,
+        "codec": "mp3-64k"
+      },
+      "appCleanup": {
+        "status": "closed",
+        "appExited": true,
+        "engineExited": true,
+        "screenLocked": false,
+        "forced": false,
+        "nativeResult": "quit_requested_and_exited",
+        "verifiedAt": "2026-10-26T02:36:05.606461+00:00"
+      },
+      "verifiedAt": "2026-10-26T04:16:12.577Z",
+      "latestSharedAudioCommit": "89c157d193d0a8cf5a349dd00eb350403ef4cc1f",
+      "cloudEvidence": {
+        "previousFull6060": "/tmp/audio-repair-20261026/n1/target-complete-before-shared.json",
+        "newShared8": "/tmp/audio-repair-20261026/shared25/shared-content-verified.json",
+        "allPreviouslyVerifiedMappingsUnchanged": true
+      }
+    }
   }
 }
