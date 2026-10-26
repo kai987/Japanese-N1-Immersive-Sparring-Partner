@@ -50,7 +50,7 @@ jobs:
           const requested = process.env.REQUESTED_COMMIT || '';
           if (requested && !/^[a-f0-9]{40}$/.test(requested)) throw new Error('Invalid audio commit');
           const query = 'repos/kai987/japan-it-ai-daily/actions/workflows/sync-r2-audio.yml/runs?branch=main&status=success&per_page=100' + (requested ? '&head_sha=' + requested : '');
-          const { workflow_runs: runs } = JSON.parse(execFileSync('gh', ['api', query], { encoding: 'utf8' }));
+          const { workflow_runs: runs } = JSON.parse(execFileSync('gh', ['api', query, '--jq', '{workflow_runs: [.workflow_runs[] | {head_sha, head_branch, status, conclusion, path, head_repository: {full_name: .head_repository.full_name}, html_url}]}'], { encoding: 'utf8' }));
           const run = runs.find(r => r.head_branch === 'main' && r.status === 'completed' && r.conclusion === 'success' && r.path === '.github/workflows/sync-r2-audio.yml' && r.head_repository?.full_name === 'kai987/japan-it-ai-daily' && (!requested || r.head_sha === requested));
           if (!run) throw new Error('waiting_daily_audio: no matching successful upstream R2 run');
           appendFileSync(process.env.GITHUB_OUTPUT, `commit=${run.head_sha}\n`);
