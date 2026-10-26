@@ -24,8 +24,8 @@
     "observedAt": "2026-10-26T00:16:08.496Z"
   },
   "lastError": null,
-  "nextStep": "Day58 text and all audio verified; preserve independent Day57 unique audio and the unchanged worker window/latch.",
-  "updatedAt": "2026-10-26T04:18:31.796Z",
+  "nextStep": "Text remains published; Day57 and Day58 audio verified, current catalog has zero pending recordings. No text request or schedule change.",
+  "updatedAt": "2026-10-26T09:54:37.116Z",
   "upstreamSourceCommit": "536e1d547682b9a87813af7b1970373140533698",
   "sourcePagesRunId": 40256021181,
   "snapshotSha256": "4410890bf6145561d096d67e13b0de604ed9eb59fa27c5207a01b3818d267fab",
@@ -145,6 +145,14 @@
         "newShared8": "/tmp/audio-repair-20261026/shared25/shared-content-verified.json",
         "allPreviouslyVerifiedMappingsUnchanged": true
       }
-    }
+    },
+    "currentCoverage": {
+      "commit": "f1b6a47126bc1ed00783b0cbd2c3fe47b62b561e",
+      "pagesRunId": 40302459216,
+      "pendingAll": 0,
+      "cloudVerified": 6165,
+      "verifiedAt": "2026-10-26T09:54:33.387Z"
+    },
+    "pendingAll": 0
   }
 }
