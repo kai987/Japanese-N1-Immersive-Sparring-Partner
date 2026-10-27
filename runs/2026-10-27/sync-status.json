@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-10-27",
   "day": 59,
-  "status": "waiting_upstream",
-  "stage": "waiting_upstream",
+  "status": "waiting_request",
+  "stage": "request_ready",
   "requestSubmitted": false,
   "sourceSavedOnMain": true,
   "sourceCheckpointVerified": true,
@@ -25,6 +25,20 @@
   },
   "upstreamTargetVerified": false,
   "lastError": null,
-  "nextStep": "Verify successful same-day upstream daily/daily-ja/japanese/japanese-ja publication, complete snapshot, and normal request workflow during 11:00 or once daily 12:00 entrypoints; no new original. No claim of Pages publication without matching deploy and live checks.",
-  "updatedAt": "2026-10-27T00:17:53.609Z"
+  "nextStep": "Submit complete source-bound request while shared slot is free",
+  "updatedAt": "2026-10-27T01:58:03.148Z",
+  "upstreamSourceCommit": "88812f1c00efe9b224f03ff15da71fedb37c6efc",
+  "sourcePagesRunId": 40433987841,
+  "snapshotSha256": "64f1b2a69730a0ea30c6aed08b941afb19410cf9c86486884db30ee37bd23f72",
+  "issueNumber": 77,
+  "totalDays": 77,
+  "requestSha256": "db4f01ba4425fb667977d5b47c334b79d302d1a30b11fc20689209efb0ce1dc5",
+  "localValidation": {
+    "content": true,
+    "unit": 114,
+    "python": 26,
+    "build": true,
+    "browserTests": 50,
+    "allPassed": true
+  }
 }
