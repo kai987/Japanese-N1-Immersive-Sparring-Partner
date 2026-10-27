@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "targetDate": "2026-10-27",
+  "day": 59,
+  "status": "waiting_upstream",
+  "stage": "waiting_upstream",
+  "requestSubmitted": false,
+  "sourceSavedOnMain": true,
+  "sourceCheckpointVerified": true,
+  "sourcePresent": true,
+  "sourceCommit": "68e4af9e4fa8198e5efcb636f8a2475e56bd9e0d",
+  "sourceBlobSha": "009830cd469a3557a8e7fc40411ea8a5712fa931",
+  "sourceCheckpointBlobSha": "61cf131f40a149bb6d9ed245ce5eebf8a8d520d2",
+  "sourceSha256": "b9e1ef2afa8fc2f44e85109539a146d368ccdcac25276e5ae43e995397504434",
+  "expectedSourceSha256": "b9e1ef2afa8fc2f44e85109539a146d368ccdcac25276e5ae43e995397504434",
+  "expectedSourceBytes": 26035,
+  "generatedAtJST": "2026-10-27T09:07:45+09:00",
+  "sourceObservation": {
+    "n1Main": "68e4af9e4fa8198e5efcb636f8a2475e56bd9e0d",
+    "mainSourcePresent": true,
+    "outboxVerified": true,
+    "exactSourceBytes": 26035,
+    "sourceSha256": "b9e1ef2afa8fc2f44e85109539a146d368ccdcac25276e5ae43e995397504434",
+    "observedAt": "2026-10-27T00:17:53.609Z"
+  },
+  "upstreamTargetVerified": false,
+  "lastError": null,
+  "nextStep": "Verify successful same-day upstream daily/daily-ja/japanese/japanese-ja publication, complete snapshot, and normal request workflow during 11:00 or once daily 12:00 entrypoints; no new original. No claim of Pages publication without matching deploy and live checks.",
+  "updatedAt": "2026-10-27T00:17:53.609Z"
+}
