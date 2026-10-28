@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-10-28",
   "day": 60,
-  "status": "waiting_upstream",
-  "stage": "waiting_upstream",
+  "status": "waiting_request",
+  "stage": "request_ready",
   "requestSubmitted": false,
   "sourceSavedOnMain": true,
   "sourceCheckpointVerified": true,
@@ -14,6 +14,20 @@
   "expectedSourceBytes": 24641,
   "generatedAtJST": "2026-10-28T09:09:42+09:00",
   "lastError": null,
-  "nextStep": "Exact Day60 source saved and verified. Existing 11:00/12:00 workflow must verify same-day successful upstream main/Pages and historical snapshot, then prepare validated sync request and verify N1 Pages. Do not regenerate the source.",
-  "updatedAt": "2026-10-28T00:18:36.886Z"
+  "nextStep": "Submit complete source-bound request while shared slot is free",
+  "updatedAt": "2026-10-28T01:39:05.302Z",
+  "upstreamSourceCommit": "5003da0df3628870ede74a118ff8bcc4589e0ed5",
+  "sourcePagesRunId": 40615852412,
+  "snapshotSha256": "727799a2cda2afe81c8a06c0a31cb8e901d0a56546881077f9077351978ec2d3",
+  "issueNumber": 78,
+  "totalDays": 78,
+  "requestSha256": "782b38491121c20029cd6d9cebf36fc2289c7acc5ece11cf5ed15128f26e0dea",
+  "localValidation": {
+    "content": true,
+    "unit": 114,
+    "python": 26,
+    "build": true,
+    "browserTests": 50,
+    "allPassed": true
+  }
 }
