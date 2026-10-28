@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-10-28",
   "day": 60,
-  "status": "validating",
-  "stage": "validating",
+  "status": "published",
+  "stage": "published",
   "requestSubmitted": true,
   "sourceSavedOnMain": true,
   "sourceCheckpointVerified": true,
@@ -14,8 +14,8 @@
   "expectedSourceBytes": 24641,
   "generatedAtJST": "2026-10-28T09:09:42+09:00",
   "lastError": null,
-  "nextStep": "Verify exact sync run, final lesson+snapshot commit, Pages and live target date",
-  "updatedAt": "2026-10-28T01:39:12.173Z",
+  "nextStep": "Text complete. Shared and unique N1 audio remain independent; observe their actual checkpoints and existing worker schedule.",
+  "updatedAt": "2026-10-28T01:45:02.744Z",
   "upstreamSourceCommit": "5003da0df3628870ede74a118ff8bcc4589e0ed5",
   "sourcePagesRunId": 40615852412,
   "snapshotSha256": "727799a2cda2afe81c8a06c0a31cb8e901d0a56546881077f9077351978ec2d3",
@@ -31,5 +31,117 @@
     "allPassed": true
   },
   "requestCommit": "1e3d688b124c829bee711f3addc89a5efc77c5cf",
-  "requestBlobSha": "e6dfa4ab66a8e4edd9dad438ba10298ae1f87842"
+  "requestBlobSha": "e6dfa4ab66a8e4edd9dad438ba10298ae1f87842",
+  "releaseCommit": "f15e0fcf3768ee21b3a422ca334c5be476e96e83",
+  "pagesRunId": 40616562437,
+  "counts": {
+    "vocabularyNew": 1,
+    "vocabularyReview": 19,
+    "grammarNew": 0,
+    "grammarReview": 8
+  },
+  "textPublicationVerified": true,
+  "verification": {
+    "label": "text",
+    "targetDate": "2026-10-28",
+    "day": 60,
+    "releaseCommit": "f15e0fcf3768ee21b3a422ca334c5be476e96e83",
+    "pagesRunId": 40616562437,
+    "sourceCommit": "5003da0df3628870ede74a118ff8bcc4589e0ed5",
+    "sourceBlobSha": "d08f1665d35b882c677adf0c9558cdc84c28aa27",
+    "snapshotSha256": "727799a2cda2afe81c8a06c0a31cb8e901d0a56546881077f9077351978ec2d3",
+    "totalDays": 78,
+    "issueNumber": 78,
+    "fullGrammarLessonDates": 78,
+    "artifact": {
+      "id": 12785152861,
+      "name": "github-pages",
+      "digest": "sha256:1820ccc68393743a587c38f49ae749768470beb4f9c1f1ea5359cd68ee994fea",
+      "downloadedZipSha256": "1820ccc68393743a587c38f49ae749768470beb4f9c1f1ea5359cd68ee994fea",
+      "digestVerified": true
+    },
+    "site": "/tmp/japan-daily-20261028/n1/text-release-40616562437/site",
+    "checks": [
+      {
+        "path": "index.html",
+        "url": "https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/?acceptance=f15e0fcf3768ee21b3a422ca334c5be476e96e83",
+        "status": 200,
+        "sha256": "2d75f911be99d31a24665c2c82c52d37576d5011535f4313fcebd745dbd11bdf",
+        "bytes": 1596,
+        "attempt": 1
+      },
+      {
+        "path": "assets/index-BpbpPCdp.js",
+        "url": "https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/assets/index-BpbpPCdp.js?acceptance=f15e0fcf3768ee21b3a422ca334c5be476e96e83",
+        "status": 200,
+        "sha256": "c1d7ba3bbf9f8b6886bd00dd8b352ca0279c881c95f238821b640e93abfa31d9",
+        "bytes": 7988855,
+        "attempt": 1
+      },
+      {
+        "path": "assets/index-BpdupM-0.css",
+        "url": "https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/assets/index-BpdupM-0.css?acceptance=f15e0fcf3768ee21b3a422ca334c5be476e96e83",
+        "status": 200,
+        "sha256": "ae591cc4f64aac982210bb9f9a30a84e9aab4eb1a7a4aa290611892d99ac1d4e",
+        "bytes": 46788,
+        "attempt": 1
+      }
+    ],
+    "fullPublicAssetBytes": true,
+    "allOriginalParagraphsPresent": true,
+    "derivedReadingOptionsPresent": true,
+    "contentVerification": {
+      "observedAt": "2026-10-28T01:42:23.984Z",
+      "commit": "f15e0fcf3768ee21b3a422ca334c5be476e96e83",
+      "parent": "1e3d688b124c829bee711f3addc89a5efc77c5cf",
+      "changedPaths": [
+        "src/data/daily/2026-10-28.json",
+        "src/data/it-study-snapshot.json"
+      ],
+      "onlyTwoPaths": true,
+      "sourceBlobUnchanged": true,
+      "sourceBlobSha": "d08f1665d35b882c677adf0c9558cdc84c28aa27",
+      "sourceSha256": "2b11344b79e1f37d9e39178da2ba97f4f332d35d3531fdb50d0cacc5314045ee",
+      "sourceBytes": 24641,
+      "dailyCandidateBytesExact": true,
+      "dailySha256": "d77bf448799dde116e18015a643828c9f9dcf23a14313360bd7f43882b9d02ac",
+      "snapshotSourceCommit": "5003da0df3628870ede74a118ff8bcc4589e0ed5",
+      "snapshotInputSha256": "727799a2cda2afe81c8a06c0a31cb8e901d0a56546881077f9077351978ec2d3",
+      "snapshotCommittedSha256": "967582127505a068aab3aceb54285e98e8e026236ea567311e3e41c25827f888",
+      "snapshotDataExact": true,
+      "snapshotSerializationDifference": "Exactly one importer trailing LF; no other difference ignored",
+      "totalDays": 78,
+      "issueNumber": 78,
+      "fullGrammarDates": 78,
+      "requestSha256": "782b38491121c20029cd6d9cebf36fc2289c7acc5ece11cf5ed15128f26e0dea"
+    },
+    "staticPublicationVerified": true,
+    "visibleBrowserDateVerified": true,
+    "visibleBrowserBoundary": "Root performs independent Cua actual Day60 UI date acceptance; static source inclusion alone does not establish current visible route or audio playback.",
+    "observedCurrentMain": "f15e0fcf3768ee21b3a422ca334c5be476e96e83",
+    "sharedAudioFollowups": [],
+    "sharedAudioBoundary": "Shared audio workflow or later metadata commit is distinct from this verified text commit; not a unique-audio completion result.",
+    "verifiedAt": "2026-10-28T01:44:08.710Z",
+    "browser": {
+      "dateControl": "2026年10月28日(水)Day 60 · 99日N1計画",
+      "summary": [
+        "60 / 99",
+        "240 min",
+        "20 項目",
+        "8 項目"
+      ],
+      "title": "オープンデータは「公開しただけ」で役立つのか——更新日・比較条件・利用者の判断（第78号）",
+      "url": "https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/",
+      "targetDate": "2026-10-28",
+      "day": 60,
+      "issueNumber": 78,
+      "originalParagraphs": 5,
+      "vocabulary": 20,
+      "grammar": 8,
+      "immersionHeading": "数字の前に、条件を読む",
+      "realBrowser": "Cua IAB tab13",
+      "audioCompletion": false,
+      "verifiedAt": "2026-10-28T01:44:52.439Z"
+    }
+  }
 }
