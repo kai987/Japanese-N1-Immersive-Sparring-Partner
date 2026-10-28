@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "targetDate": "2026-10-28",
+  "day": 60,
+  "status": "waiting_upstream",
+  "stage": "waiting_upstream",
+  "requestSubmitted": false,
+  "sourceSavedOnMain": true,
+  "sourceCheckpointVerified": true,
+  "originalCommit": "cb7f42beb69ae86c2d8e9905ed866f1275f34fac",
+  "sourceBlobSha": "d08f1665d35b882c677adf0c9558cdc84c28aa27",
+  "sourceCheckpointBlobSha": "7657f479bf6e01bcd0a8f879ab06d833ae924d88",
+  "sourceSha256": "2b11344b79e1f37d9e39178da2ba97f4f332d35d3531fdb50d0cacc5314045ee",
+  "expectedSourceBytes": 24641,
+  "generatedAtJST": "2026-10-28T09:09:42+09:00",
+  "lastError": null,
+  "nextStep": "Exact Day60 source saved and verified. Existing 11:00/12:00 workflow must verify same-day successful upstream main/Pages and historical snapshot, then prepare validated sync request and verify N1 Pages. Do not regenerate the source.",
+  "updatedAt": "2026-10-28T00:18:36.886Z"
+}
