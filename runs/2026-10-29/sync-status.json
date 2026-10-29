@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "targetDate": "2026-10-29",
+  "day": 61,
+  "status": "waiting_upstream",
+  "stage": "waiting_upstream",
+  "requestSubmitted": false,
+  "sourceSavedOnMain": true,
+  "sourceCheckpointVerified": true,
+  "sourceCommit": "ea98b37863b8cf6a8387f18f9cdc297854be4e7a",
+  "sourceBlobSha": "cd66fb2b3dc6b6c9af0989d589eac32d8e53c216",
+  "sourceCheckpointBlobSha": "70d353ac1258f313411f7e06a043dfd3351a15f9",
+  "sourceSha256": "97872bd5a9c9afd4f5adab000b904c3411afd7e07ad71ec0d41052f5ebdc4f3d",
+  "expectedSourceBytes": 25398,
+  "generatedAtJST": "2026-10-29T09:07:51+09:00",
+  "lastError": null,
+  "nextStep": "Same-day successful upstream main deploy and exact historical snapshot must be independently verified by the shared 11:00/12:00 flow before generating or publishing daily JSON. Do not regenerate this original; do not assume 11:00 publication.",
+  "updatedAt": "2026-10-29T00:13:13.233Z"
+}
