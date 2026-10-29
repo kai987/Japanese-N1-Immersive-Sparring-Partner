@@ -12,7 +12,7 @@
   },
   "engineVersion": "1.1.0-dev",
   "modelVersion": "1.0.0",
-  "generatedAt": "2026-10-29T03:42:44.235Z",
+  "generatedAt": "2026-10-29T16:06:26.397Z",
   "lessonDates": [
     "2026-10-29",
     "2026-10-28",
@@ -76,7 +76,7 @@
     "2026-08-31",
     "2026-08-30"
   ],
-  "expectedClips": 6447,
+  "expectedClips": 6448,
   "complete": true,
   "clips": {
     "000508138c45e52f": {
@@ -7983,6 +7983,19 @@
       "sha256": "aee7c20a380c9d607dd5e7c9be8a061e2eb87e7e7e328b951c496cd576b0c594",
       "rms": 0.142963
     },
+    "180a1ce5721a4081": {
+      "id": "180a1ce5721a4081",
+      "text": "はぐくむ",
+      "label": "はぐくむ",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-hagukumu/source/0",
+        "live/2026-10-29/live-2026-10-29-hagukumu/entry/育む"
+      ],
+      "bytes": 15309,
+      "duration": 1.248,
+      "rms": 0.129689,
+      "sha256": "9c1dbd06f5d479d783fd4b9a02ea53ff99a709d1922073c7bab51beaa9aaf764"
+    },
     "180ec78e7baa3372": {
       "id": "180ec78e7baa3372",
       "text": "透かしを埋め込む",
@@ -12195,7 +12208,9 @@
       "text": "ファンタジー",
       "label": "ファンタジー",
       "references": [
-        "live/2026-09-28/live-2026-09-28-nouns/entry/ファンタジー"
+        "live/2026-09-28/live-2026-09-28-nouns/entry/ファンタジー",
+        "live/2026-10-29/live-2026-10-29-loanwords/source/0",
+        "live/2026-10-29/live-2026-10-29-loanwords/entry/ファンタジー"
       ],
       "duration": 1.256,
       "bytes": 10797,
@@ -50276,7 +50291,8 @@
       "text": "会議が長引く",
       "label": "会議が長引く",
       "references": [
-        "lesson/2026-09-17/vocabulary/2026-09-17-v-r003/collocation/0"
+        "lesson/2026-09-17/vocabulary/2026-09-17-v-r003/collocation/0",
+        "live/2026-10-29/live-2026-10-29-guide-prolong/source/1"
       ],
       "duration": 1.72,
       "bytes": 14445,
@@ -80587,6 +80603,11 @@
     "live/2026-09-30-okashi-bokuso/live-2026-09-30-yashinai/source/0": "8a4b61bb02d44b3f",
     "live/2026-09-30-okashi-bokuso/live-2026-09-30-zuibun/entry/ずいぶん": "8beb29049b38d278",
     "live/2026-09-30-okashi-bokuso/live-2026-09-30-zuibun/example/0/0": "0461d27c6d2dd410",
-    "live/2026-09-30-okashi-bokuso/live-2026-09-30-zuibun/source/0": "8826560c99b57760"
+    "live/2026-09-30-okashi-bokuso/live-2026-09-30-zuibun/source/0": "8826560c99b57760",
+    "live/2026-10-29/live-2026-10-29-guide-prolong/source/1": "9eb14e8676037ef2",
+    "live/2026-10-29/live-2026-10-29-hagukumu/entry/育む": "180a1ce5721a4081",
+    "live/2026-10-29/live-2026-10-29-hagukumu/source/0": "180a1ce5721a4081",
+    "live/2026-10-29/live-2026-10-29-loanwords/entry/ファンタジー": "258be3013f58cec5",
+    "live/2026-10-29/live-2026-10-29-loanwords/source/0": "258be3013f58cec5"
   }
 }
