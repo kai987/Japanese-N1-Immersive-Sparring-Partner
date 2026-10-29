@@ -13,7 +13,7 @@
     "test:e2e": "playwright test",
     "import:daily": "node scripts/import-daily.ts",
     "import:study": "node scripts/import-study-snapshot.ts",
-    "audio:generate": "python3 scripts/generate-audio.py",
+    "audio:generate": "python3 scripts/aivis-session.py -- python3 scripts/generate-audio.py",
     "audio:auto": "node scripts/audio-worker.ts",
     "audio:repair": "node scripts/repair-audio.ts",
     "audio:worker:install": "node scripts/install-audio-worker.ts",

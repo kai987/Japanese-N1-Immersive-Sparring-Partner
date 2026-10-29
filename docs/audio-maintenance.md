@@ -31,7 +31,8 @@ CIは索引と教材の対応を検証します。ビルドは公開済みのロ
 この手順は通常の日次更新では実行しません。対象と保存先を確認し、自動ワーカーと同時に音声メタデータを書き換えないようにします。N1のバックグラウンド処理は、日次の時間帯や当日実行制限を変更せずに使用します。
 
 ```sh
-# AivisSpeechを起動し、morioki / ノーマル（497929760）をインストールした状態で実行
+# AivisSpeechとmorioki / ノーマル（497929760）をインストール済みのmacOSで実行
+# アプリの起動と録音後の通常終了は共通ヘルパーが管理
 npm run audio:generate
 # 新規・変更音声は下記の公開手順を完了してから npm run build
 ```
@@ -66,6 +67,6 @@ npm run audio:repair -- --dates 2026-10-20,2026-10-21 --evidence-dir /absolute/p
 
 ## 録音終了後のアプリ終了
 
-録音バッチは日報と共通のOSロックで保護し、終了後はmacOSの通常終了APIでAivisSpeechを閉じます。画面操作に依存しないため、ロック画面でも終了要求を送れます。アプリとエンジンの終了を確認し、結果は進捗の `appCleanup` と `~/Library/Application Support/AivisSpeech Automation/last-shutdown.json` に残します。
+`npm run audio:generate`、通常ワーカー、一回限りの修復は、いずれも `scripts/aivis-session.py` を通して録音します。録音バッチは日報と共通のOSロックで保護し、終了後はmacOSの通常終了APIでAivisSpeechを閉じます。画面操作に依存しないため、ロック画面でも終了要求を送れます。アプリとエンジンの終了を確認し、結果は `~/Library/Application Support/AivisSpeech Automation/last-shutdown.json` に残します。ワーカーと修復処理は進捗の `appCleanup` にも保存します。
 
 別の録音・接続中・未保存確認待ちの場合は終了を保留します。強制終了や未保存内容の破棄は行いません。録音、アップロード証明、復旧データ、確認時間帯は保持します。手動で安全な終了だけ再試行する場合は `python3 scripts/aivis-session.py --quit-only` を使います。この操作は音声生成やリモート確認を行いません。
