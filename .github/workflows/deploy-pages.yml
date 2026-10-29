@@ -56,6 +56,15 @@ jobs:
       - name: Browser tests
         run: npm run test:e2e
 
+      - name: Retain exact build verification manifest
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n1-deployment-verification
+          path: dist/n1-release.json
+          if-no-files-found: error
+          overwrite: true
+          retention-days: 30
+
       - name: Retain learning UI verification
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -63,6 +72,7 @@ jobs:
           name: n1-learning-ui-verification
           path: /tmp/n1-improvements-playwright/**/*.png
           if-no-files-found: ignore
+          overwrite: true
           retention-days: 3
 
       - name: Add Pages fallbacks
@@ -83,6 +93,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     needs: build
     steps:
       - name: Deploy to GitHub Pages
@@ -92,38 +103,27 @@ jobs:
       - name: Checkout deployment metadata
         uses: actions/checkout@v6
 
-      - name: Verify live target date
+      - name: Setup verification Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+
+      - name: Download this run's exact build verification manifest
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        timeout-minutes: 2
+        with:
+          name: n1-deployment-verification
+          path: /tmp/n1-deployment-verification
+
+      - name: Verify live target date and exact release assets
         env:
           PAGE_URL: ${{ steps.deployment.outputs.page_url }}
         run: |
-          python3 <<'PY'
-          import json, os, re, time
-          from pathlib import Path
-          from urllib.parse import urljoin
-          from urllib.request import Request, urlopen
-
-          request = json.loads(Path('.github/n1-sync-request.json').read_text())
-          target = request['targetDate']
-          title = request['daily']['lesson']['title']
-          base = os.environ['PAGE_URL']
-          headers = {'User-Agent': 'n1-pages-live-check'}
-          last_error = None
-
-          for attempt in range(3):
-              try:
-                  html = urlopen(Request(base, headers=headers), timeout=20).read().decode('utf-8')
-                  scripts = re.findall(r'<script[^>]+src="([^"]+\.js[^"]*)"', html)
-                  if not scripts:
-                      raise RuntimeError('no JavaScript bundle found on deployed page')
-                  for src in scripts:
-                      body = urlopen(Request(urljoin(base, src), headers=headers), timeout=20).read().decode('utf-8')
-                      if target in body and title in body:
-                          print(f'Live target verified: {target} / {title}')
-                          raise SystemExit(0)
-                  raise RuntimeError(f'target {target} not present in deployed JavaScript bundle')
-              except Exception as error:
-                  last_error = error
-                  if attempt < 2:
-                      time.sleep(5)
-          raise SystemExit(f'Live target verification failed: {last_error}')
-          PY
+          for attempt in 1 2 3; do
+            if node scripts/verify-deployment.mjs --url "$PAGE_URL" --manifest /tmp/n1-deployment-verification/n1-release.json --request .github/n1-sync-request.json; then
+              exit 0
+            fi
+            if [ "$attempt" -lt 3 ]; then sleep 5; fi
+          done
+          exit 1

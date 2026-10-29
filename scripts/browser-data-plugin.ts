@@ -1,7 +1,9 @@
 import type { Plugin } from 'vite'
 import { join } from 'node:path'
+import { readFileSync } from 'node:fs'
 import { createBrowserAudio, createBrowserLessons, browserDataRoot } from './lib/browserData.ts'
 import { createLessonSearchIndex } from '../src/lib/projectSearch.ts'
+import { createReleaseManifest, releaseManifestName } from './lib/deploymentVerification.mjs'
 
 const prefix = 'virtual:n1-'
 const dataRoute = '/__n1_data/'
@@ -28,7 +30,7 @@ export function browserDataPlugin(): Plugin {
         // retryable without reloading the app or losing the current search.
         const emit = (name: string, value: unknown) => this.emitFile({ type: 'asset', name, source: JSON.stringify(value) })
         assets = {
-          lessons: Object.fromEntries(archivedDates().map(({ date }) => [date, emit(`n1-lesson-${date}.json`, current().byDate[date])])),
+          lessons: Object.fromEntries(current().catalog.historyItems.map(({ date }) => [date, emit(`n1-lesson-${date}.json`, current().byDate[date])])),
           searchIndex: emit('n1-search-index.json', currentIndex()),
         }
       }
@@ -67,6 +69,23 @@ export function browserDataPlugin(): Plugin {
         return `export default {lessons:{${Object.entries(assets.lessons).map(([date, reference]) => `${JSON.stringify(date)}:${fileUrl(reference)}`).join(',')}},searchIndex:${fileUrl(assets.searchIndex)}};`
       }
       throw new Error(`Unknown browser data module: ${name}`)
+    },
+    generateBundle: {
+      order: 'post',
+      handler(_options, bundle) {
+        if (!assets) throw new Error('Verified learning data assets have not been generated')
+        const lessons = Object.fromEntries(Object.entries(assets.lessons).map(([date, reference]) => [date, {
+          path: this.getFileName(reference), day: current().byDate[date].lesson.day, title: current().byDate[date].lesson.title,
+        }]))
+        const files = Object.values(bundle).filter(file => file.fileName === 'index.html' || /\.(?:js|css|json)$/.test(file.fileName))
+        const snapshot = JSON.parse(readFileSync(join(browserDataRoot, 'src/data/it-study-snapshot.json'), 'utf8'))
+        const manifest = createReleaseManifest({ lessons, latestDate: current().catalog.latest.lesson.date,
+          searchIndex: this.getFileName(assets.searchIndex), studySnapshotCommit: snapshot.sourceCommit,
+          entryPoints: files.filter(file => file.type === 'chunk' && file.isEntry).map(file => file.fileName),
+          files: files.map(file => ({ path: file.fileName, content: file.type === 'chunk' ? file.code : file.source })),
+        })
+        this.emitFile({ type: 'asset', fileName: releaseManifestName, source: JSON.stringify(manifest, null, 2) + '\n' })
+      },
     },
     handleHotUpdate(context) {
       if (!context.file.startsWith(join(browserDataRoot, 'src/data')) && !context.file.startsWith(join(browserDataRoot, 'public/audio'))) return

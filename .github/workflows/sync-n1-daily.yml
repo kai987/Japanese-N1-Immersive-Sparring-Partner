@@ -214,14 +214,26 @@ jobs:
           node --input-type=module <<'NODE'
           import fs from 'node:fs';
           import { execFileSync } from 'node:child_process';
+          import { tmpdir } from 'node:os';
+          import { join } from 'node:path';
+          import { verifyPublishedRelease, releaseArtifactName, releaseManifestName } from './scripts/lib/deploymentVerification.mjs';
           const runs=JSON.parse(fs.readFileSync('/tmp/n1-deploy-runs.json','utf8')).workflow_runs.filter(r=>r.head_sha===process.env.VERIFIED_COMMIT);
           const active=new Set(['queued','requested','pending','waiting','in_progress']);
-          if (runs.some(r=>r.status==='completed'&&r.conclusion==='success')) {
+          const successful=runs.find(r=>r.status==='completed'&&r.conclusion==='success');
+          if (successful) {
+            if (!Number.isSafeInteger(successful.id) || successful.id < 1) throw new Error('Invalid exact deployment run ID');
+            const directory=fs.mkdtempSync(join(tmpdir(),'n1-exact-deployment-'));
+            try {
+              execFileSync('gh',['run','download',String(successful.id),'--repo',process.env.GITHUB_REPOSITORY,'--name',releaseArtifactName,'--dir',directory],{stdio:'inherit',timeout:120000});
+              const request=JSON.parse(fs.readFileSync('.github/n1-sync-request.json','utf8'));
+              const result=await verifyPublishedRelease({baseUrl:'https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/',expectedManifest:fs.readFileSync(join(directory,releaseManifestName)),target:{date:request.targetDate,day:request.daily.lesson.day,title:request.daily.lesson.title,sourceCommit:request.sourceCommit}});
+              fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,`Verified ${result.verifiedFiles} live release assets against exact run ${successful.id}.\n`);
+            } finally {fs.rmSync(directory,{recursive:true,force:true});}
             fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,'Exact N1 commit already passed Pages and live verification.\n');
           } else if (runs.some(r=>active.has(r.status))) {
             fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,'awaiting_deploy: existing Pages run retained; no duplicate dispatch.\n');
           } else {
-            execFileSync('gh',['workflow','run','deploy-pages.yml','--repo',process.env.GITHUB_REPOSITORY,'--ref','main'],{stdio:'inherit'});
+            execFileSync('gh',['workflow','run','deploy-pages.yml','--repo',process.env.GITHUB_REPOSITORY,'--ref','main'],{stdio:'inherit',timeout:30000});
             fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,'awaiting_deploy: Pages dispatched; this sync run alone is not publication success.\n');
           }
           NODE

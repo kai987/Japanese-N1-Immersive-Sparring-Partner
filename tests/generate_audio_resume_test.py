@@ -91,6 +91,56 @@ class GenerationResumeTests(unittest.TestCase):
         self.assertEqual(self.run_main(), 0)
         self.assertEqual((self.work / 'manifest.json').read_bytes(), candidate_bytes)
 
+    def test_manual_checkpoint_preserves_retired_recordings_bindings_and_dates(self):
+        retired_id = 'fedcba9876543210'
+        retired = {**self.clip, 'id': retired_id, 'text': '以前の音声です。',
+            'references': ['live/unit/group/example/0']}
+        self.manifest['clips'][retired_id] = retired
+        self.manifest['expectedClips'] = 2
+        self.manifest['lessonDates'].append('2026-10-18')
+        self.manifest['nonLessonSnapshot'] = {'live/unit/group/example/0': retired_id}
+        (self.root / 'public/audio/manifest.json').write_text(json.dumps(self.manifest))
+        before = deepcopy(self.manifest)
+        with patch.object(GENERATOR, 'ROOT', self.root), \
+                patch.object(GENERATOR, 'request', side_effect=self.request), \
+                patch('sys.argv', ['generate-audio.py', '--plan', str(self.plan_path), '--limit', '0']), \
+                redirect_stdout(io.StringIO()):
+            self.assertEqual(GENERATOR.main(), 0)
+        actual = json.loads((self.root / 'public/audio/manifest.json').read_text())
+        self.assertEqual(actual['clips'], before['clips'])
+        self.assertEqual(actual['nonLessonSnapshot'], before['nonLessonSnapshot'])
+        self.assertEqual(actual['lessonDates'], before['lessonDates'])
+        self.assertEqual(actual['expectedClips'], 2)
+        self.assertTrue(actual['complete'])
+        self.assertEqual(json.loads((self.root / 'src/data/audio-index.json').read_text())['clips'],
+            {ENTRY['id']: 1.5, retired_id: 1.5})
+
+    def test_manual_snapshot_waits_for_remote_publication_without_rewriting_or_rebinding_history(self):
+        reference = 'live/unit/group/entry/legacy'
+        published = {**self.manifest, 'nonLessonSnapshot': {reference: ENTRY['id']},
+            'clips': {ENTRY['id']: {**self.clip, 'references': [reference]}}}
+        new_entry = {**ENTRY, 'id': 'fedcba9876543210', 'text': '新しい音声です。',
+            'references': ['live/unit/group/example/stable-new/0']}
+        current = {ENTRY['id']: {**self.clip, 'label': 'new display', 'references': ['live/unit/group/entry/another-use']},
+            new_entry['id']: {**self.clip, **new_entry}}
+        plan = {**PLAN, 'entries': [current[ENTRY['id']], new_entry]}
+        before = deepcopy({'published': published, 'current': current, 'plan': plan})
+        actual = GENERATOR.generation_metadata(plan, current, 'engine', '1.0.0', published)
+        self.assertEqual(actual['clips'][ENTRY['id']], published['clips'][ENTRY['id']])
+        self.assertEqual(actual['nonLessonSnapshot'][reference], ENTRY['id'])
+        self.assertEqual(actual['nonLessonSnapshot'], published['nonLessonSnapshot'])
+        self.assertNotIn(new_entry['references'][0], actual['nonLessonSnapshot'])
+        self.assertEqual({'published': published, 'current': current, 'plan': plan}, before)
+        conflicting = deepcopy(plan)
+        conflicting['entries'][1]['references'] = [reference]
+        with self.assertRaisesRegex(ValueError, 'changed identity'):
+            GENERATOR.generation_metadata(conflicting, current, 'engine', '1.0.0', published)
+        with self.assertRaisesRegex(ValueError, 'changed identity'):
+            GENERATOR.generation_metadata(conflicting, {}, 'engine', '1.0.0', published)
+        candidate = GENERATOR.generation_metadata(plan, current, 'engine', '1.0.0')
+        self.assertNotIn('nonLessonSnapshot', candidate)
+        self.assertEqual(candidate['clips'], current)
+
     def test_work_directory_cannot_alias_published_metadata(self):
         with patch.object(GENERATOR, 'ROOT', self.root):
             for directory in [self.root / 'public/audio', self.root / 'src/data']:

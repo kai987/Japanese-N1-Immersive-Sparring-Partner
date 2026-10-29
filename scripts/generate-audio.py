@@ -3,6 +3,7 @@
 from __future__ import annotations
 import argparse
 import array
+from copy import deepcopy
 from concurrent.futures import CancelledError, ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 import hashlib
@@ -169,6 +170,56 @@ def reusable_clip(entry, old, path, same_model, hosted_clips):
     return (path.exists() and path.stat().st_size == old['bytes']
         and hashlib.sha256(path.read_bytes()).hexdigest() == old['sha256'])
 
+def generation_metadata(plan, current, engine_version, model_version, published=None):
+    """Keep published history immutable when the legacy manual path checkpoints.
+
+    Work-directory candidates remain a separate, current-catalog-only snapshot.
+    Protected references remain exactly as published. The explicit remote
+    publication step may extend them only after verifying every hosted byte.
+    """
+    clips = deepcopy(current)
+    dates = list(plan['lessonDates'])
+    expected = {entry['id'] for entry in plan['entries']}
+    snapshot = None
+    if published is not None:
+        history = published.get('clips', {})
+        clips.update(deepcopy(history))
+        expected.update(history)
+        dates = list(dict.fromkeys([*dates, *published.get('lessonDates', [])]))
+        if 'nonLessonSnapshot' in published:
+            snapshot = deepcopy(published['nonLessonSnapshot'])
+            if not isinstance(snapshot, dict):
+                raise ValueError('The published non-lesson audio snapshot is invalid; preserve it for inspection.')
+            def bind(reference, clip_id):
+                if reference.startswith('lesson/'):
+                    return
+                if (not re.fullmatch(r'(?:live|compound)/[^/]+/.+', reference)
+                    or any(ord(character) < 32 for character in reference)):
+                    raise ValueError('The non-lesson audio reference is invalid.')
+                if reference in snapshot and snapshot[reference] != clip_id:
+                    raise ValueError('A published non-lesson audio reference changed identity.')
+            for clip_id, clip in clips.items():
+                for reference in clip['references']:
+                    bind(reference, clip_id)
+            for entry in plan['entries']:
+                if entry['id'] in clips:
+                    if clips[entry['id']]['text'] != entry['text']:
+                        raise ValueError('Current speech differs from its published recording.')
+                # Reject a rebind before synthesis even when the new speech has
+                # not been recorded yet; an absent candidate is not permission.
+                for reference in entry['references']:
+                    bind(reference, entry['id'])
+            for reference, clip_id in snapshot.items():
+                if not isinstance(reference, str) or clip_id not in clips:
+                    raise ValueError('A protected audio reference has no preserved recording.')
+    result = {'version': 1, 'voice': plan['voice'], 'engineVersion': engine_version, 'modelVersion': model_version,
+        'generatedAt': datetime.now(timezone.utc).isoformat(), 'lessonDates': dates,
+        'expectedClips': len(expected), 'complete': expected.issubset(clips),
+        'clips': {key: clips[key] for key in sorted(clips)}}
+    if snapshot is not None:
+        result['nonLessonSnapshot'] = snapshot
+    return result
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--engine', action='append', help='Local engine URL; repeat to spread work across local engines')
@@ -225,6 +276,8 @@ def main():
     # An engine patch must not invalidate already verified speech made with the
     # same voice/model. A model change requires an explicit migration instead.
     same_model = previous.get('modelVersion') == actual['version']
+    if not args.work_dir:
+        generation_metadata(plan, {}, engine_version, actual['version'], published)
     current = {}
     missing = []
     for entry in plan['entries']:
@@ -233,6 +286,8 @@ def main():
         if reusable_clip(entry, old, path, same_model, hosted_clips):
             current[entry['id']] = {**old, 'label': entry['label'], 'references': entry['references']}
         else:
+            if not args.work_dir and 'nonLessonSnapshot' in published and entry['id'] in published.get('clips', {}):
+                raise RuntimeError('A published recording is unavailable or differs from the current speech; preserve it instead of replacing its bytes.')
             recovered = recover_clip(entry, output, voice, actual['version'])
             if recovered is not None:
                 current[entry['id']] = recovered
@@ -250,12 +305,9 @@ def main():
     failures = []
     started = time.monotonic()
     def checkpoint():
-        metadata = {'version': 1, 'voice': voice, 'engineVersion': engine_version, 'modelVersion': actual['version'],
-            'generatedAt': datetime.now(timezone.utc).isoformat(), 'lessonDates': plan['lessonDates'],
-            'expectedClips': len(plan['entries']), 'complete': len(current) == len(plan['entries']),
-            'clips': {key: current[key] for key in sorted(current)}}
+        metadata = generation_metadata(plan, current, engine_version, actual['version'], published if not args.work_dir else None)
         atomic_json(manifest_path, metadata)
-        atomic_json(paths['index'], {'version': 1, 'voice': voice, 'clips': {key: current[key]['duration'] for key in sorted(current)}})
+        atomic_json(paths['index'], {'version': 1, 'voice': voice, 'clips': {key: clip['duration'] for key, clip in metadata['clips'].items()}})
     checkpoint()
     def synthesize(entry, engine):
         for attempt in range(3):

@@ -57,6 +57,33 @@ export function advanceNonLessonSnapshot(previous: Manifest, catalog: Catalog, n
   return sorted
 }
 
+/** Manual generation preserves the old proof; prepare its extension in memory.
+ * The caller must verify all remote bytes before persisting this result. */
+export function prepareManualAudioSnapshot(manifest: Manifest, catalog?: Catalog): Manifest {
+  const result = structuredClone(manifest)
+  if (manifest.nonLessonSnapshot === undefined) return result
+  if (!isRecord(manifest.nonLessonSnapshot)) throw new Error('Invalid non-lesson audio snapshot')
+  const snapshot = { ...manifest.nonLessonSnapshot }
+  for (const [reference, id] of Object.entries(snapshot)) {
+    if (!isNonLessonReference(reference) || typeof id !== 'string' || !/^[a-f0-9]{16}$/.test(id)) throw new Error(`Invalid protected manual audio binding: ${reference}`)
+    const clip = manifest.clips[id]
+    if (!clip || clip.id !== id || audioId(clip.text) !== id) throw new Error(`Protected manual audio recording is absent: ${reference}`)
+  }
+  for (const [reference, id] of Object.entries(createNonLessonSnapshot(manifest))) addBinding(snapshot, reference, id)
+  for (const entry of catalog?.entries ?? []) {
+    for (const reference of entry.references) if (!reference.startsWith('lesson/') && hasOwn(snapshot, reference) && snapshot[reference] !== entry.id) {
+      throw new Error(`Published audio reference changed identity: ${reference}`)
+    }
+    const clip = manifest.clips[entry.id]
+    if (!clip) continue
+    if (clip.text !== entry.text || clip.id !== entry.id || audioId(entry.text) !== entry.id) throw new Error(`Current manual speech differs from its recording: ${entry.id}`)
+    for (const reference of entry.references) if (!reference.startsWith('lesson/')) addBinding(snapshot, reference, entry.id)
+  }
+  result.nonLessonSnapshot = Object.fromEntries(Object.entries(snapshot).sort(([a], [b]) => a.localeCompare(b)))
+  validateNonLessonSnapshot(result)
+  return result
+}
+
 function validateQueuedNotes(manifest: Manifest, catalog: Catalog, missing: Catalog['entries'], pending: unknown): void {
   if (!isRecord(pending) || pending.version !== 1 || JSON.stringify(pending.voice) !== JSON.stringify(catalog.voice)
     || !Array.isArray(pending.entries) || pending.pendingClips !== pending.entries.length

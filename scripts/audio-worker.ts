@@ -1,7 +1,7 @@
 import { spawn } from 'node:child_process'
-import { createHash } from 'node:crypto'
-import { closeSync, existsSync, fstatSync, fsyncSync, mkdirSync, mkdtempSync, openSync, readFileSync, readdirSync, renameSync, rmSync, statSync, symlinkSync, writeFileSync } from 'node:fs'
-import { homedir } from 'node:os'
+import { createHash, randomUUID } from 'node:crypto'
+import { closeSync, existsSync, fstatSync, fsyncSync, linkSync, mkdirSync, mkdtempSync, openSync, readFileSync, readdirSync, renameSync, rmSync, statSync, symlinkSync, writeFileSync } from 'node:fs'
+import { homedir, tmpdir } from 'node:os'
 import { basename, dirname, join, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { createServer } from 'node:net'
@@ -13,6 +13,7 @@ import type { AudioSources } from '../src/lib/audioSources.ts'
 import type { collectAudio } from './collect-audio.ts'
 import { runAudioValidation } from './lib/audioValidation.ts'
 import { audioSchedule, audioWorkReason, readAudioSchedule, unfinishedAudio } from './audio-worker-schedule.ts'
+import { releaseArtifactName, releaseManifestName, verifyPublishedRelease } from './lib/deploymentVerification.mjs'
 
 const repository = 'https://github.com/kai987/Japanese-N1-Immersive-Sparring-Partner.git'
 const dailyRepository = 'https://github.com/kai987/japan-it-ai-daily.git'
@@ -69,11 +70,32 @@ async function atomicClone(remote: string, target: string, options: string[]) {
     renameSync(temporary, target)
   } finally { rmSync(temporary, { recursive: true, force: true }) }
 }
+/** Only the managed control checkout may advance, and only to exact remote main. */
+export async function synchronizeWorkerControl(control: string, git = (args: string[]) => run('git', args, control)) {
+  if (await git(['remote', 'get-url', 'origin']) !== repository || await git(['status', '--porcelain'])
+    || await git(['symbolic-ref', '--short', 'HEAD']) !== 'main') throw new Error('Worker control checkout changed; preserve it for inspection')
+  await git(['fetch', '--no-tags', 'origin', 'main'])
+  try { await git(['merge-base', '--is-ancestor', 'HEAD', 'origin/main']) }
+  catch { throw new Error('Worker control checkout is ahead of or diverged from remote main; preserve it for inspection') }
+  const main = await git(['rev-parse', 'origin/main'])
+  if (!/^[a-f0-9]{40}$/.test(main)) throw new Error('Worker remote main has no valid immutable commit')
+  await git(['merge', '--ff-only', main])
+  if (await git(['rev-parse', 'HEAD']) !== main || await git(['symbolic-ref', '--short', 'HEAD']) !== 'main'
+    || await git(['status', '--porcelain'])) throw new Error('Worker control checkout differs from exact remote main; preserve it for inspection')
+  return main
+}
 export function recoverableCheckpoint(path: string, fallback: Record<string, unknown> = {}) {
   if (!existsSync(path)) return fallback
-  try { return readJson(path) as Record<string, unknown> } catch (error) {
+  try {
+    const value: unknown = readJson(path)
+    if (!value || typeof value !== 'object' || Array.isArray(value)) throw new SyntaxError('Checkpoint must contain an object')
+    return value as Record<string, unknown>
+  } catch (error) {
     if (!(error instanceof SyntaxError)) throw error
-    renameSync(path, `${path}.invalid-${Date.now()}`)
+    const prefix = `${path}.invalid-${Date.now()}`
+    let preserved = prefix, suffix = 0
+    while (existsSync(preserved)) preserved = `${prefix}-${++suffix}`
+    renameSync(path, preserved)
     return fallback
   }
 }
@@ -124,28 +146,65 @@ function shutdownEvidence(output: string) {
   try { return JSON.parse(line.slice('AIVIS_LIFECYCLE_JSON='.length)) as Record<string, unknown> }
   catch { return { status: 'deferred', reason: 'invalid_shutdown_evidence' } }
 }
-async function verifyDeployment(commit: string, localDist?: string) {
+export function retainedWorkerReleasePath(directory: string, commit: string) {
+  if (!/^[a-f0-9]{40}$/.test(commit)) throw new Error('Audio verification proof requires an immutable commit')
+  return join(directory, commit, releaseManifestName)
+}
+export function retainWorkerReleaseProof(directory: string, commit: string, expected: Uint8Array) {
+  const destination = retainedWorkerReleasePath(directory, commit)
+  mkdirSync(dirname(destination), { recursive: true, mode: 0o700 })
+  if (existsSync(destination)) {
+    if (!readFileSync(destination).equals(Buffer.from(expected))) throw new Error('A different verification proof already exists for this audio commit; preserve both for inspection')
+    return destination
+  }
+  const temporary = `${destination}.partial-${randomUUID()}`
+  const descriptor = openSync(temporary, 'wx', 0o600)
+  try { writeFileSync(descriptor, expected); fsyncSync(descriptor) } finally { closeSync(descriptor) }
+  try {
+    // Linking never replaces an existing immutable proof, including a race.
+    try { linkSync(temporary, destination) }
+    catch (error) {
+      if ((error as NodeJS.ErrnoException).code !== 'EEXIST' || !readFileSync(destination).equals(Buffer.from(expected))) throw error
+    }
+  } finally { rmSync(temporary, { force: true }) }
+  return destination
+}
+export async function verifyWorkerReleaseAssets(runId: number, localDist?: string, dependencies: {
+  download?: (args: string[]) => Promise<string>
+  verify?: typeof verifyPublishedRelease
+  retainedProof?: string
+} = {}) {
+  if (!Number.isSafeInteger(runId) || runId < 1) throw new Error('awaiting_live_verification: invalid exact deployment run')
+  let temporary: string | undefined
+  try {
+    let expectedManifest: Buffer
+    if (localDist) expectedManifest = readFileSync(join(localDist, releaseManifestName))
+    else if (dependencies.retainedProof && existsSync(dependencies.retainedProof)) expectedManifest = readFileSync(dependencies.retainedProof)
+    else {
+      const directory = temporary = mkdtempSync(join(tmpdir(), 'n1-deployment-proof-'))
+      await (dependencies.download ?? (args => run('gh', args)))([
+        'run', 'download', String(runId), '--repo', githubRepository, '--name', releaseArtifactName, '--dir', directory,
+      ])
+      expectedManifest = readFileSync(join(directory, releaseManifestName))
+    }
+    // Recovery is tied to this exact successful run's retained build artifact.
+    // A legacy run without the artifact remains pending instead of trusting
+    // whichever HTML or lazy data happens to be publicly available.
+    return await (dependencies.verify ?? verifyPublishedRelease)({
+      baseUrl: 'https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/',
+      expectedManifest, signal: abort.signal,
+    })
+  } finally { if (temporary) rmSync(temporary, { recursive: true, force: true }) }
+}
+async function verifyDeployment(commit: string, localDist?: string, verificationDirectory?: string) {
   const path = `repos/${githubRepository}/actions/workflows/deploy-pages.yml/runs?head_sha=${commit}&branch=main&per_page=100`
   let dispatched = false
   for (let attempt = 0; attempt < 18; attempt++) {
     const { workflow_runs: all } = JSON.parse(await run('gh', ['api', path]))
     const runs = all.filter((r: { head_sha: string }) => r.head_sha === commit)
-    if (runs.some((r: { status: string; conclusion: string }) => r.status === 'completed' && r.conclusion === 'success')) {
-      const base = 'https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/'
-      const response = await fetch(base, { cache: 'no-store', signal: AbortSignal.any([abort.signal, AbortSignal.timeout(30000)]) })
-      if (!response.ok) throw new Error('awaiting_live_verification: N1 page unavailable')
-      const html = await response.text()
-      const script = /<script[^>]+src="([^"]+\.js[^"]*)"/.exec(html)?.[1]
-      if (!script) throw new Error('awaiting_live_verification: no application bundle')
-      const asset = await fetch(new URL(script, base), { cache: 'no-store', signal: AbortSignal.any([abort.signal, AbortSignal.timeout(30000)]) })
-      if (!asset.ok) throw new Error('awaiting_live_verification: application bundle unavailable')
-      const body = Buffer.from(await asset.arrayBuffer())
-      if (localDist) {
-        const expected = join(localDist, new URL(script, base).pathname.split('/').slice(-2).join('/'))
-        if (!existsSync(expected) || createHash('sha256').update(readFileSync(expected)).digest('hex') !== createHash('sha256').update(body).digest('hex')) {
-          throw new Error('awaiting_live_verification: deployed bundle differs; retry against current main')
-        }
-      }
+    const successful = runs.find((r: { id: number; status: string; conclusion: string }) => r.status === 'completed' && r.conclusion === 'success' && Number.isSafeInteger(r.id) && r.id > 0)
+    if (successful) {
+      await verifyWorkerReleaseAssets(successful.id, localDist, { retainedProof: verificationDirectory ? retainedWorkerReleasePath(verificationDirectory, commit) : undefined })
       return true
     }
     const active = runs.some((r: { status: string }) => ['queued', 'requested', 'pending', 'waiting', 'in_progress'].includes(r.status))
@@ -224,7 +283,7 @@ export async function audioWorker(repair?: AudioRepair) {
       const pending = pendingDeploymentForMain(state, main)
       if (pending) {
         phase('awaiting_deploy')
-        await verifyDeployment(pending)
+        await verifyDeployment(pending, undefined, join(root, 'verification'))
         phase('complete', { jobPending: false, lastError: null, lastVerifiedCommit: state.releaseCommit })
         return
       } else phase('reconciling', { releaseCommit: null })
@@ -232,10 +291,7 @@ export async function audioWorker(repair?: AudioRepair) {
     phase('fetching', { lastError: null, attempt: Number(state.attempt ?? 0) + 1 })
     const control = join(root, 'control')
     if (!existsSync(join(control, '.git'))) await atomicClone(repository, control, ['--single-branch', '--branch', 'main'])
-    if (await run('git', ['remote', 'get-url', 'origin'], control) !== repository || await run('git', ['status', '--porcelain'], control)) throw new Error('Worker control checkout changed; preserve it for inspection')
-    await run('git', ['fetch', '--no-tags', 'origin', 'main'], control)
-    await run('git', ['merge', '--ff-only', 'origin/main'], control)
-    const base = await run('git', ['rev-parse', 'HEAD'], control)
+    const base = await synchronizeWorkerControl(control)
     phase('catalog', { baseCommit: base, releaseCommit: null })
     const attempts = join(root, 'attempts')
     mkdirSync(attempts, { recursive: true, mode: 0o700 })
@@ -302,7 +358,7 @@ export async function audioWorker(repair?: AudioRepair) {
       for (const [path, value] of metadataPaths.map((path, i) => [path, [merged.manifest, merged.index, merged.sources, merged.pending][i]] as const)) atomicJson(join(attempt, path), value)
     }
     if (!await run('git', ['diff', '--name-only', '--', ...metadataPaths], attempt)) {
-      if (state.lastVerifiedCommit !== base) await verifyDeployment(base)
+      if (state.lastVerifiedCommit !== base) await verifyDeployment(base, undefined, join(root, 'verification'))
       if (!repair) cleanupPublishedCache(work, published)
       phase('complete', { jobPending: false, pendingClips: 0, releaseCommit: base, lastVerifiedCommit: base, lastError: null })
       return
@@ -344,10 +400,11 @@ export async function audioWorker(repair?: AudioRepair) {
     await run('git', ['config', 'user.email', `${actor.id}+${actor.login}@users.noreply.github.com`], attempt)
     await run('git', ['commit', '-m', 'content: publish verified incremental N1 audio'], attempt)
     const commit = await run('git', ['rev-parse', 'HEAD'], attempt)
+    retainWorkerReleaseProof(join(root, 'verification'), commit, readFileSync(join(attempt, 'dist', releaseManifestName)))
     phase('pushing', { candidateCommit: commit })
     await run('git', ['-c', 'http.version=HTTP/1.1', '-c', 'http.postBuffer=16777216', 'push', 'origin', 'HEAD:main'], attempt)
     phase('awaiting_deploy', { releaseCommit: commit })
-    await verifyDeployment(commit, join(attempt, 'dist'))
+    await verifyDeployment(commit, join(attempt, 'dist'), join(root, 'verification'))
     // All new bytes were remotely verified before commit, and the exact release
     // passed Pages plus real playback tests. Only now remove generated MP3s.
     if (!repair) cleanupPublishedCache(work, readJson(join(attempt, 'public/audio/manifest.json')) as Manifest)

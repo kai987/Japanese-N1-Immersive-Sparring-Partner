@@ -29,8 +29,16 @@ try {
     finally { rmSync(temporary, { recursive: true, force: true }) }
   }
   if (run('git', ['remote', 'get-url', 'origin'], control) !== repository || run('git', ['status', '--porcelain'], control)) throw new Error('Control checkout changed; preserving it for inspection')
+  if (run('git', ['symbolic-ref', '--short', 'HEAD'], control) !== 'main') throw new Error('Control checkout must be on main; preserving it for inspection')
   run('git', ['fetch', '--no-tags', 'origin', 'main'], control)
-  run('git', ['merge', '--ff-only', 'origin/main'], control)
+  // --ff-only alone also accepts a local branch ahead of origin/main. Never
+  // execute unpublished worker code, and preserve that checkout for inspection.
+  try { run('git', ['merge-base', '--is-ancestor', 'HEAD', 'origin/main'], control) }
+  catch { throw new Error('Control checkout is ahead of or diverged from origin/main; preserving it for inspection') }
+  const main = run('git', ['rev-parse', 'origin/main'], control)
+  run('git', ['merge', '--ff-only', main], control)
+  if (run('git', ['rev-parse', 'HEAD'], control) !== main || run('git', ['symbolic-ref', '--short', 'HEAD'], control) !== 'main'
+    || run('git', ['status', '--porcelain'], control)) throw new Error('Control checkout does not match fetched main; preserving it for inspection')
   run(process.execPath, [join(control, 'scripts/audio-worker.ts'), '--state-dir', root], control, false)
 } catch (error) {
   console.error(JSON.stringify({ time: new Date().toISOString(), phase: 'bootstrap_retry_pending', error: error.message }))
