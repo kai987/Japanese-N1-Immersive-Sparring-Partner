@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-10-29",
   "day": 61,
-  "status": "waiting_upstream",
-  "stage": "waiting_upstream",
+  "status": "waiting_request",
+  "stage": "request_ready",
   "requestSubmitted": false,
   "sourceSavedOnMain": true,
   "sourceCheckpointVerified": true,
@@ -14,6 +14,20 @@
   "expectedSourceBytes": 25398,
   "generatedAtJST": "2026-10-29T09:07:51+09:00",
   "lastError": null,
-  "nextStep": "Same-day successful upstream main deploy and exact historical snapshot must be independently verified by the shared 11:00/12:00 flow before generating or publishing daily JSON. Do not regenerate this original; do not assume 11:00 publication.",
-  "updatedAt": "2026-10-29T00:13:13.233Z"
+  "nextStep": "Submit complete source-bound request while shared slot is free",
+  "updatedAt": "2026-10-29T03:29:15.430Z",
+  "upstreamSourceCommit": "e25c3f464ca347a09228b1d79f0d9f2ad149d852",
+  "sourcePagesRunId": 40804885892,
+  "snapshotSha256": "7e4945dd24f4bae4a27b9010fac42a0c24df5848cf8cb43dd73ec38b264b8c3e",
+  "issueNumber": 79,
+  "totalDays": 79,
+  "requestSha256": "da3981aeec30eb91a5c3a137bb4590b7a820dd1a54201bd7b9f27e9ef95cf8d9",
+  "localValidation": {
+    "content": true,
+    "unit": 114,
+    "python": 26,
+    "build": true,
+    "browserTests": 50,
+    "allPassed": true
+  }
 }
