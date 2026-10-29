@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-10-29",
   "day": 61,
-  "status": "validating",
-  "stage": "validating",
+  "status": "published",
+  "stage": "published",
   "requestSubmitted": true,
   "sourceSavedOnMain": true,
   "sourceCheckpointVerified": true,
@@ -14,8 +14,8 @@
   "expectedSourceBytes": 25398,
   "generatedAtJST": "2026-10-29T09:07:51+09:00",
   "lastError": null,
-  "nextStep": "Verify exact sync run, final lesson+snapshot commit, Pages and live target date",
-  "updatedAt": "2026-10-29T03:29:23.259Z",
+  "nextStep": "Text complete. Shared and unique N1 audio remain independent; observe their actual checkpoints and existing worker schedule.",
+  "updatedAt": "2026-10-29T03:34:14.982Z",
   "upstreamSourceCommit": "e25c3f464ca347a09228b1d79f0d9f2ad149d852",
   "sourcePagesRunId": 40804885892,
   "snapshotSha256": "7e4945dd24f4bae4a27b9010fac42a0c24df5848cf8cb43dd73ec38b264b8c3e",
@@ -31,5 +31,118 @@
     "allPassed": true
   },
   "requestCommit": "3c564ce17b43364aebfa13b8661a698e2148d823",
-  "requestBlobSha": "d2da6796a7ca33da34c5902f4d9ed2a48845d50e"
+  "requestBlobSha": "d2da6796a7ca33da34c5902f4d9ed2a48845d50e",
+  "releaseCommit": "cb9631dcc4d06f80c030b1848e6e5e85255a387a",
+  "pagesRunId": 40812593636,
+  "counts": {
+    "vocabularyNew": 10,
+    "vocabularyReview": 10,
+    "grammarNew": 0,
+    "grammarReview": 8
+  },
+  "textPublicationVerified": true,
+  "verification": {
+    "label": "text",
+    "targetDate": "2026-10-29",
+    "day": 61,
+    "releaseCommit": "cb9631dcc4d06f80c030b1848e6e5e85255a387a",
+    "pagesRunId": 40812593636,
+    "sourceCommit": "e25c3f464ca347a09228b1d79f0d9f2ad149d852",
+    "sourceBlobSha": "cd66fb2b3dc6b6c9af0989d589eac32d8e53c216",
+    "snapshotSha256": "7e4945dd24f4bae4a27b9010fac42a0c24df5848cf8cb43dd73ec38b264b8c3e",
+    "totalDays": 79,
+    "issueNumber": 79,
+    "fullGrammarLessonDates": 79,
+    "artifact": {
+      "id": 12870597956,
+      "name": "github-pages",
+      "digest": "sha256:ad65c3d1dd1be6f23247d0583beabcaba6b1a9ae2ec49ce7d137476a0ef6e359",
+      "downloadedZipSha256": "ad65c3d1dd1be6f23247d0583beabcaba6b1a9ae2ec49ce7d137476a0ef6e359",
+      "digestVerified": true
+    },
+    "site": "/tmp/japan-daily-20261029/n1/text-release-40812593636/site",
+    "checks": [
+      {
+        "path": "index.html",
+        "url": "https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/?acceptance=cb9631dcc4d06f80c030b1848e6e5e85255a387a",
+        "status": 200,
+        "sha256": "852915a1f036dac235796522ff48689356b61eeb5d81ae1f79b3b3af844289f7",
+        "bytes": 1596,
+        "attempt": 1
+      },
+      {
+        "path": "assets/index-BbCis-LA.js",
+        "url": "https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/assets/index-BbCis-LA.js?acceptance=cb9631dcc4d06f80c030b1848e6e5e85255a387a",
+        "status": 200,
+        "sha256": "bac2659aff6d80c1a340962044d9a72fc72e62fb07f0932aed60ddb2a33fdc5e",
+        "bytes": 8201002,
+        "attempt": 1
+      },
+      {
+        "path": "assets/index-BpdupM-0.css",
+        "url": "https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/assets/index-BpdupM-0.css?acceptance=cb9631dcc4d06f80c030b1848e6e5e85255a387a",
+        "status": 200,
+        "sha256": "ae591cc4f64aac982210bb9f9a30a84e9aab4eb1a7a4aa290611892d99ac1d4e",
+        "bytes": 46788,
+        "attempt": 1
+      }
+    ],
+    "fullPublicAssetBytes": true,
+    "allOriginalParagraphsPresent": true,
+    "derivedReadingOptionsPresent": true,
+    "contentVerification": {
+      "observedAt": "2026-10-29T03:31:46.132Z",
+      "commit": "cb9631dcc4d06f80c030b1848e6e5e85255a387a",
+      "parent": "3c564ce17b43364aebfa13b8661a698e2148d823",
+      "changedPaths": [
+        "src/data/daily/2026-10-29.json",
+        "src/data/it-study-snapshot.json"
+      ],
+      "onlyTwoPaths": true,
+      "sourceBlobUnchanged": true,
+      "sourceBlobSha": "cd66fb2b3dc6b6c9af0989d589eac32d8e53c216",
+      "sourceSha256": "97872bd5a9c9afd4f5adab000b904c3411afd7e07ad71ec0d41052f5ebdc4f3d",
+      "sourceBytes": 25398,
+      "dailyCandidateBytesExact": true,
+      "dailySha256": "73aebd08a910e2d927605604c9918d73f343bf135b250e6545e385d2d6796884",
+      "snapshotSourceCommit": "e25c3f464ca347a09228b1d79f0d9f2ad149d852",
+      "snapshotInputSha256": "7e4945dd24f4bae4a27b9010fac42a0c24df5848cf8cb43dd73ec38b264b8c3e",
+      "snapshotCommittedSha256": "689dc9ae798351ea392ee1320e77245aed54ee848ca19c08e33592c12ef68cb9",
+      "snapshotDataExact": true,
+      "snapshotSerializationDifference": "Exactly one importer trailing LF; no other difference ignored",
+      "totalDays": 79,
+      "issueNumber": 79,
+      "fullGrammarDates": 79,
+      "requestSha256": "da3981aeec30eb91a5c3a137bb4590b7a820dd1a54201bd7b9f27e9ef95cf8d9"
+    },
+    "staticPublicationVerified": true,
+    "visibleBrowserDateVerified": true,
+    "visibleBrowserBoundary": "Root performs independent Cua actual Day61 UI date acceptance; static source inclusion alone does not establish current visible route or audio playback.",
+    "observedCurrentMain": "cb9631dcc4d06f80c030b1848e6e5e85255a387a",
+    "sharedAudioFollowups": [],
+    "sharedAudioBoundary": "Shared audio workflow or later metadata commit is distinct from this verified text commit; not a unique-audio completion result.",
+    "verifiedAt": "2026-10-29T03:33:30.431Z",
+    "browser": {
+      "dateControl": "2026年10月29日(木)\nDay 61 · 99日N1計画",
+      "summary": [
+        "61 / 99",
+        "241 min",
+        "20 項目",
+        "8 項目"
+      ],
+      "title": "使いやすそうな画面は、誰にとっても使えるのか——ウェブアクセシビリティ、操作の根拠、利用者の判断（第79号）",
+      "url": "https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/",
+      "targetDate": "2026-10-29",
+      "day": 61,
+      "issueNumber": 79,
+      "originalParagraphs": 5,
+      "vocabulary": 20,
+      "grammar": 8,
+      "immersionHeading": "見た目のよさと、使えることの間",
+      "realBrowser": "Playwright Chromium; browser plugin unavailable",
+      "audioCompletion": false,
+      "consoleErrors": [],
+      "verifiedAt": "2026-10-29T03:33:54.570Z"
+    }
+  }
 }
