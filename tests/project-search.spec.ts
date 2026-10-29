@@ -57,7 +57,7 @@ test('global search groups daily and compound results and opens highlighted seri
 
 test('search opens live results across units, clears restrictive filters and locates a highlighted match', async ({ page }) => {
   const messages = errors(page)
-  await page.goto('/#live-reactions')
+  await page.goto('/?live-unit=2026-09-30-okashi-bokuso#live-reactions')
   await page.getByRole('group', { name: '内容分类', exact: true }).getByRole('button', { name: /漫画双关/ }).click()
   await page.getByRole('group', { name: '筛选学习状态', exact: true }).getByRole('button', { name: '習得済み', exact: true }).click()
   await search(page).fill('果断')

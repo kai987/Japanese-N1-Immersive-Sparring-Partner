@@ -4,10 +4,12 @@ import { fileURLToPath } from 'node:url'
 import { collectAudio } from './collect-audio.ts'
 import { audioId, audioRelativePath, audioVoice } from '../src/lib/audioText.ts'
 import { audioSources, type AudioSources } from '../src/lib/audioSources.ts'
+import { validateAudioCoverage, validateNonLessonSnapshot, type NonLessonSnapshot } from './lib/audioSnapshot.ts'
 
 export type Clip = { id: string; text: string; label: string; references: string[]; duration: number; bytes: number; sha256: string; rms: number }
-export type Manifest = { version: number; voice: typeof audioVoice; engineVersion: string; modelVersion: string; generatedAt: string; complete: boolean; expectedClips: number; lessonDates: string[]; clips: Record<string, Clip> }
+export type Manifest = { version: number; voice: typeof audioVoice; engineVersion: string; modelVersion: string; generatedAt: string; complete: boolean; expectedClips: number; lessonDates: string[]; clips: Record<string, Clip>; nonLessonSnapshot?: NonLessonSnapshot }
 export function validateAudioSources(manifest: Manifest, sources: AudioSources, requirePublished = true) {
+  validateNonLessonSnapshot(manifest)
   if (sources.version !== 1 || JSON.stringify(sources.voice) !== JSON.stringify(manifest.voice) || sources.modelVersion !== manifest.modelVersion) throw new Error('Hosted audio voice/model differs from the verified recordings')
   if (requirePublished && (!sources.complete || !sources.verifiedAt || !Number.isFinite(Date.parse(sources.verifiedAt)))) throw new Error('Hosted audio has not completed remote verification')
   if (!/^[a-f0-9]{40}$/.test(sources.sharedSource.commit)) throw new Error('Shared daily audio must reference an immutable source commit')
@@ -36,6 +38,7 @@ export function validateAudio({ allowIncomplete = false, requireCurrent = false,
   const root = new URL('../', import.meta.url)
   const manifest = JSON.parse(readFileSync(new URL('public/audio/manifest.json', root), 'utf8')) as Manifest
   const index = JSON.parse(readFileSync(new URL('src/data/audio-index.json', root), 'utf8')) as { version: number; voice: typeof audioVoice; clips: Record<string, number> }
+  validateNonLessonSnapshot(manifest)
   if (manifest.version !== 1 || JSON.stringify(manifest.voice) !== JSON.stringify(audioVoice) || JSON.stringify(index.voice) !== JSON.stringify(audioVoice)) throw new Error('Audio voice must be morioki / ノーマル (497929760), with the configured synthesis parameters')
   const clips = Object.entries(manifest.clips)
   if (manifest.complete !== (clips.length === manifest.expectedClips)) throw new Error('Audio completion metadata is inconsistent')
@@ -53,17 +56,12 @@ export function validateAudio({ allowIncomplete = false, requireCurrent = false,
     bytes += buffer.length
   }
   const plan = collectAudio()
-  for (const entry of plan.entries) {
-    const clip = manifest.clips[entry.id]
-    if (clip && clip.text !== entry.text) throw new Error(`Current speech text differs from its recording: ${entry.id}`)
+  let pending: unknown
+  if (manifest.nonLessonSnapshot !== undefined) {
+    const path = new URL('src/data/audio-pending.json', root)
+    if (existsSync(path)) pending = JSON.parse(readFileSync(path, 'utf8'))
   }
-  const missing = plan.entries.filter(entry => !manifest.clips[entry.id])
-  // New daily imports can remain readable before the next local synthesis run.
-  // Published recordings must always cover the snapshot they declare complete.
-  const snapshotDates = new Set(manifest.lessonDates)
-  const missingSnapshot = missing.filter(entry => entry.references.some(ref => !ref.startsWith('lesson/') || snapshotDates.has(ref.split('/')[1])))
-  if (!allowIncomplete && missingSnapshot.length) throw new Error(`The published audio snapshot is missing ${missingSnapshot.length} clips`)
-  if (requireCurrent && missing.length) throw new Error(`Current learning content is missing ${missing.length} clips; run npm run audio:generate`)
+  const missing = validateAudioCoverage(manifest, plan, pending, { allowIncomplete, requireCurrent })
   const directory = new URL('public/audio/morioki-normal/', root)
   const files = existsSync(directory) ? readdirSync(directory).filter(name => name.endsWith('.mp3') && !name.endsWith('.partial.mp3')) : []
   return { clips: clips.length, expected: plan.entries.length, files: files.length, hosted: audioSources.complete ? Object.keys(audioSources.clips).length : 0, missing: missing.length, bytes }

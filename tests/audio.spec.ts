@@ -123,7 +123,8 @@ test('audio controls fit 390px and 320px dark vocabulary, compound and live card
 
 
 test('changing live note filters stops audio from the previous visible group', async ({ page }) => {
-  await page.goto('/#live-reactions')
+  // Pin a recorded archive; the newest study notes may legitimately await audio.
+  await page.goto('/?live-unit=2026-09-30-okashi-bokuso#live-reactions')
   await page.locator('.live-examples .audio-play-button').first().click()
   await playing(page)
   await page.getByRole('group', { name: '内容分类', exact: true }).getByRole('button', { name: /漫画双关/ }).click()

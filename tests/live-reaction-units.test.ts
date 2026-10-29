@@ -3,8 +3,8 @@ import assert from 'node:assert/strict'
 import { liveReactionGroups } from '../src/data/live-reactions.ts'
 import { liveCategories, liveUnits, liveUnitFromSearch } from '../src/data/live-reaction-units.ts'
 
-test('second unit contains 25 core and three supplemental groups, with all four categories', () => {
-  const unit = liveUnits[0]
+test('September 30 unit retains 25 core and three supplemental groups, with all four categories', () => {
+  const unit = liveUnits.find(unit => unit.id === '2026-09-30-okashi-bokuso')!
   assert.equal(unit.id, '2026-09-30-okashi-bokuso')
   assert.equal(unit.groups.length, 28)
   assert.equal(unit.groups.filter(group => !group.supplement).length, 25)
@@ -29,18 +29,21 @@ test('legacy card payloads and IDs are preserved; new groups cannot collide', ()
 })
 
 test('source provenance separates phone notes from manga lines', () => {
-  const groups = liveUnits[0].groups
+  const unit = liveUnits.find(unit => unit.id === '2026-09-30-okashi-bokuso')!
+  const groups = unit.groups
   for (const suffix of ['exhaust', 'hatashite', 'request']) {
     assert.equal(groups.find(group => group.id.endsWith(`-${suffix}`))!.source!.kind, 'note')
   }
   assert.equal(groups.find(group => group.id.endsWith('-kau'))!.source!.kind, 'manga')
   assert.ok(groups.find(group => group.id.endsWith('-meguriau'))!.points.some(text => text.includes('不含“再次”')))
-  assert.ok(liveUnits[0].description.includes('不是漫画出版或直播播出日期'))
+  assert.ok(unit.description.includes('不是漫画出版或直播播出日期'))
 })
 
 test('unit URL resolution preserves a known unit and safely defaults invalid IDs', () => {
   assert.equal(liveUnitFromSearch('?live-unit=2026-09-28').id, '2026-09-28')
+  assert.equal(liveUnitFromSearch('?live-unit=2026-09-30-okashi-bokuso').id, '2026-09-30-okashi-bokuso')
+  assert.equal(liveUnitFromSearch('?live-unit=2026-10-29').id, '2026-10-29')
   for (const input of ['', '?live-unit=missing', '?live-unit=%3Cscript%3E']) {
-    assert.equal(liveUnitFromSearch(input).id, '2026-09-30-okashi-bokuso')
+    assert.equal(liveUnitFromSearch(input).id, '2026-10-29')
   }
 })

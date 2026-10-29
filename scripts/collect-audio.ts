@@ -61,7 +61,7 @@ export function collectAudio() {
   }
   for (const unit of liveUnits) for (const group of unit.groups) {
     const ref = `live/${unit.id}/${group.id}`
-    sentences(group.source?.quote, `${ref}/source`)
+    if (group.source?.readAloud !== false) sentences(group.source?.quote, `${ref}/source`)
     group.entries.forEach(item => add(item.expression, `${ref}/entry/${item.expression}`, item.reading))
     group.examples.forEach((item, index) => sentences(item.japanese, `${ref}/example/${index}`))
   }

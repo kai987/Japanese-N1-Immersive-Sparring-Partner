@@ -10,8 +10,758 @@
     "sampleRate": 24000,
     "codec": "mp3-64k"
   },
-  "requiredClips": 6446,
-  "pendingClips": 0,
+  "requiredClips": 6539,
+  "pendingClips": 93,
   "incompleteLessonDates": [],
-  "entries": []
+  "entries": [
+    {
+      "id": "5d252228c551b6fc",
+      "text": "どれだっけ",
+      "label": "どれだっけ",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-dore-dakke/source/0",
+        "live/2026-10-29/live-2026-10-29-dore-dakke/entry/どれだっけ"
+      ]
+    },
+    {
+      "id": "d512fcf899d0dc8c",
+      "text": "私の傘はどれだっけ。",
+      "label": "私の傘はどれだっけ。",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-dore-dakke/example/0/0"
+      ]
+    },
+    {
+      "id": "9cda3705044cc6c1",
+      "text": "待ち合わせは何時だっけ。",
+      "label": "待ち合わせは何時だっけ。",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-dore-dakke/example/1/0"
+      ]
+    },
+    {
+      "id": "72023f7461b15d98",
+      "text": "空を飛ぶ",
+      "label": "空を飛ぶ",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-space-wo/source/0"
+      ]
+    },
+    {
+      "id": "4b5628bfee968553",
+      "text": "海を泳ぐ",
+      "label": "海を泳ぐ",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-space-wo/source/1"
+      ]
+    },
+    {
+      "id": "38c5904d2305c291",
+      "text": "そらをとぶ",
+      "label": "空を飛ぶ",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-space-wo/entry/空を飛ぶ"
+      ]
+    },
+    {
+      "id": "8de444de79173ff2",
+      "text": "うみをおよぐ",
+      "label": "海を泳ぐ",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-space-wo/entry/海を泳ぐ"
+      ]
+    },
+    {
+      "id": "119dc20abffc0ad6",
+      "text": "鳥が青い空を飛んでいる。",
+      "label": "鳥が青い空を飛んでいる。",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-space-wo/example/0/0"
+      ]
+    },
+    {
+      "id": "99bad5cb44e3513f",
+      "text": "イルカが海を泳いでいる。",
+      "label": "イルカが海を泳いでいる。",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-space-wo/example/1/0"
+      ]
+    },
+    {
+      "id": "2c461ae7b9ccad6b",
+      "text": "公園を散歩する",
+      "label": "公園を散歩する",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-route-wo/source/0"
+      ]
+    },
+    {
+      "id": "71d3e888682817cc",
+      "text": "街を歩く",
+      "label": "街を歩く",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-route-wo/source/1"
+      ]
+    },
+    {
+      "id": "cdff5a89c2a5900d",
+      "text": "廊下を走る",
+      "label": "廊下を走る",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-route-wo/source/2"
+      ]
+    },
+    {
+      "id": "5640badcd53d3500",
+      "text": "氷の上を滑る",
+      "label": "氷の上を滑る",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-route-wo/source/3"
+      ]
+    },
+    {
+      "id": "0e1f5938fe4c4cec",
+      "text": "橋を渡る",
+      "label": "橋を渡る",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-route-wo/source/4"
+      ]
+    },
+    {
+      "id": "0b8c4714b6134300",
+      "text": "駅前を通る",
+      "label": "駅前を通る",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-route-wo/source/5"
+      ]
+    },
+    {
+      "id": "54442dcc7d70b8d0",
+      "text": "こうえんをさんぽする",
+      "label": "公園を散歩する",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-route-wo/entry/公園を散歩する"
+      ]
+    },
+    {
+      "id": "c664f8f6eac41372",
+      "text": "まちをあるく",
+      "label": "街を歩く",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-route-wo/entry/街を歩く"
+      ]
+    },
+    {
+      "id": "6410fe8ee753916a",
+      "text": "ろうかをはしる",
+      "label": "廊下を走る",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-route-wo/entry/廊下を走る"
+      ]
+    },
+    {
+      "id": "dae43c23d5f2112f",
+      "text": "こおりのうえをすべる",
+      "label": "氷の上を滑る",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-route-wo/entry/氷の上を滑る"
+      ]
+    },
+    {
+      "id": "8e032b4eeaebef62",
+      "text": "はしをわたる",
+      "label": "橋を渡る",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-route-wo/entry/橋を渡る"
+      ]
+    },
+    {
+      "id": "58802261fc7207ad",
+      "text": "えきまえをとおる",
+      "label": "駅前を通る",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-route-wo/entry/駅前を通る"
+      ]
+    },
+    {
+      "id": "051271b304d00b5f",
+      "text": "朝は公園を散歩してから、橋を渡って駅へ向かう。",
+      "label": "朝は公園を散歩してから、橋を渡って駅へ向かう。",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-route-wo/example/0/0"
+      ]
+    },
+    {
+      "id": "c0afdc9a045059f6",
+      "text": "帰りのバスは駅前を通る。",
+      "label": "帰りのバスは駅前を通る。",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-route-wo/example/1/0"
+      ]
+    },
+    {
+      "id": "0d25a4b77ce0e7b3",
+      "text": "廊下を走らず、ゆっくり歩いてください。",
+      "label": "廊下を走らず、ゆっくり歩いてください。",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-route-wo/example/2/0"
+      ]
+    },
+    {
+      "id": "23fcf9c690ce8802",
+      "text": "導く=道引く",
+      "label": "導く＝道引く",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-guide-prolong/source/0"
+      ]
+    },
+    {
+      "id": "d24c1b17e726e833",
+      "text": "みちびく",
+      "label": "導く",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-guide-prolong/entry/導く"
+      ]
+    },
+    {
+      "id": "1b90d1682a90e414",
+      "text": "かいぎがながびく",
+      "label": "会議が長引く",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-guide-prolong/entry/会議が長引く"
+      ]
+    },
+    {
+      "id": "0c93afda9dac2476",
+      "text": "案内係が参加者を会場へ導いた。",
+      "label": "案内係が参加者を会場へ導いた。",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-guide-prolong/example/0/0"
+      ]
+    },
+    {
+      "id": "a8b40d2607677282",
+      "text": "会議が長引いて、帰りが遅くなった。",
+      "label": "会議が長引いて、帰りが遅くなった。",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-guide-prolong/example/1/0"
+      ]
+    },
+    {
+      "id": "3c5cc3d44c10f750",
+      "text": "弄ぶ=持って遊ぶ",
+      "label": "弄ぶ＝持って遊ぶ",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-moteasobu/source/0"
+      ]
+    },
+    {
+      "id": "6ac4b4fef77174f2",
+      "text": "もてあそぶ",
+      "label": "弄ぶ",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-moteasobu/entry/弄ぶ"
+      ]
+    },
+    {
+      "id": "a090b63571b75519",
+      "text": "彼は考え事をしながら、手の中の鍵を弄んでいた。",
+      "label": "彼は考え事をしながら、手の中の鍵を弄んでいた。",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-moteasobu/example/0/0"
+      ]
+    },
+    {
+      "id": "e83d60de4d2aeaba",
+      "text": "人の気持ちを弄んではいけない。",
+      "label": "人の気持ちを弄んではいけない。",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-moteasobu/example/1/0"
+      ]
+    },
+    {
+      "id": "a4fa3dd1b1fe89ed",
+      "text": "鉢合わせ",
+      "label": "鉢合わせ",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-hachiawase/source/0"
+      ]
+    },
+    {
+      "id": "72a0062fb91ee90b",
+      "text": "はちあわせ",
+      "label": "鉢合わせ",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-hachiawase/entry/鉢合わせ"
+      ]
+    },
+    {
+      "id": "102f26e9be89f8a5",
+      "text": "玄関を出たところで、隣の人と鉢合わせした。",
+      "label": "玄関を出たところで、隣の人と鉢合わせした。",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-hachiawase/example/0/0"
+      ]
+    },
+    {
+      "id": "2adbb6e9bbedd495",
+      "text": "あっさり断る",
+      "label": "あっさり断る",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-refusal/source/0"
+      ]
+    },
+    {
+      "id": "d5f1286e79c5f06a",
+      "text": "きっぱり断る",
+      "label": "きっぱり断る",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-refusal/source/1"
+      ]
+    },
+    {
+      "id": "7afb419116d5ae45",
+      "text": "やんわり断る",
+      "label": "やんわり断る",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-refusal/source/2"
+      ]
+    },
+    {
+      "id": "1fb5f1d89a095474",
+      "text": "あっさりことわる",
+      "label": "あっさり断る",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-refusal/entry/あっさり断る"
+      ]
+    },
+    {
+      "id": "01f4096feb60427b",
+      "text": "きっぱりことわる",
+      "label": "きっぱり断る",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-refusal/entry/きっぱり断る"
+      ]
+    },
+    {
+      "id": "484237d0bccf5144",
+      "text": "やんわりことわる",
+      "label": "やんわり断る",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-refusal/entry/やんわり断る"
+      ]
+    },
+    {
+      "id": "934c2dab4565da17",
+      "text": "迷うかと思ったが、彼はあっさり断った。",
+      "label": "迷うかと思ったが、彼はあっさり断った。",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-refusal/example/0/0"
+      ]
+    },
+    {
+      "id": "d261b559f3a3ae05",
+      "text": "無理な依頼は、きっぱり断ることも必要だ。",
+      "label": "無理な依頼は、きっぱり断ることも必要だ。",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-refusal/example/1/0"
+      ]
+    },
+    {
+      "id": "e095cbe5afefc7a1",
+      "text": "予定があると伝えて、誘いをやんわり断った。",
+      "label": "予定があると伝えて、誘いをやんわり断った。",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-refusal/example/2/0"
+      ]
+    },
+    {
+      "id": "8c3c428bca78da67",
+      "text": "おかしい喋り方をする",
+      "label": "おかしい喋り方をする",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-kata/source/0"
+      ]
+    },
+    {
+      "id": "10b1f7ddfbc22c99",
+      "text": "変な食べ方してる",
+      "label": "変な食べ方してる",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-kata/source/1"
+      ]
+    },
+    {
+      "id": "ce7f9b3ff01ec313",
+      "text": "変な持ち方してる",
+      "label": "変な持ち方してる",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-kata/source/2"
+      ]
+    },
+    {
+      "id": "6b3ac8fcc268ad50",
+      "text": "おかしいしゃべりかたをする",
+      "label": "おかしい喋り方をする",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-kata/entry/おかしい喋り方をする"
+      ]
+    },
+    {
+      "id": "47e2459a0ffeda0e",
+      "text": "へんなたべかたしてる",
+      "label": "変な食べ方してる",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-kata/entry/変な食べ方してる"
+      ]
+    },
+    {
+      "id": "5ef8b0995fdb886d",
+      "text": "へんなもちかたしてる",
+      "label": "変な持ち方してる",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-kata/entry/変な持ち方してる"
+      ]
+    },
+    {
+      "id": "eec0219abe46d47e",
+      "text": "その箸の持ち方だと、食べにくくない?",
+      "label": "その箸の持ち方だと、食べにくくない？",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-kata/example/0/0"
+      ]
+    },
+    {
+      "id": "619e199c6a8ed648",
+      "text": "彼は普段と違う喋り方をしていた。",
+      "label": "彼は普段と違う喋り方をしていた。",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-kata/example/1/0"
+      ]
+    },
+    {
+      "id": "2a33f881f0392795",
+      "text": "たかが",
+      "label": "たかが",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-takaga/source/0",
+        "live/2026-10-29/live-2026-10-29-takaga/entry/たかが"
+      ]
+    },
+    {
+      "id": "028dc1ceaad9b962",
+      "text": "たかが一度の失敗で、諦める必要はない。",
+      "label": "たかが一度の失敗で、諦める必要はない。",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-takaga/example/0/0"
+      ]
+    },
+    {
+      "id": "ec620d95bf284ca9",
+      "text": "てはならない",
+      "label": "～てはならない",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-prohibition/entry/～てはならない"
+      ]
+    },
+    {
+      "id": "522dffaf418b8d1b",
+      "text": "てはいけない",
+      "label": "～てはいけない",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-prohibition/entry/～てはいけない"
+      ]
+    },
+    {
+      "id": "70607a28d190d6cc",
+      "text": "いけない",
+      "label": "いけない",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-prohibition/entry/いけない"
+      ]
+    },
+    {
+      "id": "77db730ac807aba6",
+      "text": "この区域に入ってはならない。",
+      "label": "この区域に入ってはならない。",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-prohibition/example/0/0"
+      ]
+    },
+    {
+      "id": "0e878edf30ed60c3",
+      "text": "ここで写真を撮ってはいけません。",
+      "label": "ここで写真を撮ってはいけません。",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-prohibition/example/1/0"
+      ]
+    },
+    {
+      "id": "7061ced93afdd655",
+      "text": "いけない、鍵を忘れた。",
+      "label": "いけない、鍵を忘れた。",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-prohibition/example/2/0"
+      ]
+    },
+    {
+      "id": "180a1ce5721a4081",
+      "text": "はぐくむ",
+      "label": "はぐくむ",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-hagukumu/source/0",
+        "live/2026-10-29/live-2026-10-29-hagukumu/entry/育む"
+      ]
+    },
+    {
+      "id": "c6a1ea31437efb25",
+      "text": "絵本を読む時間が、子どもの想像力を育む。",
+      "label": "絵本を読む時間が、子どもの想像力を育む。",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-hagukumu/example/0/0"
+      ]
+    },
+    {
+      "id": "8c0356fcd13835c8",
+      "text": "長い交流を通して友情を育んできた。",
+      "label": "長い交流を通して友情を育んできた。",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-hagukumu/example/1/0"
+      ]
+    },
+    {
+      "id": "14c8424357617387",
+      "text": "期待外れ",
+      "label": "期待外れ",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-kitaihazure/source/0"
+      ]
+    },
+    {
+      "id": "67ef7dbad34ff09e",
+      "text": "きたいはずれ",
+      "label": "期待外れ",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-kitaihazure/entry/期待外れ"
+      ]
+    },
+    {
+      "id": "783c12344c03ced0",
+      "text": "楽しみにしていた映画は、少し期待外れだった。",
+      "label": "楽しみにしていた映画は、少し期待外れだった。",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-kitaihazure/example/0/0"
+      ]
+    },
+    {
+      "id": "694b7ebfb326fb23",
+      "text": "ちっとも",
+      "label": "ちっとも",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-chittomo/source/0",
+        "live/2026-10-29/live-2026-10-29-chittomo/entry/ちっとも"
+      ]
+    },
+    {
+      "id": "fc113b59117c437d",
+      "text": "説明を聞いても、ちっとも分からなかった。",
+      "label": "説明を聞いても、ちっとも分からなかった。",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-chittomo/example/0/0"
+      ]
+    },
+    {
+      "id": "7d577424b19122a8",
+      "text": "久しぶりだけど、ちっとも変わっていないね。",
+      "label": "久しぶりだけど、ちっとも変わっていないね。",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-chittomo/example/1/0"
+      ]
+    },
+    {
+      "id": "71a1f035bfc709f9",
+      "text": "サングラス",
+      "label": "サングラス",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-loanwords/source/1",
+        "live/2026-10-29/live-2026-10-29-loanwords/entry/サングラス"
+      ]
+    },
+    {
+      "id": "cc893a943ec0f7a8",
+      "text": "グラスを外す",
+      "label": "グラスを外す",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-loanwords/source/2"
+      ]
+    },
+    {
+      "id": "b690f55b2f1870a7",
+      "text": "グラスをはずす",
+      "label": "グラスを外す",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-loanwords/entry/グラスを外す"
+      ]
+    },
+    {
+      "id": "b0c76b4e4ee1be32",
+      "text": "子どものころから、ファンタジー小説が好きだ。",
+      "label": "子どものころから、ファンタジー小説が好きだ。",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-loanwords/example/0/0"
+      ]
+    },
+    {
+      "id": "f23d0e083dccc034",
+      "text": "室内に入って、サングラスを外した。",
+      "label": "室内に入って、サングラスを外した。",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-loanwords/example/1/0"
+      ]
+    },
+    {
+      "id": "52f10728c662c5f4",
+      "text": "山が見える",
+      "label": "山が見える",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-perception/source/0"
+      ]
+    },
+    {
+      "id": "3a43fac47b97a5a0",
+      "text": "音が聞こえる",
+      "label": "音が聞こえる",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-perception/source/1"
+      ]
+    },
+    {
+      "id": "515efd6f047b08ab",
+      "text": "やまがみえる",
+      "label": "山が見える",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-perception/entry/山が見える"
+      ]
+    },
+    {
+      "id": "d89655d43690ac30",
+      "text": "おとがきこえる",
+      "label": "音が聞こえる",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-perception/entry/音が聞こえる"
+      ]
+    },
+    {
+      "id": "cbde749aab45277e",
+      "text": "この窓から山が見える。",
+      "label": "この窓から山が見える。",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-perception/example/0/0"
+      ]
+    },
+    {
+      "id": "02a1e546ed197fc2",
+      "text": "隣の部屋から音が聞こえる。",
+      "label": "隣の部屋から音が聞こえる。",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-perception/example/1/0"
+      ]
+    },
+    {
+      "id": "3c1d77197bff7e85",
+      "text": "そう見えるだけ",
+      "label": "そう見えるだけ",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-impression/source/0"
+      ]
+    },
+    {
+      "id": "768aeeaf2a6b5b43",
+      "text": "山に見える",
+      "label": "山に見える",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-impression/source/1"
+      ]
+    },
+    {
+      "id": "5fe060db02af5b17",
+      "text": "ウソに聞こえる",
+      "label": "ウソに聞こえる",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-impression/source/2"
+      ]
+    },
+    {
+      "id": "dd550a6e550d4afa",
+      "text": "社畜のように見える",
+      "label": "社畜のように見える",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-impression/source/3"
+      ]
+    },
+    {
+      "id": "b2001725881321f9",
+      "text": "そうみえるだけ",
+      "label": "そう見えるだけ",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-impression/entry/そう見えるだけ"
+      ]
+    },
+    {
+      "id": "b30679f8790bae4c",
+      "text": "やまにみえる",
+      "label": "山に見える",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-impression/entry/山に見える"
+      ]
+    },
+    {
+      "id": "b4c62b48ef4faf84",
+      "text": "うそにきこえる",
+      "label": "ウソに聞こえる",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-impression/entry/ウソに聞こえる"
+      ]
+    },
+    {
+      "id": "771aa932741dfc86",
+      "text": "しゃちくのようにみえる",
+      "label": "社畜のように見える",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-impression/entry/社畜のように見える"
+      ]
+    },
+    {
+      "id": "a8ff1df25a2fecbe",
+      "text": "遠くの雲が山に見える。",
+      "label": "遠くの雲が山に見える。",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-impression/example/0/0"
+      ]
+    },
+    {
+      "id": "8243af08e983934c",
+      "text": "彼は怒っているように見えるけれど、そう見えるだけだ。",
+      "label": "彼は怒っているように見えるけれど、そう見えるだけだ。",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-impression/example/1/0"
+      ]
+    },
+    {
+      "id": "a8b6197370ab0baf",
+      "text": "その説明は、私にはウソに聞こえる。",
+      "label": "その説明は、私にはウソに聞こえる。",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-impression/example/2/0"
+      ]
+    },
+    {
+      "id": "414ae07064f49c54",
+      "text": "「社畜のように見える」という言い方は、相手を傷つけることがある。",
+      "label": "「社畜のように見える」という言い方は、相手を傷つけることがある。",
+      "references": [
+        "live/2026-10-29/live-2026-10-29-impression/example/3/0"
+      ]
+    }
+  ]
 }

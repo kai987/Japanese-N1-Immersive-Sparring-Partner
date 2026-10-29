@@ -2,6 +2,7 @@ import type { collectAudio } from '../collect-audio.ts'
 import { validateAudioSources, type Clip, type Manifest } from '../validate-audio.ts'
 import type { AudioSources } from '../../src/lib/audioSources.ts'
 import { audioId } from '../../src/lib/audioText.ts'
+import { advanceNonLessonSnapshot } from './audioSnapshot.ts'
 
 type Catalog = ReturnType<typeof collectAudio>
 export type AudioIndex = { version: number; voice: Manifest['voice']; clips: Record<string, number> }
@@ -69,6 +70,7 @@ export function mergeUploadedRecordings(catalog: Catalog, manifest: Manifest, in
   nextManifest.lessonDates = [...new Set([...catalog.lessonDates, ...manifest.lessonDates])]
   nextManifest.complete = true
   nextManifest.expectedClips = Object.keys(nextManifest.clips).length
+  if (manifest.nonLessonSnapshot !== undefined) nextManifest.nonLessonSnapshot = advanceNonLessonSnapshot(manifest, catalog, nextManifest.clips)
   nextSources.complete = true
   const hosted = Object.entries(nextSources.clips)
   nextSources.summary = {

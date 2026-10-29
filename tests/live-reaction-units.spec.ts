@@ -9,7 +9,7 @@ test('new unit is reachable from the sidebar and contains complete source-labell
   const errors: string[] = []
   page.on('pageerror', error => errors.push(error.message))
   page.on('console', message => { if (['error', 'warning'].includes(message.type())) errors.push(message.text()) })
-  await page.goto('/')
+  await page.goto(`/?live-unit=${unit}`)
   await expect(page).toHaveTitle('N1 Immersive Sparring Partner')
   await page.getByRole('navigation', { name: 'メインナビゲーション', exact: true }).getByRole('button', { name: '直播条反', exact: true }).click()
   await expect(page.getByLabel('选择学习单元', { exact: true })).toHaveValue(unit)
@@ -46,7 +46,7 @@ test('legacy marks, new marks and daily progress survive unit changes and reload
   await page.addInitScript(key => {
     if (!localStorage.getItem(key)) localStorage.setItem(key, JSON.stringify({ version: 1, groups: { 'live-2026-09-28-endurance': 'mastered' } }))
   }, storageKey)
-  await page.goto('/')
+  await page.goto(`/?live-unit=${unit}`)
   const nav = page.getByRole('navigation', { name: 'メインナビゲーション', exact: true })
   await nav.getByRole('button', { name: 'N1 語彙', exact: true }).click()
   await page.locator('.learning-card').first().getByRole('button', { name: '習得済み', exact: true }).click()
@@ -77,7 +77,7 @@ test('legacy marks, new marks and daily progress survive unit changes and reload
 
 test('mobile unit picker, categories and dark cards remain readable at narrow widths', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 })
-  await page.goto('/#live-reactions')
+  await page.goto(`/?live-unit=${unit}#live-reactions`)
   await expect(page.locator('[data-live-group]')).toHaveCount(28)
   await mkdir(screenshots, { recursive: true })
   await page.screenshot({ path: `${screenshots}/mobile.png` })
@@ -99,7 +99,7 @@ test('mobile unit picker, categories and dark cards remain readable at narrow wi
 
 test('invalid unit URLs fall back without losing the live section', async ({ page }) => {
   await page.goto('/?live-unit=invalid#live-reactions')
-  await expect(page.getByLabel('选择学习单元', { exact: true })).toHaveValue(unit)
-  await expect(page.locator('[data-live-group]')).toHaveCount(28)
-  await expect(page).toHaveURL(/live-unit=2026-09-30-okashi-bokuso#live-reactions$/)
+  await expect(page.getByLabel('选择学习单元', { exact: true })).toHaveValue('2026-10-29')
+  await expect(page.locator('.live-page')).toHaveAttribute('data-live-unit', '2026-10-29')
+  await expect(page).toHaveURL(/live-unit=2026-10-29#live-reactions$/)
 })

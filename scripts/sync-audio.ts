@@ -9,6 +9,7 @@ import { dailyCandidates, type DailyCandidate } from './plan-audio-storage.ts'
 import { validateAudio, validateAudioSources, type Clip, type Manifest } from './validate-audio.ts'
 import { audioId } from '../src/lib/audioText.ts'
 import type { AudioSources } from '../src/lib/audioSources.ts'
+import { advanceNonLessonSnapshot } from './lib/audioSnapshot.ts'
 
 type Catalog = ReturnType<typeof collectAudio>
 type VerifiedClip = { candidate: DailyCandidate; bytes: number; duration: number; rms: number }
@@ -26,7 +27,7 @@ export function mergeSharedAudio(catalog: Catalog, manifest: Manifest, index: In
     const old = nextManifest.clips[entry.id]
     if (old) {
       if (old.text !== entry.text) throw new Error(`Audio identity collision: ${entry.id}`)
-      old.references = entry.references
+      old.references = manifest.nonLessonSnapshot === undefined ? entry.references : [...new Set([...old.references, ...entry.references])]
       continue
     }
     const recording = verified[entry.id]
@@ -43,6 +44,7 @@ export function mergeSharedAudio(catalog: Catalog, manifest: Manifest, index: In
   const incompleteDates = new Set(pending.flatMap(entry => entry.references.filter(ref => ref.startsWith('lesson/')).map(ref => ref.split('/')[1])))
   nextManifest.lessonDates = catalog.lessonDates.filter(date => !incompleteDates.has(date))
   nextManifest.expectedClips = Object.keys(nextManifest.clips).length
+  if (manifest.nonLessonSnapshot !== undefined) nextManifest.nonLessonSnapshot = advanceNonLessonSnapshot(manifest, catalog, nextManifest.clips)
   if (added) {
     nextManifest.generatedAt = now
     nextSources.verifiedAt = now
