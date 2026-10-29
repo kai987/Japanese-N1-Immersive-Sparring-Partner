@@ -1,0 +1,12 @@
+.progress-backup { margin-top: 2rem; padding: 1.5rem; border: 1px solid var(--border); border-radius: 16px; background: var(--surface); }
+.progress-backup h2 { margin: 0 0 .75rem; font-size: 1.15rem; }
+.progress-backup p { color: var(--text-soft); line-height: 1.8; overflow-wrap: anywhere; }
+.progress-backup-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; }
+.progress-backup-actions button { max-width: 100%; white-space: normal; }
+.progress-backup .secondary-btn { border: 1px solid var(--border); background: var(--surface-2); color: var(--text); border-radius: 10px; padding: .75rem 1rem; cursor: pointer; }
+.progress-backup-file { display: grid; gap: .35rem; max-width: 100%; font-size: .85rem; }
+.progress-backup-file input { max-width: 100%; color: var(--text-soft); }
+.progress-backup-preview { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+.progress-backup-preview h3 { margin: 0; font-size: 1rem; }
+.progress-backup .progress-backup-error { color: var(--danger, #b24646); }
+@media (max-width: 480px) { .progress-backup { padding: 1rem; } .progress-backup-actions { align-items: stretch; flex-direction: column; } }

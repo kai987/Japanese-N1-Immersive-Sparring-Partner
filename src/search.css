@@ -186,3 +186,7 @@
 .lesson-search-hit.is-current { background: #e9bc68; outline: 2px solid #8d5915; outline-offset: 2px; }
 .app[data-theme="dark"] .lesson-search-hit.is-current { background: #8b5b20; color: #fff8df; outline-color: #f2cb70; }
 [id^="grammar-"]:focus, [id^="review-"]:focus, [id^="immersion-"]:focus, [id^="reading-"]:focus, #lesson-theme:focus { outline: 2px solid var(--accent-2); outline-offset: 4px; }
+
+.project-search-more { position: sticky; bottom: -7px; padding: 8px 3px 3px; background: var(--surface); border-top: 1px solid var(--border); }
+.project-search-more button { width: 100%; padding: 9px 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--surface-2); color: var(--accent); cursor: pointer; font: inherit; font-size: 12px; font-weight: 700; }
+.project-search-more button:hover, .project-search-more button:focus-visible { border-color: var(--accent); }

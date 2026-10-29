@@ -19,13 +19,22 @@ export function decodeLiveProgress(input: unknown): { value: LiveProgress; recov
   }
 }
 
-export function liveGroupSearchFields(group: LiveReactionGroup & Partial<Pick<LiveUnitGroup, 'source'>>): string[] {
-  return [group.title, group.subtitle, ...group.points,
-    ...group.entries.flatMap(item => [item.expression, item.reading, item.meaning, item.note ?? '']),
-    ...group.examples.flatMap(item => [item.japanese, item.chinese]),
-    ...(group.source ? [group.source.quote, group.source.translation] : [])]
+type SearchableGroup = LiveReactionGroup & Partial<Pick<LiveUnitGroup, 'source'>>
+const preparedGroups = new WeakMap<SearchableGroup, { fields: string[]; normalized: string[] }>()
+function prepareGroup(group: SearchableGroup) {
+  let cached = preparedGroups.get(group)
+  if (!cached) {
+    const fields = [group.title, group.subtitle, ...group.points,
+      ...group.entries.flatMap(item => [item.expression, item.reading, item.meaning, item.note ?? '']),
+      ...group.examples.flatMap(item => [item.japanese, item.chinese]),
+      ...(group.source ? [group.source.quote, group.source.translation] : [])]
+    cached = { fields, normalized: fields.map(normalizeSearchText) }
+    preparedGroups.set(group, cached)
+  }
+  return cached
 }
+export function liveGroupSearchFields(group: SearchableGroup): string[] { return prepareGroup(group).fields }
 export function matchesLiveGroup(group: LiveReactionGroup, query: string): boolean {
-  const fields = liveGroupSearchFields(group).map(normalizeSearchText)
+  const fields = prepareGroup(group).normalized
   return getSearchTerms(query).every(word => fields.some(text => text.includes(word)))
 }

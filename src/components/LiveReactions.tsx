@@ -4,6 +4,7 @@ import { useLocalStorage } from '../hooks/useLocalStorage'
 import { decodeLiveProgress, initialLiveProgress, liveProgressKey, matchesLiveGroup, type LiveStatus } from '../lib/liveReactions'
 import type { LiveSearchResult } from '../lib/projectSearch'
 import { AudioButton, SentenceAudio } from './AudioButton'
+import { AudioAvailability } from './AudioAvailability'
 import { stopAudio } from '../lib/audioPlayer'
 import { SearchHighlight } from './SearchHighlight'
 import '../live-reactions.css'
@@ -84,6 +85,7 @@ export default function LiveReactions({ query, composing, onClear, searchTarget,
       <div><span>词条与表达</span><strong>{entries}<small> 条</small></strong></div>
       <div><span>已标记掌握</span><strong>{mastered}<small> / {groups.length} 组</small></strong></div>
     </div>
+    <AudioAvailability liveUnitId={unit.id} />
     <p className="live-progress-note">本页按组保存学习状态，仅保存在当前浏览器；不同单元独立标记，与每日 N1 教材的学习记录分开。例句与辨析为学习补充，不将全部表达标为N1或新学。</p>
 
     {storage.failed ? <div className="storage-notice" role="alert"><p>无法保存直播笔记的学习状态；关闭页面后，本次更改可能丢失。</p><button className="text-btn" onClick={storage.retry}>重试保存</button></div>
@@ -115,13 +117,13 @@ export default function LiveReactions({ query, composing, onClear, searchTarget,
         return <article className="live-group-card" key={group.id} data-live-group={group.id} data-category={group.category} aria-labelledby={`${group.id}-title`}>
           <header className="live-group-heading"><span className="live-group-number">{String(index + 1).padStart(2, '0')}</span><div><h2 id={`${group.id}-title`}>{highlight(group.title)}</h2><p>{highlight(group.subtitle)}</p><span className="live-category-caption">{liveCategories.find(item => item.id === group.category)?.label}{group.supplement ? ' · 补充辨析' : ''}</span></div><span className="tag">{group.entries.length} 条</span></header>
           {group.source ? <blockquote className="live-source-quote"><div>{group.source.kind === 'manga' ? `漫画原句 · ${group.source.label}` : group.source.label}</div><p lang="ja">{group.source.readAloud === false ? highlight(group.source.quote) : <SentenceAudio text={group.source.quote} renderText={highlight} />}</p><p lang="zh-CN">{highlight(group.source.translation)}</p></blockquote> : null}
-          <dl className="live-entries">{group.entries.map(item => <div className="live-entry" key={item.expression}>
+          <dl className="live-entries">{group.entries.map(item => <div className="live-entry" key={item.id}>
             <dt><strong lang="ja">{highlight(item.expression)}</strong>{item.reading !== item.expression ? <span className="live-reading" lang="ja">{highlight(item.reading)}</span> : null}<AudioButton text={item.expression} speechText={item.reading} /></dt>
             <dd><p lang="zh-CN">{highlight(item.meaning)}</p>{item.note ? <p className="live-entry-note" lang="zh-CN">{highlight(item.note)}</p> : null}</dd>
           </div>)}</dl>
           <div className="live-group-detail">
             <div className="live-points"><h3>用法与辨析</h3>{group.points.map(point => <p key={point}>{highlight(point)}</p>)}</div>
-            <div className="live-examples"><h3>{group.source ? '学习例句 · 日中对照' : '例句 · 日中对照'}</h3>{group.examples.map(example => <div className="example-box" key={example.japanese}><p lang="ja"><SentenceAudio text={example.japanese} renderText={highlight} /></p><span lang="zh-CN">{highlight(example.chinese)}</span></div>)}</div>
+            <div className="live-examples"><h3>{group.source ? '学习例句 · 日中对照' : '例句 · 日中对照'}</h3>{group.examples.map(example => <div className="example-box" key={example.id}><p lang="ja"><SentenceAudio text={example.japanese} renderText={highlight} /></p><span lang="zh-CN">{highlight(example.chinese)}</span></div>)}</div>
           </div>
           <div className="live-card-footer"><span>{status === 'mastered' ? '已标记掌握' : status === 'review' ? '已加入本页复习' : '尚未标记'}</span><div className="status-actions" role="group" aria-label={`${group.title}的学习状态`}>
             <button className={status === 'review' ? 'status-btn active review' : 'status-btn'} aria-pressed={status === 'review'} onClick={() => toggleStatus(group.id, 'review')}>要復習</button>

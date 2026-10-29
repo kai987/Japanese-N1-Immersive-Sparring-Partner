@@ -1,4 +1,10 @@
 .audio-control { display: inline-flex; align-items: center; flex: 0 0 auto; position: relative; vertical-align: middle; line-height: 1; }
+.audio-control.audio-unavailable { flex-direction: column; gap: 3px; }
+.audio-pending-label { color: var(--muted); font: 9px/1.2 system-ui, sans-serif; white-space: nowrap; }
+.audio-availability { margin: 14px 0 18px; padding: 12px 15px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); color: var(--text-secondary); font-size: 12px; line-height: 1.7; }
+.audio-availability p { display: flex; flex-wrap: wrap; gap: 3px 14px; margin: 0; }
+.audio-availability strong { color: var(--accent); font-weight: 600; }
+.audio-availability small { display: block; margin-top: 3px; color: var(--muted); font-size: 10px; }
 .audio-play-button { display: inline-grid; place-items: center; width: 32px; height: 32px; flex: 0 0 32px; padding: 0; border: 1px solid var(--border); border-radius: 50%; color: var(--accent-2); background: transparent; cursor: pointer; transition: background .15s, border-color .15s; }
 .audio-play-button:hover { background: var(--accent-2-soft); border-color: var(--accent-2); }
 .audio-play-button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
@@ -34,6 +40,7 @@
    Japanese text and media controls in the surrounding text's typography. */
 .example-box p .spoken-sentence, .example-box p .spoken-text, .example-box p .audio-control { color: inherit; font: inherit; margin-top: 0; }
 .example-box p .audio-control { display: inline-flex; }
+.example-box p .audio-pending-label, .collocations .audio-pending-label { color: var(--muted); font: 9px/1.2 system-ui, sans-serif; margin: 0; padding: 0; background: transparent; }
 .example-box p .spoken-sentence + .spoken-sentence { margin-top: .3em; }
 .collocations .audio-collocation > span { padding: 0; background: transparent; }
 .live-entry dt { display: grid; grid-template-columns: minmax(0, 1fr) 34px; column-gap: 8px; }

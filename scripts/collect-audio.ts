@@ -5,6 +5,7 @@ import { validateStudySnapshot, withItStudy, type StudySnapshot } from '../src/l
 import { reviewFocusByDate as legacyReview } from '../src/data/history-legacy.ts'
 import { compoundVerbSeries } from '../src/data/compound-verbs.ts'
 import { liveUnits } from '../src/data/live-reaction-units.ts'
+import { liveEntryAudioReference, liveExampleAudioReference } from '../src/lib/liveIdentities.ts'
 import { audioId, audioVoice, hasJapaneseText, normalizeAudioText, splitAudioSentences } from '../src/lib/audioText.ts'
 
 export function collectAudio() {
@@ -62,8 +63,8 @@ export function collectAudio() {
   for (const unit of liveUnits) for (const group of unit.groups) {
     const ref = `live/${unit.id}/${group.id}`
     if (group.source?.readAloud !== false) sentences(group.source?.quote, `${ref}/source`)
-    group.entries.forEach(item => add(item.expression, `${ref}/entry/${item.expression}`, item.reading))
-    group.examples.forEach((item, index) => sentences(item.japanese, `${ref}/example/${index}`))
+    group.entries.forEach(item => add(item.expression, `${ref}/${liveEntryAudioReference(item)}`, item.reading))
+    group.examples.forEach(item => sentences(item.japanese, `${ref}/${liveExampleAudioReference(item)}`))
   }
   return { version: 1, voice: audioVoice, lessonDates: lessons.map(item => item.date), entries: [...entries.values()] }
 }

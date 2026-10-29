@@ -19,7 +19,8 @@ test('every section shares exactly one persistent search input and shortcut', as
   const handle = await input.elementHandle()
   for (const name of ['複合動詞', '直播条反', 'N1 語彙', 'N1 文法', '没入読解', '読解練習', '誤答復習', '学習履歴', '今日の学習']) {
     await nav(page).getByRole('button', { name, exact: true }).click()
-    await expect(page.locator('input')).toHaveCount(1)
+    await expect(page.getByRole('textbox')).toHaveCount(1)
+    await expect(page.locator('.daily-search input')).toHaveCount(1)
     await expect(input).toBeVisible()
     expect(await input.evaluate((element, original) => element === original, handle)).toBe(true)
     await page.keyboard.press('Control+k')
@@ -108,6 +109,7 @@ test('single global input and grouped popup work on 390px and 320px dark screens
   await page.setViewportSize({ width: 390, height: 844 })
   await page.goto('/')
   await search(page).fill('間に合う')
+  await expect(results(page).locator('.daily-search-result')).not.toHaveCount(0)
   for (const width of [390, 320]) {
     await page.setViewportSize({ width, height: 844 })
     await expect(search(page)).toBeInViewport()
