@@ -67,6 +67,12 @@ npm run audio:repair -- --dates 2026-10-20,2026-10-21 --evidence-dir /absolute/p
 
 同じOSロックを保持し、最新mainに対象日以外の未収録音声があれば生成・アップロード前に停止します。最大2時間で中断し、既存キャッシュと公開バイトの照合を再利用します。`schedule.json` は変更せず、生成済みキャッシュも削除しません。
 
+直播筆記も利用者が明示して承認した対象に含める場合は、単元IDを `--live-units` に追加します。各発話の全参照が指定した教材日または直播単元に属することを、生成・アップロード前に確認します。指定外の単元や複合動詞の不足があれば停止し、自動処理の対象範囲・起動時刻は変更しません。
+
+```sh
+npm run audio:repair -- --dates 2026-10-30 --live-units 2026-10-29,2026-10-30 --evidence-dir /absolute/private/approved-audio-repair
+```
+
 検証のstdout・stderr、終了情報、Playwright JSON/HTMLと失敗traceは指定した永続フォルダーに残します。鍵や環境変数はログに保存しません。音声4ファイルだけの通常push、正確なPagesコミットと実際の再生の検証を省略しません。
 
 ## 録音終了後のアプリ終了

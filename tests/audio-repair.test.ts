@@ -33,6 +33,36 @@ test('repair refuses missing speech from another day or a non-lesson section bef
   catalog.entries.push({ id: 'c', references: ['compound-verbs/au/a'] } as typeof catalog.entries[number])
   assert.throws(() => assertRepairScope(catalog, sources, ['2026-10-20', '2026-10-21']))
 })
+test('foreground live units require explicit unique identities and survive inherited lock configuration', () => {
+  const flags = ['--dates', '2026-10-30', '--evidence-dir', '/tmp/e']
+  const value = repairOptions([...flags, '--live-units', '2026-10-29,2026-10-30'])
+  assert.deepEqual(value.liveUnitIds, ['2026-10-29', '2026-10-30'])
+  assert.deepEqual(repairOptions(['--lock-fd', '3'], JSON.stringify(value)).liveUnitIds, value.liveUnitIds)
+  for (const units of ['', '2026-10-30,2026-10-30', '../outside']) {
+    assert.throws(() => repairOptions([...flags, '--live-units', units]))
+  }
+  assert.throws(() => repairOptions([...flags, '--live-units', '2026-10-30', '--live-units', '2026-10-29']))
+  assert.throws(() => repairOptions(['--lock-fd', '3'], JSON.stringify({ ...value, liveUnitIds: ['../outside'] })))
+})
+test('explicit live scope permits only those units and every reference of each missing recording', () => {
+  const catalog = { lessonDates: ['2026-10-30'], entries: [
+    { id: 'a', references: ['lesson/2026-10-30/reading/0'] },
+    { id: 'b', references: ['live/2026-10-29/group/entry/old'] },
+    { id: 'c', references: ['live/2026-10-30/group/entry/new'] },
+  ] } as unknown as ReturnType<typeof collectAudio>
+  const sources = { clips: {} } as AudioSources
+  assert.throws(() => assertRepairScope(catalog, sources, ['2026-10-30']))
+  assert.throws(() => assertRepairScope(catalog, sources, ['2026-10-30'], ['2026-10-30']))
+  assert.doesNotThrow(() => assertRepairScope(catalog, sources, ['2026-10-30'], ['2026-10-29', '2026-10-30']))
+  for (const units of [['missing'], ['all'], ['2026-10-30', '2026-10-30'], ['../outside']]) {
+    assert.throws(() => assertRepairScope(catalog, sources, ['2026-10-30'], units))
+  }
+  catalog.entries[2].references.push('live/2026-09-28/group/entry/other')
+  assert.throws(() => assertRepairScope(catalog, sources, ['2026-10-30'], ['2026-10-29', '2026-10-30']))
+  catalog.entries[2].references.pop()
+  catalog.entries[2].references.push('compound/au/example/0')
+  assert.throws(() => assertRepairScope(catalog, sources, ['2026-10-30'], ['2026-10-29', '2026-10-30']))
+})
 test('one foreground repair obtains the real OS lock outside the window without changing the daily latch or cached bytes', t => {
   const root = mkdtempSync(join(tmpdir(), 'n1-explicit-repair-'))
   t.after(() => rmSync(root, { recursive: true, force: true }))

@@ -220,13 +220,21 @@ async function verifyDeployment(commit: string, localDist?: string, verification
   throw new Error('awaiting_deploy: exact commit is not yet verified')
 }
 
-export type AudioRepair = { dates: string[]; evidenceDirectory: string; entrypoint: string; deadline: number }
-export function assertRepairScope(catalog: ReturnType<typeof collectAudio>, sources: AudioSources, dates: string[]) {
+export type AudioRepair = { dates: string[]; liveUnitIds?: string[]; evidenceDirectory: string; entrypoint: string; deadline: number }
+export function assertRepairScope(catalog: ReturnType<typeof collectAudio>, sources: AudioSources, dates: string[], liveUnitIds: string[] = []) {
   if (!dates.length || new Set(dates).size !== dates.length || dates.some(date => !/^\d{4}-\d{2}-\d{2}$/.test(date) || !catalog.lessonDates.includes(date))) {
     throw new Error('Repair requires explicit existing lesson dates')
   }
+  const knownLiveUnits = new Set(catalog.entries.flatMap(entry => entry.references
+    .filter(reference => reference.startsWith('live/')).map(reference => reference.split('/')[1])))
+  if (new Set(liveUnitIds).size !== liveUnitIds.length || liveUnitIds.some(id => !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(id) || !knownLiveUnits.has(id))) {
+    throw new Error('Repair requires explicit existing live unit IDs')
+  }
   for (const entry of catalog.entries.filter(entry => !sources.clips[entry.id])) {
-    if (!entry.references.length || entry.references.some(reference => !reference.startsWith('lesson/') || !dates.includes(reference.split('/')[1]))) throw new Error(`Repair would include unapproved audio: ${entry.id}`)
+    if (!entry.references.length || entry.references.some(reference => {
+      const [kind, id] = reference.split('/')
+      return !((kind === 'lesson' && dates.includes(id)) || (kind === 'live' && liveUnitIds.includes(id)))
+    })) throw new Error(`Repair would include unapproved audio: ${entry.id}`)
   }
 }
 export async function audioWorker(repair?: AudioRepair) {
@@ -308,8 +316,8 @@ export async function audioWorker(repair?: AudioRepair) {
     const catalog = readJson(planPath) as ReturnType<typeof collectAudio>
     const previousSources = readJson(join(attempt, 'src/data/audio-sources.json')) as AudioSources
     if (repair) {
-      assertRepairScope(catalog, previousSources, repair.dates)
-      atomicJson(join(repair.evidenceDirectory, 'repair-scope.json'), { dates: repair.dates, baseCommit: base, requiredClips: catalog.entries.length, missingIds: catalog.entries.filter(entry => !previousSources.clips[entry.id]).map(entry => entry.id), startedAt: new Date().toISOString() })
+      assertRepairScope(catalog, previousSources, repair.dates, repair.liveUnitIds)
+      atomicJson(join(repair.evidenceDirectory, 'repair-scope.json'), { dates: repair.dates, liveUnitIds: repair.liveUnitIds ?? [], baseCommit: base, requiredClips: catalog.entries.length, missingIds: catalog.entries.filter(entry => !previousSources.clips[entry.id]).map(entry => entry.id), startedAt: new Date().toISOString() })
     }
     if (!claimed) {
       const reason = audioWorkReason(state, schedule.date, catalog.lessonDates, catalog.entries.filter(entry => !previousSources.clips[entry.id]).length, base)
@@ -323,7 +331,7 @@ export async function audioWorker(repair?: AudioRepair) {
     const published = readJson(join(attempt, 'public/audio/manifest.json')) as Manifest
     const sources = readJson(join(attempt, 'src/data/audio-sources.json')) as AudioSources
     const index = readJson(join(attempt, 'src/data/audio-index.json'))
-    if (repair) assertRepairScope(catalog, sources, repair.dates)
+    if (repair) assertRepairScope(catalog, sources, repair.dates, repair.liveUnitIds)
     const missing = catalog.entries.filter(entry => !sources.clips[entry.id])
     if (missing.length) {
       const neededDates = [...new Set(missing.flatMap(entry => entry.references.filter(ref => ref.startsWith('lesson/')).map(ref => ref.split('/')[1])))]
