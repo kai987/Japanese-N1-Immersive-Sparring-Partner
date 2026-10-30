@@ -37,9 +37,9 @@ test('sidebar opens the latest screenshot unit with complete source-labelled car
   expect(errors).toEqual([])
 })
 
-test('global search switches from a restricted older unit to Japanese, kana and Chinese matches and scrolls below the header', async ({ page }) => {
-  const expectation = unit.groups.flatMap(group => group.entries).find(entry => entry.expression.includes('期待外れ'))!
-  for (const query of ['山に見える', 'はぐくむ', expectation.meaning]) {
+const expectation = unit.groups.flatMap(group => group.entries).find(entry => entry.expression.includes('期待外れ'))!
+for (const query of ['山に見える', 'はぐくむ', expectation.meaning]) {
+  test(`global search clears restricted older-unit filters and scrolls below the header: ${query}`, async ({ page }) => {
     await page.goto('/?live-unit=2026-09-30-okashi-bokuso#live-reactions')
     await page.getByRole('group', { name: '内容分类', exact: true }).getByRole('button', { name: /漫画双关/ }).click()
     await page.getByRole('group', { name: '筛选学习状态', exact: true }).getByRole('button', { name: '習得済み', exact: true }).click()
@@ -54,8 +54,8 @@ test('global search switches from a restricted older unit to Japanese, kana and 
     const [match, header] = await Promise.all([mark.boundingBox(), page.locator('.topbar').boundingBox()])
     expect(match!.y).toBeGreaterThanOrEqual(header!.y + header!.height)
     await expect(results(page)).toHaveCount(0)
-  }
-})
+  })
+}
 
 test('October notes retain independent review marks across unit switches and reload without altering daily records', async ({ page }) => {
   await page.addInitScript(key => {

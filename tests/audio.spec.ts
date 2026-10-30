@@ -2,6 +2,9 @@ import { test, expect, type Page } from '@playwright/test'
 import { audioPlaybackUrl } from '../src/lib/audioSources'
 import { readFileSync } from 'node:fs'
 import { validateContent } from '../scripts/validate-content'
+import { observeAudioPlayback, playbackMarker, playbackProof, playbackSamplesAfter, playRecording, recordedPlayback } from './helpers/audioPlayback.ts'
+
+test.beforeEach(async ({ page }) => observeAudioPlayback(page))
 
 // New daily text can be published before its local speech generation finishes.
 // Exercise a recorded lesson instead of assuming today's lesson has audio.
@@ -20,13 +23,6 @@ const vocabulary = (page: Page) => page.getByRole('navigation', { name: 'メイ�
 const player = (page: Page) => page.locator('audio[data-study-audio]')
 const firstWord = (page: Page) => page.locator('.learning-card .vocabulary-heading .audio-play-button').first()
 const firstExample = (page: Page) => page.locator('.learning-card .example-box .audio-play-button').first()
-async function playing(page: Page) {
-  await expect(player(page)).toHaveCount(1)
-  await expect.poll(() => player(page).evaluate(element => {
-    const audio = element as HTMLAudioElement
-    return !audio.paused && audio.readyState >= 2 && audio.currentTime > .04
-  })).toBe(true)
-}
 
 test('word and sentence buttons play real morioki audio, pause/resume, and keep a single active recording', async ({ page }, testInfo) => {
   const errors: string[] = []
@@ -37,22 +33,21 @@ test('word and sentence buttons play real morioki audio, pause/resume, and keep 
   await vocabulary(page).click()
   await expect(firstWord(page)).toBeEnabled()
   expect(requests.filter(url => url.endsWith('.mp3'))).toHaveLength(0)
-  await firstExample(page).click()
-  await playing(page)
-  await expect(firstExample(page)).toHaveAttribute('aria-pressed', 'true')
-  const sentenceSource = await player(page).getAttribute('src')
+  const sentence = await playRecording(page, firstExample(page))
+  const sentenceSource = sentence.source
   const pauseTime = await player(page).evaluate(element => (element as HTMLAudioElement).currentTime)
   await firstExample(page).click()
   await expect(firstExample(page)).toHaveClass(/paused/)
   await expect.poll(() => player(page).evaluate(element => (element as HTMLAudioElement).paused)).toBe(true)
-  await firstExample(page).click()
-  await playing(page)
-  await expect.poll(() => player(page).evaluate(element => (element as HTMLAudioElement).currentTime)).toBeGreaterThan(pauseTime)
-  await firstWord(page).click()
-  await playing(page)
-  await expect(player(page)).not.toHaveAttribute('src', sentenceSource!)
-  await expect(firstExample(page)).toHaveAttribute('aria-pressed', 'false')
-  await expect(firstWord(page)).toHaveAttribute('aria-pressed', 'true')
+  const resumed = await playRecording(page, firstExample(page))
+  expect(resumed.source).toBe(sentenceSource)
+  expect(resumed.time).toBeGreaterThan(pauseTime)
+  const word = await playRecording(page, firstWord(page))
+  expect(word.source).not.toBe(sentenceSource)
+  // Check both buttons at the observed playing instant. A one-second word may
+  // legitimately have ended by the next automation round trip on a busy host.
+  expect(word.activeIds).toContain(await firstWord(page).getAttribute('data-audio-id'))
+  expect(word.activeIds).not.toContain(await firstExample(page).getAttribute('data-audio-id'))
   expect(requests.some(url => url.includes(':10101') || url.includes(':10102'))).toBe(false)
   await page.screenshot({ path: testInfo.outputPath('audio-vocabulary-desktop.png') })
   await page.getByRole('navigation', { name: 'メインナビゲーション', exact: true }).getByRole('button', { name: 'N1 文法', exact: true }).click()
@@ -71,8 +66,7 @@ test('an audio load failure offers retry and successfully reloads the same recor
   await expect(firstWord(page)).toHaveClass(/error/)
   await expect(page.locator('.audio-play-error')).toContainText('再試行')
   await page.unroute(pattern)
-  await firstWord(page).click()
-  await playing(page)
+  await playRecording(page, firstWord(page))
   await expect(page.locator('.audio-play-error')).toHaveCount(0)
 })
 
@@ -80,21 +74,40 @@ test('unique compound audio plays from Supabase while shared daily vocabulary us
   await openRecordedLesson(page)
   await vocabulary(page).click()
   await expect(firstWord(page)).toHaveAttribute('data-audio-provider', 'daily')
-  await firstWord(page).click()
-  await playing(page)
-  await expect(player(page)).toHaveAttribute('src', /^https:\/\/pub-[a-f0-9]+\.r2\.dev\//)
+  const shared = await playRecording(page, firstWord(page))
+  expect(shared.source).toMatch(/^https:\/\/pub-[a-f0-9]+\.r2\.dev\//)
   await page.getByRole('navigation', { name: 'メインナビゲーション', exact: true }).getByRole('button', { name: '複合動詞', exact: true }).click()
-  await page.locator('.compound-word-card .audio-play-button[data-audio-provider="supabase"]').first().click()
-  await playing(page)
-  await expect(player(page)).toHaveAttribute('src', /^https:\/\/flpmblfscgcbrprwwckz\.supabase\.co\/storage\/v1\/object\/public\/n1-audio\//)
+  const unique = await playRecording(page, page.locator('.compound-word-card .audio-play-button[data-audio-provider="supabase"]').first())
+  expect(unique.source).toMatch(/^https:\/\/flpmblfscgcbrprwwckz\.supabase\.co\/storage\/v1\/object\/public\/n1-audio\//)
+})
+
+test('short real playback remains provable after natural completion without reusing earlier clicks', async ({ page }) => {
+  await openRecordedLesson(page)
+  await vocabulary(page).click()
+  const button = firstWord(page), id = (await button.getAttribute('data-audio-id'))!
+  const after = await playbackMarker(page)
+  await button.click()
+  // Deliberately read the proof late: the real recording must end naturally.
+  await expect.poll(async () => (await playbackSamplesAfter(page, after)).some(sample => sample.event === 'ended')).toBe(true)
+  await expect(button).toHaveAttribute('aria-pressed', 'false')
+  const proof = await recordedPlayback(page, id, after)
+  expect(proof.time).toBeGreaterThan(proof.initialTime)
+  expect(proof.activeIds).toContain(id)
+  const nextClick = await playbackMarker(page)
+  await page.route(audioPlaybackUrl(id), route => route.fulfill({ status: 503, body: 'Unavailable' }))
+  // Disable the browser cache for this intentional failure through routing.
+  await button.click()
+  await expect(button).toHaveClass(/error/)
+  const samples = await playbackSamplesAfter(page, nextClick)
+  expect(samples.filter(sample => sample.time > .04 && !sample.paused && sample.error === null)).toEqual([])
+  expect(await playbackProof(page, id, nextClick)).toBeUndefined()
 })
 
 test('reading choices can be heard without selecting or submitting an answer', async ({ page }) => {
   await openRecordedLesson(page)
   await page.getByRole('navigation', { name: 'メインナビゲーション', exact: true }).getByRole('button', { name: '読解練習', exact: true }).click()
   await expect(page.locator('.quiz-paper .spoken-sentence.has-audio').first()).toBeVisible()
-  await page.locator('.answer-choice-audio .audio-play-button').first().click()
-  await playing(page)
+  await playRecording(page, page.locator('.answer-choice-audio .audio-play-button').first())
   await expect(page.locator('.answer-option[aria-pressed="true"]')).toHaveCount(0)
   await expect(page.getByRole('button', { name: '回答する', exact: true })).toBeDisabled()
   await expect(page.locator('.result-panel')).toHaveCount(0)
@@ -125,8 +138,7 @@ test('audio controls fit 390px and 320px dark vocabulary, compound and live card
 test('changing live note filters stops audio from the previous visible group', async ({ page }) => {
   // Pin a recorded archive; the newest study notes may legitimately await audio.
   await page.goto('/?live-unit=2026-09-30-okashi-bokuso#live-reactions')
-  await page.locator('.live-examples .audio-play-button').first().click()
-  await playing(page)
+  await playRecording(page, page.locator('.live-examples .audio-play-button').first())
   await page.getByRole('group', { name: '内容分类', exact: true }).getByRole('button', { name: /漫画双关/ }).click()
   await expect.poll(() => player(page).evaluate(element => (element as HTMLAudioElement).paused)).toBe(true)
   await expect(player(page)).not.toHaveAttribute('src')
@@ -145,9 +157,7 @@ for (const lesson of recentLessons) {
     await page.getByRole('navigation', { name: 'メインナビゲーション', exact: true }).getByRole('button', { name: '没入読解', exact: true }).click()
     const button = page.locator('#immersion-title .audio-play-button')
     await expect(button).toBeEnabled()
-    await button.click()
-    await playing(page)
-    await expect(button).toHaveAttribute('aria-pressed', 'true')
+    await playRecording(page, button)
     await expect.poll(() => player(page).evaluate(element => (element as HTMLAudioElement).error?.code ?? null)).toBe(null)
   })
 }
