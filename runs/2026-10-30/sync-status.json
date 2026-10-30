@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-10-30",
   "day": 62,
-  "status": "waiting_upstream",
-  "stage": "waiting_upstream",
+  "status": "waiting_request",
+  "stage": "request_ready",
   "requestSubmitted": false,
   "sourceSavedOnMain": true,
   "sourceCheckpointVerified": true,
@@ -14,6 +14,20 @@
   "expectedSourceBytes": 26323,
   "generatedAtJST": "2026-10-30T09:01:34+09:00",
   "lastError": null,
-  "nextStep": "Verified Day62 original was checkpointed and promoted to main byte-for-byte. Await the existing IT primary task's verified same-date upstream report, full history snapshot, and shared request/deployment gates; do not regenerate the original.",
-  "updatedAt": "2026-10-30T00:03:48.510Z"
+  "nextStep": "Submit complete source-bound request while shared slot is free",
+  "updatedAt": "2026-10-30T01:33:23.130Z",
+  "upstreamSourceCommit": "5748e8124c23bd85e52d8f2df3628739592955fa",
+  "sourcePagesRunId": 40985891415,
+  "snapshotSha256": "83c2e8695892e86e17b2699d0b9308b53bff9e9a0aabd5781bf57f9784ad33e4",
+  "issueNumber": 80,
+  "totalDays": 80,
+  "requestSha256": "004334950d5943836573b943d06afd111d945ed8622260c6f2fd355e3b474220",
+  "localValidation": {
+    "content": true,
+    "unit": 199,
+    "python": 28,
+    "build": true,
+    "browserTests": 64,
+    "allPassed": true
+  }
 }
