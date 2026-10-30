@@ -21,11 +21,11 @@
     "supabase": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/"
   },
   "summary": {
-    "total": 6460,
+    "total": 6798,
     "reused": 1496,
-    "uploads": 4964,
+    "uploads": 5302,
     "savedBytes": 39558648,
-    "uploadBytes": 173089428
+    "uploadBytes": 181672830
   },
   "clips": {
     "000508138c45e52f": {
@@ -167,6 +167,13 @@
       "sha256": "f81726f3d7bc3f2695e58dfa0079705bafd1267fae06f3f4d7394ba1c96a2ef9",
       "bytes": 11757,
       "duration": 1.384
+    },
+    "00e80f667756c262": {
+      "provider": "supabase",
+      "path": "morioki-normal/00e80f667756c262--9c3a46c65e0b0a332c8a058d0215f53f1b03cd88a885b08409dfedde31e2e970.mp3",
+      "sha256": "9c3a46c65e0b0a332c8a058d0215f53f1b03cd88a885b08409dfedde31e2e970",
+      "bytes": 12141,
+      "duration": 1.419
     },
     "00fb90959329c941": {
       "provider": "supabase",
@@ -441,6 +448,13 @@
       "bytes": 46701,
       "duration": 3.807
     },
+    "01f4096feb60427b": {
+      "provider": "supabase",
+      "path": "morioki-normal/01f4096feb60427b--b7e049c1fc77b7d1001bd6534e3d810c942525bcd43d666625be522e26363e3a.mp3",
+      "sha256": "b7e049c1fc77b7d1001bd6534e3d810c942525bcd43d666625be522e26363e3a",
+      "bytes": 14253,
+      "duration": 1.698
+    },
     "0202eca8ac506e94": {
       "provider": "supabase",
       "path": "morioki-normal/0202eca8ac506e94--401b195a24de9b169385d7c9091b2cdfc1afb798ab8729e8cea9fd6e62198784.mp3",
@@ -503,6 +517,27 @@
       "sha256": "1491aac67b608ffb75380a17110ed9d022f7978500528e8075a0785b31f84f6c",
       "bytes": 15309,
       "duration": 1.196
+    },
+    "028dc1ceaad9b962": {
+      "provider": "supabase",
+      "path": "morioki-normal/028dc1ceaad9b962--4334f539db35ae264fb1e3f6331da092db1e6212eb19fa5ca6c3b18806218e62.mp3",
+      "sha256": "4334f539db35ae264fb1e3f6331da092db1e6212eb19fa5ca6c3b18806218e62",
+      "bytes": 31341,
+      "duration": 3.822
+    },
+    "0290bc0d63ae8fd9": {
+      "provider": "supabase",
+      "path": "morioki-normal/0290bc0d63ae8fd9--a9a2de995eb9c158539de96b6e05f76ec3f18066716387b80f284a25aac90048.mp3",
+      "sha256": "a9a2de995eb9c158539de96b6e05f76ec3f18066716387b80f284a25aac90048",
+      "bytes": 8877,
+      "duration": 1.024
+    },
+    "02a1e546ed197fc2": {
+      "provider": "supabase",
+      "path": "morioki-normal/02a1e546ed197fc2--b950f5a736df493da799c1c7242f8115775b87bcca7e7a2cf5a7794448d48077.mp3",
+      "sha256": "b950f5a736df493da799c1c7242f8115775b87bcca7e7a2cf5a7794448d48077",
+      "bytes": 21549,
+      "duration": 2.603
     },
     "02a8675976341575": {
       "provider": "supabase",
@@ -671,6 +706,13 @@
       "sha256": "de9f7088112e8e484509dafef9d6422db35f0ad3f5055efe5bc1f9eae375a036",
       "bytes": 13677,
       "duration": 1.616
+    },
+    "036b038da6333279": {
+      "provider": "supabase",
+      "path": "morioki-normal/036b038da6333279--93ec4dffb129d6170de9152397c36a8ac253c7d8d1f505d45069c4a6b937e803.mp3",
+      "sha256": "93ec4dffb129d6170de9152397c36a8ac253c7d8d1f505d45069c4a6b937e803",
+      "bytes": 29805,
+      "duration": 3.626
     },
     "036f3a41c24f90e5": {
       "provider": "supabase",
@@ -1036,6 +1078,13 @@
       "bytes": 58221,
       "duration": 4.759
     },
+    "051271b304d00b5f": {
+      "provider": "supabase",
+      "path": "morioki-normal/051271b304d00b5f--2bbab1165c6c97b852194d137a387214be23239f2d27a4ed30b6682ef8b0c6f0.mp3",
+      "sha256": "2bbab1165c6c97b852194d137a387214be23239f2d27a4ed30b6682ef8b0c6f0",
+      "bytes": 32109,
+      "duration": 3.924
+    },
     "0514b4e78cfb820b": {
       "provider": "daily",
       "path": "japanese/2026-09-29/example-07--4ead7e17df707964cee0a1fd0be08b0183e7f210a5bd9d76a36d0a5ef12d0480.mp3",
@@ -1162,6 +1211,13 @@
       "bytes": 15885,
       "duration": 1.242
     },
+    "05b522d9847ddc0d": {
+      "provider": "supabase",
+      "path": "morioki-normal/05b522d9847ddc0d--8378b401be95f73419f8afc681d2de51e1fbe31c44858bbd41b1dc8c4feabc97.mp3",
+      "sha256": "8378b401be95f73419f8afc681d2de51e1fbe31c44858bbd41b1dc8c4feabc97",
+      "bytes": 13485,
+      "duration": 1.605
+    },
     "05b6932e5f351692": {
       "provider": "supabase",
       "path": "morioki-normal/05b6932e5f351692--5571c9245311391d174a6ea9863475c9fbb5383ddfdf618afca2dfec8b96b29b.mp3",
@@ -1266,6 +1322,20 @@
       "sha256": "9c377ecd77387d78cd6e0e6fcebdeda2ca2ca1c8ca060aa9b71823267a8b2a88",
       "bytes": 14637,
       "duration": 1.744
+    },
+    "06431d849a2963a8": {
+      "provider": "supabase",
+      "path": "morioki-normal/06431d849a2963a8--b9bcc426253c8f0f12bd52a00eb5462d56823abe9353e87c4c84086e8ffd9c64.mp3",
+      "sha256": "b9bcc426253c8f0f12bd52a00eb5462d56823abe9353e87c4c84086e8ffd9c64",
+      "bytes": 27117,
+      "duration": 3.311
+    },
+    "0643900023bc5164": {
+      "provider": "supabase",
+      "path": "morioki-normal/0643900023bc5164--22baaf9b10ad4f9272acc859967ac1225434a30655ecd842b8506fe02f9f4be3.mp3",
+      "sha256": "22baaf9b10ad4f9272acc859967ac1225434a30655ecd842b8506fe02f9f4be3",
+      "bytes": 14829,
+      "duration": 1.767
     },
     "06486e132b7a12af": {
       "provider": "daily",
@@ -1372,6 +1442,13 @@
       "bytes": 35757,
       "duration": 4.391
     },
+    "06b8d6cc17eb5cc0": {
+      "provider": "supabase",
+      "path": "morioki-normal/06b8d6cc17eb5cc0--560a51a4b06c78360a4141c069c47d4b945b6674863e1f3715526e7eb983b5ca.mp3",
+      "sha256": "560a51a4b06c78360a4141c069c47d4b945b6674863e1f3715526e7eb983b5ca",
+      "bytes": 14637,
+      "duration": 1.744
+    },
     "06c49a3cba2c37b0": {
       "provider": "supabase",
       "path": "morioki-normal/06c49a3cba2c37b0--dff65e69817c72ba38d7952c0c0eb83bf4848c0bc10c3edf60ed95bedb86b9a4.mp3",
@@ -1385,6 +1462,13 @@
       "sha256": "c96be8025ba78fac963b13e4f87ed6c8a5b3bb796006b77f1024f8f2b54501ed",
       "bytes": 14061,
       "duration": 1.663
+    },
+    "06d642db6145746f": {
+      "provider": "supabase",
+      "path": "morioki-normal/06d642db6145746f--1fe500972e3941cf8a07ef778e873d17446f2409e2433de4dcd29c4ff2fa510c.mp3",
+      "sha256": "1fe500972e3941cf8a07ef778e873d17446f2409e2433de4dcd29c4ff2fa510c",
+      "bytes": 68205,
+      "duration": 8.442
     },
     "06e2638b38865047": {
       "provider": "daily",
@@ -1455,6 +1539,13 @@
       "sha256": "d8e827f425f040306d7536210954ae53092308c4fa562fb47442e55f4991a24f",
       "bytes": 70509,
       "duration": 8.733
+    },
+    "070c3be24f1d1c6e": {
+      "provider": "supabase",
+      "path": "morioki-normal/070c3be24f1d1c6e--19c8d9b9127310155c930144800e59d5b3fc7a7721d715a6636658684a759a05.mp3",
+      "sha256": "19c8d9b9127310155c930144800e59d5b3fc7a7721d715a6636658684a759a05",
+      "bytes": 16173,
+      "duration": 1.941
     },
     "0714f15fa5231f6b": {
       "provider": "supabase",
@@ -1540,6 +1631,13 @@
       "bytes": 61101,
       "duration": 5.012
     },
+    "077e53c9f194e715": {
+      "provider": "supabase",
+      "path": "morioki-normal/077e53c9f194e715--8befb25c7dfbd73514809152ca28d7b6d6ee6ef30af573be701a5a25b0b34704.mp3",
+      "sha256": "8befb25c7dfbd73514809152ca28d7b6d6ee6ef30af573be701a5a25b0b34704",
+      "bytes": 16365,
+      "duration": 1.964
+    },
     "0783b40488315b60": {
       "provider": "supabase",
       "path": "morioki-normal/0783b40488315b60--8a3cd1f36961a06ecf01e8541fda4d714db83e54ab31478183e853987cb951cf.mp3",
@@ -1574,6 +1672,13 @@
       "sha256": "a25fbd21ba1eab8d2567202f3c704b4d40f10b79c0c56810b86283400a98edf9",
       "bytes": 12909,
       "duration": 1.523
+    },
+    "07be4c5f117dcceb": {
+      "provider": "supabase",
+      "path": "morioki-normal/07be4c5f117dcceb--6641987b4938fd0593bff47bf41312146968326dc315f854b6556accab0eb694.mp3",
+      "sha256": "6641987b4938fd0593bff47bf41312146968326dc315f854b6556accab0eb694",
+      "bytes": 33261,
+      "duration": 4.077
     },
     "07c9aad368b851d7": {
       "provider": "supabase",
@@ -1883,6 +1988,13 @@
       "bytes": 13869,
       "duration": 1.64
     },
+    "08d8239a56613216": {
+      "provider": "supabase",
+      "path": "morioki-normal/08d8239a56613216--fb8a71047f050c9acd564d9bdc1b2290234a6bce0fbe082d84096eba531baf4d.mp3",
+      "sha256": "fb8a71047f050c9acd564d9bdc1b2290234a6bce0fbe082d84096eba531baf4d",
+      "bytes": 21741,
+      "duration": 2.638
+    },
     "08dd1451674687e5": {
       "provider": "daily",
       "path": "japanese/2026-10-29/example-04--3c0da34e0bb23f3b94c94f12e53d4023e3388cff6d5335681010f8ee74184a86.mp3",
@@ -1967,6 +2079,13 @@
       "bytes": 12909,
       "duration": 1.523
     },
+    "0932d51529c005a1": {
+      "provider": "supabase",
+      "path": "morioki-normal/0932d51529c005a1--714718276de0f65cfbd641aa9557ed03d024e2403dd21169882367174e0111b5.mp3",
+      "sha256": "714718276de0f65cfbd641aa9557ed03d024e2403dd21169882367174e0111b5",
+      "bytes": 13485,
+      "duration": 1.605
+    },
     "09361da381c0db97": {
       "provider": "supabase",
       "path": "morioki-normal/09361da381c0db97--7022898d5947bc4fe26fcc2e3cc99fa71c0645e2a02ffa0032f33042c6dd9a18.mp3",
@@ -2015,6 +2134,13 @@
       "sha256": "76cab84a51bb25c499c952937e9d3c1540e1dca0e6529319cc3a403e130e529e",
       "bytes": 31341,
       "duration": 3.822
+    },
+    "099e0480dad9bb04": {
+      "provider": "supabase",
+      "path": "morioki-normal/099e0480dad9bb04--aff4b4d69979a8ca6760edc225a53a58d2191b93901f54d51d85ccd3a07f0e85.mp3",
+      "sha256": "aff4b4d69979a8ca6760edc225a53a58d2191b93901f54d51d85ccd3a07f0e85",
+      "bytes": 18861,
+      "duration": 2.278
     },
     "09a1160bbd85265f": {
       "provider": "daily",
@@ -2205,6 +2331,13 @@
       "bytes": 15981,
       "duration": 1.907
     },
+    "0a8db83c4e87ca48": {
+      "provider": "supabase",
+      "path": "morioki-normal/0a8db83c4e87ca48--a9e72ee1b0dde2b3f52551c94631346b965f4c67d3fad944a9472b51fdcacaa1.mp3",
+      "sha256": "a9e72ee1b0dde2b3f52551c94631346b965f4c67d3fad944a9472b51fdcacaa1",
+      "bytes": 19821,
+      "duration": 2.383
+    },
     "0a918d3bd64eccd7": {
       "provider": "daily",
       "path": "japanese/2026-09-11/vocab-03--dece33d9486075536b95ad8a306951fd81abf1c0823294ffee7cb253bbf54682.mp3",
@@ -2296,6 +2429,13 @@
       "bytes": 37677,
       "duration": 4.623
     },
+    "0b1551f462a81050": {
+      "provider": "supabase",
+      "path": "morioki-normal/0b1551f462a81050--b5ee9dc4f174ba7a8395300effcf6b5aedbe2ecd27152759de0947c0c1859954.mp3",
+      "sha256": "b5ee9dc4f174ba7a8395300effcf6b5aedbe2ecd27152759de0947c0c1859954",
+      "bytes": 87981,
+      "duration": 10.904
+    },
     "0b1c8261287ad1dd": {
       "provider": "supabase",
       "path": "morioki-normal/0b1c8261287ad1dd--128616b20497aa066c2d599893133601dd894e175af81eeef01e064756c5a393.mp3",
@@ -2352,6 +2492,13 @@
       "bytes": 14637,
       "duration": 1.744
     },
+    "0b6324eb1d822637": {
+      "provider": "supabase",
+      "path": "morioki-normal/0b6324eb1d822637--7cd1d301ae36a223d9e408b7b0965526212db5968bcec55afdc00408104e4a10.mp3",
+      "sha256": "7cd1d301ae36a223d9e408b7b0965526212db5968bcec55afdc00408104e4a10",
+      "bytes": 11373,
+      "duration": 1.338
+    },
     "0b71546fa81b4023": {
       "provider": "daily",
       "path": "japanese/2026-08-12/vocab-13--f5f34c3f7f1067f225bc389afa8dabbc2271014981642d16c6a443189a1fac3d.mp3",
@@ -2372,6 +2519,13 @@
       "sha256": "2b170fbde4bb18cf6170ec930e5cef238d32bd38473d5e1dcaff4e1dacfacd4d",
       "bytes": 11373,
       "duration": 1.326
+    },
+    "0b8c4714b6134300": {
+      "provider": "supabase",
+      "path": "morioki-normal/0b8c4714b6134300--6234eca80f488a0d40c385be39be21ccc43c8b8b8c5d19975b3ca37f35444276.mp3",
+      "sha256": "6234eca80f488a0d40c385be39be21ccc43c8b8b8c5d19975b3ca37f35444276",
+      "bytes": 13293,
+      "duration": 1.57
     },
     "0b9afb5bd12976df": {
       "provider": "supabase",
@@ -2527,6 +2681,13 @@
       "bytes": 64173,
       "duration": 7.932
     },
+    "0c93afda9dac2476": {
+      "provider": "supabase",
+      "path": "morioki-normal/0c93afda9dac2476--ec6d62b4daa0067742e1bc2dc4e919f47d6970a51182c53bcf805e73a93597e8.mp3",
+      "sha256": "ec6d62b4daa0067742e1bc2dc4e919f47d6970a51182c53bcf805e73a93597e8",
+      "bytes": 27309,
+      "duration": 3.323
+    },
     "0c940347f30e0dd3": {
       "provider": "supabase",
       "path": "morioki-normal/0c940347f30e0dd3--6dda70824412736bd38609cadb96bdde0fbfb72fc23d59ae9aa1e466a6d8e5df.mp3",
@@ -2618,6 +2779,13 @@
       "bytes": 33837,
       "duration": 4.135
     },
+    "0d25a4b77ce0e7b3": {
+      "provider": "supabase",
+      "path": "morioki-normal/0d25a4b77ce0e7b3--3d6ef940842f61afef8dc3a771b6f56b1bacc40effa79b43c539facbd784a806.mp3",
+      "sha256": "3d6ef940842f61afef8dc3a771b6f56b1bacc40effa79b43c539facbd784a806",
+      "bytes": 25773,
+      "duration": 3.137
+    },
     "0d2d42b6962f393a": {
       "provider": "daily",
       "path": "japanese/2026-09-26/vocab-09--17b9d57bd0d6cce5a9fe8d3c6344a3b02add48c188fe28c096934b5725c377ba.mp3",
@@ -2631,6 +2799,13 @@
       "sha256": "4421a30ba8af15d70aa75e6e785bf56f8062e85c2c549c5b438ca7a59d1906ff",
       "bytes": 15021,
       "duration": 1.779
+    },
+    "0d3c636909cfe69d": {
+      "provider": "supabase",
+      "path": "morioki-normal/0d3c636909cfe69d--abcd0a06a5cb7e6fd72138a60350373292496716685a285bac886f33d52be0e9.mp3",
+      "sha256": "abcd0a06a5cb7e6fd72138a60350373292496716685a285bac886f33d52be0e9",
+      "bytes": 32685,
+      "duration": 3.986
     },
     "0d47663da25c46f9": {
       "provider": "supabase",
@@ -2779,6 +2954,13 @@
       "bytes": 47853,
       "duration": 3.9
     },
+    "0e1f5938fe4c4cec": {
+      "provider": "supabase",
+      "path": "morioki-normal/0e1f5938fe4c4cec--7cd8f2fa80c3b83b398d0fe5deba3027c2d054e02717053e8c108afc784cf330.mp3",
+      "sha256": "7cd8f2fa80c3b83b398d0fe5deba3027c2d054e02717053e8c108afc784cf330",
+      "bytes": 11757,
+      "duration": 1.372
+    },
     "0e25844197977235": {
       "provider": "supabase",
       "path": "morioki-normal/0e25844197977235--9732105596f53d8b5cbd53fa25f183dc326c3176bb3a43dc324b361effac461d.mp3",
@@ -2848,6 +3030,13 @@
       "sha256": "2d573620bf135a689189535165d2c855250611c1f2dad24d53520029b27a140b",
       "bytes": 14253,
       "duration": 1.686
+    },
+    "0e878edf30ed60c3": {
+      "provider": "supabase",
+      "path": "morioki-normal/0e878edf30ed60c3--b3fe546109b3cad6d7ff6029d68748d3624d5ce5a25b479d0fe6a2f0d8f19c32.mp3",
+      "sha256": "b3fe546109b3cad6d7ff6029d68748d3624d5ce5a25b479d0fe6a2f0d8f19c32",
+      "bytes": 21741,
+      "duration": 2.626
     },
     "0e8edb5ede696c0a": {
       "provider": "supabase",
@@ -3002,6 +3191,13 @@
       "sha256": "d66816e436024abc9aa30848ccbee52ff6c0e351302a742477ce756a043fc342",
       "bytes": 41325,
       "duration": 5.088
+    },
+    "0f44d0e269a28436": {
+      "provider": "supabase",
+      "path": "morioki-normal/0f44d0e269a28436--6dc771b122dabea8b4f804d2427971f500bc1d3e67ee341a49d24745c02d6e72.mp3",
+      "sha256": "6dc771b122dabea8b4f804d2427971f500bc1d3e67ee341a49d24745c02d6e72",
+      "bytes": 102573,
+      "duration": 12.74
     },
     "0f4acccfa4e0fac3": {
       "provider": "supabase",
@@ -3185,6 +3381,13 @@
       "bytes": 14061,
       "duration": 1.674
     },
+    "0ffe5d500e4e1ed4": {
+      "provider": "supabase",
+      "path": "morioki-normal/0ffe5d500e4e1ed4--d5722ded9e5f55cdb317c77fe0eb11513d32f738fe3161d15d47c0e168bd6dec.mp3",
+      "sha256": "d5722ded9e5f55cdb317c77fe0eb11513d32f738fe3161d15d47c0e168bd6dec",
+      "bytes": 10605,
+      "duration": 1.245
+    },
     "10063b3c59c892b0": {
       "provider": "supabase",
       "path": "morioki-normal/10063b3c59c892b0--9047d4fd5ab4acab4e6c45a45c67e2aaa059f1c20d903ffd8e8cf3cb87564d15.mp3",
@@ -3219,6 +3422,13 @@
       "sha256": "e20d1fd291714c70f6a3df9ba1daa70b08045a145fbe5a94033ff37438853a9c",
       "bytes": 13293,
       "duration": 1.581
+    },
+    "102f26e9be89f8a5": {
+      "provider": "supabase",
+      "path": "morioki-normal/102f26e9be89f8a5--465f7da119d965ff932e297eb09182dce88696674a2df2dcc4395a8d3fc398a4.mp3",
+      "sha256": "465f7da119d965ff932e297eb09182dce88696674a2df2dcc4395a8d3fc398a4",
+      "bytes": 32301,
+      "duration": 3.938
     },
     "1032fd606a86b50c": {
       "provider": "supabase",
@@ -3310,6 +3520,13 @@
       "sha256": "d780243d529b93f7c2246d406cc2818784bf2e55455434d9803d36aaf68c8423",
       "bytes": 15885,
       "duration": 1.231
+    },
+    "10b1f7ddfbc22c99": {
+      "provider": "supabase",
+      "path": "morioki-normal/10b1f7ddfbc22c99--09ef88e6fd41bdf86748d95732e3035e70ed5bdd64fb39d23c3207a0f2cff300.mp3",
+      "sha256": "09ef88e6fd41bdf86748d95732e3035e70ed5bdd64fb39d23c3207a0f2cff300",
+      "bytes": 15597,
+      "duration": 1.86
     },
     "10b47fc330621137": {
       "provider": "daily",
@@ -3443,6 +3660,20 @@
       "sha256": "81c58a0ea1cf8a2f41cc36b0c25fdca5c7e807023ee3743d9d102cd929b75518",
       "bytes": 49965,
       "duration": 6.167
+    },
+    "119862671026c6a3": {
+      "provider": "supabase",
+      "path": "morioki-normal/119862671026c6a3--baa46712f9d45f0d85c30c1e5591dcf263c5be82f4ff2111bb18e2303bf3be9c.mp3",
+      "sha256": "baa46712f9d45f0d85c30c1e5591dcf263c5be82f4ff2111bb18e2303bf3be9c",
+      "bytes": 73773,
+      "duration": 9.14
+    },
+    "119dc20abffc0ad6": {
+      "provider": "supabase",
+      "path": "morioki-normal/119dc20abffc0ad6--be55d6ed4ace87a35775a8a1677e85c1db01e7c5fc031bef9c05990d44d80b8f.mp3",
+      "sha256": "be55d6ed4ace87a35775a8a1677e85c1db01e7c5fc031bef9c05990d44d80b8f",
+      "bytes": 17901,
+      "duration": 2.15
     },
     "11b7daddabb503f1": {
       "provider": "supabase",
@@ -3612,6 +3843,13 @@
       "bytes": 58797,
       "duration": 7.258
     },
+    "128bdc368eb1159a": {
+      "provider": "supabase",
+      "path": "morioki-normal/128bdc368eb1159a--0ea0d8669af46076af3f941b9e2fd6892ca2d0b9f6687bb3ebb7803c10106c64.mp3",
+      "sha256": "0ea0d8669af46076af3f941b9e2fd6892ca2d0b9f6687bb3ebb7803c10106c64",
+      "bytes": 30573,
+      "duration": 3.729
+    },
     "129332e17576e8a5": {
       "provider": "daily",
       "path": "japanese/2026-09-25/example-09--ed06ddf4a57975f5f9c8a3d1b255e61f3362ec0cd1b14915f5ac632af364bf9c.mp3",
@@ -3710,6 +3948,13 @@
       "bytes": 50541,
       "duration": 6.237
     },
+    "1345f67ccb0a67f0": {
+      "provider": "supabase",
+      "path": "morioki-normal/1345f67ccb0a67f0--bf6d58b40e11d7e465c8343447378d081494d1ffc417263fa254acd064011fbd.mp3",
+      "sha256": "bf6d58b40e11d7e465c8343447378d081494d1ffc417263fa254acd064011fbd",
+      "bytes": 11757,
+      "duration": 1.384
+    },
     "136050678134f6ab": {
       "provider": "supabase",
       "path": "morioki-normal/136050678134f6ab--62a0ae9abd1347a28c97ff8709f32ab8ebf6b5a265fecd847b75ce55b5d88af8.mp3",
@@ -3744,6 +3989,13 @@
       "sha256": "c19cdd5b7ce3c576c96ac428ffb076814b6b4a6d69e966d0f65fd1898cf55867",
       "bytes": 69933,
       "duration": 8.652
+    },
+    "13bba0f4c6c67498": {
+      "provider": "supabase",
+      "path": "morioki-normal/13bba0f4c6c67498--1aec91b45b71e401a5ca6a7c6f4d13ee404538f270d76df62024c0f52eba4d4e.mp3",
+      "sha256": "1aec91b45b71e401a5ca6a7c6f4d13ee404538f270d76df62024c0f52eba4d4e",
+      "bytes": 11757,
+      "duration": 1.384
     },
     "13becd6345909a77": {
       "provider": "daily",
@@ -3850,6 +4102,13 @@
       "bytes": 12525,
       "duration": 1.477
     },
+    "1475b1999a877e65": {
+      "provider": "supabase",
+      "path": "morioki-normal/1475b1999a877e65--16c54da819e939ca284889231915d7d590eb3d12523379213ab741e5b848147a.mp3",
+      "sha256": "16c54da819e939ca284889231915d7d590eb3d12523379213ab741e5b848147a",
+      "bytes": 45357,
+      "duration": 5.587
+    },
     "14769ffc5a15bf20": {
       "provider": "daily",
       "path": "japanese/2026-09-23/example-07--56f7b62c069e25edaa708f4b6a2c3ac9b47c7e122cddaf32dd64b886aa859646.mp3",
@@ -3919,6 +4178,13 @@
       "sha256": "73dc39d989860e74d3879261c4fcffbeb8a22b1afe5e60da56b9c5e6e790938b",
       "bytes": 11949,
       "duration": 1.396
+    },
+    "14c8424357617387": {
+      "provider": "supabase",
+      "path": "morioki-normal/14c8424357617387--d0978a6675d5d116cb7d87a8e31548bd4b167b434e5d0b4cf219a9e226e3551e.mp3",
+      "sha256": "d0978a6675d5d116cb7d87a8e31548bd4b167b434e5d0b4cf219a9e226e3551e",
+      "bytes": 12141,
+      "duration": 1.431
     },
     "14c8c25f995e35cb": {
       "provider": "supabase",
@@ -4396,6 +4662,13 @@
       "bytes": 13581,
       "duration": 1.045
     },
+    "17a044a8eec9ff24": {
+      "provider": "supabase",
+      "path": "morioki-normal/17a044a8eec9ff24--73fdfc2c7679ffea6b87851744eb3dcb98fbcda4f9df3b488fee62795e4f6a83.mp3",
+      "sha256": "73fdfc2c7679ffea6b87851744eb3dcb98fbcda4f9df3b488fee62795e4f6a83",
+      "bytes": 28269,
+      "duration": 3.439
+    },
     "17ae16f94acc722d": {
       "provider": "supabase",
       "path": "morioki-normal/17ae16f94acc722d--cfc44184ebbd57fd6e438947d1b233a3b8bce675445af83dcc187100b18aa465.mp3",
@@ -4557,6 +4830,13 @@
       "bytes": 25773,
       "duration": 3.137
     },
+    "1867e7a7e8b36323": {
+      "provider": "supabase",
+      "path": "morioki-normal/1867e7a7e8b36323--8266c1677f867877d9811f9a699e58ce407487b4d86a661d4c9261e29d408887.mp3",
+      "sha256": "8266c1677f867877d9811f9a699e58ce407487b4d86a661d4c9261e29d408887",
+      "bytes": 27117,
+      "duration": 3.311
+    },
     "186ce7aa94fae3b6": {
       "provider": "supabase",
       "path": "morioki-normal/186ce7aa94fae3b6--7dad4d49f9f8bd3f92c4af3a055f80d892880a51f63da797b8fe73b1efdeedea.mp3",
@@ -4647,6 +4927,13 @@
       "sha256": "9edd1f53460da0b3c5527f6f23c041e800b3ed31423d8c61729fd99e75a9fa93",
       "bytes": 68877,
       "duration": 5.642
+    },
+    "18ba2ad4905626e8": {
+      "provider": "supabase",
+      "path": "morioki-normal/18ba2ad4905626e8--859f074b5633fbe3c71f4f5c721fa44efdca648b780f340175c727f2518bac8f.mp3",
+      "sha256": "859f074b5633fbe3c71f4f5c721fa44efdca648b780f340175c727f2518bac8f",
+      "bytes": 12141,
+      "duration": 1.431
     },
     "18bd44148ec3a3d8": {
       "provider": "daily",
@@ -5089,6 +5376,13 @@
       "bytes": 15405,
       "duration": 1.837
     },
+    "1b637f5a765d9086": {
+      "provider": "supabase",
+      "path": "morioki-normal/1b637f5a765d9086--d904495fc534d10048e6cc888892cac9a60c9c1c28d7d42065b30de38df15868.mp3",
+      "sha256": "d904495fc534d10048e6cc888892cac9a60c9c1c28d7d42065b30de38df15868",
+      "bytes": 13293,
+      "duration": 1.57
+    },
     "1b6b0be110e9364d": {
       "provider": "supabase",
       "path": "morioki-normal/1b6b0be110e9364d--0391f032d3da8a753ba39c3688ce4260ae292f724903e4ae7560f32b803a21d2.mp3",
@@ -5123,6 +5417,20 @@
       "sha256": "06bdd29eb0405bd0c22570af1fa7c565b8ac33cc4c897632fd3097d6314a771d",
       "bytes": 62253,
       "duration": 5.096
+    },
+    "1b90d1682a90e414": {
+      "provider": "supabase",
+      "path": "morioki-normal/1b90d1682a90e414--c44e5dd1a6e5b3de126a0dc3e8dcafd8d40ddd47bcbcf872c1ae067ccc4a9935.mp3",
+      "sha256": "c44e5dd1a6e5b3de126a0dc3e8dcafd8d40ddd47bcbcf872c1ae067ccc4a9935",
+      "bytes": 14061,
+      "duration": 1.674
+    },
+    "1b95dddd5bcadaf9": {
+      "provider": "supabase",
+      "path": "morioki-normal/1b95dddd5bcadaf9--0971416ddcc4c622d6765307299855bbe61da88c28085f3e33d1db222fc8d043.mp3",
+      "sha256": "0971416ddcc4c622d6765307299855bbe61da88c28085f3e33d1db222fc8d043",
+      "bytes": 10605,
+      "duration": 1.245
     },
     "1b9801813f4bb95d": {
       "provider": "supabase",
@@ -5299,6 +5607,13 @@
       "bytes": 15021,
       "duration": 1.162
     },
+    "1cd7ffc7b153d6b3": {
+      "provider": "supabase",
+      "path": "morioki-normal/1cd7ffc7b153d6b3--6aaa66cecf0d0b59629766383862f941ba9cc19664c19289be8eb0d0a995ff4f.mp3",
+      "sha256": "6aaa66cecf0d0b59629766383862f941ba9cc19664c19289be8eb0d0a995ff4f",
+      "bytes": 34989,
+      "duration": 4.274
+    },
     "1cee1f1586fa4459": {
       "provider": "supabase",
       "path": "morioki-normal/1cee1f1586fa4459--31f161134b31e8a50ef61ba410e36e087280425fe89ec5d764fc8463f2312d4c.mp3",
@@ -5312,6 +5627,13 @@
       "sha256": "d733b679f768bc313d38c102695a3a199f0d16d4fe0cc255da98feaef70d4fc7",
       "bytes": 76077,
       "duration": 9.418
+    },
+    "1d0bef9739afd573": {
+      "provider": "supabase",
+      "path": "morioki-normal/1d0bef9739afd573--c18b3d85a34f72be9cf68ce7dac4813954275ff306c87006d63807dba439ec2d.mp3",
+      "sha256": "c18b3d85a34f72be9cf68ce7dac4813954275ff306c87006d63807dba439ec2d",
+      "bytes": 9261,
+      "duration": 1.059
     },
     "1d0bf24ec054f2b2": {
       "provider": "supabase",
@@ -5831,6 +6153,13 @@
       "bytes": 49581,
       "duration": 6.098
     },
+    "1f9fe85029d5574c": {
+      "provider": "supabase",
+      "path": "morioki-normal/1f9fe85029d5574c--2881a5c5d42437f58072a033c60058aa027f683ea2d51fef7b31493973415707.mp3",
+      "sha256": "2881a5c5d42437f58072a033c60058aa027f683ea2d51fef7b31493973415707",
+      "bytes": 11565,
+      "duration": 1.361
+    },
     "1fa3f1a4f414b7b8": {
       "provider": "daily",
       "path": "japanese/2026-09-26/vocab-12--7b49c7ee8e2cc3cd193d82ac9af0a747ee26af35a8df57340f32f2e13122c00f.mp3",
@@ -5852,6 +6181,13 @@
       "bytes": 13293,
       "duration": 1.57
     },
+    "1fb5f1d89a095474": {
+      "provider": "supabase",
+      "path": "morioki-normal/1fb5f1d89a095474--82c9d9a1d04099b79fc89840521af6354c76f4bf4ead29352194c049a6560631.mp3",
+      "sha256": "82c9d9a1d04099b79fc89840521af6354c76f4bf4ead29352194c049a6560631",
+      "bytes": 12717,
+      "duration": 1.512
+    },
     "1fbe651d74a902b9": {
       "provider": "supabase",
       "path": "morioki-normal/1fbe651d74a902b9--5e1a09a7358a6fc5c310f1c96a9872623e83c6fdfe79acb2bb646a67d86981e0.mp3",
@@ -5865,6 +6201,13 @@
       "sha256": "26790503eeaf0acacae36177176faa6ebc2d4e276157e89a2c20d8a01b79da74",
       "bytes": 15213,
       "duration": 1.814
+    },
+    "1fc6e975f8e88ae1": {
+      "provider": "supabase",
+      "path": "morioki-normal/1fc6e975f8e88ae1--7be4f64a1d9c13e1ab3effe2d9b7d0b02f617bbc099dbb229dde1d56f00f7852.mp3",
+      "sha256": "7be4f64a1d9c13e1ab3effe2d9b7d0b02f617bbc099dbb229dde1d56f00f7852",
+      "bytes": 11181,
+      "duration": 1.303
     },
     "1fca1e11b9e509f5": {
       "provider": "daily",
@@ -6048,6 +6391,13 @@
       "bytes": 43053,
       "duration": 5.284
     },
+    "20c035be72a561d2": {
+      "provider": "supabase",
+      "path": "morioki-normal/20c035be72a561d2--5098f57c2563b44affc5d316615aa28e6827163f2e28cee886dc2e5635c56721.mp3",
+      "sha256": "5098f57c2563b44affc5d316615aa28e6827163f2e28cee886dc2e5635c56721",
+      "bytes": 72813,
+      "duration": 9.011
+    },
     "20c15178f0fc92ec": {
       "provider": "supabase",
       "path": "morioki-normal/20c15178f0fc92ec--421c99e7c7e5943375bc66b42d40dc08bc9cf469f0b44fd1367341076031b96e.mp3",
@@ -6061,6 +6411,13 @@
       "sha256": "4206f6d3d7e9a153f9a4cfe4c94e81c4ba358865683f4cea7cef68fbae71e925",
       "bytes": 13869,
       "duration": 1.651
+    },
+    "20e1e07796e572fb": {
+      "provider": "supabase",
+      "path": "morioki-normal/20e1e07796e572fb--d3699f157be43f60eabf76fea9ec21bad7254cd90dd92fb392be689b3baf537d.mp3",
+      "sha256": "d3699f157be43f60eabf76fea9ec21bad7254cd90dd92fb392be689b3baf537d",
+      "bytes": 12909,
+      "duration": 1.535
     },
     "20f368fa443a3506": {
       "provider": "supabase",
@@ -6243,6 +6600,13 @@
       "sha256": "f8a0924cc2571f5d0d3c4fbd24bea40a807c0135c8c656c2dbfa8de563ffb241",
       "bytes": 10413,
       "duration": 1.222
+    },
+    "21e0ccaf4cb6fc8b": {
+      "provider": "supabase",
+      "path": "morioki-normal/21e0ccaf4cb6fc8b--ea25477283b78ddf4023fef9f0a5f1f40a4314f26bfb8468dd7bb7b190889c8f.mp3",
+      "sha256": "ea25477283b78ddf4023fef9f0a5f1f40a4314f26bfb8468dd7bb7b190889c8f",
+      "bytes": 14061,
+      "duration": 1.674
     },
     "21e8c8d961de917d": {
       "provider": "supabase",
@@ -6587,6 +6951,13 @@
       "bytes": 61389,
       "duration": 5.026
     },
+    "23fcf9c690ce8802": {
+      "provider": "supabase",
+      "path": "morioki-normal/23fcf9c690ce8802--b2e16b030821f97725185b3fa342e24fd8099bf6eaacf50fdc9a44170a71304f.mp3",
+      "sha256": "b2e16b030821f97725185b3fa342e24fd8099bf6eaacf50fdc9a44170a71304f",
+      "bytes": 17901,
+      "duration": 2.138
+    },
     "240821ad831841e9": {
       "provider": "supabase",
       "path": "morioki-normal/240821ad831841e9--54ece99620574946963a5d27f76d5f8df35ef9ee009ec8639730329c17123154.mp3",
@@ -6684,6 +7055,13 @@
       "sha256": "7b64511de3733ee6c903783b3c4c9d535fb7284af9321ccd85ce1295fdaec1c5",
       "bytes": 77805,
       "duration": 9.636
+    },
+    "24a3b416bccb9b12": {
+      "provider": "supabase",
+      "path": "morioki-normal/24a3b416bccb9b12--5a26879699c69e1a649bd9592bb14cda61cc5546d5ec7f1d1c08b30ec273a4af.mp3",
+      "sha256": "5a26879699c69e1a649bd9592bb14cda61cc5546d5ec7f1d1c08b30ec273a4af",
+      "bytes": 14445,
+      "duration": 1.709
     },
     "24b46f5ee4278b42": {
       "provider": "supabase",
@@ -6810,6 +7188,13 @@
       "sha256": "c3deb40b6c08bd9d04ffd8969447643f00cd6657ad2b9c7f005b25796d4676f5",
       "bytes": 42861,
       "duration": 5.273
+    },
+    "2579fa788b4e23cc": {
+      "provider": "supabase",
+      "path": "morioki-normal/2579fa788b4e23cc--3fd1716a52a1e9aacaa3df43f900f76afe1406955b4037c9d9c6f687955482c3.mp3",
+      "sha256": "3fd1716a52a1e9aacaa3df43f900f76afe1406955b4037c9d9c6f687955482c3",
+      "bytes": 25773,
+      "duration": 3.125
     },
     "25840647d68df653": {
       "provider": "supabase",
@@ -7329,6 +7714,13 @@
       "bytes": 15213,
       "duration": 1.802
     },
+    "28ac246fa92647c3": {
+      "provider": "supabase",
+      "path": "morioki-normal/28ac246fa92647c3--aa4d90c47db77a99e3107b10fbebd81d58dda54efeffb094e413d9f71ca3ed11.mp3",
+      "sha256": "aa4d90c47db77a99e3107b10fbebd81d58dda54efeffb094e413d9f71ca3ed11",
+      "bytes": 24237,
+      "duration": 2.939
+    },
     "28b08d18c87d606c": {
       "provider": "daily",
       "path": "japanese/2026-09-20/example-01--8990fed3fb350dc0bd1c81e65629b520432d0288d44354bb6fa859a366b0d133.mp3",
@@ -7574,6 +7966,13 @@
       "bytes": 50733,
       "duration": 4.144
     },
+    "2a33f881f0392795": {
+      "provider": "supabase",
+      "path": "morioki-normal/2a33f881f0392795--105c00ae0f3bd81e5d2290429b942bb18017ec983b29ac292781771b2c6409ad.mp3",
+      "sha256": "105c00ae0f3bd81e5d2290429b942bb18017ec983b29ac292781771b2c6409ad",
+      "bytes": 9453,
+      "duration": 1.094
+    },
     "2a380d90e949f004": {
       "provider": "supabase",
       "path": "morioki-normal/2a380d90e949f004--9d536dfdb581cd306c896dbd6f8e5e73a6f53bade19b3805db6c6fba1224a047.mp3",
@@ -7601,6 +8000,13 @@
       "sha256": "df05b625da2cd344131af319a0be10aa4db50a46ea1179e9cb6ed2efee564c55",
       "bytes": 8877,
       "duration": 1.024
+    },
+    "2a57adb1acb5360d": {
+      "provider": "supabase",
+      "path": "morioki-normal/2a57adb1acb5360d--66dcae99ad6699baba5a1afe4d60a5b011e5fdaa3f7632884d4a24e48a4c7632.mp3",
+      "sha256": "66dcae99ad6699baba5a1afe4d60a5b011e5fdaa3f7632884d4a24e48a4c7632",
+      "bytes": 72621,
+      "duration": 8.989
     },
     "2a606c441b88bb90": {
       "provider": "supabase",
@@ -7679,6 +8085,13 @@
       "duration": 4.632,
       "sha256": "ac297e8dac82f2ff6d09de14dc320e714dba72332d11d391f279d58a4f151cdb"
     },
+    "2adbb6e9bbedd495": {
+      "provider": "supabase",
+      "path": "morioki-normal/2adbb6e9bbedd495--d30bca85fa72b66f784d88e6c49aa8509efb8a84fe91afe38c0b6c7f1609959b.mp3",
+      "sha256": "d30bca85fa72b66f784d88e6c49aa8509efb8a84fe91afe38c0b6c7f1609959b",
+      "bytes": 13293,
+      "duration": 1.569
+    },
     "2ae7f7ee6104057a": {
       "provider": "daily",
       "path": "japanese/2026-09-28/interview-question-04--46cad0389263e0785825d9e3fc83ad973de5d39f8017d81a97e1c12e97723535.mp3",
@@ -7721,6 +8134,13 @@
       "bytes": 35565,
       "duration": 4.346
     },
+    "2b263712f208e82e": {
+      "provider": "supabase",
+      "path": "morioki-normal/2b263712f208e82e--68066bbde990bf662fb87ff00575a2fcbdec23d6cdeb82cf8820ff7ed0357f99.mp3",
+      "sha256": "68066bbde990bf662fb87ff00575a2fcbdec23d6cdeb82cf8820ff7ed0357f99",
+      "bytes": 14445,
+      "duration": 1.709
+    },
     "2b2809f30d919ac7": {
       "provider": "supabase",
       "path": "morioki-normal/2b2809f30d919ac7--ed120bbf5976a43308facf06182d8b915a5e7c1db8985edb48540d6b253720da.mp3",
@@ -7741,6 +8161,13 @@
       "sha256": "f751945353da9c3da075f377641f605cd1e9f3081bb566cc1fc27879c15fcd04",
       "bytes": 57453,
       "duration": 7.085
+    },
+    "2b63efbfdd56dc0b": {
+      "provider": "supabase",
+      "path": "morioki-normal/2b63efbfdd56dc0b--07a33d6fa8cc322502f6e770483b5ab9f033bc816738b750aae620e868e4fcb8.mp3",
+      "sha256": "07a33d6fa8cc322502f6e770483b5ab9f033bc816738b750aae620e868e4fcb8",
+      "bytes": 10413,
+      "duration": 1.21
     },
     "2b6b440c337995d8": {
       "provider": "daily",
@@ -7825,6 +8252,13 @@
       "sha256": "83357acab4edb2e80c363f47c6fc63c0327cc758a2f49ccd69ca9c7b75a619df",
       "bytes": 13485,
       "duration": 1.605
+    },
+    "2bb8d538b28d41c4": {
+      "provider": "supabase",
+      "path": "morioki-normal/2bb8d538b28d41c4--7d4276f036cee3522af14834c4fcef707fed597719092d5930d42d91570717c9.mp3",
+      "sha256": "7d4276f036cee3522af14834c4fcef707fed597719092d5930d42d91570717c9",
+      "bytes": 59757,
+      "duration": 7.386
     },
     "2bbfba97885215b3": {
       "provider": "daily",
@@ -7924,6 +8358,13 @@
       "bytes": 12525,
       "duration": 1.466
     },
+    "2c461ae7b9ccad6b": {
+      "provider": "supabase",
+      "path": "morioki-normal/2c461ae7b9ccad6b--6b64653e960832e55212b2c954c90af507eb92aa0039fb950b4833ee618110d1.mp3",
+      "sha256": "6b64653e960832e55212b2c954c90af507eb92aa0039fb950b4833ee618110d1",
+      "bytes": 13677,
+      "duration": 1.616
+    },
     "2c492c64cfeb1a18": {
       "provider": "supabase",
       "path": "morioki-normal/2c492c64cfeb1a18--91cfa39d4fdd0ebd71b291b78020ec48a4771f6687220b0e5d462831c26207e9.mp3",
@@ -7951,6 +8392,13 @@
       "sha256": "2a5e52afc1b91a3abe706e2facc3703447ce5f4d768014d7e4f79f5a6d4af86f",
       "bytes": 12717,
       "duration": 1.5
+    },
+    "2c8903595efadc85": {
+      "provider": "supabase",
+      "path": "morioki-normal/2c8903595efadc85--10c5c0c559e17a8e5a53108e5860e149bfd7e335bb37e9bf3f2cdead9258eaeb.mp3",
+      "sha256": "10c5c0c559e17a8e5a53108e5860e149bfd7e335bb37e9bf3f2cdead9258eaeb",
+      "bytes": 19245,
+      "duration": 2.325
     },
     "2c89f3dc421895d8": {
       "provider": "supabase",
@@ -8000,6 +8448,13 @@
       "sha256": "9f89fd3b8ad5afc75e4507b255c330036e3c060eab3fff63e4a69932f58ed91b",
       "bytes": 62253,
       "duration": 7.7
+    },
+    "2cba1ac4e76799b0": {
+      "provider": "supabase",
+      "path": "morioki-normal/2cba1ac4e76799b0--396e9a562f4b8ea039bdb05ce42093f74e00f2f93404dbf37487ecbb94bb061f.mp3",
+      "sha256": "396e9a562f4b8ea039bdb05ce42093f74e00f2f93404dbf37487ecbb94bb061f",
+      "bytes": 43437,
+      "duration": 5.349
     },
     "2cc8799d6b517a11": {
       "provider": "supabase",
@@ -8127,6 +8582,13 @@
       "duration": 5.28,
       "sha256": "8e008d9977902f40dc3d65a2f8502c35969dc8e0cf1dbfa15581d0a00b9215bf"
     },
+    "2d5b1ebde426fae9": {
+      "provider": "supabase",
+      "path": "morioki-normal/2d5b1ebde426fae9--4f28d6b788738c821c3ae7790261abb2be51b570ef4606e068f1b32858ec5303.mp3",
+      "sha256": "4f28d6b788738c821c3ae7790261abb2be51b570ef4606e068f1b32858ec5303",
+      "bytes": 9069,
+      "duration": 1.047
+    },
     "2d6da12480b635f0": {
       "provider": "supabase",
       "path": "morioki-normal/2d6da12480b635f0--33331e0c703a3fa55f12ed88b65abcd7c7c3f872b76e01a79e70c7e8352c2426.mp3",
@@ -8211,6 +8673,13 @@
       "bytes": 17037,
       "duration": 1.336
     },
+    "2dd82cbf8538a3b3": {
+      "provider": "supabase",
+      "path": "morioki-normal/2dd82cbf8538a3b3--43088aeb284107f0c279e5a96fafb105380cfee0f6e9d785f893cd7c5cc1efbc.mp3",
+      "sha256": "43088aeb284107f0c279e5a96fafb105380cfee0f6e9d785f893cd7c5cc1efbc",
+      "bytes": 17133,
+      "duration": 2.057
+    },
     "2dea5c1501632ca9": {
       "provider": "daily",
       "path": "japanese/2026-10-16/vocab-03--0383d586e4c263af06b0ced8b599e7a36ea9fda3b2b1b309aae4bb726dd1e9f4.mp3",
@@ -8224,6 +8693,13 @@
       "sha256": "274db79a36848a8b63f88ebb92c97541c26cb4004b37ed5ff889f8833e602f3a",
       "bytes": 87597,
       "duration": 10.855
+    },
+    "2e05f8e82ae6cd44": {
+      "provider": "supabase",
+      "path": "morioki-normal/2e05f8e82ae6cd44--1857b518318e99dc5d858665865f1671b74a2a2ad3ca19b42035631dcdd5f318.mp3",
+      "sha256": "1857b518318e99dc5d858665865f1671b74a2a2ad3ca19b42035631dcdd5f318",
+      "bytes": 22317,
+      "duration": 2.708
     },
     "2e2c7f8943ef75d5": {
       "provider": "supabase",
@@ -8483,6 +8959,13 @@
       "sha256": "564f41f4ea26e05735753c8274ec2c542a1b8dfb72e6a16cdd382d47c0123cb5",
       "bytes": 12717,
       "duration": 1.49
+    },
+    "30140afb4f3bfa8f": {
+      "provider": "supabase",
+      "path": "morioki-normal/30140afb4f3bfa8f--044e4e239fae37e13e543214cdcfe6ed2c0765bf91f7cc2145be8b1cf46c12fc.mp3",
+      "sha256": "044e4e239fae37e13e543214cdcfe6ed2c0765bf91f7cc2145be8b1cf46c12fc",
+      "bytes": 30381,
+      "duration": 3.704
     },
     "301f0af013367a6c": {
       "provider": "supabase",
@@ -9541,6 +10024,13 @@
       "bytes": 14637,
       "duration": 1.732
     },
+    "36aacadddfada631": {
+      "provider": "supabase",
+      "path": "morioki-normal/36aacadddfada631--83b90993191ffac0ff79e258a2f76bc2e9b3b0c3d1c9170416ce2613f950fbd6.mp3",
+      "sha256": "83b90993191ffac0ff79e258a2f76bc2e9b3b0c3d1c9170416ce2613f950fbd6",
+      "bytes": 52653,
+      "duration": 6.492
+    },
     "36ac67834670de47": {
       "provider": "supabase",
       "path": "morioki-normal/36ac67834670de47--6ef396c3ab3c777219774a2bd36ea2dc989da373bb86fcca764abb7c81fd4ddd.mp3",
@@ -9575,6 +10065,13 @@
       "sha256": "1978b41601b7ecc52ab88fbb3a08d7ddeddea09e896e549ef8134c57a123a60d",
       "bytes": 55341,
       "duration": 4.516
+    },
+    "36c0b6cce71d9fd0": {
+      "provider": "supabase",
+      "path": "morioki-normal/36c0b6cce71d9fd0--754f99ee8d8c84e2bc3fa155f4c2a8d3ae9cf3deda22b628a4f01f253f805174.mp3",
+      "sha256": "754f99ee8d8c84e2bc3fa155f4c2a8d3ae9cf3deda22b628a4f01f253f805174",
+      "bytes": 15405,
+      "duration": 1.826
     },
     "36c39ed3e46f6f97": {
       "provider": "daily",
@@ -9849,6 +10346,13 @@
       "bytes": 68973,
       "duration": 8.524
     },
+    "38664727f1d7320b": {
+      "provider": "supabase",
+      "path": "morioki-normal/38664727f1d7320b--d424c9bd3f2c228a064b86e94796549e80dd2079e722a7ee10d6978fcb3c5f75.mp3",
+      "sha256": "d424c9bd3f2c228a064b86e94796549e80dd2079e722a7ee10d6978fcb3c5f75",
+      "bytes": 25773,
+      "duration": 3.137
+    },
     "387215d7a683f0cb": {
       "provider": "supabase",
       "path": "morioki-normal/387215d7a683f0cb--1b68c53000f0adb0ad12217e89d11a90e8830d3fb7880908c8d38ea5385621c9.mp3",
@@ -9890,6 +10394,13 @@
       "sha256": "e07eea7169aa38b93a0dca93fa2f94040255096ff4208837d1a71652d30def3e",
       "bytes": 17901,
       "duration": 2.139
+    },
+    "38c5904d2305c291": {
+      "provider": "supabase",
+      "path": "morioki-normal/38c5904d2305c291--4dcddfa27b47e8d4ff1ca626d4032cef27eaa0543bc3f98f11db9b405431f281.mp3",
+      "sha256": "4dcddfa27b47e8d4ff1ca626d4032cef27eaa0543bc3f98f11db9b405431f281",
+      "bytes": 11565,
+      "duration": 1.349
     },
     "38c9545375acaeb7": {
       "provider": "supabase",
@@ -10157,6 +10668,13 @@
       "bytes": 87789,
       "duration": 10.893
     },
+    "3a43fac47b97a5a0": {
+      "provider": "supabase",
+      "path": "morioki-normal/3a43fac47b97a5a0--32f2936344996fd4f0c459e275747199ded35c48994b4733f397141282e763ff.mp3",
+      "sha256": "32f2936344996fd4f0c459e275747199ded35c48994b4733f397141282e763ff",
+      "bytes": 13293,
+      "duration": 1.569
+    },
     "3a50197f9684af0b": {
       "provider": "supabase",
       "path": "morioki-normal/3a50197f9684af0b--798d738b3cccdddd3e599632166a1dd2cdd7bac25bf1037ecc246b070734c590.mp3",
@@ -10367,6 +10885,13 @@
       "bytes": 35757,
       "duration": 4.391
     },
+    "3b54921682a91832": {
+      "provider": "supabase",
+      "path": "morioki-normal/3b54921682a91832--e215f536943e36855fc5ac8bc088492fb1aa853374b26454ba14786e5ae9e9ed.mp3",
+      "sha256": "e215f536943e36855fc5ac8bc088492fb1aa853374b26454ba14786e5ae9e9ed",
+      "bytes": 16173,
+      "duration": 1.93
+    },
     "3b64828b514cd9ef": {
       "provider": "supabase",
       "path": "morioki-normal/3b64828b514cd9ef--666e9c9519e570fa30ebb84793e33927b708898459319b96f510734641b0ae45.mp3",
@@ -10472,6 +10997,13 @@
       "bytes": 11373,
       "duration": 1.338
     },
+    "3c1d77197bff7e85": {
+      "provider": "supabase",
+      "path": "morioki-normal/3c1d77197bff7e85--1f02d286e27a92c0c2f4d8eafee71260a8fa67c22ea5ac1ac915daf6f555695e.mp3",
+      "sha256": "1f02d286e27a92c0c2f4d8eafee71260a8fa67c22ea5ac1ac915daf6f555695e",
+      "bytes": 13485,
+      "duration": 1.605
+    },
     "3c36157f0198cea3": {
       "provider": "supabase",
       "path": "morioki-normal/3c36157f0198cea3--15f9f081258ff2568e2300968bf3fc9f6ed0f37a7e16497fa439b1f14739d054.mp3",
@@ -10492,6 +11024,13 @@
       "sha256": "ec4f4c6ad0ab75cafb095f4fd4b2a7593eae22784349cbce2247eaf79f5d4629",
       "bytes": 15309,
       "duration": 1.196
+    },
+    "3c5cc3d44c10f750": {
+      "provider": "supabase",
+      "path": "morioki-normal/3c5cc3d44c10f750--9debf35616e93930c22263fce005846c1042b314184439a4d5f6225931063d55.mp3",
+      "sha256": "9debf35616e93930c22263fce005846c1042b314184439a4d5f6225931063d55",
+      "bytes": 20397,
+      "duration": 2.452
     },
     "3c620a2978d195a5": {
       "provider": "supabase",
@@ -10639,6 +11178,13 @@
       "sha256": "3fdd2cfa9621abe46b56014f297768c46299135d245875d83ff4b6354568dd0c",
       "bytes": 57069,
       "duration": 4.666
+    },
+    "3d05a894ba389690": {
+      "provider": "supabase",
+      "path": "morioki-normal/3d05a894ba389690--93e104afdbef5d255a00d607de6757e316aa6fe176412fef149078c3e037e082.mp3",
+      "sha256": "93e104afdbef5d255a00d607de6757e316aa6fe176412fef149078c3e037e082",
+      "bytes": 14829,
+      "duration": 1.767
     },
     "3d06ba4e3e5c342a": {
       "provider": "daily",
@@ -10892,6 +11438,13 @@
       "bytes": 61485,
       "duration": 7.592
     },
+    "3e76d05229796f0e": {
+      "provider": "supabase",
+      "path": "morioki-normal/3e76d05229796f0e--6772c7c6d0d213821cfbc5ea6fb8cb3df820fa9483d3d25739a3dedc3dfe0dfb.mp3",
+      "sha256": "6772c7c6d0d213821cfbc5ea6fb8cb3df820fa9483d3d25739a3dedc3dfe0dfb",
+      "bytes": 10413,
+      "duration": 1.222
+    },
     "3e7ffc8e9b9c73da": {
       "provider": "supabase",
       "path": "morioki-normal/3e7ffc8e9b9c73da--bedccaec87c4dbca327eac374c42ebdd1218a85d1b68ddcd7020a3ddc981e418.mp3",
@@ -11108,6 +11661,13 @@
       "sha256": "c55f9f5a2dde618202054596e4b38fe2ef0dff966f8d3798ebdc574dcf9cf4cf",
       "bytes": 54573,
       "duration": 6.736
+    },
+    "3fb776ae77c2d4a2": {
+      "provider": "supabase",
+      "path": "morioki-normal/3fb776ae77c2d4a2--b288287de009d20c4724fffe3eda8041d7b96b24a5ef3603f1b61b77a0aa2630.mp3",
+      "sha256": "b288287de009d20c4724fffe3eda8041d7b96b24a5ef3603f1b61b77a0aa2630",
+      "bytes": 11373,
+      "duration": 1.338
     },
     "3fb93a4058c6a854": {
       "provider": "supabase",
@@ -11501,6 +12061,13 @@
       "bytes": 45357,
       "duration": 5.575
     },
+    "414ae07064f49c54": {
+      "provider": "supabase",
+      "path": "morioki-normal/414ae07064f49c54--a9201eb20d9b98d9d689af55aa2bd65c40d9832493ce58f2aefb4a86e3e621cb.mp3",
+      "sha256": "a9201eb20d9b98d9d689af55aa2bd65c40d9832493ce58f2aefb4a86e3e621cb",
+      "bytes": 39981,
+      "duration": 4.913
+    },
     "414e84717ae6f55d": {
       "provider": "daily",
       "path": "japanese/2026-10-07/vocab-06--a779447ed1dc1aa878bac0e4907f7659118b8b58c36bf792e6b1db4d06b7831f.mp3",
@@ -11522,12 +12089,26 @@
       "bytes": 39213,
       "duration": 4.809
     },
+    "417cfffcaeaf9cd8": {
+      "provider": "supabase",
+      "path": "morioki-normal/417cfffcaeaf9cd8--8f4d5266dcce203de093f40d2697c82aa10b10f6e4f8726e8e8a39be47e71c52.mp3",
+      "sha256": "8f4d5266dcce203de093f40d2697c82aa10b10f6e4f8726e8e8a39be47e71c52",
+      "bytes": 14445,
+      "duration": 1.721
+    },
     "417eba57d4886163": {
       "provider": "supabase",
       "path": "morioki-normal/417eba57d4886163--1b21a26000264f6e1d6152ba498eab90d9b47936acd98a787d113820fa90acfc.mp3",
       "sha256": "1b21a26000264f6e1d6152ba498eab90d9b47936acd98a787d113820fa90acfc",
       "bytes": 15213,
       "duration": 1.802
+    },
+    "418d2cbc44e38410": {
+      "provider": "supabase",
+      "path": "morioki-normal/418d2cbc44e38410--30f32ccebd9317d4a92b4fe204fbc126fa1033ddf1bee677b6a2939e34f4120a.mp3",
+      "sha256": "30f32ccebd9317d4a92b4fe204fbc126fa1033ddf1bee677b6a2939e34f4120a",
+      "bytes": 31725,
+      "duration": 3.869
     },
     "41986b92bcd2538e": {
       "provider": "supabase",
@@ -11542,6 +12123,13 @@
       "sha256": "3d4dc7133a81c9b8b358cb56b9f12f68303602e7a6f943498c323d215a7f602f",
       "bytes": 25965,
       "duration": 3.149
+    },
+    "41a0fa0cf3b092e0": {
+      "provider": "supabase",
+      "path": "morioki-normal/41a0fa0cf3b092e0--ed0fc0dd99c9f7ba05709d28c47d560e07e5a9bd85d05547ebb5d92330eea855.mp3",
+      "sha256": "ed0fc0dd99c9f7ba05709d28c47d560e07e5a9bd85d05547ebb5d92330eea855",
+      "bytes": 30573,
+      "duration": 3.74
     },
     "41af576b2061e27f": {
       "provider": "supabase",
@@ -11942,6 +12530,20 @@
       "bytes": 13869,
       "duration": 1.639
     },
+    "4409f76c96231cc8": {
+      "provider": "supabase",
+      "path": "morioki-normal/4409f76c96231cc8--6f9b4039aac9895a198fd2811cc9e17628c03cada9e9941808a160a5a44df5a0.mp3",
+      "sha256": "6f9b4039aac9895a198fd2811cc9e17628c03cada9e9941808a160a5a44df5a0",
+      "bytes": 29421,
+      "duration": 3.59
+    },
+    "441232f4862bd638": {
+      "provider": "supabase",
+      "path": "morioki-normal/441232f4862bd638--9652f1c21975b76ded5449e84153f9af6d2d1e172ee7cbc6cd1f2e43d866f199.mp3",
+      "sha256": "9652f1c21975b76ded5449e84153f9af6d2d1e172ee7cbc6cd1f2e43d866f199",
+      "bytes": 60909,
+      "duration": 7.514
+    },
     "44262246659911aa": {
       "provider": "supabase",
       "path": "morioki-normal/44262246659911aa--9cd3113936583b6b0a4d236ac096bb61f19ac637d49782730d53671b95ba1bfe.mp3",
@@ -12138,6 +12740,13 @@
       "bytes": 41517,
       "duration": 5.111
     },
+    "4509c1bce95fc0c0": {
+      "provider": "supabase",
+      "path": "morioki-normal/4509c1bce95fc0c0--3036bb5862e3be787bd61fee23be39a079f1e60aef4001bd70ffb1b4c133d76a.mp3",
+      "sha256": "3036bb5862e3be787bd61fee23be39a079f1e60aef4001bd70ffb1b4c133d76a",
+      "bytes": 50157,
+      "duration": 6.19
+    },
     "450bb3aa082f154e": {
       "provider": "supabase",
       "path": "morioki-normal/450bb3aa082f154e--639c1c11e38b219084e0c9a5f0b0f190319d32a1c6b48141a814a6421f27fa5a.mp3",
@@ -12236,6 +12845,13 @@
       "bytes": 27117,
       "duration": 3.29
     },
+    "45580cf8905abcc4": {
+      "provider": "supabase",
+      "path": "morioki-normal/45580cf8905abcc4--6be19d011fada543fb020c419c8c5d6a138b3ad93fab0c780c794dd7bba496b4.mp3",
+      "sha256": "6be19d011fada543fb020c419c8c5d6a138b3ad93fab0c780c794dd7bba496b4",
+      "bytes": 66861,
+      "duration": 8.28
+    },
     "455a9e8afb70ae76": {
       "provider": "daily",
       "path": "japanese/2026-09-20/example-05--e5bcf6cb6ae657298006a60976e527afcc8dfceae9e47b03c74ba7473900f469.mp3",
@@ -12257,6 +12873,13 @@
       "bytes": 12909,
       "duration": 1.523
     },
+    "45701a2807ca0514": {
+      "provider": "supabase",
+      "path": "morioki-normal/45701a2807ca0514--efc7d1433db7c83dde181e050ae58996a7e5929f866632b606a63d1febf26e27.mp3",
+      "sha256": "efc7d1433db7c83dde181e050ae58996a7e5929f866632b606a63d1febf26e27",
+      "bytes": 47085,
+      "duration": 5.808
+    },
     "4573c92c32daab70": {
       "provider": "supabase",
       "path": "morioki-normal/4573c92c32daab70--a976aa92dbbbd5fbb3934e96774bae3e04af1b923be21d32328656ce29d47bfc.mp3",
@@ -12277,6 +12900,13 @@
       "sha256": "27e66a52ce0e3040e7b15c18e57cac8266167c8d45915270bf49a4110a81ed09",
       "bytes": 59565,
       "duration": 7.352
+    },
+    "458ba5e976b03aad": {
+      "provider": "supabase",
+      "path": "morioki-normal/458ba5e976b03aad--371e7d3377537272bf98262df23735f4c0fd0bfdc6ccd4d3aebd6d6d2daea311.mp3",
+      "sha256": "371e7d3377537272bf98262df23735f4c0fd0bfdc6ccd4d3aebd6d6d2daea311",
+      "bytes": 50733,
+      "duration": 6.26
     },
     "4594b4713f2fcdfd": {
       "provider": "supabase",
@@ -12509,6 +13139,13 @@
       "bytes": 34029,
       "duration": 4.17
     },
+    "46efa23a83d904fe": {
+      "provider": "supabase",
+      "path": "morioki-normal/46efa23a83d904fe--cd049fd302aaf919def6e4d7996c9865e565860bbcb4afdcfa447b7b5485d4ed.mp3",
+      "sha256": "cd049fd302aaf919def6e4d7996c9865e565860bbcb4afdcfa447b7b5485d4ed",
+      "bytes": 10413,
+      "duration": 1.21
+    },
     "46f18ae2b7f100ee": {
       "provider": "supabase",
       "path": "morioki-normal/46f18ae2b7f100ee--b51b0b190162f3e92dc5902f5883266450c58661119f12ec113a396587437c6d.mp3",
@@ -12705,12 +13342,26 @@
       "bytes": 28461,
       "duration": 3.462
     },
+    "47ca30629f18315e": {
+      "provider": "supabase",
+      "path": "morioki-normal/47ca30629f18315e--15df15dd373cad420a0f1c3805739b6f4a2475b9b9b45f19cd679efe011ec5c8.mp3",
+      "sha256": "15df15dd373cad420a0f1c3805739b6f4a2475b9b9b45f19cd679efe011ec5c8",
+      "bytes": 34413,
+      "duration": 4.205
+    },
     "47d7414a4cd784ae": {
       "provider": "supabase",
       "path": "morioki-normal/47d7414a4cd784ae--14b8cb6a0e24dcef97b54500becdda2ae4b1a6a12b845d86e5ac71d60c5a61f5.mp3",
       "sha256": "14b8cb6a0e24dcef97b54500becdda2ae4b1a6a12b845d86e5ac71d60c5a61f5",
       "bytes": 14445,
       "duration": 1.709
+    },
+    "47e2459a0ffeda0e": {
+      "provider": "supabase",
+      "path": "morioki-normal/47e2459a0ffeda0e--b39502d79a44d55d0119fdd0dd2cd0d61aa6904c00d2d58a7ce9258caf44233e.mp3",
+      "sha256": "b39502d79a44d55d0119fdd0dd2cd0d61aa6904c00d2d58a7ce9258caf44233e",
+      "bytes": 16173,
+      "duration": 1.93
     },
     "47e9f40138156415": {
       "provider": "daily",
@@ -12774,6 +13425,13 @@
       "sha256": "bc7ef67e60df24a7894b67ad2f01e31f7d532497e3f9d9e6e28da5de586726d8",
       "bytes": 54957,
       "duration": 6.771
+    },
+    "484237d0bccf5144": {
+      "provider": "supabase",
+      "path": "morioki-normal/484237d0bccf5144--64b8a741f645de04a35d501432244cc70637e938f86e2d7e1667fb6d4a97fe66.mp3",
+      "sha256": "64b8a741f645de04a35d501432244cc70637e938f86e2d7e1667fb6d4a97fe66",
+      "bytes": 14445,
+      "duration": 1.721
     },
     "48454e24a6012858": {
       "provider": "supabase",
@@ -12949,6 +13607,13 @@
       "sha256": "959050a8e5a56e1d31e14729aa09a3050a4b4aafbeeb891f44d8554d9088cd53",
       "bytes": 19053,
       "duration": 2.301
+    },
+    "4937e43135f9e635": {
+      "provider": "supabase",
+      "path": "morioki-normal/4937e43135f9e635--ea49c96f6c34c91911264c3452e096000f034138eeb91e5c6dccea7adc8ebb7f.mp3",
+      "sha256": "ea49c96f6c34c91911264c3452e096000f034138eeb91e5c6dccea7adc8ebb7f",
+      "bytes": 62445,
+      "duration": 7.72
     },
     "493bf633e23e55ef": {
       "provider": "daily",
@@ -13237,6 +13902,13 @@
       "bytes": 17133,
       "duration": 2.057
     },
+    "4ac3c4ab1b145807": {
+      "provider": "supabase",
+      "path": "morioki-normal/4ac3c4ab1b145807--b11ef5b545d3072a5aeea6d53de420d5d914e970b1cd4ffd879b44736a88b6ca.mp3",
+      "sha256": "b11ef5b545d3072a5aeea6d53de420d5d914e970b1cd4ffd879b44736a88b6ca",
+      "bytes": 42093,
+      "duration": 5.179
+    },
     "4ac83898f8a56074": {
       "provider": "supabase",
       "path": "morioki-normal/4ac83898f8a56074--6af70aea882a717e0c25bcccffaf752daa8771cd221c13565bf07a7d2ec70f28.mp3",
@@ -13328,12 +14000,26 @@
       "bytes": 13005,
       "duration": 0.999
     },
+    "4b5628bfee968553": {
+      "provider": "supabase",
+      "path": "morioki-normal/4b5628bfee968553--172319fdd360bac3c560df38721b32e4f169f157bbd8736cb4055d1c24951a2f.mp3",
+      "sha256": "172319fdd360bac3c560df38721b32e4f169f157bbd8736cb4055d1c24951a2f",
+      "bytes": 11949,
+      "duration": 1.407
+    },
     "4b5e9eb252c7004e": {
       "provider": "supabase",
       "path": "morioki-normal/4b5e9eb252c7004e--a3a8b03b3d01775b811b13eb8f88751230aaadbb7744eee5e1c88987937a8b0d.mp3",
       "sha256": "a3a8b03b3d01775b811b13eb8f88751230aaadbb7744eee5e1c88987937a8b0d",
       "bytes": 60717,
       "duration": 7.512
+    },
+    "4b6728f2b8fc7516": {
+      "provider": "supabase",
+      "path": "morioki-normal/4b6728f2b8fc7516--72eede4ed00f93cad5073b96005b782aab557e65089695fbb0f4c88dd3a546f4.mp3",
+      "sha256": "72eede4ed00f93cad5073b96005b782aab557e65089695fbb0f4c88dd3a546f4",
+      "bytes": 8685,
+      "duration": 0.989
     },
     "4b68cfefee941bf3": {
       "provider": "supabase",
@@ -13629,6 +14315,13 @@
       "bytes": 11181,
       "duration": 1.303
     },
+    "4d72935302bde8bf": {
+      "provider": "supabase",
+      "path": "morioki-normal/4d72935302bde8bf--c87f5f593a904664f0f45545bc11ee01390b94098cf7dd12b4cbd0ea9e9666ed.mp3",
+      "sha256": "c87f5f593a904664f0f45545bc11ee01390b94098cf7dd12b4cbd0ea9e9666ed",
+      "bytes": 13101,
+      "duration": 1.547
+    },
     "4d81273e5a3554ca": {
       "provider": "supabase",
       "path": "morioki-normal/4d81273e5a3554ca--3ee62f00c2ca74e2feca5a867b3eb6a35be88e52cc90fe9af839bcc3ee9d7e94.mp3",
@@ -13775,6 +14468,13 @@
       "sha256": "dfe02de1e271edffa21dc67d245adf1bb271a7ef2277fa9557da0efb65ec7518",
       "bytes": 13293,
       "duration": 1.569
+    },
+    "4e4873b3ddbbaee7": {
+      "provider": "supabase",
+      "path": "morioki-normal/4e4873b3ddbbaee7--c01a4fed5646d73578fd9d2ad079827f0797df7e488b022afe3075542e0a2fdb.mp3",
+      "sha256": "c01a4fed5646d73578fd9d2ad079827f0797df7e488b022afe3075542e0a2fdb",
+      "bytes": 15213,
+      "duration": 1.814
     },
     "4e49adc42c797398": {
       "provider": "supabase",
@@ -14000,6 +14700,13 @@
       "bytes": 71469,
       "duration": 8.838
     },
+    "4f08ac316c39c175": {
+      "provider": "supabase",
+      "path": "morioki-normal/4f08ac316c39c175--46f3d9b12b551166aeca04a160e14f503a43f8b93090f081e37d7a0abb9bba0d.mp3",
+      "sha256": "46f3d9b12b551166aeca04a160e14f503a43f8b93090f081e37d7a0abb9bba0d",
+      "bytes": 58413,
+      "duration": 7.202
+    },
     "4f2157e6d00fe372": {
       "provider": "supabase",
       "path": "morioki-normal/4f2157e6d00fe372--2250c123d5d354b2f84c8a75740a8092fecffd855412cbfeaad4528d572204ac.mp3",
@@ -14147,6 +14854,13 @@
       "duration": 0.792,
       "sha256": "f490d2fcaa588ad11c82c29576ce9b5f918410113f57f3907540614ad0660b09"
     },
+    "4fae2bbe71bafb42": {
+      "provider": "supabase",
+      "path": "morioki-normal/4fae2bbe71bafb42--e49d34487b9ce70594eb9bf99aba482e4a859d9b6bd8ca66d40e2fd03abddd89.mp3",
+      "sha256": "e49d34487b9ce70594eb9bf99aba482e4a859d9b6bd8ca66d40e2fd03abddd89",
+      "bytes": 12909,
+      "duration": 1.523
+    },
     "4fb5961b3c73717f": {
       "provider": "supabase",
       "path": "morioki-normal/4fb5961b3c73717f--2be6211f87d5fb12fd7e19db1af2785aac21871115c2fa301998dc4e35236c94.mp3",
@@ -14287,12 +15001,26 @@
       "bytes": 81837,
       "duration": 6.73
     },
+    "504bbf2703558393": {
+      "provider": "supabase",
+      "path": "morioki-normal/504bbf2703558393--32a86858e04dce0e843e5ba33129cde4e3db8d6fa250b1ec17dbf0df5707c090.mp3",
+      "sha256": "32a86858e04dce0e843e5ba33129cde4e3db8d6fa250b1ec17dbf0df5707c090",
+      "bytes": 9645,
+      "duration": 1.106
+    },
     "505bde7221954fa6": {
       "provider": "supabase",
       "path": "morioki-normal/505bde7221954fa6--98a3988ae154982ca5531f1545ad308a912304f7859b6d714f971f467fba4819.mp3",
       "sha256": "98a3988ae154982ca5531f1545ad308a912304f7859b6d714f971f467fba4819",
       "bytes": 68973,
       "duration": 8.524
+    },
+    "507ac98184dc88c5": {
+      "provider": "supabase",
+      "path": "morioki-normal/507ac98184dc88c5--293dfc40ff4d66b7863950122d2c765fafb79f12b1fbab1149d563f5bf1e02b0.mp3",
+      "sha256": "293dfc40ff4d66b7863950122d2c765fafb79f12b1fbab1149d563f5bf1e02b0",
+      "bytes": 61485,
+      "duration": 7.606
     },
     "5082af8cd8119418": {
       "provider": "supabase",
@@ -14356,6 +15084,13 @@
       "sha256": "32803597e96fb271c313adc1e4de0204a4d1740bfdc7e428a064937bbd77c896",
       "bytes": 29421,
       "duration": 3.578
+    },
+    "50b54f6ed4003752": {
+      "provider": "supabase",
+      "path": "morioki-normal/50b54f6ed4003752--e0cda1b7cf6c6bde5f928f196107c0748aa79a6b64d2effc69921353224446dd.mp3",
+      "sha256": "e0cda1b7cf6c6bde5f928f196107c0748aa79a6b64d2effc69921353224446dd",
+      "bytes": 11565,
+      "duration": 1.361
     },
     "50bb1717a3823e53": {
       "provider": "daily",
@@ -14490,6 +15225,13 @@
       "bytes": 15789,
       "duration": 1.883
     },
+    "515efd6f047b08ab": {
+      "provider": "supabase",
+      "path": "morioki-normal/515efd6f047b08ab--8431c655ab9ea4330096c96fb29ec2b1c19331bfa0420ff19b99b91fab4509a8.mp3",
+      "sha256": "8431c655ab9ea4330096c96fb29ec2b1c19331bfa0420ff19b99b91fab4509a8",
+      "bytes": 12333,
+      "duration": 1.442
+    },
     "517822b084ee1474": {
       "provider": "supabase",
       "path": "morioki-normal/517822b084ee1474--b97951a3838a8af5e9650a8baa668aa1e9a6138bbf477e64d0b567a5d79bf13b.mp3",
@@ -14581,6 +15323,13 @@
       "bytes": 13293,
       "duration": 1.581
     },
+    "51f73938430bbdbc": {
+      "provider": "supabase",
+      "path": "morioki-normal/51f73938430bbdbc--5c19ef6cc3ccd85d7f9aae6c16e09271c03165a8262a49748d39be4a8117099f.mp3",
+      "sha256": "5c19ef6cc3ccd85d7f9aae6c16e09271c03165a8262a49748d39be4a8117099f",
+      "bytes": 31725,
+      "duration": 3.869
+    },
     "51f88cff5b80480b": {
       "provider": "supabase",
       "path": "morioki-normal/51f88cff5b80480b--0365a657e7a60a3941f6e65b6beb0ba21d36fe7283358596eca30c91c90962bd.mp3",
@@ -14636,6 +15385,13 @@
       "sha256": "c4d9fa0f3bbc18394a068c4c270a73fbc26fcd789c05dd9c24e9671e7cee7ade",
       "bytes": 45741,
       "duration": 5.622
+    },
+    "522dffaf418b8d1b": {
+      "provider": "supabase",
+      "path": "morioki-normal/522dffaf418b8d1b--e384a1faa19549959b67cc43fc3bb0099683b461322fb2605a28a6bf078e6410.mp3",
+      "sha256": "e384a1faa19549959b67cc43fc3bb0099683b461322fb2605a28a6bf078e6410",
+      "bytes": 11181,
+      "duration": 1.314
     },
     "5232fc0a6db6089e": {
       "provider": "supabase",
@@ -14721,6 +15477,13 @@
       "bytes": 62829,
       "duration": 5.154
     },
+    "529dc8bd821e2751": {
+      "provider": "supabase",
+      "path": "morioki-normal/529dc8bd821e2751--fb869f35554d02b160cb20ad24ad13b84c53e75cbbafaa5ab50e4d0a7235af8d.mp3",
+      "sha256": "fb869f35554d02b160cb20ad24ad13b84c53e75cbbafaa5ab50e4d0a7235af8d",
+      "bytes": 20781,
+      "duration": 2.51
+    },
     "52a30b52774b96a6": {
       "provider": "supabase",
       "path": "morioki-normal/52a30b52774b96a6--15b87317bcf5fcfa487a741e368813ad4ecb80680512173dfec0a2b650381a6f.mp3",
@@ -14776,6 +15539,13 @@
       "sha256": "6314e709f6b80189c859da5c20ebf9db54ec15b969b7f1bc9121ef4f4701de17",
       "bytes": 14637,
       "duration": 1.732
+    },
+    "52f10728c662c5f4": {
+      "provider": "supabase",
+      "path": "morioki-normal/52f10728c662c5f4--f30d2f0fe9a4d16d0f0927a7fc57bfc3ea27925be48ad34fc1e1c85b9a62b5c6.mp3",
+      "sha256": "f30d2f0fe9a4d16d0f0927a7fc57bfc3ea27925be48ad34fc1e1c85b9a62b5c6",
+      "bytes": 12333,
+      "duration": 1.442
     },
     "52f2e10ad27feb26": {
       "provider": "supabase",
@@ -14959,6 +15729,13 @@
       "bytes": 13101,
       "duration": 1.558
     },
+    "542e5f05954885e9": {
+      "provider": "supabase",
+      "path": "morioki-normal/542e5f05954885e9--fa9d962adf589b3520cd12f3b7f37075744782d13919c40cddcb30d747d7fe69.mp3",
+      "sha256": "fa9d962adf589b3520cd12f3b7f37075744782d13919c40cddcb30d747d7fe69",
+      "bytes": 46125,
+      "duration": 5.679
+    },
     "543aa3250a243f99": {
       "provider": "supabase",
       "path": "morioki-normal/543aa3250a243f99--0b6c99545fecb46dbf0a5c1fa75f4680d1be6af198990016c1aab6e72a2cd093.mp3",
@@ -14972,6 +15749,13 @@
       "sha256": "cd35051546ead9b18f821be62e157e534696724fadd30038b5a5b36d1f105517",
       "bytes": 12141,
       "duration": 1.419
+    },
+    "54442dcc7d70b8d0": {
+      "provider": "supabase",
+      "path": "morioki-normal/54442dcc7d70b8d0--54a8d2aa39f50e67a241cb99922971311220b6744a900d656ab4c426539b9d3e.mp3",
+      "sha256": "54a8d2aa39f50e67a241cb99922971311220b6744a900d656ab4c426539b9d3e",
+      "bytes": 13869,
+      "duration": 1.651
     },
     "544560227d2b1a6e": {
       "provider": "supabase",
@@ -15147,6 +15931,13 @@
       "sha256": "15a9673cf0e44e42d1555179262f47e6a6f3904cde14c5be5236c86d055f8677",
       "bytes": 15885,
       "duration": 1.243
+    },
+    "54d2c625e1ea6981": {
+      "provider": "supabase",
+      "path": "morioki-normal/54d2c625e1ea6981--8b525af47ac783d35ebff6e86b4e747b7a88c40e86c3e03f16e45df160b30629.mp3",
+      "sha256": "8b525af47ac783d35ebff6e86b4e747b7a88c40e86c3e03f16e45df160b30629",
+      "bytes": 12141,
+      "duration": 1.419
     },
     "54dc72e9a0c296a5": {
       "provider": "supabase",
@@ -15330,6 +16121,13 @@
       "bytes": 17709,
       "duration": 2.115
     },
+    "5640badcd53d3500": {
+      "provider": "supabase",
+      "path": "morioki-normal/5640badcd53d3500--e26a174a554b429c7df51f79038fff4bdc65e2c0b88e4f9f7f49ab444d6e60fe.mp3",
+      "sha256": "e26a174a554b429c7df51f79038fff4bdc65e2c0b88e4f9f7f49ab444d6e60fe",
+      "bytes": 14637,
+      "duration": 1.732
+    },
     "5642c8052f6c4f81": {
       "provider": "supabase",
       "path": "morioki-normal/5642c8052f6c4f81--30019576452ec9c3607f0207fab2e05d046dc67fd6184b39cf08cb76cc6a76e3.mp3",
@@ -15378,6 +16176,13 @@
       "sha256": "06f2b3e39fe6505c602d5ad0347bc74c231b05c2bc9d351ea32e9fa0321951b0",
       "bytes": 13869,
       "duration": 1.651
+    },
+    "56a8055f431fc5d3": {
+      "provider": "supabase",
+      "path": "morioki-normal/56a8055f431fc5d3--b01803b3a2ce9c206e07bbd7555517d5591553426a1501f9b1715b3b81c4f66b.mp3",
+      "sha256": "b01803b3a2ce9c206e07bbd7555517d5591553426a1501f9b1715b3b81c4f66b",
+      "bytes": 21933,
+      "duration": 2.65
     },
     "56aba69892757f74": {
       "provider": "daily",
@@ -15497,6 +16302,13 @@
       "sha256": "05548bd84c3035785cfcd70e4bd509936e8a922789681e7d4266e1d9fa7d1598",
       "bytes": 14829,
       "duration": 1.756
+    },
+    "5732011b90fa56e7": {
+      "provider": "supabase",
+      "path": "morioki-normal/5732011b90fa56e7--2c8ffd83bb33c72f7d9fe9f3a79c1a2e79713c8f83b340962f57586cc49e6368.mp3",
+      "sha256": "2c8ffd83bb33c72f7d9fe9f3a79c1a2e79713c8f83b340962f57586cc49e6368",
+      "bytes": 15021,
+      "duration": 1.79
     },
     "57327a70bb34311c": {
       "provider": "daily",
@@ -15749,6 +16561,13 @@
       "sha256": "83305de204a4fb55850b2fd3500b78961f4e8052ad84fd313d4b3babea07b800",
       "bytes": 36141,
       "duration": 4.425
+    },
+    "58802261fc7207ad": {
+      "provider": "supabase",
+      "path": "morioki-normal/58802261fc7207ad--a3145ae23ec80962a6b87a852cee004d90f370c0fb029b8f14f6fa7095e48936.mp3",
+      "sha256": "a3145ae23ec80962a6b87a852cee004d90f370c0fb029b8f14f6fa7095e48936",
+      "bytes": 12909,
+      "duration": 1.523
     },
     "5880b5adbe4432b1": {
       "provider": "supabase",
@@ -16009,6 +16828,13 @@
       "bytes": 40557,
       "duration": 4.971
     },
+    "59f5a9de7105c1ba": {
+      "provider": "supabase",
+      "path": "morioki-normal/59f5a9de7105c1ba--e4438aacb38689fc7d8d49132e8259a23aeddb8b80600d706a04281ac919317e.mp3",
+      "sha256": "e4438aacb38689fc7d8d49132e8259a23aeddb8b80600d706a04281ac919317e",
+      "bytes": 16749,
+      "duration": 2.011
+    },
     "59fb80c42dd4e778": {
       "provider": "daily",
       "path": "japanese/2026-10-21/vocab-08--8eaa2cbcb19ce8c6632301587e9d792398ac5e38e06d04f233eb8362f1e0d78f.mp3",
@@ -16022,6 +16848,20 @@
       "sha256": "729cb72c8e2d2f539b74788651093b30225646f4126a9f2f1306eac17cd443f9",
       "bytes": 20013,
       "duration": 2.406
+    },
+    "5a0b01d865917114": {
+      "provider": "supabase",
+      "path": "morioki-normal/5a0b01d865917114--66c6b428d537836cc0248efe189c91cd1136e26d521de427d38cae2ad7a86def.mp3",
+      "sha256": "66c6b428d537836cc0248efe189c91cd1136e26d521de427d38cae2ad7a86def",
+      "bytes": 11373,
+      "duration": 1.338
+    },
+    "5a0c9614c0af1698": {
+      "provider": "supabase",
+      "path": "morioki-normal/5a0c9614c0af1698--0f678f4975421cdc6cbad25785d8c31bb6d98e4c30e5f54ff877d0fb7283d339.mp3",
+      "sha256": "0f678f4975421cdc6cbad25785d8c31bb6d98e4c30e5f54ff877d0fb7283d339",
+      "bytes": 10221,
+      "duration": 1.198
     },
     "5a0d4c830cbec57f": {
       "provider": "supabase",
@@ -16268,6 +17108,13 @@
       "duration": 1.104,
       "sha256": "ada9922d2bbd5edb961bb9cfe5c0c20740bc743f75bebae70d7d60ae3f0cd6c5"
     },
+    "5b9b6d0b3a751407": {
+      "provider": "supabase",
+      "path": "morioki-normal/5b9b6d0b3a751407--6ac0bc6f45996d5c0448f75e3b81aa92518bf6adea76b0ca2c3c7bbfa238f237.mp3",
+      "sha256": "6ac0bc6f45996d5c0448f75e3b81aa92518bf6adea76b0ca2c3c7bbfa238f237",
+      "bytes": 15405,
+      "duration": 1.846
+    },
     "5b9e1bc4f41445f8": {
       "provider": "supabase",
       "path": "morioki-normal/5b9e1bc4f41445f8--c57e70baaf53acb5cf1d06c55aa797ada252044012a318fa3850e490022c03ab.mp3",
@@ -16288,6 +17135,13 @@
       "sha256": "b56bdc3d0e85e9fd6be179e8b32346ffcd7deaed6e9f5b930133f2cc69216ac4",
       "bytes": 32685,
       "duration": 4.007
+    },
+    "5babf0b9eb8eb6fd": {
+      "provider": "supabase",
+      "path": "morioki-normal/5babf0b9eb8eb6fd--c896840192de12066bcdb440b844dbd39a1d35502ad6a72cbd8fe3ea646fce89.mp3",
+      "sha256": "c896840192de12066bcdb440b844dbd39a1d35502ad6a72cbd8fe3ea646fce89",
+      "bytes": 13293,
+      "duration": 1.569
     },
     "5baea225a0cc8ea1": {
       "provider": "daily",
@@ -16393,6 +17247,13 @@
       "sha256": "c9f0a78855a8ad2aa93e7e8a0c25e6e323b79aaae2c90f9349e8a3c051d7d5c1",
       "bytes": 13293,
       "duration": 1.011
+    },
+    "5c1e0a12f7201ad6": {
+      "provider": "supabase",
+      "path": "morioki-normal/5c1e0a12f7201ad6--5531c029b2b0b704ebb7e50d9d54f9b56db8718ab009029294a2f6f8cfc08489.mp3",
+      "sha256": "5531c029b2b0b704ebb7e50d9d54f9b56db8718ab009029294a2f6f8cfc08489",
+      "bytes": 22125,
+      "duration": 2.684
     },
     "5c1e245bdd4f629f": {
       "provider": "supabase",
@@ -16646,6 +17507,13 @@
       "bytes": 77037,
       "duration": 9.546
     },
+    "5d252228c551b6fc": {
+      "provider": "supabase",
+      "path": "morioki-normal/5d252228c551b6fc--2a672f4c2930923d9192dda5c7dab323a61ad409fd321ad672972aef14d812bc.mp3",
+      "sha256": "2a672f4c2930923d9192dda5c7dab323a61ad409fd321ad672972aef14d812bc",
+      "bytes": 11373,
+      "duration": 1.326
+    },
     "5d2e08e96c1d4ab5": {
       "provider": "supabase",
       "path": "morioki-normal/5d2e08e96c1d4ab5--0b995f7afef49260cdee317c1e6ef821e3c4f9f858609dc7d56dbefeced6df39.mp3",
@@ -16891,6 +17759,13 @@
       "bytes": 36333,
       "duration": 4.46
     },
+    "5e653383540bc457": {
+      "provider": "supabase",
+      "path": "morioki-normal/5e653383540bc457--9fe072d2d1683a9b693270d224bcb087434e0ffb10cf29f6c6f2f0d661a6cae1.mp3",
+      "sha256": "9fe072d2d1683a9b693270d224bcb087434e0ffb10cf29f6c6f2f0d661a6cae1",
+      "bytes": 13101,
+      "duration": 1.546
+    },
     "5e6d3da9b76c40ed": {
       "provider": "daily",
       "path": "japanese/2026-09-19/example-03--fc6c3aabbe95047bf66f0cd383e382665b0e78d8677486678a3b35c487d1e919.mp3",
@@ -16968,12 +17843,26 @@
       "bytes": 15981,
       "duration": 1.918
     },
+    "5ef8b0995fdb886d": {
+      "provider": "supabase",
+      "path": "morioki-normal/5ef8b0995fdb886d--610f3d799d40487b08c0810e2e17784439b5303a4d68be5b07784dfafebec3dc.mp3",
+      "sha256": "610f3d799d40487b08c0810e2e17784439b5303a4d68be5b07784dfafebec3dc",
+      "bytes": 15981,
+      "duration": 1.918
+    },
     "5f078cd805341bb4": {
       "provider": "supabase",
       "path": "morioki-normal/5f078cd805341bb4--04090360336e705ec0284377d0ef4173821de44f4d303beb7c565dc7b6eaa136.mp3",
       "sha256": "04090360336e705ec0284377d0ef4173821de44f4d303beb7c565dc7b6eaa136",
       "bytes": 15981,
       "duration": 1.918
+    },
+    "5f108c298cc34b7d": {
+      "provider": "supabase",
+      "path": "morioki-normal/5f108c298cc34b7d--e6e4fcd8c32619c517fb4771e9a708b190d0f2e4ed82525774c8a0ff9660575c.mp3",
+      "sha256": "e6e4fcd8c32619c517fb4771e9a708b190d0f2e4ed82525774c8a0ff9660575c",
+      "bytes": 67053,
+      "duration": 8.304
     },
     "5f2861563e53d1b2": {
       "provider": "supabase",
@@ -17122,6 +18011,13 @@
       "bytes": 14253,
       "duration": 1.686
     },
+    "5fe060db02af5b17": {
+      "provider": "supabase",
+      "path": "morioki-normal/5fe060db02af5b17--2121eb9d31c90fab7fd6333dcf1732186f26c8ba4fdfb1d9d43b190b4f8b118c.mp3",
+      "sha256": "2121eb9d31c90fab7fd6333dcf1732186f26c8ba4fdfb1d9d43b190b4f8b118c",
+      "bytes": 12909,
+      "duration": 1.523
+    },
     "600c20c2ccf5e9a6": {
       "provider": "supabase",
       "path": "morioki-normal/600c20c2ccf5e9a6--99538a2030c75f1b3da8b65236f3a7aa164a1cc48ff10a09f0d3314e18f78b3a.mp3",
@@ -17191,6 +18087,13 @@
       "sha256": "a265fa4359b52a718a7e4b14d97454f1f7158d76f4768eb782740a7c769f7161",
       "bytes": 129261,
       "duration": 16.07
+    },
+    "607feba4a7609ac8": {
+      "provider": "supabase",
+      "path": "morioki-normal/607feba4a7609ac8--b2c2252e488a99cfa2f9e72f29a1d78d55bd8b364bb0d3b4d7aa8420836e1eee.mp3",
+      "sha256": "b2c2252e488a99cfa2f9e72f29a1d78d55bd8b364bb0d3b4d7aa8420836e1eee",
+      "bytes": 46893,
+      "duration": 5.762
     },
     "608146ddafeb1799": {
       "provider": "supabase",
@@ -17395,6 +18298,13 @@
       "bytes": 33453,
       "duration": 4.1
     },
+    "619e199c6a8ed648": {
+      "provider": "supabase",
+      "path": "morioki-normal/619e199c6a8ed648--e4ccef2d23d63e5216cb5468ddf090737acd29daa2c33ea164465b35c008c86c.mp3",
+      "sha256": "e4ccef2d23d63e5216cb5468ddf090737acd29daa2c33ea164465b35c008c86c",
+      "bytes": 26349,
+      "duration": 3.195
+    },
     "61a1e42041332b9c": {
       "provider": "supabase",
       "path": "morioki-normal/61a1e42041332b9c--cfd9f725b4e95b8ae68d5f77ef440e1771539cc332f846d9090080c6fa02e68a.mp3",
@@ -17471,6 +18381,13 @@
       "sha256": "281ec54c7dd76bac7c62ce20ac45e411d312dfbaf13c443a16dc45d54a10f4c5",
       "bytes": 59181,
       "duration": 7.316
+    },
+    "6207d8d67a69e8ca": {
+      "provider": "supabase",
+      "path": "morioki-normal/6207d8d67a69e8ca--274fdabf34f40429f67176c607afae05fc19bbdb0b6ea81dbed19aac34d14345.mp3",
+      "sha256": "274fdabf34f40429f67176c607afae05fc19bbdb0b6ea81dbed19aac34d14345",
+      "bytes": 27501,
+      "duration": 3.346
     },
     "6208ec992b105cf5": {
       "provider": "supabase",
@@ -17611,6 +18528,13 @@
       "sha256": "2e0fbeb5fb35ad63a11e9bf633501323a74412ab11405e39c36592f37f95ea60",
       "bytes": 46893,
       "duration": 5.762
+    },
+    "62b5b30fa17f3fbb": {
+      "provider": "supabase",
+      "path": "morioki-normal/62b5b30fa17f3fbb--7f7917ee77e82dd84b518f6129260f5c3200d44a3d89dd217d82af669583b511.mp3",
+      "sha256": "7f7917ee77e82dd84b518f6129260f5c3200d44a3d89dd217d82af669583b511",
+      "bytes": 13101,
+      "duration": 1.558
     },
     "62c55cbe410e18ba": {
       "provider": "supabase",
@@ -17857,6 +18781,13 @@
       "bytes": 40749,
       "duration": 4.994
     },
+    "6410fe8ee753916a": {
+      "provider": "supabase",
+      "path": "morioki-normal/6410fe8ee753916a--9aa3cc26f1accaab02d198efd1d6b12945473dd39de801afb4e4957ec0d2b3f2.mp3",
+      "sha256": "9aa3cc26f1accaab02d198efd1d6b12945473dd39de801afb4e4957ec0d2b3f2",
+      "bytes": 12717,
+      "duration": 1.512
+    },
     "6432539303fe084f": {
       "provider": "daily",
       "path": "japanese/2026-10-05/example-18--2cc54d9ea2de4e78129bbf28592d2844f8e82e60b68f3ece985fe2d560a9b2bd.mp3",
@@ -17947,6 +18878,13 @@
       "sha256": "efb58f5e2dc1fad2db3965b32018fb292c6209a66509a7f68ac055d532319304",
       "bytes": 13485,
       "duration": 1.593
+    },
+    "64c60d27c6c86833": {
+      "provider": "supabase",
+      "path": "morioki-normal/64c60d27c6c86833--32cd76a851564af10c84b0f1caf453f1875b7ad9a13612836c6e9e43c6bb4ca0.mp3",
+      "sha256": "32cd76a851564af10c84b0f1caf453f1875b7ad9a13612836c6e9e43c6bb4ca0",
+      "bytes": 13869,
+      "duration": 1.639
     },
     "64cc7cb54d567949": {
       "provider": "supabase",
@@ -18073,6 +19011,13 @@
       "sha256": "16551eaf07cb579f7302379bbf32ac37be922cdbc8c26100c2d1be26f05ffe15",
       "bytes": 14253,
       "duration": 1.698
+    },
+    "656519e0484e2c24": {
+      "provider": "supabase",
+      "path": "morioki-normal/656519e0484e2c24--16ac7e37d90899a8e7d36d5f95a3af33a1b3610b023170ec9b618c3aa5a3259f.mp3",
+      "sha256": "16ac7e37d90899a8e7d36d5f95a3af33a1b3610b023170ec9b618c3aa5a3259f",
+      "bytes": 27693,
+      "duration": 3.38
     },
     "656b44911902516d": {
       "provider": "supabase",
@@ -18305,6 +19250,13 @@
       "bytes": 19053,
       "duration": 2.301
     },
+    "66bd24b1aab4e94d": {
+      "provider": "supabase",
+      "path": "morioki-normal/66bd24b1aab4e94d--bd6c40e290b5a12930034a5f48afdf8fdeb6d5fa3e46ec3a9880b689a0d55154.mp3",
+      "sha256": "bd6c40e290b5a12930034a5f48afdf8fdeb6d5fa3e46ec3a9880b689a0d55154",
+      "bytes": 10413,
+      "duration": 1.222
+    },
     "66da4a67d6fdfb63": {
       "provider": "daily",
       "path": "japanese/2026-10-14/vocab-17--98709e3e4f7b6ad4a386ac1ff30fbb24b11e0e326cf3010e97b6e77a3b405174.mp3",
@@ -18494,6 +19446,13 @@
       "bytes": 61869,
       "duration": 7.64
     },
+    "67bf3215b6010131": {
+      "provider": "supabase",
+      "path": "morioki-normal/67bf3215b6010131--238f746c400ba9499ac2be21afdb3e74345af9ef79ba4322caf7fe8612af4c50.mp3",
+      "sha256": "238f746c400ba9499ac2be21afdb3e74345af9ef79ba4322caf7fe8612af4c50",
+      "bytes": 15597,
+      "duration": 1.85
+    },
     "67c097d6242f65a2": {
       "provider": "supabase",
       "path": "morioki-normal/67c097d6242f65a2--2234d180bd5c321548008afb50fbc264e94c9e3145bb3833fe0a73c862a7d5c4.mp3",
@@ -18507,6 +19466,13 @@
       "sha256": "f64aac4c4a224013a84154ce1296e4579cb0ccc037d690492484f2c0a27b1212",
       "bytes": 30765,
       "duration": 3.763
+    },
+    "67ef7dbad34ff09e": {
+      "provider": "supabase",
+      "path": "morioki-normal/67ef7dbad34ff09e--d50f8f57ea4031eb2161b09a8e8bbbf92cf34a2ebc33bbba7169089d9062090f.mp3",
+      "sha256": "d50f8f57ea4031eb2161b09a8e8bbbf92cf34a2ebc33bbba7169089d9062090f",
+      "bytes": 11757,
+      "duration": 1.373
     },
     "680081bda6fe3b41": {
       "provider": "daily",
@@ -18738,6 +19704,20 @@
       "sha256": "042776c496bb41c4f7e8d14af58088a9a3226f4ca3466ce2df9832825305c5f3",
       "bytes": 28653,
       "duration": 3.497
+    },
+    "694b7ebfb326fb23": {
+      "provider": "supabase",
+      "path": "morioki-normal/694b7ebfb326fb23--cf1042a623e290e88ca7526999c4143d68a4fa0212a7b0b188d8526e4b9ad674.mp3",
+      "sha256": "cf1042a623e290e88ca7526999c4143d68a4fa0212a7b0b188d8526e4b9ad674",
+      "bytes": 9453,
+      "duration": 1.082
+    },
+    "695f8a4e9dd17e72": {
+      "provider": "supabase",
+      "path": "morioki-normal/695f8a4e9dd17e72--9094d4dcdafc0e79c8143791bebd9769e1df272f28b6d4c4b0bff0de36f22f32.mp3",
+      "sha256": "9094d4dcdafc0e79c8143791bebd9769e1df272f28b6d4c4b0bff0de36f22f32",
+      "bytes": 25197,
+      "duration": 3.068
     },
     "696248575df9f463": {
       "provider": "supabase",
@@ -19005,6 +19985,13 @@
       "bytes": 44205,
       "duration": 5.436
     },
+    "6ac4b4fef77174f2": {
+      "provider": "supabase",
+      "path": "morioki-normal/6ac4b4fef77174f2--09c16f45468a0d6419441a17926f12222310d7f8e7daf7fb73056eea6c3d68e0.mp3",
+      "sha256": "09c16f45468a0d6419441a17926f12222310d7f8e7daf7fb73056eea6c3d68e0",
+      "bytes": 10605,
+      "duration": 1.233
+    },
     "6ac8e48474e4e9a8": {
       "provider": "supabase",
       "path": "morioki-normal/6ac8e48474e4e9a8--61aa7390f5574ffe782364bf50cb7bee26b5ddceb26685ec5a72db0a539a4ef1.mp3",
@@ -19096,6 +20083,13 @@
       "bytes": 14829,
       "duration": 1.767
     },
+    "6b1b7952336acf1e": {
+      "provider": "supabase",
+      "path": "morioki-normal/6b1b7952336acf1e--da1714aac1a6b7f6179d778c457cc208cb14665b5d28df8efce27a7f0bd2a517.mp3",
+      "sha256": "da1714aac1a6b7f6179d778c457cc208cb14665b5d28df8efce27a7f0bd2a517",
+      "bytes": 14829,
+      "duration": 1.756
+    },
     "6b1cc369a736436d": {
       "provider": "supabase",
       "path": "morioki-normal/6b1cc369a736436d--500df0b0640be16d8f7d56f3c20738ed35c0741853aca022e268ff91d6eea8e6.mp3",
@@ -19158,6 +20152,13 @@
       "sha256": "ff5ce2778e4318941d719a1e41b09c5258396d1b126dfd1a8626bb54798045d0",
       "bytes": 128109,
       "duration": 15.931
+    },
+    "6b3ac8fcc268ad50": {
+      "provider": "supabase",
+      "path": "morioki-normal/6b3ac8fcc268ad50--c3124e31d32c1b759ae638de10bf4e235afc7e78d93ee4ace29d16e3ee7f614f.mp3",
+      "sha256": "c3124e31d32c1b759ae638de10bf4e235afc7e78d93ee4ace29d16e3ee7f614f",
+      "bytes": 17901,
+      "duration": 2.15
     },
     "6b55d757affcb03b": {
       "provider": "supabase",
@@ -19334,6 +20335,13 @@
       "bytes": 60813,
       "duration": 4.98
     },
+    "6c0b5a410ed06f45": {
+      "provider": "supabase",
+      "path": "morioki-normal/6c0b5a410ed06f45--ad78bf8fbce7011997a20c61389e9ecb71d3452ee28c58359b84ec56b85e5424.mp3",
+      "sha256": "ad78bf8fbce7011997a20c61389e9ecb71d3452ee28c58359b84ec56b85e5424",
+      "bytes": 10797,
+      "duration": 1.256
+    },
     "6c0c9eb909f3e3dd": {
       "provider": "supabase",
       "path": "morioki-normal/6c0c9eb909f3e3dd--b5c6eb70637cc0b2f0484af28b8ae0aa2e01ee506f803ea95e8109e7bef7b0f8.mp3",
@@ -19382,6 +20390,13 @@
       "sha256": "c8ef139598087aff2eafa4e439253935713b101a480a1f5bd35eb12e82ec6844",
       "bytes": 13293,
       "duration": 1.011
+    },
+    "6c63bd3829756244": {
+      "provider": "supabase",
+      "path": "morioki-normal/6c63bd3829756244--26fc92be6c918b02f137658c5a07270cce5cbfaff636075ba069f28c19d99adb.mp3",
+      "sha256": "26fc92be6c918b02f137658c5a07270cce5cbfaff636075ba069f28c19d99adb",
+      "bytes": 11181,
+      "duration": 1.303
     },
     "6c6fabaae444c07e": {
       "provider": "daily",
@@ -19438,6 +20453,20 @@
       "sha256": "8ffc258b42d8ec7c99901fe13cb3903086753abeafdaa4b000e3bb91f4648f5c",
       "bytes": 30381,
       "duration": 3.706
+    },
+    "6cb523f8fb4ffac4": {
+      "provider": "supabase",
+      "path": "morioki-normal/6cb523f8fb4ffac4--4bbc2a716a0084fe0dc7ff852274b16865d4ed4ab0453ac1241ee72e9d774d9b.mp3",
+      "sha256": "4bbc2a716a0084fe0dc7ff852274b16865d4ed4ab0453ac1241ee72e9d774d9b",
+      "bytes": 25581,
+      "duration": 3.114
+    },
+    "6cc07f3aea8d08ce": {
+      "provider": "supabase",
+      "path": "morioki-normal/6cc07f3aea8d08ce--7ac5ce2f15c6563f56dedf8fe265a9726c1d11bb08d4b6b41dd6e74b8602108d.mp3",
+      "sha256": "7ac5ce2f15c6563f56dedf8fe265a9726c1d11bb08d4b6b41dd6e74b8602108d",
+      "bytes": 11565,
+      "duration": 1.349
     },
     "6cc4d87ec4311fd2": {
       "provider": "supabase",
@@ -19543,6 +20572,13 @@
       "sha256": "7c8a4a9d9b08d3d8e43a529ec113e90aa3af5de19380763b036c267d21dad3e6",
       "bytes": 40557,
       "duration": 4.983
+    },
+    "6d40b237231d25c3": {
+      "provider": "supabase",
+      "path": "morioki-normal/6d40b237231d25c3--dbd48e3107840a0bc1c95126543d0e289246d69055305c5dd41c62b147b62c13.mp3",
+      "sha256": "dbd48e3107840a0bc1c95126543d0e289246d69055305c5dd41c62b147b62c13",
+      "bytes": 50157,
+      "duration": 6.179
     },
     "6d468d0787c97ca3": {
       "provider": "daily",
@@ -20181,6 +21217,20 @@
       "bytes": 67053,
       "duration": 8.303
     },
+    "70607a28d190d6cc": {
+      "provider": "supabase",
+      "path": "morioki-normal/70607a28d190d6cc--97857c3373f789c7977421330780c684618a42752e02ddf9d85e2d9b2ae3925a.mp3",
+      "sha256": "97857c3373f789c7977421330780c684618a42752e02ddf9d85e2d9b2ae3925a",
+      "bytes": 9261,
+      "duration": 1.071
+    },
+    "7061ced93afdd655": {
+      "provider": "supabase",
+      "path": "morioki-normal/7061ced93afdd655--36d91527b314e0ebc78d0d743ea0c1cfcb1b0feb6a41be3562f6807b586d8ce7.mp3",
+      "sha256": "36d91527b314e0ebc78d0d743ea0c1cfcb1b0feb6a41be3562f6807b586d8ce7",
+      "bytes": 19629,
+      "duration": 2.359
+    },
     "7063bcd6a0694a4a": {
       "provider": "supabase",
       "path": "morioki-normal/7063bcd6a0694a4a--37504716e9c321c5e8b46cebec586bfff0e02251b1892890c5dccc482d994874.mp3",
@@ -20257,6 +21307,13 @@
       "sha256": "629918d1413a20f99155df80ddc1f6814cf5c1f4c44e7f188f54650cb2d89dcf",
       "bytes": 14733,
       "duration": 1.138
+    },
+    "70e94cde95973412": {
+      "provider": "supabase",
+      "path": "morioki-normal/70e94cde95973412--d791590309ad6704bde9c058950c2e9bdd1aab1c791cfe86dc786b2d4bf9e0fb.mp3",
+      "sha256": "d791590309ad6704bde9c058950c2e9bdd1aab1c791cfe86dc786b2d4bf9e0fb",
+      "bytes": 40557,
+      "duration": 4.983
     },
     "70eaee49e7ae14bd": {
       "provider": "supabase",
@@ -20454,6 +21511,13 @@
       "bytes": 63405,
       "duration": 5.186
     },
+    "71a1f035bfc709f9": {
+      "provider": "supabase",
+      "path": "morioki-normal/71a1f035bfc709f9--674e04ad913defc4592f111881cd06439f6c548a5e18ec850dfb1d9ca8cdd180.mp3",
+      "sha256": "674e04ad913defc4592f111881cd06439f6c548a5e18ec850dfb1d9ca8cdd180",
+      "bytes": 10797,
+      "duration": 1.256
+    },
     "71a45bc3a414f567": {
       "provider": "supabase",
       "path": "morioki-normal/71a45bc3a414f567--cba9cedfb7abc496afb79dae10f391a6d95bac8b6588101b86e27c3ed7ac2fee.mp3",
@@ -20467,6 +21531,13 @@
       "sha256": "7b4b9fe2e9d75dc23bc2a0cadb162765828ffe4f4041b988beb80b575c9695d3",
       "bytes": 98349,
       "duration": 12.194
+    },
+    "71d3e888682817cc": {
+      "provider": "supabase",
+      "path": "morioki-normal/71d3e888682817cc--0f2f653794350fecffc45ae3bdfda1f47a40d93796cdf4315037925df9213069.mp3",
+      "sha256": "0f2f653794350fecffc45ae3bdfda1f47a40d93796cdf4315037925df9213069",
+      "bytes": 12333,
+      "duration": 1.454
     },
     "71d85783e7374ecf": {
       "provider": "daily",
@@ -20496,6 +21567,20 @@
       "bytes": 64557,
       "duration": 7.988
     },
+    "72023f7461b15d98": {
+      "provider": "supabase",
+      "path": "morioki-normal/72023f7461b15d98--91f6b2097221d48cc6f1e56e76ea6306d51b67e60817ace2ae9bf9064349e37f.mp3",
+      "sha256": "91f6b2097221d48cc6f1e56e76ea6306d51b67e60817ace2ae9bf9064349e37f",
+      "bytes": 11181,
+      "duration": 1.303
+    },
+    "72078dcd8620df39": {
+      "provider": "supabase",
+      "path": "morioki-normal/72078dcd8620df39--72fdb81c1c980d5e5e4cebe7b625ff92d81d7bf92b31d84d81c6cd81f8324026.mp3",
+      "sha256": "72fdb81c1c980d5e5e4cebe7b625ff92d81d7bf92b31d84d81c6cd81f8324026",
+      "bytes": 15021,
+      "duration": 1.779
+    },
     "722a1956dda57742": {
       "provider": "supabase",
       "path": "morioki-normal/722a1956dda57742--8ac2f0e07cc493dec9cf37a83ca6a8c4e9df9238d5761a69ccde18f6b3b9e84d.mp3",
@@ -20524,6 +21609,13 @@
       "bytes": 77613,
       "duration": 9.615
     },
+    "726044a36143219f": {
+      "provider": "supabase",
+      "path": "morioki-normal/726044a36143219f--754177a58e3808cdeadea639826e0dc20424b9cd5194551b1ca242a8b62db967.mp3",
+      "sha256": "754177a58e3808cdeadea639826e0dc20424b9cd5194551b1ca242a8b62db967",
+      "bytes": 82605,
+      "duration": 10.242
+    },
     "7268d60ee3d79a1a": {
       "provider": "supabase",
       "path": "morioki-normal/7268d60ee3d79a1a--2f1a530bc1f3885f9009baf3e1c91575716e5f66dfe7882e5572994dcaaf3b6c.mp3",
@@ -20537,6 +21629,13 @@
       "sha256": "272f37d9cc6cb435060353d6946e14f3e9f9f6b4cbae671990c0d4f06bac3325",
       "bytes": 18861,
       "duration": 2.267
+    },
+    "72a0062fb91ee90b": {
+      "provider": "supabase",
+      "path": "morioki-normal/72a0062fb91ee90b--6fef96f1ba32156aafacf919ffc4ab2afc96c1a446bb1b754194ef5c900f4912.mp3",
+      "sha256": "6fef96f1ba32156aafacf919ffc4ab2afc96c1a446bb1b754194ef5c900f4912",
+      "bytes": 12141,
+      "duration": 1.431
     },
     "72a237f06380fa84": {
       "provider": "supabase",
@@ -20754,6 +21853,13 @@
       "sha256": "7141d1a8a18f5351a88e3ef9983ab110b981157cb536734bf3e27ed8b372074b",
       "bytes": 11949,
       "duration": 1.407
+    },
+    "73cad9cb56bf81ff": {
+      "provider": "supabase",
+      "path": "morioki-normal/73cad9cb56bf81ff--4caebda22bbb0c77ae931a0c47a928299a4a5c098349feee48ed22030254076f.mp3",
+      "sha256": "4caebda22bbb0c77ae931a0c47a928299a4a5c098349feee48ed22030254076f",
+      "bytes": 17709,
+      "duration": 2.127
     },
     "73cf31ce5f98a5a2": {
       "provider": "supabase",
@@ -21203,6 +22309,13 @@
       "bytes": 31341,
       "duration": 3.822
     },
+    "75a0329ca3cef600": {
+      "provider": "supabase",
+      "path": "morioki-normal/75a0329ca3cef600--384e93de9917fb169db9f59d025c0de962436252fc6c3a947f4ce638a4d45e40.mp3",
+      "sha256": "384e93de9917fb169db9f59d025c0de962436252fc6c3a947f4ce638a4d45e40",
+      "bytes": 22509,
+      "duration": 2.731
+    },
     "75afed8bbd9fdbf7": {
       "provider": "supabase",
       "path": "morioki-normal/75afed8bbd9fdbf7--d4c00a30c34258dc8da27210996cf5bc256ef6f14be7d0bef9de108862e1c938.mp3",
@@ -21322,6 +22435,13 @@
       "bytes": 11181,
       "duration": 1.303
     },
+    "761f5e309363fe14": {
+      "provider": "supabase",
+      "path": "morioki-normal/761f5e309363fe14--a8a45722d40c5593216257b583cb018862f1c6b3d65233129760bb1776034153.mp3",
+      "sha256": "a8a45722d40c5593216257b583cb018862f1c6b3d65233129760bb1776034153",
+      "bytes": 36141,
+      "duration": 4.437
+    },
     "762b4b423fb800ee": {
       "provider": "supabase",
       "path": "morioki-normal/762b4b423fb800ee--db188236840fe9696edc982d4479bbd0d99c0a9fffdbdb60e5df3d19c4011884.mp3",
@@ -21384,6 +22504,13 @@
       "bytes": 65709,
       "duration": 5.448,
       "sha256": "a9cc8d40e53bbe7df9f495315c56c14347e5e06b81ee7dde6727d84c46c77342"
+    },
+    "768aeeaf2a6b5b43": {
+      "provider": "supabase",
+      "path": "morioki-normal/768aeeaf2a6b5b43--86b28999189c353fa1be9473b754ef2f3415a781332f8621f5f155e84c3c1237.mp3",
+      "sha256": "86b28999189c353fa1be9473b754ef2f3415a781332f8621f5f155e84c3c1237",
+      "bytes": 12333,
+      "duration": 1.454
     },
     "76911955e464da51": {
       "provider": "supabase",
@@ -21469,6 +22596,13 @@
       "bytes": 57357,
       "duration": 4.689
     },
+    "771aa932741dfc86": {
+      "provider": "supabase",
+      "path": "morioki-normal/771aa932741dfc86--9999a29db1df0a0b96e00dc4a50e8def2b354a88efabffed09df3974b2397353.mp3",
+      "sha256": "9999a29db1df0a0b96e00dc4a50e8def2b354a88efabffed09df3974b2397353",
+      "bytes": 15981,
+      "duration": 1.907
+    },
     "7722cb5093c4e3c4": {
       "provider": "supabase",
       "path": "morioki-normal/7722cb5093c4e3c4--30bc2a3beb6da7e07aac2e39902f0f91af8a288bf9344efb5bef477184aedfe0.mp3",
@@ -21539,6 +22673,13 @@
       "bytes": 14637,
       "duration": 1.732
     },
+    "77818602f8e44cf6": {
+      "provider": "supabase",
+      "path": "morioki-normal/77818602f8e44cf6--6a34466ada6a213d5d2df9bc911615917474302e9915bd059099051d30777ba7.mp3",
+      "sha256": "6a34466ada6a213d5d2df9bc911615917474302e9915bd059099051d30777ba7",
+      "bytes": 13869,
+      "duration": 1.651
+    },
     "7785bfa82bb40ab4": {
       "provider": "supabase",
       "path": "morioki-normal/7785bfa82bb40ab4--3b4b5610e1c1531f132a98ccc58eea2febf6e4e7ac1f8b01be5fea2a5e2adc81.mp3",
@@ -21552,6 +22693,13 @@
       "sha256": "51997e1af843ced2bbfd93f0d0539e8749555ee830b66d55190d369200275a1b",
       "bytes": 56493,
       "duration": 4.62
+    },
+    "7788bd3938455e95": {
+      "provider": "supabase",
+      "path": "morioki-normal/7788bd3938455e95--ce99cda3ea0b2a0092a9597b67b2ed35ebe81da375362c8176e031aa046c723a.mp3",
+      "sha256": "ce99cda3ea0b2a0092a9597b67b2ed35ebe81da375362c8176e031aa046c723a",
+      "bytes": 23085,
+      "duration": 2.788
     },
     "778aa07ad19377f6": {
       "provider": "supabase",
@@ -21665,6 +22813,13 @@
       "bytes": 31917,
       "duration": 3.892
     },
+    "77db730ac807aba6": {
+      "provider": "supabase",
+      "path": "morioki-normal/77db730ac807aba6--1ff4b8deef85b2543b6e66d1f5973d1e628b428279de2893e1dce0c1a7466b10.mp3",
+      "sha256": "1ff4b8deef85b2543b6e66d1f5973d1e628b428279de2893e1dce0c1a7466b10",
+      "bytes": 19821,
+      "duration": 2.382
+    },
     "77e5a7230c359407": {
       "provider": "supabase",
       "path": "morioki-normal/77e5a7230c359407--03227ccd23ece8bb2f4b71128e125af77ae07325128a3697e81e621bdb4efb5c.mp3",
@@ -21720,6 +22875,13 @@
       "sha256": "ff573436853804d2de5d28e181e3d84e6f7a64742a0929e3d2e396f335ae6a22",
       "bytes": 34989,
       "duration": 4.274
+    },
+    "783c12344c03ced0": {
+      "provider": "supabase",
+      "path": "morioki-normal/783c12344c03ced0--38c10474fc424027daff907d469793c6952c8ffc7237fce571460a609c1da314.mp3",
+      "sha256": "38c10474fc424027daff907d469793c6952c8ffc7237fce571460a609c1da314",
+      "bytes": 31341,
+      "duration": 3.822
     },
     "78691e2ccf2edb70": {
       "provider": "daily",
@@ -21790,6 +22952,13 @@
       "sha256": "1618188955d59e8f401faa37f189f42878fecba49cd4945cff06c285be1b4be0",
       "bytes": 13677,
       "duration": 1.616
+    },
+    "78c43f38addb011c": {
+      "provider": "supabase",
+      "path": "morioki-normal/78c43f38addb011c--486db11ebfd5dfd576eded4a644c721b8faebca22c0d50a604c8246da2056508.mp3",
+      "sha256": "486db11ebfd5dfd576eded4a644c721b8faebca22c0d50a604c8246da2056508",
+      "bytes": 11565,
+      "duration": 1.361
     },
     "78d5dcb73fd31feb": {
       "provider": "supabase",
@@ -22001,6 +23170,13 @@
       "bytes": 22125,
       "duration": 2.673
     },
+    "79c5c1ab769d0bd7": {
+      "provider": "supabase",
+      "path": "morioki-normal/79c5c1ab769d0bd7--44f6264439be7a0b3dfa7035e30fe856f866b1863639c36a9815def764ba9d0c.mp3",
+      "sha256": "44f6264439be7a0b3dfa7035e30fe856f866b1863639c36a9815def764ba9d0c",
+      "bytes": 15213,
+      "duration": 1.813
+    },
     "79c8eed27f757d3e": {
       "provider": "supabase",
       "path": "morioki-normal/79c8eed27f757d3e--819b0749d8b6ac431f25c0a20b1b0735fd748642832ac47b760d0932ab66e1ce.mp3",
@@ -22127,6 +23303,13 @@
       "bytes": 14445,
       "duration": 1.115
     },
+    "7ab89e822197587e": {
+      "provider": "supabase",
+      "path": "morioki-normal/7ab89e822197587e--1298b5cf10a4554a5a4a08b5d0afc4dcea16890406310bd078f5b613910c1119.mp3",
+      "sha256": "1298b5cf10a4554a5a4a08b5d0afc4dcea16890406310bd078f5b613910c1119",
+      "bytes": 29421,
+      "duration": 3.59
+    },
     "7ac08d60b46bbe9c": {
       "provider": "supabase",
       "path": "morioki-normal/7ac08d60b46bbe9c--76e5cf5d7737dc6fdcf5ecc9f5cc06d60537a4dcd4aef0cb12fc7982250af7f7.mp3",
@@ -22169,12 +23352,26 @@
       "bytes": 38637,
       "duration": 4.751
     },
+    "7afb419116d5ae45": {
+      "provider": "supabase",
+      "path": "morioki-normal/7afb419116d5ae45--ec072aa2b6eafca6498d041a0003e3b36fe3dcf5192f98a7ae23e6fb0667a88f.mp3",
+      "sha256": "ec072aa2b6eafca6498d041a0003e3b36fe3dcf5192f98a7ae23e6fb0667a88f",
+      "bytes": 14445,
+      "duration": 1.72
+    },
     "7afce791b9227415": {
       "provider": "supabase",
       "path": "morioki-normal/7afce791b9227415--5a1204005bbe0845978c97ab7f711ec131ef7d65b6300772016f3047df0dfc1a.mp3",
       "sha256": "5a1204005bbe0845978c97ab7f711ec131ef7d65b6300772016f3047df0dfc1a",
       "bytes": 9645,
       "duration": 1.117
+    },
+    "7b196dec1a7681c0": {
+      "provider": "supabase",
+      "path": "morioki-normal/7b196dec1a7681c0--a4e4001daa7db16079a73a95f2514f8106fb249fef4e1fcdafabd40340d22f38.mp3",
+      "sha256": "a4e4001daa7db16079a73a95f2514f8106fb249fef4e1fcdafabd40340d22f38",
+      "bytes": 55149,
+      "duration": 6.806
     },
     "7b1f697c35d63618": {
       "provider": "supabase",
@@ -22252,6 +23449,13 @@
       "sha256": "8ce0a4c186ea14019bf3c756c56e71e2d22f07508de244a02f46696911710be5",
       "bytes": 16173,
       "duration": 1.941
+    },
+    "7b8b6f9c2117b5f8": {
+      "provider": "supabase",
+      "path": "morioki-normal/7b8b6f9c2117b5f8--f733b5f4066e52d5e9a11ad2794733f7e62c61b47c955adaf9973687146256d3.mp3",
+      "sha256": "f733b5f4066e52d5e9a11ad2794733f7e62c61b47c955adaf9973687146256d3",
+      "bytes": 13485,
+      "duration": 1.593
     },
     "7b8fc3d5da6da619": {
       "provider": "daily",
@@ -22518,6 +23722,13 @@
       "bytes": 62829,
       "duration": 5.208,
       "sha256": "0ba5f9af2d593f6c03bf1ad8b7b16ffd11526f1a6299fc8b401d59aa399b3018"
+    },
+    "7d577424b19122a8": {
+      "provider": "supabase",
+      "path": "morioki-normal/7d577424b19122a8--e2df875a7bc60ba00b67cc3e74c3e3a7bc8e8294922d502974bc03b650036046.mp3",
+      "sha256": "e2df875a7bc60ba00b67cc3e74c3e3a7bc8e8294922d502974bc03b650036046",
+      "bytes": 27117,
+      "duration": 3.311
     },
     "7d5d626f3f48cf73": {
       "provider": "supabase",
@@ -22862,6 +24073,13 @@
       "bytes": 44013,
       "duration": 5.402
     },
+    "7f10c424ca286bd8": {
+      "provider": "supabase",
+      "path": "morioki-normal/7f10c424ca286bd8--2cb4c4ee374ec8c495462513dd95f6c211d71a59fa89061566fee43e803b28ad.mp3",
+      "sha256": "2cb4c4ee374ec8c495462513dd95f6c211d71a59fa89061566fee43e803b28ad",
+      "bytes": 12717,
+      "duration": 1.512
+    },
     "7f156cd35c63c7ef": {
       "provider": "supabase",
       "path": "morioki-normal/7f156cd35c63c7ef--3c10699f51c58cb4a6efc6a9f6277d164b592a49a9b381d328bfe9d335a60a05.mp3",
@@ -23135,6 +24353,13 @@
       "bytes": 36717,
       "duration": 4.496
     },
+    "80823d4a02cdb166": {
+      "provider": "supabase",
+      "path": "morioki-normal/80823d4a02cdb166--dae148bfca862cbf89f28d987a2b70c3ff8593910f276f545b0c312523c0e8ad.mp3",
+      "sha256": "dae148bfca862cbf89f28d987a2b70c3ff8593910f276f545b0c312523c0e8ad",
+      "bytes": 16941,
+      "duration": 2.022
+    },
     "808df7b894a69064": {
       "provider": "daily",
       "path": "japanese/2026-10-23/example-04--8f64d189c975099bded2cba6abb9ea07b61eaaa521f4a350dd9a7b689c0dd9b1.mp3",
@@ -23296,6 +24521,13 @@
       "bytes": 32685,
       "duration": 4.008
     },
+    "819cd526cea01ca2": {
+      "provider": "supabase",
+      "path": "morioki-normal/819cd526cea01ca2--2a4cde673e79d4f1fe9a9ef757c5baecc653e4965427d1a35daaa5571f0745b0.mp3",
+      "sha256": "2a4cde673e79d4f1fe9a9ef757c5baecc653e4965427d1a35daaa5571f0745b0",
+      "bytes": 20013,
+      "duration": 2.417
+    },
     "81ada93a9ff64116": {
       "provider": "supabase",
       "path": "morioki-normal/81ada93a9ff64116--71773809025e19c846d1d8729190be5444f63fdc4d5d07d51f47f2d1bc15306b.mp3",
@@ -23316,6 +24548,13 @@
       "sha256": "12aa6ad5da6db1ed723e0b930d424d3c746fa6e26fd089c591db094d796c0c8b",
       "bytes": 9645,
       "duration": 1.106
+    },
+    "81e1598856be99d4": {
+      "provider": "supabase",
+      "path": "morioki-normal/81e1598856be99d4--277a401a1cc280d700e9528b7a641cb61758f63f2a3e954981af21a14be89148.mp3",
+      "sha256": "277a401a1cc280d700e9528b7a641cb61758f63f2a3e954981af21a14be89148",
+      "bytes": 26541,
+      "duration": 3.219
     },
     "81e87b86ebec7ca2": {
       "provider": "supabase",
@@ -23407,6 +24646,13 @@
       "sha256": "a76fc500b529bb265b6cdd278e1565ec2b337ee1f6b39b5417a9a332b2ab4dfa",
       "bytes": 76941,
       "duration": 6.325
+    },
+    "8243af08e983934c": {
+      "provider": "supabase",
+      "path": "morioki-normal/8243af08e983934c--a2a89d91b703ddbf82e921696025e3863c26d961620199d2b280ccd9029a14ec.mp3",
+      "sha256": "a2a89d91b703ddbf82e921696025e3863c26d961620199d2b280ccd9029a14ec",
+      "bytes": 33261,
+      "duration": 4.078
     },
     "824b7efdcd71e819": {
       "provider": "supabase",
@@ -23919,6 +25165,13 @@
       "bytes": 13293,
       "duration": 1.011
     },
+    "8555f34149a1a2ed": {
+      "provider": "supabase",
+      "path": "morioki-normal/8555f34149a1a2ed--2faf5b729f0e7c6e1179ea9052b0ceb86aaa00b1f8ff298d09727f22b3e3893b.mp3",
+      "sha256": "2faf5b729f0e7c6e1179ea9052b0ceb86aaa00b1f8ff298d09727f22b3e3893b",
+      "bytes": 31917,
+      "duration": 3.903
+    },
     "855e46bb5dc32d47": {
       "provider": "supabase",
       "path": "morioki-normal/855e46bb5dc32d47--51ddae6ca0a121c66bb8104c0fd6175e18763272092ed476badf3fc8f9d5c376.mp3",
@@ -24262,6 +25515,13 @@
       "bytes": 15597,
       "duration": 1.85
     },
+    "87a04ec01fd8c72c": {
+      "provider": "supabase",
+      "path": "morioki-normal/87a04ec01fd8c72c--0b1a6c6df627ac74121412e216a61f6ed7c32a0779ad352150b99592e3924e9e.mp3",
+      "sha256": "0b1a6c6df627ac74121412e216a61f6ed7c32a0779ad352150b99592e3924e9e",
+      "bytes": 20781,
+      "duration": 2.51
+    },
     "87b448fcdf510048": {
       "provider": "supabase",
       "path": "morioki-normal/87b448fcdf510048--56b1f0af3a3a2df600efcdb24d52d0beec88ac6cc9ca909271a70210cb2a7d0f.mp3",
@@ -24338,6 +25598,13 @@
       "sha256": "8fb3104238b10e8f5de49bcabfce513a3c8df57d61d845057716b66b86039424",
       "bytes": 35181,
       "duration": 4.298
+    },
+    "882c677e5b7b2a72": {
+      "provider": "supabase",
+      "path": "morioki-normal/882c677e5b7b2a72--90134ba9ba3ea6f317c88f6aebac0b6ad04001ec8419b49c21cc7380626ff255.mp3",
+      "sha256": "90134ba9ba3ea6f317c88f6aebac0b6ad04001ec8419b49c21cc7380626ff255",
+      "bytes": 10797,
+      "duration": 1.256
     },
     "8831b1946d61b168": {
       "provider": "supabase",
@@ -24507,6 +25774,13 @@
       "bytes": 17325,
       "duration": 1.347
     },
+    "89250f6fc23b199b": {
+      "provider": "supabase",
+      "path": "morioki-normal/89250f6fc23b199b--2dc7ed70b7d3f5ec384b490b9900e213299d9b9cd77dd57d54cb937beb549639.mp3",
+      "sha256": "2dc7ed70b7d3f5ec384b490b9900e213299d9b9cd77dd57d54cb937beb549639",
+      "bytes": 15981,
+      "duration": 1.918
+    },
     "8936b5ab608c065f": {
       "provider": "daily",
       "path": "japanese/2026-09-30/vocab-01--857f989d4568268908aeb65e42f26ae8db34a5a3c85ccdfbc5102dd90ccc1bba.mp3",
@@ -24626,6 +25900,13 @@
       "bytes": 52077,
       "duration": 6.422
     },
+    "89c7df6e39ebcf72": {
+      "provider": "supabase",
+      "path": "morioki-normal/89c7df6e39ebcf72--69cabc225989987299946750c43b3db5f096795cbd2a7449531e197074d71057.mp3",
+      "sha256": "69cabc225989987299946750c43b3db5f096795cbd2a7449531e197074d71057",
+      "bytes": 88365,
+      "duration": 10.95
+    },
     "89d657cb02bafbef": {
       "provider": "daily",
       "path": "japanese/2026-10-15/example-03--c575d0be76e5b53ed530de8853279c3313b904a013637a60ed93095fdc635288.mp3",
@@ -24709,6 +25990,13 @@
       "sha256": "0320fa25d6fa3aeb91bbc3ec8b27091e53d49809a567bc3ac88ca64a578671a0",
       "bytes": 15597,
       "duration": 1.86
+    },
+    "8a18f36dd3476de9": {
+      "provider": "supabase",
+      "path": "morioki-normal/8a18f36dd3476de9--6dc71941a8cd08774206a4d03c99d961cb8b0288f0212770726efd4edec5aa61.mp3",
+      "sha256": "6dc71941a8cd08774206a4d03c99d961cb8b0288f0212770726efd4edec5aa61",
+      "bytes": 11373,
+      "duration": 1.338
     },
     "8a1af558941c8654": {
       "provider": "daily",
@@ -24821,6 +26109,13 @@
       "sha256": "61b9dd9490720792b3e54e93a021eff03183ffee71d4e31284a2385d24e70379",
       "bytes": 41517,
       "duration": 5.099
+    },
+    "8a923de4d0453710": {
+      "provider": "supabase",
+      "path": "morioki-normal/8a923de4d0453710--40be5ec0c91463960765f3595ea13086356ddcfa8e83fea94a7547dc9022702a.mp3",
+      "sha256": "40be5ec0c91463960765f3595ea13086356ddcfa8e83fea94a7547dc9022702a",
+      "bytes": 22893,
+      "duration": 2.766
     },
     "8a944f50761be68c": {
       "provider": "supabase",
@@ -25165,6 +26460,13 @@
       "bytes": 15021,
       "duration": 1.79
     },
+    "8c0356fcd13835c8": {
+      "provider": "supabase",
+      "path": "morioki-normal/8c0356fcd13835c8--221786787b96d9f77831e6c344c86f72a4e0357e89f8a8adeebbacee70956fa2.mp3",
+      "sha256": "221786787b96d9f77831e6c344c86f72a4e0357e89f8a8adeebbacee70956fa2",
+      "bytes": 28077,
+      "duration": 3.428
+    },
     "8c06f459d67f3125": {
       "provider": "supabase",
       "path": "morioki-normal/8c06f459d67f3125--ba96d594366458da8e6bd3965d46bcfa69a7b08b2889dd4002b5feac4a9ce4bd.mp3",
@@ -25234,6 +26536,13 @@
       "sha256": "614799aff66fce6767704c8905f98abdf72840ed638b300f60a4ea4d505949ee",
       "bytes": 31725,
       "duration": 3.88
+    },
+    "8c3c428bca78da67": {
+      "provider": "supabase",
+      "path": "morioki-normal/8c3c428bca78da67--b291aad4f9681b3ef21e8a46dff54f35a6b4e1c49c7f30d43dbbbdf0688d00b1.mp3",
+      "sha256": "b291aad4f9681b3ef21e8a46dff54f35a6b4e1c49c7f30d43dbbbdf0688d00b1",
+      "bytes": 17709,
+      "duration": 2.116
     },
     "8c4b0a126724503e": {
       "provider": "daily",
@@ -25438,6 +26747,13 @@
       "bytes": 46509,
       "duration": 5.726
     },
+    "8d761f4b4723fb57": {
+      "provider": "supabase",
+      "path": "morioki-normal/8d761f4b4723fb57--40fed01dd5e569fc886933c4d085d2ce81afab14d471775b7025c5626fdfb7b2.mp3",
+      "sha256": "40fed01dd5e569fc886933c4d085d2ce81afab14d471775b7025c5626fdfb7b2",
+      "bytes": 22893,
+      "duration": 2.765
+    },
     "8d78524aa75ba2f6": {
       "provider": "supabase",
       "path": "morioki-normal/8d78524aa75ba2f6--1d436068e739c80ba29fc8d57b99fa80ea74c3fa53be9d8316910fa86d9cd02d.mp3",
@@ -25480,6 +26796,13 @@
       "bytes": 29229,
       "duration": 3.567
     },
+    "8d99c58d3a18dab1": {
+      "provider": "supabase",
+      "path": "morioki-normal/8d99c58d3a18dab1--e7df83f049d4984f4e590b25d392de169b3bfee84d0f60ae003ab0f0630c6441.mp3",
+      "sha256": "e7df83f049d4984f4e590b25d392de169b3bfee84d0f60ae003ab0f0630c6441",
+      "bytes": 11181,
+      "duration": 1.302
+    },
     "8dae3bc4a31646a8": {
       "provider": "daily",
       "path": "japanese/2026-10-03/vocab-01--a161f7d6ae4d36e0f0887420f903607dbd99cdb9fce8d3a58d896b828837ec99.mp3",
@@ -25515,6 +26838,13 @@
       "bytes": 27117,
       "duration": 3.29
     },
+    "8de444de79173ff2": {
+      "provider": "supabase",
+      "path": "morioki-normal/8de444de79173ff2--e75d04f0a0f8ae333a9bad712a6953c311fd21f7994ae5ab0c893fa5e9985518.mp3",
+      "sha256": "e75d04f0a0f8ae333a9bad712a6953c311fd21f7994ae5ab0c893fa5e9985518",
+      "bytes": 12141,
+      "duration": 1.418
+    },
     "8df90dabb258e7c7": {
       "provider": "supabase",
       "path": "morioki-normal/8df90dabb258e7c7--75c4b33f4cb9be2c9f6a87af94deff99d92c7227a8cfc9da8d6d41443b3dbdfc.mp3",
@@ -25542,6 +26872,13 @@
       "sha256": "35ee54967ca4f4e6fd9bf5f18b7cb4ddad6e79d604b20af0275e64e745de9966",
       "bytes": 12717,
       "duration": 1.512
+    },
+    "8e032b4eeaebef62": {
+      "provider": "supabase",
+      "path": "morioki-normal/8e032b4eeaebef62--88548fa14a3ceb42846b17e41a6aa692169d1643c1d367e545fc621c3bbdd826.mp3",
+      "sha256": "88548fa14a3ceb42846b17e41a6aa692169d1643c1d367e545fc621c3bbdd826",
+      "bytes": 12333,
+      "duration": 1.454
     },
     "8e06445e59faf9ea": {
       "provider": "supabase",
@@ -26117,6 +27454,20 @@
       "bytes": 16557,
       "duration": 1.976
     },
+    "90d863f9d1c4eb05": {
+      "provider": "supabase",
+      "path": "morioki-normal/90d863f9d1c4eb05--02eb8e93fbb320ae99611806754ff00a066253f23efb1c1597ea2f83a40cc4ef.mp3",
+      "sha256": "02eb8e93fbb320ae99611806754ff00a066253f23efb1c1597ea2f83a40cc4ef",
+      "bytes": 13293,
+      "duration": 1.581
+    },
+    "90e43fa0a2f0fcdc": {
+      "provider": "supabase",
+      "path": "morioki-normal/90e43fa0a2f0fcdc--d06bcc125e44a8f6413a896ed2ae84fe812483a7b111d47e298cdc80a9c54d08.mp3",
+      "sha256": "d06bcc125e44a8f6413a896ed2ae84fe812483a7b111d47e298cdc80a9c54d08",
+      "bytes": 34797,
+      "duration": 4.263
+    },
     "90e50ce93ab4d785": {
       "provider": "supabase",
       "path": "morioki-normal/90e50ce93ab4d785--28ca2916d427daebe2b018fd924a605f7ca208ae35e71537014d7b58fb7718b9.mp3",
@@ -26194,12 +27545,26 @@
       "bytes": 11373,
       "duration": 1.338
     },
+    "913e69b506cbd929": {
+      "provider": "supabase",
+      "path": "morioki-normal/913e69b506cbd929--716cd2e4b48c6dc8951f029d0e983036fcb8e68750c811271a8cc452ae53ced3.mp3",
+      "sha256": "716cd2e4b48c6dc8951f029d0e983036fcb8e68750c811271a8cc452ae53ced3",
+      "bytes": 10605,
+      "duration": 1.233
+    },
     "914ec9436b0cbb77": {
       "provider": "supabase",
       "path": "morioki-normal/914ec9436b0cbb77--70f86efbc7cbf7456aa1db4a3314f989de5d3424b55ad68142a5451f8d9e1e8d.mp3",
       "sha256": "70f86efbc7cbf7456aa1db4a3314f989de5d3424b55ad68142a5451f8d9e1e8d",
       "bytes": 9645,
       "duration": 1.106
+    },
+    "915d2c415393b9ed": {
+      "provider": "supabase",
+      "path": "morioki-normal/915d2c415393b9ed--3c4afd9b8d79a1f5c66c93604a03b9504e8e818ae3572be48ad1030c57e6a4e0.mp3",
+      "sha256": "3c4afd9b8d79a1f5c66c93604a03b9504e8e818ae3572be48ad1030c57e6a4e0",
+      "bytes": 19437,
+      "duration": 2.347
     },
     "916046f1a943e66d": {
       "provider": "supabase",
@@ -26341,6 +27706,13 @@
       "bytes": 32877,
       "duration": 4.031
     },
+    "91e61c66ba1a4d42": {
+      "provider": "supabase",
+      "path": "morioki-normal/91e61c66ba1a4d42--8e7e34acef6aa9ce000789fabea678974a51e01d00e43e0d706dbc8e79cf7396.mp3",
+      "sha256": "8e7e34acef6aa9ce000789fabea678974a51e01d00e43e0d706dbc8e79cf7396",
+      "bytes": 70701,
+      "duration": 8.745
+    },
     "91e644b6d884c572": {
       "provider": "supabase",
       "path": "morioki-normal/91e644b6d884c572--8639163cc7b32b09e124ae0268450728ef2b965591024614229a8f5f5b9c0c55.mp3",
@@ -26446,6 +27818,13 @@
       "bytes": 16941,
       "duration": 2.034
     },
+    "92650cc1062aedf5": {
+      "provider": "supabase",
+      "path": "morioki-normal/92650cc1062aedf5--b1ad122c1b3f0690c179e5c7063aea835bf6693e875b99f41d7528e4b50b41fd.mp3",
+      "sha256": "b1ad122c1b3f0690c179e5c7063aea835bf6693e875b99f41d7528e4b50b41fd",
+      "bytes": 12525,
+      "duration": 1.477
+    },
     "9283add4fb975390": {
       "provider": "supabase",
       "path": "morioki-normal/9283add4fb975390--b4150b45aa4ec14b1ebb2648e70224bc2fadc36be0eea7382d9cac26f1d49bf7.mp3",
@@ -26544,6 +27923,13 @@
       "bytes": 69741,
       "duration": 8.627
     },
+    "934c2dab4565da17": {
+      "provider": "supabase",
+      "path": "morioki-normal/934c2dab4565da17--4e03202ba66fa11160dd35dc04596450b518673e74eeb70bd5b4880882aef906.mp3",
+      "sha256": "4e03202ba66fa11160dd35dc04596450b518673e74eeb70bd5b4880882aef906",
+      "bytes": 29229,
+      "duration": 3.567
+    },
     "935a8f6e91639e52": {
       "provider": "supabase",
       "path": "morioki-normal/935a8f6e91639e52--1d9a35f7edc030b0d15879405332f68e00f624f3cc61abe63ee9985c7ae96824.mp3",
@@ -26578,6 +27964,13 @@
       "sha256": "1b142b49be64ea88d513b66cf78bba25b3bd3a0f1c33c6021661a8d6b28d84ad",
       "bytes": 15597,
       "duration": 1.86
+    },
+    "938be7fadc28dfee": {
+      "provider": "supabase",
+      "path": "morioki-normal/938be7fadc28dfee--e9806d42205a668b8fd86faf1ec8fccfa26e5e8c347a37504eb031096c22b9f7.mp3",
+      "sha256": "e9806d42205a668b8fd86faf1ec8fccfa26e5e8c347a37504eb031096c22b9f7",
+      "bytes": 28077,
+      "duration": 3.415
     },
     "93944bc17e1283ad": {
       "provider": "supabase",
@@ -26725,6 +28118,13 @@
       "sha256": "7aa92ee740fd7e8c1b79f9289c9066ec71540d97fd8956f0136e833347723a0a",
       "bytes": 15597,
       "duration": 1.872
+    },
+    "94919fcc995e69e8": {
+      "provider": "supabase",
+      "path": "morioki-normal/94919fcc995e69e8--28601cebc7621f7b35544e662d85f300d55539802576c7a3474b7e95196459ee.mp3",
+      "sha256": "28601cebc7621f7b35544e662d85f300d55539802576c7a3474b7e95196459ee",
+      "bytes": 35181,
+      "duration": 4.31
     },
     "949388f56a341951": {
       "provider": "daily",
@@ -26908,6 +28308,13 @@
       "bytes": 89901,
       "duration": 11.148
     },
+    "95788cf7350187fb": {
+      "provider": "supabase",
+      "path": "morioki-normal/95788cf7350187fb--42c64688f1e3d6a080ea220ac9661cdf06b7bf4c281529ed53763c675dc77a4b.mp3",
+      "sha256": "42c64688f1e3d6a080ea220ac9661cdf06b7bf4c281529ed53763c675dc77a4b",
+      "bytes": 91821,
+      "duration": 11.392
+    },
     "9586dffd6554d909": {
       "provider": "supabase",
       "path": "morioki-normal/9586dffd6554d909--dee07fed028b10d8f11141baef8f3ce9fda6bb4495202bf7d810153a0886a106.mp3",
@@ -26957,6 +28364,13 @@
       "bytes": 38445,
       "duration": 4.727
     },
+    "95b94e84394ad690": {
+      "provider": "supabase",
+      "path": "morioki-normal/95b94e84394ad690--64896e5c7029fa0bdc48a47493563da1a358976a56451888fea0022dc47561f9.mp3",
+      "sha256": "64896e5c7029fa0bdc48a47493563da1a358976a56451888fea0022dc47561f9",
+      "bytes": 72621,
+      "duration": 8.988
+    },
     "95bbfd98a9599454": {
       "provider": "supabase",
       "path": "morioki-normal/95bbfd98a9599454--93e73fe3f8ad8bcdcfa59c1635081fb873baa75f25eca193a9b6739a64e28ef3.mp3",
@@ -26992,6 +28406,13 @@
       "bytes": 117741,
       "duration": 14.619
     },
+    "95fad49bf51d97d7": {
+      "provider": "supabase",
+      "path": "morioki-normal/95fad49bf51d97d7--cc05ce95d16b13b7d78a3a6ecfdf401268a7bc5c2fdf1dcaa22582d82de6be78.mp3",
+      "sha256": "cc05ce95d16b13b7d78a3a6ecfdf401268a7bc5c2fdf1dcaa22582d82de6be78",
+      "bytes": 15597,
+      "duration": 1.85
+    },
     "9605233d3568f5d1": {
       "provider": "supabase",
       "path": "morioki-normal/9605233d3568f5d1--27624b3030e1f31918b41b3e7732173f88762ff21a0beec2ffe3057659b46e42.mp3",
@@ -27005,6 +28426,13 @@
       "sha256": "579e44e715fe84b6049e41788f7a3f81794a9de9ba54f1e1c93a97f450280cd8",
       "bytes": 54957,
       "duration": 6.771
+    },
+    "962b0b6326c46837": {
+      "provider": "supabase",
+      "path": "morioki-normal/962b0b6326c46837--73ec4459d8f2299bd3ffdda1b27e1c9db7b9a5317258ad8994aab27b8a06b3b4.mp3",
+      "sha256": "73ec4459d8f2299bd3ffdda1b27e1c9db7b9a5317258ad8994aab27b8a06b3b4",
+      "bytes": 61869,
+      "duration": 7.653
     },
     "962b9969f9898d45": {
       "provider": "supabase",
@@ -27033,6 +28461,13 @@
       "sha256": "8ed2f759ef78d5573cd2e5b9fa316652addd1fdc06de2c6415e38c33f25c4f4f",
       "bytes": 11757,
       "duration": 1.384
+    },
+    "964d7e9f9dafbeb3": {
+      "provider": "supabase",
+      "path": "morioki-normal/964d7e9f9dafbeb3--06be486c79f33b8ab757d351071e9ea7c23e9d6249aee786b3b6dd158ef6a5b5.mp3",
+      "sha256": "06be486c79f33b8ab757d351071e9ea7c23e9d6249aee786b3b6dd158ef6a5b5",
+      "bytes": 32301,
+      "duration": 3.95
     },
     "965dc4b22e9bca1e": {
       "provider": "daily",
@@ -27545,6 +28980,13 @@
       "bytes": 91053,
       "duration": 11.287
     },
+    "997f6037806dfad3": {
+      "provider": "supabase",
+      "path": "morioki-normal/997f6037806dfad3--5f5e42c5f971bd04e2bc358b5c0a00582fe5e79ba2aa8d45f5e02dd08a764f6b.mp3",
+      "sha256": "5f5e42c5f971bd04e2bc358b5c0a00582fe5e79ba2aa8d45f5e02dd08a764f6b",
+      "bytes": 8877,
+      "duration": 1.013
+    },
     "997fbe4927bf607d": {
       "provider": "daily",
       "path": "japanese/2026-09-22/example-02--83cfb74570e6f83b045f5aa6f7dd236e94bb904e053e0b5b8f38776b3d2589f8.mp3",
@@ -27580,6 +29022,13 @@
       "bytes": 55533,
       "duration": 6.864
     },
+    "999f7a2e3e439032": {
+      "provider": "supabase",
+      "path": "morioki-normal/999f7a2e3e439032--e0998d6bf9788bc01c87e4b53b46f8c5a3f84d567f9133124be87035a5cf857f.mp3",
+      "sha256": "e0998d6bf9788bc01c87e4b53b46f8c5a3f84d567f9133124be87035a5cf857f",
+      "bytes": 11181,
+      "duration": 1.314
+    },
     "99a196571ed8d63b": {
       "provider": "supabase",
       "path": "morioki-normal/99a196571ed8d63b--45eb3c5839fe09d5bc44e910036d63b4b1ceedaf97dc55033d0e0947ea0f21af.mp3",
@@ -27600,6 +29049,13 @@
       "sha256": "136ee1cd79a0ff418a37647503ac3339050a02adcfee43e91845585af90b55f8",
       "bytes": 45549,
       "duration": 5.61
+    },
+    "99bad5cb44e3513f": {
+      "provider": "supabase",
+      "path": "morioki-normal/99bad5cb44e3513f--032efa0502257f2988654d93f1336747fd0c8d05305efbd9809c28ac8c54ce3f.mp3",
+      "sha256": "032efa0502257f2988654d93f1336747fd0c8d05305efbd9809c28ac8c54ce3f",
+      "bytes": 17709,
+      "duration": 2.116
     },
     "99d60adebb43ef3a": {
       "provider": "supabase",
@@ -27705,6 +29161,13 @@
       "bytes": 48717,
       "duration": 4.032,
       "sha256": "bc84f77785b2413689dab27011124af822c6a8bba2f8caca75a4aec5be1f331f"
+    },
+    "9a60fa035efb394f": {
+      "provider": "supabase",
+      "path": "morioki-normal/9a60fa035efb394f--2960017ff2d3519ab5b8a25769fa456aef67b56e89fb47e1920613d3751e94ff.mp3",
+      "sha256": "2960017ff2d3519ab5b8a25769fa456aef67b56e89fb47e1920613d3751e94ff",
+      "bytes": 95085,
+      "duration": 11.798
     },
     "9a6174c878ec41c4": {
       "provider": "supabase",
@@ -27972,6 +29435,13 @@
       "bytes": 52461,
       "duration": 4.278
     },
+    "9c79489be851085f": {
+      "provider": "supabase",
+      "path": "morioki-normal/9c79489be851085f--4b6947a220dd1613108562bb33c482df1b62e44d9e0a32f61acbbfa5880781fc.mp3",
+      "sha256": "4b6947a220dd1613108562bb33c482df1b62e44d9e0a32f61acbbfa5880781fc",
+      "bytes": 13869,
+      "duration": 1.64
+    },
     "9c7f338247ebbeae": {
       "provider": "supabase",
       "path": "morioki-normal/9c7f338247ebbeae--a53a20dcc7361172c1c6cf5a8c4961da2f9aa25654f3d3657dd37a974c7ce69e.mp3",
@@ -28042,6 +29512,13 @@
       "bytes": 89133,
       "duration": 11.042
     },
+    "9cda3705044cc6c1": {
+      "provider": "supabase",
+      "path": "morioki-normal/9cda3705044cc6c1--6552cc4986e323b43096c793bcb5ecfbddb9a101bf1fa65954ffa38d5350ad9a.mp3",
+      "sha256": "6552cc4986e323b43096c793bcb5ecfbddb9a101bf1fa65954ffa38d5350ad9a",
+      "bytes": 17901,
+      "duration": 2.16
+    },
     "9cfcdcde6eef219a": {
       "provider": "supabase",
       "path": "morioki-normal/9cfcdcde6eef219a--0cd458f122b048c1372126dd6d71d75547aa93f9fa4aa8feecc8101d13a7bc75.mp3",
@@ -28104,6 +29581,13 @@
       "sha256": "d930e53740dcad2fc286220c561f4367d1cf7a858ecdedabd33365e7a38b2929",
       "bytes": 44781,
       "duration": 5.506
+    },
+    "9d7d36505a49dac4": {
+      "provider": "supabase",
+      "path": "morioki-normal/9d7d36505a49dac4--f37e53854b1379cc5093ce83fa0989784ec28a577d4ada87ec223772f870571b.mp3",
+      "sha256": "f37e53854b1379cc5093ce83fa0989784ec28a577d4ada87ec223772f870571b",
+      "bytes": 79533,
+      "duration": 9.848
     },
     "9d7fab3539546249": {
       "provider": "supabase",
@@ -28280,12 +29764,26 @@
       "bytes": 14637,
       "duration": 1.744
     },
+    "9ea4b4646b9a8948": {
+      "provider": "supabase",
+      "path": "morioki-normal/9ea4b4646b9a8948--0bd96eb1517aa882819d18696542b5e289ae71271849cc967f31b1ba0922af09.mp3",
+      "sha256": "0bd96eb1517aa882819d18696542b5e289ae71271849cc967f31b1ba0922af09",
+      "bytes": 17325,
+      "duration": 2.069
+    },
     "9eb14e8676037ef2": {
       "provider": "supabase",
       "path": "morioki-normal/9eb14e8676037ef2--080e23b47f387b49bc682a1851ecfd72acc72293bdb86e927ffa12e82032c615.mp3",
       "sha256": "080e23b47f387b49bc682a1851ecfd72acc72293bdb86e927ffa12e82032c615",
       "bytes": 14445,
       "duration": 1.72
+    },
+    "9eba8814643a5c00": {
+      "provider": "supabase",
+      "path": "morioki-normal/9eba8814643a5c00--4a166f002a58566ea94da2925c44da9bf11626024573277c31f1ee938f3fb34c.mp3",
+      "sha256": "4a166f002a58566ea94da2925c44da9bf11626024573277c31f1ee938f3fb34c",
+      "bytes": 13869,
+      "duration": 1.639
     },
     "9ebe8b1cdeb93730": {
       "provider": "supabase",
@@ -28567,6 +30065,13 @@
       "bytes": 14637,
       "duration": 1.744
     },
+    "9fb99cdbc1a957df": {
+      "provider": "supabase",
+      "path": "morioki-normal/9fb99cdbc1a957df--1b6baf7f75f1330f9df4296349238cca8fc854b82b1f9ee1aa19a1e905ad9c84.mp3",
+      "sha256": "1b6baf7f75f1330f9df4296349238cca8fc854b82b1f9ee1aa19a1e905ad9c84",
+      "bytes": 16557,
+      "duration": 1.976
+    },
     "9fbea5d41026f238": {
       "provider": "supabase",
       "path": "morioki-normal/9fbea5d41026f238--76225840f6578044da1effada3b1dc91d6af21fd34092ce365ef96b88ba5f58f.mp3",
@@ -28770,6 +30275,13 @@
       "bytes": 39981,
       "duration": 4.911
     },
+    "a090b63571b75519": {
+      "provider": "supabase",
+      "path": "morioki-normal/a090b63571b75519--660d8223323067ade1fad654808bc1cff2de7f9430ca36399537a0bb7afd07e1.mp3",
+      "sha256": "660d8223323067ade1fad654808bc1cff2de7f9430ca36399537a0bb7afd07e1",
+      "bytes": 37293,
+      "duration": 4.565
+    },
     "a09e98dfae97021b": {
       "provider": "supabase",
       "path": "morioki-normal/a09e98dfae97021b--44dc13f9505cdb21b40f7808ca331e2f563c6b6ef467ecc7173552ec633713eb.mp3",
@@ -28938,6 +30450,13 @@
       "bytes": 15405,
       "duration": 1.826
     },
+    "a15b9aef1560206b": {
+      "provider": "supabase",
+      "path": "morioki-normal/a15b9aef1560206b--c44ee2285a100671777babe0997ed822b9c8afa7ac40aab76a3a6e4ee978c723.mp3",
+      "sha256": "c44ee2285a100671777babe0997ed822b9c8afa7ac40aab76a3a6e4ee978c723",
+      "bytes": 53997,
+      "duration": 6.667
+    },
     "a16161399512ec75": {
       "provider": "supabase",
       "path": "morioki-normal/a16161399512ec75--5de0e3574c4db019be2c7e604139efb69c8638c336bf33320584b385b53598b9.mp3",
@@ -29092,6 +30611,13 @@
       "bytes": 14733,
       "duration": 1.15
     },
+    "a237b0aa47b15546": {
+      "provider": "supabase",
+      "path": "morioki-normal/a237b0aa47b15546--e1d83d9ff7ceaa86af404b5c7f631e0416d79c7c9ff83ef67e2ef0468a56d967.mp3",
+      "sha256": "e1d83d9ff7ceaa86af404b5c7f631e0416d79c7c9ff83ef67e2ef0468a56d967",
+      "bytes": 15981,
+      "duration": 1.918
+    },
     "a2453c57f6e495d3": {
       "provider": "daily",
       "path": "japanese/2026-08-30/vocab-09--60c916a7243f2a341fd8bd73dac673727d23c2a48a5b6f1fd5807bf08e35c1f9.mp3",
@@ -29105,6 +30631,13 @@
       "sha256": "ca7892e50e17474f0e9c957011352f139e7de81a96772736d4225da65c58f410",
       "bytes": 14061,
       "duration": 1.674
+    },
+    "a260e5eb9ff144bf": {
+      "provider": "supabase",
+      "path": "morioki-normal/a260e5eb9ff144bf--0e9e1e79e8d2952d09e5edffa163958db555dc6edac2c4f6a4ab6c1b56ffcf2d.mp3",
+      "sha256": "0e9e1e79e8d2952d09e5edffa163958db555dc6edac2c4f6a4ab6c1b56ffcf2d",
+      "bytes": 15789,
+      "duration": 1.883
     },
     "a2620c1f8507b64b": {
       "provider": "daily",
@@ -29182,6 +30715,13 @@
       "sha256": "310dedda3a58dd3aeb153fbb2326144a3307da4ea6a17ede76b36109c051930f",
       "bytes": 59949,
       "duration": 4.91
+    },
+    "a2c4486debbcc779": {
+      "provider": "supabase",
+      "path": "morioki-normal/a2c4486debbcc779--1fd1f752ca5e1fbf01e8d0b02695159822d31c81133a46d3a4183607ee72225d.mp3",
+      "sha256": "1fd1f752ca5e1fbf01e8d0b02695159822d31c81133a46d3a4183607ee72225d",
+      "bytes": 16173,
+      "duration": 1.941
     },
     "a2c48615e6a58a11": {
       "provider": "supabase",
@@ -29484,12 +31024,26 @@
       "bytes": 12141,
       "duration": 0.929
     },
+    "a4197f16a4692572": {
+      "provider": "supabase",
+      "path": "morioki-normal/a4197f16a4692572--6ddb1648141833f7c0dec2c8f382a5ebe3da8d2b4a39c11e61373710cb202f9d.mp3",
+      "sha256": "6ddb1648141833f7c0dec2c8f382a5ebe3da8d2b4a39c11e61373710cb202f9d",
+      "bytes": 49773,
+      "duration": 6.122
+    },
     "a42194780c06c3cc": {
       "provider": "daily",
       "path": "japanese/2026-09-19/example-02--80d1619a373d5c9d72cc90cdd60dc3d533298c0546059ed76aa5fae56b45dccb.mp3",
       "sha256": "80d1619a373d5c9d72cc90cdd60dc3d533298c0546059ed76aa5fae56b45dccb",
       "bytes": 57357,
       "duration": 4.687
+    },
+    "a422aaab8f57480f": {
+      "provider": "supabase",
+      "path": "morioki-normal/a422aaab8f57480f--72d819f56c335f028f57d66fe0c15bd06fab734ba9555e37c08be8bca303fd28.mp3",
+      "sha256": "72d819f56c335f028f57d66fe0c15bd06fab734ba9555e37c08be8bca303fd28",
+      "bytes": 11949,
+      "duration": 1.396
     },
     "a426513fbcc29933": {
       "provider": "supabase",
@@ -29610,12 +31164,26 @@
       "bytes": 51309,
       "duration": 4.179
     },
+    "a4d6454f687adfa3": {
+      "provider": "supabase",
+      "path": "morioki-normal/a4d6454f687adfa3--faccdab932663e0087df5a27ed6dbcff0f4c1019ebd347ae19227830a4d2a968.mp3",
+      "sha256": "faccdab932663e0087df5a27ed6dbcff0f4c1019ebd347ae19227830a4d2a968",
+      "bytes": 16749,
+      "duration": 1.999
+    },
     "a4f2bd9a911c3766": {
       "provider": "supabase",
       "path": "morioki-normal/a4f2bd9a911c3766--00f074770b0c5ed939cdb284ff0b9ddaec7dc2d70663a40aeff4302afb68e451.mp3",
       "sha256": "00f074770b0c5ed939cdb284ff0b9ddaec7dc2d70663a40aeff4302afb68e451",
       "bytes": 38637,
       "duration": 4.737
+    },
+    "a4fa3dd1b1fe89ed": {
+      "provider": "supabase",
+      "path": "morioki-normal/a4fa3dd1b1fe89ed--d053a896f7cb8d23133b99bdc5a03f122854da56cc73d3200a68fb2e08cf7e41.mp3",
+      "sha256": "d053a896f7cb8d23133b99bdc5a03f122854da56cc73d3200a68fb2e08cf7e41",
+      "bytes": 11373,
+      "duration": 1.338
     },
     "a50e0ccdcc5e4e41": {
       "provider": "supabase",
@@ -29757,6 +31325,13 @@
       "bytes": 37485,
       "duration": 4.6
     },
+    "a5fd1f79db0a7625": {
+      "provider": "supabase",
+      "path": "morioki-normal/a5fd1f79db0a7625--9f5737bea95dd50b89140940d8c0f64d36dc02c51d5834f474998a0baffa0817.mp3",
+      "sha256": "9f5737bea95dd50b89140940d8c0f64d36dc02c51d5834f474998a0baffa0817",
+      "bytes": 12525,
+      "duration": 1.466
+    },
     "a603127c19a447d0": {
       "provider": "daily",
       "path": "japanese/2026-10-21/vocab-03--50d436914f09bc282d68951a2706c7aac954051861301911509f2af001400fcb.mp3",
@@ -29855,6 +31430,13 @@
       "bytes": 13101,
       "duration": 1.547
     },
+    "a64c4689bf12069d": {
+      "provider": "supabase",
+      "path": "morioki-normal/a64c4689bf12069d--6dc3bd87a9dbe7737d7162faad6b38fc5878a7890d93cc21f36ff993a1b645f2.mp3",
+      "sha256": "6dc3bd87a9dbe7737d7162faad6b38fc5878a7890d93cc21f36ff993a1b645f2",
+      "bytes": 9453,
+      "duration": 1.082
+    },
     "a655241504fb5399": {
       "provider": "supabase",
       "path": "morioki-normal/a655241504fb5399--e5adfb69049afa6aa0f6f58b78a1a46865a88c501fac24342770ef2cc3a44dc3.mp3",
@@ -29910,6 +31492,13 @@
       "sha256": "91d97c60511d5db36f6e5dd4019a966aa2ba1ee5a82e2de134fa306c19fb3cd5",
       "bytes": 50349,
       "duration": 6.2
+    },
+    "a68e8a23098920cf": {
+      "provider": "supabase",
+      "path": "morioki-normal/a68e8a23098920cf--e2d863722e983d44811685d51b232e268d0ec6d4b37bf872fbc519048577b88d.mp3",
+      "sha256": "e2d863722e983d44811685d51b232e268d0ec6d4b37bf872fbc519048577b88d",
+      "bytes": 13485,
+      "duration": 1.605
     },
     "a6b0a5379bdddf1b": {
       "provider": "supabase",
@@ -30156,6 +31745,13 @@
       "bytes": 14637,
       "duration": 1.732
     },
+    "a82ac2e05e1d036c": {
+      "provider": "supabase",
+      "path": "morioki-normal/a82ac2e05e1d036c--564de258e36642f4a833822bf7cdd18ef5d9dec144eb4781e420be55c2b179d4.mp3",
+      "sha256": "564de258e36642f4a833822bf7cdd18ef5d9dec144eb4781e420be55c2b179d4",
+      "bytes": 46509,
+      "duration": 5.726
+    },
     "a83a4c5ff52f2993": {
       "provider": "supabase",
       "path": "morioki-normal/a83a4c5ff52f2993--e8a862e5891c65588ff89212c60e214bfc48122ee4dabf02faa1667b6163cd14.mp3",
@@ -30296,6 +31892,20 @@
       "bytes": 53997,
       "duration": 6.667
     },
+    "a8b40d2607677282": {
+      "provider": "supabase",
+      "path": "morioki-normal/a8b40d2607677282--b419566d9377716229a54beb62748f1e8cc32624b6548983ebce20a54df3e471.mp3",
+      "sha256": "b419566d9377716229a54beb62748f1e8cc32624b6548983ebce20a54df3e471",
+      "bytes": 25389,
+      "duration": 3.09
+    },
+    "a8b6197370ab0baf": {
+      "provider": "supabase",
+      "path": "morioki-normal/a8b6197370ab0baf--697942bd5b195078aca6dbc114dd604230c2d3ba96eaa4a7680667b1a42c4fb5.mp3",
+      "sha256": "697942bd5b195078aca6dbc114dd604230c2d3ba96eaa4a7680667b1a42c4fb5",
+      "bytes": 27885,
+      "duration": 3.393
+    },
     "a8bcd105cfd63731": {
       "provider": "supabase",
       "path": "morioki-normal/a8bcd105cfd63731--95ebefd892f9c71520c729f0271b1a257460da9fe84cf9d8db94c0e337a08c6f.mp3",
@@ -30337,6 +31947,13 @@
       "sha256": "5e2db14c1a0010e6665da30d3b1b55e6b9294eef0539f3cac59d69d41f0eab9a",
       "bytes": 15789,
       "duration": 1.895
+    },
+    "a8ff1df25a2fecbe": {
+      "provider": "supabase",
+      "path": "morioki-normal/a8ff1df25a2fecbe--3c93882734e05c8fcddeffe6a2dbdcdeb73ed402e0e6c75ff8a94b39561a954b.mp3",
+      "sha256": "3c93882734e05c8fcddeffe6a2dbdcdeb73ed402e0e6c75ff8a94b39561a954b",
+      "bytes": 19245,
+      "duration": 2.313
     },
     "a90032365f3bde6a": {
       "provider": "supabase",
@@ -30471,6 +32088,13 @@
       "bytes": 15021,
       "duration": 1.79
     },
+    "a9d80c7844aeeed4": {
+      "provider": "supabase",
+      "path": "morioki-normal/a9d80c7844aeeed4--0418d78d54ce2bb8b47828dd814f92803a9e4cf770f564751d8b2328badbffef.mp3",
+      "sha256": "0418d78d54ce2bb8b47828dd814f92803a9e4cf770f564751d8b2328badbffef",
+      "bytes": 30381,
+      "duration": 3.718
+    },
     "a9e239dfba194c33": {
       "provider": "supabase",
       "path": "morioki-normal/a9e239dfba194c33--5bb2482f44d0a0a26ab1e61b0b8389b4a7d91a3744ad1fd6582f050f6b1b4380.mp3",
@@ -30583,6 +32207,13 @@
       "bytes": 15405,
       "duration": 1.826
     },
+    "aaa1405cb13a2328": {
+      "provider": "supabase",
+      "path": "morioki-normal/aaa1405cb13a2328--8962ef9811df0f7f4121ef46b47855b1cd48ec0389fc3cc17dd901bdc7a5feef.mp3",
+      "sha256": "8962ef9811df0f7f4121ef46b47855b1cd48ec0389fc3cc17dd901bdc7a5feef",
+      "bytes": 67053,
+      "duration": 8.292
+    },
     "aaa37aec09356c48": {
       "provider": "supabase",
       "path": "morioki-normal/aaa37aec09356c48--9c0fbfe0ad9383d745ef7b7aeed11389fb9494a659a79377e6afde22c4aad1a2.mp3",
@@ -30631,6 +32262,13 @@
       "sha256": "fe627d50a2c8fba8610aa7e45f2f01ada057ee52106730b4bfe0826dce301daa",
       "bytes": 10413,
       "duration": 1.21
+    },
+    "aadf8b4b6e4af8cf": {
+      "provider": "supabase",
+      "path": "morioki-normal/aadf8b4b6e4af8cf--a515c23cf330034c4bbdd1afc16a1af37a95d57d2c820cec74f8d2800ce3c3bb.mp3",
+      "sha256": "a515c23cf330034c4bbdd1afc16a1af37a95d57d2c820cec74f8d2800ce3c3bb",
+      "bytes": 15405,
+      "duration": 1.826
     },
     "aae5ec50f687905c": {
       "provider": "supabase",
@@ -30709,6 +32347,13 @@
       "bytes": 87021,
       "duration": 10.791
     },
+    "ab7624ff76d6ebfb": {
+      "provider": "supabase",
+      "path": "morioki-normal/ab7624ff76d6ebfb--3683f8b65a65e025e8ef305dc22dfde975e251247ac0e0ab17956b8310c8badf.mp3",
+      "sha256": "3683f8b65a65e025e8ef305dc22dfde975e251247ac0e0ab17956b8310c8badf",
+      "bytes": 22317,
+      "duration": 2.707
+    },
     "ab77e5e4ce7c2488": {
       "provider": "supabase",
       "path": "morioki-normal/ab77e5e4ce7c2488--a46da5a067608dd1ca507769f5cdd160dbcd61e6d580ce9748ca4c893bbd094c.mp3",
@@ -30778,6 +32423,13 @@
       "sha256": "43a13ba931848ac04a695cf0df3765958624445410ee2a7c2ce6ce7f190f6a8a",
       "bytes": 64557,
       "duration": 7.988
+    },
+    "abf10fca61e2c43e": {
+      "provider": "supabase",
+      "path": "morioki-normal/abf10fca61e2c43e--a47341a2e4fb24888214d1547fd2c4b7941a4f0ab49d2f10e8ca144375272352.mp3",
+      "sha256": "a47341a2e4fb24888214d1547fd2c4b7941a4f0ab49d2f10e8ca144375272352",
+      "bytes": 11757,
+      "duration": 1.372
     },
     "abfa2173c9fba5b7": {
       "provider": "daily",
@@ -30974,6 +32626,13 @@
       "sha256": "efcece830e15117bd7c8153b717c5844ae3793694b7677ebfd5bf5add4ddd8aa",
       "bytes": 32493,
       "duration": 3.973
+    },
+    "ad0855120e3a767e": {
+      "provider": "supabase",
+      "path": "morioki-normal/ad0855120e3a767e--daeb03939cdb268b8847744707a5dfd30bc6fda05005a6413254da7279654c2b.mp3",
+      "sha256": "daeb03939cdb268b8847744707a5dfd30bc6fda05005a6413254da7279654c2b",
+      "bytes": 16173,
+      "duration": 1.93
     },
     "ad0e64a25071a1fe": {
       "provider": "supabase",
@@ -31661,6 +33320,13 @@
       "bytes": 13293,
       "duration": 1.57
     },
+    "b06bffe66de3e382": {
+      "provider": "supabase",
+      "path": "morioki-normal/b06bffe66de3e382--5dd345af0a0e64c1879d8ae2ba56026d0cc662cf5be5f92ed808f74e830a2ef8.mp3",
+      "sha256": "5dd345af0a0e64c1879d8ae2ba56026d0cc662cf5be5f92ed808f74e830a2ef8",
+      "bytes": 33261,
+      "duration": 4.078
+    },
     "b07e555912a3d175": {
       "provider": "supabase",
       "path": "morioki-normal/b07e555912a3d175--4fe595e7482c05ab50d25fa7c563f8a3006a2673be25e70ff59ddd9324b49c29.mp3",
@@ -31703,6 +33369,13 @@
       "bytes": 140781,
       "duration": 17.51
     },
+    "b0c76b4e4ee1be32": {
+      "provider": "supabase",
+      "path": "morioki-normal/b0c76b4e4ee1be32--e09b3c06576b5817f3872b6930744b4ba19fd14a0f8f6aac5a9fa7191e2acc9c.mp3",
+      "sha256": "e09b3c06576b5817f3872b6930744b4ba19fd14a0f8f6aac5a9fa7191e2acc9c",
+      "bytes": 29613,
+      "duration": 3.613
+    },
     "b0ed631f92c38083": {
       "provider": "supabase",
       "path": "morioki-normal/b0ed631f92c38083--48a237063935d1426d0b1df5945e0c4b290bafad3575e121bda04c7f218de0b1.mp3",
@@ -31723,6 +33396,13 @@
       "sha256": "670a22faae638037c694b4aedb0a9e627314b0b4dcaf6757b7c8ae57af72f8cb",
       "bytes": 34605,
       "duration": 4.228
+    },
+    "b0f5df0a56f73f96": {
+      "provider": "supabase",
+      "path": "morioki-normal/b0f5df0a56f73f96--df1db5231428aa7d822e0144e8729f00de709f8e719e1674a51a0cea34cd896f.mp3",
+      "sha256": "df1db5231428aa7d822e0144e8729f00de709f8e719e1674a51a0cea34cd896f",
+      "bytes": 16557,
+      "duration": 1.988
     },
     "b10bfbdb8724190f": {
       "provider": "supabase",
@@ -31941,6 +33621,13 @@
       "bytes": 74637,
       "duration": 6.14
     },
+    "b2001725881321f9": {
+      "provider": "supabase",
+      "path": "morioki-normal/b2001725881321f9--857de03dd358a172f5215c213eca57049d4f5ea95330d443e8d06854c257bd65.mp3",
+      "sha256": "857de03dd358a172f5215c213eca57049d4f5ea95330d443e8d06854c257bd65",
+      "bytes": 13677,
+      "duration": 1.616
+    },
     "b200713bd6125077": {
       "provider": "supabase",
       "path": "morioki-normal/b200713bd6125077--b1e16a59581530d2299c0e3c2285f6bad5cc5796ce94869d5c0353799783a7c1.mp3",
@@ -32088,6 +33775,13 @@
       "bytes": 16365,
       "duration": 1.965
     },
+    "b2fab30e30a65352": {
+      "provider": "supabase",
+      "path": "morioki-normal/b2fab30e30a65352--2c95e42f22dc5929376a4317b88285eb8365fc2e5eba041a93cf7d57c65ae060.mp3",
+      "sha256": "2c95e42f22dc5929376a4317b88285eb8365fc2e5eba041a93cf7d57c65ae060",
+      "bytes": 14061,
+      "duration": 1.674
+    },
     "b2fb328d89bebfb1": {
       "provider": "daily",
       "path": "japanese/2026-10-02/vocab-19--458120ea36ae911edce6c87e142db7893bb7e36962b7c6fd42690deda8414707.mp3",
@@ -32101,6 +33795,13 @@
       "sha256": "eefe0c1ac878489d6e0ad753bf099cc31c24c1d18e01051502ca40cab377754c",
       "bytes": 17325,
       "duration": 1.359
+    },
+    "b30679f8790bae4c": {
+      "provider": "supabase",
+      "path": "morioki-normal/b30679f8790bae4c--b57af838b1749db85e6a8d719274f21e362e4f8e47e0e08e58e13ef799bda516.mp3",
+      "sha256": "b57af838b1749db85e6a8d719274f21e362e4f8e47e0e08e58e13ef799bda516",
+      "bytes": 12717,
+      "duration": 1.5
     },
     "b3178bd607fe083a": {
       "provider": "supabase",
@@ -32157,6 +33858,13 @@
       "sha256": "08a8d3199e2ecb2fdd4449e4e41ff0a7da5b42fe80915c13fbf91856f3855062",
       "bytes": 67629,
       "duration": 8.362
+    },
+    "b353134e25253802": {
+      "provider": "supabase",
+      "path": "morioki-normal/b353134e25253802--52030a351539184674045127f7f4eda251cc907b1a3f0f51050c0af80cb36930.mp3",
+      "sha256": "52030a351539184674045127f7f4eda251cc907b1a3f0f51050c0af80cb36930",
+      "bytes": 12909,
+      "duration": 1.535
     },
     "b358f4e90c0a42d5": {
       "provider": "supabase",
@@ -32298,6 +34006,13 @@
       "bytes": 14445,
       "duration": 1.126
     },
+    "b43c34c7d8f1cf33": {
+      "provider": "supabase",
+      "path": "morioki-normal/b43c34c7d8f1cf33--b5268386161b035537be8779e878a017aff22ac55c11b80e075b2f37fda34534.mp3",
+      "sha256": "b5268386161b035537be8779e878a017aff22ac55c11b80e075b2f37fda34534",
+      "bytes": 15789,
+      "duration": 1.895
+    },
     "b4415b6868e545a4": {
       "provider": "supabase",
       "path": "morioki-normal/b4415b6868e545a4--3254617f4cf5a92ec11be4b387ecfefb1e17e718c3751f67311cbfaff4a82478.mp3",
@@ -32374,6 +34089,13 @@
       "sha256": "62bc23e181b4e2393bd47a0083b72fe8807519440a212a74f544ad18f9fc7fc1",
       "bytes": 15213,
       "duration": 1.802
+    },
+    "b4c62b48ef4faf84": {
+      "provider": "supabase",
+      "path": "morioki-normal/b4c62b48ef4faf84--867e832d5658eebc810c1fcd8570f2eb3a2b9c2fac1df3f5a028af5396e95705.mp3",
+      "sha256": "867e832d5658eebc810c1fcd8570f2eb3a2b9c2fac1df3f5a028af5396e95705",
+      "bytes": 12525,
+      "duration": 1.477
     },
     "b4d770bde31d51b9": {
       "provider": "supabase",
@@ -32606,6 +34328,13 @@
       "bytes": 32109,
       "duration": 3.927
     },
+    "b65a98de19acca2a": {
+      "provider": "supabase",
+      "path": "morioki-normal/b65a98de19acca2a--aa55839a04429e58aa51bbfc266c4dabf73d3c20e3338442d943021072225e11.mp3",
+      "sha256": "aa55839a04429e58aa51bbfc266c4dabf73d3c20e3338442d943021072225e11",
+      "bytes": 72429,
+      "duration": 8.96
+    },
     "b65c766bf19cdddf": {
       "provider": "daily",
       "path": "japanese/2026-10-12/example-15--fffd58177db05b38bc1b06be8c8dcc8b3c9c250ceeb59b03159c16203a56b169.mp3",
@@ -32668,6 +34397,13 @@
       "sha256": "e491b93b194db11b8b36d4d0eb7086d8b60584b7bead8672dda4098895c78a53",
       "bytes": 13869,
       "duration": 1.64
+    },
+    "b690f55b2f1870a7": {
+      "provider": "supabase",
+      "path": "morioki-normal/b690f55b2f1870a7--a01f815d9414e3d57b9ddf47c6c273431b27fd3b189d9e36a93554fd2af81bd4.mp3",
+      "sha256": "a01f815d9414e3d57b9ddf47c6c273431b27fd3b189d9e36a93554fd2af81bd4",
+      "bytes": 12909,
+      "duration": 1.523
     },
     "b6912c3fd73b798b": {
       "provider": "supabase",
@@ -32738,6 +34474,13 @@
       "sha256": "6e00107bfe4413fa7f24bfc64c6ba74c99196d2bd4e0fabe0da4489c2e0e1863",
       "bytes": 15597,
       "duration": 1.86
+    },
+    "b6df82c4a80710a0": {
+      "provider": "supabase",
+      "path": "morioki-normal/b6df82c4a80710a0--c87e8edec0de04adfe60567c80441b09b9fcf16f67249daf7b282599c7592ffe.mp3",
+      "sha256": "c87e8edec0de04adfe60567c80441b09b9fcf16f67249daf7b282599c7592ffe",
+      "bytes": 16749,
+      "duration": 2.011
     },
     "b6e67a300ee460bc": {
       "provider": "supabase",
@@ -32963,6 +34706,13 @@
       "bytes": 35565,
       "duration": 4.346
     },
+    "b81de01ba2a554ef": {
+      "provider": "supabase",
+      "path": "morioki-normal/b81de01ba2a554ef--897a2a6c1f7c8d785dc11ffd32a9d2e2233db279ac6a79123c473a9902eb52e3.mp3",
+      "sha256": "897a2a6c1f7c8d785dc11ffd32a9d2e2233db279ac6a79123c473a9902eb52e3",
+      "bytes": 32685,
+      "duration": 3.996
+    },
     "b82e3177f22f9f33": {
       "provider": "daily",
       "path": "japanese/2026-08-18/grammar-example-03--f1d7aacebfbeaa61f73c8f31545ba674aa5fa0c7dde36caf910be9e0fd9b4b8a.mp3",
@@ -33109,6 +34859,13 @@
       "sha256": "5dda4d467863bf00b69e0722cc51fa721e3bd02d097a71eb8e4fae30f0ccfd20",
       "bytes": 36525,
       "duration": 4.472
+    },
+    "b8faec0babe5e8f7": {
+      "provider": "supabase",
+      "path": "morioki-normal/b8faec0babe5e8f7--6b0e1041c765f8002096857950c44e33f41db414a718454ea193b785b3cf1f06.mp3",
+      "sha256": "6b0e1041c765f8002096857950c44e33f41db414a718454ea193b785b3cf1f06",
+      "bytes": 54765,
+      "duration": 6.747
     },
     "b916a2767f298d4a": {
       "provider": "daily",
@@ -33481,6 +35238,13 @@
       "bytes": 16941,
       "duration": 2.023
     },
+    "bb5dc4cc58a6d718": {
+      "provider": "supabase",
+      "path": "morioki-normal/bb5dc4cc58a6d718--d5e08c272964d414378df73f58f79d9a9564af62b4edad2bae5b9f078297e779.mp3",
+      "sha256": "d5e08c272964d414378df73f58f79d9a9564af62b4edad2bae5b9f078297e779",
+      "bytes": 14637,
+      "duration": 1.732
+    },
     "bb62c2b2841b585e": {
       "provider": "supabase",
       "path": "morioki-normal/bb62c2b2841b585e--fdc43b8c35e0b09872b93b67e4380a83c60bb27d6f9ab9454d96f472f9557e8a.mp3",
@@ -33740,6 +35504,13 @@
       "bytes": 41133,
       "duration": 5.053
     },
+    "bd0038241140c030": {
+      "provider": "supabase",
+      "path": "morioki-normal/bd0038241140c030--4b3dd5622bbc45289346e175985b040f3c8a0486ca60c3e236407ddee997953d.mp3",
+      "sha256": "4b3dd5622bbc45289346e175985b040f3c8a0486ca60c3e236407ddee997953d",
+      "bytes": 20397,
+      "duration": 2.464
+    },
     "bd1c0cef17c82973": {
       "provider": "daily",
       "path": "japanese/2026-09-01/vocab-05--df7396a309b931faff9b4b19a269eb39bf607c6e02cb77a0d910e54a047a8208.mp3",
@@ -33950,6 +35721,13 @@
       "bytes": 56109,
       "duration": 6.932
     },
+    "be797fc997d47b3d": {
+      "provider": "supabase",
+      "path": "morioki-normal/be797fc997d47b3d--437bdfeaea612bb67ee2aa76d53a6844c10e3f1705c5ad53ca704a459a3c0c6e.mp3",
+      "sha256": "437bdfeaea612bb67ee2aa76d53a6844c10e3f1705c5ad53ca704a459a3c0c6e",
+      "bytes": 10221,
+      "duration": 1.187
+    },
     "be7aebc4483c6248": {
       "provider": "supabase",
       "path": "morioki-normal/be7aebc4483c6248--774690b493d89b9ed764bf1c90e8eb319b0f0cf71f9c8af5e3ecaebd1be0ec0b.mp3",
@@ -34040,6 +35818,13 @@
       "sha256": "5f776716baf311d33aa73fa5d6cb923feff5f80129415b124682f1d7670342a7",
       "bytes": 14829,
       "duration": 1.756
+    },
+    "bed0dcad24db4a91": {
+      "provider": "supabase",
+      "path": "morioki-normal/bed0dcad24db4a91--a3a107eaf9da529b9f6fa6edcf7ed246c9b789694636790ce4cf503faf8e8872.mp3",
+      "sha256": "a3a107eaf9da529b9f6fa6edcf7ed246c9b789694636790ce4cf503faf8e8872",
+      "bytes": 13677,
+      "duration": 1.616
     },
     "bedf9e313552a075": {
       "provider": "supabase",
@@ -34363,6 +36148,13 @@
       "bytes": 34413,
       "duration": 4.205
     },
+    "c0afdc9a045059f6": {
+      "provider": "supabase",
+      "path": "morioki-normal/c0afdc9a045059f6--7dd697d6961c602ec7bbf439119dbe096248bca88193309f1f81aa3ed0227e06.mp3",
+      "sha256": "7dd697d6961c602ec7bbf439119dbe096248bca88193309f1f81aa3ed0227e06",
+      "bytes": 19821,
+      "duration": 2.394
+    },
     "c0b1259d119f2781": {
       "provider": "daily",
       "path": "japanese/2026-09-30/example-05--b75e4358ae72d1d9412a3f4e0ce567355fd991be9e8b32deb2846eaa08974fd1.mp3",
@@ -34411,6 +36203,13 @@
       "sha256": "408dd48934876d549fdf7d983c80383487f59018fb28d62e04885ad92778970b",
       "bytes": 18285,
       "duration": 2.186
+    },
+    "c0f5bf71f3125385": {
+      "provider": "supabase",
+      "path": "morioki-normal/c0f5bf71f3125385--5068a077ba38733221f484a212336ba33670868145814db3a42770bfd21cf4b0.mp3",
+      "sha256": "5068a077ba38733221f484a212336ba33670868145814db3a42770bfd21cf4b0",
+      "bytes": 32877,
+      "duration": 4.019
     },
     "c10203faacbf15c6": {
       "provider": "daily",
@@ -34565,6 +36364,13 @@
       "sha256": "531de80b41ca6ecba17f4babd24498e6466b4a382d2ce2e4df4a6e593bd63f31",
       "bytes": 38253,
       "duration": 4.682
+    },
+    "c1dcccc9deba68dd": {
+      "provider": "supabase",
+      "path": "morioki-normal/c1dcccc9deba68dd--9c409d42bf5ff3894637ab768263e2939575161882ee6858e2098275f468ba7c.mp3",
+      "sha256": "9c409d42bf5ff3894637ab768263e2939575161882ee6858e2098275f468ba7c",
+      "bytes": 10605,
+      "duration": 1.233
     },
     "c1e1bd69b114e645": {
       "provider": "daily",
@@ -34754,6 +36560,13 @@
       "sha256": "85acd44c33903dcaf450bb48f3ce27dd82b08d7cca8e34936ed29c26f779a165",
       "bytes": 18669,
       "duration": 2.243
+    },
+    "c2e13001b476b3e5": {
+      "provider": "supabase",
+      "path": "morioki-normal/c2e13001b476b3e5--b60e0b88c2f2aa33682cdb8fffc5ea45b39755cfa1b11964ed6ce75afaf069e6.mp3",
+      "sha256": "b60e0b88c2f2aa33682cdb8fffc5ea45b39755cfa1b11964ed6ce75afaf069e6",
+      "bytes": 13869,
+      "duration": 1.651
     },
     "c2e75fea1805569e": {
       "provider": "supabase",
@@ -35063,6 +36876,13 @@
       "bytes": 13101,
       "duration": 1.558
     },
+    "c4d7ab8d802805d9": {
+      "provider": "supabase",
+      "path": "morioki-normal/c4d7ab8d802805d9--29589468c7459b284ad2c2d6d2c840a045c00493e2762dd7736cc8033c0d4395.mp3",
+      "sha256": "29589468c7459b284ad2c2d6d2c840a045c00493e2762dd7736cc8033c0d4395",
+      "bytes": 51309,
+      "duration": 6.328
+    },
     "c4dbb0eedee97f72": {
       "provider": "supabase",
       "path": "morioki-normal/c4dbb0eedee97f72--30ebb80d58fccf624ae4ace3930dd771778765c7749d3a0a80be4e8e496aff5b.mp3",
@@ -35315,6 +37135,13 @@
       "bytes": 12909,
       "duration": 1.523
     },
+    "c664f8f6eac41372": {
+      "provider": "supabase",
+      "path": "morioki-normal/c664f8f6eac41372--b1582d00cc931625b0fb2678a42dc74307c47faa189bacb7d999194c82f6bc29.mp3",
+      "sha256": "b1582d00cc931625b0fb2678a42dc74307c47faa189bacb7d999194c82f6bc29",
+      "bytes": 12141,
+      "duration": 1.43
+    },
     "c66d55ecd8629fd0": {
       "provider": "supabase",
       "path": "morioki-normal/c66d55ecd8629fd0--e8e8f74fec6f161e75d19ba32311c439d954c2028ab5e81bf00e1f303fd0cfc8.mp3",
@@ -35371,6 +37198,13 @@
       "bytes": 43053,
       "duration": 5.285
     },
+    "c6a1ea31437efb25": {
+      "provider": "supabase",
+      "path": "morioki-normal/c6a1ea31437efb25--55f08a910d283df0003f37dc27b46535ae56f61465d85730a1b23c415a291aeb.mp3",
+      "sha256": "55f08a910d283df0003f37dc27b46535ae56f61465d85730a1b23c415a291aeb",
+      "bytes": 32109,
+      "duration": 3.926
+    },
     "c6ce961e4667285a": {
       "provider": "daily",
       "path": "japanese/2026-10-17/example-09--432a4dec701dd8d0d4175117011a85179aaae72c3c00455e35aa5c3c607ae08e.mp3",
@@ -35405,6 +37239,13 @@
       "sha256": "1f1756e3091fde656af06fa311d83293bd961e359f07e9a08feac9e05bd10821",
       "bytes": 29229,
       "duration": 3.566
+    },
+    "c6fd354d3de33069": {
+      "provider": "supabase",
+      "path": "morioki-normal/c6fd354d3de33069--7b87dc511013bcf1fdbde1ace191cec6bc13d0e814c671a9943eed96628bc37b.mp3",
+      "sha256": "7b87dc511013bcf1fdbde1ace191cec6bc13d0e814c671a9943eed96628bc37b",
+      "bytes": 14061,
+      "duration": 1.663
     },
     "c7014bf81c2fcfac": {
       "provider": "daily",
@@ -35454,6 +37295,13 @@
       "sha256": "20fab833c9863d9582f7b0e93362fe456ba6c172a57b29d4f7bc611d8046ac21",
       "bytes": 13101,
       "duration": 1.547
+    },
+    "c7123a33a4fa8a2f": {
+      "provider": "supabase",
+      "path": "morioki-normal/c7123a33a4fa8a2f--69dfb4a7afafe9ef8ec00a021699abe7cd8cc6300ece1c6dbf59e539a783818f.mp3",
+      "sha256": "69dfb4a7afafe9ef8ec00a021699abe7cd8cc6300ece1c6dbf59e539a783818f",
+      "bytes": 30957,
+      "duration": 3.775
     },
     "c71ab4d853ac7784": {
       "provider": "supabase",
@@ -35643,6 +37491,13 @@
       "sha256": "7fb2d94acc89c339fe4aeb8b0d41cc19ebe10fdd7ede51dd3d7e874c1e7838e9",
       "bytes": 54765,
       "duration": 4.469
+    },
+    "c8289c3638735562": {
+      "provider": "supabase",
+      "path": "morioki-normal/c8289c3638735562--77df4c9caa6cc892dda57e12bbb6b26faff37aac00b8b99319aa90be9889ad6a.mp3",
+      "sha256": "77df4c9caa6cc892dda57e12bbb6b26faff37aac00b8b99319aa90be9889ad6a",
+      "bytes": 72621,
+      "duration": 8.978
     },
     "c834cad4211787d8": {
       "provider": "supabase",
@@ -36008,6 +37863,13 @@
       "bytes": 35373,
       "duration": 4.342
     },
+    "ca0e3c70cf6d29b4": {
+      "provider": "supabase",
+      "path": "morioki-normal/ca0e3c70cf6d29b4--bfa5f68b94a074adec71d786d495fb69e9062c347ef7a29d37ab6bbc74cfd3af.mp3",
+      "sha256": "bfa5f68b94a074adec71d786d495fb69e9062c347ef7a29d37ab6bbc74cfd3af",
+      "bytes": 11949,
+      "duration": 1.395
+    },
     "ca0e4de13f9ea4ad": {
       "provider": "daily",
       "path": "japanese/2026-10-02/vocab-06--1bba0538638db80d270e42af77fdebe9b1688e3c24d4a82fd337b2cd3d21f947.mp3",
@@ -36064,6 +37926,13 @@
       "bytes": 52461,
       "duration": 6.469
     },
+    "ca656310f8501c24": {
+      "provider": "supabase",
+      "path": "morioki-normal/ca656310f8501c24--177806631ccdd2b6bd6bdf9de848a60251838d42c1b2bdfb0780052de6d6aedb.mp3",
+      "sha256": "177806631ccdd2b6bd6bdf9de848a60251838d42c1b2bdfb0780052de6d6aedb",
+      "bytes": 33837,
+      "duration": 4.135
+    },
     "ca7103b17498f905": {
       "provider": "supabase",
       "path": "morioki-normal/ca7103b17498f905--b058744df4a0911770bbb1e25406c785f1925b103b296b36caa17460a8ecc476.mp3",
@@ -36105,6 +37974,13 @@
       "sha256": "a6b37d0711c8b6d7e428e5fca548120f40d59fd52f2b6d6e9e9d9bd78706dcd1",
       "bytes": 10605,
       "duration": 1.245
+    },
+    "ca89aea8adf74a1c": {
+      "provider": "supabase",
+      "path": "morioki-normal/ca89aea8adf74a1c--73623b6c9d05ef7611dd1f2a94dafeef75dbdd13c3d3fe71965457a0f6fc485d.mp3",
+      "sha256": "73623b6c9d05ef7611dd1f2a94dafeef75dbdd13c3d3fe71965457a0f6fc485d",
+      "bytes": 72621,
+      "duration": 9
     },
     "ca8f2a777602cd1b": {
       "provider": "supabase",
@@ -36203,6 +38079,13 @@
       "sha256": "53e0a8cde49327944fd66f4e363ac6e99f9958c0014b2beed88779910bdfd150",
       "bytes": 70701,
       "duration": 8.756
+    },
+    "caf610bfe90cd9e3": {
+      "provider": "supabase",
+      "path": "morioki-normal/caf610bfe90cd9e3--2d2e82eb0389540d3839ce011d1636c48ba1c099d1e37f9e35805cd6e658c88d.mp3",
+      "sha256": "2d2e82eb0389540d3839ce011d1636c48ba1c099d1e37f9e35805cd6e658c88d",
+      "bytes": 60525,
+      "duration": 7.479
     },
     "caf673359fb5ab59": {
       "provider": "daily",
@@ -36400,6 +38283,20 @@
       "bytes": 10797,
       "duration": 1.268
     },
+    "cbd999a28eb97f86": {
+      "provider": "supabase",
+      "path": "morioki-normal/cbd999a28eb97f86--0bfb016d1382bf25d6997d226a341a8d4a034dd4d6e665fbedde099a787fa2e2.mp3",
+      "sha256": "0bfb016d1382bf25d6997d226a341a8d4a034dd4d6e665fbedde099a787fa2e2",
+      "bytes": 28269,
+      "duration": 3.437
+    },
+    "cbde749aab45277e": {
+      "provider": "supabase",
+      "path": "morioki-normal/cbde749aab45277e--b93dc6fc23218caa673d4f57a13dc6cb9191c01a33c16efdfeb9c472b8795f45.mp3",
+      "sha256": "b93dc6fc23218caa673d4f57a13dc6cb9191c01a33c16efdfeb9c472b8795f45",
+      "bytes": 17901,
+      "duration": 2.15
+    },
     "cbe00c07046170c3": {
       "provider": "supabase",
       "path": "morioki-normal/cbe00c07046170c3--60bee19b8272ffb21792ecdfffccd083940e187227a96f010edc2e3253c7daca.mp3",
@@ -36554,6 +38451,13 @@
       "duration": 4.344,
       "sha256": "814beb989571b4816a4e868bb3e5a11578766111b8fe5ef3848ccdcf4bbfedfc"
     },
+    "cc893a943ec0f7a8": {
+      "provider": "supabase",
+      "path": "morioki-normal/cc893a943ec0f7a8--25813f4e49c3e7383df0991d2b7d0690130dcc0fe2127879b38b3abb8cd3156e.mp3",
+      "sha256": "25813f4e49c3e7383df0991d2b7d0690130dcc0fe2127879b38b3abb8cd3156e",
+      "bytes": 13485,
+      "duration": 1.593
+    },
     "cc8e32b4da867aa0": {
       "provider": "supabase",
       "path": "morioki-normal/cc8e32b4da867aa0--483a48c1e291142dc831dfaa2ec096c55274bfc0d8b55a860691de6e73e9360b.mp3",
@@ -36574,6 +38478,13 @@
       "sha256": "b3c2b3110a8ebf90622683642d06b699164f92cc9a8396556ae6f3261e516eb5",
       "bytes": 61101,
       "duration": 7.549
+    },
+    "ccb9ca316ab67b85": {
+      "provider": "supabase",
+      "path": "morioki-normal/ccb9ca316ab67b85--4c218f2a94eca44e06f398b6ee858aaf0ca6e479d0261cf271e2b4f40b04a3a5.mp3",
+      "sha256": "4c218f2a94eca44e06f398b6ee858aaf0ca6e479d0261cf271e2b4f40b04a3a5",
+      "bytes": 25581,
+      "duration": 3.114
     },
     "ccc3d60cd9ac28c8": {
       "provider": "supabase",
@@ -36750,6 +38661,13 @@
       "bytes": 66093,
       "duration": 8.164
     },
+    "cdff5a89c2a5900d": {
+      "provider": "supabase",
+      "path": "morioki-normal/cdff5a89c2a5900d--6285e36757ffc8e444b3941fe0cb60f5ab3e7474f17c3a22ab3f02d605f55e84.mp3",
+      "sha256": "6285e36757ffc8e444b3941fe0cb60f5ab3e7474f17c3a22ab3f02d605f55e84",
+      "bytes": 12525,
+      "duration": 1.477
+    },
     "ce005f4abafdee4e": {
       "provider": "supabase",
       "path": "morioki-normal/ce005f4abafdee4e--e298f4ae5f13cc12ab2f9dd4bbd8d4492ccfd4def3340513bd780e4fef65e031.mp3",
@@ -36826,6 +38744,13 @@
       "sha256": "f4e44e19ffd490167e8fbf2cc9c3ed5ae9a5c160122bcce1f69d201e8d30c185",
       "bytes": 51117,
       "duration": 6.304
+    },
+    "ce7f9b3ff01ec313": {
+      "provider": "supabase",
+      "path": "morioki-normal/ce7f9b3ff01ec313--76020616c7cd5919b04fc2d705e98668d18733007c147318e7cd162a9335f5a9.mp3",
+      "sha256": "76020616c7cd5919b04fc2d705e98668d18733007c147318e7cd162a9335f5a9",
+      "bytes": 16365,
+      "duration": 1.964
     },
     "ce8c801ac79293ce": {
       "provider": "supabase",
@@ -36917,6 +38842,13 @@
       "sha256": "c1504eb5daf7f3bf50d9b86c3a75993c897bc3b8907f6091c4f8917da13fea4a",
       "bytes": 15885,
       "duration": 1.231
+    },
+    "cf04d98eb7426822": {
+      "provider": "supabase",
+      "path": "morioki-normal/cf04d98eb7426822--80387c362cb2cdde199b745f5cdd256265c5e3840a93ec511216b6f9953eefa6.mp3",
+      "sha256": "80387c362cb2cdde199b745f5cdd256265c5e3840a93ec511216b6f9953eefa6",
+      "bytes": 29805,
+      "duration": 3.647
     },
     "cf1272783f112ac4": {
       "provider": "supabase",
@@ -37029,6 +38961,13 @@
       "sha256": "b33d50de0a3fd28af96b34eb77328a104991d61a79b4f93d041e509dac9bc0b7",
       "bytes": 11949,
       "duration": 1.395
+    },
+    "cfee85f1230d7605": {
+      "provider": "supabase",
+      "path": "morioki-normal/cfee85f1230d7605--cf6a045d1ac5703cac58a041216437552aaffa745de67743164548c4cef035aa.mp3",
+      "sha256": "cf6a045d1ac5703cac58a041216437552aaffa745de67743164548c4cef035aa",
+      "bytes": 42477,
+      "duration": 5.213
     },
     "cff3af84b489a2b0": {
       "provider": "daily",
@@ -37198,6 +39137,13 @@
       "bytes": 19437,
       "duration": 2.348
     },
+    "d0fee5ea09ce592e": {
+      "provider": "supabase",
+      "path": "morioki-normal/d0fee5ea09ce592e--f0940f89eea4cadccd5767844b29dc04ddd124cb387b1e0a7ae53d9d3063c174.mp3",
+      "sha256": "f0940f89eea4cadccd5767844b29dc04ddd124cb387b1e0a7ae53d9d3063c174",
+      "bytes": 18285,
+      "duration": 2.208
+    },
     "d104d49ebc5d68e2": {
       "provider": "supabase",
       "path": "morioki-normal/d104d49ebc5d68e2--291978d44b9b38b29ec229fe7f4ed4e860f31a27b21639ce343254af3948c3aa.mp3",
@@ -37246,6 +39192,13 @@
       "sha256": "7e3883f9f4da4ff472718aa7ee0454e1b06ce139d97acc55d0d6b30839f581f9",
       "bytes": 32685,
       "duration": 3.996
+    },
+    "d12e044300b12637": {
+      "provider": "supabase",
+      "path": "morioki-normal/d12e044300b12637--19fb989ec4ef0cc3e2c07dc6ebebc0d7b7f2c05104a5c8a21e350b55656436db.mp3",
+      "sha256": "19fb989ec4ef0cc3e2c07dc6ebebc0d7b7f2c05104a5c8a21e350b55656436db",
+      "bytes": 13485,
+      "duration": 1.605
     },
     "d137311341de9fc7": {
       "provider": "supabase",
@@ -37380,12 +39333,26 @@
       "bytes": 61677,
       "duration": 5.048
     },
+    "d21cc855663d04e1": {
+      "provider": "supabase",
+      "path": "morioki-normal/d21cc855663d04e1--93c8deb0c04b1c237de3339cb741289f533761846e0c5fa502c7b1fc6c41e893.mp3",
+      "sha256": "93c8deb0c04b1c237de3339cb741289f533761846e0c5fa502c7b1fc6c41e893",
+      "bytes": 74157,
+      "duration": 9.185
+    },
     "d221adf0ae78317c": {
       "provider": "supabase",
       "path": "morioki-normal/d221adf0ae78317c--c3fb84d1f9b772196d465703a1f2e512d271c0c52be199e8bcaadeb04a58090e.mp3",
       "sha256": "c3fb84d1f9b772196d465703a1f2e512d271c0c52be199e8bcaadeb04a58090e",
       "bytes": 48429,
       "duration": 5.958
+    },
+    "d223b6fce4c80d88": {
+      "provider": "supabase",
+      "path": "morioki-normal/d223b6fce4c80d88--fa587f810e4ade81f767c2f5cd3f77b4bf0c56f69bc2c16aa22d1b3da2931f2b.mp3",
+      "sha256": "fa587f810e4ade81f767c2f5cd3f77b4bf0c56f69bc2c16aa22d1b3da2931f2b",
+      "bytes": 22317,
+      "duration": 2.696
     },
     "d227b1f9683f222d": {
       "provider": "supabase",
@@ -37401,6 +39368,13 @@
       "bytes": 24429,
       "duration": 2.974
     },
+    "d24c1b17e726e833": {
+      "provider": "supabase",
+      "path": "morioki-normal/d24c1b17e726e833--4cf681443ce26216abdbd8c5ac6dd9f4d87c2654a56342b7a254901d87b5b922.mp3",
+      "sha256": "4cf681443ce26216abdbd8c5ac6dd9f4d87c2654a56342b7a254901d87b5b922",
+      "bytes": 11373,
+      "duration": 1.338
+    },
     "d25bb017a00b0ab3": {
       "provider": "supabase",
       "path": "morioki-normal/d25bb017a00b0ab3--2da811cbd95e7614e2163802d5deb9f672940fd60bd7705687b76a5dd577a081.mp3",
@@ -37414,6 +39388,13 @@
       "sha256": "3b2bfb8cab36dfdaf89cbf0b3f2feb9441c27899cbc6bd6dd3866fbe7930a479",
       "bytes": 16365,
       "duration": 1.965
+    },
+    "d261b559f3a3ae05": {
+      "provider": "supabase",
+      "path": "morioki-normal/d261b559f3a3ae05--a96c4cd9066fab645c2f3b781f3a5db3369382fb6fc8ad323756748ef10b4180.mp3",
+      "sha256": "a96c4cd9066fab645c2f3b781f3a5db3369382fb6fc8ad323756748ef10b4180",
+      "bytes": 30765,
+      "duration": 3.752
     },
     "d262e13184bc8035": {
       "provider": "supabase",
@@ -37443,6 +39424,13 @@
       "bytes": 32493,
       "duration": 3.962
     },
+    "d2841bd11ffd72ad": {
+      "provider": "supabase",
+      "path": "morioki-normal/d2841bd11ffd72ad--a12d311460af4d65f8cbd92f338633a358bfb9bf23fe2ba42d2093959ec0ca15.mp3",
+      "sha256": "a12d311460af4d65f8cbd92f338633a358bfb9bf23fe2ba42d2093959ec0ca15",
+      "bytes": 13677,
+      "duration": 1.616
+    },
     "d2a37ce59a7302d9": {
       "provider": "supabase",
       "path": "morioki-normal/d2a37ce59a7302d9--2bb5c0fbf039f65f98cf930a00e9b3a98bab2017ecc40def805646c8558d5b9c.mp3",
@@ -37463,6 +39451,13 @@
       "sha256": "89fa6fd4884fe158f2527431ae45d2b786279ff17c59c43f7c3b6d730a6d31b1",
       "bytes": 71661,
       "duration": 8.858
+    },
+    "d2d2cd3eedac8e72": {
+      "provider": "supabase",
+      "path": "morioki-normal/d2d2cd3eedac8e72--18f63a48ac2bc760889ff1e423281253c0893a7758013763dedc969a3e8e94c4.mp3",
+      "sha256": "18f63a48ac2bc760889ff1e423281253c0893a7758013763dedc969a3e8e94c4",
+      "bytes": 29997,
+      "duration": 3.66
     },
     "d2e6555a3a7e9fde": {
       "provider": "daily",
@@ -37611,6 +39606,13 @@
       "bytes": 54477,
       "duration": 4.446
     },
+    "d399cdb8a33088ac": {
+      "provider": "supabase",
+      "path": "morioki-normal/d399cdb8a33088ac--925509472e4956220df232f781e1b63f7931855c072d7e667adb84347474d017.mp3",
+      "sha256": "925509472e4956220df232f781e1b63f7931855c072d7e667adb84347474d017",
+      "bytes": 24045,
+      "duration": 2.906
+    },
     "d39d7aa4c55fe7d0": {
       "provider": "supabase",
       "path": "morioki-normal/d39d7aa4c55fe7d0--88ab0e9d26e117c972b960f9aae0f0809ad0da60b409d4f6cc3af8e408fca858.mp3",
@@ -37659,6 +39661,13 @@
       "sha256": "0828670e4318d43e50a3295d75185de539a957cab697c80060ba2fb63df6d993",
       "bytes": 100845,
       "duration": 12.512
+    },
+    "d411af753927a7f9": {
+      "provider": "supabase",
+      "path": "morioki-normal/d411af753927a7f9--45813d977ab6fa6a6724c2e693ea6028f8cb46090d9126e47d5e8dab197eb4c2.mp3",
+      "sha256": "45813d977ab6fa6a6724c2e693ea6028f8cb46090d9126e47d5e8dab197eb4c2",
+      "bytes": 15789,
+      "duration": 1.895
     },
     "d41ac54981806445": {
       "provider": "supabase",
@@ -37806,6 +39815,13 @@
       "sha256": "ed96ee586189e2238faebb13219aef988d6913bdb2a78aae51fd9bca9351aa70",
       "bytes": 50925,
       "duration": 6.283
+    },
+    "d512fcf899d0dc8c": {
+      "provider": "supabase",
+      "path": "morioki-normal/d512fcf899d0dc8c--931d2aa3d8a38c3f4fea8608ad6c10742a62ca6f0a3fd8d1790284cef7307059.mp3",
+      "sha256": "931d2aa3d8a38c3f4fea8608ad6c10742a62ca6f0a3fd8d1790284cef7307059",
+      "bytes": 18285,
+      "duration": 2.197
     },
     "d516e56d2e0235d1": {
       "provider": "supabase",
@@ -37975,6 +39991,13 @@
       "bytes": 12141,
       "duration": 1.43
     },
+    "d5f1286e79c5f06a": {
+      "provider": "supabase",
+      "path": "morioki-normal/d5f1286e79c5f06a--b0c6c6ccdee1acdfed76d9da5dc13fa960380f226acf6e0bc367f8c64821c19c.mp3",
+      "sha256": "b0c6c6ccdee1acdfed76d9da5dc13fa960380f226acf6e0bc367f8c64821c19c",
+      "bytes": 14061,
+      "duration": 1.662
+    },
     "d5fa9c299592a885": {
       "provider": "supabase",
       "path": "morioki-normal/d5fa9c299592a885--f3060da188c0a1bd3ca76cc92ce0e0e8824a035a2e5a89d51fd1a352a94b4562.mp3",
@@ -38079,6 +40102,13 @@
       "sha256": "f3febc31933fe0eff866718b828682a1667ef94f1e1e9daaa0e7095e98da187a",
       "bytes": 15021,
       "duration": 1.79
+    },
+    "d655a2cb4fc9ec2f": {
+      "provider": "supabase",
+      "path": "morioki-normal/d655a2cb4fc9ec2f--31b28a5586a8d31fccd8ef34ff93e28c786c9e5f7a4eb8defd8afe2f33a8ffb1.mp3",
+      "sha256": "31b28a5586a8d31fccd8ef34ff93e28c786c9e5f7a4eb8defd8afe2f33a8ffb1",
+      "bytes": 10989,
+      "duration": 1.291
     },
     "d662dafd15935d49": {
       "provider": "supabase",
@@ -38212,6 +40242,13 @@
       "sha256": "f3bd4cd77035e9c40b22309ae87af05a383b13aafa7d7706367b6d2206c75b3f",
       "bytes": 92205,
       "duration": 11.436
+    },
+    "d72a6727cfa40a5b": {
+      "provider": "supabase",
+      "path": "morioki-normal/d72a6727cfa40a5b--0497e0d44bcf3fcb0f69ec0363372f814a2d04c2ab081eefd5d4ef69f72383bf.mp3",
+      "sha256": "0497e0d44bcf3fcb0f69ec0363372f814a2d04c2ab081eefd5d4ef69f72383bf",
+      "bytes": 12333,
+      "duration": 1.454
     },
     "d72bdf987dbb3a94": {
       "provider": "supabase",
@@ -38416,12 +40453,26 @@
       "bytes": 14829,
       "duration": 1.767
     },
+    "d8388f56b0cbd9da": {
+      "provider": "supabase",
+      "path": "morioki-normal/d8388f56b0cbd9da--d548da0984740c2dfa68641367032ccaf74f14816a8f1363f29bd6e72bb21894.mp3",
+      "sha256": "d548da0984740c2dfa68641367032ccaf74f14816a8f1363f29bd6e72bb21894",
+      "bytes": 26157,
+      "duration": 3.172
+    },
     "d84574b5a128a0c1": {
       "provider": "daily",
       "path": "japanese/2026-09-20/example-02--5064e25655c381032065c441c76ba07cc899d6999125dffdb729a98419a10c39.mp3",
       "sha256": "5064e25655c381032065c441c76ba07cc899d6999125dffdb729a98419a10c39",
       "bytes": 60525,
       "duration": 4.946
+    },
+    "d856fa5b289535df": {
+      "provider": "supabase",
+      "path": "morioki-normal/d856fa5b289535df--da274d61bd603af70698b0cb1608780f071d5af4bb0062e6d3e1862835c4a240.mp3",
+      "sha256": "da274d61bd603af70698b0cb1608780f071d5af4bb0062e6d3e1862835c4a240",
+      "bytes": 17133,
+      "duration": 2.058
     },
     "d8630afb62368bcf": {
       "provider": "supabase",
@@ -38464,6 +40515,13 @@
       "sha256": "43adceaf4bec488f79b704c61c0e9d666f67d34298dc93352cfe927ab8c4505d",
       "bytes": 46317,
       "duration": 5.703
+    },
+    "d89655d43690ac30": {
+      "provider": "supabase",
+      "path": "morioki-normal/d89655d43690ac30--faadf0cb5c1feac9c4075c9025f866692633fe89f48efe7b7ef5676afb654d37.mp3",
+      "sha256": "faadf0cb5c1feac9c4075c9025f866692633fe89f48efe7b7ef5676afb654d37",
+      "bytes": 12717,
+      "duration": 1.5
     },
     "d89e283c6addb0e0": {
       "provider": "daily",
@@ -38647,6 +40705,13 @@
       "bytes": 14445,
       "duration": 1.709
     },
+    "d96e442a5dd463a6": {
+      "provider": "supabase",
+      "path": "morioki-normal/d96e442a5dd463a6--e293c7a17e032b310687a89843e10eb5871547dfd5bc3bc1424617e727451fcd.mp3",
+      "sha256": "e293c7a17e032b310687a89843e10eb5871547dfd5bc3bc1424617e727451fcd",
+      "bytes": 23469,
+      "duration": 2.835
+    },
     "d97285d06b6da28c": {
       "provider": "supabase",
       "path": "morioki-normal/d97285d06b6da28c--c228119a0cd380ca984903a160ed35cdba093c3e62556673e858c649da04197c.mp3",
@@ -38780,6 +40845,13 @@
       "bytes": 64557,
       "duration": 7.976
     },
+    "da22fff2d3929926": {
+      "provider": "supabase",
+      "path": "morioki-normal/da22fff2d3929926--949d5cf82efb0afaccda54ee90ab8b71a667938fd6aa4c42e04fe624e51d4874.mp3",
+      "sha256": "949d5cf82efb0afaccda54ee90ab8b71a667938fd6aa4c42e04fe624e51d4874",
+      "bytes": 11181,
+      "duration": 1.314
+    },
     "da2377c01526a07c": {
       "provider": "supabase",
       "path": "morioki-normal/da2377c01526a07c--df3d8237f40d2eab210cb43a43a17441ec4450c2e4fe83c0067dda7f43c1f8fa.mp3",
@@ -38885,6 +40957,13 @@
       "bytes": 10413,
       "duration": 1.21
     },
+    "dacc40630f7af15f": {
+      "provider": "supabase",
+      "path": "morioki-normal/dacc40630f7af15f--1f20456b5d4f2c6db2f438560bf4f33fe453043cc65916fb33aa5bb5e229e432.mp3",
+      "sha256": "1f20456b5d4f2c6db2f438560bf4f33fe453043cc65916fb33aa5bb5e229e432",
+      "bytes": 33453,
+      "duration": 4.101
+    },
     "dacdcea78f2d3eeb": {
       "provider": "supabase",
       "path": "morioki-normal/dacdcea78f2d3eeb--9e90f1024174eb89ce636b7835f7c4708ee2b6c3cd7e7986eb1035a4498e72d1.mp3",
@@ -38912,6 +40991,13 @@
       "sha256": "c1dfdd8eedba855c5c2d167730d3b523291ade4bfbfb329a2974dd54e6795f1b",
       "bytes": 47853,
       "duration": 5.895
+    },
+    "dae43c23d5f2112f": {
+      "provider": "supabase",
+      "path": "morioki-normal/dae43c23d5f2112f--d00fa624bf96ad9f741226cc26ae13695e3543b60b40f4ec2ba3730cefa75d2e.mp3",
+      "sha256": "d00fa624bf96ad9f741226cc26ae13695e3543b60b40f4ec2ba3730cefa75d2e",
+      "bytes": 14253,
+      "duration": 1.698
     },
     "daf2a9b9a0c954dd": {
       "provider": "supabase",
@@ -39067,6 +41153,13 @@
       "bytes": 44781,
       "duration": 5.517
     },
+    "dbe74c1a617bf1d6": {
+      "provider": "supabase",
+      "path": "morioki-normal/dbe74c1a617bf1d6--5c831b834d2e5df44f37b7afa3540cd5d3b8be2d0aa40bb2503a0f03f6fd8118.mp3",
+      "sha256": "5c831b834d2e5df44f37b7afa3540cd5d3b8be2d0aa40bb2503a0f03f6fd8118",
+      "bytes": 36909,
+      "duration": 4.53
+    },
     "dbe9e61170c1a52d": {
       "provider": "supabase",
       "path": "morioki-normal/dbe9e61170c1a52d--816d6159386232b6783f9658126cd10514414ed190b8fb2382a07ef66652fe82.mp3",
@@ -39136,6 +41229,13 @@
       "sha256": "1b948b85dbeab41eb69afe86a414f7d92140b942f2a97c2be66353895a3ec5cc",
       "bytes": 49581,
       "duration": 6.098
+    },
+    "dc49f1e66ee87422": {
+      "provider": "supabase",
+      "path": "morioki-normal/dc49f1e66ee87422--4c8bd461c5f8dbbabe5bcd9db7dfb7a2bffb5cf76d5abd452d90cc2728a00fa2.mp3",
+      "sha256": "4c8bd461c5f8dbbabe5bcd9db7dfb7a2bffb5cf76d5abd452d90cc2728a00fa2",
+      "bytes": 12717,
+      "duration": 1.49
     },
     "dc50e569bccac8d5": {
       "provider": "daily",
@@ -39346,6 +41446,13 @@
       "sha256": "2dd1a79b8655c41ef7d2576fe540ee2fcbf8f490f42f00b931107c32c081f9e8",
       "bytes": 14253,
       "duration": 1.686
+    },
+    "dd550a6e550d4afa": {
+      "provider": "supabase",
+      "path": "morioki-normal/dd550a6e550d4afa--55e3e617eb4e5f5cd8c2a887520cd83a692852f8fda6c3ced5632065bf0d77b0.mp3",
+      "sha256": "55e3e617eb4e5f5cd8c2a887520cd83a692852f8fda6c3ced5632065bf0d77b0",
+      "bytes": 15981,
+      "duration": 1.918
     },
     "dd5bf037753f7eab": {
       "provider": "supabase",
@@ -39571,6 +41678,13 @@
       "bytes": 86253,
       "duration": 10.683
     },
+    "de4fcdc9aaff1955": {
+      "provider": "supabase",
+      "path": "morioki-normal/de4fcdc9aaff1955--ae11c05103b9ed4501044a6d80811187cb03427ad3aac417cbaac3344066f34d.mp3",
+      "sha256": "ae11c05103b9ed4501044a6d80811187cb03427ad3aac417cbaac3344066f34d",
+      "bytes": 19629,
+      "duration": 2.37
+    },
     "de56f765bfd1e1b1": {
       "provider": "supabase",
       "path": "morioki-normal/de56f765bfd1e1b1--f5d609002885e2d7134e25fb61e39679715827a4fd6e6fe3c96808c2de8c969b.mp3",
@@ -39795,6 +41909,13 @@
       "bytes": 13485,
       "duration": 1.593
     },
+    "df59636882230bac": {
+      "provider": "supabase",
+      "path": "morioki-normal/df59636882230bac--b9573a27de7cd8d2f76ed37c426a737e1e2c427c9d24cd0841fe411a10a0fff4.mp3",
+      "sha256": "b9573a27de7cd8d2f76ed37c426a737e1e2c427c9d24cd0841fe411a10a0fff4",
+      "bytes": 13869,
+      "duration": 1.639
+    },
     "df5f6d47011e7d93": {
       "provider": "daily",
       "path": "japanese/2026-09-05/vocab-03--fd51487bb0612a0dae6efe3c470ac236c563664806211b1ac182bd8f452f0bf7.mp3",
@@ -39921,6 +42042,13 @@
       "bytes": 16365,
       "duration": 1.965
     },
+    "e01d41d687835f32": {
+      "provider": "supabase",
+      "path": "morioki-normal/e01d41d687835f32--8c7f4e43ccdaf51dd97733c739852724f2cf7b09b5423aa966966f1901dde416.mp3",
+      "sha256": "8c7f4e43ccdaf51dd97733c739852724f2cf7b09b5423aa966966f1901dde416",
+      "bytes": 43437,
+      "duration": 5.331
+    },
     "e0245ecc0bd0f520": {
       "provider": "supabase",
       "path": "morioki-normal/e0245ecc0bd0f520--99333a82db1ad9286a18b8dd73655711de8cd74cc63362716f1da508bdb2df9a.mp3",
@@ -39948,6 +42076,13 @@
       "sha256": "bd4e25f74f3b1e76ed702964ccf0326b64217fac6e0c4abe21a0b6ec63ccd4c5",
       "bytes": 62829,
       "duration": 7.769
+    },
+    "e04a6f103f5ec71c": {
+      "provider": "supabase",
+      "path": "morioki-normal/e04a6f103f5ec71c--b36b5aead1dd7fc211ed0dffe82e1990c497dcf1a47203ab32eab161e8e23b19.mp3",
+      "sha256": "b36b5aead1dd7fc211ed0dffe82e1990c497dcf1a47203ab32eab161e8e23b19",
+      "bytes": 10989,
+      "duration": 1.28
     },
     "e04d8e9f54536fab": {
       "provider": "supabase",
@@ -39998,6 +42133,13 @@
       "bytes": 53901,
       "duration": 4.399
     },
+    "e095cbe5afefc7a1": {
+      "provider": "supabase",
+      "path": "morioki-normal/e095cbe5afefc7a1--49a6e9b1ea1dea6b379b2db30d345029874d3af952c455a8f73df4f03303aae1.mp3",
+      "sha256": "49a6e9b1ea1dea6b379b2db30d345029874d3af952c455a8f73df4f03303aae1",
+      "bytes": 31341,
+      "duration": 3.822
+    },
     "e098d32596d87c59": {
       "provider": "supabase",
       "path": "morioki-normal/e098d32596d87c59--b3aa526dcb933ac5d3daab8bd3676b65ffefae4a0b2f79121c8ccf75f752433e.mp3",
@@ -40018,6 +42160,13 @@
       "sha256": "2c3828459e515e4609f20497c0645aa9521c72bfef401fdb5e26043d638ad269",
       "bytes": 91053,
       "duration": 11.287
+    },
+    "e0c91eb581b4d939": {
+      "provider": "supabase",
+      "path": "morioki-normal/e0c91eb581b4d939--444492dc19978bcb105466c2198634a60aa3a16f08e99a67945de7f2b721803e.mp3",
+      "sha256": "444492dc19978bcb105466c2198634a60aa3a16f08e99a67945de7f2b721803e",
+      "bytes": 59181,
+      "duration": 7.317
     },
     "e0d063ad8dbd6891": {
       "provider": "supabase",
@@ -40046,6 +42195,13 @@
       "sha256": "e97308ae88e6a5c441a10d7768d9346b384b54bd87714bb3a9d9971a7048b8fc",
       "bytes": 15597,
       "duration": 1.85
+    },
+    "e0f85cf93299f6ed": {
+      "provider": "supabase",
+      "path": "morioki-normal/e0f85cf93299f6ed--d79b20f5611d285a8c5fe59627adaa6213e8c6eda12e2a89e14f3d9b816d2627.mp3",
+      "sha256": "d79b20f5611d285a8c5fe59627adaa6213e8c6eda12e2a89e14f3d9b816d2627",
+      "bytes": 24237,
+      "duration": 2.951
     },
     "e0fba173354c383f": {
       "provider": "daily",
@@ -40144,6 +42300,13 @@
       "sha256": "539d0b8c317d83ad594e33ce2a90acc35c3b0c86b077d0252be6c5aafdd1f66f",
       "bytes": 52269,
       "duration": 6.446
+    },
+    "e1bc799abde43eae": {
+      "provider": "supabase",
+      "path": "morioki-normal/e1bc799abde43eae--61dfb965ae8439a9a709b9d4af07685985ba3e992f6f3285a3d2cef4a5f25e6d.mp3",
+      "sha256": "61dfb965ae8439a9a709b9d4af07685985ba3e992f6f3285a3d2cef4a5f25e6d",
+      "bytes": 27501,
+      "duration": 3.346
     },
     "e1dec7d841376184": {
       "provider": "supabase",
@@ -40417,6 +42580,13 @@
       "sha256": "0cf3b37dfbdfe6e75f0cfcc557321fa9f0bc38bfd144f8ad365bb685b1a08f14",
       "bytes": 30573,
       "duration": 3.74
+    },
+    "e33a39beed663142": {
+      "provider": "supabase",
+      "path": "morioki-normal/e33a39beed663142--6a61ceaf68032842f27df6910ca8274556868638ef389b998c256217667d3c7f.mp3",
+      "sha256": "6a61ceaf68032842f27df6910ca8274556868638ef389b998c256217667d3c7f",
+      "bytes": 50733,
+      "duration": 6.26
     },
     "e34c72970c7eb61b": {
       "provider": "supabase",
@@ -41230,12 +43400,26 @@
       "bytes": 14253,
       "duration": 1.685
     },
+    "e824433e7abc4a62": {
+      "provider": "supabase",
+      "path": "morioki-normal/e824433e7abc4a62--4a76e7cbea798e4e3c5b06ded75b2fe1e3f5555e90e6ad42a948c990eaa82ecc.mp3",
+      "sha256": "4a76e7cbea798e4e3c5b06ded75b2fe1e3f5555e90e6ad42a948c990eaa82ecc",
+      "bytes": 25965,
+      "duration": 3.148
+    },
     "e83bcf391f76a755": {
       "provider": "supabase",
       "path": "morioki-normal/e83bcf391f76a755--5aa759bbcc0478938b382ee24ccef3304509b6c79465e76f0925ba6af58fc8e5.mp3",
       "sha256": "5aa759bbcc0478938b382ee24ccef3304509b6c79465e76f0925ba6af58fc8e5",
       "bytes": 14061,
       "duration": 1.674
+    },
+    "e83d60de4d2aeaba": {
+      "provider": "supabase",
+      "path": "morioki-normal/e83d60de4d2aeaba--cae42e7e69e16177a56bd2ecba80cb97d8603256534399097c7e7b3dc2b06d35.mp3",
+      "sha256": "cae42e7e69e16177a56bd2ecba80cb97d8603256534399097c7e7b3dc2b06d35",
+      "bytes": 22893,
+      "duration": 2.777
     },
     "e8609eb929f2f295": {
       "provider": "daily",
@@ -41369,6 +43553,13 @@
       "sha256": "1bbaa9a07b1ef832803fd5aaefada79c06676199fa1131abcbdc9c04bb05b2a2",
       "bytes": 15405,
       "duration": 1.837
+    },
+    "e933faec0098c0a0": {
+      "provider": "supabase",
+      "path": "morioki-normal/e933faec0098c0a0--ec2de0c9b8a821bdddc9447d15e1b287bd1840e67b02e9e728b4471a8b51c560.mp3",
+      "sha256": "ec2de0c9b8a821bdddc9447d15e1b287bd1840e67b02e9e728b4471a8b51c560",
+      "bytes": 25389,
+      "duration": 3.079
     },
     "e9406500369c5564": {
       "provider": "supabase",
@@ -41797,6 +43988,13 @@
       "bytes": 26157,
       "duration": 3.171
     },
+    "eb91891628cda2f2": {
+      "provider": "supabase",
+      "path": "morioki-normal/eb91891628cda2f2--334d81bb3f3210bc914763c3fa8e458a03ea768564362280ba7eef3c528dbe7b.mp3",
+      "sha256": "334d81bb3f3210bc914763c3fa8e458a03ea768564362280ba7eef3c528dbe7b",
+      "bytes": 37293,
+      "duration": 4.576
+    },
     "ebb487dd33647cb9": {
       "provider": "supabase",
       "path": "morioki-normal/ebb487dd33647cb9--477ca2de24e123fc24cc15ac64f84cea975abdd885a81682de47d3239b18db76.mp3",
@@ -41845,6 +44043,13 @@
       "sha256": "51da4a49d25ed404d7afddeebb4e1a27b28fd79e4b226a771cdd156c721447e9",
       "bytes": 46509,
       "duration": 5.726
+    },
+    "ebe9b05be3320d47": {
+      "provider": "supabase",
+      "path": "morioki-normal/ebe9b05be3320d47--816d25dcfb3d4b9b9442b5a365d58bbdab7ee4afc8ef1843ace43ca45e453fe6.mp3",
+      "sha256": "816d25dcfb3d4b9b9442b5a365d58bbdab7ee4afc8ef1843ace43ca45e453fe6",
+      "bytes": 14061,
+      "duration": 1.663
     },
     "ebea0a8450ce4378": {
       "provider": "supabase",
@@ -41909,12 +44114,26 @@
       "bytes": 11757,
       "duration": 1.373
     },
+    "ec39112e799c73c2": {
+      "provider": "supabase",
+      "path": "morioki-normal/ec39112e799c73c2--550db2d24b83914b90d31740ff87777cd5ea91f0123d3e3e2d8486906b7d5947.mp3",
+      "sha256": "550db2d24b83914b90d31740ff87777cd5ea91f0123d3e3e2d8486906b7d5947",
+      "bytes": 32877,
+      "duration": 4.031
+    },
     "ec51ffaabfbc3bbe": {
       "provider": "supabase",
       "path": "morioki-normal/ec51ffaabfbc3bbe--7e4ecfb874d347bb23d45b98d428d343d92c5cd6379cda7147f9fb30b1d5e4ac.mp3",
       "sha256": "7e4ecfb874d347bb23d45b98d428d343d92c5cd6379cda7147f9fb30b1d5e4ac",
       "bytes": 13869,
       "duration": 1.651
+    },
+    "ec620d95bf284ca9": {
+      "provider": "supabase",
+      "path": "morioki-normal/ec620d95bf284ca9--c00c208862007e508043200fdd97ed6cfa3404ef8992e7676b7ad4e2beef396f.mp3",
+      "sha256": "c00c208862007e508043200fdd97ed6cfa3404ef8992e7676b7ad4e2beef396f",
+      "bytes": 10797,
+      "duration": 1.268
     },
     "ec7917862bc3cfaa": {
       "provider": "supabase",
@@ -42041,6 +44260,13 @@
       "sha256": "6412456f01ab3e4074771dcda5b43d5c08fcd8f7838bfc7aebda524849d7bdef",
       "bytes": 13869,
       "duration": 1.651
+    },
+    "ed874e9af177c11e": {
+      "provider": "supabase",
+      "path": "morioki-normal/ed874e9af177c11e--070e800f9f5ca86b270dd85328dd04b8e662daf07bc393b5f65c354e526b7c96.mp3",
+      "sha256": "070e800f9f5ca86b270dd85328dd04b8e662daf07bc393b5f65c354e526b7c96",
+      "bytes": 46125,
+      "duration": 5.68
     },
     "ed8e35a06da52804": {
       "provider": "supabase",
@@ -42224,6 +44450,13 @@
       "bytes": 13293,
       "duration": 1.581
     },
+    "ee895073f88389c7": {
+      "provider": "supabase",
+      "path": "morioki-normal/ee895073f88389c7--d7bfaf6661a870bf6b811b6e413cef1c423dc2235522b90c1fddbde6e9a05001.mp3",
+      "sha256": "d7bfaf6661a870bf6b811b6e413cef1c423dc2235522b90c1fddbde6e9a05001",
+      "bytes": 11565,
+      "duration": 1.36
+    },
     "ee926f4a4f221176": {
       "provider": "supabase",
       "path": "morioki-normal/ee926f4a4f221176--6330b08204f9f0431013cf6c14893bfbda4a1529411acb9983ea44570fec7af1.mp3",
@@ -42280,6 +44513,13 @@
       "bytes": 64845,
       "duration": 5.317
     },
+    "eec0219abe46d47e": {
+      "provider": "supabase",
+      "path": "morioki-normal/eec0219abe46d47e--6dbbf432f1933550e2049750177db139f8d323a6cd5fa60965eb94ad2e660f22.mp3",
+      "sha256": "6dbbf432f1933550e2049750177db139f8d323a6cd5fa60965eb94ad2e660f22",
+      "bytes": 26733,
+      "duration": 3.253
+    },
     "eecaaad4a1960570": {
       "provider": "supabase",
       "path": "morioki-normal/eecaaad4a1960570--158c27582519ede47f7fd291faff8a3749e65aa39538655fceaee613233fd6f6.mp3",
@@ -42300,6 +44540,13 @@
       "sha256": "7d78153f6c75377fcee73017540e3d9fdc084db3e9d008fe4a9b8224f7ec9b00",
       "bytes": 15405,
       "duration": 1.826
+    },
+    "eed710c74a74807b": {
+      "provider": "supabase",
+      "path": "morioki-normal/eed710c74a74807b--7ba86b3ba1feaa343f3df1fb58fdb4b6a6a1299f3ef84b3d821628aa91590b46.mp3",
+      "sha256": "7ba86b3ba1feaa343f3df1fb58fdb4b6a6a1299f3ef84b3d821628aa91590b46",
+      "bytes": 18861,
+      "duration": 2.266
     },
     "eed8f46d5eb11b21": {
       "provider": "supabase",
@@ -42378,6 +44625,13 @@
       "bytes": 60813,
       "duration": 4.991
     },
+    "ef5068abbec329a7": {
+      "provider": "supabase",
+      "path": "morioki-normal/ef5068abbec329a7--2b38e9e20c5e08564e5e20fc0edb07ab3177669fca93d097f014def5eeb91b5b.mp3",
+      "sha256": "2b38e9e20c5e08564e5e20fc0edb07ab3177669fca93d097f014def5eeb91b5b",
+      "bytes": 27309,
+      "duration": 3.32
+    },
     "ef517dee4b88e11a": {
       "provider": "supabase",
       "path": "morioki-normal/ef517dee4b88e11a--b3ffabc8bc9c2fe926b19f1c7eb61681fe9ec7b1880f24378d862edb6aa1e00e.mp3",
@@ -42419,6 +44673,13 @@
       "sha256": "4c0b4c748dfdf5107c2d05b78b30c2dd0d987b2d96e0a5f3d09a6ceb56168044",
       "bytes": 13101,
       "duration": 1.558
+    },
+    "ef85411992bbef2d": {
+      "provider": "supabase",
+      "path": "morioki-normal/ef85411992bbef2d--472b40fee95b219d76b8b150769da6ccec13ea8c47df5dae6935a2f4b3df911e.mp3",
+      "sha256": "472b40fee95b219d76b8b150769da6ccec13ea8c47df5dae6935a2f4b3df911e",
+      "bytes": 99885,
+      "duration": 12.402
     },
     "ef9233177e766493": {
       "provider": "daily",
@@ -42636,6 +44897,13 @@
       "sha256": "beff06be8d2040c459a1dabacffdaa2d89ad1a2b05ee3dcb1f012bb239d8cb20",
       "bytes": 12525,
       "duration": 1.466
+    },
+    "f09bffc2eedb9cce": {
+      "provider": "supabase",
+      "path": "morioki-normal/f09bffc2eedb9cce--2163e97bb8cde8dbee66e580d0d17ad08ea6716e8369451f3a0e57ed4a3234b1.mp3",
+      "sha256": "2163e97bb8cde8dbee66e580d0d17ad08ea6716e8369451f3a0e57ed4a3234b1",
+      "bytes": 10221,
+      "duration": 1.187
     },
     "f0b28ecdad5134e1": {
       "provider": "supabase",
@@ -42882,6 +45150,13 @@
       "bytes": 17517,
       "duration": 2.092
     },
+    "f23d0e083dccc034": {
+      "provider": "supabase",
+      "path": "morioki-normal/f23d0e083dccc034--03b8981b7e4768c44fc8dd6e52a448f78d3f6deba800dd9febf1e2a913077b38.mp3",
+      "sha256": "03b8981b7e4768c44fc8dd6e52a448f78d3f6deba800dd9febf1e2a913077b38",
+      "bytes": 25773,
+      "duration": 3.137
+    },
     "f23e09d78eb2036b": {
       "provider": "supabase",
       "path": "morioki-normal/f23e09d78eb2036b--f6ef4abcfdc72491fd35e80761e019866a82c3a9ca25b51ed12af7267425e0ff.mp3",
@@ -43008,6 +45283,13 @@
       "bytes": 12717,
       "duration": 1.511
     },
+    "f2fd1b8268a21f46": {
+      "provider": "supabase",
+      "path": "morioki-normal/f2fd1b8268a21f46--64c076d8e03f2487e9ef3716849f71a57c9799e6e931b9c7792dc40d756f97a6.mp3",
+      "sha256": "64c076d8e03f2487e9ef3716849f71a57c9799e6e931b9c7792dc40d756f97a6",
+      "bytes": 12141,
+      "duration": 1.418
+    },
     "f30ac2ae2b2fbb92": {
       "provider": "supabase",
       "path": "morioki-normal/f30ac2ae2b2fbb92--2b56028f611804514afc5ff5a5f4e74416d4f9ea3cfe629aeb0216052c6afdcd.mp3",
@@ -43056,6 +45338,13 @@
       "sha256": "1a5340b9a6f099e73adcf29a851ba3a2421829a1a6411a9287d5a8bdfd850be3",
       "bytes": 70317,
       "duration": 8.71
+    },
+    "f34148e2608fa166": {
+      "provider": "supabase",
+      "path": "morioki-normal/f34148e2608fa166--6aa46d3d5099253c4087006883be0226e731f46c7df9f11e060c4febba166043.mp3",
+      "sha256": "6aa46d3d5099253c4087006883be0226e731f46c7df9f11e060c4febba166043",
+      "bytes": 27309,
+      "duration": 3.323
     },
     "f342339ea5b63c32": {
       "provider": "supabase",
@@ -43183,6 +45472,13 @@
       "bytes": 15597,
       "duration": 1.85
     },
+    "f40461b80fd6280c": {
+      "provider": "supabase",
+      "path": "morioki-normal/f40461b80fd6280c--64709de4ac2424c6c4a9b2f33b5ae3abd595f34f67fce2f9a0d1066a4f753241.mp3",
+      "sha256": "64709de4ac2424c6c4a9b2f33b5ae3abd595f34f67fce2f9a0d1066a4f753241",
+      "bytes": 29613,
+      "duration": 3.613
+    },
     "f40d57e072b687cc": {
       "provider": "supabase",
       "path": "morioki-normal/f40d57e072b687cc--059fb304708b7e656219610bb7195a70efeed97ae74d8c2790983625fa9f2b6c.mp3",
@@ -43203,6 +45499,13 @@
       "sha256": "2582c3c6e6cd1fc0f01cebe1f682643e27daffe9cb73babb19f9f7e00d80efcc",
       "bytes": 56493,
       "duration": 4.61
+    },
+    "f43a2a7697bee98a": {
+      "provider": "supabase",
+      "path": "morioki-normal/f43a2a7697bee98a--1bfd05f83bc7efecdf66d3ba9d050548fa8b3d5a7401137c7660004f4ba2f115.mp3",
+      "sha256": "1bfd05f83bc7efecdf66d3ba9d050548fa8b3d5a7401137c7660004f4ba2f115",
+      "bytes": 27885,
+      "duration": 3.404
     },
     "f44a82bc8cedab60": {
       "provider": "daily",
@@ -43897,6 +46200,13 @@
       "bytes": 61677,
       "duration": 5.049
     },
+    "f842f9d0d4e9250c": {
+      "provider": "supabase",
+      "path": "morioki-normal/f842f9d0d4e9250c--17a0ca2756ca37afb569037e4fe5205ff09824620548f1f27def7d0f9e739b73.mp3",
+      "sha256": "17a0ca2756ca37afb569037e4fe5205ff09824620548f1f27def7d0f9e739b73",
+      "bytes": 31149,
+      "duration": 3.798
+    },
     "f8611ee8fee06554": {
       "provider": "daily",
       "path": "japanese/2026-09-22/vocab-06--0f713d9e50d075a602c6e490790930abbb87054531a695edc1f75070b386b15e.mp3",
@@ -44058,6 +46368,13 @@
       "duration": 1.128,
       "sha256": "e2fed1b6791dffb189bdc71f39f606d4a833b87a8bc6f5ef5d71f8d7450d16ad"
     },
+    "f93019d86772dd24": {
+      "provider": "supabase",
+      "path": "morioki-normal/f93019d86772dd24--f2f2cddd64f175c1b741779e936aeb372855d86d0cd4ec18fb18bf10999e520c.mp3",
+      "sha256": "f2f2cddd64f175c1b741779e936aeb372855d86d0cd4ec18fb18bf10999e520c",
+      "bytes": 43629,
+      "duration": 5.355
+    },
     "f939bf12f2609dd6": {
       "provider": "supabase",
       "path": "morioki-normal/f939bf12f2609dd6--d50cdf8c050f413d63794fac746d0c85b33fb4413354f346028023674c6218fb.mp3",
@@ -44078,6 +46395,13 @@
       "sha256": "b2f93eb0df3ae87877d2cf6cfe56bacf532f0550226528d48ea9ebf1c6835151",
       "bytes": 15597,
       "duration": 1.22
+    },
+    "f95d5cebf34d3977": {
+      "provider": "supabase",
+      "path": "morioki-normal/f95d5cebf34d3977--cf410bbd6a0d2e8ea14e10013a19964452c2f1643e81ab4cc060d43166e68249.mp3",
+      "sha256": "cf410bbd6a0d2e8ea14e10013a19964452c2f1643e81ab4cc060d43166e68249",
+      "bytes": 16173,
+      "duration": 1.941
     },
     "f973ff7ecf95e56a": {
       "provider": "supabase",
@@ -44148,6 +46472,13 @@
       "sha256": "d3b895fe3b2a0e5188f48c0f3cdaab448e2bbb9fe7096ec1f7125c89ce5c87eb",
       "bytes": 41325,
       "duration": 5.087
+    },
+    "fa038945603ee149": {
+      "provider": "supabase",
+      "path": "morioki-normal/fa038945603ee149--7643e9612cb952b6461a6802dd1fa32bda257e3cbca06e693334dd776ba55bd6.mp3",
+      "sha256": "7643e9612cb952b6461a6802dd1fa32bda257e3cbca06e693334dd776ba55bd6",
+      "bytes": 81261,
+      "duration": 10.058
     },
     "fa10116cf6799328": {
       "provider": "supabase",
@@ -44380,6 +46711,13 @@
       "bytes": 59373,
       "duration": 4.852
     },
+    "fad7f409dc7c23e5": {
+      "provider": "supabase",
+      "path": "morioki-normal/fad7f409dc7c23e5--e9979da9af7e01234649fd92d7f74e87ae7cda3b11b98880e32e0347ce701749.mp3",
+      "sha256": "e9979da9af7e01234649fd92d7f74e87ae7cda3b11b98880e32e0347ce701749",
+      "bytes": 16941,
+      "duration": 2.034
+    },
     "faf86afed8d1ee8a": {
       "provider": "daily",
       "path": "japanese/2026-10-09/vocab-08--278c5d5b4bdf7b89cf46346989991d6f4e82e5dc84c1a3f25a4724173d1b1a18.mp3",
@@ -44477,6 +46815,13 @@
       "sha256": "01a5f803bc7b2f0794780e579a2b7214fc1a80cd3c176cafeb8f5a2dd8c212a1",
       "bytes": 14253,
       "duration": 1.697
+    },
+    "fb8d259c53506d68": {
+      "provider": "supabase",
+      "path": "morioki-normal/fb8d259c53506d68--698a361928e98e6d6cd2e3b70f35d89cadff8a756078852c3af54fac4505422e.mp3",
+      "sha256": "698a361928e98e6d6cd2e3b70f35d89cadff8a756078852c3af54fac4505422e",
+      "bytes": 11949,
+      "duration": 1.396
     },
     "fb91bca0be7d2094": {
       "provider": "supabase",
@@ -44597,6 +46942,13 @@
       "bytes": 37677,
       "duration": 4.628
     },
+    "fc113b59117c437d": {
+      "provider": "supabase",
+      "path": "morioki-normal/fc113b59117c437d--942996b04f6939edd41d33049bc715ef4840cf2b1dcae89a888bddb2a29d7bb6.mp3",
+      "sha256": "942996b04f6939edd41d33049bc715ef4840cf2b1dcae89a888bddb2a29d7bb6",
+      "bytes": 28269,
+      "duration": 3.439
+    },
     "fc152e7b853b639f": {
       "provider": "daily",
       "path": "japanese/2026-09-30/vocab-09--242ca91ef34a6f8382b0bfc1016e20bfda33be5467b8e3c10d3f6785ad1c8a19.mp3",
@@ -44617,6 +46969,13 @@
       "sha256": "1504cc755417d273b212de353776efead5d81905815ae1e60c041b6630dd3024",
       "bytes": 32685,
       "duration": 3.986
+    },
+    "fc2840e6eb5a7eda": {
+      "provider": "supabase",
+      "path": "morioki-normal/fc2840e6eb5a7eda--b77ba13aa8b289927908f2fbfbe4af464aa2cde947b759c35d1705d0bf4e2457.mp3",
+      "sha256": "b77ba13aa8b289927908f2fbfbe4af464aa2cde947b759c35d1705d0bf4e2457",
+      "bytes": 15213,
+      "duration": 1.813
     },
     "fc35153fe0d2f4d3": {
       "provider": "supabase",
@@ -44848,6 +47207,13 @@
       "bytes": 16749,
       "duration": 1.368,
       "sha256": "9fed9b2e5e276d31d966360e9502a832a5c3419ff2feb5264f7cfb486b9b57f0"
+    },
+    "fe093db70c78826b": {
+      "provider": "supabase",
+      "path": "morioki-normal/fe093db70c78826b--16d540ef601730c8788f1617f1404d0b4239c9275b2a12f1cdefb3721b9b7f9d.mp3",
+      "sha256": "16d540ef601730c8788f1617f1404d0b4239c9275b2a12f1cdefb3721b9b7f9d",
+      "bytes": 26349,
+      "duration": 3.207
     },
     "fe245e297225c525": {
       "provider": "supabase",
@@ -45249,5 +47615,5 @@
       "duration": 2.104
     }
   },
-  "verifiedAt": "2026-10-30T01:43:28.109Z"
+  "verifiedAt": "2026-10-30T08:19:41.044Z"
 }
