@@ -44,6 +44,6 @@ test('unit URL resolution preserves a known unit and safely defaults invalid IDs
   assert.equal(liveUnitFromSearch('?live-unit=2026-09-30-okashi-bokuso').id, '2026-09-30-okashi-bokuso')
   assert.equal(liveUnitFromSearch('?live-unit=2026-10-29').id, '2026-10-29')
   for (const input of ['', '?live-unit=missing', '?live-unit=%3Cscript%3E']) {
-    assert.equal(liveUnitFromSearch(input).id, '2026-10-29')
+    assert.equal(liveUnitFromSearch(input).id, liveUnits[0].id)
   }
 })

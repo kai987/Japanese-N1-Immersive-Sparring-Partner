@@ -21,7 +21,6 @@ const normalized = (text: string) => text.normalize('NFKC').replace(/\s+/g, '')
 test('October 29 unit preserves all 35 unique screenshot lines as notes, with complete bilingual learning additions', () => {
   const unit = liveUnits.find(unit => unit.id === unitId)!
   assert.ok(unit)
-  assert.equal(liveUnits[0].id, unitId)
   assert.equal(unit.date, '2026-10-29')
   assert.equal(new Set(screenshotLines).size, 35)
   const quotes = normalized(unit.groups.map(group => group.source?.quote ?? '').join('\n'))

@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test'
 import { mkdir } from 'node:fs/promises'
+import { liveUnits } from '../src/data/live-reaction-units.ts'
 
 const unit = '2026-09-30-okashi-bokuso'
 const storageKey = 'n1-live-reactions-progress-v1'
@@ -99,7 +100,7 @@ test('mobile unit picker, categories and dark cards remain readable at narrow wi
 
 test('invalid unit URLs fall back without losing the live section', async ({ page }) => {
   await page.goto('/?live-unit=invalid#live-reactions')
-  await expect(page.getByLabel('选择学习单元', { exact: true })).toHaveValue('2026-10-29')
-  await expect(page.locator('.live-page')).toHaveAttribute('data-live-unit', '2026-10-29')
-  await expect(page).toHaveURL(/live-unit=2026-10-29#live-reactions$/)
+  await expect(page.getByLabel('选择学习单元', { exact: true })).toHaveValue(liveUnits[0].id)
+  await expect(page.locator('.live-page')).toHaveAttribute('data-live-unit', liveUnits[0].id)
+  await expect(page).toHaveURL(new RegExp(`live-unit=${liveUnits[0].id}#live-reactions$`))
 })

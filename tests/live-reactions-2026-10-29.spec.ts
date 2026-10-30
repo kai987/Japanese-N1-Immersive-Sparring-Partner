@@ -12,11 +12,11 @@ const evidence = '/tmp/n1-improvements-playwright/live-2026-10-29'
 const search = (page: Page) => page.getByRole('textbox', { name: '全站搜索', exact: true })
 const results = (page: Page) => page.getByRole('region', { name: '教材の検索結果', exact: true })
 
-test('sidebar opens the latest screenshot unit with complete source-labelled cards', async ({ page }) => {
+test('sidebar opens the October 29 archive with complete source-labelled cards', async ({ page }) => {
   const errors: string[] = []
   page.on('pageerror', error => errors.push(error.message))
   page.on('console', message => { if (['error', 'warning'].includes(message.type())) errors.push(message.text()) })
-  await page.goto('/')
+  await page.goto('/?live-unit=2026-10-29')
   await expect(page).toHaveTitle('N1 Immersive Sparring Partner')
   await page.getByRole('navigation', { name: 'メインナビゲーション', exact: true }).getByRole('button', { name: '直播条反', exact: true }).click()
   await expect(page.getByLabel('选择学习单元', { exact: true })).toHaveValue(unitId)
@@ -61,7 +61,7 @@ test('October notes retain independent review marks across unit switches and rel
   await page.addInitScript(key => {
     if (!localStorage.getItem(key)) localStorage.setItem(key, JSON.stringify({ version: 1, groups: { 'live-2026-09-28-endurance': 'mastered' } }))
   }, storageKey)
-  await page.goto('/')
+  await page.goto('/?live-unit=2026-10-29')
   const navigation = page.getByRole('navigation', { name: 'メインナビゲーション', exact: true })
   await navigation.getByRole('button', { name: 'N1 語彙', exact: true }).click()
   await page.locator('.learning-card').first().getByRole('button', { name: '習得済み', exact: true }).click()

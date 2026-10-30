@@ -6,8 +6,14 @@ import type { LiveReactionExample } from '../src/data/live-reactions.ts'
 import { liveEntryAudioReference, liveExampleAudioReference, liveUnitCountLabel, validateLiveIdentities } from '../src/lib/liveIdentities.ts'
 import { collectAudio } from '../scripts/collect-audio.ts'
 
+// Freeze the migration baseline to the units published before stable IDs were
+// introduced. Later units must not change this proof or require legacy aliases.
+const migrationIds = ['2026-10-29', '2026-09-30-okashi-bokuso', '2026-09-28']
+const migrationUnits = liveUnits.filter(unit => migrationIds.includes(unit.id))
+
 test('live identity migration preserves every prior group ID, teaching field and displayed count', () => {
-  const previous = liveUnits.map(unit => ({ ...unit, groups: unit.groups.map(group => ({ ...group,
+  assert.deepEqual(migrationUnits.map(unit => unit.id), migrationIds)
+  const previous = migrationUnits.map(unit => ({ ...unit, groups: unit.groups.map(group => ({ ...group,
     entries: group.entries.map(({ id: _id, legacyAudioRef: _legacy, ...entry }) => entry),
     examples: group.examples.map(({ id: _id, legacyAudioRef: _legacy, ...example }) => example),
   })) }))
@@ -17,7 +23,7 @@ test('live identity migration preserves every prior group ID, teaching field and
 })
 
 test('reordering or inserting examples preserves existing explicit identities and published audio reference suffixes', () => {
-  const group = liveUnits[0].groups[0]
+  const group = migrationUnits[0].groups[0]
   const before = new Map(group.examples.map(example => [example.id, liveExampleAudioReference(example)]))
   const inserted: LiveReactionExample = { id: 'live-new-example', japanese: '新しい例文です。', chinese: '这是新增的例句。' }
   const reordered = [inserted, ...[...group.examples].reverse()]
@@ -30,7 +36,7 @@ test('reordering or inserting examples preserves existing explicit identities an
 
 test('all existing live catalog references retain their original aliases and no index-only fallback is used', () => {
   const catalog = collectAudio()
-  for (const unit of liveUnits) for (const group of unit.groups) {
+  for (const unit of migrationUnits) for (const group of unit.groups) {
     const prefix = 'live/' + unit.id + '/' + group.id + '/'
     for (const entry of group.entries) {
       assert.ok(entry.id && entry.legacyAudioRef)
@@ -44,16 +50,16 @@ test('all existing live catalog references retain their original aliases and no 
 })
 
 test('live validation rejects duplicate IDs, duplicate legacy aliases, missing fields and malformed identities', () => {
-  const duplicates = structuredClone(liveUnits)
+  const duplicates = structuredClone(migrationUnits)
   duplicates[0].groups[0].examples[0].id = duplicates[0].groups[0].entries[0].id
   assert.throws(() => validateLiveIdentities(duplicates), /duplicate live example ID/)
-  const aliases = structuredClone(liveUnits)
+  const aliases = structuredClone(migrationUnits)
   aliases[0].groups[0].examples[1].legacyAudioRef = aliases[0].groups[0].examples[0].legacyAudioRef
   assert.throws(() => validateLiveIdentities(aliases), /duplicate live audio reference/)
-  const missing = structuredClone(liveUnits)
+  const missing = structuredClone(migrationUnits)
   missing[0].groups[0].entries[0].reading = ''
   assert.throws(() => validateLiveIdentities(missing), /Incomplete live entry/)
-  const malformed = structuredClone(liveUnits)
+  const malformed = structuredClone(migrationUnits)
   malformed[0].groups[0].entries[0].id = '../not-a-stable-id'
   assert.throws(() => validateLiveIdentities(malformed), /Invalid or duplicate live entry ID/)
 })
