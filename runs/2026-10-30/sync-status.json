@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "targetDate": "2026-10-30",
+  "day": 62,
+  "status": "waiting_upstream",
+  "stage": "waiting_upstream",
+  "requestSubmitted": false,
+  "sourceSavedOnMain": true,
+  "sourceCheckpointVerified": true,
+  "sourceCommit": "4b1205d952083c31a07ca9640edeb3c00140f763",
+  "sourceBlobSha": "0e28c7c8a9527d5ef66e0693cf7cc681f583cd34",
+  "sourceCheckpointBlobSha": "c1660d09da159e871e0c2c0305c6ba9033319ef5",
+  "sourceSha256": "b912bba8d0c9e2635d77f72271368da4f3714cb461a190c135235e373ffa917f",
+  "expectedSourceBytes": 26323,
+  "generatedAtJST": "2026-10-30T09:01:34+09:00",
+  "lastError": null,
+  "nextStep": "Verified Day62 original was checkpointed and promoted to main byte-for-byte. Await the existing IT primary task's verified same-date upstream report, full history snapshot, and shared request/deployment gates; do not regenerate the original.",
+  "updatedAt": "2026-10-30T00:03:48.510Z"
+}
