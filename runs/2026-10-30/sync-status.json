@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-10-30",
   "day": 62,
-  "status": "validating",
-  "stage": "validating",
+  "status": "published",
+  "stage": "published",
   "requestSubmitted": true,
   "sourceSavedOnMain": true,
   "sourceCheckpointVerified": true,
@@ -14,8 +14,8 @@
   "expectedSourceBytes": 26323,
   "generatedAtJST": "2026-10-30T09:01:34+09:00",
   "lastError": null,
-  "nextStep": "Verify exact sync run, final lesson+snapshot commit, Pages and live target date",
-  "updatedAt": "2026-10-30T01:33:30.220Z",
+  "nextStep": "Text complete. Shared and unique N1 audio remain independent; observe their actual checkpoints and existing worker schedule.",
+  "updatedAt": "2026-10-30T01:39:16.814Z",
   "upstreamSourceCommit": "5748e8124c23bd85e52d8f2df3628739592955fa",
   "sourcePagesRunId": 40985891415,
   "snapshotSha256": "83c2e8695892e86e17b2699d0b9308b53bff9e9a0aabd5781bf57f9784ad33e4",
@@ -31,5 +31,89 @@
     "allPassed": true
   },
   "requestCommit": "81b1a4e07b9246081021d584973c1513960b9a67",
-  "requestBlobSha": "da07b7247f3d8a33348a36b88f3b1f73453d00f3"
+  "requestBlobSha": "da07b7247f3d8a33348a36b88f3b1f73453d00f3",
+  "releaseCommit": "b853ae2b66f61949c905dedf2fb471ca67533c78",
+  "pagesRunId": 40986736478,
+  "counts": {
+    "vocabularyNew": 6,
+    "vocabularyReview": 14,
+    "grammarNew": 0,
+    "grammarReview": 8
+  },
+  "textPublicationVerified": true,
+  "verification": {
+    "targetDate": "2026-10-30",
+    "day": 62,
+    "releaseCommit": "b853ae2b66f61949c905dedf2fb471ca67533c78",
+    "pagesRunId": 40986736478,
+    "upstreamSourceCommit": "5748e8124c23bd85e52d8f2df3628739592955fa",
+    "sourceBlobSha": "0e28c7c8a9527d5ef66e0693cf7cc681f583cd34",
+    "artifact": {
+      "id": 12947017706,
+      "name": "n1-deployment-verification",
+      "digest": "sha256:0845608978ecb322c2459fc396f37e5ed074721ded2e849e16fefd43b9a50c81"
+    },
+    "manifestSha256": "aa5213d3e8612f654982ab6f4722f165f7ee3f4cb1ede4900214bede641ba1ab",
+    "fullPublicAssetBytes": true,
+    "verifiedFiles": 71,
+    "allLessonJsonAndCompleteSearchVerified": true,
+    "allOriginalParagraphsPresent": true,
+    "originalParagraphCount": 5,
+    "originalQuestionAndOptionsPreserved": true,
+    "title": "依存ライブラリを更新すれば、それだけで安全になるのか——ソフトウェア部品表（SBOM）、脆弱性対応、検証の順序",
+    "sourceUnchanged": true,
+    "publishedLessonSha256": "b4bc480c819debc19a57fbc817820c8961f92a73eb679929bb538c1ff0ed0e29",
+    "liveProof": {
+      "status": "published_release_verified",
+      "manifestSha256": "aa5213d3e8612f654982ab6f4722f165f7ee3f4cb1ede4900214bede641ba1ab",
+      "verifiedFiles": 71,
+      "latestDate": "2026-10-30",
+      "targetDate": "2026-10-30"
+    },
+    "at": "2026-10-30T01:37:46.532Z",
+    "visibleBrowserDateVerified": true,
+    "browser": {
+      "dateControl": "2026年10月30日(金)\nDay 62 · 99日N1計画",
+      "title": "依存ライブラリを更新すれば、それだけで安全になるのか——ソフトウェア部品表（SBOM）、脆弱性対応、検証の順序（第80号）",
+      "summary": [
+        "62 / 99",
+        "245 min",
+        "20 項目",
+        "8 項目"
+      ],
+      "targetDate": "2026-10-30",
+      "day": 62,
+      "issueNumber": 80,
+      "realBrowser": "Codex in-app browser via Cua",
+      "audioCompletion": false,
+      "immersionHeading": "更新ボタンを押す前に",
+      "originalParagraphs": 5,
+      "paragraphFingerprints": [
+        {
+          "characters": 226,
+          "fnv1a": "138cdf56"
+        },
+        {
+          "characters": 256,
+          "fnv1a": "31a7ffa3"
+        },
+        {
+          "characters": 219,
+          "fnv1a": "35a1d577"
+        },
+        {
+          "characters": 217,
+          "fnv1a": "8fe367c"
+        },
+        {
+          "characters": 145,
+          "fnv1a": "4e0d48dd"
+        }
+      ],
+      "url": "https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/",
+      "verifiedAt": "2026-10-30T01:39:16.450Z",
+      "browserParagraphTextMatched": true,
+      "fingerprintScope": "DOM .spoken-text nodes only; audio status labels excluded. Exact all-asset SHA-256 was separately verified from the trusted build manifest."
+    }
+  }
 }
