@@ -12,7 +12,7 @@
   },
   "engineVersion": "1.1.0-dev",
   "modelVersion": "1.0.0",
-  "generatedAt": "2026-10-31T02:14:38.162Z",
+  "generatedAt": "2026-10-31T04:46:20.949Z",
   "lessonDates": [
     "2026-10-31",
     "2026-10-30",
@@ -78,7 +78,7 @@
     "2026-08-31",
     "2026-08-30"
   ],
-  "expectedClips": 6893,
+  "expectedClips": 6897,
   "complete": true,
   "clips": {
     "000508138c45e52f": {
@@ -17024,6 +17024,18 @@
       "bytes": 13293,
       "sha256": "aca40de587aeb224ee32de41644e87c2be2cdca6066422c657c601ba0850f563",
       "rms": 0.140676
+    },
+    "32ac38582a3ab56c": {
+      "id": "32ac38582a3ab56c",
+      "text": "同じEventBridgeという名前でも、イベントバスの世代によって再帰検出の対象が違います。",
+      "label": "同じEventBridgeという名前でも、イベントバスの世代によって再帰検出の対象が違います。",
+      "references": [
+        "lesson/2026-10-29/grammar/2026-10-29-g-study-527f5226/evidence/0"
+      ],
+      "duration": 7.003,
+      "bytes": 56685,
+      "sha256": "9bdf2a525e2444ccf9889171f62a63b7f560c253f43e29292527da2488a8d34b",
+      "rms": 0.160165
     },
     "32bab1d251e9e456": {
       "id": "32bab1d251e9e456",
@@ -51702,6 +51714,18 @@
       "sha256": "6a5b3c2cafc11164c7a570008d9f10069488b3775cf7fb4351380c81c381887f",
       "rms": 0.098058
     },
+    "97bcbcbb4a7f5b6f": {
+      "id": "97bcbcbb4a7f5b6f",
+      "text": "設定ファイルをVercelのRoot Directoryに置くだけでなく、そのファイルを含まない古いブランチや取り消し後のビルドも考え、ダッシュボード側の既定値も合わせました。",
+      "label": "設定ファイルをVercelのRoot Directoryに置くだけでなく、そのファイルを含まない古いブランチや取り消し後のビルドも考え、ダッシュボード側の既定値も合わせました。",
+      "references": [
+        "lesson/2026-10-24/grammar/2026-10-24-g-study-48e1043d/evidence/0"
+      ],
+      "duration": 11.427,
+      "bytes": 92205,
+      "sha256": "c5d1e5f0beceb3f2dca1be23356fde78f70b0d8f6fe1fdc540a3cb5e96ebf09a",
+      "rms": 0.133596
+    },
     "97c043b879d445dc": {
       "id": "97c043b879d445dc",
       "text": "受け皿のフォルダへ放り込んだ書類は、提案を確認してから移動します。",
@@ -75508,6 +75532,18 @@
       "sha256": "34953b56c25bd6604e9d0cd34565b9e47e64a8754254d5720b1efca787070bdc",
       "rms": 0.159623
     },
+    "df2e096311dfeaaf": {
+      "id": "df2e096311dfeaaf",
+      "text": "pdf-libにはページを画像に描く機能がなく、pdf.jsを文書の並び替え・保存のために無理に使うのでもありません。",
+      "label": "pdf-libにはページを画像に描く機能がなく、pdf.jsを文書の並び替え・保存のために無理に使うのでもありません。",
+      "references": [
+        "lesson/2026-10-27/grammar/2026-10-27-g-study-1739e8be/evidence/0"
+      ],
+      "duration": 9.325,
+      "bytes": 75309,
+      "sha256": "0a4f01abed87cdd141b76dbbafade048caa7996587d8902f68cd34c2a3146549",
+      "rms": 0.165805
+    },
     "df2fca310d848a6d": {
       "id": "df2fca310d848a6d",
       "text": "もっとも、すべての条件を完全に予測することはできない。",
@@ -85772,6 +85808,18 @@
       "duration": 4.656,
       "rms": 0.158052,
       "sha256": "66052bc2f45c106860aedb696a8b8f98eed09b74c316f67376550f8800fbc01f"
+    },
+    "ffcb79045dbd4ab8": {
+      "id": "ffcb79045dbd4ab8",
+      "text": "演算割合25、50、75に対し、見えるSMは20、40、60個になり、単独測定の処理量は専有時64.3 TFLOPSの26.9%、53.2%、79.0%でした。",
+      "label": "演算割合25、50、75に対し、見えるSMは20、40、60個になり、単独測定の処理量は専有時64.3 TFLOPSの26.9%、53.2%、79.0%でした。",
+      "references": [
+        "lesson/2026-10-30/grammar/2026-10-30-g-study-f9bbc75/evidence/0"
+      ],
+      "duration": 17.325,
+      "bytes": 139245,
+      "sha256": "1a2a87ff9a3ac69de79196145c6945ce90af5890566b9374be46d5a3b8408689",
+      "rms": 0.130404
     },
     "ffd0cf6db02455c1": {
       "id": "ffd0cf6db02455c1",
