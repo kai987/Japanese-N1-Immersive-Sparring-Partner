@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-10-31",
   "day": 63,
-  "status": "published",
-  "stage": "published",
+  "status": "waiting_request",
+  "stage": "request_ready",
   "requestSubmitted": true,
   "sourceSavedOnMain": true,
   "sourceCheckpointVerified": true,
@@ -21,14 +21,14 @@
     "observedAt": "2026-10-31T00:00:04.881Z"
   },
   "lastError": null,
-  "nextStep": "Text complete. Shared and unique N1 audio remain independent; observe their actual checkpoints and existing worker schedule.",
-  "updatedAt": "2026-10-31T01:49:05.127Z",
-  "upstreamSourceCommit": "8873a994d9aa9caadc1119418f5718ec30ab97a8",
-  "sourcePagesRunId": 41155271054,
-  "snapshotSha256": "8b1c076adca5c79261998191867069f7772f40cdf8d4547db1c78bc0eea08c93",
+  "nextStep": "Submit the complete source-bound request; verify unique Sync and exact N1 Pages",
+  "updatedAt": "2026-10-31T04:58:13.534Z",
+  "upstreamSourceCommit": "62af019713c86dfd78167501f096c7b61d47d544",
+  "sourcePagesRunId": 41168784202,
+  "snapshotSha256": "b222221325a13ee3a847487bf0282c1b7a8d986a6d369c7dc07241df8005f7b5",
   "issueNumber": 81,
   "totalDays": 81,
-  "requestSha256": "ab11214b469df6dfd692c3e59e77b267eacd8dd68efa1424b9ff138b3a68aeaa",
+  "requestSha256": "b3cab1365182a7c2a1dc23414ead4045821cefc0adb92594eb4b096c78f53bff",
   "localValidation": {
     "content": true,
     "unit": 204,
@@ -125,5 +125,16 @@
       "sourceCommit": "8873a994d9aa9caadc1119418f5718ec30ab97a8",
       "verifiedAt": "2026-10-31T01:37:30.679Z"
     }
+  },
+  "previousVerifiedTextRelease": {
+    "sourceCommit": "8873a994d9aa9caadc1119418f5718ec30ab97a8",
+    "releaseCommit": "fdc39ecd8e4d5bc250ebd424d4a80e9ac40114ff",
+    "pagesRunId": 41155851489
+  },
+  "repair": {
+    "kind": "grammar_review_boundary",
+    "audioMetadataCommit": "4513aedd8b64f56e2578ed63528a5e7293678b3b",
+    "approvedNewRecordings": 4,
+    "allOldRecordingsPreserved": true
   }
 }
