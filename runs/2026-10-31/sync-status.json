@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-10-31",
   "day": 63,
-  "status": "validating",
-  "stage": "validating",
+  "status": "published",
+  "stage": "published",
   "requestSubmitted": true,
   "sourceSavedOnMain": true,
   "sourceCheckpointVerified": true,
@@ -21,8 +21,8 @@
     "observedAt": "2026-10-31T00:00:04.881Z"
   },
   "lastError": null,
-  "nextStep": "Submit the complete source-bound request; verify unique Sync and exact N1 Pages",
-  "updatedAt": "2026-10-31T04:58:22.924Z",
+  "nextStep": "none; grammar review repair published and approved four audio clips verified",
+  "updatedAt": "2026-10-31T05:12:26.635Z",
   "upstreamSourceCommit": "62af019713c86dfd78167501f096c7b61d47d544",
   "sourcePagesRunId": 41168784202,
   "snapshotSha256": "b222221325a13ee3a847487bf0282c1b7a8d986a6d369c7dc07241df8005f7b5",
@@ -39,8 +39,8 @@
   },
   "requestCommit": "bfd1d5ac5150ab21eb18bad6dcb8bbd1d2562146",
   "requestBlobSha": "0fb4ffb08cdcf779fb963f082cbb0ec4f6341521",
-  "releaseCommit": "fdc39ecd8e4d5bc250ebd424d4a80e9ac40114ff",
-  "pagesRunId": 41155851489,
+  "releaseCommit": "56419ab076c771fd1bba00a0977575b036b6d5d0",
+  "pagesRunId": 41171343662,
   "counts": {
     "vocabularyNew": 6,
     "vocabularyReview": 14,
@@ -51,16 +51,16 @@
   "verification": {
     "targetDate": "2026-10-31",
     "day": 63,
-    "releaseCommit": "fdc39ecd8e4d5bc250ebd424d4a80e9ac40114ff",
-    "pagesRunId": 41155851489,
-    "upstreamSourceCommit": "8873a994d9aa9caadc1119418f5718ec30ab97a8",
+    "releaseCommit": "56419ab076c771fd1bba00a0977575b036b6d5d0",
+    "pagesRunId": 41171343662,
+    "upstreamSourceCommit": "62af019713c86dfd78167501f096c7b61d47d544",
     "sourceBlobSha": "95ac0daaf467357823f5199c75dccb3b27ce53e5",
     "artifact": {
-      "id": 13025078380,
+      "id": 13030838806,
       "name": "n1-deployment-verification",
-      "digest": "sha256:db9f123d9d4165471fefd15c299b00ecc6a41e7f9b443d7d325831624006dabe"
+      "digest": "sha256:08da98e57640003715cc32964344ec38bf1320fd773da1871f3e45a479e177f3"
     },
-    "manifestSha256": "96940ccf8d80f341757f037ac182fdf0ac865dd7eacb011d029536529c0daafd",
+    "manifestSha256": "313481f66ed4c657b4f3519835c5c0378ad93ab9fa1ab20a5075087252cace90",
     "fullPublicAssetBytes": true,
     "verifiedFiles": 72,
     "allLessonJsonAndCompleteSearchVerified": true,
@@ -69,24 +69,28 @@
     "originalQuestionAndOptionsPreserved": true,
     "title": "物流DXの「待ち時間」は、時計を見れば分かるのか——荷待ち・荷役・データの定義",
     "sourceUnchanged": true,
-    "publishedLessonSha256": "ece54c07b39aa9854708c27a2a55d244a70df80342e5967ea9061bb8579c6e19",
+    "publishedLessonSha256": "139253f23ad863f02c87f8249acc443384b0c7030153833df9c9037983884ccb",
     "liveProof": {
       "status": "published_release_verified",
-      "manifestSha256": "96940ccf8d80f341757f037ac182fdf0ac865dd7eacb011d029536529c0daafd",
+      "manifestSha256": "313481f66ed4c657b4f3519835c5c0378ad93ab9fa1ab20a5075087252cace90",
       "verifiedFiles": 72,
       "latestDate": "2026-10-31",
       "targetDate": "2026-10-31"
     },
-    "at": "2026-10-31T01:35:08.415Z",
+    "at": "2026-10-31T05:11:04.965Z",
     "visibleBrowserDateVerified": true,
     "browser": {
+      "dateLabel": "2026年10月31日(土)Day 63 · 99日N1計画",
       "targetDate": "2026-10-31",
       "day": 63,
       "issueNumber": 81,
       "title": "物流DXの「待ち時間」は、時計を見れば分かるのか——荷待ち・荷役・データの定義（第81号）",
       "immersionTitle": "数字が短くなっても、現場は変わったのか",
-      "dateLabel": "2026年10月31日(土)Day 63 · 99日N1計画",
-      "originalParagraphs": 6,
+      "counts": {
+        "vocabulary": 20,
+        "grammar": 8,
+        "minutes": 250
+      },
       "paragraphFingerprints": [
         {
           "length": 229,
@@ -113,17 +117,18 @@
           "fnv1a": "efcbfb85"
         }
       ],
-      "counts": {
-        "vocabulary": 20,
-        "grammar": 8,
-        "minutes": 250
-      },
-      "realBrowser": "Cua connected Chrome",
-      "url": "https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/",
-      "flow": "Home identity/counts -> actual 没入読解 button -> rendered six original Japanese paragraphs",
-      "newUniqueAudioDisabledAsPending": true,
-      "sourceCommit": "8873a994d9aa9caadc1119418f5718ec30ab97a8",
-      "verifiedAt": "2026-10-31T01:37:30.679Z"
+      "allSixOriginalParagraphsUnchanged": true,
+      "method": "Cua connected Chrome, actual home and immersive reading DOM",
+      "finalReleaseCommit": "56419ab076c771fd1bba00a0977575b036b6d5d0",
+      "pagesRunId": 41171343662,
+      "playbackObservedOnSame72AssetsAsFinalRelease": true,
+      "textAndFinalReleaseAssetMapExactlyEqual": true,
+      "allFourNewButtonsEnabledAndPublicNativePlaybackProgressed": true,
+      "existingSharedR2PlaybackProgressed": true,
+      "viewRestored": "today home, 2026-10-31",
+      "browserMessageChannelWarnings": 2,
+      "warningsDetail": "Two asynchronous listener message-channel errors observed; all five native playback checks had error=null. Not claiming a globally clean browser console.",
+      "verifiedAt": "2026-10-31T05:11:35.629582+00:00"
     }
   },
   "previousVerifiedTextRelease": {
@@ -135,6 +140,22 @@
     "kind": "grammar_review_boundary",
     "audioMetadataCommit": "4513aedd8b64f56e2578ed63528a5e7293678b3b",
     "approvedNewRecordings": 4,
-    "allOldRecordingsPreserved": true
-  }
+    "allOldRecordingsPreserved": true,
+    "status": "verified",
+    "affectedReviewDates": [
+      "2026-10-31",
+      "2026-10-30",
+      "2026-10-29",
+      "2026-10-27",
+      "2026-10-24",
+      "2026-10-23"
+    ],
+    "scopedAudioStatus": "playback_verified",
+    "finalAudioCommit": "56419ab076c771fd1bba00a0977575b036b6d5d0",
+    "actualNewPlaybackChecks": 4
+  },
+  "textReleaseCommit": "0ce0224d8d1cde35ccb1bd8e7121a09c405c0d95",
+  "textPagesRunId": 41170847762,
+  "syncRunId": 41170682179,
+  "sharedAudioSyncRunId": 41171281812
 }
