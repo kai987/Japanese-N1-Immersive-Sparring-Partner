@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "targetDate": "2026-10-31",
+  "day": 63,
+  "status": "waiting_upstream",
+  "stage": "waiting_upstream",
+  "requestSubmitted": false,
+  "sourceSavedOnMain": true,
+  "sourceCheckpointVerified": true,
+  "sourceCommit": "a93447e95b16ce6c9fa70491c62984119f47abbd",
+  "sourceBlobSha": "95ac0daaf467357823f5199c75dccb3b27ce53e5",
+  "sourceCheckpointBlobSha": "8ce39d0dfc604c79115fd69eb6452cc74608752e",
+  "sourceSha256": "7d85c76939a25c890b73b257661cc2438a09f0c31c7a77859c9f1e4e426e6681",
+  "expectedSourceBytes": 26526,
+  "generatedAtJST": "2026-10-31T08:58:00+09:00",
+  "sourceObservation": {
+    "mainSourcePresent": true,
+    "outboxVerified": true,
+    "exactSourceBytes": 26526,
+    "sourceSha256": "7d85c76939a25c890b73b257661cc2438a09f0c31c7a77859c9f1e4e426e6681",
+    "observedAt": "2026-10-31T00:00:04.881Z"
+  },
+  "lastError": null,
+  "nextStep": "Await a verified completed same-day upstream IT/AI report plus exact full-history snapshot before source-bound mapping. Resume via the existing IT primary task handoff; legacy N1 11:00/noon schedules remain paused. Do not regenerate the Day63 original or treat source saved as Pages published.",
+  "updatedAt": "2026-10-31T00:00:04.881Z"
+}
