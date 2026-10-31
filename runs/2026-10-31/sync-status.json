@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-10-31",
   "day": 63,
-  "status": "waiting_upstream",
-  "stage": "waiting_upstream",
+  "status": "waiting_request",
+  "stage": "request_ready",
   "requestSubmitted": false,
   "sourceSavedOnMain": true,
   "sourceCheckpointVerified": true,
@@ -21,6 +21,20 @@
     "observedAt": "2026-10-31T00:00:04.881Z"
   },
   "lastError": null,
-  "nextStep": "Await a verified completed same-day upstream IT/AI report plus exact full-history snapshot before source-bound mapping. Resume via the existing IT primary task handoff; legacy N1 11:00/noon schedules remain paused. Do not regenerate the Day63 original or treat source saved as Pages published.",
-  "updatedAt": "2026-10-31T00:00:04.881Z"
+  "nextStep": "Submit complete source-bound request while shared slot is free",
+  "updatedAt": "2026-10-31T01:30:38.607Z",
+  "upstreamSourceCommit": "8873a994d9aa9caadc1119418f5718ec30ab97a8",
+  "sourcePagesRunId": 41155271054,
+  "snapshotSha256": "8b1c076adca5c79261998191867069f7772f40cdf8d4547db1c78bc0eea08c93",
+  "issueNumber": 81,
+  "totalDays": 81,
+  "requestSha256": "ab11214b469df6dfd692c3e59e77b267eacd8dd68efa1424b9ff138b3a68aeaa",
+  "localValidation": {
+    "content": true,
+    "unit": 204,
+    "python": 28,
+    "build": true,
+    "browserTests": 80,
+    "allPassed": true
+  }
 }
