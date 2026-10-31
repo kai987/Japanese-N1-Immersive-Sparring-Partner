@@ -1,0 +1,55 @@
+{
+  "targetDate": "2026-10-31",
+  "kind": "kagiri_grammar_review_boundary_repair",
+  "status": "published",
+  "upstreamSourceCommit": "62af019713c86dfd78167501f096c7b61d47d544",
+  "textReleaseCommit": "0ce0224d8d1cde35ccb1bd8e7121a09c405c0d95",
+  "textPagesRunId": 41170847762,
+  "releaseCommit": "56419ab076c771fd1bba00a0977575b036b6d5d0",
+  "pagesRunId": 41171343662,
+  "syncRunId": 41170682179,
+  "sharedAudioSyncRunId": 41171281812,
+  "artifact": {
+    "id": 13030838806,
+    "name": "n1-deployment-verification",
+    "digest": "sha256:08da98e57640003715cc32964344ec38bf1320fd773da1871f3e45a479e177f3"
+  },
+  "verifiedPublicAssets": 72,
+  "affectedReviewDates": [
+    "2026-10-31",
+    "2026-10-30",
+    "2026-10-29",
+    "2026-10-27",
+    "2026-10-24",
+    "2026-10-23"
+  ],
+  "allSixOriginalParagraphsUnchanged": true,
+  "allOldRecordingsPreserved": true,
+  "approvedNewRecordings": 4,
+  "approvedClipIds": [
+    "ffcb79045dbd4ab8",
+    "32ac38582a3ab56c",
+    "df2e096311dfeaaf",
+    "97bcbcbb4a7f5b6f"
+  ],
+  "scopedAudioStatus": "playback_verified",
+  "publicAudioSHA256Checks": 6897,
+  "newClipsActualPlaybackChecks": 4,
+  "existingSharedPlaybackChecks": 1,
+  "allAffectedReviewViewsVerified": true,
+  "requiredClips": 6894,
+  "pendingClips": 0,
+  "appCleanup": {
+    "status": "closed",
+    "appExited": true,
+    "engineExited": true,
+    "screenLocked": false,
+    "forced": false,
+    "nativeResult": "quit_requested_and_exited",
+    "verifiedAt": "2026-10-31T04:44:43.603899+00:00"
+  },
+  "schedulesUnchanged": true,
+  "independentVerifierProgressNotModified": true,
+  "globalCatalogPlaybackStatus": "See existing 92-n1 verifier progress; scoped four-clip repair does not assert full catalog playback completion",
+  "verifiedAt": "2026-10-31T05:12:26.635Z"
+}
