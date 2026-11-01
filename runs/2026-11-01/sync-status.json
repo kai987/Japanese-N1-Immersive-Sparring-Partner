@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "targetDate": "2026-11-01",
+  "day": 64,
+  "status": "waiting_upstream",
+  "stage": "waiting_upstream",
+  "requestSubmitted": false,
+  "sourceSavedOnMain": true,
+  "sourceCheckpointVerified": true,
+  "sourceCommit": "17dcfdc73b0b9d0c55dc6c4df04718b3ff3affcf",
+  "sourceBlobSha": "31291a698eeb035ad2fd94a506616ce88a3ad02d",
+  "sourceCheckpointBlobSha": "102d0213cda43bc1b171354aaff2b0a299b2fbb8",
+  "sourceSha256": "d9fe9fc7bda57896ab97a3382bd09586a23127665889c7679d902f7735a6ef71",
+  "expectedSourceBytes": 26624,
+  "generatedAtJST": "2026-11-01T09:01:02+09:00",
+  "sourceObservation": {
+    "mainSourcePresent": true,
+    "outboxVerified": true,
+    "exactSourceBytes": 26624,
+    "sourceSha256": "d9fe9fc7bda57896ab97a3382bd09586a23127665889c7679d902f7735a6ef71",
+    "observedAt": "2026-11-01T00:03:04.000Z"
+  },
+  "upstreamTargetVerified": false,
+  "lastError": null,
+  "nextStep": "Exact Day64 original saved and verified. Existing 10:00 IT primary handoff must lock a successful same-day upstream report, full-history snapshot and pending request in queue order before N1 sync and final Pages verification. Legacy 11:00/noon N1 schedules remain paused. Do not regenerate original or report website publication without proof.",
+  "updatedAt": "2026-11-01T00:03:04.000Z"
+}
