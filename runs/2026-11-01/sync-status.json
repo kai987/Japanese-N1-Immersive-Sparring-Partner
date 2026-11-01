@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "targetDate": "2026-11-01",
   "day": 64,
-  "status": "waiting_request",
-  "stage": "request_ready",
-  "requestSubmitted": false,
+  "status": "validating",
+  "stage": "validating",
+  "requestSubmitted": true,
   "sourceSavedOnMain": true,
   "sourceCheckpointVerified": true,
   "sourceCommit": "17dcfdc73b0b9d0c55dc6c4df04718b3ff3affcf",
@@ -22,8 +22,8 @@
   },
   "upstreamTargetVerified": false,
   "lastError": null,
-  "nextStep": "Submit complete source-bound request while shared slot is free",
-  "updatedAt": "2026-11-01T01:32:37.558Z",
+  "nextStep": "Verify exact sync run, final lesson+snapshot commit, Pages and live target date",
+  "updatedAt": "2026-11-01T01:32:44.371Z",
   "upstreamSourceCommit": "a68bfe00780ac3fd037224b6f5ebb06a7ca7d569",
   "sourcePagesRunId": 41261118506,
   "snapshotSha256": "b44d6ec18899c3a80e7fd1587198e0206daf7b1ff4c4bfd8ee899b7840f64dda",
@@ -37,5 +37,7 @@
     "build": true,
     "browserTests": 80,
     "allPassed": true
-  }
+  },
+  "requestCommit": "71a24284f41fd5546546d0770b7ada12a9049d3f",
+  "requestBlobSha": "b9e74d5e009ee2d70cc0db4e5460c7cfe0440687"
 }
