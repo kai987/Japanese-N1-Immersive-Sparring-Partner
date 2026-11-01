@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-11-01",
   "day": 64,
-  "status": "waiting_upstream",
-  "stage": "waiting_upstream",
+  "status": "waiting_request",
+  "stage": "request_ready",
   "requestSubmitted": false,
   "sourceSavedOnMain": true,
   "sourceCheckpointVerified": true,
@@ -22,6 +22,20 @@
   },
   "upstreamTargetVerified": false,
   "lastError": null,
-  "nextStep": "Exact Day64 original saved and verified. Existing 10:00 IT primary handoff must lock a successful same-day upstream report, full-history snapshot and pending request in queue order before N1 sync and final Pages verification. Legacy 11:00/noon N1 schedules remain paused. Do not regenerate original or report website publication without proof.",
-  "updatedAt": "2026-11-01T00:03:04.000Z"
+  "nextStep": "Submit complete source-bound request while shared slot is free",
+  "updatedAt": "2026-11-01T01:32:37.558Z",
+  "upstreamSourceCommit": "a68bfe00780ac3fd037224b6f5ebb06a7ca7d569",
+  "sourcePagesRunId": 41261118506,
+  "snapshotSha256": "b44d6ec18899c3a80e7fd1587198e0206daf7b1ff4c4bfd8ee899b7840f64dda",
+  "issueNumber": 82,
+  "totalDays": 82,
+  "requestSha256": "d364136979e193134d6ef34e19a4f580a3df1f8b12ea1e5c3204eda8db652998",
+  "localValidation": {
+    "content": true,
+    "unit": 204,
+    "python": 28,
+    "build": true,
+    "browserTests": 80,
+    "allPassed": true
+  }
 }
