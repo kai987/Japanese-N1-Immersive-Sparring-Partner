@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "targetDate": "2026-11-01",
   "day": 64,
-  "status": "published",
-  "stage": "published",
-  "requestSubmitted": true,
+  "status": "waiting_request",
+  "stage": "request_ready",
+  "requestSubmitted": false,
   "sourceSavedOnMain": true,
   "sourceCheckpointVerified": true,
   "sourceCommit": "17dcfdc73b0b9d0c55dc6c4df04718b3ff3affcf",
@@ -22,14 +22,14 @@
   },
   "upstreamTargetVerified": false,
   "lastError": null,
-  "nextStep": "Text complete. Shared and unique N1 audio remain independent; observe their actual checkpoints and existing worker schedule.",
-  "updatedAt": "2026-11-01T01:40:37.310Z",
-  "upstreamSourceCommit": "a68bfe00780ac3fd037224b6f5ebb06a7ca7d569",
-  "sourcePagesRunId": 41261118506,
-  "snapshotSha256": "b44d6ec18899c3a80e7fd1587198e0206daf7b1ff4c4bfd8ee899b7840f64dda",
+  "nextStep": "Submit same-date snapshot refresh; preserve original lesson and all audio",
+  "updatedAt": "2026-11-01T17:45:15.730Z",
+  "upstreamSourceCommit": "15859451d7373e7fdd9820a23172f3768a534955",
+  "sourcePagesRunId": 41332593960,
+  "snapshotSha256": "6263884d9e614d350bc714e4a9b96f097dd102811d007f56ec08d3188319b9bb",
   "issueNumber": 82,
   "totalDays": 82,
-  "requestSha256": "d364136979e193134d6ef34e19a4f580a3df1f8b12ea1e5c3204eda8db652998",
+  "requestSha256": "31e360385594fdf9babf359418f91f673005ca7b22f55605027005e88c680496",
   "localValidation": {
     "content": true,
     "unit": 204,
@@ -48,7 +48,7 @@
     "grammarNew": 0,
     "grammarReview": 8
   },
-  "textPublicationVerified": true,
+  "textPublicationVerified": false,
   "verification": {
     "targetDate": "2026-11-01",
     "day": 64,
@@ -139,5 +139,149 @@
       "userLearningActions": "Navigation only; no answer, completion or progress button clicked",
       "browserParagraphTextMatched": true
     }
-  }
+  },
+  "previousPublication": {
+    "schemaVersion": 1,
+    "targetDate": "2026-11-01",
+    "day": 64,
+    "status": "published",
+    "stage": "published",
+    "requestSubmitted": true,
+    "sourceSavedOnMain": true,
+    "sourceCheckpointVerified": true,
+    "sourceCommit": "17dcfdc73b0b9d0c55dc6c4df04718b3ff3affcf",
+    "sourceBlobSha": "31291a698eeb035ad2fd94a506616ce88a3ad02d",
+    "sourceCheckpointBlobSha": "102d0213cda43bc1b171354aaff2b0a299b2fbb8",
+    "sourceSha256": "d9fe9fc7bda57896ab97a3382bd09586a23127665889c7679d902f7735a6ef71",
+    "expectedSourceBytes": 26624,
+    "generatedAtJST": "2026-11-01T09:01:02+09:00",
+    "sourceObservation": {
+      "mainSourcePresent": true,
+      "outboxVerified": true,
+      "exactSourceBytes": 26624,
+      "sourceSha256": "d9fe9fc7bda57896ab97a3382bd09586a23127665889c7679d902f7735a6ef71",
+      "observedAt": "2026-11-01T00:03:04.000Z"
+    },
+    "upstreamTargetVerified": false,
+    "lastError": null,
+    "nextStep": "Text complete. Shared and unique N1 audio remain independent; observe their actual checkpoints and existing worker schedule.",
+    "updatedAt": "2026-11-01T01:40:37.310Z",
+    "upstreamSourceCommit": "a68bfe00780ac3fd037224b6f5ebb06a7ca7d569",
+    "sourcePagesRunId": 41261118506,
+    "snapshotSha256": "b44d6ec18899c3a80e7fd1587198e0206daf7b1ff4c4bfd8ee899b7840f64dda",
+    "issueNumber": 82,
+    "totalDays": 82,
+    "requestSha256": "d364136979e193134d6ef34e19a4f580a3df1f8b12ea1e5c3204eda8db652998",
+    "localValidation": {
+      "content": true,
+      "unit": 204,
+      "python": 28,
+      "build": true,
+      "browserTests": 80,
+      "allPassed": true
+    },
+    "requestCommit": "71a24284f41fd5546546d0770b7ada12a9049d3f",
+    "requestBlobSha": "b9e74d5e009ee2d70cc0db4e5460c7cfe0440687",
+    "releaseCommit": "a166450efc3946f2048ae262732eddcb6c37bdd2",
+    "pagesRunId": 41261688210,
+    "counts": {
+      "vocabularyNew": 5,
+      "vocabularyReview": 15,
+      "grammarNew": 0,
+      "grammarReview": 8
+    },
+    "textPublicationVerified": true,
+    "verification": {
+      "targetDate": "2026-11-01",
+      "day": 64,
+      "releaseCommit": "a166450efc3946f2048ae262732eddcb6c37bdd2",
+      "pagesRunId": 41261688210,
+      "upstreamSourceCommit": "a68bfe00780ac3fd037224b6f5ebb06a7ca7d569",
+      "sourceBlobSha": "31291a698eeb035ad2fd94a506616ce88a3ad02d",
+      "artifact": {
+        "id": 13065357744,
+        "name": "n1-deployment-verification",
+        "digest": "sha256:bafb86fa46d7a0a19e2e857973a75c6987a89b9d694b412e28270df553046566"
+      },
+      "manifestSha256": "8025c3377a9d1beb96f0b96550992c6399f379816cec6669b47db8d3190deee2",
+      "fullPublicAssetBytes": true,
+      "verifiedFiles": 73,
+      "allLessonJsonAndCompleteSearchVerified": true,
+      "allOriginalParagraphsPresent": true,
+      "originalParagraphCount": 6,
+      "originalQuestionAndOptionsPreserved": true,
+      "title": "デジタルツインに映る「現在」は、本当に今なのか——空間ID・時間情報・現実とのずれ",
+      "sourceUnchanged": true,
+      "publishedLessonSha256": "b2cbb17cecdf88ee582364bace1ae731c2ad9ed469bb26eea6774a3faf100a74",
+      "liveProof": {
+        "status": "published_release_verified",
+        "manifestSha256": "8025c3377a9d1beb96f0b96550992c6399f379816cec6669b47db8d3190deee2",
+        "verifiedFiles": 73,
+        "latestDate": "2026-11-01",
+        "targetDate": "2026-11-01"
+      },
+      "at": "2026-11-01T01:37:57.359Z",
+      "visibleBrowserDateVerified": true,
+      "browser": {
+        "dateControl": "2026年11月1日(日)Day 64 · 99日N1計画",
+        "title": "デジタルツインに映る「現在」は、本当に今なのか——空間ID・時間情報・現実とのずれ（第82号）",
+        "summary": [
+          "64 / 99",
+          "255 min",
+          "20 項目",
+          "8 項目"
+        ],
+        "targetDate": "2026-11-01",
+        "day": 64,
+        "issueNumber": 82,
+        "realBrowser": "Cua Chrome actual DOM",
+        "audioCompletion": false,
+        "immersionHeading": "同じ場所に、違う時間がある",
+        "originalParagraphs": 6,
+        "paragraphFingerprints": [
+          {
+            "characters": 224,
+            "fnv1a": "898f1905"
+          },
+          {
+            "characters": 245,
+            "fnv1a": "20164436"
+          },
+          {
+            "characters": 222,
+            "fnv1a": "b8d27834"
+          },
+          {
+            "characters": 221,
+            "fnv1a": "eadfcf72"
+          },
+          {
+            "characters": 214,
+            "fnv1a": "4ee3b50a"
+          },
+          {
+            "characters": 148,
+            "fnv1a": "c4a33a38"
+          }
+        ],
+        "url": "https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/",
+        "verifiedAt": "2026-11-01T01:38:12.558Z",
+        "homeObservedAt": "2026-11-01T01:38:18.724Z",
+        "readingObservedAt": "2026-11-01T01:38:29.902Z",
+        "readingPrompt": "筆者が最も伝えたいことはどれか。",
+        "readingOptions": [
+          "シミュレーションには限界があるため、現場での検証を含めて一切利用すべきではない。",
+          "三次元モデルが現実と似ていれば、観測時刻を表示する必要はない。",
+          "位置を示す番号が同じなら、異なる時刻の値も同一の状態と見なせる。",
+          "再現の範囲、情報の時点、未確認事項を明示し、判断の根拠をたどれるようにすべきだ。"
+        ],
+        "readingUnanswered": true,
+        "reviewQuestions": 5,
+        "reviewNoAnswerRevealed": true,
+        "userLearningActions": "Navigation only; no answer, completion or progress button clicked",
+        "browserParagraphTextMatched": true
+      }
+    }
+  },
+  "maintenanceReason": "Seven reviewed lexical identity families; additive metadata and merged frequencies only"
 }
