@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-11-02",
   "day": 65,
-  "status": "validating",
-  "stage": "validating",
+  "status": "published",
+  "stage": "published",
   "requestSubmitted": true,
   "sourceSavedOnMain": true,
   "sourceCheckpointVerified": true,
@@ -15,8 +15,8 @@
   "generatedAtJST": "2026-11-02T09:07:41+09:00",
   "upstreamTargetVerified": false,
   "lastError": null,
-  "nextStep": "Verify exact sync run, final lesson+snapshot commit, Pages and live target date",
-  "updatedAt": "2026-11-02T01:38:41.536Z",
+  "nextStep": "Text complete. Shared and unique N1 audio remain independent; observe their actual checkpoints and existing worker schedule.",
+  "updatedAt": "2026-11-02T01:59:06.515Z",
   "upstreamSourceCommit": "eb6f5e4993bee1eb7ec818c48f5fde58d14aaa2b",
   "sourcePagesRunId": 41373014755,
   "snapshotSha256": "6922009cc5cd6be37babded562c6ad0996b884ffd7f404dcab3c2e8eaf01f5b8",
@@ -32,5 +32,104 @@
     "allPassed": true
   },
   "requestCommit": "2e6baaf3a1bdddf3873d3fb3212c9b70db9d4707",
-  "requestBlobSha": "2215d29a041b0436b33c11652379778455be437f"
+  "requestBlobSha": "2215d29a041b0436b33c11652379778455be437f",
+  "releaseCommit": "da9f1ca5263ac26d25c4f4dec52f086d13627f85",
+  "pagesRunId": 41373770078,
+  "counts": {
+    "vocabularyNew": 14,
+    "vocabularyReview": 6,
+    "grammarNew": 0,
+    "grammarReview": 8
+  },
+  "textPublicationVerified": true,
+  "verification": {
+    "targetDate": "2026-11-02",
+    "day": 65,
+    "releaseCommit": "da9f1ca5263ac26d25c4f4dec52f086d13627f85",
+    "pagesRunId": 41373770078,
+    "upstreamSourceCommit": "eb6f5e4993bee1eb7ec818c48f5fde58d14aaa2b",
+    "sourceBlobSha": "6c4dc99cf7c18473fe2352144c9b55efef87f98d",
+    "artifact": {
+      "id": 13110237460,
+      "name": "n1-deployment-verification",
+      "digest": "sha256:dfa31be993673b694a5d4af24f071e34917bfd1b77e81604fd048a675131d770"
+    },
+    "manifestSha256": "7f3f92e97523c664750b1ff7233d9aa273f304473c60b29b076de3216fadd17a",
+    "fullPublicAssetBytes": true,
+    "verifiedFiles": 74,
+    "allLessonJsonAndCompleteSearchVerified": true,
+    "allOriginalParagraphsPresent": true,
+    "originalParagraphCount": 6,
+    "originalQuestionAndOptionsPreserved": true,
+    "title": "AIが「不良」と判定したら、製造ラインを止めるべきか——半導体検査、歩留まり、判断の根拠",
+    "sourceUnchanged": true,
+    "publishedLessonSha256": "eace5d3f8b56a5f005d2db20dfd59ede2cfc6b7a9c4d6ed030055c5f7d0651a6",
+    "liveProof": {
+      "status": "published_release_verified",
+      "manifestSha256": "7f3f92e97523c664750b1ff7233d9aa273f304473c60b29b076de3216fadd17a",
+      "verifiedFiles": 74,
+      "latestDate": "2026-11-02",
+      "targetDate": "2026-11-02"
+    },
+    "at": "2026-11-02T01:43:24.688Z",
+    "visibleBrowserDateVerified": true,
+    "browser": {
+      "targetDate": "2026-11-02",
+      "day": 65,
+      "issueNumber": 83,
+      "dateControl": "2026年11月2日(月) Day 65 · 99日N1計画",
+      "title": "AIが「不良」と判定したら、製造ラインを止めるべきか——半導体検査、歩留まり、判断の根拠（第83号）",
+      "summary": [
+        "65 / 99",
+        "255 min",
+        "20 項目",
+        "8 項目"
+      ],
+      "realBrowser": "Cua Chrome actual DOM",
+      "url": "https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/",
+      "originalParagraphs": 6,
+      "paragraphFingerprints": [
+        {
+          "characters": 209,
+          "fnv1a": "7f4a0c5a"
+        },
+        {
+          "characters": 227,
+          "fnv1a": "ac7ebce8"
+        },
+        {
+          "characters": 217,
+          "fnv1a": "5931bb7c"
+        },
+        {
+          "characters": 215,
+          "fnv1a": "1d427678"
+        },
+        {
+          "characters": 206,
+          "fnv1a": "36265dbd"
+        },
+        {
+          "characters": 149,
+          "fnv1a": "f7b8ce6b"
+        }
+      ],
+      "browserParagraphTextMatched": true,
+      "uiAccessoryRemoved": "待配音 badge only; original paragraph text otherwise exact",
+      "readingPrompt": "筆者が最も伝えたいことはどれか。",
+      "readingOptions": [
+        "AIの出力と現場の確認を結び付け、判定条件と改善の根拠を確かめるべきだ。",
+        "人が確認しなければならない画像が一枚でもあれば、自動検査は導入すべきではない。",
+        "AIが警告を示した時点で、不良が確定したと考えてよい。",
+        "検出件数が減りさえすれば、検査方法を変えた効果は証明される。"
+      ],
+      "readingUnanswered": true,
+      "readingObservedAt": "2026-11-02T01:52:54.025Z",
+      "reviewQuestions": 5,
+      "reviewNoAnswerRevealed": true,
+      "userLearningActions": "Navigation only; no answer, completion or progress button clicked",
+      "audioCompletion": false,
+      "verifiedAt": "2026-11-02T01:53:15.856210+00:00"
+    }
+  }
 }
