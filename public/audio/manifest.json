@@ -12,7 +12,7 @@
   },
   "engineVersion": "1.1.0-dev",
   "modelVersion": "1.0.0",
-  "generatedAt": "2026-11-01T01:44:00.794Z",
+  "generatedAt": "2026-11-02T01:53:12.978Z",
   "lessonDates": [
     "2026-10-31",
     "2026-10-30",
@@ -78,7 +78,7 @@
     "2026-08-31",
     "2026-08-30"
   ],
-  "expectedClips": 6907,
+  "expectedClips": 6935,
   "complete": true,
   "clips": {
     "000508138c45e52f": {
@@ -768,6 +768,18 @@
       "bytes": 12717,
       "sha256": "bd8f102576bfe5395734d12d63c2c1783557b9184f0b151a861e610319683b57",
       "rms": 0.128108
+    },
+    "01cb4879db2d0cd5": {
+      "id": "01cb4879db2d0cd5",
+      "text": "なんとなく",
+      "label": "なんとなく",
+      "references": [
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-study-ad31e71e/word"
+      ],
+      "bytes": 16461,
+      "duration": 1.344,
+      "rms": 0.134718,
+      "sha256": "f9a23e183e1699d143fb70fbeb7132d2ba9564ca1ebea70e6a23eeb804556a06"
     },
     "01d72bd3744f48ff": {
       "id": "01d72bd3744f48ff",
@@ -1710,7 +1722,8 @@
         "lesson/2026-10-29/question/0",
         "lesson/2026-10-28/question/0",
         "lesson/2026-10-31/question/0",
-        "lesson/2026-11-01/question/0"
+        "lesson/2026-11-01/question/0",
+        "lesson/2026-11-02/question/0"
       ],
       "duration": 2.859,
       "bytes": 23661,
@@ -4597,7 +4610,8 @@
         "lesson/2026-09-18/vocabulary/2026-09-18-v-study-1e18d506/collocation/2",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-1e18d506/collocation/2",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-1e18d506/collocation/2",
-        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-1e18d506/collocation/2"
+        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-1e18d506/collocation/2",
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-study-1e18d506/collocation/2"
       ],
       "duration": 1.976,
       "bytes": 16557,
@@ -4654,12 +4668,25 @@
         "lesson/2026-09-18/vocabulary/2026-09-18-v-study-1e18d506/example/0",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-1e18d506/example/0",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-1e18d506/example/0",
-        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-1e18d506/example/0"
+        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-1e18d506/example/0",
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-study-1e18d506/example/0"
       ],
       "duration": 3.898,
       "bytes": 31917,
       "sha256": "69ba04f2e798ab26e4e0da8fc30a48c948f141029478dd3154585afc52f34927",
       "rms": 0.160894
+    },
+    "0c0378df74314c73": {
+      "id": "0c0378df74314c73",
+      "text": "完了した項目を消し込み、利用者が処理の進み具合を見られるようにします。",
+      "label": "完了した項目を消し込み、利用者が処理の進み具合を見られるようにします。",
+      "references": [
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-712ff1408710/example/0"
+      ],
+      "bytes": 68589,
+      "duration": 5.688,
+      "rms": 0.13887,
+      "sha256": "86dc2e4e8ed17f14a4961721d9599e5464e147da5a7047a367967dc5d8af7db6"
     },
     "0c03ee3c855770a8": {
       "id": "0c03ee3c855770a8",
@@ -6077,7 +6104,8 @@
         "lesson/2026-09-04/grammar/2026-09-04-g-～たうえで/pattern",
         "lesson/2026-09-02/grammar/2026-09-02-g-～たうえで/pattern",
         "lesson/2026-10-31/grammar/2026-10-31-g-study-4b544f6d/pattern",
-        "lesson/2026-11-01/grammar/2026-11-01-g-study-4b544f6d/pattern"
+        "lesson/2026-11-01/grammar/2026-11-01-g-study-4b544f6d/pattern",
+        "lesson/2026-11-02/grammar/2026-11-02-g-study-4b544f6d/pattern"
       ],
       "duration": 1.175,
       "bytes": 10029,
@@ -7732,6 +7760,18 @@
       "sha256": "51274bfb05420ce28b59f4961b6d91dca266e5823b11817ebccbca8db437107b",
       "rms": 0.133301
     },
+    "15c32eea427246d6": {
+      "id": "15c32eea427246d6",
+      "text": "けしこむ",
+      "label": "消し込む",
+      "references": [
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-712ff1408710/word"
+      ],
+      "bytes": 13869,
+      "duration": 1.128,
+      "rms": 0.122816,
+      "sha256": "1cfa74a562cf20f7cadff4d277e4e487da039e84af32b2ce21bf609724105143"
+    },
     "15d5b7a739e7422b": {
       "id": "15d5b7a739e7422b",
       "text": "首輪の有無",
@@ -7925,7 +7965,8 @@
         "lesson/2026-10-17/grammar/2026-10-17-g-study-99ab9a8c/pattern",
         "lesson/2026-10-04/grammar/2026-10-04-g-study-99ab9a8c/pattern",
         "lesson/2026-10-02/grammar/2026-10-02-g-study-99ab9a8c/pattern",
-        "lesson/2026-09-25/grammar/2026-09-25-g-05a22c00/pattern"
+        "lesson/2026-09-25/grammar/2026-09-25-g-05a22c00/pattern",
+        "lesson/2026-11-02/grammar/2026-11-02-g-study-99ab9a8c/pattern"
       ],
       "duration": 1.198,
       "bytes": 10221,
@@ -8493,7 +8534,8 @@
         "lesson/2026-09-10/grammar/2026-09-10-g-study-ccec99c0/example/0",
         "lesson/2026-09-09/grammar/2026-09-09-g-study-ccec99c0/example/0",
         "lesson/2026-10-30/grammar/2026-10-30-g-study-ccec99c0/example/0",
-        "lesson/2026-10-31/grammar/2026-10-31-g-study-ccec99c0/example/0"
+        "lesson/2026-10-31/grammar/2026-10-31-g-study-ccec99c0/example/0",
+        "lesson/2026-11-02/grammar/2026-11-02-g-study-ccec99c0/example/0"
       ],
       "duration": 4.518,
       "bytes": 36909,
@@ -8592,7 +8634,8 @@
       "text": "筆者の主張に最も近いものはどれか。",
       "label": "` 筆者の主張に最も近いものはどれか。",
       "references": [
-        "lesson/2026-10-28/review/4/detail/3"
+        "lesson/2026-10-28/review/4/detail/3",
+        "lesson/2026-11-02/review/4/detail/3"
       ],
       "duration": 3.137,
       "bytes": 25773,
@@ -8739,7 +8782,8 @@
         "lesson/2026-09-27/vocabulary/2026-09-27-v-study-66614293/collocation/0",
         "lesson/2026-09-24/vocabulary/2026-09-24-v-study-66614293/collocation/0",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-66614293/collocation/0",
-        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-66614293/collocation/0"
+        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-66614293/collocation/0",
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-study-66614293/collocation/0"
       ],
       "duration": 1.779,
       "bytes": 15021,
@@ -11349,7 +11393,8 @@
         "lesson/2026-09-20/vocabulary/2026-09-20-v-study-966a7d9e/collocation/1",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-966a7d9e/collocation/1",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-966a7d9e/collocation/1",
-        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-966a7d9e/collocation/1"
+        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-966a7d9e/collocation/1",
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-study-966a7d9e/collocation/1"
       ],
       "duration": 1.407,
       "bytes": 11949,
@@ -11988,7 +12033,8 @@
         "lesson/2026-09-18/vocabulary/2026-09-18-v-study-1e18d506/collocation/1",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-1e18d506/collocation/1",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-1e18d506/collocation/1",
-        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-1e18d506/collocation/1"
+        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-1e18d506/collocation/1",
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-study-1e18d506/collocation/1"
       ],
       "duration": 1.814,
       "bytes": 15213,
@@ -12188,7 +12234,8 @@
         "lesson/2026-09-18/vocabulary/2026-09-18-v-study-d898be90/collocation/1",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-d898be90/collocation/1",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-d898be90/collocation/1",
-        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-d898be90/collocation/1"
+        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-d898be90/collocation/1",
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-study-d898be90/collocation/1"
       ],
       "duration": 1.709,
       "bytes": 14445,
@@ -12265,7 +12312,8 @@
         "lesson/2026-09-20/vocabulary/2026-09-20-v-study-966a7d9e/collocation/2",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-966a7d9e/collocation/2",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-966a7d9e/collocation/2",
-        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-966a7d9e/collocation/2"
+        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-966a7d9e/collocation/2",
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-study-966a7d9e/collocation/2"
       ],
       "duration": 1.442,
       "bytes": 12333,
@@ -12622,7 +12670,8 @@
         "lesson/2026-09-20/vocabulary/2026-09-20-v-study-73083d1e/example/1",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-73083d1e/example/1",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-73083d1e/example/1",
-        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-73083d1e/example/1"
+        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-73083d1e/example/1",
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-study-73083d1e/example/1"
       ],
       "duration": 3.868,
       "bytes": 31725,
@@ -14449,7 +14498,8 @@
         "lesson/2026-09-15/grammar/2026-09-15-g-study-1739e8be/pattern",
         "lesson/2026-09-12/grammar/2026-09-12-g-study-1739e8be/pattern",
         "lesson/2026-10-30/grammar/2026-10-30-g-study-1739e8be/pattern",
-        "lesson/2026-10-27/grammar/2026-10-27-g-study-1739e8be/pattern"
+        "lesson/2026-10-27/grammar/2026-10-27-g-study-1739e8be/pattern",
+        "lesson/2026-11-02/grammar/2026-11-02-g-study-1739e8be/pattern"
       ],
       "duration": 1.024,
       "bytes": 8877,
@@ -16294,6 +16344,18 @@
       "sha256": "e4bfab7ee2321fb9b27c798fc8d6f4d54195857f793cec7157dbaaa7b1d847e3",
       "rms": 0.139993
     },
+    "30750644fff911b8": {
+      "id": "30750644fff911b8",
+      "text": "うきぼりになる",
+      "label": "浮き彫りになる",
+      "references": [
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-136dc576ad19/word"
+      ],
+      "bytes": 18477,
+      "duration": 1.512,
+      "rms": 0.187199,
+      "sha256": "e2d2c69a513413093f9ec2a3479ae11dc0fb21dca5e4568871b39dd3cc64e4bd"
+    },
     "3076432c04187090": {
       "id": "3076432c04187090",
       "text": "エージェントはクラウド上で継続して動き、複数の社内ツールを利用できる。",
@@ -16635,7 +16697,8 @@
         "lesson/2026-09-20/vocabulary/2026-09-20-v-study-73083d1e/collocation/1",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-73083d1e/collocation/1",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-73083d1e/collocation/1",
-        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-73083d1e/collocation/1"
+        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-73083d1e/collocation/1",
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-study-73083d1e/collocation/1"
       ],
       "duration": 2.116,
       "bytes": 17709,
@@ -20794,7 +20857,8 @@
         "lesson/2026-09-20/vocabulary/2026-09-20-v-study-966a7d9e/collocation/0",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-966a7d9e/collocation/0",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-966a7d9e/collocation/0",
-        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-966a7d9e/collocation/0"
+        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-966a7d9e/collocation/0",
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-study-966a7d9e/collocation/0"
       ],
       "duration": 1.43,
       "bytes": 12141,
@@ -23637,6 +23701,18 @@
       "sha256": "ed96473e59eda2d45163c9b35930589220d850d3f16c98c2d01d0e0b05f4d2b6",
       "rms": 0.120609
     },
+    "46eb08cc2bafd1a0": {
+      "id": "46eb08cc2bafd1a0",
+      "text": "あたたまる",
+      "label": "温まる",
+      "references": [
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-46525a219b2f/word"
+      ],
+      "bytes": 15597,
+      "duration": 1.272,
+      "rms": 0.136189,
+      "sha256": "eefb60f69d3e7b5c6cc1c92260787d26909a028343c7af3a1275b164c554dac8"
+    },
     "46eea14b7006b507": {
       "id": "46eea14b7006b507",
       "text": "悪天候のため、屋外での実験を取りやめました。",
@@ -23858,7 +23934,8 @@
         "lesson/2026-09-20/vocabulary/2026-09-20-v-study-966a7d9e/word",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-966a7d9e/word",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-966a7d9e/word",
-        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-966a7d9e/word"
+        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-966a7d9e/word",
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-study-966a7d9e/word"
       ],
       "duration": 1.106,
       "bytes": 9645,
@@ -24324,7 +24401,8 @@
         "lesson/2026-09-18/vocabulary/2026-09-18-v-study-d898be90/example/0",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-d898be90/example/0",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-d898be90/example/0",
-        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-d898be90/example/0"
+        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-d898be90/example/0",
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-study-d898be90/example/0"
       ],
       "duration": 4.226,
       "bytes": 34605,
@@ -25531,6 +25609,18 @@
       "sha256": "3a1776f21e64740c0f0b9e4ef5d02e5fe592c7f5ba9f64571b53cee03baee080",
       "rms": 0.118263
     },
+    "4c8fcc285613f1cc": {
+      "id": "4c8fcc285613f1cc",
+      "text": "許可したポートでも、サーバーが待ち受けていなければ画面は開けません。",
+      "label": "許可したポートでも、サーバーが待ち受けていなければ画面は開けません。",
+      "references": [
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-4c5736b7a522/example/0"
+      ],
+      "bytes": 61389,
+      "duration": 5.088,
+      "rms": 0.112221,
+      "sha256": "e036174aeca22c6457c56b7dccb66dab12ef9b46001852b47920ba9fb5e36bf5"
+    },
     "4c998c910e7d9135": {
       "id": "4c998c910e7d9135",
       "text": "順序を守る",
@@ -25754,6 +25844,18 @@
       "bytes": 31149,
       "sha256": "0eec4cb669d8044ac379f0c400e3d5f63d25ea2bf50ca24038138cc16c93a92b",
       "rms": 0.126679
+    },
+    "4d5238b0618cdc24": {
+      "id": "4d5238b0618cdc24",
+      "text": "あたまをなやませる",
+      "label": "頭を悩ませる",
+      "references": [
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-432e8e114ad1/word"
+      ],
+      "bytes": 21357,
+      "duration": 1.752,
+      "rms": 0.146777,
+      "sha256": "15d607a13bf9da018b927d4cd72ddb3943825cc1c72d678021dfb6d6f80d16ad"
     },
     "4d52f295f14f4b49": {
       "id": "4d52f295f14f4b49",
@@ -26429,7 +26531,8 @@
         "lesson/2026-09-20/vocabulary/2026-09-20-v-study-73083d1e/word",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-73083d1e/word",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-73083d1e/word",
-        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-73083d1e/word"
+        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-73083d1e/word",
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-study-73083d1e/word"
       ],
       "duration": 1.024,
       "bytes": 8877,
@@ -27132,6 +27235,18 @@
       "sha256": "98a3988ae154982ca5531f1545ad308a912304f7859b6d714f971f467fba4819",
       "rms": 0.164511
     },
+    "506d52d5e3681f91": {
+      "id": "506d52d5e3681f91",
+      "text": "なじむ",
+      "label": "馴染む",
+      "references": [
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-881df23403d0/word"
+      ],
+      "bytes": 14157,
+      "duration": 1.152,
+      "rms": 0.159455,
+      "sha256": "6a9c0cf24c020d921f9b37e105ec8a8747884fca9fd0b0b1d0bf352b6534f233"
+    },
     "507ac98184dc88c5": {
       "id": "507ac98184dc88c5",
       "text": "だからといって、試験を省いたまま本番環境に変更を加えれば、別の機能が動かなくなるおそれがある。",
@@ -27502,6 +27617,18 @@
       "bytes": 11565,
       "sha256": "a82f90561c8f9e280c2dc7f2cd6010c7a939cfd943d137231eee9a9a08e70aa0",
       "rms": 0.13345
+    },
+    "51508f9e7aaf0af2": {
+      "id": "51508f9e7aaf0af2",
+      "text": "まちうける",
+      "label": "待ち受ける",
+      "references": [
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-4c5736b7a522/word"
+      ],
+      "bytes": 16173,
+      "duration": 1.32,
+      "rms": 0.150049,
+      "sha256": "7afc853d501d376653e00025570540d5d40a1b45d5cc504dd58535f35df86ac0"
     },
     "51578123e0982887": {
       "id": "51578123e0982887",
@@ -28151,7 +28278,8 @@
         "lesson/2026-09-10/grammar/2026-09-10-g-study-1759f7c5/example/0",
         "lesson/2026-09-09/grammar/2026-09-09-g-study-1759f7c5/example/0",
         "lesson/2026-10-31/grammar/2026-10-31-g-study-1759f7c5/example/0",
-        "lesson/2026-11-01/grammar/2026-11-01-g-study-1759f7c5/example/0"
+        "lesson/2026-11-01/grammar/2026-11-01-g-study-1759f7c5/example/0",
+        "lesson/2026-11-02/grammar/2026-11-02-g-study-1759f7c5/example/0"
       ],
       "duration": 6.573,
       "bytes": 53229,
@@ -28248,7 +28376,8 @@
         "lesson/2026-09-12/grammar/2026-09-12-g-study-61650e08/pattern",
         "lesson/2026-09-11/grammar/2026-09-11-g-study-61650e08/pattern",
         "lesson/2026-10-31/grammar/2026-10-31-g-study-61650e08/pattern",
-        "lesson/2026-11-01/grammar/2026-11-01-g-study-61650e08/pattern"
+        "lesson/2026-11-01/grammar/2026-11-01-g-study-61650e08/pattern",
+        "lesson/2026-11-02/grammar/2026-11-02-g-study-61650e08/pattern"
       ],
       "duration": 1.14,
       "bytes": 9837,
@@ -28388,6 +28517,18 @@
       "bytes": 27693,
       "sha256": "5494e6750928ade4ca68ed38f730f7f0306cdd3e4353dcc71577fc47f1ef3f5d",
       "rms": 0.171883
+    },
+    "5416d371a0ea2ce5": {
+      "id": "5416d371a0ea2ce5",
+      "text": "評価で問題が分かったため、コード生成は早々に別の経路へ分けました。",
+      "label": "評価で問題が分かったため、コード生成は早々に別の経路へ分けました。",
+      "references": [
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-1c3edb68b87a/example/0"
+      ],
+      "bytes": 67725,
+      "duration": 5.616,
+      "rms": 0.117195,
+      "sha256": "0aafe6a8b66828d8f56106bdee7dfd2bdc051268c82a36566caae52915e8df10"
     },
     "541fa5094dc429c5": {
       "id": "541fa5094dc429c5",
@@ -31740,7 +31881,8 @@
         "lesson/2026-09-20/vocabulary/2026-09-20-v-study-73083d1e/collocation/2",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-73083d1e/collocation/2",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-73083d1e/collocation/2",
-        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-73083d1e/collocation/2"
+        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-73083d1e/collocation/2",
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-study-73083d1e/collocation/2"
       ],
       "duration": 1.57,
       "bytes": 13293,
@@ -32499,7 +32641,8 @@
         "lesson/2026-09-10/grammar/2026-09-10-g-study-1759f7c5/pattern",
         "lesson/2026-09-09/grammar/2026-09-09-g-study-1759f7c5/pattern",
         "lesson/2026-10-31/grammar/2026-10-31-g-study-1759f7c5/pattern",
-        "lesson/2026-11-01/grammar/2026-11-01-g-study-1759f7c5/pattern"
+        "lesson/2026-11-01/grammar/2026-11-01-g-study-1759f7c5/pattern",
+        "lesson/2026-11-02/grammar/2026-11-02-g-study-1759f7c5/pattern"
       ],
       "duration": 1.28,
       "bytes": 10989,
@@ -33994,7 +34137,8 @@
         "lesson/2026-09-18/vocabulary/2026-09-18-v-study-a47c5cf6/collocation/1",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-a47c5cf6/collocation/1",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-a47c5cf6/collocation/1",
-        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-a47c5cf6/collocation/1"
+        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-a47c5cf6/collocation/1",
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-study-a47c5cf6/collocation/1"
       ],
       "duration": 1.86,
       "bytes": 15597,
@@ -34373,6 +34517,18 @@
       "bytes": 11565,
       "sha256": "d95386d2d95fa8e4d35d09d3898e5017498e692a28fb519f8778e52d438987a1",
       "rms": 0.145097
+    },
+    "65b4719735959543": {
+      "id": "65b4719735959543",
+      "text": "botが進捗を見守り、人の判断が必要になったときに知らせます。",
+      "label": "botが進捗を見守り、人の判断が必要になったときに知らせます。",
+      "references": [
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-study-5c1b7b8f/example/0"
+      ],
+      "bytes": 65709,
+      "duration": 5.448,
+      "rms": 0.108612,
+      "sha256": "c4678f92871fca8568c678128fc22b272afd3dca0b51ec84b5fc0164d227c3fd"
     },
     "65b5086c7a313010": {
       "id": "65b5086c7a313010",
@@ -35862,7 +36018,8 @@
         "lesson/2026-09-18/vocabulary/2026-09-18-v-study-a47c5cf6/collocation/0",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-a47c5cf6/collocation/0",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-a47c5cf6/collocation/0",
-        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-a47c5cf6/collocation/0"
+        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-a47c5cf6/collocation/0",
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-study-a47c5cf6/collocation/0"
       ],
       "duration": 1.744,
       "bytes": 14637,
@@ -36142,7 +36299,8 @@
         "lesson/2026-09-27/vocabulary/2026-09-27-v-study-66614293/collocation/1",
         "lesson/2026-09-24/vocabulary/2026-09-24-v-study-66614293/collocation/1",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-66614293/collocation/1",
-        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-66614293/collocation/1"
+        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-66614293/collocation/1",
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-study-66614293/collocation/1"
       ],
       "duration": 2.15,
       "bytes": 17901,
@@ -36987,7 +37145,8 @@
         "lesson/2026-09-20/vocabulary/2026-09-20-v-study-73083d1e/collocation/0",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-73083d1e/collocation/0",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-73083d1e/collocation/0",
-        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-73083d1e/collocation/0"
+        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-73083d1e/collocation/0",
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-study-73083d1e/collocation/0"
       ],
       "duration": 1.79,
       "bytes": 15021,
@@ -37851,7 +38010,8 @@
         "lesson/2026-09-27/vocabulary/2026-09-27-v-study-66614293/collocation/2",
         "lesson/2026-09-24/vocabulary/2026-09-24-v-study-66614293/collocation/2",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-66614293/collocation/2",
-        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-66614293/collocation/2"
+        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-66614293/collocation/2",
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-study-66614293/collocation/2"
       ],
       "duration": 1.814,
       "bytes": 15213,
@@ -38206,7 +38366,8 @@
         "lesson/2026-09-15/grammar/2026-09-15-g-study-1739e8be/example/0",
         "lesson/2026-09-12/grammar/2026-09-12-g-study-1739e8be/example/0",
         "lesson/2026-10-30/grammar/2026-10-30-g-study-1739e8be/example/0",
-        "lesson/2026-10-27/grammar/2026-10-27-g-study-1739e8be/example/0"
+        "lesson/2026-10-27/grammar/2026-10-27-g-study-1739e8be/example/0",
+        "lesson/2026-11-02/grammar/2026-11-02-g-study-1739e8be/example/0"
       ],
       "duration": 6.132,
       "bytes": 49773,
@@ -38469,7 +38630,8 @@
         "lesson/2026-09-18/vocabulary/2026-09-18-v-study-a47c5cf6/collocation/2",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-a47c5cf6/collocation/2",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-a47c5cf6/collocation/2",
-        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-a47c5cf6/collocation/2"
+        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-a47c5cf6/collocation/2",
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-study-a47c5cf6/collocation/2"
       ],
       "duration": 2.058,
       "bytes": 17133,
@@ -39213,6 +39375,18 @@
       "bytes": 78765,
       "sha256": "0e62cab7d07b93a3b85a0f74447dfcd9bee01ab79bbc7f83c9ecf2cbbed4d8e4",
       "rms": 0.147902
+    },
+    "72f7193e43079c22": {
+      "id": "72f7193e43079c22",
+      "text": "そうそうに",
+      "label": "早々に",
+      "references": [
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-1c3edb68b87a/word"
+      ],
+      "bytes": 15309,
+      "duration": 1.248,
+      "rms": 0.134424,
+      "sha256": "d86c2c3b033a82230427965844857223213ec007edf0b9f83447c97188046210"
     },
     "72fdb687d8deb15b": {
       "id": "72fdb687d8deb15b",
@@ -42295,6 +42469,18 @@
       "sha256": "91fa90d0587de675591bc4d1685732e823257d8df6c93c3e99bb238d86d4f3af",
       "rms": 0.12886
     },
+    "7b82b5b1b7ca19fd": {
+      "id": "7b82b5b1b7ca19fd",
+      "text": "内部の思考過程が回答へ漏れ出ていないか、投稿前に確認します。",
+      "label": "内部の思考過程が回答へ漏れ出ていないか、投稿前に確認します。",
+      "references": [
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-study-679f9dfb/example/0"
+      ],
+      "bytes": 66285,
+      "duration": 5.496,
+      "rms": 0.118187,
+      "sha256": "51e03478e3e2a268318fcc4a49b0e5121bc2ecb6b21d4814cf5f360733ca0e20"
+    },
     "7b8975e346b0de5f": {
       "id": "7b8975e346b0de5f",
       "text": "Credentialを差し替える",
@@ -42611,7 +42797,8 @@
         "lesson/2026-09-18/vocabulary/2026-09-18-v-study-a47c5cf6/example/0",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-a47c5cf6/example/0",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-a47c5cf6/example/0",
-        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-a47c5cf6/example/0"
+        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-a47c5cf6/example/0",
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-study-a47c5cf6/example/0"
       ],
       "duration": 3.856,
       "bytes": 31533,
@@ -43343,7 +43530,8 @@
         "lesson/2026-09-18/vocabulary/2026-09-18-v-study-1e18d506/collocation/0",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-1e18d506/collocation/0",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-1e18d506/collocation/0",
-        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-1e18d506/collocation/0"
+        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-1e18d506/collocation/0",
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-study-1e18d506/collocation/0"
       ],
       "duration": 1.85,
       "bytes": 15597,
@@ -43900,7 +44088,8 @@
         "lesson/2026-09-18/vocabulary/2026-09-18-v-study-1e18d506/word",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-1e18d506/word",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-1e18d506/word",
-        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-1e18d506/word"
+        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-1e18d506/word",
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-study-1e18d506/word"
       ],
       "duration": 1.303,
       "bytes": 11181,
@@ -44158,7 +44347,8 @@
         "lesson/2026-09-27/vocabulary/2026-09-27-v-study-66614293/word",
         "lesson/2026-09-24/vocabulary/2026-09-24-v-study-66614293/word",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-66614293/word",
-        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-66614293/word"
+        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-66614293/word",
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-study-66614293/word"
       ],
       "duration": 1.326,
       "bytes": 11373,
@@ -44969,7 +45159,8 @@
         "lesson/2026-09-20/vocabulary/2026-09-20-v-study-966a7d9e/example/0",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-966a7d9e/example/0",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-966a7d9e/example/0",
-        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-966a7d9e/example/0"
+        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-966a7d9e/example/0",
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-study-966a7d9e/example/0"
       ],
       "duration": 5.166,
       "bytes": 42093,
@@ -53381,7 +53572,8 @@
         "lesson/2026-09-20/vocabulary/2026-09-20-v-study-73083d1e/example/0",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-73083d1e/example/0",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-73083d1e/example/0",
-        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-73083d1e/example/0"
+        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-73083d1e/example/0",
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-study-73083d1e/example/0"
       ],
       "duration": 2.348,
       "bytes": 19437,
@@ -54889,7 +55081,8 @@
         "lesson/2026-09-08/grammar/2026-09-08-g-～とは限らない/pattern",
         "lesson/2026-09-07/grammar/2026-09-07-g-～とは限らない/pattern",
         "lesson/2026-10-30/grammar/2026-10-30-g-study-ccec99c0/pattern",
-        "lesson/2026-10-31/grammar/2026-10-31-g-study-ccec99c0/pattern"
+        "lesson/2026-10-31/grammar/2026-10-31-g-study-ccec99c0/pattern",
+        "lesson/2026-11-02/grammar/2026-11-02-g-study-ccec99c0/pattern"
       ],
       "duration": 1.49,
       "bytes": 12717,
@@ -56202,7 +56395,8 @@
         "lesson/2026-09-28/grammar/2026-09-28-g-study-61aee9b6/example/0",
         "lesson/2026-09-25/grammar/2026-09-25-g-3be344ba/example/0",
         "lesson/2026-10-30/grammar/2026-10-30-g-study-61aee9b6/example/0",
-        "lesson/2026-11-01/grammar/2026-11-01-g-study-61aee9b6/example/0"
+        "lesson/2026-11-01/grammar/2026-11-01-g-study-61aee9b6/example/0",
+        "lesson/2026-11-02/grammar/2026-11-02-g-study-61aee9b6/example/0"
       ],
       "duration": 4.53,
       "bytes": 36909,
@@ -56741,6 +56935,18 @@
       "sha256": "f39c74bad7d9d8d4f408ac5bdbb7aaea0d7b46d43fbc3466359146104fac5ab6",
       "rms": 0.110946
     },
+    "a62f8ffcdc65c630": {
+      "id": "a62f8ffcdc65c630",
+      "text": "なんとなく分割するのではなく、同じ作業で費用を比べます。",
+      "label": "なんとなく分割するのではなく、同じ作業で費用を比べます。",
+      "references": [
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-study-ad31e71e/example/0"
+      ],
+      "bytes": 60813,
+      "duration": 5.04,
+      "rms": 0.151477,
+      "sha256": "96c92267dc29cf7739cd47fe6bf079751829c971115ba6209a226d013b61509c"
+    },
     "a6331a37104b35d3": {
       "id": "a6331a37104b35d3",
       "text": "画面の表示速度や開発効率は改善されたものの、どの機能がどの部品に依存しているかを、担当者が十分に把握できていなかった。",
@@ -57268,7 +57474,8 @@
         "lesson/2026-09-13/grammar/2026-09-13-g-study-4b544f6d/example/0",
         "lesson/2026-09-10/grammar/2026-09-10-g-study-4b544f6d/example/0",
         "lesson/2026-10-31/grammar/2026-10-31-g-study-4b544f6d/example/0",
-        "lesson/2026-11-01/grammar/2026-11-01-g-study-4b544f6d/example/0"
+        "lesson/2026-11-01/grammar/2026-11-01-g-study-4b544f6d/example/0",
+        "lesson/2026-11-02/grammar/2026-11-02-g-study-4b544f6d/example/0"
       ],
       "duration": 4.449,
       "bytes": 36333,
@@ -58257,7 +58464,8 @@
         "lesson/2026-10-30/grammar/2026-10-30-g-study-48e1043d/example/0",
         "lesson/2026-10-24/grammar/2026-10-24-g-study-48e1043d/example/0",
         "lesson/2026-10-23/grammar/2026-10-23-g-study-48e1043d/example/0",
-        "lesson/2026-11-01/grammar/2026-11-01-g-study-48e1043d/example/0"
+        "lesson/2026-11-01/grammar/2026-11-01-g-study-48e1043d/example/0",
+        "lesson/2026-11-02/grammar/2026-11-02-g-study-48e1043d/example/0"
       ],
       "duration": 4.867,
       "bytes": 39597,
@@ -60111,7 +60319,8 @@
         "lesson/2026-10-17/grammar/2026-10-17-g-study-99ab9a8c/example/0",
         "lesson/2026-10-04/grammar/2026-10-04-g-study-99ab9a8c/example/0",
         "lesson/2026-10-02/grammar/2026-10-02-g-study-99ab9a8c/example/0",
-        "lesson/2026-09-25/grammar/2026-09-25-g-05a22c00/example/0"
+        "lesson/2026-09-25/grammar/2026-09-25-g-05a22c00/example/0",
+        "lesson/2026-11-02/grammar/2026-11-02-g-study-99ab9a8c/example/0"
       ],
       "duration": 4.89,
       "bytes": 39789,
@@ -63121,6 +63330,18 @@
       "sha256": "a585b8207f0ac945847f1bd9fa9714eecf1e6579ec11a9671816551e8741404d",
       "rms": 0.147559
     },
+    "b97f557583cf0ad9": {
+      "id": "b97f557583cf0ad9",
+      "text": "もれでる",
+      "label": "漏れ出る",
+      "references": [
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-study-679f9dfb/word"
+      ],
+      "bytes": 14157,
+      "duration": 1.152,
+      "rms": 0.127421,
+      "sha256": "121dd28d28a05139d2f4fbc50274b820f749de4f06892fd965d9c70169bb34e5"
+    },
     "b9a1e434d00af620": {
       "id": "b9a1e434d00af620",
       "text": "外部サービスへの依存と社内での用意を対比し、文脈に合う語彙を判断する。",
@@ -64343,7 +64564,8 @@
         "lesson/2026-09-12/grammar/2026-09-12-g-study-61650e08/example/0",
         "lesson/2026-09-11/grammar/2026-09-11-g-study-61650e08/example/0",
         "lesson/2026-10-31/grammar/2026-10-31-g-study-61650e08/example/0",
-        "lesson/2026-11-01/grammar/2026-11-01-g-study-61650e08/example/0"
+        "lesson/2026-11-01/grammar/2026-11-01-g-study-61650e08/example/0",
+        "lesson/2026-11-02/grammar/2026-11-02-g-study-61650e08/example/0"
       ],
       "duration": 4.682,
       "bytes": 38253,
@@ -67699,6 +67921,18 @@
       "sha256": "f5c57ed4c57bd417eb8759d9371ba0aaa8323551ae53f8112815747f90ac55c2",
       "rms": 0.151735
     },
+    "c7eede3d8cbbb1a9": {
+      "id": "c7eede3d8cbbb1a9",
+      "text": "承認処理の制御を自分たちで握り、書き込み前に停止できるようにします。",
+      "label": "承認処理の制御を自分たちで握り、書き込み前に停止できるようにします。",
+      "references": [
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-e1121b0a5f72/example/0"
+      ],
+      "bytes": 68013,
+      "duration": 5.64,
+      "rms": 0.157261,
+      "sha256": "fe31ed61a0d53a455cdc73e305f0f83f713ce400d28d28614df3a9bd9d2bc3ee"
+    },
     "c7f516ea3e37b7ae": {
       "id": "c7f516ea3e37b7ae",
       "text": "たんめい",
@@ -67854,6 +68088,18 @@
       "duration": 5.184,
       "rms": 0.145814,
       "sha256": "f0bcd43734c931f43b220f1a95f4457bf2ea1da78101cd0e15ca8ac45841f4ad"
+    },
+    "c84e8c3dc5796141": {
+      "id": "c84e8c3dc5796141",
+      "text": "にぎる",
+      "label": "握る",
+      "references": [
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-e1121b0a5f72/word"
+      ],
+      "bytes": 13005,
+      "duration": 1.056,
+      "rms": 0.171704,
+      "sha256": "ab469c7c93bcacb7f9ed5085d1267f0bd3f21298e6215f492a34be5c74944bbb"
     },
     "c85437b1d5f4268d": {
       "id": "c85437b1d5f4268d",
@@ -68224,6 +68470,18 @@
       "bytes": 63405,
       "sha256": "927ea6345d229e47c0412b66ca88ac0d0e656a262b7473a514183b1b4de8c768",
       "rms": 0.139645
+    },
+    "c964541476619dd0": {
+      "id": "c964541476619dd0",
+      "text": "てがたい",
+      "label": "手堅い",
+      "references": [
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-34cd0a318464/word"
+      ],
+      "bytes": 13581,
+      "duration": 1.104,
+      "rms": 0.121476,
+      "sha256": "f8f7f9af41b8207c98fb5897c4c96ce548d9eda81114383bdf19117f96ea9802"
     },
     "c96df8bca8da0fd8": {
       "id": "c96df8bca8da0fd8",
@@ -69468,6 +69726,18 @@
       "bytes": 14637,
       "sha256": "18a31eb48c7bb58882d745ecaa1db90403d98b37359be5fef511b0b5ddf43c7c",
       "rms": 0.125886
+    },
+    "cc82901d4ba893b1": {
+      "id": "cc82901d4ba893b1",
+      "text": "初回はキャッシュが温まっていなかった可能性がありますが、原因は未確認です。",
+      "label": "初回はキャッシュが温まっていなかった可能性がありますが、原因は未確認です。",
+      "references": [
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-46525a219b2f/example/0"
+      ],
+      "bytes": 71181,
+      "duration": 5.904,
+      "rms": 0.129869,
+      "sha256": "ab681d610369d1f581abc5261caeca538e223e6c8eed0ef2c9013ae66d3eb56f"
     },
     "cc8902cef9fba922": {
       "id": "cc8902cef9fba922",
@@ -71052,6 +71322,18 @@
       "sha256": "39436d66c3df69370b5bbedfbbbba277d1143faae8e5f2f2c22410165b1a0d20",
       "rms": 0.135997
     },
+    "d21bdd3aa10ceb7e": {
+      "id": "d21bdd3aa10ceb7e",
+      "text": "ざっと",
+      "label": "ざっと",
+      "references": [
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-af628c4747ab/word"
+      ],
+      "bytes": 13581,
+      "duration": 1.104,
+      "rms": 0.129712,
+      "sha256": "a4daa2a2fffb0d2a9b521686060b7cb1c5b18b906f0e551f14c5dfc19b517c1a"
+    },
     "d21cc855663d04e1": {
       "id": "d21cc855663d04e1",
       "text": "しかし、更新版が出たという事実だけで、自分たちのアプリケーションに必要な対策がすべて完了すると考えるのは早計である。",
@@ -71811,6 +72093,18 @@
       "bytes": 14061,
       "sha256": "b1bb845949d620664758c996262698ebee871599611be59c9a3862b9a31b3d06",
       "rms": 0.188212
+    },
+    "d4973003f38a17a7": {
+      "id": "d4973003f38a17a7",
+      "text": "調査と実装を分けるのが、この検証では手堅い構成でした。",
+      "label": "調査と実装を分けるのが、この検証では手堅い構成でした。",
+      "references": [
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-34cd0a318464/example/0"
+      ],
+      "bytes": 59949,
+      "duration": 4.968,
+      "rms": 0.126264,
+      "sha256": "6de27338f2974e4f0b7031161b89b6742abfc2bd0fb84eec3f78516dfc43de89"
     },
     "d4aa425d324fbbc9": {
       "id": "d4aa425d324fbbc9",
@@ -72686,7 +72980,8 @@
         "lesson/2026-10-30/grammar/2026-10-30-g-study-48e1043d/pattern",
         "lesson/2026-10-24/grammar/2026-10-24-g-study-48e1043d/pattern",
         "lesson/2026-10-23/grammar/2026-10-23-g-study-48e1043d/pattern",
-        "lesson/2026-11-01/grammar/2026-11-01-g-study-48e1043d/pattern"
+        "lesson/2026-11-01/grammar/2026-11-01-g-study-48e1043d/pattern",
+        "lesson/2026-11-02/grammar/2026-11-02-g-study-48e1043d/pattern"
       ],
       "duration": 1.175,
       "bytes": 10029,
@@ -73992,7 +74287,8 @@
         "lesson/2026-09-28/grammar/2026-09-28-g-study-61aee9b6/pattern",
         "lesson/2026-09-25/grammar/2026-09-25-g-3be344ba/pattern",
         "lesson/2026-10-30/grammar/2026-10-30-g-study-61aee9b6/pattern",
-        "lesson/2026-11-01/grammar/2026-11-01-g-study-61aee9b6/pattern"
+        "lesson/2026-11-01/grammar/2026-11-01-g-study-61aee9b6/pattern",
+        "lesson/2026-11-02/grammar/2026-11-02-g-study-61aee9b6/pattern"
       ],
       "duration": 1.431,
       "bytes": 12141,
@@ -74242,6 +74538,18 @@
       "bytes": 28077,
       "sha256": "c466ed3373d2917076d258141d1cf8dd40f18497eab2d11f36bdb6dd187157b6",
       "rms": 0.143841
+    },
+    "db661201827782bd": {
+      "id": "db661201827782bd",
+      "text": "今回の測定で、入力の組み立て方という課題が浮き彫りになりました。",
+      "label": "今回の測定で、入力の組み立て方という課題が浮き彫りになりました。",
+      "references": [
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-136dc576ad19/example/0"
+      ],
+      "bytes": 68877,
+      "duration": 5.712,
+      "rms": 0.14159,
+      "sha256": "c015596d47852290db8f281c9dd2f9bf040937fb407545921304c945bf56e1ed"
     },
     "db672a268592ad32": {
       "id": "db672a268592ad32",
@@ -75034,7 +75342,8 @@
         "lesson/2026-09-18/vocabulary/2026-09-18-v-study-d898be90/word",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-d898be90/word",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-d898be90/word",
-        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-d898be90/word"
+        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-d898be90/word",
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-study-d898be90/word"
       ],
       "duration": 1.303,
       "bytes": 11181,
@@ -75434,7 +75743,8 @@
         "lesson/2026-09-18/vocabulary/2026-09-18-v-study-d898be90/collocation/2",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-d898be90/collocation/2",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-d898be90/collocation/2",
-        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-d898be90/collocation/2"
+        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-d898be90/collocation/2",
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-study-d898be90/collocation/2"
       ],
       "duration": 1.698,
       "bytes": 14253,
@@ -75980,7 +76290,8 @@
         "lesson/2026-09-27/vocabulary/2026-09-27-v-study-66614293/example/0",
         "lesson/2026-09-24/vocabulary/2026-09-24-v-study-66614293/example/0",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-66614293/example/0",
-        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-66614293/example/0"
+        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-66614293/example/0",
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-study-66614293/example/0"
       ],
       "duration": 4.4,
       "bytes": 35949,
@@ -77123,7 +77434,8 @@
         "lesson/2026-09-18/vocabulary/2026-09-18-v-study-d898be90/collocation/0",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-d898be90/collocation/0",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-d898be90/collocation/0",
-        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-d898be90/collocation/0"
+        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-d898be90/collocation/0",
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-study-d898be90/collocation/0"
       ],
       "duration": 1.802,
       "bytes": 15213,
@@ -77309,6 +77621,18 @@
       "bytes": 39597,
       "sha256": "ecd730afcf31a72b0132129bad915adac810eec22cd19e09af08d2e60a8cd151",
       "rms": 0.142974
+    },
+    "e455850f5cfd3203": {
+      "id": "e455850f5cfd3203",
+      "text": "みまもる",
+      "label": "見守る",
+      "references": [
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-study-5c1b7b8f/word"
+      ],
+      "bytes": 14733,
+      "duration": 1.2,
+      "rms": 0.173786,
+      "sha256": "1b5a895631652d564fb036d0ca1115391dd67005650977a2a8cf874e23089ee6"
     },
     "e458f0ab2416c20f": {
       "id": "e458f0ab2416c20f",
@@ -77987,6 +78311,18 @@
       "sha256": "4e12da1cfaa860b60243a3fc83f088e6b5f69d0697d432a53fbd160142a50021",
       "rms": 0.126355
     },
+    "e6b9d10bfdae47cf": {
+      "id": "e6b9d10bfdae47cf",
+      "text": "仕様をざっと読んだあとで、認証と保存期間の条件を確認します。",
+      "label": "仕様をざっと読んだあとで、認証と保存期間の条件を確認します。",
+      "references": [
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-af628c4747ab/example/0"
+      ],
+      "bytes": 61677,
+      "duration": 5.112,
+      "rms": 0.177152,
+      "sha256": "5c3817a55337bc5aae0b75aca771b4e3309c775c99bbd57e3e9a4e5d3c207c6c"
+    },
     "e6ccb52b14062947": {
       "id": "e6ccb52b14062947",
       "text": "指定を貼る",
@@ -78156,6 +78492,18 @@
       "bytes": 10029,
       "sha256": "d8fd719e11ade2038178c30aab563a3eb8c79134d85c7bcb9f912cc367fb3c63",
       "rms": 0.141228
+    },
+    "e742cb7ad1e0f6d6": {
+      "id": "e742cb7ad1e0f6d6",
+      "text": "応答の遅さに頭を悩ませ、入力の読み込み時間から調べました。",
+      "label": "応答の遅さに頭を悩ませ、入力の読み込み時間から調べました。",
+      "references": [
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-432e8e114ad1/example/0"
+      ],
+      "bytes": 66573,
+      "duration": 5.52,
+      "rms": 0.176107,
+      "sha256": "8ab88683ae5628d6d45ad8a1900ac08659f48cc537caab30925edc3848dd6101"
     },
     "e7433a9b28a10f17": {
       "id": "e7433a9b28a10f17",
@@ -78403,7 +78751,8 @@
         "lesson/2026-09-18/vocabulary/2026-09-18-v-study-a47c5cf6/word",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-a47c5cf6/word",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-a47c5cf6/word",
-        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-a47c5cf6/word"
+        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-a47c5cf6/word",
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-study-a47c5cf6/word"
       ],
       "duration": 1.303,
       "bytes": 11181,
@@ -80522,6 +80871,18 @@
       "sha256": "6dbbf432f1933550e2049750177db139f8d323a6cd5fa60965eb94ad2e660f22",
       "rms": 0.155517
     },
+    "eec42a0ad6a7046e": {
+      "id": "eec42a0ad6a7046e",
+      "text": "てはい",
+      "label": "手配",
+      "references": [
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-study-bd025dc1/word"
+      ],
+      "bytes": 11853,
+      "duration": 0.96,
+      "rms": 0.155346,
+      "sha256": "aae00649d5e0154fe9cdae489c122c3a3aa6f68c8621bbd62a155dde9e1efefa"
+    },
     "eecaaad4a1960570": {
       "id": "eecaaad4a1960570",
       "text": "この構成で、著者はアップグレード中もメンテナンス時間を設けず提供できたと報告しています。",
@@ -81540,6 +81901,18 @@
       "bytes": 28653,
       "sha256": "6949e6444f3da96f7d6f9775cf15745b11afb382746e2adfcdcb3dd43f89c868",
       "rms": 0.135524
+    },
+    "f1b54bc368de086f": {
+      "id": "f1b54bc368de086f",
+      "text": "便利な機能でも、社内の承認手順に馴染むかを確認します。",
+      "label": "便利な機能でも、社内の承認手順に馴染むかを確認します。",
+      "references": [
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-881df23403d0/example/0"
+      ],
+      "bytes": 59949,
+      "duration": 4.968,
+      "rms": 0.138045,
+      "sha256": "59bedccca278f0cea50b428c3f8454ebbdf6519417704500e334fcf7ef2b810c"
     },
     "f1ba29587a88a7fc": {
       "id": "f1ba29587a88a7fc",
@@ -84056,6 +84429,18 @@
       "bytes": 81261,
       "sha256": "7643e9612cb952b6461a6802dd1fa32bda257e3cbca06e693334dd776ba55bd6",
       "rms": 0.132178
+    },
+    "fa042603d586aecf": {
+      "id": "fa042603d586aecf",
+      "text": "検証機器を手配するときは、購入費と運用費を分けて見積もります。",
+      "label": "検証機器を手配するときは、購入費と運用費を分けて見積もります。",
+      "references": [
+        "lesson/2026-11-02/vocabulary/2026-11-02-v-study-bd025dc1/example/0"
+      ],
+      "bytes": 65133,
+      "duration": 5.4,
+      "rms": 0.125548,
+      "sha256": "9756499c3016a5bccf6a005772daadf9a7a3c910574f4490591a71d96a7e2b7a"
     },
     "fa10116cf6799328": {
       "id": "fa10116cf6799328",
