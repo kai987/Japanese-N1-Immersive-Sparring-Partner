@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "targetDate": "2026-11-02",
+  "day": 65,
+  "status": "waiting_upstream",
+  "stage": "waiting_upstream",
+  "requestSubmitted": false,
+  "sourceSavedOnMain": true,
+  "sourceCheckpointVerified": true,
+  "sourceCommit": "b1343131e43e1273065b5cca1d75a33d3739e2",
+  "sourceBlobSha": "6c4dc99cf7c18473fe2352144c9b55efef87f98d",
+  "sourceCheckpointBlobSha": "731d568213b22551bd2da1aae555c3c92c861269",
+  "sourceSha256": "e7bd2225fedad725807fa3af085a6a0c4659b2a42395e69d08d09aec4c3e8d74",
+  "expectedSourceBytes": 27556,
+  "generatedAtJST": "2026-11-02T09:07:41+09:00",
+  "upstreamTargetVerified": false,
+  "lastError": null,
+  "nextStep": "Wait for exact successful 2026-11-02 upstream deploy and complete history snapshot; normal existing IT publication handoff then resumes the frozen source. 11:00 check is not a release guarantee.",
+  "updatedAt": "2026-11-02T00:08:00Z"
+}
