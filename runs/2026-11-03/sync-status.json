@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-11-03",
   "day": 66,
-  "status": "waiting_upstream",
-  "stage": "waiting_upstream",
+  "status": "waiting_request",
+  "stage": "request_ready",
   "requestSubmitted": false,
   "sourceSavedOnMain": true,
   "sourceCheckpointVerified": true,
@@ -15,6 +15,20 @@
   "generatedAtJST": "2026-11-03T09:07:07+09:00",
   "upstreamTargetVerified": false,
   "lastError": null,
-  "nextStep": "Wait for the verified 2026-11-03 upstream complete main deploy, source-bound C and full historical snapshot. Resume the same frozen source through existing publication handoff; do not regenerate the original or claim a timed webpage release.",
-  "updatedAt": "2026-11-03T00:11:02.099Z"
+  "nextStep": "Submit complete source-bound request while shared slot is free",
+  "updatedAt": "2026-11-03T05:13:31.111Z",
+  "upstreamSourceCommit": "59736f4689bee8e032b185218e9a0f7c2d4d2673",
+  "sourcePagesRunId": 41581951800,
+  "snapshotSha256": "337bd02c8305a78da2cc3a664effda83343181afb0534ed03c0e5132bd2fc9bb",
+  "issueNumber": 84,
+  "totalDays": 84,
+  "requestSha256": "bf7ff007eeda9cb4ede05221661862638e5788990d2efff4d62e7394604b8872",
+  "localValidation": {
+    "content": true,
+    "unit": 204,
+    "python": 28,
+    "build": true,
+    "browserTests": 81,
+    "allPassed": true
+  }
 }
