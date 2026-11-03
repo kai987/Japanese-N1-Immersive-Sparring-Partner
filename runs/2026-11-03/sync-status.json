@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-11-03",
   "day": 66,
-  "status": "validating",
-  "stage": "validating",
+  "status": "published",
+  "stage": "published",
   "requestSubmitted": true,
   "sourceSavedOnMain": true,
   "sourceCheckpointVerified": true,
@@ -15,8 +15,8 @@
   "generatedAtJST": "2026-11-03T09:07:07+09:00",
   "upstreamTargetVerified": false,
   "lastError": null,
-  "nextStep": "Verify exact sync run, final lesson+snapshot commit, Pages and live target date",
-  "updatedAt": "2026-11-03T05:13:38.102Z",
+  "nextStep": "Text complete. Shared and unique N1 audio remain independent; observe their actual checkpoints and existing worker schedule.",
+  "updatedAt": "2026-11-03T05:23:30.086Z",
   "upstreamSourceCommit": "59736f4689bee8e032b185218e9a0f7c2d4d2673",
   "sourcePagesRunId": 41581951800,
   "snapshotSha256": "337bd02c8305a78da2cc3a664effda83343181afb0534ed03c0e5132bd2fc9bb",
@@ -32,5 +32,59 @@
     "allPassed": true
   },
   "requestCommit": "2e12957adf901d0398c36582cfa7ddee1c5c368d",
-  "requestBlobSha": "9bfaa0044ce991f9210df143eaf2ef62dcbc456f"
+  "requestBlobSha": "9bfaa0044ce991f9210df143eaf2ef62dcbc456f",
+  "releaseCommit": "e168b889ce078eb16af0449ecb08283092aa5f8a",
+  "pagesRunId": 41583025799,
+  "counts": {
+    "vocabularyNew": 14,
+    "vocabularyReview": 6,
+    "grammarNew": 1,
+    "grammarReview": 6
+  },
+  "textPublicationVerified": true,
+  "verification": {
+    "targetDate": "2026-11-03",
+    "day": 66,
+    "releaseCommit": "e168b889ce078eb16af0449ecb08283092aa5f8a",
+    "pagesRunId": 41583025799,
+    "upstreamSourceCommit": "59736f4689bee8e032b185218e9a0f7c2d4d2673",
+    "sourceBlobSha": "1b9c8f0e6c841a49dc1d39b1ef1e6a113beaf2c6",
+    "artifact": {
+      "id": 13207065176,
+      "name": "n1-deployment-verification",
+      "digest": "sha256:b789e25c00b1036b6a763fb04ab3ff689a4fcbb9c4384b547e69e62a37a2b78e"
+    },
+    "manifestSha256": "cee5796e75219452c8add532779d2eec1e14983492e129fdebf54d6be1b39d81",
+    "fullPublicAssetBytes": true,
+    "verifiedFiles": 75,
+    "allLessonJsonAndCompleteSearchVerified": true,
+    "allOriginalParagraphsPresent": true,
+    "originalParagraphCount": 6,
+    "originalQuestionAndOptionsPreserved": true,
+    "title": "デジタルアーカイブは、資料を公開しただけで文化を伝えられるのか——メタデータ、出典、検索と解釈",
+    "sourceUnchanged": true,
+    "publishedLessonSha256": "83930923fa4ea3f65a6305586ee656378a16f1ce3fe68a42543cb15f8ba11b90",
+    "liveProof": {
+      "status": "published_release_verified",
+      "manifestSha256": "cee5796e75219452c8add532779d2eec1e14983492e129fdebf54d6be1b39d81",
+      "verifiedFiles": 75,
+      "latestDate": "2026-11-03",
+      "targetDate": "2026-11-03"
+    },
+    "at": "2026-11-03T05:20:20.835Z",
+    "visibleBrowserDateVerified": true,
+    "browser": {
+      "targetDate": "2026-11-03",
+      "day": 66,
+      "issueNumber": 84,
+      "title": "デジタルアーカイブは、資料を公開しただけで文化を伝えられるのか——メタデータ、出典、検索と解釈（第84号）",
+      "originalParagraphs": 6,
+      "originalParagraphsVisible": true,
+      "questionAndFourOptionsVisible": true,
+      "noAnswersSubmitted": true,
+      "url": "https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/",
+      "observedAt": "2026-11-03T05:23:24.593635+00:00",
+      "realBrowser": "Cua Chrome visible landing, immersion and reading quiz"
+    }
+  }
 }
