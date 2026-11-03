@@ -12,8 +12,9 @@
   },
   "engineVersion": "1.1.0-dev",
   "modelVersion": "1.0.0",
-  "generatedAt": "2026-11-03T05:25:31.162Z",
+  "generatedAt": "2026-11-03T06:02:44.277Z",
   "lessonDates": [
+    "2026-11-03",
     "2026-11-02",
     "2026-11-01",
     "2026-10-31",
@@ -80,7 +81,7 @@
     "2026-08-31",
     "2026-08-30"
   ],
-  "expectedClips": 7140,
+  "expectedClips": 7395,
   "complete": true,
   "clips": {
     "000508138c45e52f": {
@@ -1367,6 +1368,18 @@
       "sha256": "5bd4f353819f9a664fa3efd508a867b92614580302949e95dd015cb3ebe6ea7e",
       "rms": 0.10998
     },
+    "03784be58ed65d49": {
+      "id": "03784be58ed65d49",
+      "text": "背景が透ける",
+      "label": "背景が透ける",
+      "references": [
+        "lesson/2026-11-03/vocabulary/2026-11-03-v-a5f8a1c5ec1d/collocation/0"
+      ],
+      "duration": 1.593,
+      "bytes": 13485,
+      "sha256": "10b99288df8de140e919799648b1a8983dd18eee619796bbd51cc4f130c6d42d",
+      "rms": 0.104601
+    },
     "037b6e544bb944a8": {
       "id": "037b6e544bb944a8",
       "text": "ところが、通知が増えるにつれ、現場から「何を優先して確かめればよいのか分からない」という声が出始めた。",
@@ -1524,6 +1537,18 @@
       "bytes": 13293,
       "sha256": "64a4c61a686a726b4259f4d24d4fb139ebd4e762452e1c71d437362fc8820575",
       "rms": 0.148822
+    },
+    "03f9e5bfa5607153": {
+      "id": "03f9e5bfa5607153",
+      "text": "母の作った料理が懐かしい。",
+      "label": "母の作った料理が懐かしい。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-noun-modifiers/example/live-2026-11-03-example-mother-cooking-miss/0"
+      ],
+      "duration": 2.487,
+      "bytes": 20589,
+      "sha256": "ba8ec844dcbb685b0c1fdd4569621fb6c80335e908330270b8179caebf9ce00d",
+      "rms": 0.113371
     },
     "03fe4fbbcbd2712f": {
       "id": "03fe4fbbcbd2712f",
@@ -2290,6 +2315,18 @@
       "sha256": "5faaa2b687dc39f3bc8821f8a754de5d9f801a87f136ef7976c178cd08ab3df5",
       "rms": 0.097501
     },
+    "05ec5bef4b319aeb": {
+      "id": "05ec5bef4b319aeb",
+      "text": "体験を損じる",
+      "label": "体験を損じる",
+      "references": [
+        "lesson/2026-11-03/vocabulary/2026-11-03-v-f637057bbac4/collocation/0"
+      ],
+      "duration": 1.605,
+      "bytes": 13485,
+      "sha256": "ce6ee03aadbcc74cb7508163a6258633d53bab5d167258cec6c7ee0c44f830ba",
+      "rms": 0.168811
+    },
     "05fc901fc81cf01b": {
       "id": "05fc901fc81cf01b",
       "text": "一括で変更する前に、対象一覧と差分を確認します。",
@@ -2521,6 +2558,18 @@
       "bytes": 30381,
       "sha256": "a10440a38795e3756928b2dc2ce83ac0e3bacf29022f6f499d4ccf687d542c6d",
       "rms": 0.1621
+    },
+    "067d27917be42d35": {
+      "id": "067d27917be42d35",
+      "text": "1 に限っての 2 といったらの 3 ならではの 4 によらない",
+      "label": "① に限っての ② といったらの ③ ならではの ④ によらない",
+      "references": [
+        "lesson/2026-11-03/review/3/detail/1"
+      ],
+      "duration": 4.1,
+      "bytes": 33453,
+      "sha256": "cf81e6d96763c01b8416fbd4176e04fe72506b404c267516d95f2088e54c9a28",
+      "rms": 0.170035
     },
     "068599561b61356a": {
       "id": "068599561b61356a",
@@ -2801,6 +2850,18 @@
       "bytes": 68589,
       "sha256": "4211208cdf5a9621a33cb582485d178f20c019290ba52081d283a51c7653076a",
       "rms": 0.154739
+    },
+    "07156088bed95e1c": {
+      "id": "07156088bed95e1c",
+      "text": "話に夢中になって、ついお菓子を食べすぎた。",
+      "label": "話に夢中になって、ついお菓子を食べすぎた。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-unnoticed/example/live-2026-11-03-example-unintended-snack/0"
+      ],
+      "duration": 3.822,
+      "bytes": 31341,
+      "sha256": "514f3c88b6a2fc6cc34710de9b4b953be7fc9437e6e633c299d216ef09d4bbb7",
+      "rms": 0.159085
     },
     "071c346690aab85a": {
       "id": "071c346690aab85a",
@@ -3291,6 +3352,18 @@
       "bytes": 20205,
       "sha256": "ee60511186960135465aed38a2b3c495e34083bfd5d1c63afe6352cab8811b68",
       "rms": 0.14
+    },
+    "0832b3ea4f7b8b56": {
+      "id": "0832b3ea4f7b8b56",
+      "text": "早生まれの扱い",
+      "label": "早生まれの扱い",
+      "references": [
+        "lesson/2026-11-03/vocabulary/2026-11-03-v-study-ed131a4e/collocation/1"
+      ],
+      "duration": 1.767,
+      "bytes": 14829,
+      "sha256": "b8c98ea6702c2925289b500ab3d47672bc29d02f407e3a07a1c6cf51cf82f585",
+      "rms": 0.157564
     },
     "083e61008495d97c": {
       "id": "083e61008495d97c",
@@ -3839,6 +3912,18 @@
       "sha256": "708b11232a8ba400a13e4f9aa3f10c76ae9f961e31dabc1d841a1ffa8b9e2e07",
       "rms": 0.149535
     },
+    "0983114e8bb71eda": {
+      "id": "0983114e8bb71eda",
+      "text": "子どもを喜ばせようとして、わざと負けた。",
+      "label": "子どもを喜ばせようとして、わざと負けた。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-deliberate/example/live-2026-11-03-example-intentional-loss/0"
+      ],
+      "duration": 3.578,
+      "bytes": 29421,
+      "sha256": "d1d829ba2c9b76c0cdfb9be9938f0cad3616379de4eba056ffb5cbf81d36c073",
+      "rms": 0.091772
+    },
     "0993114ea742b3a2": {
       "id": "0993114ea742b3a2",
       "text": "原Q34の復習:文型の接続",
@@ -3898,6 +3983,18 @@
       "bytes": 9261,
       "sha256": "673e062afadb7bdb3deef8039730bd708ce9673037f80121539a35febac7835a",
       "rms": 0.134068
+    },
+    "09b178c54db9ab11": {
+      "id": "09b178c54db9ab11",
+      "text": "ひとをよびだす",
+      "label": "人を呼び出す",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-notify-call/entry/live-2026-11-03-entry-summon-person"
+      ],
+      "duration": 1.466,
+      "bytes": 12525,
+      "sha256": "f2d39af85c1488fac192d8c7fc2dace936878443f7c661f1cb8b707a15481ba7",
+      "rms": 0.150113
     },
     "09bc2a7bdcfa0b37": {
       "id": "09bc2a7bdcfa0b37",
@@ -4020,6 +4117,18 @@
       "bytes": 31149,
       "sha256": "0fe6603763418a41582411a0377c61ad775478f8ef7de95c64d915aef0dd9834",
       "rms": 0.176219
+    },
+    "0a21f1d484b7d410": {
+      "id": "0a21f1d484b7d410",
+      "text": "鏡に映る",
+      "label": "鏡に映る",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-reflect/source/0"
+      ],
+      "duration": 1.49,
+      "bytes": 12717,
+      "sha256": "0d887e82bc8a85b571bef244a77971b8c0d38c9af92c99c5a4e0a79fd6641f09",
+      "rms": 0.16374
     },
     "0a22d5e25908be66": {
       "id": "0a22d5e25908be66",
@@ -5586,6 +5695,18 @@
       "sha256": "29e5ebb14ed8dde98f068e4bf400ed7d21c7ae4b8f51711a72bbfc563c84416b",
       "rms": 0.146063
     },
+    "0e96ea73980310ff": {
+      "id": "0e96ea73980310ff",
+      "text": "話しかけるタイミングを見計らった。",
+      "label": "話しかけるタイミングを見計らった。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-timing/example/live-2026-11-03-example-choose-question-time/0"
+      ],
+      "duration": 2.789,
+      "bytes": 23085,
+      "sha256": "4a1fe1ed7a62b5037d184692c623d8b3c9ce14a00c3c89078b9bb4e0aa666401",
+      "rms": 0.176068
+    },
     "0e9ae01631a07482": {
       "id": "0e9ae01631a07482",
       "text": "これは人の確認をなくす仕組みではなく、確認する場所と、その判断を保持する仕組みです。",
@@ -5891,6 +6012,18 @@
       "bytes": 18861,
       "sha256": "3023c7b3713f866466f3d46f8e1fc8cf95b08c6d3f759d51b542281ee2edfd47",
       "rms": 0.128298
+    },
+    "0f5982ac3746d238": {
+      "id": "0f5982ac3746d238",
+      "text": "承知しない",
+      "label": "承知しない",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-refusal/source/1"
+      ],
+      "duration": 1.256,
+      "bytes": 10797,
+      "sha256": "b045ffa50101bb1b1c9114dc4b8bb688d328b8dad2c60fe9a92f4444324427d6",
+      "rms": 0.129316
     },
     "0f59f66af325bdce": {
       "id": "0f59f66af325bdce",
@@ -6580,6 +6713,18 @@
       "sha256": "0e034672e0efe604db8522eaad4ca279e1eb13918919b44f12bd4b32ebc204c9",
       "rms": 0.181781
     },
+    "113ffd174d68b0ab": {
+      "id": "113ffd174d68b0ab",
+      "text": "蛇口から水がちょろちょろ流れている。",
+      "label": "蛇口から水がちょろちょろ流れている。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-manner-words/example/live-2026-11-03-example-stream-trickle/0"
+      ],
+      "duration": 2.975,
+      "bytes": 24429,
+      "sha256": "24af2d85b80e3fa9195486b9173cca16154950ff63472f1cd9fac7d6bb2c4a70",
+      "rms": 0.144021
+    },
     "11401ab88c09b794": {
       "id": "11401ab88c09b794",
       "text": "会議内容を要約する",
@@ -7200,6 +7345,18 @@
       "sha256": "62a0ae9abd1347a28c97ff8709f32ab8ebf6b5a265fecd847b75ce55b5d88af8",
       "rms": 0.121127
     },
+    "13770ee727254203": {
+      "id": "13770ee727254203",
+      "text": "模範解答",
+      "label": "模範解答",
+      "references": [
+        "lesson/2026-11-03/vocabulary/2026-11-03-v-cbee35369352/collocation/0"
+      ],
+      "duration": 1.43,
+      "bytes": 12141,
+      "sha256": "cba068f2de54c9ae58961e4f038debad62e35c44434d3f8296e055ce3ba763b9",
+      "rms": 0.145042
+    },
     "137be868ffbf679c": {
       "id": "137be868ffbf679c",
       "text": "適当に選ぶ",
@@ -7223,6 +7380,18 @@
       "bytes": 11373,
       "sha256": "9b09353a0124486c4a8953677d6a8e84ca89ec14475c5cc6a401dedd0d65212f",
       "rms": 0.176155
+    },
+    "1395b7bc514959c8": {
+      "id": "1395b7bc514959c8",
+      "text": "通報する",
+      "label": "通報する",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-notify-call/source/0"
+      ],
+      "duration": 1.222,
+      "bytes": 10413,
+      "sha256": "ab0d91ca6291bd0d9dfdb4d9cf5bca86371188fbcb8b4ac0369faee661428cd9",
+      "rms": 0.130936
     },
     "13a37b03d8b6b817": {
       "id": "13a37b03d8b6b817",
@@ -7864,6 +8033,18 @@
       "sha256": "cb2939cb1767265e35e3ebc28019f3752fefa767536078fc9fbd12aa38516d30",
       "rms": 0.154139
     },
+    "159d1f2cfab79e18": {
+      "id": "159d1f2cfab79e18",
+      "text": "瞬間移動",
+      "label": "瞬間移動",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-fantasy/source/0"
+      ],
+      "duration": 1.431,
+      "bytes": 12141,
+      "sha256": "e88b6276e1773c3e1e4980bb875e59ab1df3c2955155dcf21aad26b3055002d0",
+      "rms": 0.192018
+    },
     "15a7a769e79fce65": {
       "id": "15a7a769e79fce65",
       "text": "以前は担当者が複数の規程を開いて確認していたが、新しい画面では質問を入力するだけで、もっともらしい文章と参照先の一覧が表示される。",
@@ -7961,6 +8142,19 @@
       "bytes": 75309,
       "sha256": "ffc1918c4c3484eda78f071d709cf9293d12b0e7ad102335b524824678939e59",
       "rms": 0.154841
+    },
+    "15e2f34dd6c72589": {
+      "id": "15e2f34dd6c72589",
+      "text": "読む価値: スキルの移植を、入口の使いやすさだけでなく、読み取りの完全性・再開・保守権限まで含めて考えられます。",
+      "label": "読む価値: スキルの移植を、入口の使いやすさだけでなく、読み取りの完全性・再開・保守権限まで含めて考えられます。",
+      "references": [
+        "lesson/2026-11-03/grammar/2026-11-03-g-study-48e1043d/evidence/0",
+        "lesson/2026-11-03/grammar/2026-11-03-g-study-61aee9b6/evidence/0"
+      ],
+      "duration": 9.882,
+      "bytes": 79725,
+      "sha256": "d94e11874c0824e3612693890e96b023a93bb2fd3eb84d34997b0cd0b020b93b",
+      "rms": 0.166719
     },
     "15ebbf0dfde70491": {
       "id": "15ebbf0dfde70491",
@@ -8071,6 +8265,18 @@
       "bytes": 10029,
       "sha256": "a7fe591860cec1e0f1ee06b3499264ab46fc1dfe7c705739ba13096f71bfbeb9",
       "rms": 0.144963
+    },
+    "164f305c05507068": {
+      "id": "164f305c05507068",
+      "text": "この道具を変なことに使うな。",
+      "label": "この道具を変なことに使うな。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-negative-command/example/live-2026-11-03-example-do-not-misuse-tool/0"
+      ],
+      "duration": 2.649,
+      "bytes": 21933,
+      "sha256": "f399bb8d6174750b7d3b06bcc2cd100aa9f30c34d76b0d3e4662d06f479d0da8",
+      "rms": 0.143743
     },
     "16621d3d5ae7d0d9": {
       "id": "16621d3d5ae7d0d9",
@@ -8330,6 +8536,31 @@
       "bytes": 34029,
       "sha256": "49b9c2b1924e2a7fffd485c989b00f4fcf952e14e9fa376ad7385dbca5fab3b6",
       "rms": 0.157063
+    },
+    "170ee7f9f88f3f2d": {
+      "id": "170ee7f9f88f3f2d",
+      "text": "だれもいない",
+      "label": "誰もいない",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-absence/entry/live-2026-11-03-entry-nobody"
+      ],
+      "duration": 1.337,
+      "bytes": 11373,
+      "sha256": "c907aeec34a6dd1a4254f44e361db5f1b69d591d9d4f2b7819e6ee84a66319ec",
+      "rms": 0.15008
+    },
+    "173665097bd55505": {
+      "id": "173665097bd55505",
+      "text": "わくわく",
+      "label": "わくわく",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-thrill/source/0",
+        "live/2026-11-03/live-2026-11-03-thrill/entry/live-2026-11-03-entry-wakuwaku"
+      ],
+      "duration": 1.291,
+      "bytes": 10989,
+      "sha256": "d8ad4199a02dfdbdc9b356f0fb0b5597e7218e057a016ba776ec9569d782b825",
+      "rms": 0.08345
     },
     "173b4b79074ffaad": {
       "id": "173b4b79074ffaad",
@@ -9166,6 +9397,18 @@
       "sha256": "5267cd90ed0374d36a163810fa852bac062f16b0897094276633037ab9a8dac5",
       "rms": 0.119564
     },
+    "19528da56d8d32e9": {
+      "id": "19528da56d8d32e9",
+      "text": "目も眩むような高さの崖を見上げた。",
+      "label": "目も眩むような高さの崖を見上げた。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-glare/example/live-2026-11-03-example-dizzying-height/0"
+      ],
+      "duration": 3.195,
+      "bytes": 26349,
+      "sha256": "994d68e08120a761318feeded5243966e5799da32320aefd8c92f16c30edde54",
+      "rms": 0.188608
+    },
     "197d2a66c3790b12": {
       "id": "197d2a66c3790b12",
       "text": "受付時刻が一部不明なので、( )確認できた記録だけを整理しておきましょう。",
@@ -9602,6 +9845,18 @@
       "bytes": 14829,
       "sha256": "63fdb405f2fae09261b13d8efabf84dd4f95eb7c8586eaa6393014027684d043",
       "rms": 0.184751
+    },
+    "1ab8360314cbff8f": {
+      "id": "1ab8360314cbff8f",
+      "text": "条件を書き分ける",
+      "label": "条件を書き分ける",
+      "references": [
+        "lesson/2026-11-03/vocabulary/2026-11-03-v-ca24ae99f426/collocation/1"
+      ],
+      "duration": 1.964,
+      "bytes": 16365,
+      "sha256": "d2ac92cbcc8703e380eee31b65dea7e602b7e029bc9901b732c5e6447f336d2c",
+      "rms": 0.134339
     },
     "1ab873da439bffde": {
       "id": "1ab873da439bffde",
@@ -10185,6 +10440,18 @@
       "sha256": "e4da64a69831a357c171bfd50947da183d4d741fece66aa032b7fd6b50ea5310",
       "rms": 0.113719
     },
+    "1c9dbc60e6394c04": {
+      "id": "1c9dbc60e6394c04",
+      "text": "発表の順番を待つ間、どきどきしていた。",
+      "label": "発表の順番を待つ間、どきどきしていた。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-thrill/example/live-2026-11-03-example-presentation-heartbeat/0"
+      ],
+      "duration": 3.497,
+      "bytes": 28653,
+      "sha256": "cadfb13a5a92ba882ceb62ae18ddf134284df1328214822d7810ef153d0d99bd",
+      "rms": 0.149175
+    },
     "1ca3599f1782d79b": {
       "id": "1ca3599f1782d79b",
       "text": "記事はAWSの発表を紹介したうえで、生成した画面をブラウザーで操作する実装を試しています。",
@@ -10377,6 +10644,18 @@
       "sha256": "d4532f353c00a8c47610472a1dcdc1fecac011c0cf518be0717773a49c2b2a60",
       "rms": 0.192946
     },
+    "1d621fe709bd91ab": {
+      "id": "1d621fe709bd91ab",
+      "text": "たのしむ",
+      "label": "楽しむ",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-pleasure/entry/live-2026-11-03-entry-enjoy"
+      ],
+      "duration": 1.175,
+      "bytes": 10029,
+      "sha256": "8acd59127f4c0d0f0bea690a6008f83391dc83fde442dea235422f498092f963",
+      "rms": 0.178312
+    },
     "1d6270cb388db8ff": {
       "id": "1d6270cb388db8ff",
       "text": "完全な因果関係が分かるまで、調査の優先順位も決めてはならない。",
@@ -10412,6 +10691,18 @@
       "bytes": 39597,
       "sha256": "a97f5b65ccb9ca77bf62339e582c628c44faa5d4a04a693f2aaa7683c59e8f66",
       "rms": 0.167098
+    },
+    "1d77924e94755ae2": {
+      "id": "1d77924e94755ae2",
+      "text": "めもくらむ",
+      "label": "目も眩む",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-glare/entry/live-2026-11-03-entry-eyes-dazzled"
+      ],
+      "duration": 1.395,
+      "bytes": 11949,
+      "sha256": "471534a293b707bd282cbd449acc7c346ef2735a008cfec66002c8d080ee1923",
+      "rms": 0.13066
     },
     "1d80d68894a3a64c": {
       "id": "1d80d68894a3a64c",
@@ -10895,6 +11186,18 @@
       "rms": 0.152975,
       "sha256": "289ffb66b28e9844f7571abc5991257d548b4a76ddb0e53c848d1a27a7985902"
     },
+    "1ed071ac28e71018": {
+      "id": "1ed071ac28e71018",
+      "text": "1 よろしくない 2 かんばしくない 3 あやしくない 4 さびしくない",
+      "label": "① よろしくない ② かんばしくない ③ あやしくない ④ さびしくない",
+      "references": [
+        "lesson/2026-11-03/review/0/detail/2"
+      ],
+      "duration": 4.346,
+      "bytes": 35565,
+      "sha256": "a8d892964917118f9d32219fd810b15bcebe5ba17c42b6867f66437a7102b47e",
+      "rms": 0.15297
+    },
     "1edcdccb720c4207": {
       "id": "1edcdccb720c4207",
       "text": "称賛の機会",
@@ -11051,6 +11354,18 @@
       "sha256": "21cfb7e403400d8d56f3d8e474b70e2657e127079cc1c24613a17c375b79cd30",
       "rms": 0.120087
     },
+    "1f2e3bf041dc4d4c": {
+      "id": "1f2e3bf041dc4d4c",
+      "text": "わざわざ来てくれて、ありがとう。",
+      "label": "わざわざ来てくれて、ありがとう。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-deliberate/example/live-2026-11-03-example-special-visit-thanks/0"
+      ],
+      "duration": 2.847,
+      "bytes": 23469,
+      "sha256": "01828bd746af2d8c887e73bab6e81a442193bdb973c2f3ac6b583aead733c744",
+      "rms": 0.097067
+    },
     "1f2f7bafbd14dafb": {
       "id": "1f2f7bafbd14dafb",
       "text": "重大なIncident",
@@ -11161,6 +11476,18 @@
       "sha256": "9bbdd28ae5dbf4e88b66e8ac4412a532ddb21a3415fce5550aeb8becb72a0098",
       "rms": 0.152226
     },
+    "1f793e85cfa425d1": {
+      "id": "1f793e85cfa425d1",
+      "text": "名札を付ける",
+      "label": "名札を付ける",
+      "references": [
+        "lesson/2026-11-03/vocabulary/2026-11-03-v-study-70e7559c/collocation/0"
+      ],
+      "duration": 1.593,
+      "bytes": 13485,
+      "sha256": "14fd429f60a5b2d5ae2741d07881bb54ce321214bd19146cf8f3b0b3faeccbbc",
+      "rms": 0.119325
+    },
     "1f7d10c9a78ab165": {
       "id": "1f7d10c9a78ab165",
       "text": "設定を書き換える",
@@ -11209,6 +11536,18 @@
       "bytes": 95661,
       "sha256": "cdad49e3121073055c15cbb67755235bb4cf397fe7aa9f7b4d267d4f925d5ed7",
       "rms": 0.121222
+    },
+    "1f92ece571b4bd61": {
+      "id": "1f92ece571b4bd61",
+      "text": "友達と話して、楽しい午後を過ごした。",
+      "label": "友達と話して、楽しい午後を過ごした。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-pleasure/example/live-2026-11-03-example-enjoyable-afternoon/0"
+      ],
+      "duration": 3.497,
+      "bytes": 28653,
+      "sha256": "20c0a8a7d6bec2b26b0663581ce12c8e0fa330f0b5e712083fa99e0a1dbb2c20",
+      "rms": 0.132278
     },
     "1f9367f66acb098a": {
       "id": "1f9367f66acb098a",
@@ -11468,6 +11807,18 @@
       "sha256": "1c5bf374bab1266b49958a9aac86f2c791e71c5bac85eb658383fbb5b16cb1e4",
       "rms": 0.130033
     },
+    "203b118756934813": {
+      "id": "203b118756934813",
+      "text": "画面を覆い隠す",
+      "label": "画面を覆い隠す",
+      "references": [
+        "lesson/2026-11-03/vocabulary/2026-11-03-v-c4d5e76fcbab/collocation/1"
+      ],
+      "duration": 1.686,
+      "bytes": 14253,
+      "sha256": "880b21f63b229843d12444338902aafe6e244454818eac0383464d75b41a4e4f",
+      "rms": 0.176259
+    },
     "20502fbab72e66fe": {
       "id": "20502fbab72e66fe",
       "text": "入力で誤りが生じた場合には、どの欄で何が起きたのか、どう直せばよいのかを、その場で分かる言葉で知らせる方法がある。",
@@ -11516,6 +11867,18 @@
       "bytes": 66285,
       "sha256": "b626396fcc748e1c9a47219088eb282d6668c7a5c01188b6d4ac139811e9c287",
       "rms": 0.133095
+    },
+    "207d097737c4ebab": {
+      "id": "207d097737c4ebab",
+      "text": "なげるとてもとにかえってくる",
+      "label": "投げると手元に帰ってくる",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-boomerang/entry/live-2026-11-03-entry-return-to-hand"
+      ],
+      "duration": 2.499,
+      "bytes": 20781,
+      "sha256": "f402c463ba1ca50a6e9c16980f38e54c441edf33db5252a2d793595c868198f5",
+      "rms": 0.177805
     },
     "208230210feb5045": {
       "id": "208230210feb5045",
@@ -11746,6 +12109,19 @@
       "sha256": "4206f6d3d7e9a153f9a4cfe4c94e81c4ba358865683f4cea7cef68fbae71e925",
       "rms": 0.146438
     },
+    "20de683b51d0ac8f": {
+      "id": "20de683b51d0ac8f",
+      "text": "所蔵機関へのリンクがあるからといって、あらゆる用途が許可されているとはいえない。",
+      "label": "所蔵機関へのリンクがあるからといって、あらゆる用途が許可されているとはいえない。",
+      "references": [
+        "lesson/2026-11-03/immersion/3/2",
+        "lesson/2026-11-03/reading/3/2"
+      ],
+      "duration": 5.738,
+      "bytes": 46701,
+      "sha256": "f8d2a6be654ab58ef7eaf6c35807140fdbf0beadf58d67ebff431ed1553a4157",
+      "rms": 0.145308
+    },
     "20e0cc9b6c3b9b7f": {
       "id": "20e0cc9b6c3b9b7f",
       "text": "もちろん記憶力そのものが不要になったという意味ではない。",
@@ -11856,6 +12232,18 @@
       "bytes": 15213,
       "sha256": "e51a4718c540ccf1a1a5500a5bd78adc8248f07d3950aa212a8333402195dd7b",
       "rms": 0.106469
+    },
+    "212415f787676b6b": {
+      "id": "212415f787676b6b",
+      "text": "資料の来歴が完全に分からない場合は、検索サービスを一切公開すべきではない。",
+      "label": "資料の来歴が完全に分からない場合は、検索サービスを一切公開すべきではない。",
+      "references": [
+        "lesson/2026-11-03/option/1/0"
+      ],
+      "duration": 6.283,
+      "bytes": 50925,
+      "sha256": "5510c19d751d6014429f3b3bb4dc5d81d1528c84785042583061cdb7d378e79c",
+      "rms": 0.147414
     },
     "213b76626016543e": {
       "id": "213b76626016543e",
@@ -12092,6 +12480,18 @@
       "bytes": 10413,
       "sha256": "f8a0924cc2571f5d0d3c4fbd24bea40a807c0135c8c656c2dbfa8de563ffb241",
       "rms": 0.132448
+    },
+    "21d32b1a83eeea4e": {
+      "id": "21d32b1a83eeea4e",
+      "text": "所蔵先へのリンクがあれば、資料をすべて自由に再利用できる。",
+      "label": "所蔵先へのリンクがあれば、資料をすべて自由に再利用できる。",
+      "references": [
+        "lesson/2026-11-03/option/3/0"
+      ],
+      "duration": 4.774,
+      "bytes": 38829,
+      "sha256": "87f73d1ea581a8635e2268d00525fbd3fa677ed2e4b12b0269fa7d35e1568b49",
+      "rms": 0.140937
     },
     "21e0ccaf4cb6fc8b": {
       "id": "21e0ccaf4cb6fc8b",
@@ -13726,6 +14126,18 @@
       "sha256": "b092d795bef14007b392da6f654a03796ead2a9f573f1eda32b466e7bfdc63b2",
       "rms": 0.15212
     },
+    "26b0f4c6e0edba6a": {
+      "id": "26b0f4c6e0edba6a",
+      "text": "ようしゃなく",
+      "label": "容赦なく",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-refusal/entry/live-2026-11-03-entry-without-mercy"
+      ],
+      "duration": 1.396,
+      "bytes": 11949,
+      "sha256": "2d929003e27193a034d1dc5c43bc0fe9e28c11225dbf62c80e55b654aa723ecd",
+      "rms": 0.123867
+    },
     "26b748a0b4222f7c": {
       "id": "26b748a0b4222f7c",
       "text": "したがき",
@@ -13812,6 +14224,18 @@
       "sha256": "cf44e5852261496850c2e1af8fd02fdc36dd6053d1de1758eba5943e7c75d1a0",
       "rms": 0.137169
     },
+    "271aea4600a3310a": {
+      "id": "271aea4600a3310a",
+      "text": "光の屈折",
+      "label": "光の屈折",
+      "references": [
+        "lesson/2026-11-03/vocabulary/2026-11-03-v-study-9b247b42/collocation/0"
+      ],
+      "duration": 1.523,
+      "bytes": 12909,
+      "sha256": "426ae72ba9d6869bb97448cd679e626f73d7ea7f48455d2c0ebdd2cecf64ac54",
+      "rms": 0.117906
+    },
     "27322e35916a81c1": {
       "id": "27322e35916a81c1",
       "text": "Queryの種類に応じてModelへの経路を切り替えます。",
@@ -13859,6 +14283,19 @@
       "bytes": 35949,
       "sha256": "1a29be4f13c184920bd772526d8b79da029cfa66343dbcec7832b3fcec2c0769",
       "rms": 0.156564
+    },
+    "273fe0dc9ed0eb48": {
+      "id": "273fe0dc9ed0eb48",
+      "text": "利用条件が資料ごとに異なるのであれば、画面にもその違いを分かりやすく示すべきだろう。",
+      "label": "利用条件が資料ごとに異なるのであれば、画面にもその違いを分かりやすく示すべきだろう。",
+      "references": [
+        "lesson/2026-11-03/immersion/3/3",
+        "lesson/2026-11-03/reading/3/3"
+      ],
+      "duration": 6.713,
+      "bytes": 54381,
+      "sha256": "7ba012531c13972137a4e424306e2b6f2ab3fc0fd3da18aee52b0d5148c4ecc9",
+      "rms": 0.176767
     },
     "274ca2e57479be39": {
       "id": "274ca2e57479be39",
@@ -14141,6 +14578,18 @@
       "bytes": 13677,
       "sha256": "c681f818dcf7e476ea096e97247059c421878abcdd47f14b0d3ace180c671124",
       "rms": 0.137088
+    },
+    "2819b8ab7d5d5407": {
+      "id": "2819b8ab7d5d5407",
+      "text": "原Q5知识点・改编|漢字の読み",
+      "label": "原Q5知识点・改编｜漢字の読み",
+      "references": [
+        "lesson/2026-11-03/review/0/title/0"
+      ],
+      "duration": 3.218,
+      "bytes": 26541,
+      "sha256": "2d6e9dfadbe29dac0e40a20f1f0bf4c32ba0aa0f3fdf2f4f7915403c50e38df3",
+      "rms": 0.130282
     },
     "281e5e7baf02803f": {
       "id": "281e5e7baf02803f",
@@ -14456,6 +14905,18 @@
       "bytes": 15597,
       "sha256": "0bb352ba77f68ed4602bf3a1f8ff921663daf288afccc8a13398834935b99095",
       "rms": 0.138243
+    },
+    "294f24ae26c8ee6a": {
+      "id": "294f24ae26c8ee6a",
+      "text": "まぶしい",
+      "label": "眩しい",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-glare/entry/live-2026-11-03-entry-dazzling"
+      ],
+      "duration": 1.152,
+      "bytes": 9837,
+      "sha256": "0bba726e926c0c9bc171fd08d84f0b37a34103f888c4db9a75c1fbd23fe38b31",
+      "rms": 0.182463
     },
     "29502ba15b38cfbd": {
       "id": "29502ba15b38cfbd",
@@ -15111,6 +15572,30 @@
       "sha256": "f751945353da9c3da075f377641f605cd1e9f3081bb566cc1fc27879c15fcd04",
       "rms": 0.128694
     },
+    "2b4fc40013703f3c": {
+      "id": "2b4fc40013703f3c",
+      "text": "自分の製品をひいきする",
+      "label": "自分の製品をひいきする",
+      "references": [
+        "lesson/2026-11-03/vocabulary/2026-11-03-v-ceee5f00f7a9/collocation/0"
+      ],
+      "duration": 2.21,
+      "bytes": 18477,
+      "sha256": "4bdfcf02e2e913bb367b8b82163d007d80ff403367c365d6ec5a8db82275a3f7",
+      "rms": 0.182529
+    },
+    "2b60461ae96d8316": {
+      "id": "2b60461ae96d8316",
+      "text": "塔のてっぺんに旗がある。",
+      "label": "塔のてっぺんに旗がある。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-position/example/live-2026-11-03-example-tower-top/0"
+      ],
+      "duration": 2.127,
+      "bytes": 17709,
+      "sha256": "4095e08a202607f69bb06fcff6b0fea130dfd249acb2d79fb839325d28211a5c",
+      "rms": 0.156502
+    },
     "2b63efbfdd56dc0b": {
       "id": "2b63efbfdd56dc0b",
       "text": "そのうち",
@@ -15497,6 +15982,30 @@
       "bytes": 14445,
       "sha256": "91cfa39d4fdd0ebd71b291b78020ec48a4771f6687220b0e5d462831c26207e9",
       "rms": 0.147715
+    },
+    "2c4de95fc6db999b": {
+      "id": "2c4de95fc6db999b",
+      "text": "教えてもらった方法を、さっそく試してみた。",
+      "label": "教えてもらった方法を、さっそく試してみた。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-result-time/example/live-2026-11-03-example-try-promptly/0"
+      ],
+      "duration": 3.416,
+      "bytes": 28077,
+      "sha256": "0c6f64d4f55c6e0cd9eb3793386bd18240083701325b15fd40cd46039937a221",
+      "rms": 0.150579
+    },
+    "2c5fcf2a3527ca0e": {
+      "id": "2c5fcf2a3527ca0e",
+      "text": "ことの発端は、小さな誤解だった。",
+      "label": "ことの発端は、小さな誤解だった。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-origin/example/live-2026-11-03-example-origin-small-misunderstanding/0"
+      ],
+      "duration": 3.16,
+      "bytes": 25965,
+      "sha256": "4e5d3e581d1f6d977a80e17dea62505a961661c6f37b159ba2d2e9b7771f959f",
+      "rms": 0.117208
     },
     "2c6a8ce2f59ed3e6": {
       "id": "2c6a8ce2f59ed3e6",
@@ -16101,6 +16610,18 @@
       "sha256": "1857b518318e99dc5d858665865f1671b74a2a2ad3ca19b42035631dcdd5f318",
       "rms": 0.152516
     },
+    "2e1f9ec6b228b632": {
+      "id": "2e1f9ec6b228b632",
+      "text": "料金の日割り",
+      "label": "料金の日割り",
+      "references": [
+        "lesson/2026-11-03/vocabulary/2026-11-03-v-18cb03547464/collocation/0"
+      ],
+      "duration": 1.628,
+      "bytes": 13677,
+      "sha256": "2971135992013cdf064391eb5f763f3b5c8bdc13171c35f79f1d6cbae1381fab",
+      "rms": 0.146009
+    },
     "2e2c7f8943ef75d5": {
       "id": "2e2c7f8943ef75d5",
       "text": "処理を切り出す",
@@ -16248,6 +16769,18 @@
       "bytes": 13293,
       "sha256": "b6134f780d000b79b915410eb3a14c713fd2bcd69174562842ed0eaef52b0eb6",
       "rms": 0.124852
+    },
+    "2ea053e90aa5f095": {
+      "id": "2ea053e90aa5f095",
+      "text": "きをせいふくする",
+      "label": "木を征服する",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-conquer-tree/entry/live-2026-11-03-entry-conquer-tree"
+      ],
+      "duration": 1.628,
+      "bytes": 13677,
+      "sha256": "9b76060d2b0e801e16628ac6eefe1f0444e4a0b9a3a4269ea535b2aa497c7a73",
+      "rms": 0.105604
     },
     "2ea1ed6631983df2": {
       "id": "2ea1ed6631983df2",
@@ -16416,6 +16949,19 @@
       "bytes": 16173,
       "sha256": "715de274263bd9ecf34dd24f25c002f6ea2908ac2996a0cb2169c6ca466cbcfe",
       "rms": 0.171111
+    },
+    "2f257432b80dde06": {
+      "id": "2f257432b80dde06",
+      "text": "ついに",
+      "label": "ついに",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-result-time/source/0",
+        "live/2026-11-03/live-2026-11-03-result-time/entry/live-2026-11-03-entry-finally"
+      ],
+      "duration": 0.989,
+      "bytes": 8685,
+      "sha256": "5878d10b24886be755a822c3366704a75a923c72d5076d2bd161c746e62ea31c",
+      "rms": 0.170037
     },
     "2f352e2a910abb96": {
       "id": "2f352e2a910abb96",
@@ -16949,6 +17495,18 @@
       "bytes": 53229,
       "sha256": "31b41ced91ff60fccb4a0e13a52b907d19969ba52e99774d6728558ff7645190",
       "rms": 0.13552
+    },
+    "31268e0d90679d79": {
+      "id": "31268e0d90679d79",
+      "text": "近所の人が異変に気づき、警察に通報した。",
+      "label": "近所の人が異変に気づき、警察に通報した。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-notify-call/example/live-2026-11-03-example-notify-police/0"
+      ],
+      "duration": 3.949,
+      "bytes": 32301,
+      "sha256": "4b0b3e3ef0473e733f5bedf44a39dc08e5a64bd73afb39fa73395e89b2d4b50d",
+      "rms": 0.148161
     },
     "312c5ff52f1458c1": {
       "id": "312c5ff52f1458c1",
@@ -17761,6 +18319,18 @@
       "rms": 0.144176,
       "sha256": "42e2ae2e812b768d7587e29c45adcfe4910d13e1b89c976e4531e993a6aee93d"
     },
+    "33b015fca5879730": {
+      "id": "33b015fca5879730",
+      "text": "窓からの眺めを楽しんだ。",
+      "label": "窓からの眺めを楽しんだ。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-pleasure/example/live-2026-11-03-example-enjoy-window-view/0"
+      ],
+      "duration": 2.428,
+      "bytes": 20205,
+      "sha256": "885bdf55cabe0e5ab9a0b2e3217263102a09f47a99cd9ce128dd13045c2ba085",
+      "rms": 0.124714
+    },
     "33de0f8f3e3c08e3": {
       "id": "33de0f8f3e3c08e3",
       "text": "取得に間に合う",
@@ -18507,6 +19077,18 @@
       "sha256": "081b9d6a6eaa7d2fd8a2b40d2f04257a6c486d3c45324ce460a8f1171e717cfc",
       "rms": 0.126548
     },
+    "366f2b94711c9b08": {
+      "id": "366f2b94711c9b08",
+      "text": "ラーメンがのびる",
+      "label": "ラーメンが伸びる",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-noodles/entry/live-2026-11-03-entry-noodles-soggy"
+      ],
+      "duration": 1.546,
+      "bytes": 13101,
+      "sha256": "826a8a7576c62838e96dac744d33c280a624459d490c09caa9a3e6f595b95785",
+      "rms": 0.153846
+    },
     "3670b7c3fda74c77": {
       "id": "3670b7c3fda74c77",
       "text": "複数のシステムを横断して処理を進める場合、ある一つの作業が成功しても、業務全体が安全に完了したとは限らない。",
@@ -18955,6 +19537,18 @@
       "bytes": 80877,
       "sha256": "5e01fbea575146b721e71a36fb75d31f28e3061dc2686f7b9181ac59cb745725",
       "rms": 0.11573
+    },
+    "37ddcbdd33f80ff1": {
+      "id": "37ddcbdd33f80ff1",
+      "text": "4 商品がなくても広告だけで生活できるから。",
+      "label": "④ 商品がなくても広告だけで生活できるから。",
+      "references": [
+        "lesson/2026-11-03/review/4/detail/6"
+      ],
+      "duration": 4.1,
+      "bytes": 33453,
+      "sha256": "ec6046322efcc0a82df858cdd79be08a64523c413144280a9dc304dd0003a725",
+      "rms": 0.127353
     },
     "37e96a6f9a3a328b": {
       "id": "37e96a6f9a3a328b",
@@ -19541,6 +20135,18 @@
       "sha256": "0bbce8f52b50ee7996a4cedb8ddf53e0ef30538a5f719347f646aa5c6ff1c284",
       "rms": 0.124323
     },
+    "39a0a66ed7ed1a12": {
+      "id": "39a0a66ed7ed1a12",
+      "text": "じぶんをコントロールする",
+      "label": "自分をコントロールする",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-anger-control/entry/live-2026-11-03-entry-control-oneself"
+      ],
+      "duration": 2.022,
+      "bytes": 16941,
+      "sha256": "0723ef9f29106e1e18458ad1dfce7a94257400735ec5262d767ea1c1e95a72a4",
+      "rms": 0.135622
+    },
     "39ad52693b0e5385": {
       "id": "39ad52693b0e5385",
       "text": "調査は骨が折れる",
@@ -19684,6 +20290,18 @@
       "bytes": 32685,
       "sha256": "c1b21f649226a113fa0a2c47b24c05c9d8d5d3f2b7fff6d3b3710ee4b5ac0610",
       "rms": 0.162059
+    },
+    "3a2ad02af10995fe": {
+      "id": "3a2ad02af10995fe",
+      "text": "うるう年の二月",
+      "label": "うるう年の二月",
+      "references": [
+        "lesson/2026-11-03/vocabulary/2026-11-03-v-study-57046571/collocation/0"
+      ],
+      "duration": 1.628,
+      "bytes": 13677,
+      "sha256": "07d1f8ccbe108b176b3f654b776d281a693da8ef3b547bf8d5fac3bf03b6772f",
+      "rms": 0.185936
     },
     "3a4109ec236804f8": {
       "id": "3a4109ec236804f8",
@@ -20422,6 +21040,18 @@
       "sha256": "d36f8dd88b1a76eef358348ec48773182fa24c1d8b571000d185f2a16cca5498",
       "rms": 0.126772
     },
+    "3c8870310494b8d5": {
+      "id": "3c8870310494b8d5",
+      "text": "食べかけのケーキを冷蔵庫に入れた。",
+      "label": "食べかけのケーキを冷蔵庫に入れた。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-half-eaten/example/live-2026-11-03-example-half-eaten-cake-fridge/0"
+      ],
+      "duration": 2.835,
+      "bytes": 23469,
+      "sha256": "483a6d116ed4e1fe1f9a356fe952af58ac1245afe62c0ff663f04075e897c994",
+      "rms": 0.146758
+    },
     "3c8e741d7c599751": {
       "id": "3c8e741d7c599751",
       "text": "敷設工事",
@@ -20716,6 +21346,19 @@
       "rms": 0.136437,
       "sha256": "aabf5dccb4b1d2fe1eb0d59aebad9cf7114f524627e462ed70fa20ad98534d66"
     },
+    "3d57aea99ddbacdd": {
+      "id": "3d57aea99ddbacdd",
+      "text": "異なる機関が付けた分類や表記を横断して検索できる仕組みは、資料を発見する手掛かりとなるものの、表記の違いまで自動的に解決されるわけではない。",
+      "label": "異なる機関が付けた分類や表記を横断して検索できる仕組みは、資料を発見する手掛かりとなるものの、表記の違いまで自動的に解決されるわけではない。",
+      "references": [
+        "lesson/2026-11-03/immersion/1/2",
+        "lesson/2026-11-03/reading/1/2"
+      ],
+      "duration": 11.577,
+      "bytes": 93357,
+      "sha256": "3f6d47ce43a7aff3ca49ccf09159669ec3ea9ae696cd912d1b5bbbc803f32809",
+      "rms": 0.14014
+    },
     "3d5c4c96424f6042": {
       "id": "3d5c4c96424f6042",
       "text": "自動的に生成する",
@@ -20813,6 +21456,18 @@
       "bytes": 83181,
       "sha256": "cf5809cf85a1ff05bb796850a61ee0e90dbfa0296e39f9258d09b3834076b5f4",
       "rms": 0.152425
+    },
+    "3d95865b45c872ff": {
+      "id": "3d95865b45c872ff",
+      "text": "保守を受け持つ",
+      "label": "保守を受け持つ",
+      "references": [
+        "lesson/2026-11-03/vocabulary/2026-11-03-v-0a45e5d7a489/collocation/1"
+      ],
+      "duration": 1.535,
+      "bytes": 12909,
+      "sha256": "2be89bc22215fe682378f4bb4b07379d354eeba6f4434f14b1130b0f9903aaa2",
+      "rms": 0.114289
     },
     "3d9a8067f6b3cfcb": {
       "id": "3d9a8067f6b3cfcb",
@@ -21053,6 +21708,19 @@
       "bytes": 15597,
       "sha256": "ff575b58bcf6217f0c92dd1ff213f315d076341fd3cd5f40b2ba449a53ef7e43",
       "rms": 0.128641
+    },
+    "3e525f581fd35154": {
+      "id": "3e525f581fd35154",
+      "text": "文化を伝えるとは、単に画像を増やすことではなく、過去と現在を結ぶ判断の手掛かりを残すことなのである。",
+      "label": "文化を伝えるとは、単に画像を増やすことではなく、過去と現在を結ぶ判断の手掛かりを残すことなのである。",
+      "references": [
+        "lesson/2026-11-03/immersion/5/2",
+        "lesson/2026-11-03/reading/5/2"
+      ],
+      "duration": 8.394,
+      "bytes": 67821,
+      "sha256": "bef234351ad6db2e5829c6381263f9b2cd45046f0ac8a0d1a7bfba4b30f4edcc",
+      "rms": 0.132976
     },
     "3e5fcf2ac5882356": {
       "id": "3e5fcf2ac5882356",
@@ -21423,6 +22091,18 @@
       "sha256": "c6f1c03c4ca871fce1400590e53496df692ddd219c8ce7b846d1f3d240b6ca29",
       "rms": 0.171106
     },
+    "3f540fd37de39cef": {
+      "id": "3f540fd37de39cef",
+      "text": "ははのつくったりょうり",
+      "label": "母の作った料理",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-noun-modifiers/entry/live-2026-11-03-entry-mother-cooking"
+      ],
+      "duration": 1.872,
+      "bytes": 15597,
+      "sha256": "303d7d8d8a6745c122ca2e4965598b4c0017d1ed618a509308b5ecc1781aafd4",
+      "rms": 0.167341
+    },
     "3f575a26ee0e6f92": {
       "id": "3f575a26ee0e6f92",
       "text": "ながす",
@@ -21593,6 +22273,18 @@
       "bytes": 15405,
       "sha256": "f53d23b169b7d5030c426e27692c437f1fae908b0cf7a19aaf0b5b68da0c0b14",
       "rms": 0.160312
+    },
+    "3fc572042c333100": {
+      "id": "3fc572042c333100",
+      "text": "置き場を決める",
+      "label": "置き場を決める",
+      "references": [
+        "lesson/2026-11-03/vocabulary/2026-11-03-v-5063105fd940/collocation/1"
+      ],
+      "duration": 1.535,
+      "bytes": 12909,
+      "sha256": "a777e100a652993aefdfbee4cfb1c8c829cb41a7eefa35547c2273a707808b69",
+      "rms": 0.128321
     },
     "3fcbf0a4407a14c8": {
       "id": "3fcbf0a4407a14c8",
@@ -22742,6 +23434,18 @@
       "sha256": "9ab304d1e187c0183671da0875efaadadeb7d65dbfe3d3f7d5e005c728310353",
       "rms": 0.128053
     },
+    "426c87cc046f7718": {
+      "id": "426c87cc046f7718",
+      "text": "資料の置き場",
+      "label": "資料の置き場",
+      "references": [
+        "lesson/2026-11-03/vocabulary/2026-11-03-v-5063105fd940/collocation/0"
+      ],
+      "duration": 1.558,
+      "bytes": 13101,
+      "sha256": "0e2df32533c4453832d1d2d298cfb6a909732519fa076b5a1a3aa70ff941391c",
+      "rms": 0.148305
+    },
     "426dd6a54aacc309": {
       "id": "426dd6a54aacc309",
       "text": "出典:ITmedia AI+",
@@ -22875,6 +23579,18 @@
       "sha256": "ff7af8a86142fc16975acb6061fb426730f0e089d0d0980b5b93f92c0940b5f8",
       "rms": 0.149107
     },
+    "432c5025f6f6fb21": {
+      "id": "432c5025f6f6fb21",
+      "text": "名札を見る",
+      "label": "名札を見る",
+      "references": [
+        "lesson/2026-11-03/vocabulary/2026-11-03-v-study-70e7559c/collocation/1"
+      ],
+      "duration": 1.407,
+      "bytes": 11949,
+      "sha256": "f2e53453dbe7cee7133a8f3e609fa3b64f3ce63fa76a6f01b5557caf25402aa0",
+      "rms": 0.144947
+    },
     "4330e876ebc74532": {
       "id": "4330e876ebc74532",
       "text": "人格を尊重する",
@@ -22984,6 +23700,18 @@
       "bytes": 69549,
       "sha256": "440f3abbc4f39600a15b3d8d9f487b57997e21e4bcd26595273492cb14b070b9",
       "rms": 0.118729
+    },
+    "437f6560f20600d4": {
+      "id": "437f6560f20600d4",
+      "text": "大げさな身振りが、少しわざとらしく見えた。",
+      "label": "大げさな身振りが、少しわざとらしく見えた。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-deliberate/example/live-2026-11-03-example-affected-gesture-impression/0"
+      ],
+      "duration": 3.752,
+      "bytes": 30765,
+      "sha256": "07178c9d06812404973ef27ff9d68323aa9ba31649e377e7375cceca93250b9f",
+      "rms": 0.151033
     },
     "43804eff33ba1eb3": {
       "id": "43804eff33ba1eb3",
@@ -23288,6 +24016,18 @@
       "bytes": 15597,
       "sha256": "e317b00654735fe719b48e3c613efc10648af63fc662d3b6a5b9c5a6ec75a514",
       "rms": 0.175626
+    },
+    "4466e3fbfe032f8f": {
+      "id": "4466e3fbfe032f8f",
+      "text": "しんぞうまひ",
+      "label": "心臓麻痺",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-body-words/entry/live-2026-11-03-entry-cardiac-paralysis"
+      ],
+      "duration": 1.442,
+      "bytes": 12333,
+      "sha256": "5a75c9318876781bfc9c5b7937d1a697fc7003ff7fd36b64fa0368af9aab91b3",
+      "rms": 0.177747
     },
     "4469cf6fa8839ce3": {
       "id": "4469cf6fa8839ce3",
@@ -23855,6 +24595,18 @@
       "sha256": "30b8bed14b8510e5bdf48b5382a60c01b284010239175659485a900c4aa91a99",
       "rms": 0.148773
     },
+    "45ad64714482a49d": {
+      "id": "45ad64714482a49d",
+      "text": "鏡に映った自分の顔を見た。",
+      "label": "鏡に映った自分の顔を見た。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-reflect/example/live-2026-11-03-example-face-mirror/0"
+      ],
+      "duration": 2.719,
+      "bytes": 22509,
+      "sha256": "e033ef68b9df7e1d5bbbd8d5acb059379f031f3a3f7feee7b78ce5d9c291ffa4",
+      "rms": 0.182575
+    },
     "45ae6ae2d0f21ece": {
       "id": "45ae6ae2d0f21ece",
       "text": "チームを率いる",
@@ -24014,6 +24766,18 @@
       "sha256": "54106b3344c20a4162e0eca89ecd34e45166fec4f3ccd0351b09415bfa410ecd",
       "rms": 0.129113
     },
+    "4639eeba5bfa7fb6": {
+      "id": "4639eeba5bfa7fb6",
+      "text": "図書館で、まだ読んだことのない漫画を見つけた。",
+      "label": "図書館で、まだ読んだことのない漫画を見つけた。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-noun-modifiers/example/live-2026-11-03-example-unread-comic-find/0"
+      ],
+      "duration": 3.794,
+      "bytes": 31149,
+      "sha256": "0004e950152f9c3114d7357459e802b3b4b5aa7e6c7197715e7aeea662744323",
+      "rms": 0.126883
+    },
     "463e761afc0b412e": {
       "id": "463e761afc0b412e",
       "text": "ておく",
@@ -24038,6 +24802,18 @@
       "bytes": 54765,
       "sha256": "0591d53b59f8108ec1c88e5a2fb4aaaa73efff662dce0d0a0d3efbbd44532a27",
       "rms": 0.133306
+    },
+    "46477d7c840c62b8": {
+      "id": "46477d7c840c62b8",
+      "text": "てがしびれる",
+      "label": "手がしびれる",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-body-words/entry/live-2026-11-03-entry-hand-numb"
+      ],
+      "duration": 1.431,
+      "bytes": 12141,
+      "sha256": "09a590198c7cce189327227dcf71743da08d67789fc659e746f4260a3f47ac06",
+      "rms": 0.155875
     },
     "4651f4942e52f628": {
       "id": "4651f4942e52f628",
@@ -25541,6 +26317,18 @@
       "sha256": "075781c2d5c2416d95513dddb6e07b4365df8ad6c20ad250d53de7f73764a190",
       "rms": 0.133409
     },
+    "4a1d7d10868af164": {
+      "id": "4a1d7d10868af164",
+      "text": "ことのほったん",
+      "label": "ことの発端",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-origin/entry/live-2026-11-03-entry-origin-of-affair"
+      ],
+      "duration": 1.373,
+      "bytes": 11757,
+      "sha256": "f80da17bd080a5e32b9025a89f4c3d63a39be6f15321c813f7cbe4e34e663833",
+      "rms": 0.135817
+    },
     "4a212d0378516af7": {
       "id": "4a212d0378516af7",
       "text": "切れ目がずれる",
@@ -25795,6 +26583,19 @@
       "bytes": 14637,
       "sha256": "74fb69aed8c603b02fe805fdb4675d79dfb08e2adc12af4a9046e28e2cea8657",
       "rms": 0.138193
+    },
+    "4b00fecd25973d79": {
+      "id": "4b00fecd25973d79",
+      "text": "ぐずぐず",
+      "label": "ぐずぐず",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-manner-words/source/1",
+        "live/2026-11-03/live-2026-11-03-manner-words/entry/live-2026-11-03-entry-guzu-guzu"
+      ],
+      "duration": 1.28,
+      "bytes": 10989,
+      "sha256": "226fe081b1ef2a2f695be0c98bb4c81edf4caf0f06d10c6a8eb784cddd0a6065",
+      "rms": 0.137972
     },
     "4b06727f6249192b": {
       "id": "4b06727f6249192b",
@@ -26405,6 +27206,18 @@
       "sha256": "a41651fdfa3c755adcc8245dfdcb4911992b378f802eddb5abde24d65ff1eca3",
       "rms": 0.132164
     },
+    "4d203a08c8b2a22c": {
+      "id": "4d203a08c8b2a22c",
+      "text": "部屋には誰もいない。",
+      "label": "部屋には誰もいない。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-absence/example/live-2026-11-03-example-nobody-in-room/0"
+      ],
+      "duration": 1.79,
+      "bytes": 15021,
+      "sha256": "8c810fcbb239b96d4d8a3f256c6be19586526ac27ce9fe33686000f3d8ba2a02",
+      "rms": 0.150037
+    },
     "4d28f7cdba1fb541": {
       "id": "4d28f7cdba1fb541",
       "text": "高い熱量",
@@ -26491,6 +27304,18 @@
       "sha256": "f43e0838a83ee83eb4e8eb6978e73c26795ac285891efda9938456188a5b83c6",
       "rms": 0.152398
     },
+    "4d6eed263bb6153a": {
+      "id": "4d6eed263bb6153a",
+      "text": "その偉業は、歴史に残る出来事として語り継がれている。",
+      "label": "その偉業は、歴史に残る出来事として語り継がれている。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-achievement/example/live-2026-11-03-example-achievement-record/0"
+      ],
+      "duration": 4.658,
+      "bytes": 38061,
+      "sha256": "61ae4c9f6160071efdc3cc5e9a226f5c45d2b8b6b386dec59c8614bcb1929a15",
+      "rms": 0.116607
+    },
     "4d72935302bde8bf": {
       "id": "4d72935302bde8bf",
       "text": "みんなに見せる",
@@ -26552,6 +27377,18 @@
       "bytes": 15789,
       "sha256": "839c8133d1d64c267cd53d103b3f6470e03b2307e2117273dafbb03a89abd284",
       "rms": 0.142416
+    },
+    "4da34bd6671932f2": {
+      "id": "4da34bd6671932f2",
+      "text": "長い間同じ姿勢でいたら、手がしびれた。",
+      "label": "長い間同じ姿勢でいたら、手がしびれた。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-body-words/example/live-2026-11-03-example-numb-hand-sentence/0"
+      ],
+      "duration": 3.532,
+      "bytes": 29037,
+      "sha256": "176d6c74b084ce8b76954a55c0a847999509be83e14c92e044092c51ed14d999",
+      "rms": 0.161107
     },
     "4da4657e10abe542": {
       "id": "4da4657e10abe542",
@@ -26712,6 +27549,18 @@
       "bytes": 68013,
       "sha256": "aa27fe6e5c999e8714c53e9d19032f1ebf5f844747514f973e8a300b6429182e",
       "rms": 0.1341
+    },
+    "4de0ee2c9238c288": {
+      "id": "4de0ee2c9238c288",
+      "text": "ただし処理別の測定はなく、方式だけが遅延の原因だとは断定できません。",
+      "label": "ただし処理別の測定はなく、方式だけが遅延の原因だとは断定できません。",
+      "references": [
+        "lesson/2026-11-03/vocabulary/2026-11-03-v-study-73083d1e/evidence/0"
+      ],
+      "duration": 5.923,
+      "bytes": 48045,
+      "sha256": "28d7d9c2e136c7d6404eaa1ea4e5f48ff6b80c0f8fcfab7817c19ed4b9bbc8be",
+      "rms": 0.12088
     },
     "4deba3347db3dc30": {
       "id": "4deba3347db3dc30",
@@ -27347,6 +28196,19 @@
       "sha256": "e012ef73b2f66a331820e47eb2628190d42082e4f1645031e0dd74a75cf57e1c",
       "rms": 0.164754
     },
+    "4f4418ec4f0033a8": {
+      "id": "4f4418ec4f0033a8",
+      "text": "最初に概要を示し、詳細画面で根拠と制限を確かめられる構造なら、発見のしやすさと解釈の正確さとの折り合いをつけられるだろう。",
+      "label": "最初に概要を示し、詳細画面で根拠と制限を確かめられる構造なら、発見のしやすさと解釈の正確さとの折り合いをつけられるだろう。",
+      "references": [
+        "lesson/2026-11-03/immersion/4/2",
+        "lesson/2026-11-03/reading/4/2"
+      ],
+      "duration": 10.521,
+      "bytes": 84909,
+      "sha256": "bda1c6027680d78f01674b92290acfdaa68e2b882439bd2cbaf8dc79ac596872",
+      "rms": 0.13759
+    },
     "4f4f31782e6ba584": {
       "id": "4f4f31782e6ba584",
       "text": "言葉を交わす",
@@ -27505,6 +28367,19 @@
       "sha256": "614a7c736f6093c520aa3c32a05999899edbacba8a89f8a5018b21e7e0be7707",
       "rms": 0.10674
     },
+    "4f7d4eae2ecfa11a": {
+      "id": "4f7d4eae2ecfa11a",
+      "text": "カッとなる",
+      "label": "カッとなる",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-anger-control/source/1",
+        "live/2026-11-03/live-2026-11-03-anger-control/entry/live-2026-11-03-entry-flare-up"
+      ],
+      "duration": 1.256,
+      "bytes": 10797,
+      "sha256": "0ddff824f08df5cdbd00d7d53d4e100eeef98c4b2bcf68cc3ee430d534963c98",
+      "rms": 0.103732
+    },
     "4f8186906abcb084": {
       "id": "4f8186906abcb084",
       "text": "作業の手順を何度もやり直すことになり、担当者は( )していたが、原因が分かると落ち着いた。",
@@ -27615,6 +28490,18 @@
       "bytes": 40173,
       "sha256": "4f2e876393f8bfe214eedf202e16a870435f361e304bbaa2f487e76ab3e9006e",
       "rms": 0.148893
+    },
+    "4fbeb960c8d680ac": {
+      "id": "4fbeb960c8d680ac",
+      "text": "歴史に残る出来事",
+      "label": "歴史に残る出来事",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-achievement/source/0"
+      ],
+      "duration": 2.178,
+      "bytes": 18093,
+      "sha256": "5cb0163cd4406fc37f7b4b21495eeba250d5928d9d812bfd518c886e82167d5f",
+      "rms": 0.134948
     },
     "4fca474331f1078f": {
       "id": "4fca474331f1078f",
@@ -29083,6 +29970,19 @@
       "sha256": "e8adb01e9bec2f3073712e87ca772584b264dbbe4fbba8379db65f667babdcb9",
       "rms": 0.113598
     },
+    "53b7065d41734fa1": {
+      "id": "53b7065d41734fa1",
+      "text": "しかし、画像が画面に表示されたというだけで、その資料の意味まで正しく伝わったとは限らない。",
+      "label": "しかし、画像が画面に表示されたというだけで、その資料の意味まで正しく伝わったとは限らない。",
+      "references": [
+        "lesson/2026-11-03/immersion/0/3",
+        "lesson/2026-11-03/reading/0/3"
+      ],
+      "duration": 7.287,
+      "bytes": 58989,
+      "sha256": "7a61ab520f86c704e5298ec0779f4f6ddaf918ccac82c1fc10dfedbe7ab5db9d",
+      "rms": 0.147237
+    },
     "53cc2fde2c6b4e02": {
       "id": "53cc2fde2c6b4e02",
       "text": "大切なのは、人間がすべての計算を手作業でやり直すことではなく、提案・実行・評価の責任を区別することである。",
@@ -29204,6 +30104,18 @@
       "bytes": 13101,
       "sha256": "eca40ab2e5b78d57b1c019568703e89d0e3841de056ff7281d08886c1c9e8420",
       "rms": 0.158059
+    },
+    "542b28ce7ede8572": {
+      "id": "542b28ce7ede8572",
+      "text": "背景の屈折",
+      "label": "背景の屈折",
+      "references": [
+        "lesson/2026-11-03/vocabulary/2026-11-03-v-study-9b247b42/collocation/1"
+      ],
+      "duration": 1.628,
+      "bytes": 13677,
+      "sha256": "8f0ea1c044295fd22457a5ce2b46bc5063ee0ed1e908df573175acb6e12ebf79",
+      "rms": 0.106665
     },
     "542e5f05954885e9": {
       "id": "542e5f05954885e9",
@@ -29390,6 +30302,18 @@
       "bytes": 29613,
       "sha256": "21d73a3be56a790b9a339915bbeb5259231f97af5d63d05cfa497c2503d34174",
       "rms": 0.152094
+    },
+    "548e03a07c25765c": {
+      "id": "548e03a07c25765c",
+      "text": "れきしにのこるできごと",
+      "label": "歴史に残る出来事",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-achievement/entry/live-2026-11-03-entry-historic-event"
+      ],
+      "duration": 2.22,
+      "bytes": 18477,
+      "sha256": "eb1b9f8422dda1311faf99db5e5b05e89116a5598e2c39651dcb8e7c480dea5a",
+      "rms": 0.167193
     },
     "5491f4f783faef93": {
       "id": "5491f4f783faef93",
@@ -29846,6 +30770,18 @@
       "sha256": "4e7da10331c1ed91b2ba48c8f27569b87eaace25ffcea21211f793da707b6f6e",
       "rms": 0.153111
     },
+    "55cbf43231460406": {
+      "id": "55cbf43231460406",
+      "text": "展示資料の背景に関する説明には、長年その地域を研究してきた学芸員( )視点が生かされている。",
+      "label": "展示資料の背景に関する説明には、長年その地域を研究してきた学芸員（　）視点が生かされている。",
+      "references": [
+        "lesson/2026-11-03/review/3/detail/0"
+      ],
+      "duration": 7.7,
+      "bytes": 62253,
+      "sha256": "97cf4be849e010530dbd75bbf5472c3d78deac7a082d7ca2365f40f5c85163f0",
+      "rms": 0.155209
+    },
     "55cfac72d320c276": {
       "id": "55cfac72d320c276",
       "text": "従来の方式でも、今回の条件で問題がないか確かめます。",
@@ -30296,6 +31232,18 @@
       "sha256": "781e7340a2baa2a3c60e588b9b2c97c5391df22aff5218689f131f8386a313bb",
       "rms": 0.132402
     },
+    "57435bd125fa62ad": {
+      "id": "57435bd125fa62ad",
+      "text": "原Q38知识点・改编|「ならでは」の用法",
+      "label": "原Q38知识点・改编｜「ならでは」の用法",
+      "references": [
+        "lesson/2026-11-03/review/3/title/0"
+      ],
+      "duration": 4.031,
+      "bytes": 32877,
+      "sha256": "1049ae29303f49973248eeddbad96f8185dd67e8917e7c1469eb3910d448f2f4",
+      "rms": 0.136602
+    },
     "5744703bda81e63f": {
       "id": "5744703bda81e63f",
       "text": "そこで会社は、導入を中止するのではなく、対象業務を限定して効果・コスト・安全性を測定し、他のモデルへ切り替えられる構成も準備してから利用範囲を広げることにした。",
@@ -30605,6 +31553,19 @@
       "sha256": "3a8931cec20252d5cf6a4b057e21002aa5e69ced69fed44e1b18382b7107dc06",
       "rms": 0.156587
     },
+    "583094d5acfd2fe9": {
+      "id": "583094d5acfd2fe9",
+      "text": "確かに、資料の存在を知らなかった人が検索を通じて発見できるようになることには意義がある。",
+      "label": "確かに、資料の存在を知らなかった人が検索を通じて発見できるようになることには意義がある。",
+      "references": [
+        "lesson/2026-11-03/immersion/0/2",
+        "lesson/2026-11-03/reading/0/2"
+      ],
+      "duration": 7.444,
+      "bytes": 60333,
+      "sha256": "6e6b042b80ab4129fb1d70ac85e1a7c206b049e3d187772cbcdf620e0495cc83",
+      "rms": 0.155929
+    },
     "584618fb3998bd67": {
       "id": "584618fb3998bd67",
       "text": "なければならない",
@@ -30677,6 +31638,18 @@
       "bytes": 11373,
       "sha256": "a86a299ff6b4ca8404351e914979636811e449b445746286d951bdd48f3cf17a",
       "rms": 0.180551
+    },
+    "5865d4cf55833e0b": {
+      "id": "5865d4cf55833e0b",
+      "text": "けいさつをよぶ",
+      "label": "警察を呼ぶ",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-notify-call/entry/live-2026-11-03-entry-call-police"
+      ],
+      "duration": 1.512,
+      "bytes": 12717,
+      "sha256": "8d6e9039190ec897e426e65e03c77635c3bc3591ed9776fe71802f81096f3f5b",
+      "rms": 0.150764
     },
     "586f7024efe8ed18": {
       "id": "586f7024efe8ed18",
@@ -30895,6 +31868,18 @@
       "sha256": "5bfe74b9eb9a66e791cb40bb3a329bd2526f3a9ba96a8d5286fac5253a9ccf31",
       "rms": 0.150647
     },
+    "5902325e86e96b7a": {
+      "id": "5902325e86e96b7a",
+      "text": "タイミングをみはからう",
+      "label": "タイミングを見計らう",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-timing/entry/live-2026-11-03-entry-choose-timing"
+      ],
+      "duration": 1.871,
+      "bytes": 15597,
+      "sha256": "a9b77915e1cef49718bf05bb01f74743dfc8387b738ffe9237ffb6817c98395f",
+      "rms": 0.205129
+    },
     "590c457fd07e2beb": {
       "id": "590c457fd07e2beb",
       "text": "衛星にTPUを搭載し、軌道上で動作を確認します。",
@@ -31003,6 +31988,18 @@
       "sha256": "68b3b78a6087d3e223183979ee1dc1083c195c9d0a84c3c1c884f77aff494395",
       "rms": 0.135736
     },
+    "5960eb5bb094eb17": {
+      "id": "5960eb5bb094eb17",
+      "text": "たのしい",
+      "label": "楽しい",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-pleasure/entry/live-2026-11-03-entry-enjoyable"
+      ],
+      "duration": 1.082,
+      "bytes": 9453,
+      "sha256": "20734af29168089f70d1543a3b59fbd3e8bc430d96d7ea2439cb760d087f1cb7",
+      "rms": 0.164191
+    },
     "5965944ab995f0fe": {
       "id": "5965944ab995f0fe",
       "text": "複数の環境を使いこなす",
@@ -31038,6 +32035,18 @@
       "bytes": 14637,
       "sha256": "d381ca0a6b0535df949bb150cf8eab7a5e3647677e1a5198522ff7b933489342",
       "rms": 0.160906
+    },
+    "5986588f1db7ed23": {
+      "id": "5986588f1db7ed23",
+      "text": "変なことに使うな",
+      "label": "変なことに使うな",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-negative-command/source/0"
+      ],
+      "duration": 1.86,
+      "bytes": 15597,
+      "sha256": "e529f2efec7adbc7c6ebc5c174f02949497a07475c9fc18dc67705c18b692aba",
+      "rms": 0.14752
     },
     "599873ea961d9986": {
       "id": "599873ea961d9986",
@@ -31575,6 +32584,18 @@
       "sha256": "08078a5c015e7924f56405fe4afbb42d0f31276cc854f69287624456648f87d3",
       "rms": 0.119294
     },
+    "5b489e73c16e38e7": {
+      "id": "5b489e73c16e38e7",
+      "text": "いつの間にか雨がやんでいた。",
+      "label": "いつの間にか雨がやんでいた。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-unnoticed/example/live-2026-11-03-example-unnoticed-rain-stop/0"
+      ],
+      "duration": 2.278,
+      "bytes": 18861,
+      "sha256": "94099511458911d47d6d4830b6d3601e2755fd8ff0002679013b6b7457a61873",
+      "rms": 0.180324
+    },
     "5b52a6c827f23414": {
       "id": "5b52a6c827f23414",
       "text": "Dataの偏り",
@@ -31815,6 +32836,19 @@
       "bytes": 17133,
       "sha256": "1e43c0a29d337cb6d24481a8e661ffac06fd161b20ce76d8656a3d4ef8a3cfe3",
       "rms": 0.146059
+    },
+    "5bc7537d24747909": {
+      "id": "5bc7537d24747909",
+      "text": "はらはら",
+      "label": "はらはら",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-thrill/source/3",
+        "live/2026-11-03/live-2026-11-03-thrill/entry/live-2026-11-03-entry-harahara"
+      ],
+      "duration": 1.233,
+      "bytes": 10605,
+      "sha256": "4b28e5ac6379e366a885f757530c469516e011d9557ba3a0a59eb5f9be012103",
+      "rms": 0.161268
     },
     "5bdbc4db0019ce8f": {
       "id": "5bdbc4db0019ce8f",
@@ -32722,6 +33756,19 @@
       "sha256": "c5062909c5cf92753346ba7c5b3bec23a291a49a47dbd5cd338a4599e1cdcbd1",
       "rms": 0.132624
     },
+    "5dc4b863c694b737": {
+      "id": "5dc4b863c694b737",
+      "text": "タイムスリップ",
+      "label": "タイムスリップ",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-fantasy/source/1",
+        "live/2026-11-03/live-2026-11-03-fantasy/entry/live-2026-11-03-entry-time-slip"
+      ],
+      "duration": 1.49,
+      "bytes": 12717,
+      "sha256": "422dbebc0765b65a7b046fb136ca45589b676926bcf90c9df38ec20616b5e4f1",
+      "rms": 0.180566
+    },
     "5dc725ddfe2452b1": {
       "id": "5dc725ddfe2452b1",
       "text": "题4|原Q31知识点・改编|文法「に越したことはない」",
@@ -33157,6 +34204,18 @@
       "sha256": "3e8bfb5d9cd2ba55d965644d77ad87f96498761c3ccbc4f446eac3d73b81696d",
       "rms": 0.13019
     },
+    "5f46695f282abf63": {
+      "id": "5f46695f282abf63",
+      "text": "かがみにうつる",
+      "label": "鏡に映る",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-reflect/entry/live-2026-11-03-entry-reflected-in-mirror"
+      ],
+      "duration": 1.581,
+      "bytes": 13293,
+      "sha256": "3636507c11416d1d3a7761edd5c88e29ce55126e3fa9ee3dc1a784364d7087a2",
+      "rms": 0.181373
+    },
     "5f50bf3419420c68": {
       "id": "5f50bf3419420c68",
       "text": "途中まで読む",
@@ -33192,6 +34251,19 @@
       "bytes": 8301,
       "sha256": "280aeba43e83b87f409428f8927140a1315a871357c9cd554203c6ebcc46b6ad",
       "rms": 0.090562
+    },
+    "5f6318157c4d6529": {
+      "id": "5f6318157c4d6529",
+      "text": "資料がどこにあり、何が分かっていて、どのような条件で利用できるのかを人が確かめられてこそ、公開された情報は学習や研究に役立つものとなる。",
+      "label": "資料がどこにあり、何が分かっていて、どのような条件で利用できるのかを人が確かめられてこそ、公開された情報は学習や研究に役立つものとなる。",
+      "references": [
+        "lesson/2026-11-03/immersion/5/1",
+        "lesson/2026-11-03/reading/5/1"
+      ],
+      "duration": 11.404,
+      "bytes": 92013,
+      "sha256": "a9d62325ebe2f4e7aeee490ceb1d21a4a2669286d766e4b6b9e1cd74a1d75fcc",
+      "rms": 0.117333
     },
     "5f66f26b08e6a81f": {
       "id": "5f66f26b08e6a81f",
@@ -33240,6 +34312,18 @@
       "bytes": 15597,
       "sha256": "8dee1284de5863f1644d3e54b019df4844c515beb3a160c0e9791bbf081b644c",
       "rms": 0.167718
+    },
+    "5f7a34953f99cee1": {
+      "id": "5f7a34953f99cee1",
+      "text": "呼びに来る",
+      "label": "呼びに来る",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-call-purpose/source/0"
+      ],
+      "duration": 1.373,
+      "bytes": 11757,
+      "sha256": "39ac0ebcebd484f6103a2991def6517f76b8abb1d30565ef121495607b75c302",
+      "rms": 0.209158
     },
     "5f7b5c7e64982dfa": {
       "id": "5f7b5c7e64982dfa",
@@ -33629,6 +34713,18 @@
       "bytes": 34605,
       "sha256": "a955000d86f3e48f5912c1a21976cfde73eb77448ddab0abc5d441d589bba666",
       "rms": 0.126233
+    },
+    "60d1f68766422b63": {
+      "id": "60d1f68766422b63",
+      "text": "勇気を褒め称える",
+      "label": "勇気を褒め称える",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-achievement/source/2"
+      ],
+      "duration": 1.826,
+      "bytes": 15405,
+      "sha256": "5b1989ddb08c7c536321760f569279add2053cfc41d121da98fb3f56b6a53780",
+      "rms": 0.146075
     },
     "60de532432052a40": {
       "id": "60de532432052a40",
@@ -34205,6 +35301,18 @@
       "sha256": "723c7ea6f0af84a7bbc5e9bc904412fcbf8e54b7f536437e523aaa7783b61664",
       "rms": 0.154809
     },
+    "6260f9868214fcea": {
+      "id": "6260f9868214fcea",
+      "text": "たのしみ",
+      "label": "楽しみ",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-pleasure/entry/live-2026-11-03-entry-pleasure-anticipation"
+      ],
+      "duration": 1.21,
+      "bytes": 10413,
+      "sha256": "13e22e4f9903ce83ae5dfe2d64fdb88bbe835f58805cdf7f929df10ccadd5952",
+      "rms": 0.221161
+    },
     "6264ef0bc8dd3a4f": {
       "id": "6264ef0bc8dd3a4f",
       "text": "通常のruntime endpointがエージェントの版を選ぶのに対し、こちらはその実行中の会話・作業環境へ接続します。",
@@ -34679,6 +35787,18 @@
       "sha256": "0b4c4ac84387f40f4da19e01ad115c2406b627e80a3c288d5ade989f2b6cee80",
       "rms": 0.138591
     },
+    "63d46b1dc8e6ce91": {
+      "id": "63d46b1dc8e6ce91",
+      "text": "早生まれの子",
+      "label": "早生まれの子",
+      "references": [
+        "lesson/2026-11-03/vocabulary/2026-11-03-v-study-ed131a4e/collocation/0"
+      ],
+      "duration": 1.674,
+      "bytes": 14061,
+      "sha256": "9878b11990b4c2251161794188c4834f183f2995f4f292408ba47c2b44218351",
+      "rms": 0.140407
+    },
     "63d4e423520d63b7": {
       "id": "63d4e423520d63b7",
       "text": "過去実績を再利用する",
@@ -34715,6 +35835,18 @@
       "bytes": 13869,
       "sha256": "e69611d2b19695e4588a5628a3f8b597b2bd8c0e0bb56503d264a268db1b1c04",
       "rms": 0.19981
+    },
+    "63e811c9e9bb2935": {
+      "id": "63e811c9e9bb2935",
+      "text": "著者は東京リージョンの検証構成で、正常・意図的な破棄・レコードの変換失敗・関数の例外を分けて送りました。",
+      "label": "著者は東京リージョンの検証構成で、正常・意図的な破棄・レコードの変換失敗・関数の例外を分けて送りました。",
+      "references": [
+        "lesson/2026-11-03/vocabulary/2026-11-03-v-study-a47c5cf6/evidence/0"
+      ],
+      "duration": 9.322,
+      "bytes": 75309,
+      "sha256": "6496221554f0732d95f986d076858fd029e40a4724d103bdb1980650e9a0b4aa",
+      "rms": 0.124233
     },
     "63e86dfc7fd6ca30": {
       "id": "63e86dfc7fd6ca30",
@@ -36643,6 +37775,18 @@
       "sha256": "b400ba5e2fa66ac5917e9cb18eac331eb3ab5972c28f3da49227c7756acaafd7",
       "rms": 0.107025
     },
+    "698815383e8ce0dc": {
+      "id": "698815383e8ce0dc",
+      "text": "うるう年を判定する",
+      "label": "うるう年を判定する",
+      "references": [
+        "lesson/2026-11-03/vocabulary/2026-11-03-v-study-57046571/collocation/1"
+      ],
+      "duration": 1.883,
+      "bytes": 15789,
+      "sha256": "068b54949b38725a42916a1aa7a51bf4dad450c6dde97f91c0d40ff7f1e1ab83",
+      "rms": 0.152764
+    },
     "6989f40f4d69fef3": {
       "id": "6989f40f4d69fef3",
       "text": "モデルに含まれていない人の動きや、測定できなかった変化が結果を左右する可能性がある。",
@@ -37549,6 +38693,18 @@
       "sha256": "ecc1beab6fdd763dd5f081e1575123a24c0ea197cff41c3f47999d47ff5bcdb8",
       "rms": 0.129624
     },
+    "6b697235f78fac91": {
+      "id": "6b697235f78fac91",
+      "text": "しょうだくしない",
+      "label": "承諾しない",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-refusal/entry/live-2026-11-03-entry-not-consent"
+      ],
+      "duration": 1.442,
+      "bytes": 12333,
+      "sha256": "a8e515111e2496098e350e526ba239e3d8da12342061e9d064759955d826dee2",
+      "rms": 0.143556
+    },
     "6b6afa0b6227f317": {
       "id": "6b6afa0b6227f317",
       "text": "うらぎる",
@@ -37621,6 +38777,18 @@
       "bytes": 13101,
       "sha256": "726af4ac65e64a2e25e91ca47932c9b65d101da0077d06cc6548942b8e94b4b9",
       "rms": 0.253259
+    },
+    "6bc77b7bc90ac22f": {
+      "id": "6bc77b7bc90ac22f",
+      "text": "「抜き打ち」の使い方として最も自然なのはどれか。",
+      "label": "「抜き打ち」の使い方として最も自然なのはどれか。",
+      "references": [
+        "lesson/2026-11-03/review/1/detail/0"
+      ],
+      "duration": 4.112,
+      "bytes": 33645,
+      "sha256": "89c1cd371a2f2a224d9baf1bc1fbc860b26fb433793734252dcc4baeb434f2d8",
+      "rms": 0.151875
     },
     "6bcae13f1eb38f6b": {
       "id": "6bcae13f1eb38f6b",
@@ -37777,6 +38945,18 @@
       "bytes": 39597,
       "sha256": "ee441ff0b0e8e1e7e9fb9a0664b9887fc8ef07bae0932630be71f4f2a3fb8b6e",
       "rms": 0.157562
+    },
+    "6c0a9fa6a74dd9aa": {
+      "id": "6c0a9fa6a74dd9aa",
+      "text": "みぎはし",
+      "label": "右はし",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-position/entry/live-2026-11-03-entry-right-edge"
+      ],
+      "duration": 1.256,
+      "bytes": 10797,
+      "sha256": "91cba6db21759148b6ba282efcb5844d3bc077c0febb26ba60a981dcbb048dfb",
+      "rms": 0.183399
     },
     "6c0b5a410ed06f45": {
       "id": "6c0b5a410ed06f45",
@@ -38023,6 +39203,18 @@
       "sha256": "7ac5ce2f15c6563f56dedf8fe265a9726c1d11bb08d4b6b41dd6e74b8602108d",
       "rms": 0.11075
     },
+    "6cc1c5ab2f01f5f7": {
+      "id": "6cc1c5ab2f01f5f7",
+      "text": "資料の保存状態は必ずしも芳しくない。",
+      "label": "資料の保存状態は必ずしも芳しくない。",
+      "references": [
+        "lesson/2026-11-03/review/0/detail/0"
+      ],
+      "duration": 3.892,
+      "bytes": 31917,
+      "sha256": "99d1f1216192d6b2451347cf3c90634173f4bb0be072e8c1a9f935aa51178e87",
+      "rms": 0.138578
+    },
     "6cc4d87ec4311fd2": {
       "id": "6cc4d87ec4311fd2",
       "text": "センサーを搭載する",
@@ -38116,6 +39308,19 @@
       "bytes": 65133,
       "sha256": "d659c0fd5ec661a47d1a38e1d1d3d8623d86725691f01e904254e49a4e509337",
       "rms": 0.120326
+    },
+    "6cf1a202fa57ef86": {
+      "id": "6cf1a202fa57ef86",
+      "text": "そもそも、資料そのものと、その資料を説明するメタデータは同じではない。",
+      "label": "そもそも、資料そのものと、その資料を説明するメタデータは同じではない。",
+      "references": [
+        "lesson/2026-11-03/immersion/1/0",
+        "lesson/2026-11-03/reading/1/0"
+      ],
+      "duration": 6.26,
+      "bytes": 50733,
+      "sha256": "af8efa95519d2e841e4d834828348411ba25a1c36985d5e10e59883fb6011be8",
+      "rms": 0.161288
     },
     "6cf2f58342b1e377": {
       "id": "6cf2f58342b1e377",
@@ -38334,6 +39539,18 @@
       "sha256": "297877cff818a5167d87f9bb271ec492df56eb396da0ec8dff1e8bb854cc93ec",
       "rms": 0.118567
     },
+    "6da72ecaa9d3781e": {
+      "id": "6da72ecaa9d3781e",
+      "text": "冷たい風が吹いて、背中がぞくぞくした。",
+      "label": "冷たい風が吹いて、背中がぞくぞくした。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-thrill/example/live-2026-11-03-example-cold-shiver/0"
+      ],
+      "duration": 3.683,
+      "bytes": 30189,
+      "sha256": "9e2bc9d436e552cd2ef35b4ecae4b479a8d3f2857821095bb8d84042fd341309",
+      "rms": 0.119891
+    },
     "6db365f547114ee1": {
       "id": "6db365f547114ee1",
       "text": "Resourceを割り当てる",
@@ -38418,6 +39635,18 @@
       "bytes": 14253,
       "sha256": "495c6c29d1df563fc728cc4e1ff501ca7ffc98c42852a82306a02d5b852a9293",
       "rms": 0.144647
+    },
+    "6dcb427470a92208": {
+      "id": "6dcb427470a92208",
+      "text": "2 学校は事前に知らせず、資料の保管状況を抜き打ちで点検した。",
+      "label": "② 学校は事前に知らせず、資料の保管状況を抜き打ちで点検した。",
+      "references": [
+        "lesson/2026-11-03/review/1/detail/2"
+      ],
+      "duration": 5.296,
+      "bytes": 43053,
+      "sha256": "8471eb105446740f987a6bee583166e651f55d0a7a3009dd3b4d3bbe9c4c0664",
+      "rms": 0.151401
     },
     "6dd3cc520ca30ac6": {
       "id": "6dd3cc520ca30ac6",
@@ -38504,6 +39733,18 @@
       "bytes": 29997,
       "sha256": "bc63185264ace5254ca675ed16608c8d54b7caf23366441cd56ab8500430c51c",
       "rms": 0.143056
+    },
+    "6e463c672d9160e3": {
+      "id": "6e463c672d9160e3",
+      "text": "ゆううつ",
+      "label": "憂うつ",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-mood/entry/live-2026-11-03-entry-gloomy"
+      ],
+      "duration": 1.14,
+      "bytes": 9837,
+      "sha256": "11b64d910500049a34725b0d9827fff061b5bad1b01933b11a9ddba80e547ac1",
+      "rms": 0.145463
     },
     "6e4bc0ab4946fccf": {
       "id": "6e4bc0ab4946fccf",
@@ -38959,6 +40200,19 @@
       "sha256": "54c0a736398d318259fdef78a5921969936945d56697bf91febe9355db9d3488",
       "rms": 0.140648
     },
+    "6f48ba4984ac365d": {
+      "id": "6f48ba4984ac365d",
+      "text": "制作年代は推定」「所蔵先で確認中」といった注記を付け、更新した日付と根拠をたどれるようにする方法はある。",
+      "label": "制作年代は推定」「所蔵先で確認中」といった注記を付け、更新した日付と根拠をたどれるようにする方法はある。",
+      "references": [
+        "lesson/2026-11-03/immersion/2/2",
+        "lesson/2026-11-03/reading/2/2"
+      ],
+      "duration": 8.942,
+      "bytes": 72237,
+      "sha256": "9fd86e14fb9cc236e0dc360ee1c204576614d2589fd8855de847b9d8cbdc12ee",
+      "rms": 0.116965
+    },
     "6f4f817fcb349c1b": {
       "id": "6f4f817fcb349c1b",
       "text": "事業の俊敏性",
@@ -39043,6 +40297,19 @@
       "bytes": 9453,
       "sha256": "6980ef044a724b340b05b602372d9185fd69534b5b7f1002573abe7498a6474d",
       "rms": 0.111467
+    },
+    "6f754e395339ca25": {
+      "id": "6f754e395339ca25",
+      "text": "公開の形式にも注意が必要である。",
+      "label": "公開の形式にも注意が必要である。",
+      "references": [
+        "lesson/2026-11-03/immersion/3/0",
+        "lesson/2026-11-03/reading/3/0"
+      ],
+      "duration": 3.172,
+      "bytes": 26157,
+      "sha256": "c0d1d947a0dd4893f8237b2a85cc6294e381a187d16acd66eaa66b6ef14271db",
+      "rms": 0.151136
     },
     "6f8325224e4c9456": {
       "id": "6f8325224e4c9456",
@@ -39199,6 +40466,18 @@
       "bytes": 38637,
       "sha256": "fb47fed0b8da817c31e01fa948765a1711bf0cab771803abb17b725d461160a5",
       "rms": 0.137319
+    },
+    "6ff2933e45cc24a2": {
+      "id": "6ff2933e45cc24a2",
+      "text": "何度も直して、ついに作品が完成した。",
+      "label": "何度も直して、ついに作品が完成した。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-result-time/example/live-2026-11-03-example-finally-finished/0"
+      ],
+      "duration": 3.578,
+      "bytes": 29421,
+      "sha256": "0aea38fe4de3641dfe45b75fd7231b6e4d7f3cb6ee8e0d90d198c19204b195a6",
+      "rms": 0.12727
     },
     "6ffbcacc796ac2f8": {
       "id": "6ffbcacc796ac2f8",
@@ -39521,6 +40800,18 @@
       "sha256": "9a1bd3bffeedcb7ec94746c32d45e38866c32e9ce2e7bac31108e4b7e6875921",
       "rms": 0.141091
     },
+    "70b3e8e57bc909b9": {
+      "id": "70b3e8e57bc909b9",
+      "text": "部品を覆い隠す",
+      "label": "部品を覆い隠す",
+      "references": [
+        "lesson/2026-11-03/vocabulary/2026-11-03-v-c4d5e76fcbab/collocation/0"
+      ],
+      "duration": 1.686,
+      "bytes": 14253,
+      "sha256": "69d5c445538acf7826407be9b6d9885c82d70fcfaeeae0d4cd591c4b59829dbd",
+      "rms": 0.176228
+    },
     "70bb379a9cfab64e": {
       "id": "70bb379a9cfab64e",
       "text": "AI予算関与者435人の調査で、強化領域、License、Infra、API費、投資理由、成果KPIを分解。",
@@ -39786,6 +41077,18 @@
       "bytes": 66285,
       "sha256": "09a7313de8ed0dd6c2be8f84fc16908d448e359b71c3199f543ae6cf265a9a13",
       "rms": 0.117066
+    },
+    "712e4f8fece89c33": {
+      "id": "712e4f8fece89c33",
+      "text": "眩しい",
+      "label": "眩しい",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-glare/source/1"
+      ],
+      "duration": 1.14,
+      "bytes": 9837,
+      "sha256": "ced6a6ab6d031e40ff6c7ce6603a84bb3b522a6e1cce95a099c28e466a80c660",
+      "rms": 0.155245
     },
     "7130dc2d1b9606e1": {
       "id": "7130dc2d1b9606e1",
@@ -40197,6 +41500,19 @@
       "bytes": 18861,
       "sha256": "272f37d9cc6cb435060353d6946e14f3e9f9f6b4cbae671990c0d4f06bac3325",
       "rms": 0.176858
+    },
+    "7293ffa26360083e": {
+      "id": "7293ffa26360083e",
+      "text": "例えば、昔の町並みを写した写真に「駅前」という題名だけが付いていても、どの駅の、いつの駅前なのかを特定できるとは限らない。",
+      "label": "例えば、昔の町並みを写した写真に「駅前」という題名だけが付いていても、どの駅の、いつの駅前なのかを特定できるとは限らない。",
+      "references": [
+        "lesson/2026-11-03/immersion/1/1",
+        "lesson/2026-11-03/reading/1/1"
+      ],
+      "duration": 10.474,
+      "bytes": 84525,
+      "sha256": "1e8123868606b2944fd0bcaa8d8f24be51bf7477d2609982bc4f916154e3cbbd",
+      "rms": 0.159221
     },
     "72a0062fb91ee90b": {
       "id": "72a0062fb91ee90b",
@@ -41292,6 +42608,19 @@
       "bytes": 45357,
       "sha256": "558ae4642a1101d44fa8acbac0bec134cabcd8ff2eb61acce11b5373fd0c44e0",
       "rms": 0.153323
+    },
+    "7545cee1b3419e1d": {
+      "id": "7545cee1b3419e1d",
+      "text": "開発者は検索速度や見栄えだけを追求するのではなく、資料の出典、年代の確実性、所蔵先、利用条件を段階的に確認できる画面を考える必要がある。",
+      "label": "開発者は検索速度や見栄えだけを追求するのではなく、資料の出典、年代の確実性、所蔵先、利用条件を段階的に確認できる画面を考える必要がある。",
+      "references": [
+        "lesson/2026-11-03/immersion/4/0",
+        "lesson/2026-11-03/reading/4/0"
+      ],
+      "duration": 12.979,
+      "bytes": 104493,
+      "sha256": "0af222a7e5fb80e81f7db3ae19b751154c6104f738d38821de0f4d2bdb106e12",
+      "rms": 0.138238
     },
     "754e4be8f22a4d04": {
       "id": "754e4be8f22a4d04",
@@ -42695,6 +44024,18 @@
       "rms": 0.119373,
       "sha256": "8351b5f9430605a1ca0b4eb69ba3860a7c5dd1e2629197b7b32abea47486a893"
     },
+    "790600da407ad55e": {
+      "id": "790600da407ad55e",
+      "text": "おせじをいう",
+      "label": "お世辞を言う",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-social-idioms/entry/live-2026-11-03-entry-flatter"
+      ],
+      "duration": 1.373,
+      "bytes": 11757,
+      "sha256": "b92f556721ff0f00dd2917a3459b563e401fd5d8fa4735eef15e37840fe03a46",
+      "rms": 0.19036
+    },
     "79092c45e140f051": {
       "id": "79092c45e140f051",
       "text": "に満たない",
@@ -43450,6 +44791,18 @@
       "bytes": 57453,
       "sha256": "23e9236a045dcab7fb70b1137ddc052e4c675fcf8f81ffa844db54777ebafd3e",
       "rms": 0.124649
+    },
+    "7b4baac0e9ced384": {
+      "id": "7b4baac0e9ced384",
+      "text": "でんきをつけたままねてしまった",
+      "label": "電気をつけたまま、寝てしまった",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-mama-shimau/entry/live-2026-11-03-entry-sleep-lights-on"
+      ],
+      "duration": 2.557,
+      "bytes": 21165,
+      "sha256": "7cd219b75265ce29ea0a9befd3f4b225636fe0540cbebe33616f0593157183b6",
+      "rms": 0.137901
     },
     "7b530f08c31d495c": {
       "id": "7b530f08c31d495c",
@@ -44317,6 +45670,18 @@
       "sha256": "79b1e12943c7071f851880cd7d0cde3271ecbb97f838faa851e35784a1c1bdee",
       "rms": 0.140384
     },
+    "7ddd06cfb9629bfb": {
+      "id": "7ddd06cfb9629bfb",
+      "text": "しゅんかんいどう",
+      "label": "瞬間移動",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-fantasy/entry/live-2026-11-03-entry-teleportation"
+      ],
+      "duration": 1.384,
+      "bytes": 11757,
+      "sha256": "24ebde80a00edddab53d7e8ad95c71afb9d01353ce7ffdd2b34fa5f4964b3622",
+      "rms": 0.157664
+    },
     "7de164838fc02027": {
       "id": "7de164838fc02027",
       "text": "普段目にしないIDも、信頼条件を決めるときは確かめます。",
@@ -44886,6 +46251,18 @@
       "sha256": "68e93058ae8ad55b7f6255b5d511adc63f4b110694f6b14265c2cd9c06507364",
       "rms": 0.10906
     },
+    "7f6dea210695c6dd": {
+      "id": "7f6dea210695c6dd",
+      "text": "日割り計算",
+      "label": "日割り計算",
+      "references": [
+        "lesson/2026-11-03/vocabulary/2026-11-03-v-18cb03547464/collocation/1"
+      ],
+      "duration": 1.442,
+      "bytes": 12333,
+      "sha256": "ae8eef268c0d53ae43c9f14274e9a88348593a97055f7838a1585c37d875ec76",
+      "rms": 0.150168
+    },
     "7f70334d0e6db789": {
       "id": "7f70334d0e6db789",
       "text": "AIの機能拡張と同時に、データ接続・Agentの裁量・最終判断の境界を明確にすること。",
@@ -45080,6 +46457,18 @@
       "bytes": 68781,
       "sha256": "c6ab6ca9e9be38710a232c34eacd22effa87d64e54cc8acb967c053fd81a31d1",
       "rms": 0.135105
+    },
+    "7ff2be5e06f6b9ca": {
+      "id": "7ff2be5e06f6b9ca",
+      "text": "カッとなって言い返す前に、少し時間を置いた。",
+      "label": "カッとなって言い返す前に、少し時間を置いた。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-anger-control/example/live-2026-11-03-example-avoid-hasty-reply/0"
+      ],
+      "duration": 3.416,
+      "bytes": 28077,
+      "sha256": "56ba2119ec56dd70f356863f1187b7cc30a2958d63882608b32ae7e96c12fc9e",
+      "rms": 0.124359
     },
     "7ff2ece389ac71b7": {
       "id": "7ff2ece389ac71b7",
@@ -45327,6 +46716,19 @@
       "sha256": "967f0c87da1a3971cf06a64c410cd014944b59e406b2802a9cdbf10c1117d919",
       "rms": 0.124395
     },
+    "8070d8e66c731092": {
+      "id": "8070d8e66c731092",
+      "text": "検索で見つからなかった場合にも、存在しないと断定するのではなく、検索対象や表記の候補を示すことが望ましい。",
+      "label": "検索で見つからなかった場合にも、存在しないと断定するのではなく、検索対象や表記の候補を示すことが望ましい。",
+      "references": [
+        "lesson/2026-11-03/immersion/4/3",
+        "lesson/2026-11-03/reading/4/3"
+      ],
+      "duration": 9.221,
+      "bytes": 74541,
+      "sha256": "f29677c8bf21301f68fb5938a71614a0b57ff2e888206461d31a6a62095e8b74",
+      "rms": 0.163199
+    },
     "8071e37852dcc5dc": {
       "id": "8071e37852dcc5dc",
       "text": "すべての業務を一つのAIエージェントだけに任せるため。",
@@ -45487,6 +46889,18 @@
       "sha256": "e505be306cd8e630822c3294ece5772313a8ac4d4215925090328c8ac40edf57",
       "rms": 0.136143
     },
+    "80c6f5bb61fd9327": {
+      "id": "80c6f5bb61fd9327",
+      "text": "「芳しくない」の読みとして正しいものはどれか。",
+      "label": "「芳しくない」の読みとして正しいものはどれか。",
+      "references": [
+        "lesson/2026-11-03/review/0/detail/1"
+      ],
+      "duration": 3.602,
+      "bytes": 29613,
+      "sha256": "2bfe7a08ca8ad693cff12d61e0ffd6b967238f8e003c85d009961474bd4d6fec",
+      "rms": 0.12818
+    },
     "80cad9aa697ed05e": {
       "id": "80cad9aa697ed05e",
       "text": "かきわける",
@@ -45511,6 +46925,18 @@
       "sha256": "b7735e739e30e5268238f2da45d01cf3661d7fa272c2d0e4df058bdff1ec2b6d",
       "rms": 0.160643
     },
+    "80f1d0eb668aa10f": {
+      "id": "80f1d0eb668aa10f",
+      "text": "しらないうちに",
+      "label": "知らないうちに",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-unnoticed/entry/live-2026-11-03-entry-without-knowing"
+      ],
+      "duration": 1.512,
+      "bytes": 12717,
+      "sha256": "5467394cac440da59cd7b20310d15d2dc816553f6388263303ed4c2c7b57db37",
+      "rms": 0.155853
+    },
     "80f20b027356bf56": {
       "id": "80f20b027356bf56",
       "text": "評価方法に偏りがあれば、数字だけが良くなって実際の利用価値は下がる可能性もあるからだ。",
@@ -45525,6 +46951,19 @@
       "sha256": "6bddd45b50c3b49056f2f3121d31d826e2a51275939d911fcb0653d410f408d5",
       "rms": 0.125076
     },
+    "80f8f51d7bc08bd9": {
+      "id": "80f8f51d7bc08bd9",
+      "text": "さらに、名前の表記揺れや旧字体を手掛かりに探す人もいるため、一つの表記でしか検索できない画面は、見つけられるはずの資料を埋もれさせかねない。",
+      "label": "さらに、名前の表記揺れや旧字体を手掛かりに探す人もいるため、一つの表記でしか検索できない画面は、見つけられるはずの資料を埋もれさせかねない。",
+      "references": [
+        "lesson/2026-11-03/immersion/3/4",
+        "lesson/2026-11-03/reading/3/4"
+      ],
+      "duration": 11.357,
+      "bytes": 91629,
+      "sha256": "dc153d53a1270416007aa5f8d9a0547d9ed8e547ea5718f593181b613c968c70",
+      "rms": 0.123737
+    },
     "80fa4d24237a3630": {
       "id": "80fa4d24237a3630",
       "text": "国内企業での導入時の注意点: Agent ActionをRead 、 Analyze、Code Write、Production Change、External Message 、 Paymentに分類し、Riskに応じてBoundaryを変えると運用しやすい。",
@@ -45536,6 +46975,18 @@
       "bytes": 112557,
       "sha256": "8af38c189ddb9cc0c1ade9b31a9fc062880e15c897253298381d35f96a24c747",
       "rms": 0.116784
+    },
+    "80fb65f94a475d7d": {
+      "id": "80fb65f94a475d7d",
+      "text": "スリルを味わう",
+      "label": "スリルを味わう",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-thrill/source/1"
+      ],
+      "duration": 1.605,
+      "bytes": 13485,
+      "sha256": "6884b8991b0828bebae317bee9973f01d0db74b12ee946aca5cb16caf6c7597a",
+      "rms": 0.14356
     },
     "810ade1b703153ff": {
       "id": "810ade1b703153ff",
@@ -45842,6 +47293,18 @@
       "sha256": "df14613a4152de1c0589b325d90c4f3c37576b5d5d47d4be93bd385ab2ca142b",
       "rms": 0.149567
     },
+    "820dd498b342f96c": {
+      "id": "820dd498b342f96c",
+      "text": "時間はかかる。",
+      "label": "時間はかかる。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-soredemo/example/live-2026-11-03-example-continue-even-so/0"
+      ],
+      "duration": 1.442,
+      "bytes": 12333,
+      "sha256": "3a31d270d97dfab807f8e7659ad3855be4f0c3f438f9f7b788a0cbcf833f2319",
+      "rms": 0.120847
+    },
     "8210b9c4e0e06d20": {
       "id": "8210b9c4e0e06d20",
       "text": "成果は「使ったかどうか」ではなく、業務時間、品質、売上など目的に近い指標で測るべきである。",
@@ -45890,6 +47353,18 @@
       "sha256": "96db6f699ae9d32e3b1da77e81d56c839f2a2202579e20238b7da8f3d8c49b61",
       "rms": 0.140638
     },
+    "8227e2dc95d73c20": {
+      "id": "8227e2dc95d73c20",
+      "text": "資料の公開前に、所蔵先と利用条件を確認しておく( )。",
+      "label": "資料の公開前に、所蔵先と利用条件を確認しておく（　）。",
+      "references": [
+        "lesson/2026-11-03/review/2/detail/0"
+      ],
+      "duration": 4.878,
+      "bytes": 39789,
+      "sha256": "c8c52eac50d817ff31954474ad4982c90e9949a800185fc963dd1445a6023be5",
+      "rms": 0.125021
+    },
     "8228ab5ddfa7f1d1": {
       "id": "8228ab5ddfa7f1d1",
       "text": "細かな設定",
@@ -45925,6 +47400,18 @@
       "bytes": 8877,
       "sha256": "0d21e28d6efb6c3583f2fb4041bd983865b37615db8eec229bf4839889a0cfff",
       "rms": 0.160234
+    },
+    "823474ae13ece44a": {
+      "id": "823474ae13ece44a",
+      "text": "デジタルアーカイブは、資料を公開しただけで文化を伝えられるのか——メタデータ、出典、検索と解釈",
+      "label": "デジタルアーカイブは、資料を公開しただけで文化を伝えられるのか——メタデータ、出典、検索と解釈",
+      "references": [
+        "lesson/2026-11-03/title"
+      ],
+      "duration": 8.176,
+      "bytes": 66093,
+      "sha256": "f0df792471876e7f039adbf2f1617b9c60e3e985157c6740f0dc38d30228d8dd",
+      "rms": 0.133826
     },
     "82383553d1ea6f8f": {
       "id": "82383553d1ea6f8f",
@@ -46159,6 +47646,18 @@
       "sha256": "69c79ca56635f0cc4b4c313f948b4d0ecac703b9790a071fdf4e60ddcefef6ac",
       "rms": 0.132883
     },
+    "82e19177a374c78b": {
+      "id": "82e19177a374c78b",
+      "text": "少しずつ",
+      "label": "少しずつ",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-zutsu/source/1"
+      ],
+      "duration": 1.349,
+      "bytes": 11565,
+      "sha256": "b09d1a0253c1e513c134ee0ccc9a711663623b4fa25f6e77ac9c8c2b00377576",
+      "rms": 0.126524
+    },
     "82e62e9cdc0bac20": {
       "id": "82e62e9cdc0bac20",
       "text": "どうこんする",
@@ -46220,6 +47719,18 @@
       "bytes": 65709,
       "sha256": "57db9ca48b2ddf17dc5d4c1016bc70063b1b44300bc7b4fa373d6eeac38c30db",
       "rms": 0.161839
+    },
+    "831d340f11ebe713": {
+      "id": "831d340f11ebe713",
+      "text": "「同じ手順を最後まで動かせた」という実装報告と、業務品質の評価を分けて読みます。",
+      "label": "「同じ手順を最後まで動かせた」という実装報告と、業務品質の評価を分けて読みます。",
+      "references": [
+        "lesson/2026-11-03/vocabulary/2026-11-03-v-study-66614293/evidence/0"
+      ],
+      "duration": 6.852,
+      "bytes": 55533,
+      "sha256": "87dd206fa804e9395ed9793b127636bfb8e4779fae624be09018c68c2751657f",
+      "rms": 0.118557
     },
     "8328d14a57e4bcbe": {
       "id": "8328d14a57e4bcbe",
@@ -47020,6 +48531,19 @@
       "sha256": "91159a64fb492120f52474d4ebf30e112afc4d801e68af46b3a439a0c860b11d",
       "rms": 0.152177
     },
+    "858de13d7b8b5881": {
+      "id": "858de13d7b8b5881",
+      "text": "結局のところ、デジタルアーカイブの価値は、公開された画像の枚数だけでは測れない。",
+      "label": "結局のところ、デジタルアーカイブの価値は、公開された画像の枚数だけでは測れない。",
+      "references": [
+        "lesson/2026-11-03/immersion/5/0",
+        "lesson/2026-11-03/reading/5/0"
+      ],
+      "duration": 6.469,
+      "bytes": 52461,
+      "sha256": "6fe2d7aca15f9591d21abf87f1968e75ed3cd6bbc848096b77cb5d5a1b0d2295",
+      "rms": 0.145926
+    },
     "859c38cec91735ca": {
       "id": "859c38cec91735ca",
       "text": "にとどまる",
@@ -47166,6 +48690,18 @@
       "sha256": "7de882cbe51e6e7a323acd8dea014d2ee0bee049911d544b296be195d541ad5b",
       "rms": 0.130073
     },
+    "86204c26dea72322": {
+      "id": "86204c26dea72322",
+      "text": "よんだことのないまんが",
+      "label": "読んだことのない漫画",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-noun-modifiers/entry/live-2026-11-03-entry-unread-comic"
+      ],
+      "duration": 1.953,
+      "bytes": 16365,
+      "sha256": "0e3d9237b17d2ea2e58bb618beb6bd88014f7aae28fe79a56bf8dedb4753b035",
+      "rms": 0.143792
+    },
     "8629a4ad968dce59": {
       "id": "8629a4ad968dce59",
       "text": "準備が整っていたので、拍子抜けするほど簡単に起動しました。",
@@ -47237,6 +48773,18 @@
       "bytes": 60141,
       "sha256": "1b10e72bc2f7f91777beaf70d0b3a3e1deabd924216cf5f727da6ff93b8d7c20",
       "rms": 0.138385
+    },
+    "8669eee6f481e26a": {
+      "id": "8669eee6f481e26a",
+      "text": "なにもない",
+      "label": "何もない",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-absence/entry/live-2026-11-03-entry-nothing"
+      ],
+      "duration": 1.268,
+      "bytes": 10797,
+      "sha256": "d4219b5fb5758dddc1ab71d24f0d0ded97885917a5e58ea7b7d1024d32b86d6a",
+      "rms": 0.195883
     },
     "866f8e76044bd62a": {
       "id": "866f8e76044bd62a",
@@ -47398,6 +48946,18 @@
       "bytes": 11373,
       "sha256": "15338b36ec780631a31a84b16300820575fe8a1ff8442af950211438da8bf644",
       "rms": 0.207497
+    },
+    "86fc2bc7d2bd857b": {
+      "id": "86fc2bc7d2bd857b",
+      "text": "投げると手元に帰ってくる",
+      "label": "投げると手元に帰ってくる",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-boomerang/source/1"
+      ],
+      "duration": 2.382,
+      "bytes": 19821,
+      "sha256": "e704268893f442cc6dcdb24b88710806f0da7a83daf82e7e8a03fad2ab63d0c6",
+      "rms": 0.128215
     },
     "86fc33ea967ab02e": {
       "id": "86fc33ea967ab02e",
@@ -47738,6 +49298,18 @@
       "sha256": "123e14c462dc9957ffed5ae5fdfcc66e0f634237724debd33f79837d68b3d613",
       "rms": 0.156161
     },
+    "8813a6286fb9338c": {
+      "id": "8813a6286fb9338c",
+      "text": "ぐずぐずしていると、電車に遅れるよ。",
+      "label": "ぐずぐずしていると、電車に遅れるよ。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-manner-words/example/live-2026-11-03-example-stop-dawdling/0"
+      ],
+      "duration": 3.137,
+      "bytes": 25773,
+      "sha256": "5a46166107f4c711762f10bb013a866158656e44892274c2126a98f398e79c9d",
+      "rms": 0.157225
+    },
     "882040ab9c51e7e7": {
       "id": "882040ab9c51e7e7",
       "text": "試作衛星を軌道に投入し、実環境のデータを集めます。",
@@ -47836,6 +49408,18 @@
       "bytes": 50157,
       "sha256": "29b55f3aca7abb3799306150486461d4a59f2428888c654e33909e8b6a837147",
       "rms": 0.176075
+    },
+    "8843ead0c7382a24": {
+      "id": "8843ead0c7382a24",
+      "text": "約束をすっかり忘れていた。",
+      "label": "約束をすっかり忘れていた。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-result-time/example/live-2026-11-03-example-completely-forgot/0"
+      ],
+      "duration": 2.51,
+      "bytes": 20781,
+      "sha256": "2a8ffb9a93a8fc0c914dcb9f80f115c0460e8d7fedf0a0c8133bda6de12f3b43",
+      "rms": 0.116688
     },
     "8846a3be1917c772": {
       "id": "8846a3be1917c772",
@@ -47948,6 +49532,18 @@
       "bytes": 33645,
       "sha256": "ec0ac71ec83addcbc7ccddfc1a649bffec2db612c82f59a6db1aca265567ab38",
       "rms": 0.145404
+    },
+    "88a1641854bd9944": {
+      "id": "88a1641854bd9944",
+      "text": "こうろんする",
+      "label": "口論する",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-anger-control/entry/live-2026-11-03-entry-argue"
+      ],
+      "duration": 1.245,
+      "bytes": 10605,
+      "sha256": "a6b6803e8a19d550c07b790a94518a6ae10ab4fd7ec356169c2dcc8c990e6fd9",
+      "rms": 0.134423
     },
     "88a9ff99c2491b65": {
       "id": "88a9ff99c2491b65",
@@ -48889,6 +50485,18 @@
       "sha256": "0ca95270f1d2addb10674e5fd944f691ca556a98415353425087c8696611bf8b",
       "rms": 0.129739
     },
+    "8b09a20ed1f80192": {
+      "id": "8b09a20ed1f80192",
+      "text": "久しぶりに友達に会えて、嬉しかった。",
+      "label": "久しぶりに友達に会えて、嬉しかった。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-pleasure/example/live-2026-11-03-example-glad-meeting/0"
+      ],
+      "duration": 3.381,
+      "bytes": 27693,
+      "sha256": "14ebc03420cae44e28d14027b6a979714d56fcf8a7fbb6f0939a8d16d5d0a351",
+      "rms": 0.144745
+    },
     "8b0feba154b823b5": {
       "id": "8b0feba154b823b5",
       "text": "非推奨の警告",
@@ -49132,6 +50740,18 @@
       "bytes": 41517,
       "sha256": "8a077a39b5b3e6be0b1b10bee83f95d3f2fe214774b4407b0ac990cdb32d144a",
       "rms": 0.137732
+    },
+    "8bb1446f41fb5743": {
+      "id": "8bb1446f41fb5743",
+      "text": "原Q21知识点・改编|語の用法",
+      "label": "原Q21知识点・改编｜語の用法",
+      "references": [
+        "lesson/2026-11-03/review/1/title/0"
+      ],
+      "duration": 2.986,
+      "bytes": 24621,
+      "sha256": "39c1ffc6ec32dc1e257d3b74527adf05cc4ab8612acae6d5b05875ea741c8904",
+      "rms": 0.159449
     },
     "8bb18a8f41849e1b": {
       "id": "8bb18a8f41849e1b",
@@ -49800,6 +51420,18 @@
       "bytes": 16173,
       "sha256": "47c00ff4cbab99631055424d1df98743c7021699929b7cd79a2c3190b71e9bc6",
       "rms": 0.15954
+    },
+    "8d442c974f6ace1b": {
+      "id": "8d442c974f6ace1b",
+      "text": "よびにくる",
+      "label": "呼びに来る",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-call-purpose/entry/live-2026-11-03-entry-come-to-call"
+      ],
+      "duration": 1.407,
+      "bytes": 11949,
+      "sha256": "8b56ff5230bcb56ba14ed1807c2ae80eb32630afb59b48d0f0198a3ea07424f4",
+      "rms": 0.205152
     },
     "8d4bc1232bf8b82f": {
       "id": "8d4bc1232bf8b82f",
@@ -50498,6 +52130,18 @@
       "sha256": "75353487659baceb82cf425270e103407963987816ae9ff58747cc204e1c5ae0",
       "rms": 0.167502
     },
+    "8f406d62e9efdae6": {
+      "id": "8f406d62e9efdae6",
+      "text": "手順を一度に全部渡す代わりに、Pythonが検査済みの成果物を見て次の一手だけを返します。",
+      "label": "手順を一度に全部渡す代わりに、Pythonが検査済みの成果物を見て次の一手だけを返します。",
+      "references": [
+        "lesson/2026-11-03/grammar/2026-11-03-g-study-fd8e803a/evidence/0"
+      ],
+      "duration": 7.34,
+      "bytes": 59373,
+      "sha256": "9500bb6e7cd8ebc58b438604cfcbed377133fd74a456da5b1b05275f05a006f5",
+      "rms": 0.142743
+    },
     "8f4a6eb1fd388785": {
       "id": "8f4a6eb1fd388785",
       "text": "また、タスクごとに品質、応答時間、コストを記録し、必要に応じて振り分け基準を見直すようにした。",
@@ -51059,6 +52703,19 @@
       "sha256": "4cbf4971da70779027912378790e6ca9e903af262264384e53a27f153a40401d",
       "rms": 0.135383
     },
+    "90c460e64bac2aa2": {
+      "id": "90c460e64bac2aa2",
+      "text": "ブーメラン",
+      "label": "ブーメラン",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-boomerang/source/0",
+        "live/2026-11-03/live-2026-11-03-boomerang/entry/live-2026-11-03-entry-boomerang"
+      ],
+      "duration": 1.117,
+      "bytes": 9645,
+      "sha256": "48fb726c5f86f44226d7428023ad0e6b0a7dea96463bfca4fda1cb87473b1f64",
+      "rms": 0.189839
+    },
     "90caea5ad224b3c6": {
       "id": "90caea5ad224b3c6",
       "text": "通知の数が多いことと、危険を正しく捉えられることは、同じではないのである。",
@@ -51132,6 +52789,18 @@
       "bytes": 14445,
       "sha256": "28ca2916d427daebe2b018fd924a605f7ca208ae35e71537014d7b58fb7718b9",
       "rms": 0.154355
+    },
+    "90e7a03aa85229f6": {
+      "id": "90e7a03aa85229f6",
+      "text": "いぎょう",
+      "label": "偉業",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-achievement/entry/live-2026-11-03-entry-great-achievement"
+      ],
+      "duration": 0.978,
+      "bytes": 8493,
+      "sha256": "bd823afdf2c53af21764f3a4502fbab6067b224b91d23fc92b0d1e3bbcd710e4",
+      "rms": 0.148105
     },
     "90effe49a5f4989d": {
       "id": "90effe49a5f4989d",
@@ -51989,6 +53658,18 @@
       "sha256": "1384a3b45d2645277608f8e5f8936e9891cdf138541836faf724166341801e19",
       "rms": 0.130932
     },
+    "936d2819ce847f2d": {
+      "id": "936d2819ce847f2d",
+      "text": "判断を受け持つ",
+      "label": "判断を受け持つ",
+      "references": [
+        "lesson/2026-11-03/vocabulary/2026-11-03-v-0a45e5d7a489/collocation/0"
+      ],
+      "duration": 1.697,
+      "bytes": 14253,
+      "sha256": "80cd0368a6e870ed906bf7b5668ca79c310156be3aa12a1acac9f30f80b696bd",
+      "rms": 0.120911
+    },
     "9389dfce2a18b7aa": {
       "id": "9389dfce2a18b7aa",
       "text": "名前が実体を裏切る",
@@ -52133,6 +53814,19 @@
       "bytes": 28845,
       "sha256": "d1fb01f49da37101f7c3502ac655580c94067d3dc9f170b4986d7ff61884ab47",
       "rms": 0.155317
+    },
+    "93f292e45534ae38": {
+      "id": "93f292e45534ae38",
+      "text": "完全な説明を用意できないまでも、情報の確かさに差があることを明示すれば、利用者は資料をより慎重に読み解けるはずだ。",
+      "label": "完全な説明を用意できないまでも、情報の確かさに差があることを明示すれば、利用者は資料をより慎重に読み解けるはずだ。",
+      "references": [
+        "lesson/2026-11-03/immersion/2/3",
+        "lesson/2026-11-03/reading/2/3"
+      ],
+      "duration": 9.338,
+      "bytes": 75501,
+      "sha256": "6d3e2bc64062ba0ee0160d7e0a4b29e349342e58bee9aceb341ff2c668a58821",
+      "rms": 0.138813
     },
     "93fe350b5538aac7": {
       "id": "93fe350b5538aac7",
@@ -52290,6 +53984,18 @@
       "sha256": "a1f4789c844a8671946acec33805b2bf21f539ba93fb10b14d49870fa335e9d8",
       "rms": 0.138203
     },
+    "948be54ddc5ab3f9": {
+      "id": "948be54ddc5ab3f9",
+      "text": "3 抜き打ちに夕食を食べた。",
+      "label": "③ 抜き打ちに夕食を食べた。",
+      "references": [
+        "lesson/2026-11-03/review/1/detail/3"
+      ],
+      "duration": 2.522,
+      "bytes": 20973,
+      "sha256": "4636150bea0491931519b544c4875285c6200f95dbed11a4c0b5e64de77b55fa",
+      "rms": 0.15695
+    },
     "948f647a6e7dc56e": {
       "id": "948f647a6e7dc56e",
       "text": "技術的制約",
@@ -52313,6 +54019,18 @@
       "bytes": 35181,
       "sha256": "28601cebc7621f7b35544e662d85f300d55539802576c7a3474b7e95196459ee",
       "rms": 0.175508
+    },
+    "94936d8d60cb9581": {
+      "id": "94936d8d60cb9581",
+      "text": "うつびょう",
+      "label": "うつ病",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-mood/entry/live-2026-11-03-entry-depression"
+      ],
+      "duration": 1.152,
+      "bytes": 9837,
+      "sha256": "a3c77e85178e1bf1b43afcc4ed9adbb3e7f9b634fb5bacbd7364e423885b4c11",
+      "rms": 0.12282
     },
     "949388f56a341951": {
       "id": "949388f56a341951",
@@ -52493,6 +54211,19 @@
       "bytes": 12717,
       "sha256": "9e7ad2d5d1dd2442fe96d3f96bd713e938192ada7532c738595a80d149fd031e",
       "rms": 0.153758
+    },
+    "951b716d8d1cdab9": {
+      "id": "951b716d8d1cdab9",
+      "text": "まごまご",
+      "label": "まごまご",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-manner-words/source/3",
+        "live/2026-11-03/live-2026-11-03-manner-words/entry/live-2026-11-03-entry-mago-mago"
+      ],
+      "duration": 1.28,
+      "bytes": 10989,
+      "sha256": "ca4c8ff54d58c0dbccf68315af286afb41b7bf347d6a4a43b2a533ee38153b37",
+      "rms": 0.175566
     },
     "9527e1cb01dce177": {
       "id": "9527e1cb01dce177",
@@ -52787,6 +54518,18 @@
       "sha256": "708b41359e79dbdb4c16559f19914965495806859456dc0650d04f86ba8d2c8e",
       "rms": 0.16134
     },
+    "95d9faa7d9292b93": {
+      "id": "95d9faa7d9292b93",
+      "text": "食べかけのケーキ",
+      "label": "食べかけのケーキ",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-half-eaten/source/0"
+      ],
+      "duration": 1.732,
+      "bytes": 14637,
+      "sha256": "8f80c718d58ae77f4bd63c40e889f1bfcb2b2aa1ad9dbfa31931a4614bfc805d",
+      "rms": 0.117543
+    },
     "95e0f43333ae8f5f": {
       "id": "95e0f43333ae8f5f",
       "text": "主導権を握る",
@@ -52834,6 +54577,18 @@
       "bytes": 15597,
       "sha256": "cc05ce95d16b13b7d78a3a6ecfdf401268a7bc5c2fdf1dcaa22582d82de6be78",
       "rms": 0.103876
+    },
+    "9601f3ae4141a98a": {
+      "id": "9601f3ae4141a98a",
+      "text": "警察を呼ぶ",
+      "label": "警察を呼ぶ",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-notify-call/source/1"
+      ],
+      "duration": 1.523,
+      "bytes": 12909,
+      "sha256": "4fb2c9036edf343a2cdae11550b2c34015f9bc12501eaa80b4994356f44c8dcf",
+      "rms": 0.163446
     },
     "9605233d3568f5d1": {
       "id": "9605233d3568f5d1",
@@ -52970,6 +54725,18 @@
       "sha256": "eb9ca52e2b9728965ef4fc1baf35cdf45c1676f735624143501c054867d7f3b6",
       "rms": 0.127403
     },
+    "9668c44789862543": {
+      "id": "9668c44789862543",
+      "text": "構成を映す",
+      "label": "構成を映す",
+      "references": [
+        "lesson/2026-11-03/vocabulary/2026-11-03-v-afeb04113052/collocation/1"
+      ],
+      "duration": 1.523,
+      "bytes": 12909,
+      "sha256": "e13c295f1511bdbfcd527e6b9dbd5cd75d604fd740275f0de0ab9f3cda605cd3",
+      "rms": 0.14396
+    },
     "96698d1fc8d00b9b": {
       "id": "96698d1fc8d00b9b",
       "text": "さいはつ",
@@ -53097,6 +54864,18 @@
       "duration": 4.584,
       "rms": 0.143962,
       "sha256": "911e252701ff1857d546e99d772240297efc64359506c3598317b4ec3664f6ed"
+    },
+    "96b9b4ae1d77ed22": {
+      "id": "96b9b4ae1d77ed22",
+      "text": "特定の相手をひいきする",
+      "label": "特定の相手をひいきする",
+      "references": [
+        "lesson/2026-11-03/vocabulary/2026-11-03-v-ceee5f00f7a9/collocation/1"
+      ],
+      "duration": 2.162,
+      "bytes": 18093,
+      "sha256": "d092877964838addc5bf622934b7523d6e3fb130df33685bce4832ec8184f1cf",
+      "rms": 0.131334
     },
     "96ba9a949f9e67c0": {
       "id": "96ba9a949f9e67c0",
@@ -53610,6 +55389,18 @@
       "sha256": "7dfa2ef2f14516b87221d0c3377be26c8a12caead28e1378f787a45a973a1ea7",
       "rms": 0.149194
     },
+    "98830dee02ab6372": {
+      "id": "98830dee02ab6372",
+      "text": "向こう側が透ける",
+      "label": "向こう側が透ける",
+      "references": [
+        "lesson/2026-11-03/vocabulary/2026-11-03-v-a5f8a1c5ec1d/collocation/1"
+      ],
+      "duration": 1.691,
+      "bytes": 14253,
+      "sha256": "170cd8667c52f7df0602591442d2ada2b0c0a98d58da269de28a8aa8e92d555f",
+      "rms": 0.117548
+    },
     "988fc3d5d31ec771": {
       "id": "988fc3d5d31ec771",
       "text": "多面的な分析",
@@ -53633,6 +55424,18 @@
       "bytes": 33069,
       "sha256": "6f2b1d69ce32643c5a9deeef3b4e708d650aef92442ba313d2c3d8af084f37b4",
       "rms": 0.158071
+    },
+    "98991c4ab45c8766": {
+      "id": "98991c4ab45c8766",
+      "text": "ラーメンが伸びる",
+      "label": "ラーメンが伸びる",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-noodles/source/0"
+      ],
+      "duration": 1.546,
+      "bytes": 13101,
+      "sha256": "f31b8633a03ee270d8763cb386c6bd41189a2899b3119a8f33a3bda8e01cca8e",
+      "rms": 0.180405
     },
     "98999dda99c5b426": {
       "id": "98999dda99c5b426",
@@ -54674,6 +56477,18 @@
       "sha256": "7441608076eae44960aa2f2e1f1ca54ec8aa6917c1b261b934de2f0c4d16c057",
       "rms": 0.144526
     },
+    "9c00fb046648d150": {
+      "id": "9c00fb046648d150",
+      "text": "机の上には何もない。",
+      "label": "机の上には何もない。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-absence/example/live-2026-11-03-example-nothing-on-desk/0"
+      ],
+      "duration": 2.092,
+      "bytes": 17517,
+      "sha256": "f77fec0d91dfd2fc0cc10ba2587c0cd0fa602f48ceaad9edf75c4ffafc499d2d",
+      "rms": 0.215236
+    },
     "9c0656d87657e9cc": {
       "id": "9c0656d87657e9cc",
       "text": "第3题|原Q31知识点・改编|文法: 公開する前に、キーボードだけでも申請できるか確認しておく( )。",
@@ -55291,6 +57106,18 @@
       "bytes": 45357,
       "sha256": "49b72bfc33dbe50d9581fc9b585af066e5a24ec3a35a4e187ac99b0e6942c319",
       "rms": 0.145993
+    },
+    "9e2893d909f76b6d": {
+      "id": "9e2893d909f76b6d",
+      "text": "公開画像の件数が増えれば、出典の説明は不要になる。",
+      "label": "公開画像の件数が増えれば、出典の説明は不要になる。",
+      "references": [
+        "lesson/2026-11-03/option/0/0"
+      ],
+      "duration": 4.669,
+      "bytes": 38061,
+      "sha256": "d75625e033479daabe43753248bfdaf735df0e1cf34e92857d2216997e0aca92",
+      "rms": 0.141879
     },
     "9e293829bd0e206d": {
       "id": "9e293829bd0e206d",
@@ -55983,6 +57810,19 @@
       "sha256": "1c8a24217e9252cc8c964b32778297bf6381c9c614ba2d5c8af7d64f39185c83",
       "rms": 0.157476
     },
+    "9fd3faf4668e0b60": {
+      "id": "9fd3faf4668e0b60",
+      "text": "作成者が不明な資料、撮影年が推定にすぎない資料もある以上、分かっていることと分からないことを区別して伝える必要がある。",
+      "label": "作成者が不明な資料、撮影年が推定にすぎない資料もある以上、分かっていることと分からないことを区別して伝える必要がある。",
+      "references": [
+        "lesson/2026-11-03/immersion/1/3",
+        "lesson/2026-11-03/reading/1/3"
+      ],
+      "duration": 9.731,
+      "bytes": 78573,
+      "sha256": "3c33b7a84698720ec332b56d636fcfab688bc4099ebf219a775330f831dbd605",
+      "rms": 0.123044
+    },
     "9fdeea13c481d597": {
       "id": "9fdeea13c481d597",
       "text": "第2题|原Q10知识点・改编:語の用法",
@@ -56139,6 +57979,18 @@
       "bytes": 82797,
       "sha256": "319b7082c5f75fbaff297b75e9a4afc32ede7da67ac234ba9d7e965beeb2347f",
       "rms": 0.163598
+    },
+    "a02aa147447e8c3b": {
+      "id": "a02aa147447e8c3b",
+      "text": "いつの間にそんなに上手になったの?",
+      "label": "いつの間にそんなに上手になったの？",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-unnoticed/example/live-2026-11-03-example-when-learned/0"
+      ],
+      "duration": 2.858,
+      "bytes": 23661,
+      "sha256": "11dc85fa7b02f3cbab1e459661925147a1ed8bd615571116075b993ed534610d",
+      "rms": 0.231993
     },
     "a02ec6fd0834c609": {
       "id": "a02ec6fd0834c609",
@@ -56531,6 +58383,18 @@
       "sha256": "631ca835598d5544096bc3bef5dd6cf905bc17f95ed0293a73e2d3142eff2167",
       "rms": 0.138854
     },
+    "a0ffd989a0532455": {
+      "id": "a0ffd989a0532455",
+      "text": "ゆうきをほめたたえる",
+      "label": "勇気を褒め称える",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-achievement/entry/live-2026-11-03-entry-praise-courage"
+      ],
+      "duration": 1.837,
+      "bytes": 15405,
+      "sha256": "5c46b3308e8a2c968a5692b9d091e1c1ce1c10e1e8dab4d4e249cff183d1652d",
+      "rms": 0.146405
+    },
     "a103f619570d4bf5": {
       "id": "a103f619570d4bf5",
       "text": "1 かんがつ 2 かんかつ 3 かんかい 4 かんがい",
@@ -56651,6 +58515,19 @@
       "bytes": 13485,
       "sha256": "f9ff362cf4639ba1c4e2f1af0f1197c5657acd794ca899898ce4a1171f690815",
       "rms": 0.130249
+    },
+    "a141a77daac36e71": {
+      "id": "a141a77daac36e71",
+      "text": "ピッタリ",
+      "label": "ピッタリ",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-timing/source/0",
+        "live/2026-11-03/live-2026-11-03-timing/entry/live-2026-11-03-entry-perfect-fit"
+      ],
+      "duration": 1.106,
+      "bytes": 9645,
+      "sha256": "ebaa4bb3067c42ae1710e2f948fda05f869d2c342e7b170f40ad2a0907ac7e97",
+      "rms": 0.123451
     },
     "a153fff8ca87fbf4": {
       "id": "a153fff8ca87fbf4",
@@ -56869,6 +58746,18 @@
       "sha256": "55280f9ae608395547b4185c074851afa574986e8f4d6fcc7bc2746453b7644f",
       "rms": 0.134807
     },
+    "a1cf883cbbb37f58": {
+      "id": "a1cf883cbbb37f58",
+      "text": "スリルをあじわう",
+      "label": "スリルを味わう",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-thrill/entry/live-2026-11-03-entry-taste-thrill"
+      ],
+      "duration": 1.5,
+      "bytes": 12717,
+      "sha256": "4e3fdd1566e3b76b97ec5e9b9b604d472d1216b8525e555af7316ea2392c1791",
+      "rms": 0.144783
+    },
     "a1dace1592851e91": {
       "id": "a1dace1592851e91",
       "text": "ふくめる",
@@ -57062,6 +58951,18 @@
       "bytes": 12525,
       "sha256": "fd10522cab8f429e2a3dcb489cd47bddd0ae74b2a484b74eea5a9ee092240d79",
       "rms": 0.156437
+    },
+    "a27430f47415ca30": {
+      "id": "a27430f47415ca30",
+      "text": "みずをさす",
+      "label": "水を差す",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-social-idioms/entry/live-2026-11-03-entry-spoil-mood"
+      ],
+      "duration": 1.314,
+      "bytes": 11181,
+      "sha256": "19460c30e8d35d85d5c06bf974f78871f8dfcf8931298be3391136b68f9c9380",
+      "rms": 0.148656
     },
     "a275136f06654b03": {
       "id": "a275136f06654b03",
@@ -57597,6 +59498,19 @@
       "sha256": "81c644f45618bf5cf44cc6b4e7cbc1dc2e0fcf6e25a9408c1f762b9dc774a912",
       "rms": 0.169564
     },
+    "a3dd5985060a5849": {
+      "id": "a3dd5985060a5849",
+      "text": "てっぺん",
+      "label": "てっぺん",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-position/source/0",
+        "live/2026-11-03/live-2026-11-03-position/entry/live-2026-11-03-entry-very-top"
+      ],
+      "duration": 1.024,
+      "bytes": 8877,
+      "sha256": "2f173b02e5b6be7c05b746638eff65eab1660b8fb09d705f52b63f0a4a42ad40",
+      "rms": 0.129096
+    },
     "a3dd5be2bd08e1b6": {
       "id": "a3dd5be2bd08e1b6",
       "text": "新しい設備の管理は、どの部署の管轄に当たりますか。",
@@ -57908,6 +59822,19 @@
       "sha256": "c5e207eb00080a40d2ccf93901e604519d73df4f6f2d86d3f5531319320f8a15",
       "rms": 0.101711
     },
+    "a49cbf72f576f4ae": {
+      "id": "a49cbf72f576f4ae",
+      "text": "ある地域の博物館では、古い写真や地図をデジタル化し、誰でも検索できるウェブサイトを作ろうとしていた。",
+      "label": "ある地域の博物館では、古い写真や地図をデジタル化し、誰でも検索できるウェブサイトを作ろうとしていた。",
+      "references": [
+        "lesson/2026-11-03/immersion/0/0",
+        "lesson/2026-11-03/reading/0/0"
+      ],
+      "duration": 8.258,
+      "bytes": 66861,
+      "sha256": "58a52866205452984cb63bf2d667e13ba1bf3093e3baa40afa387b722de6a14d",
+      "rms": 0.105977
+    },
     "a49d33f91db01a0d": {
       "id": "a49d33f91db01a0d",
       "text": "ざんていてきな",
@@ -58065,6 +59992,19 @@
       "sha256": "cbca0e2929b4c8cfb1d7a19290c57493b2d11cecdeef095df04677b222bbae16",
       "rms": 0.161226
     },
+    "a51107d83f1f405c": {
+      "id": "a51107d83f1f405c",
+      "text": "すっかり",
+      "label": "すっかり",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-result-time/source/1",
+        "live/2026-11-03/live-2026-11-03-result-time/entry/live-2026-11-03-entry-completely"
+      ],
+      "duration": 1.117,
+      "bytes": 9645,
+      "sha256": "914e54fe90c4e0717400866e0960e59f442fe72c892b0bbfce9f9f0ded091ea0",
+      "rms": 0.162081
+    },
     "a515baef840eaf4b": {
       "id": "a515baef840eaf4b",
       "text": "背景と構成。",
@@ -58162,6 +60102,18 @@
       "bytes": 16557,
       "sha256": "35b3e69be25f5d910118b5375c31bd214067f19f5eee2473148460f4f55e8ef8",
       "rms": 0.133312
+    },
+    "a55bd8533e04f4ef": {
+      "id": "a55bd8533e04f4ef",
+      "text": "承諾しない",
+      "label": "承諾しない",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-refusal/source/2"
+      ],
+      "duration": 1.384,
+      "bytes": 11757,
+      "sha256": "39cfa607bd0f8500dcc3851b7a7bb8c0e88ff7d8e12dd971f70d996bbdb10f5b",
+      "rms": 0.111578
     },
     "a57047333c6669b7": {
       "id": "a57047333c6669b7",
@@ -58622,6 +60574,18 @@
       "sha256": "e2d863722e983d44811685d51b232e268d0ec6d4b37bf872fbc519048577b88d",
       "rms": 0.137027
     },
+    "a695b60a0d434f16": {
+      "id": "a695b60a0d434f16",
+      "text": "読んだことのない漫画",
+      "label": "読んだことのない漫画",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-noun-modifiers/source/0"
+      ],
+      "duration": 1.976,
+      "bytes": 16557,
+      "sha256": "ef60b3828f24e462ecf8c4f128c87fc5d3530aa6ed436c3590d483257adffadd",
+      "rms": 0.160466
+    },
     "a6b0a5379bdddf1b": {
       "id": "a6b0a5379bdddf1b",
       "text": "とりわけ金額の差異や誤翻訳などの例外では、判断材料を示し、人が修正できる設計が望ましい。",
@@ -58646,6 +60610,18 @@
       "bytes": 13293,
       "sha256": "fc8f69000a06aebcb9451da06da1004c6604d54fe8b05b8457f84bd8942d0c44",
       "rms": 0.172007
+    },
+    "a6b79169f85dd275": {
+      "id": "a6b79169f85dd275",
+      "text": "ラーメンがのびる前に、食べよう。",
+      "label": "ラーメンがのびる前に、食べよう。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-noodles/example/live-2026-11-03-example-eat-before-soggy/0"
+      ],
+      "duration": 2.672,
+      "bytes": 22125,
+      "sha256": "c8741f970d2281f8f9cd4e4728ac4731b44098be3852c0a2d793449146c64089",
+      "rms": 0.15087
     },
     "a6c93d73ed829a6f": {
       "id": "a6c93d73ed829a6f",
@@ -58720,6 +60696,31 @@
       "sha256": "c29e09bd3d2cc87bd64f0d6550b98a60986aa2d2b99be0c7add06dc02f4307c3",
       "rms": 0.135093
     },
+    "a6f190728ae38e96": {
+      "id": "a6f190728ae38e96",
+      "text": "撮影された時期や場所、作成した人の意図が分からなければ、見る人は現在の風景と過去の風景を取り違えるかもしれないからだ。",
+      "label": "撮影された時期や場所、作成した人の意図が分からなければ、見る人は現在の風景と過去の風景を取り違えるかもしれないからだ。",
+      "references": [
+        "lesson/2026-11-03/immersion/0/4",
+        "lesson/2026-11-03/reading/0/4"
+      ],
+      "duration": 10.254,
+      "bytes": 82797,
+      "sha256": "931011cd537bc0206b3d223753f00dba2670134284f872814ea1df19d3e438b3",
+      "rms": 0.113599
+    },
+    "a702922d0102b7f9": {
+      "id": "a702922d0102b7f9",
+      "text": "つい",
+      "label": "つい",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-unnoticed/entry/live-2026-11-03-entry-unintentionally"
+      ],
+      "duration": 0.839,
+      "bytes": 7341,
+      "sha256": "19392b41b75d8e28247dc1516e437139de3b42451961dd5427c1f721b4cca5ff",
+      "rms": 0.139981
+    },
     "a72667728531f096": {
       "id": "a72667728531f096",
       "text": "欠落を検出する",
@@ -58755,6 +60756,18 @@
       "bytes": 11373,
       "sha256": "522488f88e3bae5c02827a12f727a04ab63b61d6efc329d025bc51f65d66f296",
       "rms": 0.10534
+    },
+    "a75ce5bf8ae83563": {
+      "id": "a75ce5bf8ae83563",
+      "text": "来週の試合を楽しみにしている。",
+      "label": "来週の試合を楽しみにしている。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-pleasure/example/live-2026-11-03-example-look-forward-next-match/0"
+      ],
+      "duration": 2.65,
+      "bytes": 21933,
+      "sha256": "7bf185cd3a19f91849b2edfdb5b68496abe1976ab8efa16c809b15a53cd57633",
+      "rms": 0.174959
     },
     "a76178f5ac117149": {
       "id": "a76178f5ac117149",
@@ -59472,6 +61485,19 @@
       "bytes": 49773,
       "sha256": "b7a53de54a2f1c63f8cc69eea5a3a3f3ef9d5f1d1b60f89715fcd67acace72f3",
       "rms": 0.132518
+    },
+    "a8de7fbad19b9bf6": {
+      "id": "a8de7fbad19b9bf6",
+      "text": "だからといって、不確かな情報を確定した事実として補ってよいわけでもない。「",
+      "label": "だからといって、不確かな情報を確定した事実として補ってよいわけでもない。「",
+      "references": [
+        "lesson/2026-11-03/immersion/2/1",
+        "lesson/2026-11-03/reading/2/1"
+      ],
+      "duration": 5.864,
+      "bytes": 47661,
+      "sha256": "8d3714eaa2f013534c31696fe7e742625a1ac10679b35275c6c8c9435073f491",
+      "rms": 0.137307
     },
     "a8e4ad279412f62b": {
       "id": "a8e4ad279412f62b",
@@ -60323,6 +62349,18 @@
       "sha256": "811821daab1e565c74d337c98313e053bf969d22b34d4e428516f92e1114a1d8",
       "rms": 0.192366
     },
+    "abc2d77e5a1931b2": {
+      "id": "abc2d77e5a1931b2",
+      "text": "画面に映す",
+      "label": "画面に映す",
+      "references": [
+        "lesson/2026-11-03/vocabulary/2026-11-03-v-afeb04113052/collocation/0"
+      ],
+      "duration": 1.454,
+      "bytes": 12333,
+      "sha256": "cda3086e7706390f46c5c76bb36a1c0e86de195e64b3d7b42d5bf4a3cd6d0887",
+      "rms": 0.184697
+    },
     "abcda595d71d6879": {
       "id": "abcda595d71d6879",
       "text": "今日材料改編・第5問|防御の運用を変更した理由",
@@ -60709,6 +62747,18 @@
       "sha256": "a7a6f1fc2b4a1acc9e5e6751fdd3271583e7653262ab0a73e7e2e9e289e5e018",
       "rms": 0.135289
     },
+    "acf8e37dd64d1529": {
+      "id": "acf8e37dd64d1529",
+      "text": "楽しい話に水を差すようで悪いけれど、そろそろ帰ろう。",
+      "label": "楽しい話に水を差すようで悪いけれど、そろそろ帰ろう。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-social-idioms/example/live-2026-11-03-example-interrupt-cheerful-talk/0"
+      ],
+      "duration": 4.519,
+      "bytes": 36909,
+      "sha256": "f17ef1e6b6f69d5024978805a318ee8b992fa1c206eaa215e6ddb8cfc2976378",
+      "rms": 0.13182
+    },
     "acfae5468ebb3fc2": {
       "id": "acfae5468ebb3fc2",
       "text": "部品名が分かっても、実際に使われているバージョンや利用経路が確認できなければ、問題のある機能が製品に影響するかどうかは判断しにくいからだ。",
@@ -60939,6 +62989,18 @@
       "sha256": "a64896009431403c60a0dd97053a04313f87281dcc243a1cd495e62fb646e3d5",
       "rms": 0.13423
     },
+    "ad94fc54e53adac8": {
+      "id": "ad94fc54e53adac8",
+      "text": "初めての駅で出口がわからず、まごまごした。",
+      "label": "初めての駅で出口がわからず、まごまごした。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-manner-words/example/live-2026-11-03-example-lost-at-station/0"
+      ],
+      "duration": 3.741,
+      "bytes": 30573,
+      "sha256": "395a9eef732f31bf30b75c34045929e349be3fe46b65c1a19fd41decf46ca4b0",
+      "rms": 0.146906
+    },
     "ada131ff3bac9c1b": {
       "id": "ada131ff3bac9c1b",
       "text": "開発の速度が上がったサービスでは、依存関係を管理する必要がない。",
@@ -61025,6 +63087,18 @@
       "bytes": 14829,
       "sha256": "f7ef307ffa72b46bf65fc7d92a20f8a91094dc938bb6807ec25265d54436cdc5",
       "rms": 0.15812
+    },
+    "ade4bc6b07789357": {
+      "id": "ade4bc6b07789357",
+      "text": "Firehoseへ送信できても、Lambda変換後にどこへ残るかは結果によって違います。",
+      "label": "Firehoseへ送信できても、Lambda変換後にどこへ残るかは結果によって違います。",
+      "references": [
+        "lesson/2026-11-03/grammar/2026-11-03-g-study-527f5226/evidence/0"
+      ],
+      "duration": 6.376,
+      "bytes": 51693,
+      "sha256": "590b907a28947c0b6cfa224b1ff9d773202d5a1cac3155dd0e1018be010a7133",
+      "rms": 0.153485
     },
     "ade5c775ab1986a1": {
       "id": "ade5c775ab1986a1",
@@ -61363,6 +63437,18 @@
       "sha256": "48e7112eae3db7bf79f6619d7ebffe7d2bf60b84d066691e9134fb475715da13",
       "rms": 0.157228
     },
+    "aecedd2802d7d57c": {
+      "id": "aecedd2802d7d57c",
+      "text": "準備ができると、友達が私を呼びに来た。",
+      "label": "準備ができると、友達が私を呼びに来た。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-call-purpose/example/live-2026-11-03-example-friend-came-call/0"
+      ],
+      "duration": 3.891,
+      "bytes": 31917,
+      "sha256": "ccbc0e91f5f78b481731e47ab68a7fb1d992951c5522ebcc101735796734cdfd",
+      "rms": 0.147647
+    },
     "aed25c2f2bea19f3": {
       "id": "aed25c2f2bea19f3",
       "text": "利用が増えるにつれて、引き継ぎ不足が顕在化しました。",
@@ -61495,6 +63581,18 @@
       "sha256": "cb6327869287107b146bbcf868bf7aa20782027e40a28e78ec2a043e63fce1c7",
       "rms": 0.11569
     },
+    "af12976d796dfd79": {
+      "id": "af12976d796dfd79",
+      "text": "この物語では、主人公が百年前にタイムスリップする。",
+      "label": "この物語では、主人公が百年前にタイムスリップする。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-fantasy/example/live-2026-11-03-example-time-slip-story/0"
+      ],
+      "duration": 4.588,
+      "bytes": 37485,
+      "sha256": "2298802e20079340d7e6d05abcbf1b178a1a0e3342ac53f38394b28819a98928",
+      "rms": 0.142344
+    },
     "af1cf05377c75867": {
       "id": "af1cf05377c75867",
       "text": "原因がまだ分からないので、( )影響の大きい操作を止め、ログを確認しましょう。",
@@ -61542,6 +63640,18 @@
       "bytes": 14445,
       "sha256": "326f5f7c2804ca5b0a1133e6a40264f5d26432108d645559ff63671c1448708c",
       "rms": 0.184647
+    },
+    "af28ee655264a589": {
+      "id": "af28ee655264a589",
+      "text": "画面の右端にあるボタンを押してください。",
+      "label": "画面の右端にあるボタンを押してください。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-position/example/live-2026-11-03-example-right-edge-button/0"
+      ],
+      "duration": 3.149,
+      "bytes": 25965,
+      "sha256": "ad30bee92de7143f1425dd6e56825023c4f0acb48d94ccc7fa9ed9a21b6e9dbe",
+      "rms": 0.160347
     },
     "af2e128487d267c0": {
       "id": "af2e128487d267c0",
@@ -61845,6 +63955,19 @@
       "sha256": "e3a292ce49057fbb4d11311be1fa70af468c9aa0656ab0256db6c5abcf2851c7",
       "rms": 0.135127
     },
+    "afd488357e71cf31": {
+      "id": "afd488357e71cf31",
+      "text": "だらだら",
+      "label": "だらだら",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-manner-words/source/2",
+        "live/2026-11-03/live-2026-11-03-manner-words/entry/live-2026-11-03-entry-dara-dara"
+      ],
+      "duration": 1.233,
+      "bytes": 10605,
+      "sha256": "90ebb8bacd04b29e7e3b04435e52c61a166575708d0904738990e78d42fc6c13",
+      "rms": 0.145271
+    },
     "afd4918be7bd4797": {
       "id": "afd4918be7bd4797",
       "text": "3 かんかい",
@@ -61935,6 +64058,18 @@
       "bytes": 39789,
       "sha256": "b9665a26b328435982db9dbc3db37e7bab6e0581caa4214545b2dfff1e35cb79",
       "rms": 0.131335
+    },
+    "b0167af6d04ca5ba": {
+      "id": "b0167af6d04ca5ba",
+      "text": "しあいをたのしみにする",
+      "label": "試合を楽しみにする",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-pleasure/entry/live-2026-11-03-entry-look-forward-match"
+      ],
+      "duration": 2.092,
+      "bytes": 17517,
+      "sha256": "41cb52566daca9cccb78b1d4c46fd2f4ef5713c160f6b348f5360949166c7cc4",
+      "rms": 0.18583
     },
     "b02286b93f81e11d": {
       "id": "b02286b93f81e11d",
@@ -62105,6 +64240,18 @@
       "bytes": 16173,
       "sha256": "de6a0e54c847567c1c911cac345905d24a64d114b676ad24a4a8a607ea01102b",
       "rms": 0.158201
+    },
+    "b0aad16ce7572a30": {
+      "id": "b0aad16ce7572a30",
+      "text": "信用を損じる",
+      "label": "信用を損じる",
+      "references": [
+        "lesson/2026-11-03/vocabulary/2026-11-03-v-f637057bbac4/collocation/1"
+      ],
+      "duration": 1.558,
+      "bytes": 13101,
+      "sha256": "385c17d69192a9c6ee2be4a5a8be97c7a8830a84f96bda585ba53e15098e002e",
+      "rms": 0.201181
     },
     "b0b01f0f56fd55bb": {
       "id": "b0b01f0f56fd55bb",
@@ -62639,6 +64786,18 @@
       "sha256": "06030ba7f9301a90b564f4ebe8305c20d497c6a975a8c25e34e09cd0ee28924b",
       "rms": 0.142924
     },
+    "b222871e2e05e4ea": {
+      "id": "b222871e2e05e4ea",
+      "text": "そのため広告では、実際の商品説明よりも、使う人が思い描くイメージで他社との差を示そうとする傾向が生まれた。",
+      "label": "そのため広告では、実際の商品説明よりも、使う人が思い描くイメージで他社との差を示そうとする傾向が生まれた。",
+      "references": [
+        "lesson/2026-11-03/review/4/detail/1"
+      ],
+      "duration": 9.348,
+      "bytes": 75501,
+      "sha256": "6d71af87f24bfaa6ca2719e9f703668803810a80e12b72c627975bf601eec19f",
+      "rms": 0.137557
+    },
     "b2263a5a2c74160e": {
       "id": "b2263a5a2c74160e",
       "text": "何度修正しても同じテストで失敗し、だんだん( )してきたので、少し席を離れて頭を冷やすことにした。",
@@ -62735,6 +64894,19 @@
       "bytes": 14061,
       "sha256": "66e2c5c88d0eec057dec35c2e57f3f0592d21d7a6e48805cb288e17798d1eacb",
       "rms": 0.119401
+    },
+    "b27419697892b445": {
+      "id": "b27419697892b445",
+      "text": "どきどき",
+      "label": "どきどき",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-thrill/source/2",
+        "live/2026-11-03/live-2026-11-03-thrill/entry/live-2026-11-03-entry-dokidoki"
+      ],
+      "duration": 1.28,
+      "bytes": 10989,
+      "sha256": "e1ef0593e5d9786d30042175336fb9bb84e02f730929dd4fabfa770abe85f0db",
+      "rms": 0.145693
     },
     "b27d38f0f6da32b4": {
       "id": "b27d38f0f6da32b4",
@@ -62881,6 +65053,19 @@
       "sha256": "bedcefc63b110ab5b198637816272629956991b8dc9cc3d3723338b11301deac",
       "rms": 0.168225
     },
+    "b301e101fa07984d": {
+      "id": "b301e101fa07984d",
+      "text": "ぞくぞく",
+      "label": "ぞくぞく",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-thrill/source/4",
+        "live/2026-11-03/live-2026-11-03-thrill/entry/live-2026-11-03-entry-zokuzoku"
+      ],
+      "duration": 1.268,
+      "bytes": 10797,
+      "sha256": "66a7ebacd221dd9d4f9d97762b71270ea93907317e37b7d9bc781b24c472bdb9",
+      "rms": 0.103009
+    },
     "b302bd09a3f6a3bd": {
       "id": "b302bd09a3f6a3bd",
       "text": "せいじゅくど",
@@ -62966,6 +65151,18 @@
       "sha256": "153ca32a57d821cd62d1e91ec0d4c310ac1285dfff62f15b96bdcf3f9defbeff",
       "rms": 0.1792
     },
+    "b339b1e2ed41878e": {
+      "id": "b339b1e2ed41878e",
+      "text": "既存のフルSHA運用を捨てず、小さな範囲で適用境界を確認する判断につなげます。",
+      "label": "既存のフルSHA運用を捨てず、小さな範囲で適用境界を確認する判断につなげます。",
+      "references": [
+        "lesson/2026-11-03/vocabulary/2026-11-03-v-study-1e18d506/evidence/0"
+      ],
+      "duration": 6.931,
+      "bytes": 56109,
+      "sha256": "542ae94dbdbfcb6fb2b9f8012357c45f5f034c0e8f4002c272e56fdcd1c20365",
+      "rms": 0.147035
+    },
     "b34379d1298bc82d": {
       "id": "b34379d1298bc82d",
       "text": "りゅうど",
@@ -62977,6 +65174,18 @@
       "bytes": 10413,
       "sha256": "b01a89bfefce99be5bde19cf26a254c4c2467b73891667f9a6934d71b7b13366",
       "rms": 0.166286
+    },
+    "b3454835f3923699": {
+      "id": "b3454835f3923699",
+      "text": "4 駅まで抜き打ちで歩いた。",
+      "label": "④ 駅まで抜き打ちで歩いた。",
+      "references": [
+        "lesson/2026-11-03/review/1/detail/4"
+      ],
+      "duration": 2.44,
+      "bytes": 20205,
+      "sha256": "35f9ae737836ac1d63115268b895827d8a08c3bddfa852202f8e67973173b394",
+      "rms": 0.140772
     },
     "b34ca576d80f168a": {
       "id": "b34ca576d80f168a",
@@ -63200,6 +65409,18 @@
       "sha256": "25b4562fc4011cbd7d5e84fbcc12d7b6c3af57d741fc3223d78bee73fd664259",
       "rms": 0.135823
     },
+    "b3ef5e382d49306c": {
+      "id": "b3ef5e382d49306c",
+      "text": "順番に、三人ずつ部屋に入ってください。",
+      "label": "順番に、三人ずつ部屋に入ってください。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-zutsu/example/live-2026-11-03-example-enter-three-request/0"
+      ],
+      "duration": 3.485,
+      "bytes": 28653,
+      "sha256": "aa72a16b3116401cd25f3dc8e6aed4269efa7ec102ed33de366a6cef2317e86c",
+      "rms": 0.170534
+    },
     "b3f8a1c0ac0ccd44": {
       "id": "b3f8a1c0ac0ccd44",
       "text": "メモリから追い出す",
@@ -63409,6 +65630,18 @@
       "sha256": "cb50577239164e51596d191c1f208878c6efb98fa24efd654b462f981a02af8f",
       "rms": 0.128526
     },
+    "b48e6da94747aed5": {
+      "id": "b48e6da94747aed5",
+      "text": "1 わけにはいかない 2 に越したことはない 3 どころではない 4 ことは否めない",
+      "label": "① わけにはいかない ② に越したことはない ③ どころではない ④ ことは否めない",
+      "references": [
+        "lesson/2026-11-03/review/2/detail/1"
+      ],
+      "duration": 5.227,
+      "bytes": 42477,
+      "sha256": "83ccd5d809d54f64886d01b694ae87546066dba40bb264e7144bfca9e1089761",
+      "rms": 0.150872
+    },
     "b48ed472ebd8131e": {
       "id": "b48ed472ebd8131e",
       "text": "原因を切り分けるに当たり、開発者はまず、問題が生じる操作と端末の条件を整理した。",
@@ -63421,6 +65654,18 @@
       "bytes": 59757,
       "sha256": "4edd21a6af1515b9c0544c1ef27839c46e33bc2b8e0cad8f61ddefb02077f2ce",
       "rms": 0.134835
+    },
+    "b49913a20a625bde": {
+      "id": "b49913a20a625bde",
+      "text": "毎日少しずつ、日本語を勉強している。",
+      "label": "毎日少しずつ、日本語を勉強している。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-zutsu/example/live-2026-11-03-example-little-daily-study/0"
+      ],
+      "duration": 3.578,
+      "bytes": 29421,
+      "sha256": "90dc5cec48172704b29de6678225ad72d234f71bf0f8f527bed33819b447daf0",
+      "rms": 0.132066
     },
     "b499f48da3fb2fc1": {
       "id": "b499f48da3fb2fc1",
@@ -63603,6 +65848,18 @@
       "bytes": 30957,
       "sha256": "5614781fab63022e28ab0f6f50ad31068f5fc2b904ac6b2fc54f95f77d06501c",
       "rms": 0.130065
+    },
+    "b581e0c316f44027": {
+      "id": "b581e0c316f44027",
+      "text": "読む価値: 実装のテスト合格と、上流の仕様漏れを分けて評価するための具体的な比較条件を学べます。",
+      "label": "読む価値: 実装のテスト合格と、上流の仕様漏れを分けて評価するための具体的な比較条件を学べます。",
+      "references": [
+        "lesson/2026-11-03/grammar/2026-11-03-g-study-1739e8be/evidence/0"
+      ],
+      "duration": 8.531,
+      "bytes": 68973,
+      "sha256": "67be4c2456c76a6f8b16adac695214a132d6ae954db2ed90bf0205a59b5cdf8d",
+      "rms": 0.131021
     },
     "b58cb8b1ddc4d0cd": {
       "id": "b58cb8b1ddc4d0cd",
@@ -63809,6 +66066,18 @@
       "bytes": 87213,
       "sha256": "868f985598c585de76dab6b0e40cbc78bc0b106cb846c93e0044006c6ac90c61",
       "rms": 0.114487
+    },
+    "b6133a7d6bfeff29": {
+      "id": "b6133a7d6bfeff29",
+      "text": "昨夜は電気をつけたまま、寝てしまった。",
+      "label": "昨夜は電気をつけたまま、寝てしまった。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-mama-shimau/example/live-2026-11-03-example-lights-left-on/0"
+      ],
+      "duration": 3.532,
+      "bytes": 29037,
+      "sha256": "3034fcc4cace322e0a3e779951bd79099819a57c73d922304c0ecff1b749199a",
+      "rms": 0.128403
     },
     "b615581cb06c1c10": {
       "id": "b615581cb06c1c10",
@@ -64272,6 +66541,18 @@
       "sha256": "efca269974d55c64e4c7fb54cddf052fcb6aea327f57edb21df60cb1e748d087",
       "rms": 0.159079
     },
+    "b7430bb7656bee5b": {
+      "id": "b7430bb7656bee5b",
+      "text": "模範を示す",
+      "label": "模範を示す",
+      "references": [
+        "lesson/2026-11-03/vocabulary/2026-11-03-v-cbee35369352/collocation/1"
+      ],
+      "duration": 1.442,
+      "bytes": 12333,
+      "sha256": "e4dc35df0f2af16b75b6950d236f7c87c54ac99ab0d49cd1960366fb5dc9f5e3",
+      "rms": 0.150733
+    },
     "b7466e6efc54d6a2": {
       "id": "b7466e6efc54d6a2",
       "text": "桁違いに大きい",
@@ -64421,6 +66702,18 @@
       "sha256": "368b5f36b205e8f0a556deecdab255988dc08f7f1142fa88f353694c93faf3d6",
       "rms": 0.130432
     },
+    "b7b0f1f7f288151b": {
+      "id": "b7b0f1f7f288151b",
+      "text": "自分で描いた絵をみんなに見せた。",
+      "label": "自分で描いた絵をみんなに見せた。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-show/example/live-2026-11-03-example-show-drawing/0"
+      ],
+      "duration": 2.719,
+      "bytes": 22509,
+      "sha256": "6195d1850d59e56767a36d5bce134d6b896a74f5be676121620846cc7f1eaaad",
+      "rms": 0.182177
+    },
     "b7b2fa2fb181218b": {
       "id": "b7b2fa2fb181218b",
       "text": "検証は米国東部のus-east-1で行い、主系には正常応答、503、10秒の待機を切り替えられるLambdaを置いています。",
@@ -64568,6 +66861,18 @@
       "sha256": "1cb6eab5fda40082c6225ff693e66a00afc4a08e7bae660a6a9bf0b148720491",
       "rms": 0.158623
     },
+    "b8125eaa4e1446e6": {
+      "id": "b8125eaa4e1446e6",
+      "text": "1 商品の品質確認が禁止されたから。",
+      "label": "① 商品の品質確認が禁止されたから。",
+      "references": [
+        "lesson/2026-11-03/review/4/detail/3"
+      ],
+      "duration": 3.322,
+      "bytes": 27309,
+      "sha256": "ebb1a89468d3e247562d6f1a4b65f4ead863c99de9c7fdbc0e6558bf92e8759f",
+      "rms": 0.121936
+    },
     "b8176cec328499d8": {
       "id": "b8176cec328499d8",
       "text": "特定のガードレール集合が欠陥を必ず減らす比較実験ではなく、品質基準を守るための実務的な仕組みです。",
@@ -64643,6 +66948,18 @@
       "bytes": 88749,
       "sha256": "45967c9687e8ac01d2eb06076bbb37a75dbb3a955ac60922ccb0e70a9535fafa",
       "rms": 0.142947
+    },
+    "b83da358a8fee864": {
+      "id": "b83da358a8fee864",
+      "text": "右はし",
+      "label": "右はし",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-position/source/1"
+      ],
+      "duration": 1.233,
+      "bytes": 10605,
+      "sha256": "c067c2142702500726d512cc8c91ba0dc7347dbce8d9d564495e859802adb274",
+      "rms": 0.163674
     },
     "b84c69964cef4632": {
       "id": "b84c69964cef4632",
@@ -65028,6 +67345,18 @@
       "bytes": 71853,
       "sha256": "00a09e95db550f86c45b351a5fbc8790a1cd40bc5e1adf5868fdd1dae8e6742e",
       "rms": 0.131145
+    },
+    "b96f0ff1bf6010c5": {
+      "id": "b96f0ff1bf6010c5",
+      "text": "しょうちしない",
+      "label": "承知しない",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-refusal/entry/live-2026-11-03-entry-not-accept"
+      ],
+      "duration": 1.291,
+      "bytes": 10989,
+      "sha256": "b4570ff8134f0e1ebb5436ee16f689e486e36b1e18bb3e0d7b044dfcda6d178b",
+      "rms": 0.143755
     },
     "b97652bb78ab38cf": {
       "id": "b97652bb78ab38cf",
@@ -66100,6 +68429,18 @@
       "sha256": "9b431df3b55984158c331c057aae588fed96ab18b1046cf5c3608a119e3cad84",
       "rms": 0.183609
     },
+    "bccd2abc6ec733d0": {
+      "id": "bccd2abc6ec733d0",
+      "text": "きらくなさぎょう",
+      "label": "気楽な作業",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-pleasure/entry/live-2026-11-03-entry-carefree-task"
+      ],
+      "duration": 1.558,
+      "bytes": 13101,
+      "sha256": "2abb9570ba8a27a507dcd987c1e547d13a7dcaf2aa283c4ee3b44aa2be871f6b",
+      "rms": 0.152852
+    },
     "bcd475a5531ed899": {
       "id": "bcd475a5531ed899",
       "text": "記事が扱うopenAsBlobはファイルを基にしたBlobを返すため、作成時点と実際に読み取る時点を分ける必要があります。",
@@ -66123,6 +68464,18 @@
       "bytes": 41133,
       "sha256": "a4fdb985dc522595b529930942b3b7e4fc3d311dadd65552d6c2617cb091831e",
       "rms": 0.159142
+    },
+    "bcfb67272e502413": {
+      "id": "bcfb67272e502413",
+      "text": "たべかけのケーキ",
+      "label": "食べかけのケーキ",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-half-eaten/entry/live-2026-11-03-entry-half-eaten-cake"
+      ],
+      "duration": 1.732,
+      "bytes": 14637,
+      "sha256": "0ae388a5d1794cef670adbfce08b68dea40d9cae0bbb93fb023bb44141bc982f",
+      "rms": 0.154866
     },
     "bd0038241140c030": {
       "id": "bd0038241140c030",
@@ -66245,6 +68598,18 @@
       "sha256": "21fcc3c952f96e315547cf20b304647473d626c63906542844f21cfb4c3c9be4",
       "rms": 0.149812
     },
+    "bd86afc218692b6e": {
+      "id": "bd86afc218692b6e",
+      "text": "つうほうする",
+      "label": "通報する",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-notify-call/entry/live-2026-11-03-entry-report"
+      ],
+      "duration": 1.315,
+      "bytes": 11181,
+      "sha256": "a0b305d0b3721765f11b4122e939b0975c1f3067c431b500fba7dc62f0b38c7a",
+      "rms": 0.157406
+    },
     "bd88c39719a34b9b": {
       "id": "bd88c39719a34b9b",
       "text": "符号化の取り決め",
@@ -66342,6 +68707,18 @@
       "bytes": 13869,
       "sha256": "30428f80108bd802303d13677398be22546615b09b297eb814116354e5468b52",
       "rms": 0.157775
+    },
+    "bdc828b8f40577ec": {
+      "id": "bdc828b8f40577ec",
+      "text": "目も眩む",
+      "label": "目も眩む",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-glare/source/0"
+      ],
+      "duration": 1.349,
+      "bytes": 11565,
+      "sha256": "4ceeb68d7d8227c98fcbb54ef6cd5a5bda47ee412c1fce0163a52e7c31d67948",
+      "rms": 0.147719
     },
     "bdcc2ba640015cd2": {
       "id": "bdcc2ba640015cd2",
@@ -66475,6 +68852,18 @@
       "bytes": 10029,
       "sha256": "5eeaf8ea04283202e924d63f2ba20356fc99e0ab2d8a8b6c772847e2bc604158",
       "rms": 0.093175
+    },
+    "be2daf05d5bc0681": {
+      "id": "be2daf05d5bc0681",
+      "text": "雨の日が続くと、少し憂うつな気分になる。",
+      "label": "雨の日が続くと、少し憂うつな気分になる。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-mood/example/live-2026-11-03-example-gloomy-rain/0"
+      ],
+      "duration": 3.845,
+      "bytes": 31533,
+      "sha256": "a1cf70971ac96bc9bfd7e07929a0a279c6abd28ebf49a4db7c8c820643d0d9e2",
+      "rms": 0.146768
     },
     "be45989183ed5975": {
       "id": "be45989183ed5975",
@@ -67657,6 +70046,18 @@
       "sha256": "44bf433772d36a5675324fb58315b21ebd8e579738bbf4dcbaefe53700ca91a6",
       "rms": 0.119524
     },
+    "c16bf5ca4664aa06": {
+      "id": "c16bf5ca4664aa06",
+      "text": "三人ずつ部屋に入ってください",
+      "label": "三人ずつ部屋に入ってください",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-zutsu/source/0"
+      ],
+      "duration": 2.557,
+      "bytes": 21165,
+      "sha256": "449468b9c0f8891107640b481caa1379e6ed0063c794f5745f732aa7b79d0ea2",
+      "rms": 0.198671
+    },
     "c172308520855179": {
       "id": "c172308520855179",
       "text": "今日の錯題 Q5|ローカル処理と承認設計",
@@ -67740,6 +70141,19 @@
       "bytes": 9261,
       "sha256": "371bdf1c346713b4b62659c753262b0246be6a7454faa7cece8bae302414736b",
       "rms": 0.120332
+    },
+    "c1e8675ef44ab9b2": {
+      "id": "c1e8675ef44ab9b2",
+      "text": "もっとも、すべての資料の来歴が完全に解明されるまで公開を見送れば、利用者が資料に出会う機会まで失われかねない。",
+      "label": "もっとも、すべての資料の来歴が完全に解明されるまで公開を見送れば、利用者が資料に出会う機会まで失われかねない。",
+      "references": [
+        "lesson/2026-11-03/immersion/2/0",
+        "lesson/2026-11-03/reading/2/0"
+      ],
+      "duration": 9.302,
+      "bytes": 75117,
+      "sha256": "42c5c3c2c8c32bff0baffdb337c09c8c55e9be9601c8eb4e501d56d2b1f5a5fe",
+      "rms": 0.16284
     },
     "c1f0de34713dd2c0": {
       "id": "c1f0de34713dd2c0",
@@ -67936,6 +70350,18 @@
       "bytes": 14061,
       "sha256": "bf896889d27f104473ad58fac559d8699eef69f8fbb6e5027c6cb1efa53c6f67",
       "rms": 0.161341
+    },
+    "c268fceabc7b8cae": {
+      "id": "c268fceabc7b8cae",
+      "text": "いつのまに",
+      "label": "いつの間に",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-unnoticed/entry/live-2026-11-03-entry-when-without-noticing"
+      ],
+      "duration": 1.315,
+      "bytes": 11181,
+      "sha256": "872293eea5a70232dc4c29f3423476939ce6e511e41b3e0320282bf357d22a1f",
+      "rms": 0.204891
     },
     "c2737d1641514692": {
       "id": "c2737d1641514692",
@@ -68480,6 +70906,18 @@
       "sha256": "e0d551a71f8d98f27deb73fd6646ee5867ab0133cde22d506a79f9628b86ea33",
       "rms": 0.183561
     },
+    "c4023e75eecbc8c1": {
+      "id": "c4023e75eecbc8c1",
+      "text": "投げたブーメランが手元に戻ってきた。",
+      "label": "投げたブーメランが手元に戻ってきた。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-boomerang/example/live-2026-11-03-example-boomerang-return/0"
+      ],
+      "duration": 2.917,
+      "bytes": 24045,
+      "sha256": "29219c2fa1e095c193b0b0d8450a87ed42f5a8ebefc48bea3b98f6863ade6d3a",
+      "rms": 0.18879
+    },
     "c4061834126b5098": {
       "id": "c4061834126b5098",
       "text": "そのうえで、重要な条件が省略されていないかも確認する。",
@@ -68782,6 +71220,18 @@
       "bytes": 10029,
       "sha256": "aa61c86f617c2e7f97e81adc7c6a154e4bcef6d07906a1b1f251d2ea55cf96b3",
       "rms": 0.191983
+    },
+    "c513c816a0d8303a": {
+      "id": "c513c816a0d8303a",
+      "text": "らくなしごと",
+      "label": "楽な仕事",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-pleasure/entry/live-2026-11-03-entry-easy-work"
+      ],
+      "duration": 1.547,
+      "bytes": 13101,
+      "sha256": "5e3944bd0c6b1c9da5c53d0ed08849f8d868db44a0999f8d89a20933028ad876",
+      "rms": 0.132318
     },
     "c515229e51dc8582": {
       "id": "c515229e51dc8582",
@@ -69364,6 +71814,18 @@
       "sha256": "55f08a910d283df0003f37dc27b46535ae56f61465d85730a1b23c415a291aeb",
       "rms": 0.121692
     },
+    "c6c526c7696a61cb": {
+      "id": "c6c526c7696a61cb",
+      "text": "記事の例は、その検討のための故障注入実験であって、運用設計が完成したという証拠ではありません。",
+      "label": "記事の例は、その検討のための故障注入実験であって、運用設計が完成したという証拠ではありません。",
+      "references": [
+        "lesson/2026-11-03/vocabulary/2026-11-03-v-study-966a7d9e/evidence/0"
+      ],
+      "duration": 7.922,
+      "bytes": 64173,
+      "sha256": "f40df4f0841121022ed4a92d3aec24b6a13dc456664d3e841d51af65a940404f",
+      "rms": 0.178317
+    },
     "c6ce961e4667285a": {
       "id": "c6ce961e4667285a",
       "text": "調査で得た知見を、ほかのチームにも還元します。",
@@ -69649,6 +72111,18 @@
       "sha256": "783a5c78ca462a30ec798d8a1b42c875759787795b46b9ee6e662bb794d272ae",
       "rms": 0.128573
     },
+    "c7551068997c9a74": {
+      "id": "c7551068997c9a74",
+      "text": "すこしずつ",
+      "label": "少しずつ",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-zutsu/entry/live-2026-11-03-entry-little-by-little"
+      ],
+      "duration": 1.349,
+      "bytes": 11565,
+      "sha256": "27a4d33c72cbeee4e7fe855fa78783c80c51432db26a0d06fe96ae1eb09a9ae0",
+      "rms": 0.110885
+    },
     "c75f95d327780377": {
       "id": "c75f95d327780377",
       "text": "答えはここでは表示しない。",
@@ -69692,6 +72166,18 @@
       "bytes": 45165,
       "sha256": "f0df6d5375e3d7ea3e381c43dba65fac57ff7ac46ec9505b2675c3438341b95e",
       "rms": 0.178616
+    },
+    "c777e89d3ebb2af1": {
+      "id": "c777e89d3ebb2af1",
+      "text": "自分をコントロールする",
+      "label": "自分をコントロールする",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-anger-control/source/2"
+      ],
+      "duration": 1.999,
+      "bytes": 16749,
+      "sha256": "808bdd74e11c6d9e36085b51728386142f77e3ceef0f91d7980d9a6e8ece1291",
+      "rms": 0.12616
     },
     "c78082836b0da84f": {
       "id": "c78082836b0da84f",
@@ -69885,6 +72371,18 @@
       "bytes": 14829,
       "sha256": "9023352e98ad4821d6756d19949ab7aa50b8fa556579e7b8a00efe721fe16c16",
       "rms": 0.104799
+    },
+    "c803a583a19ee46f": {
+      "id": "c803a583a19ee46f",
+      "text": "偉業",
+      "label": "偉業",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-achievement/source/1"
+      ],
+      "duration": 0.978,
+      "bytes": 8493,
+      "sha256": "f6a7ea479a7f2918d18c7c1c109a8108ce24a10da2ce87cd5afc67451525b0ca",
+      "rms": 0.160873
     },
     "c80cbf0da2f34449": {
       "id": "c80cbf0da2f34449",
@@ -70511,6 +73009,18 @@
       "sha256": "924169b8ef628c7ff364154bbb49eb26df945c292ea41e0a323203aa44e5fff4",
       "rms": 0.172963
     },
+    "c9adcfc7d6864523": {
+      "id": "c9adcfc7d6864523",
+      "text": "3 画像の方が文字より必ず正確だから。",
+      "label": "③ 画像の方が文字より必ず正確だから。",
+      "references": [
+        "lesson/2026-11-03/review/4/detail/5"
+      ],
+      "duration": 3.775,
+      "bytes": 30957,
+      "sha256": "efc7fb370f501ce3ec9b8f02a82329ec6d99b297b90daa8cd8c7c472e41cac69",
+      "rms": 0.12385
+    },
     "c9b0b03bd54fa077": {
       "id": "c9b0b03bd54fa077",
       "text": "費用をまかなう",
@@ -70752,6 +73262,30 @@
       "sha256": "c7f9c773ab48b95a4cc14bb553dee2d566e3c601cd6c0f1bbaec59656b88996a",
       "rms": 0.123514
     },
+    "ca4e4a361ebc5b82": {
+      "id": "ca4e4a361ebc5b82",
+      "text": "お世辞ではなく、本当にすてきな作品だと思います。",
+      "label": "お世辞ではなく、本当にすてきな作品だと思います。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-social-idioms/example/live-2026-11-03-example-not-flattery/0"
+      ],
+      "duration": 4.043,
+      "bytes": 33069,
+      "sha256": "6faff473871e1ac0c3a1da36e23018298108d952f01f834139aeb052987d1da9",
+      "rms": 0.1679
+    },
+    "ca61b1adf6b2a2d9": {
+      "id": "ca61b1adf6b2a2d9",
+      "text": "2 商品の機能が同じようになり、それだけでは差別化しにくくなったから。",
+      "label": "② 商品の機能が同じようになり、それだけでは差別化しにくくなったから。",
+      "references": [
+        "lesson/2026-11-03/review/4/detail/4"
+      ],
+      "duration": 5.573,
+      "bytes": 45357,
+      "sha256": "ba0fc654f07e34f1ff3e7559f838a9ff304a73388d78c84cc6026ee5d68a5534",
+      "rms": 0.132728
+    },
     "ca656310f8501c24": {
       "id": "ca656310f8501c24",
       "text": "ここだけの話なんだけど、来年引っ越す予定なんだ。",
@@ -70811,6 +73345,18 @@
       "bytes": 10605,
       "sha256": "3e0dbb6ebe6cec0a2d2ff69b16b81bdb4606c020dd9023c21207a1f33a2a12bc",
       "rms": 0.176768
+    },
+    "ca7f3008d622addc": {
+      "id": "ca7f3008d622addc",
+      "text": "明日からの旅行を考えると、わくわくする。",
+      "label": "明日からの旅行を考えると、わくわくする。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-thrill/example/live-2026-11-03-example-trip-excitement/0"
+      ],
+      "duration": 3.416,
+      "bytes": 28077,
+      "sha256": "4ba06d56c4a86718791fb52374752e95694eed4fccdd6d5103c093329af5195c",
+      "rms": 0.111518
     },
     "ca83bf82a60da346": {
       "id": "ca83bf82a60da346",
@@ -70923,6 +73469,18 @@
       "bytes": 56109,
       "sha256": "b2c1cdd9bb783524cb3d1a3c3759ba6c6459f2d6544428286cc53402f00474a1",
       "rms": 0.138359
+    },
+    "caaf50d22bf97ade": {
+      "id": "caaf50d22bf97ade",
+      "text": "条件が合わないため、その提案には承諾しなかった。",
+      "label": "条件が合わないため、その提案には承諾しなかった。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-refusal/example/live-2026-11-03-example-not-consent-proposal/0"
+      ],
+      "duration": 4.147,
+      "bytes": 33837,
+      "sha256": "3e46dd50ed1cbb7fe42f0f8fcf9154ae9ef59e0655670ff2c8a1a63ae1cbcb13",
+      "rms": 0.129036
     },
     "cab0917c01d8a2a0": {
       "id": "cab0917c01d8a2a0",
@@ -71120,6 +73678,18 @@
       "sha256": "a1ecd20d4f16f8e61ed8f5e4723792af26036767f4263d9bdfac29174e927221",
       "rms": 0.119175
     },
+    "cb256fb31501d44f": {
+      "id": "cb256fb31501d44f",
+      "text": "資料の所在・確実性・利用条件を確認できるようにしてこそ、検索結果を学習や研究に生かせる。",
+      "label": "資料の所在・確実性・利用条件を確認できるようにしてこそ、検索結果を学習や研究に生かせる。",
+      "references": [
+        "lesson/2026-11-03/option/2/0"
+      ],
+      "duration": 8.083,
+      "bytes": 65325,
+      "sha256": "51b3efc7f7f6c5e7390fc77fdd20de9715f93cba106db276d73f79e1ae47770a",
+      "rms": 0.147573
+    },
     "cb355dd055c6a134": {
       "id": "cb355dd055c6a134",
       "text": "口頭で説明する",
@@ -71156,6 +73726,18 @@
       "bytes": 14829,
       "sha256": "344c00f6606b57984a6a4c5f893127e82f6633ed931ae85cc2ae613a9afb3a5e",
       "rms": 0.147988
+    },
+    "cb4631d26d56e91e": {
+      "id": "cb4631d26d56e91e",
+      "text": "この変化の理由として最も適切なものはどれか。",
+      "label": "この変化の理由として最も適切なものはどれか。",
+      "references": [
+        "lesson/2026-11-03/review/4/detail/2"
+      ],
+      "duration": 4.078,
+      "bytes": 33261,
+      "sha256": "6f48e78b3188414dd1c89353daa1ae1ca5fc4a2fda85b21b3af7261b1b8d7358",
+      "rms": 0.151484
     },
     "cb46b6d4f2636c00": {
       "id": "cb46b6d4f2636c00",
@@ -71789,6 +74371,18 @@
       "sha256": "c4530f8bb500b8d05df5c48fc611b9f5411e7c40ee47488f8c229a141721abf9",
       "rms": 0.127264
     },
+    "cccec6a66bee84ea": {
+      "id": "cccec6a66bee84ea",
+      "text": "タイミングを見計らう",
+      "label": "タイミングを見計らう",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-timing/source/1"
+      ],
+      "duration": 1.848,
+      "bytes": 15405,
+      "sha256": "cd2cfaef2017a27dd4ceb30f106ff5b809d1470a1d61ba3574d8f4886fecce97",
+      "rms": 0.230125
+    },
     "cce4fe0f35f05dc3": {
       "id": "cce4fe0f35f05dc3",
       "text": "AIにどこまで任せるか――推論・実験・検証",
@@ -72107,6 +74701,18 @@
       "sha256": "df0a505f90fe2160bbb156463a4444fd3a454dbb131494c6e8db37d293eb55ab",
       "rms": 0.138893
     },
+    "cde57846ef2d4ec2": {
+      "id": "cde57846ef2d4ec2",
+      "text": "さんにんずつへやにはいってください",
+      "label": "三人ずつ部屋に入ってください",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-zutsu/entry/live-2026-11-03-entry-enter-three-at-time"
+      ],
+      "duration": 2.534,
+      "bytes": 20973,
+      "sha256": "a3d842b76e7f684246694ac3fbb6a11d39547bea7af3d19c65aa9aee07a0719c",
+      "rms": 0.205346
+    },
     "cde588e77985c15b": {
       "id": "cde588e77985c15b",
       "text": "今日の錯題1|ならでは",
@@ -72166,6 +74772,18 @@
       "bytes": 46125,
       "sha256": "b561d436445b50da2973639502ab79a0afc4d98ff2de7930c94c4c48b91721bd",
       "rms": 0.140845
+    },
+    "ce106d0c4be0daa8": {
+      "id": "ce106d0c4be0daa8",
+      "text": "ボタンをおす",
+      "label": "ボタンを押す",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-button/entry/live-2026-11-03-entry-press-button"
+      ],
+      "duration": 1.303,
+      "bytes": 11181,
+      "sha256": "649308b526d19e5bb7ffef2740abc120df236375967255f55e94d88911d7cbd3",
+      "rms": 0.124811
     },
     "ce1de68b896eed67": {
       "id": "ce1de68b896eed67",
@@ -72719,6 +75337,18 @@
       "bytes": 65901,
       "sha256": "71cfb000df13db46a0c5adba06d288e80314b15ea200e1712dc047d8bb15db41",
       "rms": 0.133237
+    },
+    "d0023b1dd830f331": {
+      "id": "d0023b1dd830f331",
+      "text": "人を呼び出す",
+      "label": "人を呼び出す",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-notify-call/source/2"
+      ],
+      "duration": 1.384,
+      "bytes": 11757,
+      "sha256": "86dcc943431039e391cf6df16d6d10c54633de7a02ff75aa219e655c5ce05f2d",
+      "rms": 0.130093
     },
     "d008bccc95f54ce0": {
       "id": "d008bccc95f54ce0",
@@ -73544,6 +76174,18 @@
       "sha256": "a12d311460af4d65f8cbd92f338633a358bfb9bf23fe2ba42d2093959ec0ca15",
       "rms": 0.151616
     },
+    "d28531587743be74": {
+      "id": "d28531587743be74",
+      "text": "それでも、最後までやってみたい。",
+      "label": "それでも、最後までやってみたい。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-soredemo/example/live-2026-11-03-example-continue-even-so/1"
+      ],
+      "duration": 2.731,
+      "bytes": 22509,
+      "sha256": "d8bb2578e33bae3f04e29d2fa948aea1f0c3e8c1a063c9b28aacaa83179677f2",
+      "rms": 0.13883
+    },
     "d2a37ce59a7302d9": {
       "id": "d2a37ce59a7302d9",
       "text": "にわたって",
@@ -73797,6 +76439,18 @@
       "bytes": 10989,
       "sha256": "73dfb9be6f159390164811505ff577a3e87ecea0f4ec5bb118aa6d30d06dbefe",
       "rms": 0.161794
+    },
+    "d375f11d8d3c8869": {
+      "id": "d375f11d8d3c8869",
+      "text": "しらずしらず",
+      "label": "知らず知らず",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-unnoticed/entry/live-2026-11-03-entry-unconsciously"
+      ],
+      "duration": 1.535,
+      "bytes": 12909,
+      "sha256": "8553506f34cc785702176b86b9728acee3ea641b26e5d7747d6257ae18393d22",
+      "rms": 0.134135
     },
     "d3770c6438ee3a80": {
       "id": "d3770c6438ee3a80",
@@ -74181,6 +76835,30 @@
       "duration": 4.968,
       "rms": 0.126264,
       "sha256": "6de27338f2974e4f0b7031161b89b6742abfc2bd0fb84eec3f78516dfc43de89"
+    },
+    "d49b84713119c1d5": {
+      "id": "d49b84713119c1d5",
+      "text": "この靴は足にピッタリ合う。",
+      "label": "この靴は足にピッタリ合う。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-timing/example/live-2026-11-03-example-perfect-size/0"
+      ],
+      "duration": 2.348,
+      "bytes": 19437,
+      "sha256": "6fc1d32486207237f92cab9d43f048fb9b1fdf13783ad22cd52bd7933797c0c8",
+      "rms": 0.134561
+    },
+    "d4a3f5e99996fe7d": {
+      "id": "d4a3f5e99996fe7d",
+      "text": "わざとらしいみぶり",
+      "label": "わざとらしい身振り",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-deliberate/entry/live-2026-11-03-entry-affected-gesture"
+      ],
+      "duration": 1.813,
+      "bytes": 15213,
+      "sha256": "d08c051226df11b308384345a61b062b86eb0455b431dc20755603ba964effdd",
+      "rms": 0.153604
     },
     "d4aa425d324fbbc9": {
       "id": "d4aa425d324fbbc9",
@@ -74772,6 +77450,19 @@
       "duration": 1.115,
       "rms": 0.102869,
       "sha256": "ddfe75ee05beb43a728e2cc10056f2824025b102dad5e46bbe86fe6387be9322"
+    },
+    "d63ea3e12e2c74dd": {
+      "id": "d63ea3e12e2c74dd",
+      "text": "かといって、すべての注意書きを検索結果に詰め込めば、肝心の資料名が読みにくくなる。",
+      "label": "かといって、すべての注意書きを検索結果に詰め込めば、肝心の資料名が読みにくくなる。",
+      "references": [
+        "lesson/2026-11-03/immersion/4/1",
+        "lesson/2026-11-03/reading/4/1"
+      ],
+      "duration": 6.643,
+      "bytes": 53805,
+      "sha256": "5621dd0e6bd898a8c26aac70ba2a68b777052136fdc9f112debc4a2a6823753f",
+      "rms": 0.14687
     },
     "d642344886117cbc": {
       "id": "d642344886117cbc",
@@ -75763,6 +78454,18 @@
       "sha256": "e5fda6b345a96a616bff20fcc132b9770afe996a96656d420f2f48980410b58b",
       "rms": 0.192526
     },
+    "d8e8b40cdcabed08": {
+      "id": "d8e8b40cdcabed08",
+      "text": "電気をつけたまま、寝てしまった",
+      "label": "電気をつけたまま、寝てしまった",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-mama-shimau/source/0"
+      ],
+      "duration": 2.917,
+      "bytes": 24045,
+      "sha256": "162116787bc5c21fef222db55a52b86fc05edcdf224015c63cef91c7cda1fd21",
+      "rms": 0.126647
+    },
     "d8f857527c8bb7e6": {
       "id": "d8f857527c8bb7e6",
       "text": "依頼を断る",
@@ -75971,6 +78674,18 @@
       "sha256": "526605790bebf0dd3c469a6972ef2ceebd6846901296a41e55accbdfe0060fdf",
       "rms": 0.212483
     },
+    "d958446f4acb483b": {
+      "id": "d958446f4acb483b",
+      "text": "憂うつ",
+      "label": "憂うつ",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-mood/source/0"
+      ],
+      "duration": 1.094,
+      "bytes": 9453,
+      "sha256": "d663d8eb0c40905cee9def36a797d18f53ba5104114a7f4ff45a9e43e5e9b628",
+      "rms": 0.140907
+    },
     "d96e442a5dd463a6": {
       "id": "d96e442a5dd463a6",
       "text": "朝の海は宝石みたいに綺麗だ。",
@@ -76043,6 +78758,18 @@
       "bytes": 14829,
       "sha256": "a94c67dd03b60ed4790efd8b18c4531dab34d0bd4e11a7a6f078fa5d6b0d7750",
       "rms": 0.105159
+    },
+    "d99abefcb429b2b0": {
+      "id": "d99abefcb429b2b0",
+      "text": "1 抜き打ちで雨が降ってきた。",
+      "label": "① 抜き打ちで雨が降ってきた。",
+      "references": [
+        "lesson/2026-11-03/review/1/detail/1"
+      ],
+      "duration": 2.534,
+      "bytes": 20973,
+      "sha256": "a55e35d346f9a6229d4c93e8ceb5195decb7694f8240afff906ec1b04b78542c",
+      "rms": 0.157881
     },
     "d99ae82e9537cb4a": {
       "id": "d99ae82e9537cb4a",
@@ -76152,6 +78879,18 @@
       "bytes": 86253,
       "sha256": "4e6e007ab1766800d1e1aacf957a1ce2bfcf0f9ba659aafcaadf92931cd74e17",
       "rms": 0.13408
+    },
+    "d9dacb14b3c88e70": {
+      "id": "d9dacb14b3c88e70",
+      "text": "似たような商品が増えると、機能だけで違いを説明することが難しくなる。",
+      "label": "似たような商品が増えると、機能だけで違いを説明することが難しくなる。",
+      "references": [
+        "lesson/2026-11-03/review/4/detail/0"
+      ],
+      "duration": 5.854,
+      "bytes": 47469,
+      "sha256": "5eba0a577d33fa1e83d2a31394ecbf0171a588524327232f3a089c8433c33193",
+      "rms": 0.133418
     },
     "d9db46dbd4a82e77": {
       "id": "d9db46dbd4a82e77",
@@ -76321,6 +79060,18 @@
       "bytes": 89133,
       "sha256": "558a8ed89e0510b07b73316369b39bc26c58b48fd45b02273bbf143cab814fb8",
       "rms": 0.136074
+    },
+    "da66f7126c0287ce": {
+      "id": "da66f7126c0287ce",
+      "text": "病院の案内板で、皮膚科の場所を確認した。",
+      "label": "病院の案内板で、皮膚科の場所を確認した。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-body-words/example/live-2026-11-03-example-dermatology-sign/0"
+      ],
+      "duration": 3.741,
+      "bytes": 30573,
+      "sha256": "6dfd52b4405d35146fcbadedbe19d700f0b6e58b6aee3c0cab739f2046156ed3",
+      "rms": 0.189205
     },
     "da6770ae3fecca5a": {
       "id": "da6770ae3fecca5a",
@@ -76605,6 +79356,18 @@
       "sha256": "9cfa09e9df0d1e7d8babc1112ac558475dfcfd84b1d7f0b58cee198e5a2c1bbe",
       "rms": 0.157414
     },
+    "db42268b874fa3b7": {
+      "id": "db42268b874fa3b7",
+      "text": "へんなことにつかうな",
+      "label": "変なことに使うな",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-negative-command/entry/live-2026-11-03-entry-do-not-misuse"
+      ],
+      "duration": 1.883,
+      "bytes": 15789,
+      "sha256": "e6a42ca2243bf84450a0d1d5b5c6853c38073e09c2b108afc89757b5863d1bfc",
+      "rms": 0.141874
+    },
     "db52e8199e3367c5": {
       "id": "db52e8199e3367c5",
       "text": "Cyber AgentのHarnessでは、Egressをdefault denyにし、許可Targetを固定し、DNS、HTTP DestinationをTraceした上でModel Behaviorを評価するべきだ。",
@@ -76738,6 +79501,18 @@
       "sha256": "f4ee7554fe1441e7b35296f726b8a6e55851f953a38146716ed3f048d2369839",
       "rms": 0.134166
     },
+    "dbba34492c73e9ed": {
+      "id": "dbba34492c73e9ed",
+      "text": "容赦なく",
+      "label": "容赦なく",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-refusal/source/0"
+      ],
+      "duration": 1.407,
+      "bytes": 11949,
+      "sha256": "e59d1c688e406dd6db0faa3f542e9444de7a740da4794e6c05db229108b5b6f4",
+      "rms": 0.126777
+    },
     "dbc1bf597811b975": {
       "id": "dbc1bf597811b975",
       "text": "一律の判断",
@@ -76860,6 +79635,18 @@
       "bytes": 35949,
       "sha256": "c189ea2a86cc9b19ba8c4422ae28d183336c2a8b3f1eb46f916313e96e5a735a",
       "rms": 0.140073
+    },
+    "dbf8a2db5d4b62c7": {
+      "id": "dbf8a2db5d4b62c7",
+      "text": "人々は、救助に向かった人の勇気を褒め称えた。",
+      "label": "人々は、救助に向かった人の勇気を褒め称えた。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-achievement/example/live-2026-11-03-example-praise-volunteer-courage/0"
+      ],
+      "duration": 4.112,
+      "bytes": 33645,
+      "sha256": "4742c93b18a584b2bd4301ac5fcfe11063340833965fcbf9a31925de19fc2042",
+      "rms": 0.137026
     },
     "dbfa7a2a668d7536": {
       "id": "dbfa7a2a668d7536",
@@ -77550,6 +80337,18 @@
       "bytes": 13869,
       "sha256": "d46a7f3d8719007213727a3d74c37a01bb13b876c91c196b4d2895dc14885f32",
       "rms": 0.143048
+    },
+    "dd9f78493619cda5": {
+      "id": "dd9f78493619cda5",
+      "text": "口論になりそうだったので、落ち着いて話すようにした。",
+      "label": "口論になりそうだったので、落ち着いて話すようにした。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-anger-control/example/live-2026-11-03-example-avoid-argument/0"
+      ],
+      "duration": 4.042,
+      "bytes": 33069,
+      "sha256": "98d954db57868efdef43b63ff513ab72ee12d2982977230c416b2c68c5365f53",
+      "rms": 0.095815
     },
     "dda7d1f8e50c38ec": {
       "id": "dda7d1f8e50c38ec",
@@ -78270,6 +81069,30 @@
       "sha256": "527574b77f7117741e6079181d90525fab103479595a1dab378351e44ff4d83b",
       "rms": 0.153535
     },
+    "df3436536aa81497": {
+      "id": "df3436536aa81497",
+      "text": "単位を書き分ける",
+      "label": "単位を書き分ける",
+      "references": [
+        "lesson/2026-11-03/vocabulary/2026-11-03-v-ca24ae99f426/collocation/0"
+      ],
+      "duration": 1.779,
+      "bytes": 15021,
+      "sha256": "8362cc3b7adc6b7da39ba8b5b0f5bc2981be06286c14f24311742500f6c81acc",
+      "rms": 0.129902
+    },
+    "df466cd138e5ab25": {
+      "id": "df466cd138e5ab25",
+      "text": "試合の最後まで、はらはらしながら見ていた。",
+      "label": "試合の最後まで、はらはらしながら見ていた。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-thrill/example/live-2026-11-03-example-match-anxiety/0"
+      ],
+      "duration": 3.509,
+      "bytes": 28845,
+      "sha256": "b567d0a6739270e2b1a00031441a4e83a9ff2d154cd221493b9f435e9b8e0e6f",
+      "rms": 0.139876
+    },
     "df4b45dd8608d4a1": {
       "id": "df4b45dd8608d4a1",
       "text": "この方式の難点は、全端末への配布が必要なことです。",
@@ -78781,6 +81604,18 @@
       "sha256": "2c3828459e515e4609f20497c0645aa9521c72bfef401fdb5e26043d638ad269",
       "rms": 0.159328
     },
+    "e0c543ea31d801c6": {
+      "id": "e0c543ea31d801c6",
+      "text": "ながめをたのしむ",
+      "label": "眺めを楽しむ",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-pleasure/entry/live-2026-11-03-entry-enjoy-view"
+      ],
+      "duration": 1.744,
+      "bytes": 14637,
+      "sha256": "4d48f63bec559255be2148a9736a5b87e8bc6cc752999c7b2ce9eaf682f17699",
+      "rms": 0.151945
+    },
     "e0c91eb581b4d939": {
       "id": "e0c91eb581b4d939",
       "text": "担当者の一人は「新しい版に替えれば安全になるのだから、すぐに反映したほうがよい」と主張した。",
@@ -79049,6 +81884,18 @@
       "sha256": "61dfb965ae8439a9a709b9d4af07685985ba3e992f6f3285a3d2cef4a5f25e6d",
       "rms": 0.121841
     },
+    "e1cf317262aacb2e": {
+      "id": "e1cf317262aacb2e",
+      "text": "準備ができたら、開始ボタンを押してください。",
+      "label": "準備ができたら、開始ボタンを押してください。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-button/example/live-2026-11-03-example-press-start-button/0"
+      ],
+      "duration": 3.415,
+      "bytes": 28077,
+      "sha256": "c34736cd47dd4bd7b445b3ab43a4248cba3137b76e251c981a84aba77e4bed8c",
+      "rms": 0.147183
+    },
     "e1dec7d841376184": {
       "id": "e1dec7d841376184",
       "text": "そこでチームは、AIが読み取りやすい形式で仕様を整理し、実装前に受け入れ条件を明確にした。",
@@ -79240,6 +82087,18 @@
       "bytes": 13677,
       "sha256": "00f967719421e7487375d1d9290e419bd2eb91fc2c13b4aa00ce153f709a8427",
       "rms": 0.170281
+    },
+    "e25482389e799ea4": {
+      "id": "e25482389e799ea4",
+      "text": "雨は容赦なく降り続いた。",
+      "label": "雨は容赦なく降り続いた。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-refusal/example/live-2026-11-03-example-severe-rain/0"
+      ],
+      "duration": 2.475,
+      "bytes": 20589,
+      "sha256": "cbbdf46e9e727755baf3af61d288328704804ce4e909eea507d8d72e384c2929",
+      "rms": 0.120704
     },
     "e26be364a038c920": {
       "id": "e26be364a038c920",
@@ -79707,6 +82566,18 @@
       "sha256": "8f17762f2d4fe76838e0217969b18fd7db2f4871d9bd764de022932fc95b1063",
       "rms": 0.155852
     },
+    "e3963c43f38ecd2f": {
+      "id": "e3963c43f38ecd2f",
+      "text": "子どもが庭の木に登っている。",
+      "label": "子どもが庭の木に登っている。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-conquer-tree/example/live-2026-11-03-example-climb-tree/0"
+      ],
+      "duration": 2.44,
+      "bytes": 20205,
+      "sha256": "8c0222501b7ec2031aaf1d9f1302f0683ed00a48da4fff2e4cd384e60be3e4d8",
+      "rms": 0.199351
+    },
     "e39b29e77af3e893": {
       "id": "e39b29e77af3e893",
       "text": "OJはViteより狭い対象に最適化されています。",
@@ -79742,6 +82613,18 @@
       "bytes": 51309,
       "sha256": "f20defbee4418dbf0b2a285f2e54334c84f1088603e560a1bac6c8004fb7efc9",
       "rms": 0.154279
+    },
+    "e3b2048ec6f838fa": {
+      "id": "e3b2048ec6f838fa",
+      "text": "うつ病",
+      "label": "うつ病",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-mood/source/1"
+      ],
+      "duration": 1.175,
+      "bytes": 10029,
+      "sha256": "f0d78d3d9ec967108a4fa84bc5a796e144594332c2964fa6d97f4436ddefe30b",
+      "rms": 0.149869
     },
     "e3b7028704e19bbb": {
       "id": "e3b7028704e19bbb",
@@ -80477,6 +83360,18 @@
       "sha256": "3e20354865b579cfc2e7c318cd3b0f199b8bcee884801b0ad64107955a52fe09",
       "rms": 0.154673
     },
+    "e6439e0273e57f9e": {
+      "id": "e6439e0273e57f9e",
+      "text": "説明がだらだら長くならないように、要点をまとめた。",
+      "label": "説明がだらだら長くならないように、要点をまとめた。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-manner-words/example/live-2026-11-03-example-avoid-rambling/0"
+      ],
+      "duration": 4.205,
+      "bytes": 34413,
+      "sha256": "a45d10a0c6395e4f8df6b80bb608f5d105159e4549a0771b3f9edc3678f33c80",
+      "rms": 0.141784
+    },
     "e6462a9f8c53575b": {
       "id": "e6462a9f8c53575b",
       "text": "ところが、実際の問い合わせを調べると、「画面はすぐ表示されるものの、検索ボタンを押しても反応がないように感じる」という声が少なからず寄せられていた。",
@@ -80613,6 +83508,19 @@
       "duration": 5.112,
       "rms": 0.177152,
       "sha256": "5c3817a55337bc5aae0b75aca771b4e3309c775c99bbd57e3e9a4e5d3c207c6c"
+    },
+    "e6c2b558239b41bc": {
+      "id": "e6c2b558239b41bc",
+      "text": "見つけられることと、分かること",
+      "label": "見つけられることと、分かること",
+      "references": [
+        "lesson/2026-11-03/immersion/title",
+        "lesson/2026-11-03/reading/title"
+      ],
+      "duration": 2.917,
+      "bytes": 24045,
+      "sha256": "987132cc596577cf7beb9f1dfe4fe821b9b804c4b7527a5dc365db98e6206508",
+      "rms": 0.123165
     },
     "e6ccb52b14062947": {
       "id": "e6ccb52b14062947",
@@ -81171,6 +84079,19 @@
       "sha256": "4a76e7cbea798e4e3c5b06ded75b2fe1e3f5555e90e6ad42a948c990eaa82ecc",
       "rms": 0.155036
     },
+    "e82c808730145f8b": {
+      "id": "e82c808730145f8b",
+      "text": "チョロチョロ",
+      "label": "チョロチョロ",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-manner-words/source/0",
+        "live/2026-11-03/live-2026-11-03-manner-words/entry/live-2026-11-03-entry-choro-choro"
+      ],
+      "duration": 1.244,
+      "bytes": 10605,
+      "sha256": "d3f07b95f8bc8cfacf16591f0b18a5f0306e8a1dd7fbfef44f96c65ba6850980",
+      "rms": 0.148849
+    },
     "e83bcf391f76a755": {
       "id": "e83bcf391f76a755",
       "text": "同率で並ぶ",
@@ -81256,6 +84177,18 @@
       "bytes": 15597,
       "sha256": "eb69384603a83ecc7646babbfb6e3d36f90e87109a8c2d31438883bca2e1458b",
       "rms": 0.150978
+    },
+    "e8914fa1cf2ffb55": {
+      "id": "e8914fa1cf2ffb55",
+      "text": "それでも",
+      "label": "それでも",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-soredemo/entry/live-2026-11-03-entry-even-so"
+      ],
+      "duration": 1.198,
+      "bytes": 10221,
+      "sha256": "5438ecf6ced41a95ab04d7480759663d72ad4347d72f0e63f88e37400d60a2c5",
+      "rms": 0.140634
     },
     "e8983ffcc05ccd38": {
       "id": "e8983ffcc05ccd38",
@@ -81508,6 +84441,18 @@
       "bytes": 41709,
       "sha256": "3fabaf5b9337ec2b8cbacb5894e69eb729a2a634a77aeb544fe53464bd2857c5",
       "rms": 0.150079
+    },
+    "e94ea0e4505f7390": {
+      "id": "e94ea0e4505f7390",
+      "text": "口論する",
+      "label": "口論する",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-anger-control/source/0"
+      ],
+      "duration": 1.302,
+      "bytes": 11181,
+      "sha256": "b1d0fff0019cb645c8472e35d6a8a9f643cd886447a723b34b2e4ebb511f5bf3",
+      "rms": 0.133915
     },
     "e9564b4010ca1a34": {
       "id": "e9564b4010ca1a34",
@@ -82059,6 +85004,18 @@
       "bytes": 15021,
       "sha256": "04421ee532440d51d3786e064216df58b375e1ec51a655a5d586f60748ef3dbb",
       "rms": 0.138031
+    },
+    "eaba2b845dd77050": {
+      "id": "eaba2b845dd77050",
+      "text": "先生は生徒を入口に呼び出した。",
+      "label": "先生は生徒を入口に呼び出した。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-notify-call/example/live-2026-11-03-example-call-to-entrance/0"
+      ],
+      "duration": 3.009,
+      "bytes": 24813,
+      "sha256": "834cf0c616799bbe4936f484e0b48e8aafa03536149b937909fc000a4a11e724",
+      "rms": 0.130896
     },
     "eabc68b6d876e0c2": {
       "id": "eabc68b6d876e0c2",
@@ -83784,6 +86741,18 @@
       "sha256": "b7d837a625390d02b0b98d3c9391596abfe24ee0849c8315eaa156f2fd9d1c56",
       "rms": 0.161805
     },
+    "f03208c339bb1637": {
+      "id": "f03208c339bb1637",
+      "text": "母の作った料理",
+      "label": "母の作った料理",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-noun-modifiers/source/1"
+      ],
+      "duration": 1.85,
+      "bytes": 15597,
+      "sha256": "a6574d3557bdc17338222feeb4d7270f7fda49446a812d018718d14ecf7a8df8",
+      "rms": 0.129668
+    },
     "f03a7daf70846f73": {
       "id": "f03a7daf70846f73",
       "text": "Q5 AI導入後の役割再設計",
@@ -83942,6 +86911,18 @@
       "sha256": "32ffb784cfae841a67af946a750c6609e3a1001df77f255a4c35f16f8bb05ea8",
       "rms": 0.146279
     },
+    "f081757b167704bf": {
+      "id": "f081757b167704bf",
+      "text": "起動役はPlugin APIでノードの名前・文字・順序を読み、実行環境で元のファイルを組み直してPythonを起動します。",
+      "label": "起動役はPlugin APIでノードの名前・文字・順序を読み、実行環境で元のファイルを組み直してPythonを起動します。",
+      "references": [
+        "lesson/2026-11-03/vocabulary/2026-11-03-v-study-d898be90/evidence/0"
+      ],
+      "duration": 9.406,
+      "bytes": 75885,
+      "sha256": "4eba02e4a27f8404da41bc9d7b574a1ce9580bbbebe97e3b6d8ad8a7a98150d4",
+      "rms": 0.142041
+    },
     "f086ed65344980c9": {
       "id": "f086ed65344980c9",
       "text": "突発的な障害",
@@ -84049,6 +87030,18 @@
       "bytes": 10605,
       "sha256": "0334faf64da70cad1a8ae8e0064f7763a43a7c63d981e5d67537b6d5c143a5fb",
       "rms": 0.135834
+    },
+    "f0c5ebb5edc17299": {
+      "id": "f0c5ebb5edc17299",
+      "text": "木を征服する",
+      "label": "木を征服する",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-conquer-tree/source/0"
+      ],
+      "duration": 1.57,
+      "bytes": 13293,
+      "sha256": "d63820d4c8e10d631624386a252a2b2fe77b0cb58935a06cb6d9dffbcdbcefac",
+      "rms": 0.126034
     },
     "f0c639b8c3475dcc": {
       "id": "f0c639b8c3475dcc",
@@ -84835,6 +87828,18 @@
       "sha256": "1a5340b9a6f099e73adcf29a851ba3a2421829a1a6411a9287d5a8bdfd850be3",
       "rms": 0.146575
     },
+    "f3331e58639b9404": {
+      "id": "f3331e58639b9404",
+      "text": "何もない",
+      "label": "何もない",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-absence/source/0"
+      ],
+      "duration": 1.338,
+      "bytes": 11373,
+      "sha256": "85e402d842c341018fbb2e84e9747531d6e2c1e3f4f1c98f8793c32800257fb0",
+      "rms": 0.207304
+    },
     "f34148e2608fa166": {
       "id": "f34148e2608fa166",
       "text": "電車の時間だから、そろそろ行かなくちゃ。",
@@ -85116,6 +88121,19 @@
       "bytes": 29613,
       "sha256": "64709de4ac2424c6c4a9b2f33b5ae3abd595f34f67fce2f9a0d1066a4f753241",
       "rms": 0.125277
+    },
+    "f409b767bb3c615b": {
+      "id": "f409b767bb3c615b",
+      "text": "担当者は、資料を一つの画面で探せるようになれば、遠くに住む人にも地域の歴史を身近に感じてもらえると期待した。",
+      "label": "担当者は、資料を一つの画面で探せるようになれば、遠くに住む人にも地域の歴史を身近に感じてもらえると期待した。",
+      "references": [
+        "lesson/2026-11-03/immersion/0/1",
+        "lesson/2026-11-03/reading/0/1"
+      ],
+      "duration": 9.335,
+      "bytes": 75309,
+      "sha256": "871c678aa84945ef6eb4d785f4408338fc2eb7cb0b0233218ebf4533013cb90f",
+      "rms": 0.125151
     },
     "f40d57e072b687cc": {
       "id": "f40d57e072b687cc",
@@ -85902,6 +88920,18 @@
       "sha256": "3de5ddfaa121d9309574b8069660421bde5c1b8109b2a7481c5cfea70e60f993",
       "rms": 0.120889
     },
+    "f6b137c13e45bc75": {
+      "id": "f6b137c13e45bc75",
+      "text": "朝日が眩しくて、目を細めた。",
+      "label": "朝日が眩しくて、目を細めた。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-glare/example/live-2026-11-03-example-sun-dazzling/0"
+      ],
+      "duration": 2.986,
+      "bytes": 24621,
+      "sha256": "72857c4551e8575a741a1632016e394299fc18e9d819f6e1257a42432686f01d",
+      "rms": 0.152125
+    },
     "f6ceb073a104b057": {
       "id": "f6ceb073a104b057",
       "text": "だからといって、確認作業を省くことが合理的だというわけでもない。",
@@ -86242,6 +89272,19 @@
       "sha256": "aab260a5f04c59789f2733dab51abde42d7d19bef7b6bc5e754f8012d0eafb06",
       "rms": 0.121939
     },
+    "f7a72bae9f90806a": {
+      "id": "f7a72bae9f90806a",
+      "text": "検索結果に小さな画像が並んでいても、元の高精細画像を閲覧できるか、学習資料として引用・再利用できるかは別の問題だ。",
+      "label": "検索結果に小さな画像が並んでいても、元の高精細画像を閲覧できるか、学習資料として引用・再利用できるかは別の問題だ。",
+      "references": [
+        "lesson/2026-11-03/immersion/3/1",
+        "lesson/2026-11-03/reading/3/1"
+      ],
+      "duration": 10.368,
+      "bytes": 83565,
+      "sha256": "d7712e974a2c2b29fcb6d44039f0df382a0222280deaba64740ee4c394b8e732",
+      "rms": 0.110885
+    },
     "f7af35994962fd7d": {
       "id": "f7af35994962fd7d",
       "text": "反対に、理由が確認できれば、再開を急ぐべき場面と、人の確認を待つべき場面の折り合いをつけやすくなる。",
@@ -86570,6 +89613,18 @@
       "sha256": "104d992c1dfc0100bec3858ec932b7a084c38c107771877646a19990b9063033",
       "rms": 0.17877
     },
+    "f8ea7269b55b32b5": {
+      "id": "f8ea7269b55b32b5",
+      "text": "ひふか",
+      "label": "皮膚科",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-body-words/entry/live-2026-11-03-entry-dermatology"
+      ],
+      "duration": 1.047,
+      "bytes": 9069,
+      "sha256": "b8a889154350c4c8d31006419f2a962ec08bd0eb02bb554f6be28623a23b6a5a",
+      "rms": 0.122222
+    },
     "f8ecf3234885b2af": {
       "id": "f8ecf3234885b2af",
       "text": "社会的意義",
@@ -86785,6 +89840,18 @@
       "bytes": 16173,
       "sha256": "cf410bbd6a0d2e8ea14e10013a19964452c2f1643e81ab4cc060d43166e68249",
       "rms": 0.14513
+    },
+    "f973c78268728326": {
+      "id": "f973c78268728326",
+      "text": "水を差す",
+      "label": "水を差す",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-social-idioms/source/1"
+      ],
+      "duration": 1.303,
+      "bytes": 11181,
+      "sha256": "35d2d834137419705b1843f0702fbc169dda43583c729caed3707e77874768f6",
+      "rms": 0.167416
     },
     "f973ff7ecf95e56a": {
       "id": "f973ff7ecf95e56a",
@@ -87973,6 +91040,18 @@
       "sha256": "a1e7c0b89283bd4857f2414f4564ac727883c90c0f7c7841e3a761113c5af283",
       "rms": 0.173452
     },
+    "fc84f34b180be7df": {
+      "id": "fc84f34b180be7df",
+      "text": "お世辞を言う",
+      "label": "お世辞を言う",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-social-idioms/source/0"
+      ],
+      "duration": 1.407,
+      "bytes": 11949,
+      "sha256": "689eba8a43441ff31fd258630c876f88eba89b32133dcaeeb6758408e44f7d71",
+      "rms": 0.181776
+    },
     "fc88cea75280586b": {
       "id": "fc88cea75280586b",
       "text": "9月21日朝の新規記事に加え、DevelopersIOの2本は公開日が「2026.09.20」のみで時刻がないため、日付境界の補完記事として扱い、厳密な24時間内とは断定しない。",
@@ -88371,6 +91450,18 @@
       "bytes": 20973,
       "sha256": "00360c65ba482072c3f2fa7be506222e88b764a726b84990f1bf76e20f642e34",
       "rms": 0.192704
+    },
+    "fe301abf7b7d121b": {
+      "id": "fe301abf7b7d121b",
+      "text": "誰もいない",
+      "label": "誰もいない",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-absence/source/1"
+      ],
+      "duration": 1.303,
+      "bytes": 11181,
+      "sha256": "4ed4369f048fac9fb2ef41cb5d249c6b9e56c01f78ece45642de38d528943b96",
+      "rms": 0.153082
     },
     "fe355bc1d7ef6085": {
       "id": "fe355bc1d7ef6085",
@@ -88880,6 +91971,18 @@
       "bytes": 33645,
       "sha256": "1650d8e5b1ba4c25e2a1b82cb1a2f6bf622edc09b617be6009968e4a2ae9126b",
       "rms": 0.157262
+    },
+    "ff82b6c5acab4a31": {
+      "id": "ff82b6c5acab4a31",
+      "text": "読む価値: CSSで解ける範囲と、OSの描画・操作レイヤーを調整すべき範囲を説明できるフロントエンドの題材です。",
+      "label": "読む価値: CSSで解ける範囲と、OSの描画・操作レイヤーを調整すべき範囲を説明できるフロントエンドの題材です。",
+      "references": [
+        "lesson/2026-11-03/grammar/2026-11-03-g-study-6680af15/evidence/0"
+      ],
+      "duration": 9.325,
+      "bytes": 75309,
+      "sha256": "461474b90ce2d742e97a131694e27bc4106fac5f033a58784dd01df6907c239f",
+      "rms": 0.142001
     },
     "ff83e8e596863f21": {
       "id": "ff83e8e596863f21",
@@ -89723,14 +92826,192 @@
     "live/2026-10-30/live-2026-10-30-youni/example/live-2026-10-30-example-avoid-late-alarm/0": "d2d2cd3eedac8e72",
     "live/2026-10-30/live-2026-10-30-youni/source/0": "a237b0aa47b15546",
     "live/2026-10-30/live-2026-10-30-youni/source/1": "077e53c9f194e715",
+    "live/2026-11-03/live-2026-11-03-absence/entry/live-2026-11-03-entry-nobody": "170ee7f9f88f3f2d",
+    "live/2026-11-03/live-2026-11-03-absence/entry/live-2026-11-03-entry-nothing": "8669eee6f481e26a",
+    "live/2026-11-03/live-2026-11-03-absence/example/live-2026-11-03-example-nobody-in-room/0": "4d203a08c8b2a22c",
+    "live/2026-11-03/live-2026-11-03-absence/example/live-2026-11-03-example-nothing-on-desk/0": "9c00fb046648d150",
+    "live/2026-11-03/live-2026-11-03-absence/source/0": "f3331e58639b9404",
+    "live/2026-11-03/live-2026-11-03-absence/source/1": "fe301abf7b7d121b",
+    "live/2026-11-03/live-2026-11-03-achievement/entry/live-2026-11-03-entry-great-achievement": "90e7a03aa85229f6",
+    "live/2026-11-03/live-2026-11-03-achievement/entry/live-2026-11-03-entry-historic-event": "548e03a07c25765c",
+    "live/2026-11-03/live-2026-11-03-achievement/entry/live-2026-11-03-entry-praise-courage": "a0ffd989a0532455",
+    "live/2026-11-03/live-2026-11-03-achievement/example/live-2026-11-03-example-achievement-record/0": "4d6eed263bb6153a",
+    "live/2026-11-03/live-2026-11-03-achievement/example/live-2026-11-03-example-praise-volunteer-courage/0": "dbf8a2db5d4b62c7",
+    "live/2026-11-03/live-2026-11-03-achievement/source/0": "4fbeb960c8d680ac",
+    "live/2026-11-03/live-2026-11-03-achievement/source/1": "c803a583a19ee46f",
+    "live/2026-11-03/live-2026-11-03-achievement/source/2": "60d1f68766422b63",
+    "live/2026-11-03/live-2026-11-03-anger-control/entry/live-2026-11-03-entry-argue": "88a1641854bd9944",
+    "live/2026-11-03/live-2026-11-03-anger-control/entry/live-2026-11-03-entry-control-oneself": "39a0a66ed7ed1a12",
+    "live/2026-11-03/live-2026-11-03-anger-control/entry/live-2026-11-03-entry-flare-up": "4f7d4eae2ecfa11a",
+    "live/2026-11-03/live-2026-11-03-anger-control/example/live-2026-11-03-example-avoid-argument/0": "dd9f78493619cda5",
+    "live/2026-11-03/live-2026-11-03-anger-control/example/live-2026-11-03-example-avoid-hasty-reply/0": "7ff2be5e06f6b9ca",
+    "live/2026-11-03/live-2026-11-03-anger-control/source/0": "e94ea0e4505f7390",
+    "live/2026-11-03/live-2026-11-03-anger-control/source/1": "4f7d4eae2ecfa11a",
+    "live/2026-11-03/live-2026-11-03-anger-control/source/2": "c777e89d3ebb2af1",
+    "live/2026-11-03/live-2026-11-03-body-words/entry/live-2026-11-03-entry-cardiac-paralysis": "4466e3fbfe032f8f",
+    "live/2026-11-03/live-2026-11-03-body-words/entry/live-2026-11-03-entry-dermatology": "f8ea7269b55b32b5",
+    "live/2026-11-03/live-2026-11-03-body-words/entry/live-2026-11-03-entry-hand-numb": "46477d7c840c62b8",
+    "live/2026-11-03/live-2026-11-03-body-words/example/live-2026-11-03-example-dermatology-sign/0": "da66f7126c0287ce",
+    "live/2026-11-03/live-2026-11-03-body-words/example/live-2026-11-03-example-numb-hand-sentence/0": "4da34bd6671932f2",
+    "live/2026-11-03/live-2026-11-03-boomerang/entry/live-2026-11-03-entry-boomerang": "90c460e64bac2aa2",
+    "live/2026-11-03/live-2026-11-03-boomerang/entry/live-2026-11-03-entry-return-to-hand": "207d097737c4ebab",
+    "live/2026-11-03/live-2026-11-03-boomerang/example/live-2026-11-03-example-boomerang-return/0": "c4023e75eecbc8c1",
+    "live/2026-11-03/live-2026-11-03-boomerang/source/0": "90c460e64bac2aa2",
+    "live/2026-11-03/live-2026-11-03-boomerang/source/1": "86fc2bc7d2bd857b",
+    "live/2026-11-03/live-2026-11-03-button/entry/live-2026-11-03-entry-press-button": "ce106d0c4be0daa8",
+    "live/2026-11-03/live-2026-11-03-button/example/live-2026-11-03-example-press-start-button/0": "e1cf317262aacb2e",
     "live/2026-11-03/live-2026-11-03-button/source/0": "8d8bdc86431b894a",
+    "live/2026-11-03/live-2026-11-03-call-purpose/entry/live-2026-11-03-entry-come-to-call": "8d442c974f6ace1b",
+    "live/2026-11-03/live-2026-11-03-call-purpose/example/live-2026-11-03-example-friend-came-call/0": "aecedd2802d7d57c",
+    "live/2026-11-03/live-2026-11-03-call-purpose/source/0": "5f7a34953f99cee1",
+    "live/2026-11-03/live-2026-11-03-conquer-tree/entry/live-2026-11-03-entry-conquer-tree": "2ea053e90aa5f095",
+    "live/2026-11-03/live-2026-11-03-conquer-tree/example/live-2026-11-03-example-climb-tree/0": "e3963c43f38ecd2f",
+    "live/2026-11-03/live-2026-11-03-conquer-tree/source/0": "f0c5ebb5edc17299",
+    "live/2026-11-03/live-2026-11-03-deliberate/entry/live-2026-11-03-entry-affected-gesture": "d4a3f5e99996fe7d",
     "live/2026-11-03/live-2026-11-03-deliberate/entry/live-2026-11-03-entry-on-purpose": "27d2c438aa60dd5c",
     "live/2026-11-03/live-2026-11-03-deliberate/entry/live-2026-11-03-entry-specially": "de983991ef0c592d",
+    "live/2026-11-03/live-2026-11-03-deliberate/example/live-2026-11-03-example-affected-gesture-impression/0": "437f6560f20600d4",
+    "live/2026-11-03/live-2026-11-03-deliberate/example/live-2026-11-03-example-intentional-loss/0": "0983114e8bb71eda",
+    "live/2026-11-03/live-2026-11-03-deliberate/example/live-2026-11-03-example-special-visit-thanks/0": "1f2e3bf041dc4d4c",
+    "live/2026-11-03/live-2026-11-03-fantasy/entry/live-2026-11-03-entry-teleportation": "7ddd06cfb9629bfb",
+    "live/2026-11-03/live-2026-11-03-fantasy/entry/live-2026-11-03-entry-time-slip": "5dc4b863c694b737",
+    "live/2026-11-03/live-2026-11-03-fantasy/example/live-2026-11-03-example-time-slip-story/0": "af12976d796dfd79",
+    "live/2026-11-03/live-2026-11-03-fantasy/source/0": "159d1f2cfab79e18",
+    "live/2026-11-03/live-2026-11-03-fantasy/source/1": "5dc4b863c694b737",
+    "live/2026-11-03/live-2026-11-03-glare/entry/live-2026-11-03-entry-dazzling": "294f24ae26c8ee6a",
+    "live/2026-11-03/live-2026-11-03-glare/entry/live-2026-11-03-entry-eyes-dazzled": "1d77924e94755ae2",
+    "live/2026-11-03/live-2026-11-03-glare/example/live-2026-11-03-example-dizzying-height/0": "19528da56d8d32e9",
+    "live/2026-11-03/live-2026-11-03-glare/example/live-2026-11-03-example-sun-dazzling/0": "f6b137c13e45bc75",
+    "live/2026-11-03/live-2026-11-03-glare/source/0": "bdc828b8f40577ec",
+    "live/2026-11-03/live-2026-11-03-glare/source/1": "712e4f8fece89c33",
+    "live/2026-11-03/live-2026-11-03-half-eaten/entry/live-2026-11-03-entry-half-eaten-cake": "bcfb67272e502413",
+    "live/2026-11-03/live-2026-11-03-half-eaten/example/live-2026-11-03-example-half-eaten-cake-fridge/0": "3c8870310494b8d5",
+    "live/2026-11-03/live-2026-11-03-half-eaten/source/0": "95d9faa7d9292b93",
+    "live/2026-11-03/live-2026-11-03-mama-shimau/entry/live-2026-11-03-entry-sleep-lights-on": "7b4baac0e9ced384",
+    "live/2026-11-03/live-2026-11-03-mama-shimau/example/live-2026-11-03-example-lights-left-on/0": "b6133a7d6bfeff29",
+    "live/2026-11-03/live-2026-11-03-mama-shimau/source/0": "d8e8b40cdcabed08",
+    "live/2026-11-03/live-2026-11-03-manner-words/entry/live-2026-11-03-entry-choro-choro": "e82c808730145f8b",
+    "live/2026-11-03/live-2026-11-03-manner-words/entry/live-2026-11-03-entry-dara-dara": "afd488357e71cf31",
+    "live/2026-11-03/live-2026-11-03-manner-words/entry/live-2026-11-03-entry-guzu-guzu": "4b00fecd25973d79",
+    "live/2026-11-03/live-2026-11-03-manner-words/entry/live-2026-11-03-entry-mago-mago": "951b716d8d1cdab9",
+    "live/2026-11-03/live-2026-11-03-manner-words/example/live-2026-11-03-example-avoid-rambling/0": "e6439e0273e57f9e",
+    "live/2026-11-03/live-2026-11-03-manner-words/example/live-2026-11-03-example-lost-at-station/0": "ad94fc54e53adac8",
+    "live/2026-11-03/live-2026-11-03-manner-words/example/live-2026-11-03-example-stop-dawdling/0": "8813a6286fb9338c",
+    "live/2026-11-03/live-2026-11-03-manner-words/example/live-2026-11-03-example-stream-trickle/0": "113ffd174d68b0ab",
+    "live/2026-11-03/live-2026-11-03-manner-words/source/0": "e82c808730145f8b",
+    "live/2026-11-03/live-2026-11-03-manner-words/source/1": "4b00fecd25973d79",
+    "live/2026-11-03/live-2026-11-03-manner-words/source/2": "afd488357e71cf31",
+    "live/2026-11-03/live-2026-11-03-manner-words/source/3": "951b716d8d1cdab9",
+    "live/2026-11-03/live-2026-11-03-mood/entry/live-2026-11-03-entry-depression": "94936d8d60cb9581",
+    "live/2026-11-03/live-2026-11-03-mood/entry/live-2026-11-03-entry-gloomy": "6e463c672d9160e3",
+    "live/2026-11-03/live-2026-11-03-mood/example/live-2026-11-03-example-gloomy-rain/0": "be2daf05d5bc0681",
+    "live/2026-11-03/live-2026-11-03-mood/source/0": "d958446f4acb483b",
+    "live/2026-11-03/live-2026-11-03-mood/source/1": "e3b2048ec6f838fa",
+    "live/2026-11-03/live-2026-11-03-negative-command/entry/live-2026-11-03-entry-do-not-misuse": "db42268b874fa3b7",
+    "live/2026-11-03/live-2026-11-03-negative-command/example/live-2026-11-03-example-do-not-misuse-tool/0": "164f305c05507068",
+    "live/2026-11-03/live-2026-11-03-negative-command/source/0": "5986588f1db7ed23",
+    "live/2026-11-03/live-2026-11-03-noodles/entry/live-2026-11-03-entry-noodles-soggy": "366f2b94711c9b08",
+    "live/2026-11-03/live-2026-11-03-noodles/example/live-2026-11-03-example-eat-before-soggy/0": "a6b79169f85dd275",
+    "live/2026-11-03/live-2026-11-03-noodles/source/0": "98991c4ab45c8766",
+    "live/2026-11-03/live-2026-11-03-notify-call/entry/live-2026-11-03-entry-call-police": "5865d4cf55833e0b",
+    "live/2026-11-03/live-2026-11-03-notify-call/entry/live-2026-11-03-entry-report": "bd86afc218692b6e",
+    "live/2026-11-03/live-2026-11-03-notify-call/entry/live-2026-11-03-entry-summon-person": "09b178c54db9ab11",
+    "live/2026-11-03/live-2026-11-03-notify-call/example/live-2026-11-03-example-call-to-entrance/0": "eaba2b845dd77050",
+    "live/2026-11-03/live-2026-11-03-notify-call/example/live-2026-11-03-example-notify-police/0": "31268e0d90679d79",
+    "live/2026-11-03/live-2026-11-03-notify-call/source/0": "1395b7bc514959c8",
+    "live/2026-11-03/live-2026-11-03-notify-call/source/1": "9601f3ae4141a98a",
+    "live/2026-11-03/live-2026-11-03-notify-call/source/2": "d0023b1dd830f331",
+    "live/2026-11-03/live-2026-11-03-noun-modifiers/entry/live-2026-11-03-entry-mother-cooking": "3f540fd37de39cef",
+    "live/2026-11-03/live-2026-11-03-noun-modifiers/entry/live-2026-11-03-entry-unread-comic": "86204c26dea72322",
+    "live/2026-11-03/live-2026-11-03-noun-modifiers/example/live-2026-11-03-example-mother-cooking-miss/0": "03f9e5bfa5607153",
+    "live/2026-11-03/live-2026-11-03-noun-modifiers/example/live-2026-11-03-example-unread-comic-find/0": "4639eeba5bfa7fb6",
+    "live/2026-11-03/live-2026-11-03-noun-modifiers/source/0": "a695b60a0d434f16",
+    "live/2026-11-03/live-2026-11-03-noun-modifiers/source/1": "f03208c339bb1637",
+    "live/2026-11-03/live-2026-11-03-origin/entry/live-2026-11-03-entry-origin-of-affair": "4a1d7d10868af164",
+    "live/2026-11-03/live-2026-11-03-origin/example/live-2026-11-03-example-origin-small-misunderstanding/0": "2c5fcf2a3527ca0e",
+    "live/2026-11-03/live-2026-11-03-pleasure/entry/live-2026-11-03-entry-carefree-task": "bccd2abc6ec733d0",
+    "live/2026-11-03/live-2026-11-03-pleasure/entry/live-2026-11-03-entry-easy-work": "c513c816a0d8303a",
+    "live/2026-11-03/live-2026-11-03-pleasure/entry/live-2026-11-03-entry-enjoy": "1d621fe709bd91ab",
+    "live/2026-11-03/live-2026-11-03-pleasure/entry/live-2026-11-03-entry-enjoy-view": "e0c543ea31d801c6",
+    "live/2026-11-03/live-2026-11-03-pleasure/entry/live-2026-11-03-entry-enjoyable": "5960eb5bb094eb17",
     "live/2026-11-03/live-2026-11-03-pleasure/entry/live-2026-11-03-entry-glad": "f70cdaec22274068",
+    "live/2026-11-03/live-2026-11-03-pleasure/entry/live-2026-11-03-entry-look-forward-match": "b0167af6d04ca5ba",
+    "live/2026-11-03/live-2026-11-03-pleasure/entry/live-2026-11-03-entry-pleasure-anticipation": "6260f9868214fcea",
+    "live/2026-11-03/live-2026-11-03-pleasure/example/live-2026-11-03-example-enjoy-window-view/0": "33b015fca5879730",
+    "live/2026-11-03/live-2026-11-03-pleasure/example/live-2026-11-03-example-enjoyable-afternoon/0": "1f92ece571b4bd61",
+    "live/2026-11-03/live-2026-11-03-pleasure/example/live-2026-11-03-example-glad-meeting/0": "8b09a20ed1f80192",
+    "live/2026-11-03/live-2026-11-03-pleasure/example/live-2026-11-03-example-look-forward-next-match/0": "a75ce5bf8ae83563",
+    "live/2026-11-03/live-2026-11-03-position/entry/live-2026-11-03-entry-right-edge": "6c0a9fa6a74dd9aa",
+    "live/2026-11-03/live-2026-11-03-position/entry/live-2026-11-03-entry-very-top": "a3dd5985060a5849",
+    "live/2026-11-03/live-2026-11-03-position/example/live-2026-11-03-example-right-edge-button/0": "af28ee655264a589",
+    "live/2026-11-03/live-2026-11-03-position/example/live-2026-11-03-example-tower-top/0": "2b60461ae96d8316",
+    "live/2026-11-03/live-2026-11-03-position/source/0": "a3dd5985060a5849",
+    "live/2026-11-03/live-2026-11-03-position/source/1": "b83da358a8fee864",
+    "live/2026-11-03/live-2026-11-03-reflect/entry/live-2026-11-03-entry-reflected-in-mirror": "5f46695f282abf63",
+    "live/2026-11-03/live-2026-11-03-reflect/example/live-2026-11-03-example-face-mirror/0": "45ad64714482a49d",
+    "live/2026-11-03/live-2026-11-03-reflect/source/0": "0a21f1d484b7d410",
+    "live/2026-11-03/live-2026-11-03-refusal/entry/live-2026-11-03-entry-not-accept": "b96f0ff1bf6010c5",
+    "live/2026-11-03/live-2026-11-03-refusal/entry/live-2026-11-03-entry-not-consent": "6b697235f78fac91",
+    "live/2026-11-03/live-2026-11-03-refusal/entry/live-2026-11-03-entry-without-mercy": "26b0f4c6e0edba6a",
+    "live/2026-11-03/live-2026-11-03-refusal/example/live-2026-11-03-example-not-consent-proposal/0": "caaf50d22bf97ade",
+    "live/2026-11-03/live-2026-11-03-refusal/example/live-2026-11-03-example-severe-rain/0": "e25482389e799ea4",
+    "live/2026-11-03/live-2026-11-03-refusal/source/0": "dbba34492c73e9ed",
+    "live/2026-11-03/live-2026-11-03-refusal/source/1": "0f5982ac3746d238",
+    "live/2026-11-03/live-2026-11-03-refusal/source/2": "a55bd8533e04f4ef",
+    "live/2026-11-03/live-2026-11-03-result-time/entry/live-2026-11-03-entry-completely": "a51107d83f1f405c",
+    "live/2026-11-03/live-2026-11-03-result-time/entry/live-2026-11-03-entry-finally": "2f257432b80dde06",
     "live/2026-11-03/live-2026-11-03-result-time/entry/live-2026-11-03-entry-promptly": "1fb19f613bc80de5",
+    "live/2026-11-03/live-2026-11-03-result-time/example/live-2026-11-03-example-completely-forgot/0": "8843ead0c7382a24",
+    "live/2026-11-03/live-2026-11-03-result-time/example/live-2026-11-03-example-finally-finished/0": "6ff2933e45cc24a2",
+    "live/2026-11-03/live-2026-11-03-result-time/example/live-2026-11-03-example-try-promptly/0": "2c4de95fc6db999b",
+    "live/2026-11-03/live-2026-11-03-result-time/source/0": "2f257432b80dde06",
+    "live/2026-11-03/live-2026-11-03-result-time/source/1": "a51107d83f1f405c",
     "live/2026-11-03/live-2026-11-03-result-time/source/2": "1fb19f613bc80de5",
     "live/2026-11-03/live-2026-11-03-show/entry/live-2026-11-03-entry-show-everyone": "20e1e07796e572fb",
+    "live/2026-11-03/live-2026-11-03-show/example/live-2026-11-03-example-show-drawing/0": "b7b0f1f7f288151b",
     "live/2026-11-03/live-2026-11-03-show/source/0": "4d72935302bde8bf",
-    "live/2026-11-03/live-2026-11-03-unnoticed/entry/live-2026-11-03-entry-before-one-knows": "abfa2173c9fba5b7"
+    "live/2026-11-03/live-2026-11-03-social-idioms/entry/live-2026-11-03-entry-flatter": "790600da407ad55e",
+    "live/2026-11-03/live-2026-11-03-social-idioms/entry/live-2026-11-03-entry-spoil-mood": "a27430f47415ca30",
+    "live/2026-11-03/live-2026-11-03-social-idioms/example/live-2026-11-03-example-interrupt-cheerful-talk/0": "acf8e37dd64d1529",
+    "live/2026-11-03/live-2026-11-03-social-idioms/example/live-2026-11-03-example-not-flattery/0": "ca4e4a361ebc5b82",
+    "live/2026-11-03/live-2026-11-03-social-idioms/source/0": "fc84f34b180be7df",
+    "live/2026-11-03/live-2026-11-03-social-idioms/source/1": "f973c78268728326",
+    "live/2026-11-03/live-2026-11-03-soredemo/entry/live-2026-11-03-entry-even-so": "e8914fa1cf2ffb55",
+    "live/2026-11-03/live-2026-11-03-soredemo/example/live-2026-11-03-example-continue-even-so/0": "820dd498b342f96c",
+    "live/2026-11-03/live-2026-11-03-soredemo/example/live-2026-11-03-example-continue-even-so/1": "d28531587743be74",
+    "live/2026-11-03/live-2026-11-03-thrill/entry/live-2026-11-03-entry-dokidoki": "b27419697892b445",
+    "live/2026-11-03/live-2026-11-03-thrill/entry/live-2026-11-03-entry-harahara": "5bc7537d24747909",
+    "live/2026-11-03/live-2026-11-03-thrill/entry/live-2026-11-03-entry-taste-thrill": "a1cf883cbbb37f58",
+    "live/2026-11-03/live-2026-11-03-thrill/entry/live-2026-11-03-entry-wakuwaku": "173665097bd55505",
+    "live/2026-11-03/live-2026-11-03-thrill/entry/live-2026-11-03-entry-zokuzoku": "b301e101fa07984d",
+    "live/2026-11-03/live-2026-11-03-thrill/example/live-2026-11-03-example-cold-shiver/0": "6da72ecaa9d3781e",
+    "live/2026-11-03/live-2026-11-03-thrill/example/live-2026-11-03-example-match-anxiety/0": "df466cd138e5ab25",
+    "live/2026-11-03/live-2026-11-03-thrill/example/live-2026-11-03-example-presentation-heartbeat/0": "1c9dbc60e6394c04",
+    "live/2026-11-03/live-2026-11-03-thrill/example/live-2026-11-03-example-trip-excitement/0": "ca7f3008d622addc",
+    "live/2026-11-03/live-2026-11-03-thrill/source/0": "173665097bd55505",
+    "live/2026-11-03/live-2026-11-03-thrill/source/1": "80fb65f94a475d7d",
+    "live/2026-11-03/live-2026-11-03-thrill/source/2": "b27419697892b445",
+    "live/2026-11-03/live-2026-11-03-thrill/source/3": "5bc7537d24747909",
+    "live/2026-11-03/live-2026-11-03-thrill/source/4": "b301e101fa07984d",
+    "live/2026-11-03/live-2026-11-03-timing/entry/live-2026-11-03-entry-choose-timing": "5902325e86e96b7a",
+    "live/2026-11-03/live-2026-11-03-timing/entry/live-2026-11-03-entry-perfect-fit": "a141a77daac36e71",
+    "live/2026-11-03/live-2026-11-03-timing/example/live-2026-11-03-example-choose-question-time/0": "0e96ea73980310ff",
+    "live/2026-11-03/live-2026-11-03-timing/example/live-2026-11-03-example-perfect-size/0": "d49b84713119c1d5",
+    "live/2026-11-03/live-2026-11-03-timing/source/0": "a141a77daac36e71",
+    "live/2026-11-03/live-2026-11-03-timing/source/1": "cccec6a66bee84ea",
+    "live/2026-11-03/live-2026-11-03-unnoticed/entry/live-2026-11-03-entry-before-one-knows": "abfa2173c9fba5b7",
+    "live/2026-11-03/live-2026-11-03-unnoticed/entry/live-2026-11-03-entry-unconsciously": "d375f11d8d3c8869",
+    "live/2026-11-03/live-2026-11-03-unnoticed/entry/live-2026-11-03-entry-unintentionally": "a702922d0102b7f9",
+    "live/2026-11-03/live-2026-11-03-unnoticed/entry/live-2026-11-03-entry-when-without-noticing": "c268fceabc7b8cae",
+    "live/2026-11-03/live-2026-11-03-unnoticed/entry/live-2026-11-03-entry-without-knowing": "80f1d0eb668aa10f",
+    "live/2026-11-03/live-2026-11-03-unnoticed/example/live-2026-11-03-example-unintended-snack/0": "07156088bed95e1c",
+    "live/2026-11-03/live-2026-11-03-unnoticed/example/live-2026-11-03-example-unnoticed-rain-stop/0": "5b489e73c16e38e7",
+    "live/2026-11-03/live-2026-11-03-unnoticed/example/live-2026-11-03-example-when-learned/0": "a02aa147447e8c3b",
+    "live/2026-11-03/live-2026-11-03-zutsu/entry/live-2026-11-03-entry-enter-three-at-time": "cde57846ef2d4ec2",
+    "live/2026-11-03/live-2026-11-03-zutsu/entry/live-2026-11-03-entry-little-by-little": "c7551068997c9a74",
+    "live/2026-11-03/live-2026-11-03-zutsu/example/live-2026-11-03-example-enter-three-request/0": "b3ef5e382d49306c",
+    "live/2026-11-03/live-2026-11-03-zutsu/example/live-2026-11-03-example-little-daily-study/0": "b49913a20a625bde",
+    "live/2026-11-03/live-2026-11-03-zutsu/source/0": "c16bf5ca4664aa06",
+    "live/2026-11-03/live-2026-11-03-zutsu/source/1": "82e19177a374c78b"
   }
 }
