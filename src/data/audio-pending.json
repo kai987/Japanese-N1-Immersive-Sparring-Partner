@@ -10,8 +10,8 @@
     "sampleRate": 24000,
     "codec": "mp3-64k"
   },
-  "requiredClips": 7230,
-  "pendingClips": 92,
+  "requiredClips": 7393,
+  "pendingClips": 255,
   "incompleteLessonDates": [
     "2026-11-03"
   ],
@@ -777,6 +777,1325 @@
       "label": "④ 商品がなくても広告だけで生活できるから。",
       "references": [
         "lesson/2026-11-03/review/4/detail/6"
+      ]
+    },
+    {
+      "id": "90c460e64bac2aa2",
+      "text": "ブーメラン",
+      "label": "ブーメラン",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-boomerang/source/0",
+        "live/2026-11-03/live-2026-11-03-boomerang/entry/live-2026-11-03-entry-boomerang"
+      ]
+    },
+    {
+      "id": "86fc2bc7d2bd857b",
+      "text": "投げると手元に帰ってくる",
+      "label": "投げると手元に帰ってくる",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-boomerang/source/1"
+      ]
+    },
+    {
+      "id": "207d097737c4ebab",
+      "text": "なげるとてもとにかえってくる",
+      "label": "投げると手元に帰ってくる",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-boomerang/entry/live-2026-11-03-entry-return-to-hand"
+      ]
+    },
+    {
+      "id": "c4023e75eecbc8c1",
+      "text": "投げたブーメランが手元に戻ってきた。",
+      "label": "投げたブーメランが手元に戻ってきた。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-boomerang/example/live-2026-11-03-example-boomerang-return/0"
+      ]
+    },
+    {
+      "id": "173665097bd55505",
+      "text": "わくわく",
+      "label": "わくわく",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-thrill/source/0",
+        "live/2026-11-03/live-2026-11-03-thrill/entry/live-2026-11-03-entry-wakuwaku"
+      ]
+    },
+    {
+      "id": "80fb65f94a475d7d",
+      "text": "スリルを味わう",
+      "label": "スリルを味わう",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-thrill/source/1"
+      ]
+    },
+    {
+      "id": "b27419697892b445",
+      "text": "どきどき",
+      "label": "どきどき",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-thrill/source/2",
+        "live/2026-11-03/live-2026-11-03-thrill/entry/live-2026-11-03-entry-dokidoki"
+      ]
+    },
+    {
+      "id": "5bc7537d24747909",
+      "text": "はらはら",
+      "label": "はらはら",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-thrill/source/3",
+        "live/2026-11-03/live-2026-11-03-thrill/entry/live-2026-11-03-entry-harahara"
+      ]
+    },
+    {
+      "id": "b301e101fa07984d",
+      "text": "ぞくぞく",
+      "label": "ぞくぞく",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-thrill/source/4",
+        "live/2026-11-03/live-2026-11-03-thrill/entry/live-2026-11-03-entry-zokuzoku"
+      ]
+    },
+    {
+      "id": "a1cf883cbbb37f58",
+      "text": "スリルをあじわう",
+      "label": "スリルを味わう",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-thrill/entry/live-2026-11-03-entry-taste-thrill"
+      ]
+    },
+    {
+      "id": "ca7f3008d622addc",
+      "text": "明日からの旅行を考えると、わくわくする。",
+      "label": "明日からの旅行を考えると、わくわくする。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-thrill/example/live-2026-11-03-example-trip-excitement/0"
+      ]
+    },
+    {
+      "id": "1c9dbc60e6394c04",
+      "text": "発表の順番を待つ間、どきどきしていた。",
+      "label": "発表の順番を待つ間、どきどきしていた。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-thrill/example/live-2026-11-03-example-presentation-heartbeat/0"
+      ]
+    },
+    {
+      "id": "df466cd138e5ab25",
+      "text": "試合の最後まで、はらはらしながら見ていた。",
+      "label": "試合の最後まで、はらはらしながら見ていた。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-thrill/example/live-2026-11-03-example-match-anxiety/0"
+      ]
+    },
+    {
+      "id": "6da72ecaa9d3781e",
+      "text": "冷たい風が吹いて、背中がぞくぞくした。",
+      "label": "冷たい風が吹いて、背中がぞくぞくした。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-thrill/example/live-2026-11-03-example-cold-shiver/0"
+      ]
+    },
+    {
+      "id": "1395b7bc514959c8",
+      "text": "通報する",
+      "label": "通報する",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-notify-call/source/0"
+      ]
+    },
+    {
+      "id": "9601f3ae4141a98a",
+      "text": "警察を呼ぶ",
+      "label": "警察を呼ぶ",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-notify-call/source/1"
+      ]
+    },
+    {
+      "id": "d0023b1dd830f331",
+      "text": "人を呼び出す",
+      "label": "人を呼び出す",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-notify-call/source/2"
+      ]
+    },
+    {
+      "id": "bd86afc218692b6e",
+      "text": "つうほうする",
+      "label": "通報する",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-notify-call/entry/live-2026-11-03-entry-report"
+      ]
+    },
+    {
+      "id": "5865d4cf55833e0b",
+      "text": "けいさつをよぶ",
+      "label": "警察を呼ぶ",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-notify-call/entry/live-2026-11-03-entry-call-police"
+      ]
+    },
+    {
+      "id": "09b178c54db9ab11",
+      "text": "ひとをよびだす",
+      "label": "人を呼び出す",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-notify-call/entry/live-2026-11-03-entry-summon-person"
+      ]
+    },
+    {
+      "id": "31268e0d90679d79",
+      "text": "近所の人が異変に気づき、警察に通報した。",
+      "label": "近所の人が異変に気づき、警察に通報した。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-notify-call/example/live-2026-11-03-example-notify-police/0"
+      ]
+    },
+    {
+      "id": "eaba2b845dd77050",
+      "text": "先生は生徒を入口に呼び出した。",
+      "label": "先生は生徒を入口に呼び出した。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-notify-call/example/live-2026-11-03-example-call-to-entrance/0"
+      ]
+    },
+    {
+      "id": "a695b60a0d434f16",
+      "text": "読んだことのない漫画",
+      "label": "読んだことのない漫画",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-noun-modifiers/source/0"
+      ]
+    },
+    {
+      "id": "f03208c339bb1637",
+      "text": "母の作った料理",
+      "label": "母の作った料理",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-noun-modifiers/source/1"
+      ]
+    },
+    {
+      "id": "86204c26dea72322",
+      "text": "よんだことのないまんが",
+      "label": "読んだことのない漫画",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-noun-modifiers/entry/live-2026-11-03-entry-unread-comic"
+      ]
+    },
+    {
+      "id": "3f540fd37de39cef",
+      "text": "ははのつくったりょうり",
+      "label": "母の作った料理",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-noun-modifiers/entry/live-2026-11-03-entry-mother-cooking"
+      ]
+    },
+    {
+      "id": "4639eeba5bfa7fb6",
+      "text": "図書館で、まだ読んだことのない漫画を見つけた。",
+      "label": "図書館で、まだ読んだことのない漫画を見つけた。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-noun-modifiers/example/live-2026-11-03-example-unread-comic-find/0"
+      ]
+    },
+    {
+      "id": "03f9e5bfa5607153",
+      "text": "母の作った料理が懐かしい。",
+      "label": "母の作った料理が懐かしい。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-noun-modifiers/example/live-2026-11-03-example-mother-cooking-miss/0"
+      ]
+    },
+    {
+      "id": "f0c5ebb5edc17299",
+      "text": "木を征服する",
+      "label": "木を征服する",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-conquer-tree/source/0"
+      ]
+    },
+    {
+      "id": "2ea053e90aa5f095",
+      "text": "きをせいふくする",
+      "label": "木を征服する",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-conquer-tree/entry/live-2026-11-03-entry-conquer-tree"
+      ]
+    },
+    {
+      "id": "e3963c43f38ecd2f",
+      "text": "子どもが庭の木に登っている。",
+      "label": "子どもが庭の木に登っている。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-conquer-tree/example/live-2026-11-03-example-climb-tree/0"
+      ]
+    },
+    {
+      "id": "e94ea0e4505f7390",
+      "text": "口論する",
+      "label": "口論する",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-anger-control/source/0"
+      ]
+    },
+    {
+      "id": "4f7d4eae2ecfa11a",
+      "text": "カッとなる",
+      "label": "カッとなる",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-anger-control/source/1",
+        "live/2026-11-03/live-2026-11-03-anger-control/entry/live-2026-11-03-entry-flare-up"
+      ]
+    },
+    {
+      "id": "c777e89d3ebb2af1",
+      "text": "自分をコントロールする",
+      "label": "自分をコントロールする",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-anger-control/source/2"
+      ]
+    },
+    {
+      "id": "88a1641854bd9944",
+      "text": "こうろんする",
+      "label": "口論する",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-anger-control/entry/live-2026-11-03-entry-argue"
+      ]
+    },
+    {
+      "id": "39a0a66ed7ed1a12",
+      "text": "じぶんをコントロールする",
+      "label": "自分をコントロールする",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-anger-control/entry/live-2026-11-03-entry-control-oneself"
+      ]
+    },
+    {
+      "id": "7ff2be5e06f6b9ca",
+      "text": "カッとなって言い返す前に、少し時間を置いた。",
+      "label": "カッとなって言い返す前に、少し時間を置いた。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-anger-control/example/live-2026-11-03-example-avoid-hasty-reply/0"
+      ]
+    },
+    {
+      "id": "dd9f78493619cda5",
+      "text": "口論になりそうだったので、落ち着いて話すようにした。",
+      "label": "口論になりそうだったので、落ち着いて話すようにした。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-anger-control/example/live-2026-11-03-example-avoid-argument/0"
+      ]
+    },
+    {
+      "id": "a702922d0102b7f9",
+      "text": "つい",
+      "label": "つい",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-unnoticed/entry/live-2026-11-03-entry-unintentionally"
+      ]
+    },
+    {
+      "id": "80f1d0eb668aa10f",
+      "text": "しらないうちに",
+      "label": "知らないうちに",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-unnoticed/entry/live-2026-11-03-entry-without-knowing"
+      ]
+    },
+    {
+      "id": "d375f11d8d3c8869",
+      "text": "しらずしらず",
+      "label": "知らず知らず",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-unnoticed/entry/live-2026-11-03-entry-unconsciously"
+      ]
+    },
+    {
+      "id": "c268fceabc7b8cae",
+      "text": "いつのまに",
+      "label": "いつの間に",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-unnoticed/entry/live-2026-11-03-entry-when-without-noticing"
+      ]
+    },
+    {
+      "id": "07156088bed95e1c",
+      "text": "話に夢中になって、ついお菓子を食べすぎた。",
+      "label": "話に夢中になって、ついお菓子を食べすぎた。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-unnoticed/example/live-2026-11-03-example-unintended-snack/0"
+      ]
+    },
+    {
+      "id": "5b489e73c16e38e7",
+      "text": "いつの間にか雨がやんでいた。",
+      "label": "いつの間にか雨がやんでいた。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-unnoticed/example/live-2026-11-03-example-unnoticed-rain-stop/0"
+      ]
+    },
+    {
+      "id": "a02aa147447e8c3b",
+      "text": "いつの間にそんなに上手になったの?",
+      "label": "いつの間にそんなに上手になったの？",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-unnoticed/example/live-2026-11-03-example-when-learned/0"
+      ]
+    },
+    {
+      "id": "2f257432b80dde06",
+      "text": "ついに",
+      "label": "ついに",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-result-time/source/0",
+        "live/2026-11-03/live-2026-11-03-result-time/entry/live-2026-11-03-entry-finally"
+      ]
+    },
+    {
+      "id": "a51107d83f1f405c",
+      "text": "すっかり",
+      "label": "すっかり",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-result-time/source/1",
+        "live/2026-11-03/live-2026-11-03-result-time/entry/live-2026-11-03-entry-completely"
+      ]
+    },
+    {
+      "id": "6ff2933e45cc24a2",
+      "text": "何度も直して、ついに作品が完成した。",
+      "label": "何度も直して、ついに作品が完成した。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-result-time/example/live-2026-11-03-example-finally-finished/0"
+      ]
+    },
+    {
+      "id": "2c4de95fc6db999b",
+      "text": "教えてもらった方法を、さっそく試してみた。",
+      "label": "教えてもらった方法を、さっそく試してみた。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-result-time/example/live-2026-11-03-example-try-promptly/0"
+      ]
+    },
+    {
+      "id": "8843ead0c7382a24",
+      "text": "約束をすっかり忘れていた。",
+      "label": "約束をすっかり忘れていた。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-result-time/example/live-2026-11-03-example-completely-forgot/0"
+      ]
+    },
+    {
+      "id": "e8914fa1cf2ffb55",
+      "text": "それでも",
+      "label": "それでも",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-soredemo/entry/live-2026-11-03-entry-even-so"
+      ]
+    },
+    {
+      "id": "820dd498b342f96c",
+      "text": "時間はかかる。",
+      "label": "時間はかかる。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-soredemo/example/live-2026-11-03-example-continue-even-so/0"
+      ]
+    },
+    {
+      "id": "d28531587743be74",
+      "text": "それでも、最後までやってみたい。",
+      "label": "それでも、最後までやってみたい。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-soredemo/example/live-2026-11-03-example-continue-even-so/1"
+      ]
+    },
+    {
+      "id": "4fbeb960c8d680ac",
+      "text": "歴史に残る出来事",
+      "label": "歴史に残る出来事",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-achievement/source/0"
+      ]
+    },
+    {
+      "id": "c803a583a19ee46f",
+      "text": "偉業",
+      "label": "偉業",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-achievement/source/1"
+      ]
+    },
+    {
+      "id": "60d1f68766422b63",
+      "text": "勇気を褒め称える",
+      "label": "勇気を褒め称える",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-achievement/source/2"
+      ]
+    },
+    {
+      "id": "548e03a07c25765c",
+      "text": "れきしにのこるできごと",
+      "label": "歴史に残る出来事",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-achievement/entry/live-2026-11-03-entry-historic-event"
+      ]
+    },
+    {
+      "id": "90e7a03aa85229f6",
+      "text": "いぎょう",
+      "label": "偉業",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-achievement/entry/live-2026-11-03-entry-great-achievement"
+      ]
+    },
+    {
+      "id": "a0ffd989a0532455",
+      "text": "ゆうきをほめたたえる",
+      "label": "勇気を褒め称える",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-achievement/entry/live-2026-11-03-entry-praise-courage"
+      ]
+    },
+    {
+      "id": "dbf8a2db5d4b62c7",
+      "text": "人々は、救助に向かった人の勇気を褒め称えた。",
+      "label": "人々は、救助に向かった人の勇気を褒め称えた。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-achievement/example/live-2026-11-03-example-praise-volunteer-courage/0"
+      ]
+    },
+    {
+      "id": "4d6eed263bb6153a",
+      "text": "その偉業は、歴史に残る出来事として語り継がれている。",
+      "label": "その偉業は、歴史に残る出来事として語り継がれている。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-achievement/example/live-2026-11-03-example-achievement-record/0"
+      ]
+    },
+    {
+      "id": "d4a3f5e99996fe7d",
+      "text": "わざとらしいみぶり",
+      "label": "わざとらしい身振り",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-deliberate/entry/live-2026-11-03-entry-affected-gesture"
+      ]
+    },
+    {
+      "id": "1f2e3bf041dc4d4c",
+      "text": "わざわざ来てくれて、ありがとう。",
+      "label": "わざわざ来てくれて、ありがとう。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-deliberate/example/live-2026-11-03-example-special-visit-thanks/0"
+      ]
+    },
+    {
+      "id": "0983114e8bb71eda",
+      "text": "子どもを喜ばせようとして、わざと負けた。",
+      "label": "子どもを喜ばせようとして、わざと負けた。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-deliberate/example/live-2026-11-03-example-intentional-loss/0"
+      ]
+    },
+    {
+      "id": "437f6560f20600d4",
+      "text": "大げさな身振りが、少しわざとらしく見えた。",
+      "label": "大げさな身振りが、少しわざとらしく見えた。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-deliberate/example/live-2026-11-03-example-affected-gesture-impression/0"
+      ]
+    },
+    {
+      "id": "fc84f34b180be7df",
+      "text": "お世辞を言う",
+      "label": "お世辞を言う",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-social-idioms/source/0"
+      ]
+    },
+    {
+      "id": "f973c78268728326",
+      "text": "水を差す",
+      "label": "水を差す",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-social-idioms/source/1"
+      ]
+    },
+    {
+      "id": "790600da407ad55e",
+      "text": "おせじをいう",
+      "label": "お世辞を言う",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-social-idioms/entry/live-2026-11-03-entry-flatter"
+      ]
+    },
+    {
+      "id": "a27430f47415ca30",
+      "text": "みずをさす",
+      "label": "水を差す",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-social-idioms/entry/live-2026-11-03-entry-spoil-mood"
+      ]
+    },
+    {
+      "id": "ca4e4a361ebc5b82",
+      "text": "お世辞ではなく、本当にすてきな作品だと思います。",
+      "label": "お世辞ではなく、本当にすてきな作品だと思います。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-social-idioms/example/live-2026-11-03-example-not-flattery/0"
+      ]
+    },
+    {
+      "id": "acf8e37dd64d1529",
+      "text": "楽しい話に水を差すようで悪いけれど、そろそろ帰ろう。",
+      "label": "楽しい話に水を差すようで悪いけれど、そろそろ帰ろう。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-social-idioms/example/live-2026-11-03-example-interrupt-cheerful-talk/0"
+      ]
+    },
+    {
+      "id": "95d9faa7d9292b93",
+      "text": "食べかけのケーキ",
+      "label": "食べかけのケーキ",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-half-eaten/source/0"
+      ]
+    },
+    {
+      "id": "bcfb67272e502413",
+      "text": "たべかけのケーキ",
+      "label": "食べかけのケーキ",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-half-eaten/entry/live-2026-11-03-entry-half-eaten-cake"
+      ]
+    },
+    {
+      "id": "3c8870310494b8d5",
+      "text": "食べかけのケーキを冷蔵庫に入れた。",
+      "label": "食べかけのケーキを冷蔵庫に入れた。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-half-eaten/example/live-2026-11-03-example-half-eaten-cake-fridge/0"
+      ]
+    },
+    {
+      "id": "dbba34492c73e9ed",
+      "text": "容赦なく",
+      "label": "容赦なく",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-refusal/source/0"
+      ]
+    },
+    {
+      "id": "0f5982ac3746d238",
+      "text": "承知しない",
+      "label": "承知しない",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-refusal/source/1"
+      ]
+    },
+    {
+      "id": "a55bd8533e04f4ef",
+      "text": "承諾しない",
+      "label": "承諾しない",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-refusal/source/2"
+      ]
+    },
+    {
+      "id": "26b0f4c6e0edba6a",
+      "text": "ようしゃなく",
+      "label": "容赦なく",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-refusal/entry/live-2026-11-03-entry-without-mercy"
+      ]
+    },
+    {
+      "id": "b96f0ff1bf6010c5",
+      "text": "しょうちしない",
+      "label": "承知しない",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-refusal/entry/live-2026-11-03-entry-not-accept"
+      ]
+    },
+    {
+      "id": "6b697235f78fac91",
+      "text": "しょうだくしない",
+      "label": "承諾しない",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-refusal/entry/live-2026-11-03-entry-not-consent"
+      ]
+    },
+    {
+      "id": "caaf50d22bf97ade",
+      "text": "条件が合わないため、その提案には承諾しなかった。",
+      "label": "条件が合わないため、その提案には承諾しなかった。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-refusal/example/live-2026-11-03-example-not-consent-proposal/0"
+      ]
+    },
+    {
+      "id": "e25482389e799ea4",
+      "text": "雨は容赦なく降り続いた。",
+      "label": "雨は容赦なく降り続いた。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-refusal/example/live-2026-11-03-example-severe-rain/0"
+      ]
+    },
+    {
+      "id": "98991c4ab45c8766",
+      "text": "ラーメンが伸びる",
+      "label": "ラーメンが伸びる",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-noodles/source/0"
+      ]
+    },
+    {
+      "id": "366f2b94711c9b08",
+      "text": "ラーメンがのびる",
+      "label": "ラーメンが伸びる",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-noodles/entry/live-2026-11-03-entry-noodles-soggy"
+      ]
+    },
+    {
+      "id": "a6b79169f85dd275",
+      "text": "ラーメンがのびる前に、食べよう。",
+      "label": "ラーメンがのびる前に、食べよう。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-noodles/example/live-2026-11-03-example-eat-before-soggy/0"
+      ]
+    },
+    {
+      "id": "159d1f2cfab79e18",
+      "text": "瞬間移動",
+      "label": "瞬間移動",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-fantasy/source/0"
+      ]
+    },
+    {
+      "id": "5dc4b863c694b737",
+      "text": "タイムスリップ",
+      "label": "タイムスリップ",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-fantasy/source/1",
+        "live/2026-11-03/live-2026-11-03-fantasy/entry/live-2026-11-03-entry-time-slip"
+      ]
+    },
+    {
+      "id": "7ddd06cfb9629bfb",
+      "text": "しゅんかんいどう",
+      "label": "瞬間移動",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-fantasy/entry/live-2026-11-03-entry-teleportation"
+      ]
+    },
+    {
+      "id": "af12976d796dfd79",
+      "text": "この物語では、主人公が百年前にタイムスリップする。",
+      "label": "この物語では、主人公が百年前にタイムスリップする。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-fantasy/example/live-2026-11-03-example-time-slip-story/0"
+      ]
+    },
+    {
+      "id": "a3dd5985060a5849",
+      "text": "てっぺん",
+      "label": "てっぺん",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-position/source/0",
+        "live/2026-11-03/live-2026-11-03-position/entry/live-2026-11-03-entry-very-top"
+      ]
+    },
+    {
+      "id": "b83da358a8fee864",
+      "text": "右はし",
+      "label": "右はし",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-position/source/1"
+      ]
+    },
+    {
+      "id": "6c0a9fa6a74dd9aa",
+      "text": "みぎはし",
+      "label": "右はし",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-position/entry/live-2026-11-03-entry-right-edge"
+      ]
+    },
+    {
+      "id": "2b60461ae96d8316",
+      "text": "塔のてっぺんに旗がある。",
+      "label": "塔のてっぺんに旗がある。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-position/example/live-2026-11-03-example-tower-top/0"
+      ]
+    },
+    {
+      "id": "af28ee655264a589",
+      "text": "画面の右端にあるボタンを押してください。",
+      "label": "画面の右端にあるボタンを押してください。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-position/example/live-2026-11-03-example-right-edge-button/0"
+      ]
+    },
+    {
+      "id": "b7b0f1f7f288151b",
+      "text": "自分で描いた絵をみんなに見せた。",
+      "label": "自分で描いた絵をみんなに見せた。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-show/example/live-2026-11-03-example-show-drawing/0"
+      ]
+    },
+    {
+      "id": "bdc828b8f40577ec",
+      "text": "目も眩む",
+      "label": "目も眩む",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-glare/source/0"
+      ]
+    },
+    {
+      "id": "712e4f8fece89c33",
+      "text": "眩しい",
+      "label": "眩しい",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-glare/source/1"
+      ]
+    },
+    {
+      "id": "1d77924e94755ae2",
+      "text": "めもくらむ",
+      "label": "目も眩む",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-glare/entry/live-2026-11-03-entry-eyes-dazzled"
+      ]
+    },
+    {
+      "id": "294f24ae26c8ee6a",
+      "text": "まぶしい",
+      "label": "眩しい",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-glare/entry/live-2026-11-03-entry-dazzling"
+      ]
+    },
+    {
+      "id": "19528da56d8d32e9",
+      "text": "目も眩むような高さの崖を見上げた。",
+      "label": "目も眩むような高さの崖を見上げた。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-glare/example/live-2026-11-03-example-dizzying-height/0"
+      ]
+    },
+    {
+      "id": "f6b137c13e45bc75",
+      "text": "朝日が眩しくて、目を細めた。",
+      "label": "朝日が眩しくて、目を細めた。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-glare/example/live-2026-11-03-example-sun-dazzling/0"
+      ]
+    },
+    {
+      "id": "46477d7c840c62b8",
+      "text": "てがしびれる",
+      "label": "手がしびれる",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-body-words/entry/live-2026-11-03-entry-hand-numb"
+      ]
+    },
+    {
+      "id": "4466e3fbfe032f8f",
+      "text": "しんぞうまひ",
+      "label": "心臓麻痺",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-body-words/entry/live-2026-11-03-entry-cardiac-paralysis"
+      ]
+    },
+    {
+      "id": "f8ea7269b55b32b5",
+      "text": "ひふか",
+      "label": "皮膚科",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-body-words/entry/live-2026-11-03-entry-dermatology"
+      ]
+    },
+    {
+      "id": "4da34bd6671932f2",
+      "text": "長い間同じ姿勢でいたら、手がしびれた。",
+      "label": "長い間同じ姿勢でいたら、手がしびれた。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-body-words/example/live-2026-11-03-example-numb-hand-sentence/0"
+      ]
+    },
+    {
+      "id": "da66f7126c0287ce",
+      "text": "病院の案内板で、皮膚科の場所を確認した。",
+      "label": "病院の案内板で、皮膚科の場所を確認した。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-body-words/example/live-2026-11-03-example-dermatology-sign/0"
+      ]
+    },
+    {
+      "id": "d958446f4acb483b",
+      "text": "憂うつ",
+      "label": "憂うつ",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-mood/source/0"
+      ]
+    },
+    {
+      "id": "e3b2048ec6f838fa",
+      "text": "うつ病",
+      "label": "うつ病",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-mood/source/1"
+      ]
+    },
+    {
+      "id": "6e463c672d9160e3",
+      "text": "ゆううつ",
+      "label": "憂うつ",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-mood/entry/live-2026-11-03-entry-gloomy"
+      ]
+    },
+    {
+      "id": "94936d8d60cb9581",
+      "text": "うつびょう",
+      "label": "うつ病",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-mood/entry/live-2026-11-03-entry-depression"
+      ]
+    },
+    {
+      "id": "be2daf05d5bc0681",
+      "text": "雨の日が続くと、少し憂うつな気分になる。",
+      "label": "雨の日が続くと、少し憂うつな気分になる。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-mood/example/live-2026-11-03-example-gloomy-rain/0"
+      ]
+    },
+    {
+      "id": "5986588f1db7ed23",
+      "text": "変なことに使うな",
+      "label": "変なことに使うな",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-negative-command/source/0"
+      ]
+    },
+    {
+      "id": "db42268b874fa3b7",
+      "text": "へんなことにつかうな",
+      "label": "変なことに使うな",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-negative-command/entry/live-2026-11-03-entry-do-not-misuse"
+      ]
+    },
+    {
+      "id": "164f305c05507068",
+      "text": "この道具を変なことに使うな。",
+      "label": "この道具を変なことに使うな。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-negative-command/example/live-2026-11-03-example-do-not-misuse-tool/0"
+      ]
+    },
+    {
+      "id": "4a1d7d10868af164",
+      "text": "ことのほったん",
+      "label": "ことの発端",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-origin/entry/live-2026-11-03-entry-origin-of-affair"
+      ]
+    },
+    {
+      "id": "2c5fcf2a3527ca0e",
+      "text": "ことの発端は、小さな誤解だった。",
+      "label": "ことの発端は、小さな誤解だった。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-origin/example/live-2026-11-03-example-origin-small-misunderstanding/0"
+      ]
+    },
+    {
+      "id": "5960eb5bb094eb17",
+      "text": "たのしい",
+      "label": "楽しい",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-pleasure/entry/live-2026-11-03-entry-enjoyable"
+      ]
+    },
+    {
+      "id": "1d621fe709bd91ab",
+      "text": "たのしむ",
+      "label": "楽しむ",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-pleasure/entry/live-2026-11-03-entry-enjoy"
+      ]
+    },
+    {
+      "id": "6260f9868214fcea",
+      "text": "たのしみ",
+      "label": "楽しみ",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-pleasure/entry/live-2026-11-03-entry-pleasure-anticipation"
+      ]
+    },
+    {
+      "id": "c513c816a0d8303a",
+      "text": "らくなしごと",
+      "label": "楽な仕事",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-pleasure/entry/live-2026-11-03-entry-easy-work"
+      ]
+    },
+    {
+      "id": "bccd2abc6ec733d0",
+      "text": "きらくなさぎょう",
+      "label": "気楽な作業",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-pleasure/entry/live-2026-11-03-entry-carefree-task"
+      ]
+    },
+    {
+      "id": "e0c543ea31d801c6",
+      "text": "ながめをたのしむ",
+      "label": "眺めを楽しむ",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-pleasure/entry/live-2026-11-03-entry-enjoy-view"
+      ]
+    },
+    {
+      "id": "b0167af6d04ca5ba",
+      "text": "しあいをたのしみにする",
+      "label": "試合を楽しみにする",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-pleasure/entry/live-2026-11-03-entry-look-forward-match"
+      ]
+    },
+    {
+      "id": "8b09a20ed1f80192",
+      "text": "久しぶりに友達に会えて、嬉しかった。",
+      "label": "久しぶりに友達に会えて、嬉しかった。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-pleasure/example/live-2026-11-03-example-glad-meeting/0"
+      ]
+    },
+    {
+      "id": "1f92ece571b4bd61",
+      "text": "友達と話して、楽しい午後を過ごした。",
+      "label": "友達と話して、楽しい午後を過ごした。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-pleasure/example/live-2026-11-03-example-enjoyable-afternoon/0"
+      ]
+    },
+    {
+      "id": "33b015fca5879730",
+      "text": "窓からの眺めを楽しんだ。",
+      "label": "窓からの眺めを楽しんだ。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-pleasure/example/live-2026-11-03-example-enjoy-window-view/0"
+      ]
+    },
+    {
+      "id": "a75ce5bf8ae83563",
+      "text": "来週の試合を楽しみにしている。",
+      "label": "来週の試合を楽しみにしている。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-pleasure/example/live-2026-11-03-example-look-forward-next-match/0"
+      ]
+    },
+    {
+      "id": "a141a77daac36e71",
+      "text": "ピッタリ",
+      "label": "ピッタリ",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-timing/source/0",
+        "live/2026-11-03/live-2026-11-03-timing/entry/live-2026-11-03-entry-perfect-fit"
+      ]
+    },
+    {
+      "id": "cccec6a66bee84ea",
+      "text": "タイミングを見計らう",
+      "label": "タイミングを見計らう",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-timing/source/1"
+      ]
+    },
+    {
+      "id": "5902325e86e96b7a",
+      "text": "タイミングをみはからう",
+      "label": "タイミングを見計らう",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-timing/entry/live-2026-11-03-entry-choose-timing"
+      ]
+    },
+    {
+      "id": "d49b84713119c1d5",
+      "text": "この靴は足にピッタリ合う。",
+      "label": "この靴は足にピッタリ合う。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-timing/example/live-2026-11-03-example-perfect-size/0"
+      ]
+    },
+    {
+      "id": "0e96ea73980310ff",
+      "text": "話しかけるタイミングを見計らった。",
+      "label": "話しかけるタイミングを見計らった。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-timing/example/live-2026-11-03-example-choose-question-time/0"
+      ]
+    },
+    {
+      "id": "d8e8b40cdcabed08",
+      "text": "電気をつけたまま、寝てしまった",
+      "label": "電気をつけたまま、寝てしまった",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-mama-shimau/source/0"
+      ]
+    },
+    {
+      "id": "7b4baac0e9ced384",
+      "text": "でんきをつけたままねてしまった",
+      "label": "電気をつけたまま、寝てしまった",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-mama-shimau/entry/live-2026-11-03-entry-sleep-lights-on"
+      ]
+    },
+    {
+      "id": "b6133a7d6bfeff29",
+      "text": "昨夜は電気をつけたまま、寝てしまった。",
+      "label": "昨夜は電気をつけたまま、寝てしまった。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-mama-shimau/example/live-2026-11-03-example-lights-left-on/0"
+      ]
+    },
+    {
+      "id": "c16bf5ca4664aa06",
+      "text": "三人ずつ部屋に入ってください",
+      "label": "三人ずつ部屋に入ってください",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-zutsu/source/0"
+      ]
+    },
+    {
+      "id": "82e19177a374c78b",
+      "text": "少しずつ",
+      "label": "少しずつ",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-zutsu/source/1"
+      ]
+    },
+    {
+      "id": "cde57846ef2d4ec2",
+      "text": "さんにんずつへやにはいってください",
+      "label": "三人ずつ部屋に入ってください",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-zutsu/entry/live-2026-11-03-entry-enter-three-at-time"
+      ]
+    },
+    {
+      "id": "c7551068997c9a74",
+      "text": "すこしずつ",
+      "label": "少しずつ",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-zutsu/entry/live-2026-11-03-entry-little-by-little"
+      ]
+    },
+    {
+      "id": "b3ef5e382d49306c",
+      "text": "順番に、三人ずつ部屋に入ってください。",
+      "label": "順番に、三人ずつ部屋に入ってください。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-zutsu/example/live-2026-11-03-example-enter-three-request/0"
+      ]
+    },
+    {
+      "id": "b49913a20a625bde",
+      "text": "毎日少しずつ、日本語を勉強している。",
+      "label": "毎日少しずつ、日本語を勉強している。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-zutsu/example/live-2026-11-03-example-little-daily-study/0"
+      ]
+    },
+    {
+      "id": "5f7a34953f99cee1",
+      "text": "呼びに来る",
+      "label": "呼びに来る",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-call-purpose/source/0"
+      ]
+    },
+    {
+      "id": "8d442c974f6ace1b",
+      "text": "よびにくる",
+      "label": "呼びに来る",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-call-purpose/entry/live-2026-11-03-entry-come-to-call"
+      ]
+    },
+    {
+      "id": "aecedd2802d7d57c",
+      "text": "準備ができると、友達が私を呼びに来た。",
+      "label": "準備ができると、友達が私を呼びに来た。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-call-purpose/example/live-2026-11-03-example-friend-came-call/0"
+      ]
+    },
+    {
+      "id": "e82c808730145f8b",
+      "text": "チョロチョロ",
+      "label": "チョロチョロ",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-manner-words/source/0",
+        "live/2026-11-03/live-2026-11-03-manner-words/entry/live-2026-11-03-entry-choro-choro"
+      ]
+    },
+    {
+      "id": "4b00fecd25973d79",
+      "text": "ぐずぐず",
+      "label": "ぐずぐず",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-manner-words/source/1",
+        "live/2026-11-03/live-2026-11-03-manner-words/entry/live-2026-11-03-entry-guzu-guzu"
+      ]
+    },
+    {
+      "id": "afd488357e71cf31",
+      "text": "だらだら",
+      "label": "だらだら",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-manner-words/source/2",
+        "live/2026-11-03/live-2026-11-03-manner-words/entry/live-2026-11-03-entry-dara-dara"
+      ]
+    },
+    {
+      "id": "951b716d8d1cdab9",
+      "text": "まごまご",
+      "label": "まごまご",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-manner-words/source/3",
+        "live/2026-11-03/live-2026-11-03-manner-words/entry/live-2026-11-03-entry-mago-mago"
+      ]
+    },
+    {
+      "id": "113ffd174d68b0ab",
+      "text": "蛇口から水がちょろちょろ流れている。",
+      "label": "蛇口から水がちょろちょろ流れている。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-manner-words/example/live-2026-11-03-example-stream-trickle/0"
+      ]
+    },
+    {
+      "id": "8813a6286fb9338c",
+      "text": "ぐずぐずしていると、電車に遅れるよ。",
+      "label": "ぐずぐずしていると、電車に遅れるよ。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-manner-words/example/live-2026-11-03-example-stop-dawdling/0"
+      ]
+    },
+    {
+      "id": "e6439e0273e57f9e",
+      "text": "説明がだらだら長くならないように、要点をまとめた。",
+      "label": "説明がだらだら長くならないように、要点をまとめた。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-manner-words/example/live-2026-11-03-example-avoid-rambling/0"
+      ]
+    },
+    {
+      "id": "ad94fc54e53adac8",
+      "text": "初めての駅で出口がわからず、まごまごした。",
+      "label": "初めての駅で出口がわからず、まごまごした。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-manner-words/example/live-2026-11-03-example-lost-at-station/0"
+      ]
+    },
+    {
+      "id": "f3331e58639b9404",
+      "text": "何もない",
+      "label": "何もない",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-absence/source/0"
+      ]
+    },
+    {
+      "id": "fe301abf7b7d121b",
+      "text": "誰もいない",
+      "label": "誰もいない",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-absence/source/1"
+      ]
+    },
+    {
+      "id": "8669eee6f481e26a",
+      "text": "なにもない",
+      "label": "何もない",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-absence/entry/live-2026-11-03-entry-nothing"
+      ]
+    },
+    {
+      "id": "170ee7f9f88f3f2d",
+      "text": "だれもいない",
+      "label": "誰もいない",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-absence/entry/live-2026-11-03-entry-nobody"
+      ]
+    },
+    {
+      "id": "9c00fb046648d150",
+      "text": "机の上には何もない。",
+      "label": "机の上には何もない。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-absence/example/live-2026-11-03-example-nothing-on-desk/0"
+      ]
+    },
+    {
+      "id": "4d203a08c8b2a22c",
+      "text": "部屋には誰もいない。",
+      "label": "部屋には誰もいない。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-absence/example/live-2026-11-03-example-nobody-in-room/0"
+      ]
+    },
+    {
+      "id": "0a21f1d484b7d410",
+      "text": "鏡に映る",
+      "label": "鏡に映る",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-reflect/source/0"
+      ]
+    },
+    {
+      "id": "5f46695f282abf63",
+      "text": "かがみにうつる",
+      "label": "鏡に映る",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-reflect/entry/live-2026-11-03-entry-reflected-in-mirror"
+      ]
+    },
+    {
+      "id": "45ad64714482a49d",
+      "text": "鏡に映った自分の顔を見た。",
+      "label": "鏡に映った自分の顔を見た。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-reflect/example/live-2026-11-03-example-face-mirror/0"
+      ]
+    },
+    {
+      "id": "ce106d0c4be0daa8",
+      "text": "ボタンをおす",
+      "label": "ボタンを押す",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-button/entry/live-2026-11-03-entry-press-button"
+      ]
+    },
+    {
+      "id": "e1cf317262aacb2e",
+      "text": "準備ができたら、開始ボタンを押してください。",
+      "label": "準備ができたら、開始ボタンを押してください。",
+      "references": [
+        "live/2026-11-03/live-2026-11-03-button/example/live-2026-11-03-example-press-start-button/0"
       ]
     }
   ]
