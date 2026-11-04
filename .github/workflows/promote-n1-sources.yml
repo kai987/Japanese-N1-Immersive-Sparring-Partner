@@ -1,0 +1,40 @@
+name: Promote verified N1 source checkpoints
+
+on:
+  push:
+    branches: [automation/n1-progress]
+    paths: ['runs/*/source.json']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: n1-source-promotion
+  cancel-in-progress: false
+
+jobs:
+  promote:
+    if: github.ref == 'refs/heads/automation/n1-progress' || github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GIT_AUTHOR_NAME: github-actions[bot]
+      GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+      GIT_COMMITTER_NAME: github-actions[bot]
+      GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+      - name: Verify checkpoint contract
+        run: node --test scripts/n1-automation.test.mjs scripts/promote-n1-sources.test.mjs
+      - name: Promote unchanged originals and verify GitHub read-back
+        run: |
+          set -o pipefail
+          node scripts/promote-n1-sources.mjs | tee -a "$GITHUB_STEP_SUMMARY"
