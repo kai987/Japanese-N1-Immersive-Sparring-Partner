@@ -4,6 +4,7 @@ import { okashiBokusoGroups } from './live-reactions-2026-09-30.ts'
 import { liveOctober29Groups } from './live-reactions-2026-10-29.ts'
 import { liveOctober30Groups } from './live-reactions-2026-10-30.ts'
 import { liveNovember3Groups } from './live-reactions-2026-11-03.ts'
+import { liveNovember4Groups } from './live-reactions-2026-11-04.ts'
 
 export const liveCategories = [
   { id: 'grammar', label: '文法・口语' },
@@ -32,6 +33,11 @@ const legacyCategories: LiveCategory[] = [
   'vocabulary', 'vocabulary', 'vocabulary', 'vocabulary',
 ]
 export const liveUnits: LiveUnit[] = [
+  {
+    id: '2026-11-04', date: '2026-11-04', title: 'おすそわけ・口語文法・五感の表現',
+    description: '笔记标题日期：2026-11-04。整理4张连续手机笔记照片，合并截图重叠部分。原笔记保留简写及疑似笔误，学习卡另标常用写法，并补充中文释义和日中例句。',
+    countLabel: liveUnitCountLabel(liveNovember4Groups), groups: liveNovember4Groups,
+  },
   {
     id: '2026-11-03', date: '2026-11-03', title: 'ブーメラン・感情の擬態語・紛らわしい表現',
     description: '笔记标题日期：2026-11-03。来自3张连续手机笔记照片，合并重叠内容。保留原笔记的写法，并将用法辨析、规范写法和原创学习例句分别标注；不将全部表达标为N1。',
