@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "targetDate": "2026-11-04",
+  "day": 67,
+  "status": "waiting_source",
+  "stage": "waiting_source",
+  "upstreamSourceCommit": "223cf54403bd8aa5fd1f1557ef77ec1676e888ce",
+  "sourceCommit": "223cf54403bd8aa5fd1f1557ef77ec1676e888ce",
+  "sourcePagesRunId": 41764225567,
+  "upstreamTargetVerified": true,
+  "issueNumber": 85,
+  "totalDays": 85,
+  "snapshotSha256": "1b84c1ec41c802c4ce604b2a56897e5e550fdfe1c0463cd6d7a31467dff370d7",
+  "n1ObservedMain": "65f8fa26ddbdffe4ac9c170f17644352eeaeac00",
+  "sourceSavedOnMain": false,
+  "sourceCheckpointVerified": false,
+  "requestSubmitted": false,
+  "textPublicationVerified": false,
+  "lastError": {
+    "code": "source_missing",
+    "message": "Both complete main and progress inventories lack the original/outbox and saved request for the frozen date."
+  },
+  "nextStep": "Continue the same date after the N1 source or exact outbox is available.",
+  "updatedAt": "2026-11-04T03:04:20.858Z"
+}
