@@ -5,6 +5,7 @@ import { liveOctober29Groups } from './live-reactions-2026-10-29.ts'
 import { liveOctober30Groups } from './live-reactions-2026-10-30.ts'
 import { liveNovember3Groups } from './live-reactions-2026-11-03.ts'
 import { liveNovember4Groups } from './live-reactions-2026-11-04.ts'
+import { liveNovember5Groups } from './live-reactions-2026-11-05.ts'
 
 export const liveCategories = [
   { id: 'grammar', label: '文法・口语' },
@@ -33,6 +34,11 @@ const legacyCategories: LiveCategory[] = [
   'vocabulary', 'vocabulary', 'vocabulary', 'vocabulary',
 ]
 export const liveUnits: LiveUnit[] = [
+  {
+    id: '2026-11-05', date: '2026-11-05', title: '取り替える・だって・条件と口語表現',
+    description: '笔记标题日期：2026-11-05。来自3张连续手机笔记照片，合并重叠的「Aというか、Bというか」和「戸棚」。原笔记、语境辨析和原创日中例句分别标注；简写和未完片段保留原貌并补充说明。',
+    countLabel: liveUnitCountLabel(liveNovember5Groups), groups: liveNovember5Groups,
+  },
   {
     id: '2026-11-04', date: '2026-11-04', title: 'おすそわけ・口語文法・五感の表現',
     description: '笔记标题日期：2026-11-04。整理4张连续手机笔记照片，合并截图重叠部分。原笔记保留简写及疑似笔误，学习卡另标常用写法，并补充中文释义和日中例句。',
