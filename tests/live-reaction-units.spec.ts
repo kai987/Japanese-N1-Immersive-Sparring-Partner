@@ -14,7 +14,7 @@ test('new unit is reachable from the sidebar and contains complete source-labell
   await expect(page).toHaveTitle('N1 Immersive Sparring Partner')
   await page.getByRole('navigation', { name: 'メインナビゲーション', exact: true }).getByRole('button', { name: '直播条反', exact: true }).click()
   await expect(page.getByLabel('选择学习单元', { exact: true })).toHaveValue(unit)
-  await expect(page.locator('#live-unit-title')).toHaveText('ドラえもん「おかし牧草」')
+  await expect(page.locator('#live-unit-title')).toHaveText('ドラえもん「おかし牧場」')
   await expect(page.locator('[data-live-group]')).toHaveCount(28)
   await expect(page.locator('.live-entry')).toHaveCount(47)
   await expect(page.locator('.live-source-quote')).toHaveCount(28)
