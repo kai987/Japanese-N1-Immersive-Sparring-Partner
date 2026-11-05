@@ -34,6 +34,15 @@ const legacyCategories: LiveCategory[] = [
   'vocabulary', 'vocabulary', 'vocabulary', 'vocabulary',
 ]
 // Manga titles are display metadata, not speech or progress identities.
+// 09/28 basis (supplemental photos 8-10): くよくよしたって / 気を取り直す /
+// 貯金を下ろす / エープリルフール match the returning-Doraemon story.
+// https://e-comi.shogakukan.co.jp/books/091400070000d0000000
+// https://ameblo.jp/kuro-yokoyama/entry-12398866752.html
+// 10/29-30 are consecutive study notes for the same dandelion story:
+// glasses/fantasy first, then moving the plant, watering and preparing for winter.
+// https://e-comi.shogakukan.co.jp/books/091401080000d0000000
+// https://www.tv-asahi.co.jp/doraemon/story/0005/
+// https://ameblo.jp/kuro-yokoyama/entry-12403042106.html
 // 11/05: https://e-comi.shogakukan.co.jp/books/091400030000d0000000
 //        https://dsdb.jp/story/dz-0105 (大全集2 p497; photo shows p501)
 // 11/04 basis: おすそわけ・ガムを噛む・貧弱・味が口に伝わる; photo shows 大全集5.
@@ -61,13 +70,13 @@ export const liveUnits: LiveUnit[] = [
     countLabel: liveUnitCountLabel(liveNovember3Groups), groups: liveNovember3Groups,
   },
   {
-    id: '2026-10-30', date: '2026-10-30', title: '抜き出す・授受・口語と時間の表現',
-    description: '漫画篇名待确认：现有截图与笔记不足以对应到具体短篇。笔记标题日期：2026-10-30。来自5张连续手机笔记照片，合并重叠部分，收录该标题下的64条笔记和4句无独立日期的口语补充。照片中已有的10月29日内容仍保留在原单元，不重复收录。原笔记、用法辨析和学习例句分别标注，不将全部表达标为N1。',
+    id: '2026-10-30', date: '2026-10-30', title: 'ドラえもん「タンポポ空を行く」',
+    description: '相关短篇：タンポポ空を行く，收录于普通单行本第18卷第20话，接续10月29日的同篇学习。补充照片中的「庭の隅に植え替える」「のどがカラカラ」「水まきをする」「冬に備える」「のび太にならないように」与原作中照顾蒲公英、植物缺水及蚂蚁备冬的情节对应。学习主题：抜き出す・授受・口語と時間の表現。笔记标题日期：2026-10-30。来自5张连续手机笔记照片，合并重叠部分，收录该标题下的64条笔记和4句无独立日期的口语补充。照片中已有的10月29日内容仍保留在原单元，不重复收录。原笔记、用法辨析和学习例句分别标注，不将全部表达标为N1。',
     countLabel: liveUnitCountLabel(liveOctober30Groups), groups: liveOctober30Groups,
   },
   {
-    id: '2026-10-29', date: '2026-10-29', title: '移動の「を」・断り方・見え方',
-    description: '漫画篇名待确认：现有截图与笔记不足以对应到具体短篇。笔记标题日期：2026-10-29。来自两张连续手机笔记截图，重叠部分合并为35条表达、16组知识点。原笔记与补充辨析、学习例句分别标注；保留简写并说明适用语境，不将全部表达标为N1。',
+    id: '2026-10-29', date: '2026-10-29', title: 'ドラえもん「タンポポ空を行く」',
+    description: '相关短篇：タンポポ空を行く，收录于普通单行本第18卷第20话。根据补充照片中的眼镜、幻想及「そう見えるだけ」等线索，与道具「ファンタグラス」和10月30日连续笔记中的蒲公英情节交叉核对；两期为同一短篇的连续学习。学习主题：移動の「を」・断り方・見え方。笔记标题日期：2026-10-29。来自两张连续手机笔记截图，重叠部分合并为35条表达、16组知识点。原笔记与补充辨析、学习例句分别标注；保留简写并说明适用语境，不将全部表达标为N1。',
     countLabel: liveUnitCountLabel(liveOctober29Groups), groups: liveOctober29Groups,
   },
   {
@@ -76,8 +85,8 @@ export const liveUnits: LiveUnit[] = [
     countLabel: liveUnitCountLabel(okashiBokusoGroups), groups: okashiBokusoGroups,
   },
   {
-    id: '2026-09-28', date: '2026-09-28', title: '直播会话笔记',
-    description: '漫画篇名待确认：现有截图与笔记不足以对应到具体短篇。来自提供的2026-09-28直播笔记截图。原有15组、64条表达与学习标记保持不变；不同难度的词汇、口语与语法不统一标为N1。',
+    id: '2026-09-28', date: '2026-09-28', title: 'ドラえもん「帰ってきたドラえもん」',
+    description: '相关短篇：帰ってきたドラえもん（哆啦A梦回来了），收录于普通单行本第7卷第1话。根据补充照片中的「くよくよしたって」「気を取り直す」「貯金を下ろす」「エープリルフール」，与原作中振作起来、被愚人节谎言戏弄及准备买铜锣烧的情节交叉核对。笔记中的词汇拓展仍属于学习补充。来自提供的2026-09-28直播笔记截图。原有15组、64条表达与学习标记保持不变；不同难度的词汇、口语与语法不统一标为N1。',
     countLabel: liveUnitCountLabel(liveReactionGroups.map((group, index) => ({ ...group, category: legacyCategories[index] }))),
     groups: liveReactionGroups.map((group, index) => ({ ...group, category: legacyCategories[index] })),
   },
