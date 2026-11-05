@@ -39,6 +39,13 @@ test('search highlights each query term and merges overlapping matches into one 
   assert.deepEqual(getSearchRanges('話し合う', '話し合う 話し合う 合う'), [{ start: 0, end: 4 }])
 })
 
+test('a complete bilingual phrase highlights across its internal spaces', () => {
+  for (const phrase of ['使用物理 AI 的目的是确定运行条件。', 'AI AI']) {
+    const text = `前：${phrase} 後`
+    assert.deepEqual(getSearchRanges(text, phrase), [{ start: 2, end: 2 + phrase.length }])
+  }
+})
+
 test('regex and HTML-like search terms are interpreted as literal text', () => {
   for (const query of ['[test].*?', '(a+b)', '$^', '<script>']) {
     const text = `前 ${query} 後`

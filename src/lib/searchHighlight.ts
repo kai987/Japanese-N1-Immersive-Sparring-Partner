@@ -9,6 +9,9 @@ export const getSearchTerms = (query: string) => [...new Set(query.trim().split(
 export function getSearchRanges(text: string, query: string): SearchRange[] {
   const terms = getSearchTerms(query)
   if (!terms.length) return []
+  // Keep a complete phrase searchable as one span, even when it contains spaces.
+  const phrase = normalizeSearchText(query)
+  if (!terms.includes(phrase)) terms.push(phrase)
   let normalized = ''
   const offsets: SearchRange[] = []
   for (const { segment, index } of segmenter.segment(text)) {
