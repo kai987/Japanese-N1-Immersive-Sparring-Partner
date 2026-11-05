@@ -120,8 +120,10 @@ test('an active job stops at the window deadline and checkpoints for tomorrow', 
   // A cancellable long-running subprocess represents synthesis or validation.
   writeFileSync(join(bin, 'git'), '#!/bin/sh\nexec sleep 30\n', { mode: 0o700 })
   const preload = join(root, 'clock.mjs')
-  const offset = new Date('2026-10-20T13:10:58+09:00').getTime() - Date.now()
-  writeFileSync(preload, `const OriginalDate = Date; globalThis.Date = class extends OriginalDate { constructor(...args) { super(...(args.length ? args : [OriginalDate.now() + ${offset}])); } static now() { return OriginalDate.now() + ${offset}; } };`)
+  // Freeze wall time across the Node and Python startup hops. The worker's real
+  // timer still expires two seconds after acquiring the lock and stops the job.
+  const now = new Date('2026-10-20T13:10:58+09:00').getTime()
+  writeFileSync(preload, `const OriginalDate = Date; globalThis.Date = class extends OriginalDate { constructor(...args) { super(...(args.length ? args : [${now}])); } static now() { return ${now}; } };`)
   const result = spawnSync(process.execPath, ['scripts/audio-worker.ts', '--state-dir', root], {
     cwd: fileURLToPath(new URL('../', import.meta.url)), encoding: 'utf8', timeout: 10_000,
     env: { ...process.env, PATH: `${bin}:${process.env.PATH}`, NODE_OPTIONS: `--import=${pathToFileURL(preload).href}` },
