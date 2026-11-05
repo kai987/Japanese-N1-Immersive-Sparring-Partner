@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-11-05",
   "day": 68,
-  "status": "validating",
-  "stage": "validating",
+  "status": "published",
+  "stage": "published",
   "upstreamSourceCommit": "e94427666a67fcbd7abe84371a49c74a8884f38c",
   "sourcePagesRunId": 41947633176,
   "snapshotSha256": "e64578373d52f34750041d843868f9160ca5997551d8d57410ae0c647a37e4f9",
@@ -19,8 +19,49 @@
     "allPassed": true
   },
   "lastError": null,
-  "nextStep": "Verify exact sync run, final lesson+snapshot commit, Pages and live target date",
-  "updatedAt": "2026-11-05T01:32:15.173Z",
+  "nextStep": "Text verified. Observe source-bound shared audio and the independent scheduled worker and verifier.",
+  "updatedAt": "2026-11-05T01:37:40.248Z",
   "requestCommit": "7db19df9c2ff8890e1887a857199feaeabc2a03c",
-  "requestBlobSha": "77b911fe9bd78404cb2cbde19f7bc2239763ebd2"
+  "requestBlobSha": "77b911fe9bd78404cb2cbde19f7bc2239763ebd2",
+  "releaseCommit": "c4a5002c59bb572689bc5f48a1e68b049f812c35",
+  "pagesRunId": 41949447829,
+  "sourceBlobSha": "bb33e5b910aa2bef027574a71195dc5fa0e55dbd",
+  "counts": {
+    "vocabularyNew": 10,
+    "vocabularyReview": 10,
+    "grammarNew": 0,
+    "grammarReview": 8
+  },
+  "textPublicationVerified": true,
+  "verification": {
+    "targetDate": "2026-11-05",
+    "day": 68,
+    "releaseCommit": "c4a5002c59bb572689bc5f48a1e68b049f812c35",
+    "pagesRunId": 41949447829,
+    "upstreamSourceCommit": "e94427666a67fcbd7abe84371a49c74a8884f38c",
+    "sourceBlobSha": "bb33e5b910aa2bef027574a71195dc5fa0e55dbd",
+    "artifact": {
+      "id": 13380063140,
+      "name": "n1-deployment-verification",
+      "digest": "sha256:69986ceb8204859bfdad84fd7ab69530c984e00f8d7f38536289c56aff4ce337"
+    },
+    "manifestSha256": "441ee96703c810d3e7e5cfb237842c0ec3187e8f1d755dba2f532d0a578b383d",
+    "fullPublicAssetBytes": true,
+    "verifiedFiles": 77,
+    "allLessonJsonAndCompleteSearchVerified": true,
+    "allOriginalParagraphsPresent": true,
+    "originalParagraphCount": 6,
+    "originalQuestionAndOptionsPreserved": true,
+    "title": "AIデータセンターを建てれば、地域のDXは進むのか——「ワット・ビット連携」と条件の見極め。",
+    "sourceUnchanged": true,
+    "publishedLessonSha256": "3f83291da15aa69facf520fe13c6828b64ff94c2caa9f0553fff314d84f30b01",
+    "liveProof": {
+      "status": "published_release_verified",
+      "manifestSha256": "441ee96703c810d3e7e5cfb237842c0ec3187e8f1d755dba2f532d0a578b383d",
+      "verifiedFiles": 77,
+      "latestDate": "2026-11-05",
+      "targetDate": "2026-11-05"
+    },
+    "at": "2026-11-05T01:37:39.480Z"
+  }
 }
