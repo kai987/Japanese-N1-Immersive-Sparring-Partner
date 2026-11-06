@@ -1,23 +1,8 @@
-/* Readability pass: stronger dark-theme contrast and a slightly larger type scale. */
+/* Reading typography. Theme colors are centralized in styles.css. */
 
 .app {
   color: var(--text);
   font-size: 17px;
-}
-
-.app[data-theme="dark"] {
-  --text: #f1f4f1;
-  --text-soft: #c4ccc7;
-  --muted: #a4aea8;
-  --border: #36403a;
-  --border-strong: #465249;
-  --accent: #aebae0;
-  --accent-2: #93c7bb;
-  --danger: #e0a9a3;
-}
-
-.app[data-theme="dark"] .mini-streak svg {
-  color: #d2a06f;
 }
 
 .brand strong { font-size: 16px; }

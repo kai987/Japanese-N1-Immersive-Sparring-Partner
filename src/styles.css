@@ -1,7 +1,8 @@
 :root {
   font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic UI", "Yu Gothic", "Noto Sans JP", sans-serif;
-  color: #202522;
-  background: #f4f6f3;
+  color: var(--text);
+  background: var(--bg);
+  color-scheme: light;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   --bg: #f4f6f3;
@@ -11,15 +12,23 @@
   --paper: #fffefa;
   --text: #202522;
   --text-soft: #58615b;
-  --muted: #7d8780;
+  --muted: #626e66;
   --border: #dfe4df;
   --border-strong: #cfd7d0;
   --accent: #4d5f8f;
   --accent-soft: #eaedf5;
-  --accent-2: #477b70;
+  --accent-2: #427368;
   --accent-2-soft: #e5f0ed;
-  --danger: #9a5b56;
+  --danger: #965852;
   --danger-soft: #f5eae8;
+  --focus-ring: #4d5f8f;
+  --primary-bg: var(--text);
+  --primary-text: var(--surface);
+  --highlight-bg: #f1df99;
+  --highlight-text: #202522;
+  --highlight-current-bg: #e9bc68;
+  --highlight-current-ring: #8d5915;
+  --streak: #93633c;
   --shadow: 0 8px 28px rgba(30, 45, 35, 0.055);
   --radius: 16px;
 }
@@ -29,26 +38,38 @@ html { scroll-behavior: smooth; }
 body { margin: 0; min-width: 320px; min-height: 100vh; background: var(--bg); color: var(--text); }
 button, input { font: inherit; }
 button { color: inherit; }
-button:focus-visible, [role="button"]:focus-visible { outline: 3px solid rgba(77, 95, 143, .25); outline-offset: 2px; }
+:where(button, [role="button"], a, input, select, textarea, summary):focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 3px; }
 
+/* Keep document canvas, native controls and page surfaces on the same theme.
+   Readability overrides contain typography only; palette values live here. */
+:root:has(.app[data-theme="dark"]),
 .app[data-theme="dark"] {
-  --bg: #151917;
-  --sidebar: #1b201d;
-  --surface: #1d231f;
-  --surface-2: #232a25;
-  --paper: #20251f;
-  --text: #e8ece8;
-  --text-soft: #b4bdb7;
-  --muted: #8d9891;
-  --border: #303933;
-  --border-strong: #3b463f;
-  --accent: #9eacd7;
-  --accent-soft: #2a3042;
-  --accent-2: #83b8ac;
-  --accent-2-soft: #213630;
-  --danger: #d59b95;
-  --danger-soft: #3a2827;
-  --shadow: 0 10px 35px rgba(0,0,0,.22);
+  color-scheme: dark;
+  --bg: #151a21;
+  --sidebar: #181e27;
+  --surface: #1e2631;
+  --surface-2: #252f3b;
+  --paper: #1b242e;
+  --text: #e4e9f0;
+  --text-soft: #bac5d2;
+  --muted: #97a7b9;
+  --border: #344151;
+  --border-strong: #495b6f;
+  --accent: #b1bcf5;
+  --accent-soft: #2d3653;
+  --accent-2: #91cebf;
+  --accent-2-soft: #203e3b;
+  --danger: #f0b0a8;
+  --danger-soft: #472f35;
+  --focus-ring: #a9baff;
+  --primary-bg: #b1bcf5;
+  --primary-text: #192235;
+  --highlight-bg: #514626;
+  --highlight-text: #f6e6b2;
+  --highlight-current-bg: #735225;
+  --highlight-current-ring: #e4be70;
+  --streak: #d6b286;
+  --shadow: 0 10px 30px rgba(0,0,0,.16);
 }
 
 .app { min-height: 100vh; background: var(--bg); transition: background .2s ease, color .2s ease; }
@@ -65,7 +86,7 @@ button:focus-visible, [role="button"]:focus-visible { outline: 3px solid rgba(77
 .nav-item.active .nav-icon { color: var(--accent); }
 .sidebar-bottom { margin-top: auto; display: grid; gap: 10px; }
 .mini-streak { display: flex; gap: 9px; align-items: center; color: var(--text-soft); padding: 10px 12px; font-size: 12px; }
-.mini-streak svg { color: #a77649; }
+.mini-streak svg { color: var(--streak); }
 .mini-streak strong { color: var(--text); }
 .theme-toggle { border: 1px solid var(--border); background: transparent; border-radius: 10px; padding: 10px 12px; display: flex; align-items: center; gap: 9px; color: var(--text-soft); cursor: pointer; font-size: 12px; }
 .theme-toggle:hover { background: var(--surface); }
@@ -89,7 +110,7 @@ button:focus-visible, [role="button"]:focus-visible { outline: 3px solid rgba(77
 .hero h1 { font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif; font-size: clamp(34px, 4.3vw, 54px); line-height: 1.35; letter-spacing: -.03em; margin: 12px 0 16px; font-weight: 600; }
 .hero p { font-size: 15px; line-height: 1.85; color: var(--text-soft); max-width: 620px; margin: 0; }
 .hero-actions { display: flex; align-items: center; gap: 18px; margin-top: 28px; }
-.primary-btn { border: 0; background: var(--text); color: var(--surface); border-radius: 10px; padding: 12px 16px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer; font-size: 13px; font-weight: 700; }
+.primary-btn { border: 0; background: var(--primary-bg); color: var(--primary-text); border-radius: 10px; padding: 12px 16px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer; font-size: 13px; font-weight: 700; }
 .primary-btn:hover { opacity: .88; }
 .primary-btn:disabled { opacity: .38; cursor: not-allowed; }
 .text-btn { border: 0; padding: 8px 2px; background: transparent; cursor: pointer; color: var(--accent); font-size: 13px; font-weight: 700; }

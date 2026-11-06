@@ -1,16 +1,16 @@
 .audio-control { display: inline-flex; align-items: center; flex: 0 0 auto; position: relative; vertical-align: middle; line-height: 1; }
 .audio-control.audio-unavailable { flex-direction: column; gap: 3px; }
 .audio-pending-label { color: var(--muted); font: 9px/1.2 system-ui, sans-serif; white-space: nowrap; }
-.audio-availability { margin: 14px 0 18px; padding: 12px 15px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); color: var(--text-secondary); font-size: 12px; line-height: 1.7; }
+.audio-availability { margin: 14px 0 18px; padding: 12px 15px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); color: var(--text-soft); font-size: 12px; line-height: 1.7; }
 .audio-availability p { display: flex; flex-wrap: wrap; gap: 3px 14px; margin: 0; }
 .audio-availability strong { color: var(--accent); font-weight: 600; }
 .audio-availability small { display: block; margin-top: 3px; color: var(--muted); font-size: 10px; }
 .audio-play-button { display: inline-grid; place-items: center; width: 32px; height: 32px; flex: 0 0 32px; padding: 0; border: 1px solid var(--border); border-radius: 50%; color: var(--accent-2); background: transparent; cursor: pointer; transition: background .15s, border-color .15s; }
 .audio-play-button:hover { background: var(--accent-2-soft); border-color: var(--accent-2); }
-.audio-play-button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.audio-play-button:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 3px; }
 .audio-play-button.playing, .audio-play-button.loading { color: var(--accent); background: var(--accent-soft); border-color: var(--accent); }
 .audio-play-button:disabled { opacity: .35; cursor: default; }
-.audio-play-button.error { color: #a84533; border-color: currentColor; }
+.audio-play-button.error { color: var(--danger); background: var(--danger-soft); border-color: currentColor; }
 .audio-play-error { position: absolute; z-index: 9; right: 0; top: calc(100% + 5px); width: min(230px, 65vw); padding: 9px 12px; border: 1px solid var(--border-strong); border-radius: 8px; color: var(--text); background: var(--surface); font: 12px/1.6 system-ui, sans-serif; box-shadow: var(--shadow); }
 .spoken-sentence { display: block; }
 .spoken-sentence.has-audio { display: grid; grid-template-columns: minmax(0, 1fr) 32px; align-items: start; gap: 10px; }

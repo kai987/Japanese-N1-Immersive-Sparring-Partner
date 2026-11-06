@@ -156,7 +156,20 @@ test('search and mobile Japanese reading remain usable in dark mode', async ({ p
   await expect(page.getByRole('heading', { name: '管轄', exact: true })).toBeVisible()
   await page.getByRole('button', { name: '没入読解', exact: true }).click()
   await page.getByRole('button', { name: '読解テーマを切り替える', exact: true }).click()
-  await expect(page.locator('.jp-body').first()).toHaveCSS('color', 'rgb(241, 244, 241)')
+  await expect(page.locator('html')).toHaveCSS('color-scheme', 'dark')
+  // Verify reading contrast rather than pinning a particular palette's RGB.
+  await expect.poll(() => page.locator('.jp-body').first().evaluate(element => {
+    const luminance = (color: string) => {
+      const channels = color.match(/[\d.]+/g)!.slice(0, 3).map(value => {
+        const channel = Number(value) / 255
+        return channel <= .04045 ? channel / 12.92 : ((channel + .055) / 1.055) ** 2.4
+      })
+      return channels[0] * .2126 + channels[1] * .7152 + channels[2] * .0722
+    }
+    const text = luminance(getComputedStyle(element).color)
+    const paper = luminance(getComputedStyle(element.closest('.reading-paper')!).backgroundColor)
+    return (Math.max(text, paper) + .05) / (Math.min(text, paper) + .05)
+  })).toBeGreaterThanOrEqual(7)
   await page.screenshot({ path: testInfo.outputPath('desktop-dark.png') })
   await page.setViewportSize({ width: 390, height: 844 })
   await expect(page.getByRole('button', { name: '日中対訳', exact: true })).toBeVisible()

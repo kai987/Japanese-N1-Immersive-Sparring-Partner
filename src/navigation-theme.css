@@ -1,7 +1,7 @@
 .app[data-theme="dark"] .nav-item.active {
-  background: color-mix(in srgb, var(--accent-soft) 82%, var(--accent) 18%);
-  color: var(--text);
-  box-shadow: none;
+  background: var(--accent-soft);
+  color: var(--accent);
+  box-shadow: inset 3px 0 0 var(--accent);
 }
 
 .app[data-theme="dark"] .nav-item.active .nav-icon {
