@@ -12,7 +12,7 @@
   },
   "engineVersion": "1.1.0-dev",
   "modelVersion": "1.0.0",
-  "generatedAt": "2026-11-05T05:53:16.496Z",
+  "generatedAt": "2026-11-06T02:18:00.563Z",
   "lessonDates": [
     "2026-11-05",
     "2026-11-04",
@@ -83,7 +83,7 @@
     "2026-08-31",
     "2026-08-30"
   ],
-  "expectedClips": 7912,
+  "expectedClips": 7925,
   "complete": true,
   "clips": {
     "000508138c45e52f": {
@@ -1110,7 +1110,8 @@
       "label": "いずれ",
       "references": [
         "live/2026-10-30/live-2026-10-30-future-time/source/1",
-        "live/2026-10-30/live-2026-10-30-future-time/entry/live-2026-10-30-entry-izure"
+        "live/2026-10-30/live-2026-10-30-future-time/entry/live-2026-10-30-entry-izure",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-675b821fb576/word"
       ],
       "duration": 1.024,
       "bytes": 8877,
@@ -4013,6 +4014,18 @@
       "sha256": "e54c7a394c648f95f8eb5fbbb2466cbb6e813232b4b65835e2b4dc596c85e93b",
       "rms": 0.168204
     },
+    "09199a5266caf40e": {
+      "id": "09199a5266caf40e",
+      "text": "ちょくご",
+      "label": "直後",
+      "references": [
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-af98a415a769/word"
+      ],
+      "bytes": 13869,
+      "duration": 1.069,
+      "rms": 0.136159,
+      "sha256": "6a96ee0a453fb751e8ad03506aae69f58713b7a6cfaa3bb427ff0b6b53df6091"
+    },
     "0919e5b09dbd2e1c": {
       "id": "0919e5b09dbd2e1c",
       "text": "一方、NECは「コーポレートAI・Workforce部門」を新設し、人だけを前提としてきた組織運営を、AIも前提にした働き方へ再構成しようとしている。",
@@ -5096,7 +5109,8 @@
         "lesson/2026-11-02/vocabulary/2026-11-02-v-study-1e18d506/collocation/2",
         "lesson/2026-11-03/vocabulary/2026-11-03-v-study-1e18d506/collocation/2",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-1e18d506/collocation/2",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-1e18d506/collocation/2"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-1e18d506/collocation/2",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-1e18d506/collocation/2"
       ],
       "duration": 1.976,
       "bytes": 16557,
@@ -5157,7 +5171,8 @@
         "lesson/2026-11-02/vocabulary/2026-11-02-v-study-1e18d506/example/0",
         "lesson/2026-11-03/vocabulary/2026-11-03-v-study-1e18d506/example/0",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-1e18d506/example/0",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-1e18d506/example/0"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-1e18d506/example/0",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-1e18d506/example/0"
       ],
       "duration": 3.898,
       "bytes": 31917,
@@ -9478,7 +9493,8 @@
         "lesson/2026-10-30/grammar/2026-10-30-g-study-ccec99c0/example/0",
         "lesson/2026-10-31/grammar/2026-10-31-g-study-ccec99c0/example/0",
         "lesson/2026-11-02/grammar/2026-11-02-g-study-ccec99c0/example/0",
-        "lesson/2026-11-05/grammar/2026-11-05-g-study-ccec99c0/example/0"
+        "lesson/2026-11-05/grammar/2026-11-05-g-study-ccec99c0/example/0",
+        "lesson/2026-11-06/grammar/2026-11-06-g-study-ccec99c0/example/0"
       ],
       "duration": 4.518,
       "bytes": 36909,
@@ -9743,7 +9759,8 @@
         "lesson/2026-11-02/vocabulary/2026-11-02-v-study-66614293/collocation/0",
         "lesson/2026-11-03/vocabulary/2026-11-03-v-study-66614293/collocation/0",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-66614293/collocation/0",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-66614293/collocation/0"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-66614293/collocation/0",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-66614293/collocation/0"
       ],
       "duration": 1.779,
       "bytes": 15021,
@@ -9821,7 +9838,8 @@
         "lesson/2026-10-25/vocabulary/2026-10-25-v-study-a20c26b7/example/0",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-a20c26b7/example/0",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-a20c26b7/example/0",
-        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-a20c26b7/example/0"
+        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-a20c26b7/example/0",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-a20c26b7/example/0"
       ],
       "bytes": 53037,
       "duration": 4.392,
@@ -10058,7 +10076,8 @@
         "lesson/2026-09-29/vocabulary/2026-09-29-v-study-68847e29/collocation/2",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-68847e29/collocation/2",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-68847e29/collocation/2",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-68847e29/collocation/2"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-68847e29/collocation/2",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-68847e29/collocation/2"
       ],
       "duration": 1.314,
       "bytes": 11181,
@@ -10236,7 +10255,8 @@
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-7deda27e/collocation/0",
         "lesson/2026-11-01/vocabulary/2026-11-01-v-study-7deda27e/collocation/0",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-7deda27e/collocation/0",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-7deda27e/collocation/0"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-7deda27e/collocation/0",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-7deda27e/collocation/0"
       ],
       "duration": 1.744,
       "bytes": 14637,
@@ -12124,7 +12144,8 @@
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-339df203/example/0",
         "lesson/2026-11-01/vocabulary/2026-11-01-v-study-339df203/example/0",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-339df203/example/0",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-339df203/example/0"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-339df203/example/0",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-339df203/example/0"
       ],
       "duration": 4.61,
       "bytes": 37677,
@@ -12238,6 +12259,19 @@
       "bytes": 31149,
       "sha256": "2abfd2feec26aae471c8365cac00af6cb69705d06cff1c8da03483303b3f3e68",
       "rms": 0.124449
+    },
+    "1f8aff4f69cf168b": {
+      "id": "1f8aff4f69cf168b",
+      "text": "型検査が残っていることを確かめてから、古い依存を外します。",
+      "label": "型検査が残っていることを確かめてから、古い依存を外します。",
+      "references": [
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-d29676029842/example/0",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-a20c26b7/evidence/0"
+      ],
+      "bytes": 59661,
+      "duration": 4.887,
+      "rms": 0.125064,
+      "sha256": "c41714d2ce5626e7af402374ca78b2e615b245b39d01bd57f5cd22217cb87a5f"
     },
     "1f90fcb68738ff5a": {
       "id": "1f90fcb68738ff5a",
@@ -12693,7 +12727,8 @@
         "lesson/2026-11-02/vocabulary/2026-11-02-v-study-966a7d9e/collocation/1",
         "lesson/2026-11-03/vocabulary/2026-11-03-v-study-966a7d9e/collocation/1",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-966a7d9e/collocation/1",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-966a7d9e/collocation/1"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-966a7d9e/collocation/1",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-966a7d9e/collocation/1"
       ],
       "duration": 1.407,
       "bytes": 11949,
@@ -13425,7 +13460,8 @@
         "lesson/2026-11-02/vocabulary/2026-11-02-v-study-1e18d506/collocation/1",
         "lesson/2026-11-03/vocabulary/2026-11-03-v-study-1e18d506/collocation/1",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-1e18d506/collocation/1",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-1e18d506/collocation/1"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-1e18d506/collocation/1",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-1e18d506/collocation/1"
       ],
       "duration": 1.814,
       "bytes": 15213,
@@ -13641,7 +13677,8 @@
         "lesson/2026-11-02/vocabulary/2026-11-02-v-study-d898be90/collocation/1",
         "lesson/2026-11-03/vocabulary/2026-11-03-v-study-d898be90/collocation/1",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-d898be90/collocation/1",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-d898be90/collocation/1"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-d898be90/collocation/1",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-d898be90/collocation/1"
       ],
       "duration": 1.709,
       "bytes": 14445,
@@ -13667,7 +13704,8 @@
       "references": [
         "lesson/2026-10-28/vocabulary/2026-10-28-v-study-a47c5cf6/evidence/0",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-a47c5cf6/evidence/0",
-        "lesson/2026-11-04/vocabulary/2026-11-04-v-study-66614293/evidence/0"
+        "lesson/2026-11-04/vocabulary/2026-11-04-v-study-66614293/evidence/0",
+        "lesson/2026-11-06/grammar/2026-11-06-g-study-2c43f688/evidence/0"
       ],
       "duration": 0.896,
       "bytes": 7917,
@@ -13723,7 +13761,8 @@
         "lesson/2026-11-02/vocabulary/2026-11-02-v-study-966a7d9e/collocation/2",
         "lesson/2026-11-03/vocabulary/2026-11-03-v-study-966a7d9e/collocation/2",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-966a7d9e/collocation/2",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-966a7d9e/collocation/2"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-966a7d9e/collocation/2",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-966a7d9e/collocation/2"
       ],
       "duration": 1.442,
       "bytes": 12333,
@@ -14133,7 +14172,8 @@
         "lesson/2026-11-02/vocabulary/2026-11-02-v-study-73083d1e/example/1",
         "lesson/2026-11-03/vocabulary/2026-11-03-v-study-73083d1e/example/1",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-73083d1e/example/1",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-73083d1e/example/1"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-73083d1e/example/1",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-73083d1e/example/1"
       ],
       "duration": 3.868,
       "bytes": 31725,
@@ -18754,7 +18794,8 @@
         "lesson/2026-11-02/vocabulary/2026-11-02-v-study-73083d1e/collocation/1",
         "lesson/2026-11-03/vocabulary/2026-11-03-v-study-73083d1e/collocation/1",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-73083d1e/collocation/1",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-73083d1e/collocation/1"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-73083d1e/collocation/1",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-73083d1e/collocation/1"
       ],
       "duration": 2.116,
       "bytes": 17709,
@@ -19895,6 +19936,18 @@
       "bytes": 45549,
       "sha256": "86db605492f90f1257697429bda81b81fa5e7bacae8d0024433882354b240d0c",
       "rms": 0.160058
+    },
+    "34fe76a754c1961b": {
+      "id": "34fe76a754c1961b",
+      "text": "はずす",
+      "label": "外す",
+      "references": [
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-d29676029842/word"
+      ],
+      "bytes": 13293,
+      "duration": 1.011,
+      "rms": 0.08963,
+      "sha256": "fccdc1c8a069a392e247912593f67c8de7d910c9ae066c4f3822dba1fcb2464b"
     },
     "34fec6e369529f9f": {
       "id": "34fec6e369529f9f",
@@ -21566,7 +21619,8 @@
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-72cf604e/word",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-72cf604e/word",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-72cf604e/word",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-72cf604e/word"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-72cf604e/word",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-72cf604e/word"
       ],
       "duration": 1.431,
       "bytes": 12141,
@@ -22809,7 +22863,8 @@
         "lesson/2026-10-25/vocabulary/2026-10-25-v-study-41640d3b/collocation/2",
         "lesson/2026-10-19/vocabulary/2026-10-19-v-study-41640d3b/collocation/2",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-41640d3b/collocation/2",
-        "lesson/2026-10-31/vocabulary/2026-10-31-v-study-41640d3b/collocation/2"
+        "lesson/2026-10-31/vocabulary/2026-10-31-v-study-41640d3b/collocation/2",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-41640d3b/collocation/2"
       ],
       "duration": 1.999,
       "bytes": 16749,
@@ -22868,7 +22923,8 @@
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-72cf604e/collocation/0",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-72cf604e/collocation/0",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-72cf604e/collocation/0",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-72cf604e/collocation/0"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-72cf604e/collocation/0",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-72cf604e/collocation/0"
       ],
       "duration": 2.104,
       "bytes": 17517,
@@ -23467,7 +23523,8 @@
         "lesson/2026-11-02/vocabulary/2026-11-02-v-study-966a7d9e/collocation/0",
         "lesson/2026-11-03/vocabulary/2026-11-03-v-study-966a7d9e/collocation/0",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-966a7d9e/collocation/0",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-966a7d9e/collocation/0"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-966a7d9e/collocation/0",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-966a7d9e/collocation/0"
       ],
       "duration": 1.43,
       "bytes": 12141,
@@ -25672,7 +25729,8 @@
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-72cf604e/collocation/1",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-72cf604e/collocation/1",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-72cf604e/collocation/1",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-72cf604e/collocation/1"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-72cf604e/collocation/1",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-72cf604e/collocation/1"
       ],
       "duration": 2.266,
       "bytes": 18861,
@@ -26850,7 +26908,8 @@
         "lesson/2026-09-24/vocabulary/2026-09-24-v-study-d20f029e/collocation/2",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-d20f029e/collocation/2",
         "lesson/2026-11-01/vocabulary/2026-11-01-v-study-d20f029e/collocation/2",
-        "lesson/2026-11-04/vocabulary/2026-11-04-v-study-d20f029e/collocation/2"
+        "lesson/2026-11-04/vocabulary/2026-11-04-v-study-d20f029e/collocation/2",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-d20f029e/collocation/2"
       ],
       "duration": 1.756,
       "bytes": 14829,
@@ -26954,7 +27013,8 @@
         "lesson/2026-11-02/vocabulary/2026-11-02-v-study-966a7d9e/word",
         "lesson/2026-11-03/vocabulary/2026-11-03-v-study-966a7d9e/word",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-966a7d9e/word",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-966a7d9e/word"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-966a7d9e/word",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-966a7d9e/word"
       ],
       "duration": 1.106,
       "bytes": 9645,
@@ -27436,7 +27496,8 @@
         "lesson/2026-11-02/vocabulary/2026-11-02-v-study-d898be90/example/0",
         "lesson/2026-11-03/vocabulary/2026-11-03-v-study-d898be90/example/0",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-d898be90/example/0",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-d898be90/example/0"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-d898be90/example/0",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-d898be90/example/0"
       ],
       "duration": 4.226,
       "bytes": 34605,
@@ -28140,7 +28201,8 @@
       "text": "に伴って",
       "label": "～に伴って",
       "references": [
-        "lesson/2026-10-20/grammar/2026-10-20-g-study-f5fb9331/pattern"
+        "lesson/2026-10-20/grammar/2026-10-20-g-study-f5fb9331/pattern",
+        "lesson/2026-11-06/grammar/2026-11-06-g-study-f5fb9331/pattern"
       ],
       "duration": 1.466,
       "bytes": 12525,
@@ -29851,7 +29913,8 @@
         "lesson/2026-11-02/vocabulary/2026-11-02-v-study-73083d1e/word",
         "lesson/2026-11-03/vocabulary/2026-11-03-v-study-73083d1e/word",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-73083d1e/word",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-73083d1e/word"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-73083d1e/word",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-73083d1e/word"
       ],
       "duration": 1.024,
       "bytes": 8877,
@@ -30851,7 +30914,8 @@
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-7deda27e/word",
         "lesson/2026-11-01/vocabulary/2026-11-01-v-study-7deda27e/word",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-7deda27e/word",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-7deda27e/word"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-7deda27e/word",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-7deda27e/word"
       ],
       "duration": 1.268,
       "bytes": 10797,
@@ -31645,6 +31709,18 @@
       "bytes": 10413,
       "sha256": "a9149bb81e3c8771a0fa960d67e7222f4770ab8d1438f0899e0b8fb312a4d535",
       "rms": 0.137508
+    },
+    "52b05e0ac828c35e": {
+      "id": "52b05e0ac828c35e",
+      "text": "わける",
+      "label": "分ける",
+      "references": [
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-c62a3b5158ca/word"
+      ],
+      "bytes": 14157,
+      "duration": 1.104,
+      "rms": 0.132023,
+      "sha256": "8a7ca7a1fef4e2a7add7d917494f09fc9a97d7759a4982930665d6e41c8f02e9"
     },
     "52b1545cfa6f6fa8": {
       "id": "52b1545cfa6f6fa8",
@@ -32839,6 +32915,18 @@
       "sha256": "4e7da10331c1ed91b2ba48c8f27569b87eaace25ffcea21211f793da707b6f6e",
       "rms": 0.153111
     },
+    "55c37cbd419a6ba9": {
+      "id": "55c37cbd419a6ba9",
+      "text": "実行と型検査を分けても、検査が先に終わる順序は守ります。",
+      "label": "実行と型検査を分けても、検査が先に終わる順序は守ります。",
+      "references": [
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-c62a3b5158ca/example/0"
+      ],
+      "bytes": 62829,
+      "duration": 5.154,
+      "rms": 0.128518,
+      "sha256": "6e5a1725fb0283024c8654676424e90ed03bbebd1fe84f0c789c668048c2562c"
+    },
     "55cbf43231460406": {
       "id": "55cbf43231460406",
       "text": "展示資料の背景に関する説明には、長年その地域を研究してきた学芸員( )視点が生かされている。",
@@ -33640,7 +33728,8 @@
         "lesson/2026-10-25/vocabulary/2026-10-25-v-study-a20c26b7/collocation/0",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-a20c26b7/collocation/0",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-a20c26b7/collocation/0",
-        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-a20c26b7/collocation/0"
+        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-a20c26b7/collocation/0",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-a20c26b7/collocation/0"
       ],
       "duration": 1.419,
       "bytes": 12141,
@@ -34349,7 +34438,8 @@
         "lesson/2026-09-11/grammar/2026-09-11-g-study-f9bbc75/pattern",
         "lesson/2026-09-09/grammar/2026-09-09-g-gh-78c80effda/pattern",
         "lesson/2026-10-30/grammar/2026-10-30-g-study-f9bbc75/pattern",
-        "lesson/2026-11-05/grammar/2026-11-05-g-study-f9bbc75/pattern"
+        "lesson/2026-11-05/grammar/2026-11-05-g-study-f9bbc75/pattern",
+        "lesson/2026-11-06/grammar/2026-11-06-g-study-f9bbc75/pattern"
       ],
       "duration": 1.361,
       "bytes": 11565,
@@ -34528,7 +34618,8 @@
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-7deda27e/collocation/1",
         "lesson/2026-11-01/vocabulary/2026-11-01-v-study-7deda27e/collocation/1",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-7deda27e/collocation/1",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-7deda27e/collocation/1"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-7deda27e/collocation/1",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-7deda27e/collocation/1"
       ],
       "duration": 1.837,
       "bytes": 15405,
@@ -34708,7 +34799,8 @@
       "text": "Agent利用の拡大に伴って、Cost Governanceの重要性も高まります。",
       "label": "Agent利用の拡大に伴って、Cost Governanceの重要性も高まります。",
       "references": [
-        "lesson/2026-10-20/grammar/2026-10-20-g-study-f5fb9331/example/0"
+        "lesson/2026-10-20/grammar/2026-10-20-g-study-f5fb9331/example/0",
+        "lesson/2026-11-06/grammar/2026-11-06-g-study-f5fb9331/example/0"
       ],
       "bytes": 69741,
       "duration": 5.784,
@@ -35909,7 +36001,8 @@
         "lesson/2026-11-02/vocabulary/2026-11-02-v-study-73083d1e/collocation/2",
         "lesson/2026-11-03/vocabulary/2026-11-03-v-study-73083d1e/collocation/2",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-73083d1e/collocation/2",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-73083d1e/collocation/2"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-73083d1e/collocation/2",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-73083d1e/collocation/2"
       ],
       "duration": 1.57,
       "bytes": 13293,
@@ -38550,7 +38643,8 @@
         "lesson/2026-11-02/vocabulary/2026-11-02-v-study-a47c5cf6/collocation/1",
         "lesson/2026-11-03/vocabulary/2026-11-03-v-study-a47c5cf6/collocation/1",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-a47c5cf6/collocation/1",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-a47c5cf6/collocation/1"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-a47c5cf6/collocation/1",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-a47c5cf6/collocation/1"
       ],
       "duration": 1.86,
       "bytes": 15597,
@@ -39940,7 +40034,8 @@
         "lesson/2026-09-18/grammar/2026-09-18-g-study-73890ec9/pattern",
         "lesson/2026-09-13/grammar/2026-09-13-g-study-73890ec9/pattern",
         "lesson/2026-09-12/grammar/2026-09-12-g-study-73890ec9/pattern",
-        "lesson/2026-09-03/grammar/2026-09-03-g-～一方で/pattern"
+        "lesson/2026-09-03/grammar/2026-09-03-g-～一方で/pattern",
+        "lesson/2026-11-06/grammar/2026-11-06-g-study-73890ec9/pattern"
       ],
       "duration": 1.21,
       "bytes": 10413,
@@ -40426,7 +40521,8 @@
         "lesson/2026-10-25/vocabulary/2026-10-25-v-study-41640d3b/collocation/1",
         "lesson/2026-10-19/vocabulary/2026-10-19-v-study-41640d3b/collocation/1",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-41640d3b/collocation/1",
-        "lesson/2026-10-31/vocabulary/2026-10-31-v-study-41640d3b/collocation/1"
+        "lesson/2026-10-31/vocabulary/2026-10-31-v-study-41640d3b/collocation/1",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-41640d3b/collocation/1"
       ],
       "duration": 2.324,
       "bytes": 19245,
@@ -40646,7 +40742,8 @@
         "lesson/2026-11-02/vocabulary/2026-11-02-v-study-a47c5cf6/collocation/0",
         "lesson/2026-11-03/vocabulary/2026-11-03-v-study-a47c5cf6/collocation/0",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-a47c5cf6/collocation/0",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-a47c5cf6/collocation/0"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-a47c5cf6/collocation/0",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-a47c5cf6/collocation/0"
       ],
       "duration": 1.744,
       "bytes": 14637,
@@ -40943,7 +41040,8 @@
         "lesson/2026-11-02/vocabulary/2026-11-02-v-study-66614293/collocation/1",
         "lesson/2026-11-03/vocabulary/2026-11-03-v-study-66614293/collocation/1",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-66614293/collocation/1",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-66614293/collocation/1"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-66614293/collocation/1",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-66614293/collocation/1"
       ],
       "duration": 2.15,
       "bytes": 17901,
@@ -41724,7 +41822,8 @@
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-339df203/collocation/2",
         "lesson/2026-11-01/vocabulary/2026-11-01-v-study-339df203/collocation/2",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-339df203/collocation/2",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-339df203/collocation/2"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-339df203/collocation/2",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-339df203/collocation/2"
       ],
       "duration": 1.883,
       "bytes": 15789,
@@ -41893,7 +41992,8 @@
         "lesson/2026-11-02/vocabulary/2026-11-02-v-study-73083d1e/collocation/0",
         "lesson/2026-11-03/vocabulary/2026-11-03-v-study-73083d1e/collocation/0",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-73083d1e/collocation/0",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-73083d1e/collocation/0"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-73083d1e/collocation/0",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-73083d1e/collocation/0"
       ],
       "duration": 1.79,
       "bytes": 15021,
@@ -42870,7 +42970,8 @@
         "lesson/2026-11-02/vocabulary/2026-11-02-v-study-66614293/collocation/2",
         "lesson/2026-11-03/vocabulary/2026-11-03-v-study-66614293/collocation/2",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-66614293/collocation/2",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-66614293/collocation/2"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-66614293/collocation/2",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-66614293/collocation/2"
       ],
       "duration": 1.814,
       "bytes": 15213,
@@ -43570,7 +43671,8 @@
         "lesson/2026-11-02/vocabulary/2026-11-02-v-study-a47c5cf6/collocation/2",
         "lesson/2026-11-03/vocabulary/2026-11-03-v-study-a47c5cf6/collocation/2",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-a47c5cf6/collocation/2",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-a47c5cf6/collocation/2"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-a47c5cf6/collocation/2",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-a47c5cf6/collocation/2"
       ],
       "duration": 2.058,
       "bytes": 17133,
@@ -44798,7 +44900,9 @@
         "lesson/2026-10-18/review/4/detail/5",
         "lesson/2026-10-16/review/4/detail/4",
         "lesson/2026-11-03/question/0",
-        "lesson/2026-11-04/question/0"
+        "lesson/2026-11-04/question/0",
+        "lesson/2026-11-06/question/0",
+        "lesson/2026-11-06/review/4/detail/4"
       ],
       "duration": 3.311,
       "bytes": 27117,
@@ -45470,7 +45574,8 @@
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-339df203/word",
         "lesson/2026-11-01/vocabulary/2026-11-01-v-study-339df203/word",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-339df203/word",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-339df203/word"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-339df203/word",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-339df203/word"
       ],
       "duration": 1.361,
       "bytes": 11565,
@@ -45947,7 +46052,8 @@
         "lesson/2026-10-25/vocabulary/2026-10-25-v-study-41640d3b/example/0",
         "lesson/2026-10-19/vocabulary/2026-10-19-v-study-41640d3b/example/0",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-41640d3b/example/0",
-        "lesson/2026-10-31/vocabulary/2026-10-31-v-study-41640d3b/example/0"
+        "lesson/2026-10-31/vocabulary/2026-10-31-v-study-41640d3b/example/0",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-41640d3b/example/0"
       ],
       "bytes": 65709,
       "duration": 5.448,
@@ -45981,7 +46087,8 @@
         "lesson/2026-09-13/grammar/2026-09-13-g-study-fac43c60/pattern",
         "lesson/2026-09-11/grammar/2026-09-11-g-study-fac43c60/pattern",
         "lesson/2026-09-09/grammar/2026-09-09-g-study-fac43c60/pattern",
-        "lesson/2026-10-31/grammar/2026-10-31-g-study-fac43c60/pattern"
+        "lesson/2026-10-31/grammar/2026-10-31-g-study-fac43c60/pattern",
+        "lesson/2026-11-06/grammar/2026-11-06-g-study-fac43c60/pattern"
       ],
       "duration": 1.106,
       "bytes": 9645,
@@ -46170,7 +46277,8 @@
         "lesson/2026-09-23/vocabulary/2026-09-23-v-study-3af90a6c/collocation/1",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-d20f029e/collocation/1",
         "lesson/2026-11-01/vocabulary/2026-11-01-v-study-d20f029e/collocation/1",
-        "lesson/2026-11-04/vocabulary/2026-11-04-v-study-d20f029e/collocation/1"
+        "lesson/2026-11-04/vocabulary/2026-11-04-v-study-d20f029e/collocation/1",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-d20f029e/collocation/1"
       ],
       "duration": 1.5,
       "bytes": 12717,
@@ -47096,7 +47204,8 @@
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-7deda27e/collocation/2",
         "lesson/2026-11-01/vocabulary/2026-11-01-v-study-7deda27e/collocation/2",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-7deda27e/collocation/2",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-7deda27e/collocation/2"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-7deda27e/collocation/2",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-7deda27e/collocation/2"
       ],
       "duration": 1.5,
       "bytes": 12717,
@@ -47840,7 +47949,8 @@
         "lesson/2026-10-25/vocabulary/2026-10-25-v-study-41640d3b/word",
         "lesson/2026-10-19/vocabulary/2026-10-19-v-study-41640d3b/word",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-41640d3b/word",
-        "lesson/2026-10-31/vocabulary/2026-10-31-v-study-41640d3b/word"
+        "lesson/2026-10-31/vocabulary/2026-10-31-v-study-41640d3b/word",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-41640d3b/word"
       ],
       "bytes": 17613,
       "duration": 1.44,
@@ -48031,7 +48141,8 @@
         "lesson/2026-10-25/vocabulary/2026-10-25-v-study-a20c26b7/word",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-a20c26b7/word",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-a20c26b7/word",
-        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-a20c26b7/word"
+        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-a20c26b7/word",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-a20c26b7/word"
       ],
       "bytes": 11565,
       "duration": 0.936,
@@ -48151,7 +48262,8 @@
         "lesson/2026-11-02/vocabulary/2026-11-02-v-study-a47c5cf6/example/0",
         "lesson/2026-11-03/vocabulary/2026-11-03-v-study-a47c5cf6/example/0",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-a47c5cf6/example/0",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-a47c5cf6/example/0"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-a47c5cf6/example/0",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-a47c5cf6/example/0"
       ],
       "duration": 3.856,
       "bytes": 31533,
@@ -48972,7 +49084,8 @@
         "lesson/2026-11-02/vocabulary/2026-11-02-v-study-1e18d506/collocation/0",
         "lesson/2026-11-03/vocabulary/2026-11-03-v-study-1e18d506/collocation/0",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-1e18d506/collocation/0",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-1e18d506/collocation/0"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-1e18d506/collocation/0",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-1e18d506/collocation/0"
       ],
       "duration": 1.85,
       "bytes": 15597,
@@ -49294,6 +49407,18 @@
       "bytes": 13677,
       "sha256": "68e93058ae8ad55b7f6255b5d511adc63f4b110694f6b14265c2cd9c06507364",
       "rms": 0.10906
+    },
+    "7f6ce9aa3b829fde": {
+      "id": "7f6ce9aa3b829fde",
+      "text": "改善の条件を満たさなければ、検査は例外を吐きます。",
+      "label": "改善の条件を満たさなければ、検査は例外を吐きます。",
+      "references": [
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-bbf99c19d5ab/example/0"
+      ],
+      "bytes": 52749,
+      "duration": 4.318,
+      "rms": 0.133344,
+      "sha256": "68cdc11a1dd14ff79cd3e7db86ec77c212d02c5cb2a83b130bd85ab8ea7b4020"
     },
     "7f6dea210695c6dd": {
       "id": "7f6dea210695c6dd",
@@ -49618,7 +49743,8 @@
         "lesson/2026-11-02/vocabulary/2026-11-02-v-study-1e18d506/word",
         "lesson/2026-11-03/vocabulary/2026-11-03-v-study-1e18d506/word",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-1e18d506/word",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-1e18d506/word"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-1e18d506/word",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-1e18d506/word"
       ],
       "duration": 1.303,
       "bytes": 11181,
@@ -49930,7 +50056,8 @@
         "lesson/2026-11-02/vocabulary/2026-11-02-v-study-66614293/word",
         "lesson/2026-11-03/vocabulary/2026-11-03-v-study-66614293/word",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-66614293/word",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-66614293/word"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-66614293/word",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-66614293/word"
       ],
       "duration": 1.326,
       "bytes": 11373,
@@ -50979,7 +51106,8 @@
         "lesson/2026-11-02/vocabulary/2026-11-02-v-study-966a7d9e/example/0",
         "lesson/2026-11-03/vocabulary/2026-11-03-v-study-966a7d9e/example/0",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-966a7d9e/example/0",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-966a7d9e/example/0"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-966a7d9e/example/0",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-966a7d9e/example/0"
       ],
       "duration": 5.166,
       "bytes": 42093,
@@ -53410,7 +53538,8 @@
         "lesson/2026-09-29/vocabulary/2026-09-29-v-study-68847e29/example/0",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-68847e29/example/0",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-68847e29/example/0",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-68847e29/example/0"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-68847e29/example/0",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-68847e29/example/0"
       ],
       "duration": 4.6,
       "bytes": 37485,
@@ -55179,7 +55308,8 @@
         "lesson/2026-09-21/grammar/2026-09-21-g-study-2c43f688/example/0",
         "lesson/2026-09-14/grammar/2026-09-14-g-study-2c43f688/example/0",
         "lesson/2026-09-12/grammar/2026-09-12-g-gh-7a961ae8ad/example/0",
-        "lesson/2026-10-31/grammar/2026-10-31-g-study-2c43f688/example/0"
+        "lesson/2026-10-31/grammar/2026-10-31-g-study-2c43f688/example/0",
+        "lesson/2026-11-06/grammar/2026-11-06-g-study-2c43f688/example/0"
       ],
       "duration": 4.054,
       "bytes": 33069,
@@ -59091,7 +59221,8 @@
       "text": "1 かんがつ 2 かんかつ 3 かんこう 4 かんがい",
       "label": "① かんがつ　② かんかつ　③ かんこう　④ かんがい",
       "references": [
-        "lesson/2026-11-01/review/0/detail/2"
+        "lesson/2026-11-01/review/0/detail/2",
+        "lesson/2026-11-06/review/0/detail/2"
       ],
       "duration": 3.242,
       "bytes": 26733,
@@ -59970,6 +60101,18 @@
       "sha256": "6f0bd58c031867a61421081c81edb3293fdd094db41e63b5284222e72619b3d1",
       "rms": 0.19407
     },
+    "9b5a17bb438cecaf": {
+      "id": "9b5a17bb438cecaf",
+      "text": "はく",
+      "label": "吐く",
+      "references": [
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-bbf99c19d5ab/word"
+      ],
+      "bytes": 12429,
+      "duration": 0.941,
+      "rms": 0.095104,
+      "sha256": "22934b87fedb616b004feb49d690518efdd40b6a4f40b647f0227ed6bcec8bb2"
+    },
     "9b7a43a375493287": {
       "id": "9b7a43a375493287",
       "text": "永続的な親アイデンティティーから、タスクの範囲に限定した一時的なエージェントの実行主体を発行し、サブエージェントには親の権限の一部だけを継承させます。",
@@ -60519,7 +60662,8 @@
         "lesson/2026-11-02/vocabulary/2026-11-02-v-study-73083d1e/example/0",
         "lesson/2026-11-03/vocabulary/2026-11-03-v-study-73083d1e/example/0",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-73083d1e/example/0",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-73083d1e/example/0"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-73083d1e/example/0",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-73083d1e/example/0"
       ],
       "duration": 2.348,
       "bytes": 19437,
@@ -62248,7 +62392,8 @@
         "lesson/2026-10-30/grammar/2026-10-30-g-study-ccec99c0/pattern",
         "lesson/2026-10-31/grammar/2026-10-31-g-study-ccec99c0/pattern",
         "lesson/2026-11-02/grammar/2026-11-02-g-study-ccec99c0/pattern",
-        "lesson/2026-11-05/grammar/2026-11-05-g-study-ccec99c0/pattern"
+        "lesson/2026-11-05/grammar/2026-11-05-g-study-ccec99c0/pattern",
+        "lesson/2026-11-06/grammar/2026-11-06-g-study-ccec99c0/pattern"
       ],
       "duration": 1.49,
       "bytes": 12717,
@@ -63688,7 +63833,8 @@
         "lesson/2026-10-25/vocabulary/2026-10-25-v-study-a20c26b7/collocation/1",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-a20c26b7/collocation/1",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-a20c26b7/collocation/1",
-        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-a20c26b7/collocation/1"
+        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-a20c26b7/collocation/1",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-a20c26b7/collocation/1"
       ],
       "duration": 1.918,
       "bytes": 15981,
@@ -63762,7 +63908,8 @@
         "lesson/2026-10-30/grammar/2026-10-30-g-study-61aee9b6/example/0",
         "lesson/2026-11-01/grammar/2026-11-01-g-study-61aee9b6/example/0",
         "lesson/2026-11-02/grammar/2026-11-02-g-study-61aee9b6/example/0",
-        "lesson/2026-11-03/grammar/2026-11-03-g-study-61aee9b6/example/0"
+        "lesson/2026-11-03/grammar/2026-11-03-g-study-61aee9b6/example/0",
+        "lesson/2026-11-06/grammar/2026-11-06-g-study-61aee9b6/example/0"
       ],
       "duration": 4.53,
       "bytes": 36909,
@@ -65061,7 +65208,8 @@
         "lesson/2026-09-21/grammar/2026-09-21-g-study-2c43f688/pattern",
         "lesson/2026-09-14/grammar/2026-09-14-g-study-2c43f688/pattern",
         "lesson/2026-09-12/grammar/2026-09-12-g-gh-7a961ae8ad/pattern",
-        "lesson/2026-10-31/grammar/2026-10-31-g-study-2c43f688/pattern"
+        "lesson/2026-10-31/grammar/2026-10-31-g-study-2c43f688/pattern",
+        "lesson/2026-11-06/grammar/2026-11-06-g-study-2c43f688/pattern"
       ],
       "duration": 1.407,
       "bytes": 11949,
@@ -66182,7 +66330,8 @@
         "lesson/2026-11-02/grammar/2026-11-02-g-study-48e1043d/example/0",
         "lesson/2026-11-03/grammar/2026-11-03-g-study-48e1043d/example/0",
         "lesson/2026-11-04/grammar/2026-11-04-g-study-48e1043d/example/0",
-        "lesson/2026-11-05/grammar/2026-11-05-g-study-48e1043d/example/0"
+        "lesson/2026-11-05/grammar/2026-11-05-g-study-48e1043d/example/0",
+        "lesson/2026-11-06/grammar/2026-11-06-g-study-48e1043d/example/0"
       ],
       "duration": 4.867,
       "bytes": 39597,
@@ -67252,7 +67401,8 @@
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-339df203/collocation/0",
         "lesson/2026-11-01/vocabulary/2026-11-01-v-study-339df203/collocation/0",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-339df203/collocation/0",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-339df203/collocation/0"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-339df203/collocation/0",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-339df203/collocation/0"
       ],
       "duration": 1.767,
       "bytes": 14829,
@@ -71006,6 +71156,18 @@
       "sha256": "883ebb039413e62c70aa8b87deae7c19f6a7cdc36d029fc743de0f6b31145f22",
       "rms": 0.145785
     },
+    "b79f72d4d9099880": {
+      "id": "b79f72d4d9099880",
+      "text": "ならべる",
+      "label": "並べる",
+      "references": [
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-64af4a184d7c/word"
+      ],
+      "bytes": 13869,
+      "duration": 1.058,
+      "rms": 0.159618,
+      "sha256": "0396808b1ef7336739e7bc62642f90c0f20267ac00ed3e5c5ea692d3d64aa3aa"
+    },
     "b7a21520cb4e144c": {
       "id": "b7a21520cb4e144c",
       "text": "また、社員向けの研修も行い、一部の詳しい利用者だけに依存しない運用を目指す。",
@@ -71054,7 +71216,8 @@
         "lesson/2026-10-25/vocabulary/2026-10-25-v-study-41640d3b/collocation/0",
         "lesson/2026-10-19/vocabulary/2026-10-19-v-study-41640d3b/collocation/0",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-41640d3b/collocation/0",
-        "lesson/2026-10-31/vocabulary/2026-10-31-v-study-41640d3b/collocation/0"
+        "lesson/2026-10-31/vocabulary/2026-10-31-v-study-41640d3b/collocation/0",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-41640d3b/collocation/0"
       ],
       "duration": 1.674,
       "bytes": 14061,
@@ -71125,7 +71288,8 @@
         "lesson/2026-09-29/vocabulary/2026-09-29-v-study-68847e29/collocation/0",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-68847e29/collocation/0",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-68847e29/collocation/0",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-68847e29/collocation/0"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-68847e29/collocation/0",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-68847e29/collocation/0"
       ],
       "duration": 1.384,
       "bytes": 11757,
@@ -71659,7 +71823,8 @@
         "lesson/2026-09-20/grammar/2026-09-20-g-study-73890ec9/example/0",
         "lesson/2026-09-18/grammar/2026-09-18-g-study-73890ec9/example/0",
         "lesson/2026-09-13/grammar/2026-09-13-g-study-73890ec9/example/0",
-        "lesson/2026-09-12/grammar/2026-09-12-g-study-73890ec9/example/0"
+        "lesson/2026-09-12/grammar/2026-09-12-g-study-73890ec9/example/0",
+        "lesson/2026-11-06/grammar/2026-11-06-g-study-73890ec9/example/0"
       ],
       "duration": 6.341,
       "bytes": 51501,
@@ -73502,7 +73667,8 @@
         "lesson/2026-09-11/grammar/2026-09-11-g-study-f9bbc75/example/0",
         "lesson/2026-09-09/grammar/2026-09-09-g-gh-78c80effda/example/0",
         "lesson/2026-10-30/grammar/2026-10-30-g-study-f9bbc75/example/0",
-        "lesson/2026-11-05/grammar/2026-11-05-g-study-f9bbc75/example/0"
+        "lesson/2026-11-05/grammar/2026-11-05-g-study-f9bbc75/example/0",
+        "lesson/2026-11-06/grammar/2026-11-06-g-study-f9bbc75/example/0"
       ],
       "duration": 4.135,
       "bytes": 33837,
@@ -74000,7 +74166,8 @@
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-7deda27e/example/0",
         "lesson/2026-11-01/vocabulary/2026-11-01-v-study-7deda27e/example/0",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-7deda27e/example/0",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-7deda27e/example/0"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-7deda27e/example/0",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-7deda27e/example/0"
       ],
       "duration": 3.915,
       "bytes": 32109,
@@ -75134,6 +75301,18 @@
       "sha256": "629e7923f579ef69fc7ad757e67e28a01bec7694cc7b1aab6f6802fdc4e04712",
       "rms": 0.169677
     },
+    "c2d0889036d611d4": {
+      "id": "c2d0889036d611d4",
+      "text": "原因の接続が負荷グラフに現れない場合もあります。",
+      "label": "原因の接続が負荷グラフに現れない場合もあります。",
+      "references": [
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-c01c819e09a8/example/0"
+      ],
+      "bytes": 52461,
+      "duration": 4.295,
+      "rms": 0.149774,
+      "sha256": "4e33d202b0fe53c4420cf73b6c6ccd34b0865030d3871f5a8d597ff011fdf434"
+    },
     "c2d2ed277a4bf6e3": {
       "id": "c2d2ed277a4bf6e3",
       "text": "機能の廃止を告知する",
@@ -75253,6 +75432,18 @@
       "bytes": 13485,
       "sha256": "eca7781f9ce5f0299af85bdd07e6f544a306ca92464876cf804a60532142858f",
       "rms": 0.193983
+    },
+    "c306346d6d066949": {
+      "id": "c306346d6d066949",
+      "text": "クリックした直後に利用者を切り替え、競合を再現します。",
+      "label": "クリックした直後に利用者を切り替え、競合を再現します。",
+      "references": [
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-af98a415a769/example/0"
+      ],
+      "bytes": 53901,
+      "duration": 4.411,
+      "rms": 0.13569,
+      "sha256": "8e7bf20b4d4d5873f16433bf35a09607bc1eddd91b3c773521a2f0f0417e7ef3"
     },
     "c30f77cf9f66b28b": {
       "id": "c30f77cf9f66b28b",
@@ -76915,7 +77106,8 @@
         "lesson/2026-09-29/vocabulary/2026-09-29-v-study-68847e29/word",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-68847e29/word",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-68847e29/word",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-68847e29/word"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-68847e29/word",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-68847e29/word"
       ],
       "duration": 1.071,
       "bytes": 9261,
@@ -77570,7 +77762,8 @@
         "lesson/2026-09-24/vocabulary/2026-09-24-v-study-d20f029e/example/0",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-d20f029e/example/0",
         "lesson/2026-11-01/vocabulary/2026-11-01-v-study-d20f029e/example/0",
-        "lesson/2026-11-04/vocabulary/2026-11-04-v-study-d20f029e/example/0"
+        "lesson/2026-11-04/vocabulary/2026-11-04-v-study-d20f029e/example/0",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-d20f029e/example/0"
       ],
       "duration": 4.682,
       "bytes": 38253,
@@ -79366,6 +79559,18 @@
       "sha256": "4c218f2a94eca44e06f398b6ee858aaf0ca6e479d0261cf271e2b4f40b04a3a5",
       "rms": 0.150768
     },
+    "ccbeffbfb770e33b": {
+      "id": "ccbeffbfb770e33b",
+      "text": "今は動いていても、いずれ移行が必要になります。",
+      "label": "今は動いていても、いずれ移行が必要になります。",
+      "references": [
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-675b821fb576/example/0"
+      ],
+      "bytes": 48429,
+      "duration": 3.947,
+      "rms": 0.108312,
+      "sha256": "bc0e30b54edff92c2246d5231c0bfdb444f4fcb41ad0f838fa87a425e27b1e85"
+    },
     "ccc3d60cd9ac28c8": {
       "id": "ccc3d60cd9ac28c8",
       "text": "AIモデルの使い分けとコスト管理",
@@ -80795,7 +81000,8 @@
         "lesson/2026-09-13/grammar/2026-09-13-g-study-fac43c60/example/0",
         "lesson/2026-09-11/grammar/2026-09-11-g-study-fac43c60/example/0",
         "lesson/2026-09-09/grammar/2026-09-09-g-study-fac43c60/example/0",
-        "lesson/2026-10-31/grammar/2026-10-31-g-study-fac43c60/example/0"
+        "lesson/2026-10-31/grammar/2026-10-31-g-study-fac43c60/example/0",
+        "lesson/2026-11-06/grammar/2026-11-06-g-study-fac43c60/example/0"
       ],
       "duration": 5.227,
       "bytes": 42477,
@@ -82977,7 +83183,8 @@
         "lesson/2026-11-02/grammar/2026-11-02-g-study-48e1043d/pattern",
         "lesson/2026-11-03/grammar/2026-11-03-g-study-48e1043d/pattern",
         "lesson/2026-11-04/grammar/2026-11-04-g-study-48e1043d/pattern",
-        "lesson/2026-11-05/grammar/2026-11-05-g-study-48e1043d/pattern"
+        "lesson/2026-11-05/grammar/2026-11-05-g-study-48e1043d/pattern",
+        "lesson/2026-11-06/grammar/2026-11-06-g-study-48e1043d/pattern"
       ],
       "duration": 1.175,
       "bytes": 10029,
@@ -83775,7 +83982,8 @@
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-339df203/collocation/1",
         "lesson/2026-11-01/vocabulary/2026-11-01-v-study-339df203/collocation/1",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-339df203/collocation/1",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-339df203/collocation/1"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-339df203/collocation/1",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-339df203/collocation/1"
       ],
       "duration": 2.15,
       "bytes": 17901,
@@ -84408,7 +84616,8 @@
         "lesson/2026-10-30/grammar/2026-10-30-g-study-61aee9b6/pattern",
         "lesson/2026-11-01/grammar/2026-11-01-g-study-61aee9b6/pattern",
         "lesson/2026-11-02/grammar/2026-11-02-g-study-61aee9b6/pattern",
-        "lesson/2026-11-03/grammar/2026-11-03-g-study-61aee9b6/pattern"
+        "lesson/2026-11-03/grammar/2026-11-03-g-study-61aee9b6/pattern",
+        "lesson/2026-11-06/grammar/2026-11-06-g-study-61aee9b6/pattern"
       ],
       "duration": 1.431,
       "bytes": 12141,
@@ -85648,7 +85857,8 @@
         "lesson/2026-11-02/vocabulary/2026-11-02-v-study-d898be90/word",
         "lesson/2026-11-03/vocabulary/2026-11-03-v-study-d898be90/word",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-d898be90/word",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-d898be90/word"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-d898be90/word",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-d898be90/word"
       ],
       "duration": 1.303,
       "bytes": 11181,
@@ -85801,7 +86011,8 @@
         "lesson/2026-09-24/vocabulary/2026-09-24-v-study-d20f029e/word",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-d20f029e/word",
         "lesson/2026-11-01/vocabulary/2026-11-01-v-study-d20f029e/word",
-        "lesson/2026-11-04/vocabulary/2026-11-04-v-study-d20f029e/word"
+        "lesson/2026-11-04/vocabulary/2026-11-04-v-study-d20f029e/word",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-d20f029e/word"
       ],
       "duration": 1.082,
       "bytes": 9453,
@@ -86101,7 +86312,8 @@
         "lesson/2026-11-02/vocabulary/2026-11-02-v-study-d898be90/collocation/2",
         "lesson/2026-11-03/vocabulary/2026-11-03-v-study-d898be90/collocation/2",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-d898be90/collocation/2",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-d898be90/collocation/2"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-d898be90/collocation/2",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-d898be90/collocation/2"
       ],
       "duration": 1.698,
       "bytes": 14253,
@@ -86786,7 +86998,8 @@
         "lesson/2026-11-02/vocabulary/2026-11-02-v-study-66614293/example/0",
         "lesson/2026-11-03/vocabulary/2026-11-03-v-study-66614293/example/0",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-66614293/example/0",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-66614293/example/0"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-66614293/example/0",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-66614293/example/0"
       ],
       "duration": 4.4,
       "bytes": 35949,
@@ -88114,7 +88327,8 @@
         "lesson/2026-11-02/vocabulary/2026-11-02-v-study-d898be90/collocation/0",
         "lesson/2026-11-03/vocabulary/2026-11-03-v-study-d898be90/collocation/0",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-d898be90/collocation/0",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-d898be90/collocation/0"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-d898be90/collocation/0",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-d898be90/collocation/0"
       ],
       "duration": 1.802,
       "bytes": 15213,
@@ -88520,7 +88734,8 @@
         "lesson/2026-09-29/vocabulary/2026-09-29-v-study-68847e29/collocation/1",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-68847e29/collocation/1",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-68847e29/collocation/1",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-68847e29/collocation/1"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-68847e29/collocation/1",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-68847e29/collocation/1"
       ],
       "duration": 1.813,
       "bytes": 15213,
@@ -89668,7 +89883,8 @@
         "lesson/2026-11-02/vocabulary/2026-11-02-v-study-a47c5cf6/word",
         "lesson/2026-11-03/vocabulary/2026-11-03-v-study-a47c5cf6/word",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-a47c5cf6/word",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-a47c5cf6/word"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-a47c5cf6/word",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-a47c5cf6/word"
       ],
       "duration": 1.303,
       "bytes": 11181,
@@ -90141,7 +90357,8 @@
         "lesson/2026-09-24/vocabulary/2026-09-24-v-study-d20f029e/collocation/0",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-d20f029e/collocation/0",
         "lesson/2026-11-01/vocabulary/2026-11-01-v-study-d20f029e/collocation/0",
-        "lesson/2026-11-04/vocabulary/2026-11-04-v-study-d20f029e/collocation/0"
+        "lesson/2026-11-04/vocabulary/2026-11-04-v-study-d20f029e/collocation/0",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-d20f029e/collocation/0"
       ],
       "duration": 1.627,
       "bytes": 13677,
@@ -94209,6 +94426,18 @@
       "sha256": "871c678aa84945ef6eb4d785f4408338fc2eb7cb0b0233218ebf4533013cb90f",
       "rms": 0.125151
     },
+    "f40a2a2cd57d1ec8": {
+      "id": "f40a2a2cd57d1ec8",
+      "text": "あらわれる",
+      "label": "現れる",
+      "references": [
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-c01c819e09a8/word"
+      ],
+      "bytes": 15021,
+      "duration": 1.162,
+      "rms": 0.136675,
+      "sha256": "373303fae9977f8e3fed8bd66ba8b26e992e10376e020ab321ff4a2e6358ff3f"
+    },
     "f40d57e072b687cc": {
       "id": "f40d57e072b687cc",
       "text": "実現への道筋",
@@ -94848,6 +95077,19 @@
       "bytes": 44013,
       "sha256": "dea52481e1ef36ede1d7e399fd2ba6701d31d8952a9ab8c5317ccc518da6c93c",
       "rms": 0.1324
+    },
+    "f62f54519e7755ad": {
+      "id": "f62f54519e7755ad",
+      "text": "同じ入力に対する結果を並べて、差を確認します。",
+      "label": "同じ入力に対する結果を並べて、差を確認します。",
+      "references": [
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-64af4a184d7c/example/0",
+        "lesson/2026-11-06/grammar/2026-11-06-g-study-f9bbc75/evidence/0"
+      ],
+      "bytes": 55053,
+      "duration": 4.49,
+      "rms": 0.114144,
+      "sha256": "77728a15355151562d52aa71bac1fe98bf9310faeb30adb09180b6f61e70a40e"
     },
     "f63608041ef8bb10": {
       "id": "f63608041ef8bb10",
@@ -97036,7 +97278,8 @@
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-72cf604e/example/0",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-72cf604e/example/0",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-72cf604e/example/0",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-72cf604e/example/0"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-72cf604e/example/0",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-72cf604e/example/0"
       ],
       "duration": 4.946,
       "bytes": 40365,
@@ -97101,7 +97344,8 @@
         "lesson/2026-10-25/vocabulary/2026-10-25-v-study-a20c26b7/collocation/2",
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-a20c26b7/collocation/2",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-a20c26b7/collocation/2",
-        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-a20c26b7/collocation/2"
+        "lesson/2026-11-01/vocabulary/2026-11-01-v-study-a20c26b7/collocation/2",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-a20c26b7/collocation/2"
       ],
       "duration": 1.941,
       "bytes": 16173,
@@ -97828,7 +98072,8 @@
         "lesson/2026-10-30/vocabulary/2026-10-30-v-study-72cf604e/collocation/2",
         "lesson/2026-10-31/vocabulary/2026-10-31-v-study-72cf604e/collocation/2",
         "lesson/2026-11-04/vocabulary/2026-11-04-v-study-72cf604e/collocation/2",
-        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-72cf604e/collocation/2"
+        "lesson/2026-11-05/vocabulary/2026-11-05-v-study-72cf604e/collocation/2",
+        "lesson/2026-11-06/vocabulary/2026-11-06-v-study-72cf604e/collocation/2"
       ],
       "duration": 2.522,
       "bytes": 20973,
