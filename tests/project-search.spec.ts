@@ -114,7 +114,8 @@ test('single global input and grouped popup work on 390px and 320px dark screens
     await page.setViewportSize({ width, height: 844 })
     await expect(search(page)).toBeInViewport()
     await expect(results(page)).toBeInViewport()
-    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(true)
+    // Native scrollbars consume viewport space; innerWidth includes that gutter.
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth)).toBe(true)
     await page.screenshot({ path: testInfo.outputPath(`unified-search-mobile-dark-${width}.png`) })
   }
   await results(page).locator('[data-search-target="au"]').click()
