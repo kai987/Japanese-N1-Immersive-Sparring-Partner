@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-11-06",
   "day": 69,
-  "status": "validating",
-  "stage": "validating",
+  "status": "published",
+  "stage": "published",
   "upstreamSourceCommit": "d507ea845641696d2cd046102f13a4ce38e62445",
   "sourcePagesRunId": 42147837837,
   "snapshotSha256": "37aacbc1d7e060c994c88b76c4d5c2eaed3b28563313f4e844e5a223157be3bb",
@@ -19,8 +19,49 @@
     "allPassed": true
   },
   "lastError": null,
-  "nextStep": "Verify exact sync run, final lesson+snapshot commit, Pages and live target date",
-  "updatedAt": "2026-11-06T02:09:56.462Z",
+  "nextStep": "Text verified. Observe source-bound shared audio and the independent scheduled worker and verifier.",
+  "updatedAt": "2026-11-06T02:15:06.996Z",
   "requestCommit": "337681b2e396238ed1cd5da95c487f9906583d17",
-  "requestBlobSha": "2de69345bf846f6f0271653171b6964c12d19234"
+  "requestBlobSha": "2de69345bf846f6f0271653171b6964c12d19234",
+  "releaseCommit": "52992239c569d58b37a572e0ba7629009d7c1c21",
+  "pagesRunId": 42148810584,
+  "sourceBlobSha": "69a710f1035c24f2d653f277f33180ff18f94b75",
+  "counts": {
+    "vocabularyNew": 7,
+    "vocabularyReview": 13,
+    "grammarNew": 0,
+    "grammarReview": 8
+  },
+  "textPublicationVerified": true,
+  "verification": {
+    "targetDate": "2026-11-06",
+    "day": 69,
+    "releaseCommit": "52992239c569d58b37a572e0ba7629009d7c1c21",
+    "pagesRunId": 42148810584,
+    "upstreamSourceCommit": "d507ea845641696d2cd046102f13a4ce38e62445",
+    "sourceBlobSha": "69a710f1035c24f2d653f277f33180ff18f94b75",
+    "artifact": {
+      "id": 13471152077,
+      "name": "n1-deployment-verification",
+      "digest": "sha256:7f521982b09fdd442443846055237598d837efe903db2434731895998c8174ec"
+    },
+    "manifestSha256": "411321ea0754eb36b3abb87bf8d1835988917a5412babadb7b182b904df08690",
+    "fullPublicAssetBytes": true,
+    "verifiedFiles": 78,
+    "allLessonJsonAndCompleteSearchVerified": true,
+    "allOriginalParagraphsPresent": true,
+    "originalParagraphCount": 6,
+    "originalQuestionAndOptionsPreserved": true,
+    "title": "インフラの地図を重ねれば、現場の判断は正確になるのか——地下設備、相互運用性、更新時刻と責任。",
+    "sourceUnchanged": true,
+    "publishedLessonSha256": "5a21bf482f930bc26caf0e2fa4b445a6cf703d54f70a9f48ec26394732b278ce",
+    "liveProof": {
+      "status": "published_release_verified",
+      "manifestSha256": "411321ea0754eb36b3abb87bf8d1835988917a5412babadb7b182b904df08690",
+      "verifiedFiles": 78,
+      "latestDate": "2026-11-06",
+      "targetDate": "2026-11-06"
+    },
+    "at": "2026-11-06T02:15:06.056Z"
+  }
 }
