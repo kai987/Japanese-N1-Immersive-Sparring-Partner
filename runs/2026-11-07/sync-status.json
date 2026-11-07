@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-11-07",
   "day": 70,
-  "status": "validating",
-  "stage": "validating",
+  "status": "published",
+  "stage": "published",
   "upstreamSourceCommit": "f54c4fd3f0e1db48c0badbba82690fde8e32c802",
   "sourcePagesRunId": 42324192179,
   "snapshotSha256": "7f3104aa9d264907bbd2e1500d8b24da73781b49186ca8a82cdb003f113c7d58",
@@ -19,8 +19,49 @@
     "allPassed": true
   },
   "lastError": null,
-  "nextStep": "Verify exact sync run, final lesson+snapshot commit, Pages and live target date",
-  "updatedAt": "2026-11-07T01:35:25.448Z",
+  "nextStep": "Text verified. Observe source-bound shared audio and the independent scheduled worker and verifier.",
+  "updatedAt": "2026-11-07T01:40:01.379Z",
   "requestCommit": "d3ebe68514180d3315035a172df13a75e5b2cb6f",
-  "requestBlobSha": "b28f78959a0a3530292afe145db089635d594c65"
+  "requestBlobSha": "b28f78959a0a3530292afe145db089635d594c65",
+  "releaseCommit": "2150b1b81aee3e05adb50fba0dbf67037e48237a",
+  "pagesRunId": 42325072351,
+  "sourceBlobSha": "68d71ae09ac2da17eabbc9c381360c8fec11cb70",
+  "counts": {
+    "vocabularyNew": 2,
+    "vocabularyReview": 18,
+    "grammarNew": 0,
+    "grammarReview": 8
+  },
+  "textPublicationVerified": true,
+  "verification": {
+    "targetDate": "2026-11-07",
+    "day": 70,
+    "releaseCommit": "2150b1b81aee3e05adb50fba0dbf67037e48237a",
+    "pagesRunId": 42325072351,
+    "upstreamSourceCommit": "f54c4fd3f0e1db48c0badbba82690fde8e32c802",
+    "sourceBlobSha": "68d71ae09ac2da17eabbc9c381360c8fec11cb70",
+    "artifact": {
+      "id": 13554976599,
+      "name": "n1-deployment-verification",
+      "digest": "sha256:336b878631bc8ef830ea8c815a440e53ff6dcd3a7acbaa31168c9d44fad43310"
+    },
+    "manifestSha256": "b88227a9884b5ebed651c5d00757fde1ca1ae540552df698bf654ab2ddad1e1a",
+    "fullPublicAssetBytes": true,
+    "verifiedFiles": 79,
+    "allLessonJsonAndCompleteSearchVerified": true,
+    "allOriginalParagraphsPresent": true,
+    "originalParagraphCount": 6,
+    "originalQuestionAndOptionsPreserved": true,
+    "title": "任せるために、残しておく判断",
+    "sourceUnchanged": true,
+    "publishedLessonSha256": "719701eeef8aba78d6fb17e4cbb27a04b1dbef60c51fe6dc30734c5795dc849d",
+    "liveProof": {
+      "status": "published_release_verified",
+      "manifestSha256": "b88227a9884b5ebed651c5d00757fde1ca1ae540552df698bf654ab2ddad1e1a",
+      "verifiedFiles": 79,
+      "latestDate": "2026-11-07",
+      "targetDate": "2026-11-07"
+    },
+    "at": "2026-11-07T01:40:00.592Z"
+  }
 }
