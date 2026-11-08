@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-11-08",
   "day": 71,
-  "status": "validating",
-  "stage": "validating",
+  "status": "published",
+  "stage": "published",
   "upstreamSourceCommit": "43f5c1c2f2713f056233c8480877ef7293d5b82a",
   "sourcePagesRunId": 42434180868,
   "snapshotSha256": "0e2fd4d9f6b429c67ec65545d4034e4ce8522ee609705a4a82cc1f98082bc63d",
@@ -19,8 +19,49 @@
     "allPassed": true
   },
   "lastError": null,
-  "nextStep": "Verify exact sync run, final lesson+snapshot commit, Pages and live target date",
-  "updatedAt": "2026-11-08T01:31:52.953Z",
+  "nextStep": "Text verified. Observe source-bound shared audio and the independent scheduled worker and verifier.",
+  "updatedAt": "2026-11-08T01:37:01.424Z",
   "requestCommit": "706ae69098caab87c7fed420e37604352bb4f50a",
-  "requestBlobSha": "815d165670114519254a6f5d29e9f1c08461896a"
+  "requestBlobSha": "815d165670114519254a6f5d29e9f1c08461896a",
+  "releaseCommit": "6f726f0499ec11c880306da9ce7a6f28503c4569",
+  "pagesRunId": 42434826554,
+  "sourceBlobSha": "41241bc6c57bd144522dd10c8e40c23f146061c6",
+  "counts": {
+    "vocabularyNew": 2,
+    "vocabularyReview": 18,
+    "grammarNew": 0,
+    "grammarReview": 5
+  },
+  "textPublicationVerified": true,
+  "verification": {
+    "targetDate": "2026-11-08",
+    "day": 71,
+    "releaseCommit": "6f726f0499ec11c880306da9ce7a6f28503c4569",
+    "pagesRunId": 42434826554,
+    "upstreamSourceCommit": "43f5c1c2f2713f056233c8480877ef7293d5b82a",
+    "sourceBlobSha": "41241bc6c57bd144522dd10c8e40c23f146061c6",
+    "artifact": {
+      "id": 13599351758,
+      "name": "n1-deployment-verification",
+      "digest": "sha256:dfeeae59e9f1db461d07a2712d3726fe35e026f6e1df1734c58c278c80e3f628"
+    },
+    "manifestSha256": "c7c46efd6f8208cef2e996acb5edc3f95855d3e3862a0a9d99e4b9618d17a856",
+    "fullPublicAssetBytes": true,
+    "verifiedFiles": 80,
+    "allLessonJsonAndCompleteSearchVerified": true,
+    "allOriginalParagraphsPresent": true,
+    "originalParagraphCount": 6,
+    "originalQuestionAndOptionsPreserved": true,
+    "title": "文字になった声を、どう確かめるか",
+    "sourceUnchanged": true,
+    "publishedLessonSha256": "58a939cd5ebb92b107232ca13e76560f44418d19b4feeb5ec325eba9dd63b6a1",
+    "liveProof": {
+      "status": "published_release_verified",
+      "manifestSha256": "c7c46efd6f8208cef2e996acb5edc3f95855d3e3862a0a9d99e4b9618d17a856",
+      "verifiedFiles": 80,
+      "latestDate": "2026-11-08",
+      "targetDate": "2026-11-08"
+    },
+    "at": "2026-11-08T01:37:00.627Z"
+  }
 }
