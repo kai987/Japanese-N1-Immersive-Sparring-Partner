@@ -132,11 +132,18 @@ const answerBatches = Array.from({ length: Math.ceil(catalog.length / answerBatc
   catalog.slice(index * answerBatchSize, (index + 1) * answerBatchSize))
 for (const batch of answerBatches) test(`choosing C for every lesson checks ${batch[0].date} through ${batch.at(-1)!.date}`, async ({ page }) => {
   await page.goto('/')
+  // This exhaustive check exercises the keyboard path. Pointer interactions
+  // are covered above and need stable animation frames on the background Mac.
+  const datePicker = page.locator('.date-dropdown-trigger')
   for (const lesson of batch) {
-    await page.locator('.date-dropdown-trigger').click()
-    await page.getByRole('option', { name: new RegExp(`^Day ${lesson.day}\\b`) }).click(); await reading(page)
-    await page.locator('.answer-option').nth(2).click()
-    await page.getByRole('button', { name: '回答する', exact: true }).click()
+    await datePicker.press('Enter')
+    await page.getByRole('option', { name: new RegExp(`^Day ${lesson.day}\\b`) }).press('Enter')
+    await expect(datePicker).toContainText(`Day ${lesson.day} ·`)
+    await page.getByRole('button', { name: '読解練習', exact: true }).press('Enter')
+    await page.locator('.answer-option').nth(2).press('Enter')
+    const submit = page.getByRole('button', { name: '回答する', exact: true })
+    await expect(submit).toBeEnabled()
+    await submit.press('Enter')
     const correctChoice = ['A', 'B', 'C', 'D'][(lesson.day - 1) % 4]
     await expect(page.locator('.result-title')).toHaveText(correctChoice === 'C' ? '正解です' : `正解：${correctChoice}`)
   }
