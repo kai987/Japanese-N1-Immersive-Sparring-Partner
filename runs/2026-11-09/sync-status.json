@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "targetDate": "2026-11-09",
+  "day": 72,
+  "status": "waiting_request",
+  "stage": "request_ready",
+  "upstreamSourceCommit": "52fb1900d38484485f3d81b073ff9788c0bdfc27",
+  "sourcePagesRunId": 42545014645,
+  "snapshotSha256": "c18f69a53e2277baaae41987b75675237b088cd5a907c1db1203fd10aab3f852",
+  "issueNumber": 90,
+  "totalDays": 90,
+  "requestSha256": "983ca03f354e4064564bc3b6d5f27ec3258673553d4e073a881b3476716efe0c",
+  "requestSubmitted": false,
+  "localValidation": {
+    "content": true,
+    "unit": true,
+    "build": true,
+    "browser": true,
+    "allPassed": true
+  },
+  "lastError": null,
+  "nextStep": "Submit complete source-bound request while shared slot is free",
+  "updatedAt": "2026-11-09T01:26:02.742Z"
+}
