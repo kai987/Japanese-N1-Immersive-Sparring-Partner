@@ -10,13 +10,858 @@
     "sampleRate": 24000,
     "codec": "mp3-64k"
   },
-  "requiredClips": 8193,
-  "pendingClips": 164,
+  "requiredClips": 8291,
+  "pendingClips": 254,
   "incompleteLessonDates": [
+    "2026-11-09",
     "2026-11-08",
     "2026-11-07"
   ],
   "entries": [
+    {
+      "id": "e89a7647837a445b",
+      "text": "赤くしただけでは、伝わらない",
+      "label": "赤くしただけでは、伝わらない",
+      "references": [
+        "lesson/2026-11-09/title",
+        "lesson/2026-11-09/immersion/title",
+        "lesson/2026-11-09/reading/title"
+      ]
+    },
+    {
+      "id": "c02ed110f105158c",
+      "text": "ある企業の開発チームは、オンライン申請フォームの入力ミスを減らそうとしていた。",
+      "label": "ある企業の開発チームは、オンライン申請フォームの入力ミスを減らそうとしていた。",
+      "references": [
+        "lesson/2026-11-09/immersion/0/0",
+        "lesson/2026-11-09/reading/0/0"
+      ]
+    },
+    {
+      "id": "7d21059a36d30996",
+      "text": "以前は必須項目が空欄でも送信ボタンを押すまで気づきにくかったため、担当者は問題のある欄を赤く囲むようにした。",
+      "label": "以前は必須項目が空欄でも送信ボタンを押すまで気づきにくかったため、担当者は問題のある欄を赤く囲むようにした。",
+      "references": [
+        "lesson/2026-11-09/immersion/0/1",
+        "lesson/2026-11-09/reading/0/1"
+      ]
+    },
+    {
+      "id": "c301d45157bae0f5",
+      "text": "テスト画面を見た人からは、エラーの場所が一目で分かるという評価があった。",
+      "label": "テスト画面を見た人からは、エラーの場所が一目で分かるという評価があった。",
+      "references": [
+        "lesson/2026-11-09/immersion/0/2",
+        "lesson/2026-11-09/reading/0/2"
+      ]
+    },
+    {
+      "id": "7662a41a9b5dc44e",
+      "text": "確かに、色の違いは多くの利用者にとって役に立つ。",
+      "label": "確かに、色の違いは多くの利用者にとって役に立つ。",
+      "references": [
+        "lesson/2026-11-09/immersion/0/3",
+        "lesson/2026-11-09/reading/0/3"
+      ]
+    },
+    {
+      "id": "c3877915885708b9",
+      "text": "しかし、目立つ色で示したというだけで、何が間違っていて、どう直せばよいのかまで伝わったとは限らない。",
+      "label": "しかし、目立つ色で示したというだけで、何が間違っていて、どう直せばよいのかまで伝わったとは限らない。",
+      "references": [
+        "lesson/2026-11-09/immersion/0/4",
+        "lesson/2026-11-09/reading/0/4"
+      ]
+    },
+    {
+      "id": "84c5515cbd3ad720",
+      "text": "そもそも、利用者が画面の情報をどのように受け取るかは一様ではない。",
+      "label": "そもそも、利用者が画面の情報をどのように受け取るかは一様ではない。",
+      "references": [
+        "lesson/2026-11-09/immersion/1/0",
+        "lesson/2026-11-09/reading/1/0"
+      ]
+    },
+    {
+      "id": "8177a3fc649831d0",
+      "text": "色の違いを判別しにくい人もいれば、画面を見ずに読み上げ機能で入力を進める人もいる。「",
+      "label": "色の違いを判別しにくい人もいれば、画面を見ずに読み上げ機能で入力を進める人もいる。「",
+      "references": [
+        "lesson/2026-11-09/immersion/1/1",
+        "lesson/2026-11-09/reading/1/1"
+      ]
+    },
+    {
+      "id": "e1d502ee1bb26aca",
+      "text": "赤い欄を修正してください」という案内は、色を手掛かりにできない場合には十分な説明にならない。",
+      "label": "赤い欄を修正してください」という案内は、色を手掛かりにできない場合には十分な説明にならない。",
+      "references": [
+        "lesson/2026-11-09/immersion/1/2",
+        "lesson/2026-11-09/reading/1/2"
+      ]
+    },
+    {
+      "id": "08ed3f1a96902cce",
+      "text": "入力欄の名前、エラーの具体的な内容、必要な修正を文字で示し、その情報を入力項目と適切に関連付けることが求められる。",
+      "label": "入力欄の名前、エラーの具体的な内容、必要な修正を文字で示し、その情報を入力項目と適切に関連付けることが求められる。",
+      "references": [
+        "lesson/2026-11-09/immersion/1/3",
+        "lesson/2026-11-09/reading/1/3"
+      ]
+    },
+    {
+      "id": "683bbf2b81f7d057",
+      "text": "色やアイコンを用いること自体が問題なのではなく、それだけに意味を任せることが問題なのである。",
+      "label": "色やアイコンを用いること自体が問題なのではなく、それだけに意味を任せることが問題なのである。",
+      "references": [
+        "lesson/2026-11-09/immersion/1/4",
+        "lesson/2026-11-09/reading/1/4"
+      ]
+    },
+    {
+      "id": "de782cfad182affe",
+      "text": "もっとも、すべての項目に長い説明文を付ければ、画面がかえって読みにくくなるという懸念にも理由がある。",
+      "label": "もっとも、すべての項目に長い説明文を付ければ、画面がかえって読みにくくなるという懸念にも理由がある。",
+      "references": [
+        "lesson/2026-11-09/immersion/2/0",
+        "lesson/2026-11-09/reading/2/0"
+      ]
+    },
+    {
+      "id": "0f2c6c9da7cde8d1",
+      "text": "だからといって、説明を減らすために必要な情報まで省いてよいわけではない。",
+      "label": "だからといって、説明を減らすために必要な情報まで省いてよいわけではない。",
+      "references": [
+        "lesson/2026-11-09/immersion/2/1",
+        "lesson/2026-11-09/reading/2/1"
+      ]
+    },
+    {
+      "id": "80508879fe58d23d",
+      "text": "通常は簡潔なラベルと入力例を示し、エラーが起きたときに該当箇所と修正方法を明示する方法が考えられる。",
+      "label": "通常は簡潔なラベルと入力例を示し、エラーが起きたときに該当箇所と修正方法を明示する方法が考えられる。",
+      "references": [
+        "lesson/2026-11-09/immersion/2/2",
+        "lesson/2026-11-09/reading/2/2"
+      ]
+    },
+    {
+      "id": "09ed5a3f5b7b1a33",
+      "text": "すべての状況を一度に説明できないまでも、必要なときに必要な情報へ移動できるようにすることは可能だ。",
+      "label": "すべての状況を一度に説明できないまでも、必要なときに必要な情報へ移動できるようにすることは可能だ。",
+      "references": [
+        "lesson/2026-11-09/immersion/2/3",
+        "lesson/2026-11-09/reading/2/3"
+      ]
+    },
+    {
+      "id": "47a02de8b20c14ac",
+      "text": "情報が多いことと、情報にたどり着きやすいこととは同じではない。",
+      "label": "情報が多いことと、情報にたどり着きやすいこととは同じではない。",
+      "references": [
+        "lesson/2026-11-09/immersion/2/4",
+        "lesson/2026-11-09/reading/2/4"
+      ]
+    },
+    {
+      "id": "8448787d34e61411",
+      "text": "また、操作の結果を伝える方法にも注意がいる。",
+      "label": "また、操作の結果を伝える方法にも注意がいる。",
+      "references": [
+        "lesson/2026-11-09/immersion/3/0",
+        "lesson/2026-11-09/reading/3/0"
+      ]
+    },
+    {
+      "id": "e8a0fc1b93d29def",
+      "text": "送信ボタンの色が変わったとしても、通信が完了したのか、入力内容が保存されたのか、審査が終わったのかは、それだけでは分からない。",
+      "label": "送信ボタンの色が変わったとしても、通信が完了したのか、入力内容が保存されたのか、審査が終わったのかは、それだけでは分からない。",
+      "references": [
+        "lesson/2026-11-09/immersion/3/1",
+        "lesson/2026-11-09/reading/3/1"
+      ]
+    },
+    {
+      "id": "3523b28761cec60b",
+      "text": "利用者が同じ操作を繰り返した結果、重複した申請が作られるおそれもある。「",
+      "label": "利用者が同じ操作を繰り返した結果、重複した申請が作られるおそれもある。「",
+      "references": [
+        "lesson/2026-11-09/immersion/3/2",
+        "lesson/2026-11-09/reading/3/2"
+      ]
+    },
+    {
+      "id": "85cd358bacbfc0e7",
+      "text": "送信中」「受付完了」「確認が必要」といった段階を区別し、どこまで処理が進んだのかを明確に示す必要がある。",
+      "label": "送信中」「受付完了」「確認が必要」といった段階を区別し、どこまで処理が進んだのかを明確に示す必要がある。",
+      "references": [
+        "lesson/2026-11-09/immersion/3/3",
+        "lesson/2026-11-09/reading/3/3"
+      ]
+    },
+    {
+      "id": "58b8c96a5d09b566",
+      "text": "成功を知らせる表示であっても、システムが確認できていない結果まで断定してしまえば、かえって誤解を招きかねない。",
+      "label": "成功を知らせる表示であっても、システムが確認できていない結果まで断定してしまえば、かえって誤解を招きかねない。",
+      "references": [
+        "lesson/2026-11-09/immersion/3/4",
+        "lesson/2026-11-09/reading/3/4"
+      ]
+    },
+    {
+      "id": "694cfe950b8c5f09",
+      "text": "さらに、アクセシビリティの検証は、色の組み合わせを一度機械的に調べれば終わるものではない。",
+      "label": "さらに、アクセシビリティの検証は、色の組み合わせを一度機械的に調べれば終わるものではない。",
+      "references": [
+        "lesson/2026-11-09/immersion/4/0",
+        "lesson/2026-11-09/reading/4/0"
+      ]
+    },
+    {
+      "id": "83c6b7ecbf3951b0",
+      "text": "キーボードだけで目的の項目へ移動できるか、エラーが音声で正しく説明されるか、入力内容を確認して修正できるかなど、実際の操作の流れを確かめる必要がある。",
+      "label": "キーボードだけで目的の項目へ移動できるか、エラーが音声で正しく説明されるか、入力内容を確認して修正できるかなど、実際の操作の流れを確かめる必要がある。",
+      "references": [
+        "lesson/2026-11-09/immersion/4/1",
+        "lesson/2026-11-09/reading/4/1"
+      ]
+    },
+    {
+      "id": "4f7543d6e0a0b052",
+      "text": "もちろん、限られた時間であらゆる利用状況を再現することは難しい。",
+      "label": "もちろん、限られた時間であらゆる利用状況を再現することは難しい。",
+      "references": [
+        "lesson/2026-11-09/immersion/4/2",
+        "lesson/2026-11-09/reading/4/2"
+      ]
+    },
+    {
+      "id": "3b507b2091c8ce4c",
+      "text": "だからこそ、確認した操作、未確認の条件、残る課題を区別し、改善を継続できるように記録しておくべきだろう。",
+      "label": "だからこそ、確認した操作、未確認の条件、残る課題を区別し、改善を継続できるように記録しておくべきだろう。",
+      "references": [
+        "lesson/2026-11-09/immersion/4/3",
+        "lesson/2026-11-09/reading/4/3"
+      ]
+    },
+    {
+      "id": "fd765105186410c9",
+      "text": "結局のところ、誰もが使える画面を目指すとは、すべての利用者に全く同じ見た目を押し付けることではない。",
+      "label": "結局のところ、誰もが使える画面を目指すとは、すべての利用者に全く同じ見た目を押し付けることではない。",
+      "references": [
+        "lesson/2026-11-09/immersion/5/0",
+        "lesson/2026-11-09/reading/5/0"
+      ]
+    },
+    {
+      "id": "52896f0028df8c74",
+      "text": "目的の情報を理解し、操作し、結果を確かめられる複数の道筋を用意することである。",
+      "label": "目的の情報を理解し、操作し、結果を確かめられる複数の道筋を用意することである。",
+      "references": [
+        "lesson/2026-11-09/immersion/5/1",
+        "lesson/2026-11-09/reading/5/1"
+      ]
+    },
+    {
+      "id": "b3e5d67f74951cf3",
+      "text": "見た目の分かりやすさと、実際に使えることの違いを意識してこそ、技術を利用者のために役立てられるのである。",
+      "label": "見た目の分かりやすさと、実際に使えることの違いを意識してこそ、技術を利用者のために役立てられるのである。",
+      "references": [
+        "lesson/2026-11-09/immersion/5/2",
+        "lesson/2026-11-09/reading/5/2"
+      ]
+    },
+    {
+      "id": "ef3d82acb44fdc40",
+      "text": "色を目立たせれば、文字による説明はすべて不要になる。",
+      "label": "色を目立たせれば、文字による説明はすべて不要になる。",
+      "references": [
+        "lesson/2026-11-09/option/0/0"
+      ]
+    },
+    {
+      "id": "f07de6489c488fb4",
+      "text": "できる限り多くの注意書きを最初から表示すれば、誰でも必ず使いやすくなる。",
+      "label": "できる限り多くの注意書きを最初から表示すれば、誰でも必ず使いやすくなる。",
+      "references": [
+        "lesson/2026-11-09/option/1/0"
+      ]
+    },
+    {
+      "id": "f4295e4fa681709b",
+      "text": "利用者が情報を理解し、操作の状態と結果を確かめられる複数の手段を備えるべきだ。",
+      "label": "利用者が情報を理解し、操作の状態と結果を確かめられる複数の手段を備えるべきだ。",
+      "references": [
+        "lesson/2026-11-09/option/2/0"
+      ]
+    },
+    {
+      "id": "c953b4bb4e227357",
+      "text": "すべての環境を完全に検証できない限り、フォームを開発するべきではない。",
+      "label": "すべての環境を完全に検証できない限り、フォームを開発するべきではない。",
+      "references": [
+        "lesson/2026-11-09/option/3/0"
+      ]
+    },
+    {
+      "id": "bd62111b610d8acf",
+      "text": "ポートが空く",
+      "label": "ポートが空く",
+      "references": [
+        "lesson/2026-11-09/vocabulary/2026-11-09-v-7ccc292d3df1/collocation/0"
+      ]
+    },
+    {
+      "id": "c38a3e3f49e8149b",
+      "text": "席が空く",
+      "label": "席が空く",
+      "references": [
+        "lesson/2026-11-09/vocabulary/2026-11-09-v-7ccc292d3df1/collocation/1"
+      ]
+    },
+    {
+      "id": "dda511a5406bd779",
+      "text": "時間が空く",
+      "label": "時間が空く",
+      "references": [
+        "lesson/2026-11-09/vocabulary/2026-11-09-v-7ccc292d3df1/collocation/2"
+      ]
+    },
+    {
+      "id": "aac88e7f37890c8b",
+      "text": "ログに残る",
+      "label": "ログに残る",
+      "references": [
+        "lesson/2026-11-09/vocabulary/2026-11-09-v-f084307cc216/collocation/0"
+      ]
+    },
+    {
+      "id": "116fb79f1060e81b",
+      "text": "出典が残る",
+      "label": "出典が残る",
+      "references": [
+        "lesson/2026-11-09/vocabulary/2026-11-09-v-f084307cc216/collocation/1"
+      ]
+    },
+    {
+      "id": "16152d2f7d10411b",
+      "text": "記録が残る",
+      "label": "記録が残る",
+      "references": [
+        "lesson/2026-11-09/vocabulary/2026-11-09-v-f084307cc216/collocation/2"
+      ]
+    },
+    {
+      "id": "ea84ac8624b2b8d2",
+      "text": "読む価値: ブランチを分けるだけでは見えない共有資源を列挙し、履歴から検証できる範囲を決められます。",
+      "label": "読む価値: ブランチを分けるだけでは見えない共有資源を列挙し、履歴から検証できる範囲を決められます。",
+      "references": [
+        "lesson/2026-11-09/vocabulary/2026-11-09-v-study-a47c5cf6/evidence/0",
+        "lesson/2026-11-09/grammar/2026-11-09-g-study-48e1043d/evidence/0"
+      ]
+    },
+    {
+      "id": "142b0242a06ff56e",
+      "text": "ただし比較は五問を各条件で一回ずつ試したもので、精度や費用を一般化できる測定ではありません。",
+      "label": "ただし比較は五問を各条件で一回ずつ試したもので、精度や費用を一般化できる測定ではありません。",
+      "references": [
+        "lesson/2026-11-09/vocabulary/2026-11-09-v-study-73083d1e/evidence/0"
+      ]
+    },
+    {
+      "id": "f2ec5d0899802294",
+      "text": "著者のclaude-bulkheadはClaude CodeのPreToolUseフックで、シェルの実行前に構文を読みます。",
+      "label": "著者のclaude-bulkheadはClaude CodeのPreToolUseフックで、シェルの実行前に構文を読みます。",
+      "references": [
+        "lesson/2026-11-09/vocabulary/2026-11-09-v-study-d898be90/evidence/0"
+      ]
+    },
+    {
+      "id": "1543dcab2f4b8c2f",
+      "text": "読む価値: 同じ接続結果でも、ルール評価とログの見え方は変わります。",
+      "label": "読む価値: 同じ接続結果でも、ルール評価とログの見え方は変わります。",
+      "references": [
+        "lesson/2026-11-09/vocabulary/2026-11-09-v-study-66614293/evidence/0"
+      ]
+    },
+    {
+      "id": "da6846ac71d7fc38",
+      "text": "回帰テストを作るなら、消すべき短文と保存したい箇条書きを両方含め、文字数だけでは区別しにくい例を確認します。",
+      "label": "回帰テストを作るなら、消すべき短文と保存したい箇条書きを両方含め、文字数だけでは区別しにくい例を確認します。",
+      "references": [
+        "lesson/2026-11-09/vocabulary/2026-11-09-v-study-7deda27e/evidence/0"
+      ]
+    },
+    {
+      "id": "14b24991da0ae28d",
+      "text": "少数の試行で見た差なので、運用では取得時間をそろえ、クライアントの結果とログを一緒に確かめます。",
+      "label": "少数の試行で見た差なので、運用では取得時間をそろえ、クライアントの結果とログを一緒に確かめます。",
+      "references": [
+        "lesson/2026-11-09/vocabulary/2026-11-09-v-study-966a7d9e/evidence/0"
+      ]
+    },
+    {
+      "id": "49b30010c3c93e94",
+      "text": "ログを再生した判定には、当時の記録から再構成できる状態だけを含めます。",
+      "label": "ログを再生した判定には、当時の記録から再構成できる状態だけを含めます。",
+      "references": [
+        "lesson/2026-11-09/vocabulary/2026-11-09-v-study-d20f029e/evidence/1"
+      ]
+    },
+    {
+      "id": "cd6ac4c9e32a66ad",
+      "text": "Gatewayに接続すると、HarnessなどからMCPツールとして使えます。",
+      "label": "Gatewayに接続すると、HarnessなどからMCPツールとして使えます。",
+      "references": [
+        "lesson/2026-11-09/vocabulary/2026-11-09-v-study-72cf604e/evidence/0"
+      ]
+    },
+    {
+      "id": "80aaaf82d530573e",
+      "text": "短い取得窓で見えない記録は、未生成と区別し、配信後も追います。",
+      "label": "短い取得窓で見えない記録は、未生成と区別し、配信後も追います。",
+      "references": [
+        "lesson/2026-11-09/vocabulary/2026-11-09-v-study-41640d3b/evidence/1"
+      ]
+    },
+    {
+      "id": "f4bf3cb57fdb54b9",
+      "text": "Modelを指定する",
+      "label": "Modelを指定する",
+      "references": [
+        "lesson/2026-11-09/vocabulary/2026-11-09-v-study-a6d41e4d/collocation/0",
+        "lesson/2026-11-08/vocabulary/2026-11-08-v-study-a6d41e4d/collocation/0",
+        "lesson/2026-11-07/vocabulary/2026-11-07-v-study-a6d41e4d/collocation/0"
+      ]
+    },
+    {
+      "id": "6f086e39d821ad95",
+      "text": "条件を指定する",
+      "label": "条件を指定する",
+      "references": [
+        "lesson/2026-11-09/vocabulary/2026-11-09-v-study-a6d41e4d/collocation/1",
+        "lesson/2026-11-08/vocabulary/2026-11-08-v-study-a6d41e4d/collocation/1",
+        "lesson/2026-11-07/vocabulary/2026-11-07-v-study-a6d41e4d/collocation/1"
+      ]
+    },
+    {
+      "id": "732d13499705c875",
+      "text": "Defaultを指定する",
+      "label": "Defaultを指定する",
+      "references": [
+        "lesson/2026-11-09/vocabulary/2026-11-09-v-study-a6d41e4d/collocation/2",
+        "lesson/2026-11-08/vocabulary/2026-11-08-v-study-a6d41e4d/collocation/2",
+        "lesson/2026-11-07/vocabulary/2026-11-07-v-study-a6d41e4d/collocation/2"
+      ]
+    },
+    {
+      "id": "6a0189fe4791c20a",
+      "text": "指定20サイトのうち18サイトの入口を確認でき、CodeZineとMercari Engineeringは403でした。",
+      "label": "指定20サイトのうち18サイトの入口を確認でき、CodeZineとMercari Engineeringは403でした。",
+      "references": [
+        "lesson/2026-11-09/vocabulary/2026-11-09-v-study-a6d41e4d/evidence/0",
+        "lesson/2026-11-08/vocabulary/2026-11-08-v-study-a6d41e4d/evidence/0"
+      ]
+    },
+    {
+      "id": "9dd447ad22286bc9",
+      "text": "kilnでは六文字未満の行がそのまま残り、階層と正規化した文字列をSetに入れる処理まで届きません。",
+      "label": "kilnでは六文字未満の行がそのまま残り、階層と正規化した文字列をSetに入れる処理まで届きません。",
+      "references": [
+        "lesson/2026-11-09/vocabulary/2026-11-09-v-study-81a12579/evidence/0"
+      ]
+    },
+    {
+      "id": "6760e6f8db6a957c",
+      "text": "ログのLogs Insights、トレースのApplication Signalsは別経路です。",
+      "label": "ログのLogs Insights、トレースのApplication Signalsは別経路です。",
+      "references": [
+        "lesson/2026-11-09/vocabulary/2026-11-09-v-study-85ada38e/evidence/0"
+      ]
+    },
+    {
+      "id": "90b86cc4582339a8",
+      "text": "順序を固定する",
+      "label": "順序を固定する",
+      "references": [
+        "lesson/2026-11-09/vocabulary/2026-11-09-v-study-9541792b/collocation/0",
+        "lesson/2026-11-07/vocabulary/2026-11-07-v-study-9541792b/collocation/0"
+      ]
+    },
+    {
+      "id": "63f079777d4c9bf3",
+      "text": "値を固定する",
+      "label": "値を固定する",
+      "references": [
+        "lesson/2026-11-09/vocabulary/2026-11-09-v-study-9541792b/collocation/1",
+        "lesson/2026-11-07/vocabulary/2026-11-07-v-study-9541792b/collocation/1"
+      ]
+    },
+    {
+      "id": "d9027f229a655d66",
+      "text": "経路を固定する",
+      "label": "経路を固定する",
+      "references": [
+        "lesson/2026-11-09/vocabulary/2026-11-09-v-study-9541792b/collocation/2",
+        "lesson/2026-11-07/vocabulary/2026-11-07-v-study-9541792b/collocation/2"
+      ]
+    },
+    {
+      "id": "79b0e9646e327ff8",
+      "text": "CloudWatch用データソースをメトリクスの監視エンドポイントに固定すると、記事の環境ではログのDescribeLogGroupsが404になりました。",
+      "label": "CloudWatch用データソースをメトリクスの監視エンドポイントに固定すると、記事の環境ではログのDescribeLogGroupsが404になりました。",
+      "references": [
+        "lesson/2026-11-09/vocabulary/2026-11-09-v-study-9541792b/evidence/0"
+      ]
+    },
+    {
+      "id": "f95b56d09a48bb34",
+      "text": "また、全言語で下限を下げると、英語文書で残したい短い記号列にも影響します。",
+      "label": "また、全言語で下限を下げると、英語文書で残したい短い記号列にも影響します。",
+      "references": [
+        "lesson/2026-11-09/vocabulary/2026-11-09-v-study-1fd90659/evidence/0"
+      ]
+    },
+    {
+      "id": "553fbe6e09918692",
+      "text": "ただし取得は約七十五秒後なので、見えないHTTPのログも、配信を待って確かめる必要があります。",
+      "label": "ただし取得は約七十五秒後なので、見えないHTTPのログも、配信を待って確かめる必要があります。",
+      "references": [
+        "lesson/2026-11-09/vocabulary/2026-11-09-v-study-15e3c6b7/evidence/0"
+      ]
+    },
+    {
+      "id": "9275a684ade22d80",
+      "text": "条件を明示する",
+      "label": "条件を明示する",
+      "references": [
+        "lesson/2026-11-09/vocabulary/2026-11-09-v-study-14dfabea/collocation/0",
+        "lesson/2026-11-07/vocabulary/2026-11-07-v-study-14dfabea/collocation/0"
+      ]
+    },
+    {
+      "id": "f94813a8b7cddfdc",
+      "text": "禁止事項を明示する",
+      "label": "禁止事項を明示する",
+      "references": [
+        "lesson/2026-11-09/vocabulary/2026-11-09-v-study-14dfabea/collocation/1",
+        "lesson/2026-11-07/vocabulary/2026-11-07-v-study-14dfabea/collocation/1"
+      ]
+    },
+    {
+      "id": "f5a3a33a01eeef2e",
+      "text": "責任を明示する",
+      "label": "責任を明示する",
+      "references": [
+        "lesson/2026-11-09/vocabulary/2026-11-09-v-study-14dfabea/collocation/2",
+        "lesson/2026-11-07/vocabulary/2026-11-07-v-study-14dfabea/collocation/2"
+      ]
+    },
+    {
+      "id": "bad4ac82f3556626",
+      "text": "厳格な順序の暗黙の拒否を想定せず、確立後に何を落とすかを明示します。",
+      "label": "厳格な順序の暗黙の拒否を想定せず、確立後に何を落とすかを明示します。",
+      "references": [
+        "lesson/2026-11-09/vocabulary/2026-11-09-v-study-14dfabea/evidence/1"
+      ]
+    },
+    {
+      "id": "e3315112b39cd3ae",
+      "text": "結果を再現する",
+      "label": "結果を再現する",
+      "references": [
+        "lesson/2026-11-09/vocabulary/2026-11-09-v-study-3cbf5e9c/collocation/0"
+      ]
+    },
+    {
+      "id": "5be1544600fcb252",
+      "text": "Bugを再現する",
+      "label": "Bugを再現する",
+      "references": [
+        "lesson/2026-11-09/vocabulary/2026-11-09-v-study-3cbf5e9c/collocation/1"
+      ]
+    },
+    {
+      "id": "730dbce495b52950",
+      "text": "実行経路を再現する",
+      "label": "実行経路を再現する",
+      "references": [
+        "lesson/2026-11-09/vocabulary/2026-11-09-v-study-3cbf5e9c/collocation/2"
+      ]
+    },
+    {
+      "id": "9eee62dd8f948bb9",
+      "text": "条件は、何を再現できるかで決めます。",
+      "label": "条件は、何を再現できるかで決めます。",
+      "references": [
+        "lesson/2026-11-09/vocabulary/2026-11-09-v-study-3cbf5e9c/evidence/0"
+      ]
+    },
+    {
+      "id": "31616ebd693982f1",
+      "text": "合否を判定する",
+      "label": "合否を判定する",
+      "references": [
+        "lesson/2026-11-09/vocabulary/2026-11-09-v-study-ea76b750/collocation/0"
+      ]
+    },
+    {
+      "id": "d3ef1a0e071715e2",
+      "text": "Riskを判定する",
+      "label": "Riskを判定する",
+      "references": [
+        "lesson/2026-11-09/vocabulary/2026-11-09-v-study-ea76b750/collocation/1"
+      ]
+    },
+    {
+      "id": "913e10265b5fbb0a",
+      "text": "品質を判定する",
+      "label": "品質を判定する",
+      "references": [
+        "lesson/2026-11-09/vocabulary/2026-11-09-v-study-ea76b750/collocation/2"
+      ]
+    },
+    {
+      "id": "c07955e42676ef90",
+      "text": "そのため、この二種類の判定は再生から外しました。",
+      "label": "そのため、この二種類の判定は再生から外しました。",
+      "references": [
+        "lesson/2026-11-09/vocabulary/2026-11-09-v-study-ea76b750/evidence/0"
+      ]
+    },
+    {
+      "id": "1539f9b537ff0019",
+      "text": "出典付きのツール出力をもとに書き直すとき、出典が最終回答に残るとは限りません。",
+      "label": "出典付きのツール出力をもとに書き直すとき、出典が最終回答に残るとは限りません。",
+      "references": [
+        "lesson/2026-11-09/grammar/2026-11-09-g-study-ccec99c0/evidence/0",
+        "lesson/2026-11-09/grammar/2026-11-09-g-study-1673b8d8/evidence/0"
+      ]
+    },
+    {
+      "id": "706eaf997e036695",
+      "text": "接続が通ることに加えて、必要な期間を一回の問い合わせで見られるかも確かめます。",
+      "label": "接続が通ることに加えて、必要な期間を一回の問い合わせで見られるかも確かめます。",
+      "references": [
+        "lesson/2026-11-09/grammar/2026-11-09-g-study-2c43f688/evidence/0"
+      ]
+    },
+    {
+      "id": "2305e61f9e8fce43",
+      "text": "言語や混在行に応じた扱いは提案の段階です。",
+      "label": "言語や混在行に応じた扱いは提案の段階です。",
+      "references": [
+        "lesson/2026-11-09/grammar/2026-11-09-g-study-4f13d335/evidence/0"
+      ]
+    },
+    {
+      "id": "be375f9bcd004c6f",
+      "text": "作業ツリーを分けたうえで、実行前のフックでポートやプロセスの所有を確認します。",
+      "label": "作業ツリーを分けたうえで、実行前のフックでポートやプロセスの所有を確認します。",
+      "references": [
+        "lesson/2026-11-09/grammar/2026-11-09-g-study-4b544f6d/evidence/1"
+      ]
+    },
+    {
+      "id": "6f45fb9027c613dc",
+      "text": "出典のリンクを残すだけでなく、公開日と著者を公式の一覧に照らして確かめます。",
+      "label": "出典のリンクを残すだけでなく、公開日と著者を公式の一覧に照らして確かめます。",
+      "references": [
+        "lesson/2026-11-09/grammar/2026-11-09-g-study-61aee9b6/evidence/0"
+      ]
+    },
+    {
+      "id": "8da01bf29a40a5be",
+      "text": "フックは命令を調べるためのもので、他のプロセスから隔離するサンドボックスとは役割が異なります。",
+      "label": "フックは命令を調べるためのもので、他のプロセスから隔離するサンドボックスとは役割が異なります。",
+      "references": [
+        "lesson/2026-11-09/grammar/2026-11-09-g-study-1739e8be/evidence/0"
+      ]
+    },
+    {
+      "id": "f819b782e922d56e",
+      "text": "独立復習1|原Q3の改編",
+      "label": "独立復習1｜原Q3の改編",
+      "references": [
+        "lesson/2026-11-09/review/0/title/0"
+      ]
+    },
+    {
+      "id": "bcfcfd915be5d695",
+      "text": "行政サービスの申請画面を改善する。",
+      "label": "行政サービスの申請画面を改善する。",
+      "references": [
+        "lesson/2026-11-09/review/0/detail/0"
+      ]
+    },
+    {
+      "id": "3d30442edbd7cafa",
+      "text": "「行政」の読みはどれか。",
+      "label": "「行政」の読みはどれか。",
+      "references": [
+        "lesson/2026-11-09/review/0/detail/1"
+      ]
+    },
+    {
+      "id": "ab7f00abc337960f",
+      "text": "1 こうぜい 2 ぎょうせい 3 こうせい 4 ぎょうぜい",
+      "label": "① こうぜい　② ぎょうせい　③ こうせい　④ ぎょうぜい",
+      "references": [
+        "lesson/2026-11-09/review/0/detail/2"
+      ]
+    },
+    {
+      "id": "97895cf3cdbc5897",
+      "text": "独立復習2|原Q25の改編",
+      "label": "独立復習2｜原Q25の改編",
+      "references": [
+        "lesson/2026-11-09/review/1/title/0"
+      ]
+    },
+    {
+      "id": "13a59c633cea0197",
+      "text": "1 季節ごとの制度が目まぐるしく変わり、案内の更新が必要になった。",
+      "label": "① 季節ごとの制度が目まぐるしく変わり、案内の更新が必要になった。",
+      "references": [
+        "lesson/2026-11-09/review/1/detail/1"
+      ]
+    },
+    {
+      "id": "512ff9dda9b4e5b1",
+      "text": "2 目まぐるしい机に書類を置いた。",
+      "label": "② 目まぐるしい机に書類を置いた。",
+      "references": [
+        "lesson/2026-11-09/review/1/detail/2"
+      ]
+    },
+    {
+      "id": "a1195425204c8459",
+      "text": "3 画面を目まぐるしく眠らせた。",
+      "label": "③ 画面を目まぐるしく眠らせた。",
+      "references": [
+        "lesson/2026-11-09/review/1/detail/3"
+      ]
+    },
+    {
+      "id": "9f9ee4afcd018bd3",
+      "text": "4 この説明は目まぐるしく正確だ。",
+      "label": "④ この説明は目まぐるしく正確だ。",
+      "references": [
+        "lesson/2026-11-09/review/1/detail/4"
+      ]
+    },
+    {
+      "id": "53e0005853080a5c",
+      "text": "独立復習3|原Q29の改編",
+      "label": "独立復習3｜原Q29の改編",
+      "references": [
+        "lesson/2026-11-09/review/2/title/0"
+      ]
+    },
+    {
+      "id": "e75258d7e3d5e123",
+      "text": "この画面を誰にとっても利用しやすいもの( )、さまざまな操作方法での検証が必要だ。",
+      "label": "この画面を誰にとっても利用しやすいもの（　）、さまざまな操作方法での検証が必要だ。",
+      "references": [
+        "lesson/2026-11-09/review/2/detail/0"
+      ]
+    },
+    {
+      "id": "ae18a2cbf69f9297",
+      "text": "独立復習4|原Q41の改編",
+      "label": "独立復習4｜原Q41の改編",
+      "references": [
+        "lesson/2026-11-09/review/3/title/0"
+      ]
+    },
+    {
+      "id": "c4716e54bee8c380",
+      "text": "表示だけでなく音声でも案内するのは、利用者によって情報の受け取り方が異なる( )。",
+      "label": "表示だけでなく音声でも案内するのは、利用者によって情報の受け取り方が異なる（　）。",
+      "references": [
+        "lesson/2026-11-09/review/3/detail/0"
+      ]
+    },
+    {
+      "id": "5b8a8e4587027c81",
+      "text": "1 せいだとします 2 ことにもあります 3 ときだといえます 4 からでもあります",
+      "label": "① せいだとします　② ことにもあります　③ ときだといえます　④ からでもあります",
+      "references": [
+        "lesson/2026-11-09/review/3/detail/1"
+      ]
+    },
+    {
+      "id": "233d0372066f0d06",
+      "text": "独立復習5|原Q61の改編",
+      "label": "独立復習5｜原Q61の改編",
+      "references": [
+        "lesson/2026-11-09/review/4/title/0"
+      ]
+    },
+    {
+      "id": "4baa29610816a295",
+      "text": "文章A(原创): 仕事を進める際、周囲の人が決めた「理想的な方法」に無理に合わせる必要はない。",
+      "label": "文章A（原创）： 仕事を進める際、周囲の人が決めた「理想的な方法」に無理に合わせる必要はない。",
+      "references": [
+        "lesson/2026-11-09/review/4/detail/0"
+      ]
+    },
+    {
+      "id": "b7092919c9f6fcdd",
+      "text": "何を重視するかを自分で考え、できる範囲を選ぶことが大切だ。",
+      "label": "何を重視するかを自分で考え、できる範囲を選ぶことが大切だ。",
+      "references": [
+        "lesson/2026-11-09/review/4/detail/1"
+      ]
+    },
+    {
+      "id": "c456ff4ca3e90098",
+      "text": "文章B(原创): 同じ一日でも、どの活動に時間を使いたいかは人によって異なる。",
+      "label": "文章B（原创）： 同じ一日でも、どの活動に時間を使いたいかは人によって異なる。",
+      "references": [
+        "lesson/2026-11-09/review/4/detail/2"
+      ]
+    },
+    {
+      "id": "c3b5e8f3b4150377",
+      "text": "他人の優先順位をそのまま自分の基準にするより、まず自分が大切にしたいものを確かめたい。",
+      "label": "他人の優先順位をそのまま自分の基準にするより、まず自分が大切にしたいものを確かめたい。",
+      "references": [
+        "lesson/2026-11-09/review/4/detail/3"
+      ]
+    },
+    {
+      "id": "8fc3611011222d44",
+      "text": "1 他人の価値観は必ず誤っている。",
+      "label": "① 他人の価値観は必ず誤っている。",
+      "references": [
+        "lesson/2026-11-09/review/4/detail/5"
+      ]
+    },
+    {
+      "id": "9726789e4bd21e72",
+      "text": "2 生活や仕事で何を重視するかは、自分で判断することが大切だ。",
+      "label": "② 生活や仕事で何を重視するかは、自分で判断することが大切だ。",
+      "references": [
+        "lesson/2026-11-09/review/4/detail/6"
+      ]
+    },
+    {
+      "id": "524e6ab2d45b24c6",
+      "text": "3 自分の基準も捨て、周囲に一切合わせない方がよい。",
+      "label": "③ 自分の基準も捨て、周囲に一切合わせない方がよい。",
+      "references": [
+        "lesson/2026-11-09/review/4/detail/7"
+      ]
+    },
+    {
+      "id": "14e9cb81c50128bd",
+      "text": "4 時間のかかる活動はすべて無駄である。",
+      "label": "④ 時間のかかる活動はすべて無駄である。",
+      "references": [
+        "lesson/2026-11-09/review/4/detail/8"
+      ]
+    },
     {
       "id": "7280a1cae1c820ee",
       "text": "文字になった声を、どう確かめるか",
@@ -438,41 +1283,6 @@
       "references": [
         "lesson/2026-11-08/vocabulary/2026-11-08-v-study-ae31608c/evidence/0",
         "lesson/2026-11-08/grammar/2026-11-08-g-study-48e1043d/evidence/0"
-      ]
-    },
-    {
-      "id": "f4bf3cb57fdb54b9",
-      "text": "Modelを指定する",
-      "label": "Modelを指定する",
-      "references": [
-        "lesson/2026-11-08/vocabulary/2026-11-08-v-study-a6d41e4d/collocation/0",
-        "lesson/2026-11-07/vocabulary/2026-11-07-v-study-a6d41e4d/collocation/0"
-      ]
-    },
-    {
-      "id": "6f086e39d821ad95",
-      "text": "条件を指定する",
-      "label": "条件を指定する",
-      "references": [
-        "lesson/2026-11-08/vocabulary/2026-11-08-v-study-a6d41e4d/collocation/1",
-        "lesson/2026-11-07/vocabulary/2026-11-07-v-study-a6d41e4d/collocation/1"
-      ]
-    },
-    {
-      "id": "732d13499705c875",
-      "text": "Defaultを指定する",
-      "label": "Defaultを指定する",
-      "references": [
-        "lesson/2026-11-08/vocabulary/2026-11-08-v-study-a6d41e4d/collocation/2",
-        "lesson/2026-11-07/vocabulary/2026-11-07-v-study-a6d41e4d/collocation/2"
-      ]
-    },
-    {
-      "id": "6a0189fe4791c20a",
-      "text": "指定20サイトのうち18サイトの入口を確認でき、CodeZineとMercari Engineeringは403でした。",
-      "label": "指定20サイトのうち18サイトの入口を確認でき、CodeZineとMercari Engineeringは403でした。",
-      "references": [
-        "lesson/2026-11-08/vocabulary/2026-11-08-v-study-a6d41e4d/evidence/0"
       ]
     },
     {
@@ -1093,30 +1903,6 @@
       ]
     },
     {
-      "id": "90b86cc4582339a8",
-      "text": "順序を固定する",
-      "label": "順序を固定する",
-      "references": [
-        "lesson/2026-11-07/vocabulary/2026-11-07-v-study-9541792b/collocation/0"
-      ]
-    },
-    {
-      "id": "63f079777d4c9bf3",
-      "text": "値を固定する",
-      "label": "値を固定する",
-      "references": [
-        "lesson/2026-11-07/vocabulary/2026-11-07-v-study-9541792b/collocation/1"
-      ]
-    },
-    {
-      "id": "d9027f229a655d66",
-      "text": "経路を固定する",
-      "label": "経路を固定する",
-      "references": [
-        "lesson/2026-11-07/vocabulary/2026-11-07-v-study-9541792b/collocation/2"
-      ]
-    },
-    {
       "id": "72f79638157239b4",
       "text": "そこで、渡す相手が異なる知識は別のプロジェクトに置き、検索ツールには検索語と件数だけを渡させ、検索範囲はワーカー側で固定しました。",
       "label": "そこで、渡す相手が異なる知識は別のプロジェクトに置き、検索ツールには検索語と件数だけを渡させ、検索範囲はワーカー側で固定しました。",
@@ -1130,30 +1916,6 @@
       "label": "> 私は互換性と、書き込みの影響を確認します。",
       "references": [
         "lesson/2026-11-07/vocabulary/2026-11-07-v-study-1fd90659/evidence/0"
-      ]
-    },
-    {
-      "id": "9275a684ade22d80",
-      "text": "条件を明示する",
-      "label": "条件を明示する",
-      "references": [
-        "lesson/2026-11-07/vocabulary/2026-11-07-v-study-14dfabea/collocation/0"
-      ]
-    },
-    {
-      "id": "f94813a8b7cddfdc",
-      "text": "禁止事項を明示する",
-      "label": "禁止事項を明示する",
-      "references": [
-        "lesson/2026-11-07/vocabulary/2026-11-07-v-study-14dfabea/collocation/1"
-      ]
-    },
-    {
-      "id": "f5a3a33a01eeef2e",
-      "text": "責任を明示する",
-      "label": "責任を明示する",
-      "references": [
-        "lesson/2026-11-07/vocabulary/2026-11-07-v-study-14dfabea/collocation/2"
       ]
     },
     {
