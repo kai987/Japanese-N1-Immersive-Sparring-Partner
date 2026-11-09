@@ -10,8 +10,761 @@
     "sampleRate": 24000,
     "codec": "mp3-64k"
   },
-  "requiredClips": 8291,
-  "pendingClips": 0,
+  "requiredClips": 8385,
+  "pendingClips": 94,
   "incompleteLessonDates": [],
-  "entries": []
+  "entries": [
+    {
+      "id": "63a4d7c37f8a4e27",
+      "text": "ものがおちる",
+      "label": "物が落ちる",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-lost-property/entry/live-2026-11-09-entry-thing-falls"
+      ]
+    },
+    {
+      "id": "f5d22756e506fbf2",
+      "text": "ものをおとす",
+      "label": "物を落とす",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-lost-property/entry/live-2026-11-09-entry-drop-something"
+      ]
+    },
+    {
+      "id": "df83a53e16be3582",
+      "text": "ふんしつする",
+      "label": "紛失する",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-lost-property/entry/live-2026-11-09-entry-lose"
+      ]
+    },
+    {
+      "id": "f7b87a94738de978",
+      "text": "カムバック",
+      "label": "カムバック",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-lost-property/entry/live-2026-11-09-entry-comeback"
+      ]
+    },
+    {
+      "id": "3305d2116e7ffc7d",
+      "text": "スプレー",
+      "label": "スプレー",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-lost-property/entry/live-2026-11-09-entry-spray"
+      ]
+    },
+    {
+      "id": "1cc4ff22eb522ece",
+      "text": "ついにせいこうした",
+      "label": "ついに成功した",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-lost-property/entry/live-2026-11-09-entry-finally-succeeded"
+      ]
+    },
+    {
+      "id": "14780fced9c43d2a",
+      "text": "ポケットから鍵が落ちた。",
+      "label": "ポケットから鍵が落ちた。",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-lost-property/example/live-2026-11-09-example-key-falls/0"
+      ]
+    },
+    {
+      "id": "8a6547f610483162",
+      "text": "駅でスマホを落としてしまった。",
+      "label": "駅でスマホを落としてしまった。",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-lost-property/example/live-2026-11-09-example-drop-phone/0"
+      ]
+    },
+    {
+      "id": "f329924a2f9096ee",
+      "text": "学生証を紛失した場合は、事務室に連絡してください。",
+      "label": "学生証を紛失した場合は、事務室に連絡してください。",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-lost-property/example/live-2026-11-09-example-lost-pass/0"
+      ]
+    },
+    {
+      "id": "1b175bfa1a841a66",
+      "text": "何度も試して、ついに成功した。",
+      "label": "何度も試して、ついに成功した。",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-lost-property/example/live-2026-11-09-example-finally-works/0"
+      ]
+    },
+    {
+      "id": "a5822313ac83a94f",
+      "text": "ひとりのこらず",
+      "label": "一人残らず",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-none-left/entry/live-2026-11-09-entry-everyone"
+      ]
+    },
+    {
+      "id": "f0089a676fe531eb",
+      "text": "いっぴきのこらず",
+      "label": "一匹残らず",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-none-left/entry/live-2026-11-09-entry-every-animal"
+      ]
+    },
+    {
+      "id": "e6b3147994521345",
+      "text": "ゴミあつめにだす",
+      "label": "ゴミ集めに出す",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-none-left/entry/live-2026-11-09-entry-put-out-trash"
+      ]
+    },
+    {
+      "id": "42be89009a3aa65c",
+      "text": "参加者は一人残らず建物の外に出た。",
+      "label": "参加者は一人残らず建物の外に出た。",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-none-left/example/live-2026-11-09-example-everyone-evacuated/0"
+      ]
+    },
+    {
+      "id": "725f7d68e266e73c",
+      "text": "子猫は一匹残らず保護された。",
+      "label": "子猫は一匹残らず保護された。",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-none-left/example/live-2026-11-09-example-all-kittens/0"
+      ]
+    },
+    {
+      "id": "bee9ae16bdcfb22a",
+      "text": "燃えるごみは火曜日の朝に出してください。",
+      "label": "燃えるごみは火曜日の朝に出してください。",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-none-left/example/live-2026-11-09-example-trash-day/0"
+      ]
+    },
+    {
+      "id": "d06c6ff00113b80c",
+      "text": "むちゃなことをいう",
+      "label": "無茶なことを言う",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-concession/entry/live-2026-11-09-entry-unreasonable"
+      ]
+    },
+    {
+      "id": "4439608bff734de7",
+      "text": "いくらても",
+      "label": "いくら～ても",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-concession/entry/live-2026-11-09-entry-however-much"
+      ]
+    },
+    {
+      "id": "057bc8a6dfc3c8aa",
+      "text": "たとえても",
+      "label": "たとえ～ても",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-concession/entry/live-2026-11-09-entry-even-if"
+      ]
+    },
+    {
+      "id": "22aace2b7055e6e7",
+      "text": "どれだけがんばってもむだだよ",
+      "label": "どれだけ頑張っても無駄だよ",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-concession/entry/live-2026-11-09-entry-effort-in-vain"
+      ]
+    },
+    {
+      "id": "ddcd78ffc42c662b",
+      "text": "ずばり",
+      "label": "ずばり",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-concession/entry/live-2026-11-09-entry-straight-to-point"
+      ]
+    },
+    {
+      "id": "d6576ba54a95d199",
+      "text": "引き出しの中をいくら探しても、見つからなかった。",
+      "label": "引き出しの中をいくら探しても、見つからなかった。",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-concession/example/live-2026-11-09-example-search-in-vain/0"
+      ]
+    },
+    {
+      "id": "837df3574289663b",
+      "text": "たとえ雨が降っても、試合は予定どおり行う。",
+      "label": "たとえ雨が降っても、試合は予定どおり行う。",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-concession/example/live-2026-11-09-example-even-if-rain/0"
+      ]
+    },
+    {
+      "id": "2c90f47dc0378a01",
+      "text": "彼女は問題の原因をずばり言い当てた。",
+      "label": "彼女は問題の原因をずばり言い当てた。",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-concession/example/live-2026-11-09-example-exact-cause/0"
+      ]
+    },
+    {
+      "id": "34c2874fcd5762d3",
+      "text": "いきていくのぞみをうしなう",
+      "label": "生きていく望みを失う",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-hope-and-intention/entry/live-2026-11-09-entry-lose-hope"
+      ]
+    },
+    {
+      "id": "10d358f3ef048a9f",
+      "text": "とおもってた",
+      "label": "と思ってた",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-hope-and-intention/entry/live-2026-11-09-entry-had-thought"
+      ]
+    },
+    {
+      "id": "033dfd391bd4f635",
+      "text": "ふやそうとおもってた",
+      "label": "増やそうと思ってた",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-hope-and-intention/entry/live-2026-11-09-entry-had-planned-to-increase"
+      ]
+    },
+    {
+      "id": "38c99bb7ef8f6883",
+      "text": "もう見つからないと思ってた。",
+      "label": "もう見つからないと思ってた。",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-hope-and-intention/example/live-2026-11-09-example-find-again/0"
+      ]
+    },
+    {
+      "id": "d108acb90c7884a5",
+      "text": "今月は本を読む時間を増やそうと思ってた。",
+      "label": "今月は本を読む時間を増やそうと思ってた。",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-hope-and-intention/example/live-2026-11-09-example-plan-reading/0"
+      ]
+    },
+    {
+      "id": "cd20c6940c004d10",
+      "text": "連絡が途絶えても、再会の望みを失わなかった。",
+      "label": "連絡が途絶えても、再会の望みを失わなかった。",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-hope-and-intention/example/live-2026-11-09-example-keep-hope/0"
+      ]
+    },
+    {
+      "id": "980ca1bf04676a83",
+      "text": "あっさりとしたあじ",
+      "label": "あっさりとした味",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-refusal-and-tone/entry/live-2026-11-09-entry-light-flavor"
+      ]
+    },
+    {
+      "id": "3e2ff2c557298d51",
+      "text": "つめたい",
+      "label": "冷たい",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-refusal-and-tone/entry/live-2026-11-09-entry-cold"
+      ]
+    },
+    {
+      "id": "b2f3ef7fa45f82e3",
+      "text": "よけいなことをする",
+      "label": "余計なことをする",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-refusal-and-tone/entry/live-2026-11-09-entry-meddle"
+      ]
+    },
+    {
+      "id": "9c5ad8fa54db624e",
+      "text": "おおきなおせわだ",
+      "label": "大きなお世話だ",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-refusal-and-tone/entry/live-2026-11-09-entry-none-of-your-business"
+      ]
+    },
+    {
+      "id": "619f0b3aa33aeb46",
+      "text": "誘ってみたけれど、あっさり断られた。",
+      "label": "誘ってみたけれど、あっさり断られた。",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-refusal-and-tone/example/live-2026-11-09-example-invitation-refused/0"
+      ]
+    },
+    {
+      "id": "04edd63c37d2b218",
+      "text": "いらないものはきっぱり断る。",
+      "label": "いらないものはきっぱり断る。",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-refusal-and-tone/example/live-2026-11-09-example-sales-pitch/0"
+      ]
+    },
+    {
+      "id": "78d8db710545dc85",
+      "text": "先約があると伝えて、やんわり断った。",
+      "label": "先約があると伝えて、やんわり断った。",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-refusal-and-tone/example/live-2026-11-09-example-soft-refusal/0"
+      ]
+    },
+    {
+      "id": "017d879717e0131b",
+      "text": "このスープはあっさりとした味で飲みやすい。",
+      "label": "このスープはあっさりとした味で飲みやすい。",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-refusal-and-tone/example/live-2026-11-09-example-light-soup/0"
+      ]
+    },
+    {
+      "id": "eb9b6a0aa805230e",
+      "text": "だいぶこたえる",
+      "label": "だいぶ応える",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-respond-and-prepare/entry/live-2026-11-09-entry-takes-a-toll"
+      ]
+    },
+    {
+      "id": "81e9c93ac634ce2e",
+      "text": "よびかけにこたえる",
+      "label": "呼びかけに応える",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-respond-and-prepare/entry/live-2026-11-09-entry-answer-a-call"
+      ]
+    },
+    {
+      "id": "dbab72d8ff5af8dc",
+      "text": "もうすぐ",
+      "label": "もうすぐ",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-respond-and-prepare/entry/live-2026-11-09-entry-very-soon"
+      ]
+    },
+    {
+      "id": "cfd2ddc2bfe1255e",
+      "text": "まえもって",
+      "label": "前もって",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-respond-and-prepare/entry/live-2026-11-09-entry-beforehand"
+      ]
+    },
+    {
+      "id": "27404112ee4a88de",
+      "text": "あらかじめ",
+      "label": "あらかじめ",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-respond-and-prepare/entry/live-2026-11-09-entry-in-advance"
+      ]
+    },
+    {
+      "id": "ca3951ef1444d84b",
+      "text": "じぜんに",
+      "label": "事前に",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-respond-and-prepare/entry/live-2026-11-09-entry-before-the-event"
+      ]
+    },
+    {
+      "id": "46edff2ce2c9bf40",
+      "text": "この暑さは体にだいぶこたえる。",
+      "label": "この暑さは体にだいぶこたえる。",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-respond-and-prepare/example/live-2026-11-09-example-heat-takes-toll/0"
+      ]
+    },
+    {
+      "id": "45ffb6b864b63144",
+      "text": "地域の呼びかけに応えて、清掃活動に参加した。",
+      "label": "地域の呼びかけに応えて、清掃活動に参加した。",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-respond-and-prepare/example/live-2026-11-09-example-respond-to-request/0"
+      ]
+    },
+    {
+      "id": "73d1b39f76886d8b",
+      "text": "発表は来週だけど、資料は前もって配っておく。",
+      "label": "発表は来週だけど、資料は前もって配っておく。",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-respond-and-prepare/example/live-2026-11-09-example-prepare-in-advance/0"
+      ]
+    },
+    {
+      "id": "7e853e291a00e8f5",
+      "text": "ためしによんでみる",
+      "label": "試しに読んでみる",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-te-form/entry/live-2026-11-09-entry-try-reading"
+      ]
+    },
+    {
+      "id": "0251aa63a95476a7",
+      "text": "てみる",
+      "label": "～てみる",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-te-form/entry/live-2026-11-09-entry-try-doing"
+      ]
+    },
+    {
+      "id": "c25e11963f6043a2",
+      "text": "てある",
+      "label": "～てある",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-te-form/entry/live-2026-11-09-entry-prepared-state"
+      ]
+    },
+    {
+      "id": "7f78cbb6e59f367a",
+      "text": "てしまう",
+      "label": "～てしまう",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-te-form/entry/live-2026-11-09-entry-finish-doing"
+      ]
+    },
+    {
+      "id": "d9bad4db837071b7",
+      "text": "かならず",
+      "label": "かならず",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-te-form/entry/live-2026-11-09-entry-without-fail"
+      ]
+    },
+    {
+      "id": "597f6962c73dbb5e",
+      "text": "まず一ページだけ読んでみよう。",
+      "label": "まず一ページだけ読んでみよう。",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-te-form/example/live-2026-11-09-example-first-page/0"
+      ]
+    },
+    {
+      "id": "32ac41e29c58b18e",
+      "text": "暑くなる前に窓を開けておく。",
+      "label": "暑くなる前に窓を開けておく。",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-te-form/example/live-2026-11-09-example-open-window-in-advance/0"
+      ]
+    },
+    {
+      "id": "193af6baa7e46bbe",
+      "text": "換気のために窓が開けてある。",
+      "label": "換気のために窓が開けてある。",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-te-form/example/live-2026-11-09-example-window-already-open/0"
+      ]
+    },
+    {
+      "id": "f608a2c36c48f4bf",
+      "text": "出かける前にかならず確認するのに、今日は鍵を忘れてしまった。",
+      "label": "出かける前にかならず確認するのに、今日は鍵を忘れてしまった。",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-te-form/example/live-2026-11-09-example-forget-the-key/0"
+      ]
+    },
+    {
+      "id": "7c56d57d40aac489",
+      "text": "もちぬし",
+      "label": "持ち主",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-owners-and-gratitude/entry/live-2026-11-09-entry-property-owner"
+      ]
+    },
+    {
+      "id": "f860e7371f43ddd3",
+      "text": "かいぬし",
+      "label": "飼い主",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-owners-and-gratitude/entry/live-2026-11-09-entry-pet-owner"
+      ]
+    },
+    {
+      "id": "d6b58c26fcd7a502",
+      "text": "じゅんいせい",
+      "label": "順位制",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-owners-and-gratitude/entry/live-2026-11-09-entry-rank-system"
+      ]
+    },
+    {
+      "id": "1f3df2d5379d8f61",
+      "text": "イヌ",
+      "label": "イヌ",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-owners-and-gratitude/entry/live-2026-11-09-entry-dog"
+      ]
+    },
+    {
+      "id": "20db0cf9860bff55",
+      "text": "ネコ",
+      "label": "ネコ",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-owners-and-gratitude/entry/live-2026-11-09-entry-cat"
+      ]
+    },
+    {
+      "id": "d4e27033586f25c7",
+      "text": "おんがえし",
+      "label": "恩返し",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-owners-and-gratitude/entry/live-2026-11-09-entry-repay-kindness"
+      ]
+    },
+    {
+      "id": "7d9332260419df2a",
+      "text": "いのちのおんじん",
+      "label": "命の恩人",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-owners-and-gratitude/entry/live-2026-11-09-entry-lifesaver"
+      ]
+    },
+    {
+      "id": "b363d792d59ab40e",
+      "text": "拾った財布の持ち主が見つかった。",
+      "label": "拾った財布の持ち主が見つかった。",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-owners-and-gratitude/example/live-2026-11-09-example-lost-wallet-owner/0"
+      ]
+    },
+    {
+      "id": "e068c69bf96074af",
+      "text": "迷子の犬が飼い主のもとに戻った。",
+      "label": "迷子の犬が飼い主のもとに戻った。",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-owners-and-gratitude/example/live-2026-11-09-example-dog-and-owner/0"
+      ]
+    },
+    {
+      "id": "026e7d3078ca9724",
+      "text": "命の恩人に、いつか恩返しがしたい。",
+      "label": "命の恩人に、いつか恩返しがしたい。",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-owners-and-gratitude/example/live-2026-11-09-example-repay-rescuer/0"
+      ]
+    },
+    {
+      "id": "4556d455385151e9",
+      "text": "ところが",
+      "label": "ところが、",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-connectors-and-condition/entry/live-2026-11-09-entry-unexpected-turn"
+      ]
+    },
+    {
+      "id": "2a56a9d4b9b651f0",
+      "text": "ところで",
+      "label": "ところで、",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-connectors-and-condition/entry/live-2026-11-09-entry-change-topic"
+      ]
+    },
+    {
+      "id": "40e5d58a525e5f36",
+      "text": "そういえば",
+      "label": "そう言えば、",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-connectors-and-condition/entry/live-2026-11-09-entry-reminded"
+      ]
+    },
+    {
+      "id": "8ccf9dbe4e389282",
+      "text": "それにしても",
+      "label": "それにしても、",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-connectors-and-condition/entry/live-2026-11-09-entry-even-so"
+      ]
+    },
+    {
+      "id": "fffdf9706ee6c744",
+      "text": "店は開いていると思った。",
+      "label": "店は開いていると思った。",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-connectors-and-condition/example/live-2026-11-09-example-unexpected-closure/0"
+      ]
+    },
+    {
+      "id": "b367eb028b2824a6",
+      "text": "ところが、今日は定休日だった。",
+      "label": "ところが、今日は定休日だった。",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-connectors-and-condition/example/live-2026-11-09-example-unexpected-closure/1"
+      ]
+    },
+    {
+      "id": "d3659079dff692e5",
+      "text": "ところで、明日の集合は何時ですか。",
+      "label": "ところで、明日の集合は何時ですか。",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-connectors-and-condition/example/live-2026-11-09-example-new-topic/0"
+      ]
+    },
+    {
+      "id": "a8977d502ffc72bc",
+      "text": "そう言えば、昨日その店から電話があったよ。",
+      "label": "そう言えば、昨日その店から電話があったよ。",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-connectors-and-condition/example/live-2026-11-09-example-remembered-call/0"
+      ]
+    },
+    {
+      "id": "a54521ac5161fad8",
+      "text": "切符さえあれば、予約なしでも入れます。",
+      "label": "切符さえあれば、予約なしでも入れます。",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-connectors-and-condition/example/live-2026-11-09-example-only-need-ticket/0"
+      ]
+    },
+    {
+      "id": "dc921c62588fe956",
+      "text": "いいかえれば",
+      "label": "言い換えれば",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-reframe/entry/live-2026-11-09-entry-in-other-words"
+      ]
+    },
+    {
+      "id": "3fcf47ffb03246cb",
+      "text": "きょくたんにいえば",
+      "label": "極端に言えば",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-reframe/entry/live-2026-11-09-entry-to-an-extreme"
+      ]
+    },
+    {
+      "id": "b96e2689627b8c3d",
+      "text": "べつに",
+      "label": "別に",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-reframe/entry/live-2026-11-09-entry-not-particularly"
+      ]
+    },
+    {
+      "id": "e368e820a3d3db24",
+      "text": "提出は任意です。",
+      "label": "提出は任意です。",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-reframe/example/live-2026-11-09-example-put-it-another-way/0"
+      ]
+    },
+    {
+      "id": "ce0e9894a7f218f0",
+      "text": "言い換えれば、出さなくてもかまいません。",
+      "label": "言い換えれば、出さなくてもかまいません。",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-reframe/example/live-2026-11-09-example-put-it-another-way/1"
+      ]
+    },
+    {
+      "id": "486d7565edb82399",
+      "text": "店は小さい。",
+      "label": "店は小さい。",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-reframe/example/live-2026-11-09-example-other-side/0"
+      ]
+    },
+    {
+      "id": "9f27e0d523161eb9",
+      "text": "逆に言えば、品物を探しやすい。",
+      "label": "逆に言えば、品物を探しやすい。",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-reframe/example/live-2026-11-09-example-other-side/1"
+      ]
+    },
+    {
+      "id": "67c65c86564d4f42",
+      "text": "今日は別に忙しくないよ。",
+      "label": "今日は別に忙しくないよ。",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-reframe/example/live-2026-11-09-example-not-particularly-busy/0"
+      ]
+    },
+    {
+      "id": "baee37548162a050",
+      "text": "おつかい",
+      "label": "お使い",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-errands-and-conflict/entry/live-2026-11-09-entry-errand"
+      ]
+    },
+    {
+      "id": "863337a525e0d951",
+      "text": "のびたのやること",
+      "label": "のび太のやること",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-errands-and-conflict/entry/live-2026-11-09-entry-what-nobita-does"
+      ]
+    },
+    {
+      "id": "1fde174075947834",
+      "text": "ママのいうこと",
+      "label": "ママの言うこと",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-errands-and-conflict/entry/live-2026-11-09-entry-what-mom-says"
+      ]
+    },
+    {
+      "id": "69df4fc7dc1ff413",
+      "text": "ガミガミせっきょうする",
+      "label": "ガミガミ説教する",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-errands-and-conflict/entry/live-2026-11-09-entry-nagging-lecture"
+      ]
+    },
+    {
+      "id": "56c21ef63bcb1a5a",
+      "text": "ごうじょうなやつ",
+      "label": "強情なやつ",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-errands-and-conflict/entry/live-2026-11-09-entry-stubborn-person"
+      ]
+    },
+    {
+      "id": "b941b471ffcf3565",
+      "text": "ごうとう",
+      "label": "強盗",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-errands-and-conflict/entry/live-2026-11-09-entry-robbery"
+      ]
+    },
+    {
+      "id": "8405fa0ef48cfb5a",
+      "text": "ごういん",
+      "label": "強引",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-errands-and-conflict/entry/live-2026-11-09-entry-forceful"
+      ]
+    },
+    {
+      "id": "25def9e6bef6e69a",
+      "text": "あいてのうらみをかう",
+      "label": "相手の恨みを買う",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-errands-and-conflict/entry/live-2026-11-09-entry-incur-resentment"
+      ]
+    },
+    {
+      "id": "53db0eb36b7d4e37",
+      "text": "母に頼まれて、お使いに行ってきた。",
+      "label": "母に頼まれて、お使いに行ってきた。",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-errands-and-conflict/example/live-2026-11-09-example-go-on-an-errand/0"
+      ]
+    },
+    {
+      "id": "ea439984c22954b0",
+      "text": "ママの言うことを最後まで聞いてから返事をした。",
+      "label": "ママの言うことを最後まで聞いてから返事をした。",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-errands-and-conflict/example/live-2026-11-09-example-what-mom-says/0"
+      ]
+    },
+    {
+      "id": "4843a58b4b3daff7",
+      "text": "相談せずに強引に決めると、相手の恨みを買うことがある。",
+      "label": "相談せずに強引に決めると、相手の恨みを買うことがある。",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-errands-and-conflict/example/live-2026-11-09-example-forceful-decision/0"
+      ]
+    }
+  ]
 }

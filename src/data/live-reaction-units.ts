@@ -6,6 +6,7 @@ import { liveOctober30Groups } from './live-reactions-2026-10-30.ts'
 import { liveNovember3Groups } from './live-reactions-2026-11-03.ts'
 import { liveNovember4Groups } from './live-reactions-2026-11-04.ts'
 import { liveNovember5Groups } from './live-reactions-2026-11-05.ts'
+import { liveNovember9Groups } from './live-reactions-2026-11-09.ts'
 
 export const liveCategories = [
   { id: 'grammar', label: '文法・口语' },
@@ -54,6 +55,11 @@ const legacyCategories: LiveCategory[] = [
 // 09/30: https://e-comi.shogakukan.co.jp/books/091405040000d0000000
 //        https://dora-world.com/contents/1514
 export const liveUnits: LiveUnit[] = [
+  {
+    id: '2026-11-09', date: '2026-11-09', title: 'ドラえもん「落としものカムバックスプレー」',
+    description: '篇名来自漫画封面。整理 2026-11-09 的四张连续直播笔记照片，合并重叠条目，补充读音、中文释义和原创日中例句。学习主题包括落ちる／落とす、让步条件、て形表达与会话中的话题转换。',
+    countLabel: liveUnitCountLabel(liveNovember9Groups), groups: liveNovember9Groups,
+  },
   {
     id: '2026-11-05', date: '2026-11-05', title: 'ドラえもん「ママをとりかえっこ」',
     description: '短篇篇名：ママをとりかえっこ（交换妈妈）。收录于普通单行本第3卷第3话、大全集第2卷第497页起；截图背景可见的第501页属于本篇。学习主题：取り替える・だって・条件と口語表現。笔记标题日期：2026-11-05。来自3张连续手机笔记照片，合并重叠的「Aというか、Bというか」和「戸棚」。原笔记、语境辨析和原创日中例句分别标注；简写和未完片段保留原貌并补充说明。',
