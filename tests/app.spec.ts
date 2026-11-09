@@ -125,21 +125,21 @@ test('blocked writes keep the app usable and retry persists in-memory work', asy
   await expect(page.getByRole('button', { name: '読了済み', exact: true })).toBeVisible()
   expect(errors).toEqual([])
 })
-// Keep every saved lesson covered as the daily archive grows to 99 dates,
-// without putting the entire history under a single 30-second test deadline.
-const answerBatches = Array.from({ length: Math.ceil(catalog.length / 8) }, (_, index) => catalog.slice(index * 8, index * 8 + 8))
+// Cover every saved lesson in short groups so a slow browser can still
+// finish the entire group within Playwright's normal per-test deadline.
+const answerBatchSize = 2
+const answerBatches = Array.from({ length: Math.ceil(catalog.length / answerBatchSize) }, (_, index) =>
+  catalog.slice(index * answerBatchSize, (index + 1) * answerBatchSize))
 for (const batch of answerBatches) test(`choosing C for every lesson checks ${batch[0].date} through ${batch.at(-1)!.date}`, async ({ page }) => {
   await page.goto('/')
-  let correct = 0
   for (const lesson of batch) {
     await page.locator('.date-dropdown-trigger').click()
     await page.getByRole('option', { name: new RegExp(`^Day ${lesson.day}\\b`) }).click(); await reading(page)
     await page.locator('.answer-option').nth(2).click()
     await page.getByRole('button', { name: '回答する', exact: true }).click()
-    if (await page.locator('.result-title').innerText() === '正解です') correct++
+    const correctChoice = ['A', 'B', 'C', 'D'][(lesson.day - 1) % 4]
+    await expect(page.locator('.result-title')).toHaveText(correctChoice === 'C' ? '正解です' : `正解：${correctChoice}`)
   }
-  expect(correct).toBe(batch.filter(lesson => (lesson.day - 1) % 4 === 2).length)
-  expect(correct).toBeLessThan(batch.length)
 })
 test('search and mobile Japanese reading remain usable in dark mode', async ({ page }, testInfo) => {
   const logs: string[] = []; page.on('console', message => { if (['error', 'warning'].includes(message.type())) logs.push(message.text()) })
