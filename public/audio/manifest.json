@@ -12,7 +12,7 @@
   },
   "engineVersion": "1.1.0-dev",
   "modelVersion": "1.0.0",
-  "generatedAt": "2026-11-09T02:40:53.714Z",
+  "generatedAt": "2026-11-09T06:16:50.408Z",
   "lessonDates": [
     "2026-11-09",
     "2026-11-08",
@@ -87,7 +87,7 @@
     "2026-08-31",
     "2026-08-30"
   ],
-  "expectedClips": 8293,
+  "expectedClips": 8296,
   "complete": true,
   "clips": {
     "000508138c45e52f": {
@@ -16055,6 +16055,18 @@
       "bytes": 54381,
       "sha256": "7ba012531c13972137a4e424306e2b6f2ab3fc0fd3da18aee52b0d5148c4ecc9",
       "rms": 0.176767
+    },
+    "27404112ee4a88de": {
+      "id": "27404112ee4a88de",
+      "text": "あらかじめ",
+      "label": "あらかじめ",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-respond-and-prepare/entry/live-2026-11-09-entry-in-advance"
+      ],
+      "bytes": 16173,
+      "duration": 1.266,
+      "rms": 0.16814,
+      "sha256": "367cb1b0b7396bb3412dbace92d4eae6e443e604a119da9d6e7542c191aacc25"
     },
     "274ca2e57479be39": {
       "id": "274ca2e57479be39",
@@ -82320,6 +82332,18 @@
       "sha256": "be5e050fa5d5ac07de7dbfb1222a5a41984ef1dd018e2281077955b4666eec71",
       "rms": 0.155092
     },
+    "ca3951ef1444d84b": {
+      "id": "ca3951ef1444d84b",
+      "text": "じぜんに",
+      "label": "事前に",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-respond-and-prepare/entry/live-2026-11-09-entry-before-the-event"
+      ],
+      "bytes": 14445,
+      "duration": 1.115,
+      "rms": 0.143478,
+      "sha256": "2359393fb0c1ee0a3466b8f750af4c867427cc2da7866696b8d167febd820ab6"
+    },
     "ca3d51b9da3eef95": {
       "id": "ca3d51b9da3eef95",
       "text": "自社の要件に適合するか、CostとGovernanceを両立できるかを確かめる必要がある。",
@@ -88437,6 +88461,18 @@
       "bytes": 25197,
       "sha256": "9fd86a99835bf3f60860832d54b75858de145a31c988262fdfbed537c0bea30e",
       "rms": 0.151021
+    },
+    "d9bad4db837071b7": {
+      "id": "d9bad4db837071b7",
+      "text": "かならず",
+      "label": "かならず",
+      "references": [
+        "live/2026-11-09/live-2026-11-09-te-form/entry/live-2026-11-09-entry-without-fail"
+      ],
+      "bytes": 14733,
+      "duration": 1.15,
+      "rms": 0.160752,
+      "sha256": "83e896c94e090ca1a771ea8d464d94ffb548369d4b674dba90706c5da57f9185"
     },
     "d9bf7b42d9855d8e": {
       "id": "d9bf7b42d9855d8e",
@@ -104916,6 +104952,9 @@
     "live/2026-11-09/live-2026-11-09-refusal-and-tone/entry/live-2026-11-09-entry-firmly-refuse": "01f4096feb60427b",
     "live/2026-11-09/live-2026-11-09-refusal-and-tone/entry/live-2026-11-09-entry-gently-refuse": "484237d0bccf5144",
     "live/2026-11-09/live-2026-11-09-refusal-and-tone/entry/live-2026-11-09-entry-readily-refuse": "1fb5f1d89a095474",
-    "live/2026-11-09/live-2026-11-09-te-form/entry/live-2026-11-09-entry-prepare-by-doing": "463e761afc0b412e"
+    "live/2026-11-09/live-2026-11-09-respond-and-prepare/entry/live-2026-11-09-entry-before-the-event": "ca3951ef1444d84b",
+    "live/2026-11-09/live-2026-11-09-respond-and-prepare/entry/live-2026-11-09-entry-in-advance": "27404112ee4a88de",
+    "live/2026-11-09/live-2026-11-09-te-form/entry/live-2026-11-09-entry-prepare-by-doing": "463e761afc0b412e",
+    "live/2026-11-09/live-2026-11-09-te-form/entry/live-2026-11-09-entry-without-fail": "d9bad4db837071b7"
   }
 }

@@ -21,10 +21,10 @@
     "supabase": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/"
   },
   "summary": {
-    "total": 8293,
-    "reused": 1652,
+    "total": 8296,
+    "reused": 1655,
     "uploads": 6641,
-    "savedBytes": 45418404,
+    "savedBytes": 45463755,
     "uploadBytes": 231036381
   },
   "clips": {
@@ -8910,6 +8910,13 @@
       "sha256": "7ba012531c13972137a4e424306e2b6f2ab3fc0fd3da18aee52b0d5148c4ecc9",
       "bytes": 54381,
       "duration": 6.713
+    },
+    "27404112ee4a88de": {
+      "provider": "daily",
+      "path": "japanese/2026-08-12/vocab-19--367cb1b0b7396bb3412dbace92d4eae6e443e604a119da9d6e7542c191aacc25.mp3",
+      "bytes": 16173,
+      "duration": 1.266,
+      "sha256": "367cb1b0b7396bb3412dbace92d4eae6e443e604a119da9d6e7542c191aacc25"
     },
     "274ca2e57479be39": {
       "provider": "supabase",
@@ -46025,6 +46032,13 @@
       "bytes": 63981,
       "duration": 5.247
     },
+    "ca3951ef1444d84b": {
+      "provider": "daily",
+      "path": "japanese/2026-08-12/vocab-17--2359393fb0c1ee0a3466b8f750af4c867427cc2da7866696b8d167febd820ab6.mp3",
+      "bytes": 14445,
+      "duration": 1.115,
+      "sha256": "2359393fb0c1ee0a3466b8f750af4c867427cc2da7866696b8d167febd820ab6"
+    },
     "ca3d51b9da3eef95": {
       "provider": "supabase",
       "path": "morioki-normal/ca3d51b9da3eef95--c7f9c773ab48b95a4cc14bb553dee2d566e3c601cd6c0f1bbaec59656b88996a.mp3",
@@ -49482,6 +49496,13 @@
       "sha256": "9fd86a99835bf3f60860832d54b75858de145a31c988262fdfbed537c0bea30e",
       "bytes": 25197,
       "duration": 3.068
+    },
+    "d9bad4db837071b7": {
+      "provider": "daily",
+      "path": "japanese/2026-08-17/vocab-19--83e896c94e090ca1a771ea8d464d94ffb548369d4b674dba90706c5da57f9185.mp3",
+      "bytes": 14733,
+      "duration": 1.15,
+      "sha256": "83e896c94e090ca1a771ea8d464d94ffb548369d4b674dba90706c5da57f9185"
     },
     "d9bf7b42d9855d8e": {
       "provider": "supabase",
@@ -58080,5 +58101,5 @@
       "duration": 2.104
     }
   },
-  "verifiedAt": "2026-11-09T02:40:53.714Z"
+  "verifiedAt": "2026-11-09T06:16:50.408Z"
 }
