@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-11-09",
   "day": 72,
-  "status": "validating",
-  "stage": "validating",
+  "status": "published",
+  "stage": "published",
   "upstreamSourceCommit": "52fb1900d38484485f3d81b073ff9788c0bdfc27",
   "sourcePagesRunId": 42545014645,
   "snapshotSha256": "c18f69a53e2277baaae41987b75675237b088cd5a907c1db1203fd10aab3f852",
@@ -19,8 +19,49 @@
     "allPassed": true
   },
   "lastError": null,
-  "nextStep": "Verify exact sync run, final lesson+snapshot commit, Pages and live target date",
-  "updatedAt": "2026-11-09T01:26:09.450Z",
+  "nextStep": "Text verified. Observe source-bound shared audio and the independent scheduled worker and verifier.",
+  "updatedAt": "2026-11-09T01:30:45.791Z",
   "requestCommit": "bf28f4fca6c09046b0a0d9c9c08705fa71c93fbc",
-  "requestBlobSha": "e383d220fb7bf0b3dc29fe73cddf2febab7afeca"
+  "requestBlobSha": "e383d220fb7bf0b3dc29fe73cddf2febab7afeca",
+  "releaseCommit": "bf24ef416ceb985cda2863b174e4a7e0abcc6722",
+  "pagesRunId": 42545719568,
+  "sourceBlobSha": "a054be109f72c689e84a857a16ad4dc08e539f5d",
+  "counts": {
+    "vocabularyNew": 2,
+    "vocabularyReview": 18,
+    "grammarNew": 0,
+    "grammarReview": 8
+  },
+  "textPublicationVerified": true,
+  "verification": {
+    "targetDate": "2026-11-09",
+    "day": 72,
+    "releaseCommit": "bf24ef416ceb985cda2863b174e4a7e0abcc6722",
+    "pagesRunId": 42545719568,
+    "upstreamSourceCommit": "52fb1900d38484485f3d81b073ff9788c0bdfc27",
+    "sourceBlobSha": "a054be109f72c689e84a857a16ad4dc08e539f5d",
+    "artifact": {
+      "id": 13643681096,
+      "name": "n1-deployment-verification",
+      "digest": "sha256:1b99725fcae3612233f73cf020b5517c811bb7afb38020ef408422677f692972"
+    },
+    "manifestSha256": "cc3745428fdce3f4b7bed309a40c2ca4f77c2a044131cd642a57a1cc6c39237c",
+    "fullPublicAssetBytes": true,
+    "verifiedFiles": 81,
+    "allLessonJsonAndCompleteSearchVerified": true,
+    "allOriginalParagraphsPresent": true,
+    "originalParagraphCount": 6,
+    "originalQuestionAndOptionsPreserved": true,
+    "title": "赤くしただけでは、伝わらない",
+    "sourceUnchanged": true,
+    "publishedLessonSha256": "57490dfbd516339d6d88f48a77d15634355ba033065d0d1d96784679018afba0",
+    "liveProof": {
+      "status": "published_release_verified",
+      "manifestSha256": "cc3745428fdce3f4b7bed309a40c2ca4f77c2a044131cd642a57a1cc6c39237c",
+      "verifiedFiles": 81,
+      "latestDate": "2026-11-09",
+      "targetDate": "2026-11-09"
+    },
+    "at": "2026-11-09T01:30:45.027Z"
+  }
 }
