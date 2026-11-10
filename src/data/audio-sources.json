@@ -14,17 +14,17 @@
   "modelVersion": "1.0.0",
   "sharedSource": {
     "repository": "https://github.com/kai987/japan-it-ai-daily",
-    "commit": "721d40fa4642e3498b155284c55005d8b3d69cdc"
+    "commit": "de764617a5965502aabf7381ed46352185697564"
   },
   "providers": {
     "daily": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/",
     "supabase": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/"
   },
   "summary": {
-    "total": 8387,
-    "reused": 1655,
+    "total": 8393,
+    "reused": 1661,
     "uploads": 6732,
-    "savedBytes": 45463755,
+    "savedBytes": 45672825,
     "uploadBytes": 232680924
   },
   "clips": {
@@ -7749,6 +7749,13 @@
       "bytes": 69741,
       "duration": 8.618
     },
+    "210ea098d599a4f4": {
+      "provider": "daily",
+      "path": "japanese/2026-11-10/example-03--232bd054333d5362cdf2fcccbfa54f62966fba8d2171b6c270898d309e4fc7dd.mp3",
+      "bytes": 56205,
+      "duration": 4.586,
+      "sha256": "232bd054333d5362cdf2fcccbfa54f62966fba8d2171b6c270898d309e4fc7dd"
+    },
     "2120a13b7f1145cf": {
       "provider": "supabase",
       "path": "morioki-normal/2120a13b7f1145cf--5ffaa97a7aa5c527885814fae9084b346527ac897d2b7a9822da112a03d9d2e6.mp3",
@@ -8322,6 +8329,13 @@
       "sha256": "2f14e5cb40c7cf98d329d0722254e3dac5efe5502714c472bb6afa4eafd2cdd0",
       "bytes": 17325,
       "duration": 2.069
+    },
+    "23d62fd8fb324d9c": {
+      "provider": "daily",
+      "path": "japanese/2026-11-10/example-02--e681ab0a5b6f390dcdc99d4cbf98557a339a26c2bb099728bb5772aa44c06c55.mp3",
+      "bytes": 62541,
+      "duration": 5.119,
+      "sha256": "e681ab0a5b6f390dcdc99d4cbf98557a339a26c2bb099728bb5772aa44c06c55"
     },
     "23dfc1a84453e85c": {
       "provider": "supabase",
@@ -23527,6 +23541,13 @@
       "bytes": 35565,
       "duration": 4.346
     },
+    "6754563fc767e593": {
+      "provider": "daily",
+      "path": "japanese/2026-11-10/example-01--903871087341c5fede7450d89e1ac75e346559be3fc144c9bacb4e34dd5125ce.mp3",
+      "bytes": 51885,
+      "duration": 4.248,
+      "sha256": "903871087341c5fede7450d89e1ac75e346559be3fc144c9bacb4e34dd5125ce"
+    },
     "6754765d45254719": {
       "provider": "supabase",
       "path": "morioki-normal/6754765d45254719--305df4625e2a6b58f8bcea33470853832533d0e444ffb9ca80e7af0afbf82442.mp3",
@@ -28532,6 +28553,13 @@
       "bytes": 43821,
       "duration": 5.39
     },
+    "7c4a73bc0b6f1cb0": {
+      "provider": "daily",
+      "path": "japanese/2026-11-10/vocab-03--ec16b850db8bdbcb1ffe3bfdede364a110881df3b385eb178f0bd2dc98535fc4.mp3",
+      "bytes": 12717,
+      "duration": 0.964,
+      "sha256": "ec16b850db8bdbcb1ffe3bfdede364a110881df3b385eb178f0bd2dc98535fc4"
+    },
     "7c56d57d40aac489": {
       "provider": "supabase",
       "path": "morioki-normal/7c56d57d40aac489--c5910528f1678b128fb3f219394bfdfb9fddc8b129ae8410f6d09a4a9392e7eb.mp3",
@@ -32766,6 +32794,13 @@
       "bytes": 16461,
       "duration": 1.344,
       "sha256": "c1272d08e58dda99cbc63b960721874d9f703baa579dac5f75b480f036f88a38"
+    },
+    "8e58079cbce27ac0": {
+      "provider": "daily",
+      "path": "japanese/2026-11-10/vocab-02--e07b763480cb5692b50d838262e1919883e8de1931d3d62c2047130e932878f7.mp3",
+      "bytes": 11853,
+      "duration": 0.895,
+      "sha256": "e07b763480cb5692b50d838262e1919883e8de1931d3d62c2047130e932878f7"
     },
     "8e6130f1dfd32cd5": {
       "provider": "supabase",
@@ -46627,6 +46662,13 @@
       "bytes": 56109,
       "duration": 6.921
     },
+    "caa3a5c7a2a578f3": {
+      "provider": "daily",
+      "path": "japanese/2026-11-10/vocab-01--b74300a07b1ef81a82641ad8711d7f574c47eae43070f4bca1f38632d3fbec4a.mp3",
+      "bytes": 13869,
+      "duration": 1.058,
+      "sha256": "b74300a07b1ef81a82641ad8711d7f574c47eae43070f4bca1f38632d3fbec4a"
+    },
     "caaf50d22bf97ade": {
       "provider": "supabase",
       "path": "morioki-normal/caaf50d22bf97ade--3e46dd50ed1cbb7fe42f0f8fcf9154ae9ef59e0655670ff2c8a1a63ae1cbcb13.mp3",
@@ -58738,5 +58780,5 @@
       "duration": 2.289
     }
   },
-  "verifiedAt": "2026-11-09T06:26:37.821Z"
+  "verifiedAt": "2026-11-10T01:34:52.940Z"
 }
