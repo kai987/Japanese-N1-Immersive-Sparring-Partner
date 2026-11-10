@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-11-10",
   "day": 73,
-  "status": "validating",
-  "stage": "validating",
+  "status": "published",
+  "stage": "published",
   "upstreamSourceCommit": "14a921a2e11303cb65b1580f7e9bfd235d5b625b",
   "sourcePagesRunId": 42734885819,
   "snapshotSha256": "65163d4fc7069b619eef7e4bdea9690e86dce1b2f63627b332c89d134f320f4e",
@@ -19,8 +19,49 @@
     "allPassed": true
   },
   "lastError": null,
-  "nextStep": "Verify exact sync run, final lesson+snapshot commit, Pages and live target date",
-  "updatedAt": "2026-11-10T01:27:16.337Z",
+  "nextStep": "Text verified. Observe source-bound shared audio and the independent scheduled worker and verifier.",
+  "updatedAt": "2026-11-10T01:33:58.507Z",
   "requestCommit": "25cb68ed6ac5bd6eb19821280f3029b78942deb2",
-  "requestBlobSha": "2f055e9fed6e143661ae65a32b49433648c21fa6"
+  "requestBlobSha": "2f055e9fed6e143661ae65a32b49433648c21fa6",
+  "releaseCommit": "10bd5ff40f50ffa45435b13f6b01b624589cbc69",
+  "pagesRunId": 42736182351,
+  "sourceBlobSha": "d750b03738bf30d87c9ed3ade276f1556ce69379",
+  "counts": {
+    "vocabularyNew": 3,
+    "vocabularyReview": 17,
+    "grammarNew": 0,
+    "grammarReview": 8
+  },
+  "textPublicationVerified": true,
+  "verification": {
+    "targetDate": "2026-11-10",
+    "day": 73,
+    "releaseCommit": "10bd5ff40f50ffa45435b13f6b01b624589cbc69",
+    "pagesRunId": 42736182351,
+    "upstreamSourceCommit": "14a921a2e11303cb65b1580f7e9bfd235d5b625b",
+    "sourceBlobSha": "d750b03738bf30d87c9ed3ade276f1556ce69379",
+    "artifact": {
+      "id": 13726409702,
+      "name": "n1-deployment-verification",
+      "digest": "sha256:2777320b53702845f38d0842ce10d9fc564383359adc5b827bd8a5b59e7aee6a"
+    },
+    "manifestSha256": "589ca081a698809b338cb762c71c9e6c8c79810353250d0b0f969f01d19a5ffa",
+    "fullPublicAssetBytes": true,
+    "verifiedFiles": 82,
+    "allLessonJsonAndCompleteSearchVerified": true,
+    "allOriginalParagraphsPresent": true,
+    "originalParagraphCount": 6,
+    "originalQuestionAndOptionsPreserved": true,
+    "title": "つながった記録は、安心につながるか",
+    "sourceUnchanged": true,
+    "publishedLessonSha256": "19f9ded5140ef9cbcdfa0126274177390d5e8501907ef428c87a08d2a7dc7444",
+    "liveProof": {
+      "status": "published_release_verified",
+      "manifestSha256": "589ca081a698809b338cb762c71c9e6c8c79810353250d0b0f969f01d19a5ffa",
+      "verifiedFiles": 82,
+      "latestDate": "2026-11-10",
+      "targetDate": "2026-11-10"
+    },
+    "at": "2026-11-10T01:33:57.749Z"
+  }
 }
