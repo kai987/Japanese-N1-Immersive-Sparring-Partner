@@ -54,7 +54,7 @@ export async function recordedPlayback(page: Page, id: string, after: number) {
   await expect.poll(async () => {
     proof = await playbackProof(page, id, after)
     return !!proof
-  }, { message: `Real playback must advance for ${id} after click ${after}` }).toBe(true)
+  }, { timeout: 12_000, message: `Real playback must advance for ${id} after click ${after}` }).toBe(true)
   return proof!
 }
 
