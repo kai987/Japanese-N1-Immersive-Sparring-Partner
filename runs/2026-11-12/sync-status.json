@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-11-12",
   "day": 75,
-  "status": "validating",
-  "stage": "validating",
+  "status": "published",
+  "stage": "published",
   "upstreamSourceCommit": "61c6fdf174798ab11f754afd648b0ae8b04261e7",
   "sourcePagesRunId": 43148417113,
   "snapshotSha256": "07c2d70aa6c419a622b67bb92ccbaee43eefd13de94ce94b33f4320781713f30",
@@ -19,8 +19,49 @@
     "allPassed": true
   },
   "lastError": null,
-  "nextStep": "Verify exact sync run, final lesson+snapshot commit, Pages and live target date",
-  "updatedAt": "2026-11-12T03:33:18.137Z",
+  "nextStep": "Text verified. Observe source-bound shared audio and the independent scheduled worker and verifier.",
+  "updatedAt": "2026-11-12T03:38:25.521Z",
   "requestCommit": "09755042579fc4aea5a5d0515682c4a8eb054059",
-  "requestBlobSha": "b1dcef0424bf26cc6abae4c00d135be89891983a"
+  "requestBlobSha": "b1dcef0424bf26cc6abae4c00d135be89891983a",
+  "releaseCommit": "e4f5de21938be1ed8be982db5a04d114c66de263",
+  "pagesRunId": 43149249825,
+  "sourceBlobSha": "6e9543d8191e7a014f7f7eab35aa7a1130182a8d",
+  "counts": {
+    "vocabularyNew": 3,
+    "vocabularyReview": 17,
+    "grammarNew": 0,
+    "grammarReview": 5
+  },
+  "textPublicationVerified": true,
+  "verification": {
+    "targetDate": "2026-11-12",
+    "day": 75,
+    "releaseCommit": "e4f5de21938be1ed8be982db5a04d114c66de263",
+    "pagesRunId": 43149249825,
+    "upstreamSourceCommit": "61c6fdf174798ab11f754afd648b0ae8b04261e7",
+    "sourceBlobSha": "6e9543d8191e7a014f7f7eab35aa7a1130182a8d",
+    "artifact": {
+      "id": 13912488739,
+      "name": "n1-deployment-verification",
+      "digest": "sha256:d87e7e94d9cd26c20c853ba687e4ce922be639ce90a9f5da9d3145ed4a52d860"
+    },
+    "manifestSha256": "9f89f23128e15bd3e94bbbd9b1aab401c39b8073c0824d8117bb289bb1c00913",
+    "fullPublicAssetBytes": true,
+    "verifiedFiles": 84,
+    "allLessonJsonAndCompleteSearchVerified": true,
+    "allOriginalParagraphsPresent": true,
+    "originalParagraphCount": 6,
+    "originalQuestionAndOptionsPreserved": true,
+    "title": "量が増えれば、現場を理解したことになるか",
+    "sourceUnchanged": true,
+    "publishedLessonSha256": "dbae1409e4e68cdd6566716922f1e6994113f2f57488be04339b0c3e42967469",
+    "liveProof": {
+      "status": "published_release_verified",
+      "manifestSha256": "9f89f23128e15bd3e94bbbd9b1aab401c39b8073c0824d8117bb289bb1c00913",
+      "verifiedFiles": 84,
+      "latestDate": "2026-11-12",
+      "targetDate": "2026-11-12"
+    },
+    "at": "2026-11-12T03:38:24.751Z"
+  }
 }
