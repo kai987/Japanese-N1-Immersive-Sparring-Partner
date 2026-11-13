@@ -8,14 +8,14 @@
   "snapshotSha256": "c83a03b23fe382ddcb9e5d83508935950d0fea8ec9391653cecba3ce8b300857",
   "issueNumber": 94,
   "totalDays": 94,
-  "status": "waiting_request",
-  "stage": "request_ready",
+  "status": "validating",
+  "stage": "validating",
   "reason": "source_and_upstream_verified",
   "sourceAuthorObservation": "Recovered same-day missing source; source checkpoint and main verified byte-for-byte.",
   "textPublicationVerified": false,
   "lastError": null,
-  "nextStep": "Submit one source-bound request",
-  "updatedAt": "2026-11-13T05:15:32.261Z",
+  "nextStep": "Verify exact Sync and Pages plus live deployment",
+  "updatedAt": "2026-11-13T05:15:40.938Z",
   "sourceSavedOnMain": true,
   "sourceCheckpointVerified": true,
   "sourcePresent": true,
@@ -37,8 +37,10 @@
     "verifiedAt": "2026-11-13T05:08:27.056Z"
   },
   "requestSha256": "8dfdbcdc4f0d4b5a73f565ca6db24084e49ab4f1f269fee2ae9af8990c8b7727",
-  "requestSubmitted": false,
+  "requestSubmitted": true,
   "localValidation": {
     "allPassed": true
-  }
+  },
+  "requestCommit": "63771c93abfc5aecd6359676d5a6b315f2eb501d",
+  "requestBlobSha": "3f6a4cf117b124277c3dffad899c15660cc32b6a"
 }
