@@ -8,14 +8,14 @@
   "snapshotSha256": "c83a03b23fe382ddcb9e5d83508935950d0fea8ec9391653cecba3ce8b300857",
   "issueNumber": 94,
   "totalDays": 94,
-  "status": "waiting_upstream",
-  "stage": "waiting_upstream",
-  "reason": "source_saved",
+  "status": "waiting_request",
+  "stage": "request_ready",
+  "reason": "source_and_upstream_verified",
   "sourceAuthorObservation": "Recovered same-day missing source; source checkpoint and main verified byte-for-byte.",
   "textPublicationVerified": false,
   "lastError": null,
-  "nextStep": "Original is saved and verified. Existing IT publication handoff must validate target-date upstream publication and snapshot, then use source-bound request and exact Pages verification; no duplicate authoring.",
-  "updatedAt": "2026-11-13T05:08:27.056Z",
+  "nextStep": "Submit one source-bound request",
+  "updatedAt": "2026-11-13T05:15:32.261Z",
   "sourceSavedOnMain": true,
   "sourceCheckpointVerified": true,
   "sourcePresent": true,
@@ -35,5 +35,10 @@
     "outboxBlobSha": "73f14cffee55d1a7c0c2ce08fad0e732a1ebda4a",
     "mainBlobSha": "cbb1b2f544c7e4678ba36c7a743d7d5aec8b220e",
     "verifiedAt": "2026-11-13T05:08:27.056Z"
+  },
+  "requestSha256": "8dfdbcdc4f0d4b5a73f565ca6db24084e49ab4f1f269fee2ae9af8990c8b7727",
+  "requestSubmitted": false,
+  "localValidation": {
+    "allPassed": true
   }
 }
