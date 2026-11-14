@@ -1,9 +1,9 @@
 {
   "targetDate": "2026-11-14",
   "day": 77,
-  "stage": "validating",
+  "stage": "published",
   "schemaVersion": 1,
-  "status": "validating",
+  "status": "published",
   "reason": "source_and_upstream_verified",
   "upstreamSourceCommit": "b7ef903c8d53d0abbca63b4cbb3e49b3ec1eac96",
   "sourcePagesRunId": 43557534108,
@@ -17,8 +17,24 @@
     "allPassed": true
   },
   "lastError": null,
-  "nextStep": "Verify exact Sync and Pages plus live deployment",
-  "updatedAt": "2026-11-14T04:42:34.278Z",
+  "nextStep": "Verify the exact shared audio continuation and await the separate unique-audio worker and verifier",
+  "updatedAt": "2026-11-14T04:48:04.722Z",
   "requestCommit": "76ba8e356563e999b9dddeb8549d58a82f44cd94",
-  "requestBlobSha": "b0b9a439cbbadcfbd20aaf34617655011d60d7b9"
+  "requestBlobSha": "b0b9a439cbbadcfbd20aaf34617655011d60d7b9",
+  "manifestSha256": "75e0a63b53609d4fb80e457a60063064e81bf37c86ef5b44d38a316dd60e3c43",
+  "verifiedFiles": 86,
+  "latestDate": "2026-11-14",
+  "title": "「保存しました」の、その先",
+  "sourceCommit": "b7ef903c8d53d0abbca63b4cbb3e49b3ec1eac96",
+  "releaseCommit": "6c2e333109045ea35236efb06d3f99c6a6209980",
+  "pagesRunId": 43558199372,
+  "syncRunId": 43557984734,
+  "counts": {
+    "vocabularyNew": 1,
+    "vocabularyReview": 19,
+    "grammarNew": 0,
+    "grammarReview": 7
+  },
+  "verifiedAt": "2026-11-14T04:48:04.387Z",
+  "textPublicationVerified": true
 }
