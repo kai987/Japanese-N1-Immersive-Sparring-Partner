@@ -14,17 +14,17 @@
   "modelVersion": "1.0.0",
   "sharedSource": {
     "repository": "https://github.com/kai987/japan-it-ai-daily",
-    "commit": "56071b80ac308782e15a7a652bc1dc7a38c37c5b"
+    "commit": "f8becd93de21e197ec29abd785c9c5f567571a32"
   },
   "providers": {
     "daily": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/",
     "supabase": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/"
   },
   "summary": {
-    "total": 8810,
-    "reused": 1692,
+    "total": 8813,
+    "reused": 1695,
     "uploads": 7118,
-    "savedBytes": 46794828,
+    "savedBytes": 46943571,
     "uploadBytes": 247873974
   },
   "clips": {
@@ -35308,6 +35308,13 @@
       "bytes": 60717,
       "duration": 7.49
     },
+    "92259b3c46247920": {
+      "provider": "daily",
+      "path": "japanese/2026-11-14/example-01--a3a85169eee05f39a9509b889a07801ca6b8607ec00d4d09ef40b0fb36491e58.mp3",
+      "bytes": 47277,
+      "duration": 3.854,
+      "sha256": "a3a85169eee05f39a9509b889a07801ca6b8607ec00d4d09ef40b0fb36491e58"
+    },
     "9226c821f2876bc5": {
       "provider": "supabase",
       "path": "morioki-normal/9226c821f2876bc5--70dabc3f31f5c33bfee927eeb6b191808a87743b66f768d4e2e64cfea18b50e7.mp3",
@@ -40935,6 +40942,13 @@
       "sha256": "a9b584973cb66bb0dcdaad326d997237e65dd10d97baf7dc3dedd67bbb24beb3",
       "bytes": 67245,
       "duration": 8.315
+    },
+    "a96f49de1a7d7aea": {
+      "provider": "daily",
+      "path": "japanese/2026-11-14/vocab-01--4f18af425b5f4eab8630905f79c2e03db646667b3a144cd45d535b9e43150dd8.mp3",
+      "bytes": 15309,
+      "duration": 1.196,
+      "sha256": "4f18af425b5f4eab8630905f79c2e03db646667b3a144cd45d535b9e43150dd8"
     },
     "a972b3e9ddd3266d": {
       "provider": "supabase",
@@ -58457,6 +58471,13 @@
       "bytes": 52173,
       "duration": 4.271
     },
+    "f1faed26e7fe5d9a": {
+      "provider": "daily",
+      "path": "japanese/2026-11-14/interview-question-04--26d0f6350bc362223f3e9daa5d9835bedc5c25e5513cc392d43eed5d5ae3de81.mp3",
+      "bytes": 86157,
+      "duration": 7.082,
+      "sha256": "26d0f6350bc362223f3e9daa5d9835bedc5c25e5513cc392d43eed5d5ae3de81"
+    },
     "f1ff9213719a4187": {
       "provider": "supabase",
       "path": "morioki-normal/f1ff9213719a4187--0b7e5a7b30a7d6eaf0fd7e05e6d889e8e183f162e22a41d829fd0b6e283192c1.mp3",
@@ -61699,5 +61720,5 @@
       "duration": 2.289
     }
   },
-  "verifiedAt": "2026-11-14T04:11:11.763Z"
+  "verifiedAt": "2026-11-14T04:49:49.111Z"
 }
