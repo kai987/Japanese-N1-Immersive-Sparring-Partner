@@ -8,14 +8,14 @@
   "snapshotSha256": "c83a03b23fe382ddcb9e5d83508935950d0fea8ec9391653cecba3ce8b300857",
   "issueNumber": 94,
   "totalDays": 94,
-  "status": "validating",
-  "stage": "validating",
+  "status": "published",
+  "stage": "published",
   "reason": "source_and_upstream_verified",
   "sourceAuthorObservation": "Recovered same-day missing source; source checkpoint and main verified byte-for-byte.",
-  "textPublicationVerified": false,
+  "textPublicationVerified": true,
   "lastError": null,
-  "nextStep": "Verify exact Sync and Pages plus live deployment",
-  "updatedAt": "2026-11-13T05:15:40.938Z",
+  "nextStep": "Verify the exact shared audio continuation and await the separate unique-audio worker and verifier",
+  "updatedAt": "2026-11-14T04:10:06.829Z",
   "sourceSavedOnMain": true,
   "sourceCheckpointVerified": true,
   "sourcePresent": true,
@@ -42,5 +42,20 @@
     "allPassed": true
   },
   "requestCommit": "63771c93abfc5aecd6359676d5a6b315f2eb501d",
-  "requestBlobSha": "3f6a4cf117b124277c3dffad899c15660cc32b6a"
+  "requestBlobSha": "3f6a4cf117b124277c3dffad899c15660cc32b6a",
+  "manifestSha256": "dfb2a3e389446ed6cd3f8696e529d36f1efe8f7d543826ed1737900db1d872f8",
+  "verifiedFiles": 85,
+  "latestDate": "2026-11-13",
+  "title": "伝わりやすさのために、何を残すか",
+  "sourceCommit": "61ebfac5ea6c35e841c708b242d1ebfc5f9ff031",
+  "releaseCommit": "6b5d57e4893435792638e19a5ab0cc37513a40a9",
+  "pagesRunId": 43549332135,
+  "syncRunId": 43370861559,
+  "counts": {
+    "vocabularyNew": 2,
+    "vocabularyReview": 18,
+    "grammarNew": 0,
+    "grammarReview": 6
+  },
+  "verifiedAt": "2026-11-14T04:10:06.467Z"
 }
