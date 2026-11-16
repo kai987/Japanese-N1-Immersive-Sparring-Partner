@@ -1,9 +1,9 @@
 {
   "targetDate": "2026-11-16",
   "day": 79,
-  "stage": "validating",
+  "stage": "published",
   "schemaVersion": 1,
-  "status": "validating",
+  "status": "published",
   "reason": "source_and_upstream_verified",
   "upstreamSourceCommit": "e0d6b8402b63db0f8eeb3321287358fa2aa47ff0",
   "sourcePagesRunId": 43786250845,
@@ -17,8 +17,24 @@
     "allPassed": true
   },
   "lastError": null,
-  "nextStep": "Verify exact Sync and Pages plus live deployment",
-  "updatedAt": "2026-11-16T01:31:12.832Z",
+  "nextStep": "Verify the exact shared audio continuation and await the separate unique-audio worker and verifier",
+  "updatedAt": "2026-11-16T01:36:50.417Z",
   "requestCommit": "137994fb08a1dc7582cc2896c7aabcc1c4229db3",
-  "requestBlobSha": "cb3a435c7c23c890d03623df5334d985e2bfee43"
+  "requestBlobSha": "cb3a435c7c23c890d03623df5334d985e2bfee43",
+  "manifestSha256": "7d563adb46e66e1765444114baf93479aa1062cfae7c7eff3b77b811c153de88",
+  "verifiedFiles": 88,
+  "latestDate": "2026-11-16",
+  "title": "警告が出たとき、何を確かめるべきか",
+  "sourceCommit": "e0d6b8402b63db0f8eeb3321287358fa2aa47ff0",
+  "releaseCommit": "16868f2431fd3cc4c15668a8861ccf0c0feb45ce",
+  "pagesRunId": 43787003183,
+  "syncRunId": 43786742416,
+  "counts": {
+    "vocabularyNew": 7,
+    "vocabularyReview": 13,
+    "grammarNew": 2,
+    "grammarReview": 5
+  },
+  "verifiedAt": "2026-11-16T01:36:50.079Z",
+  "textPublicationVerified": true
 }
