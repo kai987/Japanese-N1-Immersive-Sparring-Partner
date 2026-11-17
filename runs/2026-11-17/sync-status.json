@@ -1,9 +1,9 @@
 {
   "targetDate": "2026-11-17",
   "day": 80,
-  "stage": "validating",
+  "stage": "published",
   "schemaVersion": 1,
-  "status": "validating",
+  "status": "published",
   "reason": "source_and_upstream_verified",
   "upstreamSourceCommit": "2926e03344447cfc61a5b0ff439bfd9d85060d95",
   "sourcePagesRunId": 43994509695,
@@ -17,8 +17,24 @@
     "allPassed": true
   },
   "lastError": null,
-  "nextStep": "Verify exact Sync and Pages plus live deployment",
-  "updatedAt": "2026-11-17T01:29:01.100Z",
+  "nextStep": "Verify the exact shared audio continuation and await the separate unique-audio worker and verifier",
+  "updatedAt": "2026-11-17T01:34:38.746Z",
   "requestCommit": "e29e8e86c7d5ce96713f23ec5eb4d604d39f9f7a",
-  "requestBlobSha": "2e6f731a311b292de714485c27697d289f760426"
+  "requestBlobSha": "2e6f731a311b292de714485c27697d289f760426",
+  "manifestSha256": "818f8bf50b256c2102ca6a8750211c46ce21863c912f637f76cf14d5abd48826",
+  "verifiedFiles": 89,
+  "latestDate": "2026-11-17",
+  "title": "合意したはずなのに",
+  "sourceCommit": "2926e03344447cfc61a5b0ff439bfd9d85060d95",
+  "releaseCommit": "747b4cde221e4e7e3646189b1dc81f55d8ee4392",
+  "pagesRunId": 43996269372,
+  "syncRunId": 43995912252,
+  "counts": {
+    "vocabularyNew": 5,
+    "vocabularyReview": 15,
+    "grammarNew": 0,
+    "grammarReview": 8
+  },
+  "verifiedAt": "2026-11-17T01:34:38.409Z",
+  "textPublicationVerified": true
 }
