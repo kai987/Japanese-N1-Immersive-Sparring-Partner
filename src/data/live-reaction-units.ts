@@ -37,6 +37,20 @@ const legacyCategories: LiveCategory[] = [
   'vocabulary', 'vocabulary', 'vocabulary', 'vocabulary',
 ]
 // Manga titles are display metadata, not speech or progress identities.
+// 11/18 basis: 掃除・ポイ捨て・子供のくせに・生意気・腕章を腕にはめる.
+// The title is identified from the notes and plot, not directly visible in a photo.
+// https://e-comi.shogakukan.co.jp/books/091408030000d0000000
+// https://www.tv-asahi.co.jp/doraemon/story/0622/
+// https://www.hatosan.com/ensoku/2011/07/post-36.html (original manga's cigarette butt)
+// 11/13 spans two stories: the campsite rubbish/returning belongings continuation,
+// then にらめっこ・よろよろ・やめさせられる・音の伝わり方を遅らせる.
+// Classroom vocabulary expansions are not all claimed to be manga dialogue.
+// https://e-comi.shogakukan.co.jp/books/091416610000d0000000
+// https://e-comi.shogakukan.co.jp/books/091400100000d0000000
+// https://ameblo.jp/kuro-yokoyama/entry-12395975933.html
+// https://ameblo.jp/kuro-yokoyama/entry-12855303322.html
+// https://ameblo.jp/kuro-yokoyama/entry-12855303420.html
+// https://dora-world.com/contents/1895
 // 09/28 basis (supplemental photos 8-10): くよくよしたって / 気を取り直す /
 // 貯金を下ろす / エープリルフール match the returning-Doraemon story.
 // https://e-comi.shogakukan.co.jp/books/091400070000d0000000
@@ -58,13 +72,13 @@ const legacyCategories: LiveCategory[] = [
 //        https://dora-world.com/contents/1514
 export const liveUnits: LiveUnit[] = [
   {
-    id: '2026-11-18', date: '2026-11-18', title: '条件・願望・日常表現の使い分け',
-    description: '笔记标题日期：2026-11-18。根据本次10张连续手机笔记截图，合并重复条目，整理条件与让步、叮嘱与祈愿、愿望表达、词义辨析及自动词／他动词。每组保留可见原文，补充读音、中文释义、用法要点和原创日中例句；未完句和速记简写另作说明。截图未能确认完整漫画篇名，因此按学习主题命名。',
+    id: '2026-11-18', date: '2026-11-18', title: 'ドラえもん「大人をしかる腕章」',
+    description: '相关短篇：大人をしかる腕章，收录于普通单行本第33卷第6话。根据打扫、乱扔烟头、佩戴腕章及「子供のくせに」「生意気」等笔记线索，与官方目录、剧情和原作资料对照识别。笔记标题日期：2026-11-18。整理10张连续手机笔记截图，合并重叠条目，学习条件与让步、叮嘱与祈愿、愿望表达、词义辨析及自动词／他动词。保留可见原文，补充读音、中文释义、用法要点和原创日中例句；未完句和速记简写另作说明。词汇与语法拓展仍属于课堂学习补充。',
     countLabel: liveUnitCountLabel(liveNovember18Groups), groups: liveNovember18Groups,
   },
   {
-    id: '2026-11-13', date: '2026-11-13', title: '日常口語・使役受身・似た表現の使い分け',
-    description: '整理日期：2026-11-13（日本时间），不是已确认的直播日期。根据本次提供的13张手机笔记截图，合并重复内容，整理日常口语、词义辨析、使役受身和自动词／他动词。每组保留可见笔记原文，另附读音、中文释义、用法辨析和原创日中例句；未完句明确标注，不补写被截断的文字。截图未显示完整日期或漫画篇名，因此以学习主题命名。',
+    id: '2026-11-13', date: '2026-11-13', title: 'ドラえもん「落としものカムバックスプレー」・「おそだアメ」',
+    description: '相关短篇：前半接续「落としものカムバックスプレー」（普通单行本第41卷第12话），后半为「おそだアメ」（第10卷第1话）。根据露营地捡垃圾、物品归还主人，以及にらめっこ、被迫听歌、延迟声音传播等笔记线索，与官方目录、剧情和原作文字对照识别。整理日期：2026-11-13（日本时间），不是已确认的直播日期。整理13张手机笔记截图，合并重叠内容，学习日常口语、词义辨析、使役受身及自动词／他动词。保留可见笔记原文，另附读音、中文释义、用法辨析和原创日中例句；未完句明确标注。词汇与语法拓展仍属于课堂学习补充。',
     countLabel: liveUnitCountLabel(liveNovember13Groups), groups: liveNovember13Groups,
   },
   {
