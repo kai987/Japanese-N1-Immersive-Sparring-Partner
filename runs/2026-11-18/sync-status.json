@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "targetDate": "2026-11-18",
   "day": 81,
-  "stage": "validating",
-  "status": "validating",
+  "stage": "published",
+  "status": "published",
   "reason": "source_and_upstream_verified",
   "sourceMain": "bae09acf451bf4188d8a85e5b0b14454689a2e1f",
   "sourceBlobSha": "b87f398e980ef39b8765a7269ba225599d2756a8",
@@ -12,11 +12,11 @@
   "upstreamBaseCommit": "4888f1eea92043e31f2da6919156287fe6739dca",
   "upstreamDraftCommit": "7fe19edc7d4eb3c5c626c0548e811dc227fd652c",
   "upstreamFailedPreflightRunId": 44214346548,
-  "textPublicationVerified": false,
+  "textPublicationVerified": true,
   "requestSubmitted": true,
-  "updatedAt": "2026-11-18T06:34:15.117Z",
+  "updatedAt": "2026-11-18T06:43:11.470Z",
   "lastError": null,
-  "nextStep": "Verify exact Sync and Pages plus live deployment",
+  "nextStep": "Verify the exact shared audio continuation and await the separate unique-audio worker and verifier",
   "upstreamSourceCommit": "aae6a7b219d682f5690165f263899bff3f200aea",
   "sourcePagesRunId": 44251605321,
   "snapshotSha256": "0148e45b53f0051dc5262b5fafb3647f2808f6028ad6158dec976f5ea931a55e",
@@ -27,5 +27,20 @@
     "allPassed": true
   },
   "requestCommit": "932c554e40d7746fd7f589e902f6f31745adce00",
-  "requestBlobSha": "b41e000c755bf231bb2f0a3112e2e76d43d10c74"
+  "requestBlobSha": "b41e000c755bf231bb2f0a3112e2e76d43d10c74",
+  "manifestSha256": "f7f9aab0b112820199040d143e54a0d0015ccfb47287350db88e4c59d78640a5",
+  "verifiedFiles": 90,
+  "latestDate": "2026-11-18",
+  "title": "見えるボタンは、使えるボタンなのか",
+  "sourceCommit": "aae6a7b219d682f5690165f263899bff3f200aea",
+  "releaseCommit": "c87b0213ea938d5f34901c8e19e5fdb660d54eb7",
+  "pagesRunId": 44253026328,
+  "syncRunId": 44252311248,
+  "counts": {
+    "vocabularyNew": 6,
+    "vocabularyReview": 14,
+    "grammarNew": 0,
+    "grammarReview": 8
+  },
+  "verifiedAt": "2026-11-18T06:43:11.145Z"
 }
