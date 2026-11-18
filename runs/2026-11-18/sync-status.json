@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "targetDate": "2026-11-18",
+  "day": 81,
+  "stage": "waiting_upstream",
+  "status": "waiting_upstream",
+  "reason": "upstream_dependency_audit_blocked",
+  "sourceMain": "bae09acf451bf4188d8a85e5b0b14454689a2e1f",
+  "sourceBlobSha": "b87f398e980ef39b8765a7269ba225599d2756a8",
+  "sourceSha256": "c73a5be196b192eac6eec579b254872cf8ebc59c7b8bd9eaf77444a9760c646e",
+  "sourceVerified": true,
+  "upstreamBaseCommit": "4888f1eea92043e31f2da6919156287fe6739dca",
+  "upstreamDraftCommit": "7fe19edc7d4eb3c5c626c0548e811dc227fd652c",
+  "upstreamFailedPreflightRunId": 44214346548,
+  "textPublicationVerified": false,
+  "requestSubmitted": false,
+  "updatedAt": "2026-11-18T01:18:45.185Z",
+  "lastError": {
+    "code": "upstream_dependency_audit_blocked",
+    "advisory": "GHSA-fc5q-39xc-vjpf",
+    "workflowUrl": "https://github.com/kai987/japan-it-ai-daily/actions/runs/44214346548"
+  },
+  "nextStep": "Resume from the same original and outbox after the matching upstream main text and full snapshot are verified."
+}
