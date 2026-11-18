@@ -8,6 +8,7 @@ import { liveNovember4Groups } from './live-reactions-2026-11-04.ts'
 import { liveNovember5Groups } from './live-reactions-2026-11-05.ts'
 import { liveNovember9Groups } from './live-reactions-2026-11-09.ts'
 import { liveNovember13Groups } from './live-reactions-2026-11-13.ts'
+import { liveNovember18Groups } from './live-reactions-2026-11-18.ts'
 
 export const liveCategories = [
   { id: 'grammar', label: '文法・口语' },
@@ -56,6 +57,11 @@ const legacyCategories: LiveCategory[] = [
 // 09/30: https://e-comi.shogakukan.co.jp/books/091405040000d0000000
 //        https://dora-world.com/contents/1514
 export const liveUnits: LiveUnit[] = [
+  {
+    id: '2026-11-18', date: '2026-11-18', title: '条件・願望・日常表現の使い分け',
+    description: '笔记标题日期：2026-11-18。根据本次10张连续手机笔记截图，合并重复条目，整理条件与让步、叮嘱与祈愿、愿望表达、词义辨析及自动词／他动词。每组保留可见原文，补充读音、中文释义、用法要点和原创日中例句；未完句和速记简写另作说明。截图未能确认完整漫画篇名，因此按学习主题命名。',
+    countLabel: liveUnitCountLabel(liveNovember18Groups), groups: liveNovember18Groups,
+  },
   {
     id: '2026-11-13', date: '2026-11-13', title: '日常口語・使役受身・似た表現の使い分け',
     description: '整理日期：2026-11-13（日本时间），不是已确认的直播日期。根据本次提供的13张手机笔记截图，合并重复内容，整理日常口语、词义辨析、使役受身和自动词／他动词。每组保留可见笔记原文，另附读音、中文释义、用法辨析和原创日中例句；未完句明确标注，不补写被截断的文字。截图未显示完整日期或漫画篇名，因此以学习主题命名。',

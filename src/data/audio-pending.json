@@ -10,8 +10,1394 @@
     "sampleRate": 24000,
     "codec": "mp3-64k"
   },
-  "requiredClips": 9369,
-  "pendingClips": 0,
+  "requiredClips": 9542,
+  "pendingClips": 173,
   "incompleteLessonDates": [],
-  "entries": []
+  "entries": [
+    {
+      "id": "3755a4c71c435633",
+      "text": "しんちょうがのびる",
+      "label": "身長が伸びる",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-growth-and-diving/entry/live-2026-11-18-entry-grow-taller"
+      ]
+    },
+    {
+      "id": "42218016be554e02",
+      "text": "うみにもぐる",
+      "label": "海に潜る",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-growth-and-diving/entry/live-2026-11-18-entry-dive-into-sea"
+      ]
+    },
+    {
+      "id": "bb80e86a5590004e",
+      "text": "もぐら",
+      "label": "モグラ",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-growth-and-diving/entry/live-2026-11-18-entry-mole"
+      ]
+    },
+    {
+      "id": "d7c59e92f4f4a516",
+      "text": "去年より身長が三センチ伸びた。",
+      "label": "去年より身長が三センチ伸びた。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-growth-and-diving/example/live-2026-11-18-example-three-centimeters-taller/0"
+      ]
+    },
+    {
+      "id": "c6bc728548bf6c59",
+      "text": "夏休みに海に潜って、魚を観察した。",
+      "label": "夏休みに海に潜って、魚を観察した。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-growth-and-diving/example/live-2026-11-18-example-watch-fish-underwater/0"
+      ]
+    },
+    {
+      "id": "13f1268f09c81eb3",
+      "text": "図鑑でモグラについて調べた。",
+      "label": "図鑑でモグラについて調べた。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-growth-and-diving/example/live-2026-11-18-example-look-up-moles/0"
+      ]
+    },
+    {
+      "id": "d3dabffe67897ce2",
+      "text": "うもれていたじんざいをさいようする",
+      "label": "埋もれていた人材を採用する",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-hidden-talent/entry/live-2026-11-18-entry-recruit-hidden-talent"
+      ]
+    },
+    {
+      "id": "036ac21e2bb696f2",
+      "text": "うもれさせておくのはもったいないじんぶつ",
+      "label": "埋もれさせておくのはもったいない人物",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-hidden-talent/entry/live-2026-11-18-entry-too-talented-to-overlook"
+      ]
+    },
+    {
+      "id": "50d99b5162f834dd",
+      "text": "面接で実力を見いだし、これまで埋もれていた人材を採用した。",
+      "label": "面接で実力を見いだし、これまで埋もれていた人材を採用した。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-hidden-talent/example/live-2026-11-18-example-discover-applicant-strength/0"
+      ]
+    },
+    {
+      "id": "ffca89e2e8114a26",
+      "text": "経験豊かな人材を埋もれさせておくのはもったいない。",
+      "label": "経験豊かな人材を埋もれさせておくのはもったいない。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-hidden-talent/example/live-2026-11-18-example-dont-waste-talent/0"
+      ]
+    },
+    {
+      "id": "c2d75dc8238262ec",
+      "text": "ありがたい",
+      "label": "ありがたい",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-gratitude-and-good-news/entry/live-2026-11-18-entry-grateful-for-help"
+      ]
+    },
+    {
+      "id": "9bc01db150fb32bd",
+      "text": "めでたいことずくめ",
+      "label": "めでたいことずくめ",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-gratitude-and-good-news/entry/live-2026-11-18-entry-nothing-but-good-news"
+      ]
+    },
+    {
+      "id": "bfeffb8973b44fa5",
+      "text": "忙しい中、丁寧に助言していただけてありがたいです。",
+      "label": "忙しい中、丁寧に助言していただけてありがたいです。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-gratitude-and-good-news/example/live-2026-11-18-example-helpful-detailed-feedback/0"
+      ]
+    },
+    {
+      "id": "b6ed461b5cb810f7",
+      "text": "兄の結婚に妹の合格と、今年はめでたいことずくめだ。",
+      "label": "兄の結婚に妹の合格と、今年はめでたいことずくめだ。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-gratitude-and-good-news/example/live-2026-11-18-example-family-good-news/0"
+      ]
+    },
+    {
+      "id": "30bed9164c69fd7a",
+      "text": "なべのそこが",
+      "label": "鍋の底が",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-bottom-and-reserve-strength/entry/live-2026-11-18-entry-pot-bottom-fragment"
+      ]
+    },
+    {
+      "id": "cde01b2543ee4ab9",
+      "text": "そこぢから",
+      "label": "底力",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-bottom-and-reserve-strength/entry/live-2026-11-18-entry-reserve-strength"
+      ]
+    },
+    {
+      "id": "4bd9384e83510322",
+      "text": "鍋の底が黒くなっていた。",
+      "label": "鍋の底が黒くなっていた。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-bottom-and-reserve-strength/example/live-2026-11-18-example-blackened-pot-bottom/0"
+      ]
+    },
+    {
+      "id": "ad06cba0b4c5487c",
+      "text": "最後の試合で、チームは底力を見せた。",
+      "label": "最後の試合で、チームは底力を見せた。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-bottom-and-reserve-strength/example/live-2026-11-18-example-team-shows-strength/0"
+      ]
+    },
+    {
+      "id": "9e47d5b3c0ddb567",
+      "text": "こころぼそい",
+      "label": "心細い",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-reassured-and-uneasy/entry/live-2026-11-18-entry-feel-uneasy"
+      ]
+    },
+    {
+      "id": "92361d94618d9190",
+      "text": "経験のある人が一緒にいてくれると心強い。",
+      "label": "経験のある人が一緒にいてくれると心強い。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-reassured-and-uneasy/example/live-2026-11-18-example-reliable-teammate/0"
+      ]
+    },
+    {
+      "id": "fc492a7a559984ae",
+      "text": "初めての町で一人になり、少し心細かった。",
+      "label": "初めての町で一人になり、少し心細かった。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-reassured-and-uneasy/example/live-2026-11-18-example-alone-in-new-city/0"
+      ]
+    },
+    {
+      "id": "52fd55ccfa529300",
+      "text": "めずらしくそうじなんかする",
+      "label": "珍しく掃除なんかする",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-unusual-cleaning/entry/live-2026-11-18-entry-unusual-cleaning"
+      ]
+    },
+    {
+      "id": "de8acd2623191952",
+      "text": "弟が珍しく掃除なんかしている。",
+      "label": "弟が珍しく掃除なんかしている。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-unusual-cleaning/example/live-2026-11-18-example-brother-cleans-unusually/0"
+      ]
+    },
+    {
+      "id": "1e69eaa3a0f721d7",
+      "text": "誰か来るのかな。",
+      "label": "誰か来るのかな。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-unusual-cleaning/example/live-2026-11-18-example-brother-cleans-unusually/1"
+      ]
+    },
+    {
+      "id": "a7f067dc6eb352b8",
+      "text": "今日は珍しく、誰にも言われずに部屋を掃除した。",
+      "label": "今日は珍しく、誰にも言われずに部屋を掃除した。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-unusual-cleaning/example/live-2026-11-18-example-quietly-cleans-room/0"
+      ]
+    },
+    {
+      "id": "0c9e1e8677fae8ca",
+      "text": "そうじすると",
+      "label": "掃除すると、",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-cleaning-and-discovery/entry/live-2026-11-18-entry-when-cleaning"
+      ]
+    },
+    {
+      "id": "1d331213166d0767",
+      "text": "そうじしてみると",
+      "label": "掃除してみると、",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-cleaning-and-discovery/entry/live-2026-11-18-entry-after-trying-cleaning"
+      ]
+    },
+    {
+      "id": "7403fd0a1665bf06",
+      "text": "そうじしていると",
+      "label": "掃除していると、",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-cleaning-and-discovery/entry/live-2026-11-18-entry-while-cleaning"
+      ]
+    },
+    {
+      "id": "f4883c02761ae5f6",
+      "text": "部屋を掃除すると、気分もすっきりする。",
+      "label": "部屋を掃除すると、気分もすっきりする。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-cleaning-and-discovery/example/live-2026-11-18-example-clean-room-clear-mind/0"
+      ]
+    },
+    {
+      "id": "550e74880b51a214",
+      "text": "棚を掃除してみると、奥に古い写真があった。",
+      "label": "棚を掃除してみると、奥に古い写真があった。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-cleaning-and-discovery/example/live-2026-11-18-example-discover-old-photo/0"
+      ]
+    },
+    {
+      "id": "24fbbf9e1d53f94a",
+      "text": "部屋を掃除していると、友達から電話がかかってきた。",
+      "label": "部屋を掃除していると、友達から電話がかかってきた。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-cleaning-and-discovery/example/live-2026-11-18-example-phone-call-during-cleaning/0"
+      ]
+    },
+    {
+      "id": "a95559f885d97bcc",
+      "text": "さわやか",
+      "label": "爽やか",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-fresh-and-clear/entry/live-2026-11-18-entry-refreshing"
+      ]
+    },
+    {
+      "id": "c5009cae05062d2a",
+      "text": "すっきり",
+      "label": "スッキリ",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-fresh-and-clear/entry/live-2026-11-18-entry-clear-and-uncluttered"
+      ]
+    },
+    {
+      "id": "eaecd4a678ebe5d2",
+      "text": "すがすがしい",
+      "label": "すがすがしい",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-fresh-and-clear/entry/live-2026-11-18-entry-fresh-and-invigorating"
+      ]
+    },
+    {
+      "id": "6487d762ff1cc66e",
+      "text": "みずみずしい",
+      "label": "みずみずしい",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-fresh-and-clear/entry/live-2026-11-18-entry-fresh-and-juicy"
+      ]
+    },
+    {
+      "id": "2d393aee97b65bf2",
+      "text": "爽やかな風に吹かれて、すがすがしい気分になった。",
+      "label": "爽やかな風に吹かれて、すがすがしい気分になった。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-fresh-and-clear/example/live-2026-11-18-example-refreshing-morning-air/0"
+      ]
+    },
+    {
+      "id": "24c961146d168bf8",
+      "text": "机の上を片づけたら、見た目がすっきりした。",
+      "label": "机の上を片づけたら、見た目がすっきりした。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-fresh-and-clear/example/live-2026-11-18-example-desk-after-tidying/0"
+      ]
+    },
+    {
+      "id": "f09637bc8f1ec460",
+      "text": "この梨はみずみずしくて、食べると果汁があふれる。",
+      "label": "この梨はみずみずしくて、食べると果汁があふれる。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-fresh-and-clear/example/live-2026-11-18-example-juicy-pears/0"
+      ]
+    },
+    {
+      "id": "02334e947727a738",
+      "text": "初対面なのに馴れ馴れしく話しかけられて、少し戸惑った。",
+      "label": "初対面なのに馴れ馴れしく話しかけられて、少し戸惑った。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-interpersonal-distance/example/live-2026-11-18-example-first-meeting-too-familiar/0"
+      ]
+    },
+    {
+      "id": "d30c3325f79f2c11",
+      "text": "相手の反応を見ながら対人距離を測り、話し方を調整する。",
+      "label": "相手の反応を見ながら対人距離を測り、話し方を調整する。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-interpersonal-distance/example/live-2026-11-18-example-gauge-distance-through-reactions/0"
+      ]
+    },
+    {
+      "id": "562952a5105870e1",
+      "text": "すいがらのぽいすてをする",
+      "label": "吸い殻のポイ捨てをする",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-cigarette-litter/entry/live-2026-11-18-entry-litter-cigarette-butts"
+      ]
+    },
+    {
+      "id": "1cde2c8b68c33787",
+      "text": "はいざら",
+      "label": "灰皿",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-cigarette-litter/entry/live-2026-11-18-entry-ashtray"
+      ]
+    },
+    {
+      "id": "fb2263e55f5a77c1",
+      "text": "吸い殻のポイ捨てをしないでください。",
+      "label": "吸い殻のポイ捨てをしないでください。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-cigarette-litter/example/live-2026-11-18-example-dont-litter-butts/0"
+      ]
+    },
+    {
+      "id": "2a3f657ea8aac16a",
+      "text": "テーブルの上に空の灰皿が置いてあった。",
+      "label": "テーブルの上に空の灰皿が置いてあった。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-cigarette-litter/example/live-2026-11-18-example-empty-ashtray/0"
+      ]
+    },
+    {
+      "id": "4d68036d5fa521a1",
+      "text": "やくそくしたくせに",
+      "label": "約束したくせに、",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-critical-concession/entry/live-2026-11-18-entry-despite-promising"
+      ]
+    },
+    {
+      "id": "d3372ff4d0193908",
+      "text": "こどものくせに",
+      "label": "子供のくせに",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-critical-concession/entry/live-2026-11-18-entry-despite-being-a-child"
+      ]
+    },
+    {
+      "id": "5bb2e6db767c4d17",
+      "text": "約束したくせに、連絡もしないなんてひどい。",
+      "label": "約束したくせに、連絡もしないなんてひどい。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-critical-concession/example/live-2026-11-18-example-promise-without-contact/0"
+      ]
+    },
+    {
+      "id": "9c6aecf22ea1a126",
+      "text": "「子供のくせに」と言われて、悔しかった。",
+      "label": "「子供のくせに」と言われて、悔しかった。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-critical-concession/example/live-2026-11-18-example-upset-by-child-remark/0"
+      ]
+    },
+    {
+      "id": "371a7f39dd1b9ae5",
+      "text": "自分も間違えたくせに、人の失敗ばかり責める。",
+      "label": "自分も間違えたくせに、人の失敗ばかり責める。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-critical-concession/example/live-2026-11-18-example-blame-others-despite-own-error/0"
+      ]
+    },
+    {
+      "id": "8516cfcc0b85ea40",
+      "text": "くちぐせ",
+      "label": "口癖",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-verbal-habit/entry/live-2026-11-18-entry-verbal-habit"
+      ]
+    },
+    {
+      "id": "f85a0d22c1f7df36",
+      "text": "「なんとかなる」が彼の口癖だ。",
+      "label": "「なんとかなる」が彼の口癖だ。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-verbal-habit/example/live-2026-11-18-example-it-will-work-out-catchphrase/0"
+      ]
+    },
+    {
+      "id": "7e397541d8c29f4d",
+      "text": "面接の練習で、自分の口癖に気づいた。",
+      "label": "面接の練習で、自分の口癖に気づいた。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-verbal-habit/example/live-2026-11-18-example-notice-interview-verbal-habit/0"
+      ]
+    },
+    {
+      "id": "f466b453e2fa7007",
+      "text": "きんむじかんのわりに",
+      "label": "勤務時間のわりに",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-relative-expectation/entry/live-2026-11-18-entry-relative-to-working-hours"
+      ]
+    },
+    {
+      "id": "1eede8d7f2a9d733",
+      "text": "この仕事は、勤務時間のわりに給料が高い。",
+      "label": "この仕事は、勤務時間のわりに給料が高い。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-relative-expectation/example/live-2026-11-18-example-salary-relative-to-hours/0"
+      ]
+    },
+    {
+      "id": "2228cda45516a420",
+      "text": "参加者のうち、学生の割合は約半分だ。",
+      "label": "参加者のうち、学生の割合は約半分だ。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-relative-expectation/example/live-2026-11-18-example-student-proportion/0"
+      ]
+    },
+    {
+      "id": "c9518a8a209aa9a6",
+      "text": "今日は割合暖かい。",
+      "label": "今日は割合暖かい。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-relative-expectation/example/live-2026-11-18-example-relatively-warm-day/0"
+      ]
+    },
+    {
+      "id": "6eb76cef05df4bd3",
+      "text": "せんせいのおかげだ",
+      "label": "先生のおかげだ",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-thanks-to-guidance/entry/live-2026-11-18-entry-thanks-to-teacher"
+      ]
+    },
+    {
+      "id": "5215ee449d39f880",
+      "text": "せんせいがしどうしてくれたおかげだ",
+      "label": "先生が指導してくれたおかげだ",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-thanks-to-guidance/entry/live-2026-11-18-entry-thanks-to-teacher-guidance"
+      ]
+    },
+    {
+      "id": "a78e295879540534",
+      "text": "おかげ",
+      "label": "お陰",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-thanks-to-guidance/entry/live-2026-11-18-entry-okage-kanji"
+      ]
+    },
+    {
+      "id": "ef75d12408034fa0",
+      "text": "試験に合格できたのは、先生のおかげです。",
+      "label": "試験に合格できたのは、先生のおかげです。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-thanks-to-guidance/example/live-2026-11-18-example-pass-thanks-to-teacher/0"
+      ]
+    },
+    {
+      "id": "0569a81db50bf6f1",
+      "text": "先生が丁寧に指導してくれたおかげで、発表に自信がついた。",
+      "label": "先生が丁寧に指導してくれたおかげで、発表に自信がついた。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-thanks-to-guidance/example/live-2026-11-18-example-confidence-after-guidance/0"
+      ]
+    },
+    {
+      "id": "e568b9eae118b306",
+      "text": "皆さんのおかげで、無事に公開できました。",
+      "label": "皆さんのおかげで、無事に公開できました。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-thanks-to-guidance/example/live-2026-11-18-example-release-thanks-to-everyone/0"
+      ]
+    },
+    {
+      "id": "38f4c4a8ddf8601c",
+      "text": "はやくくるように",
+      "label": "早く来るように。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-ending-you-ni-instructions/entry/live-2026-11-18-entry-come-early-instruction"
+      ]
+    },
+    {
+      "id": "d4a5ab4b3b39371f",
+      "text": "ぜったいにちこくしないように",
+      "label": "絶対に遅刻しないように。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-ending-you-ni-instructions/entry/live-2026-11-18-entry-do-not-be-late-instruction"
+      ]
+    },
+    {
+      "id": "441a8ce8ef6e0edc",
+      "text": "説明会には五分前に来るように。",
+      "label": "説明会には五分前に来るように。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-ending-you-ni-instructions/example/live-2026-11-18-example-arrive-before-briefing/0"
+      ]
+    },
+    {
+      "id": "27e66f144537c580",
+      "text": "提出前に、名前を書き忘れないように。",
+      "label": "提出前に、名前を書き忘れないように。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-ending-you-ni-instructions/example/live-2026-11-18-example-do-not-forget-name/0"
+      ]
+    },
+    {
+      "id": "78510019bc02916d",
+      "text": "らいねん、いいいちねんになるように",
+      "label": "来年、いい一年になるように。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-ending-you-ni-wishes/entry/live-2026-11-18-entry-wish-for-good-year"
+      ]
+    },
+    {
+      "id": "0c007389a81e04ed",
+      "text": "ごうかくできるように",
+      "label": "合格できるように。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-ending-you-ni-wishes/entry/live-2026-11-18-entry-wish-to-pass"
+      ]
+    },
+    {
+      "id": "bcb6c4b522f8aa61",
+      "text": "来年が、穏やかでいい一年になりますように。",
+      "label": "来年が、穏やかでいい一年になりますように。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-ending-you-ni-wishes/example/live-2026-11-18-example-wish-for-peaceful-year/0"
+      ]
+    },
+    {
+      "id": "3544001ebc497bca",
+      "text": "日本語の試験に合格できますように。",
+      "label": "日本語の試験に合格できますように。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-ending-you-ni-wishes/example/live-2026-11-18-example-wish-to-pass-japanese-test/0"
+      ]
+    },
+    {
+      "id": "7f23dc28ec023fa4",
+      "text": "おおげさ",
+      "label": "大袈裟",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-exaggerated-and-rough/entry/live-2026-11-18-entry-exaggerated"
+      ]
+    },
+    {
+      "id": "c761d8b5ec49ae91",
+      "text": "おおざっぱ",
+      "label": "大雑把",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-exaggerated-and-rough/entry/live-2026-11-18-entry-rough-or-careless"
+      ]
+    },
+    {
+      "id": "ac8ab83142a2bc9d",
+      "text": "大袈裟な表現を減らして、事実を簡潔に説明した。",
+      "label": "大袈裟な表現を減らして、事実を簡潔に説明した。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-exaggerated-and-rough/example/live-2026-11-18-example-reduce-exaggeration/0"
+      ]
+    },
+    {
+      "id": "64f0443412068938",
+      "text": "まずは大雑把な計画を立ててから、細部を詰めよう。",
+      "label": "まずは大雑把な計画を立ててから、細部を詰めよう。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-exaggerated-and-rough/example/live-2026-11-18-example-rough-plan-before-details/0"
+      ]
+    },
+    {
+      "id": "2c8d77c63eb2caf2",
+      "text": "なまいき",
+      "label": "生意気",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-cheeky-and-greedy/entry/live-2026-11-18-entry-cheeky-presumptuous"
+      ]
+    },
+    {
+      "id": "3698a2eef503b5ea",
+      "text": "よくばり",
+      "label": "欲張り",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-cheeky-and-greedy/entry/live-2026-11-18-entry-greedy-person"
+      ]
+    },
+    {
+      "id": "f2d214761ad29a52",
+      "text": "生意気なことを言ってすみませんが、この案には問題があると思います。",
+      "label": "生意気なことを言ってすみませんが、この案には問題があると思います。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-cheeky-and-greedy/example/live-2026-11-18-example-presumptuous-opinion/0"
+      ]
+    },
+    {
+      "id": "9d3ab4628e7301c6",
+      "text": "全部ほしいなんて、欲張りだなあ。",
+      "label": "全部ほしいなんて、欲張りだなあ。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-cheeky-and-greedy/example/live-2026-11-18-example-want-everything/0"
+      ]
+    },
+    {
+      "id": "48cd35c6c6a296ea",
+      "text": "試験の結果が気になって、何度もメールを確認した。",
+      "label": "試験の結果が気になって、何度もメールを確認した。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-attention-and-noticing/example/live-2026-11-18-example-concerned-about-result/0"
+      ]
+    },
+    {
+      "id": "6190cd6264729af6",
+      "text": "提出したあとで、名前の誤字に気づいた。",
+      "label": "提出したあとで、名前の誤字に気づいた。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-attention-and-noticing/example/live-2026-11-18-example-notice-name-typo/0"
+      ]
+    },
+    {
+      "id": "191138208e06ad1c",
+      "text": "駅前にできた新しい店が気になる。",
+      "label": "駅前にできた新しい店が気になる。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-attention-and-noticing/example/live-2026-11-18-example-interested-in-new-shop/0"
+      ]
+    },
+    {
+      "id": "7b277d504e601c54",
+      "text": "きょうだろうが、あしただろうが",
+      "label": "今日だろうが、明日だろうが",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-whichever-alternative/entry/live-2026-11-18-entry-today-or-tomorrow"
+      ]
+    },
+    {
+      "id": "d6b6f2ff4d24c693",
+      "text": "にほんだろうと、アメリカだろうと",
+      "label": "日本だろうと、アメリカだろうと",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-whichever-alternative/entry/live-2026-11-18-entry-japan-or-america"
+      ]
+    },
+    {
+      "id": "bfcb7a63e93c98c7",
+      "text": "にくであろうが、やさいであろうが",
+      "label": "肉であろうが、野菜であろうが",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-whichever-alternative/entry/live-2026-11-18-entry-meat-or-vegetables"
+      ]
+    },
+    {
+      "id": "7b582623564e5b0f",
+      "text": "今日だろうが、明日だろうが、困ったら連絡して。",
+      "label": "今日だろうが、明日だろうが、困ったら連絡して。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-whichever-alternative/example/live-2026-11-18-example-contact-on-either-day/0"
+      ]
+    },
+    {
+      "id": "1e5d9e3a1f9c8a16",
+      "text": "日本だろうと、アメリカだろうと、オンラインなら一緒に勉強できる。",
+      "label": "日本だろうと、アメリカだろうと、オンラインなら一緒に勉強できる。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-whichever-alternative/example/live-2026-11-18-example-study-online-anywhere/0"
+      ]
+    },
+    {
+      "id": "87711eaff56f116b",
+      "text": "肉であろうが、野菜であろうが、食材を無駄にはしたくない。",
+      "label": "肉であろうが、野菜であろうが、食材を無駄にはしたくない。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-whichever-alternative/example/live-2026-11-18-example-avoid-food-waste/0"
+      ]
+    },
+    {
+      "id": "840a6ca8a4bdf0c4",
+      "text": "わんしょうをうでにはめる",
+      "label": "腕章を腕にはめる",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-wearing-armband/entry/live-2026-11-18-entry-put-armband-on-arm"
+      ]
+    },
+    {
+      "id": "01bd67e11a3fd5cd",
+      "text": "案内係は黄色い腕章を腕にはめている。",
+      "label": "案内係は黄色い腕章を腕にはめている。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-wearing-armband/example/live-2026-11-18-example-guide-wears-yellow-armband/0"
+      ]
+    },
+    {
+      "id": "5ded9c8ad7ec9c6e",
+      "text": "スタッフは腕章をつけてから、持ち場に向かった。",
+      "label": "スタッフは腕章をつけてから、持ち場に向かった。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-wearing-armband/example/live-2026-11-18-example-staff-armbands/0"
+      ]
+    },
+    {
+      "id": "e76fb5411c82c48d",
+      "text": "おとしいれる",
+      "label": "陥れる",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-fall-into-and-entrap/entry/live-2026-11-18-entry-entrap-or-plunge-into"
+      ]
+    },
+    {
+      "id": "58bd2719661be04d",
+      "text": "おちいる",
+      "label": "陥る",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-fall-into-and-entrap/entry/live-2026-11-18-entry-fall-into-state"
+      ]
+    },
+    {
+      "id": "97e877787766c61c",
+      "text": "一つの不具合が、システム全体を混乱に陥れた。",
+      "label": "一つの不具合が、システム全体を混乱に陥れた。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-fall-into-and-entrap/example/live-2026-11-18-example-error-plunges-system-into-confusion/0"
+      ]
+    },
+    {
+      "id": "1ebbd2a7372cc973",
+      "text": "計画の途中で、資金不足に陥った。",
+      "label": "計画の途中で、資金不足に陥った。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-fall-into-and-entrap/example/live-2026-11-18-example-project-in-financial-difficulty/0"
+      ]
+    },
+    {
+      "id": "b2ab9aceeaa61baa",
+      "text": "うその情報で人を陥れるようなことはしない。",
+      "label": "うその情報で人を陥れるようなことはしない。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-fall-into-and-entrap/example/live-2026-11-18-example-false-information-entrapment/0"
+      ]
+    },
+    {
+      "id": "40b3448c3244ad50",
+      "text": "にほんににげてもむだだよ",
+      "label": "日本に逃げても無駄だよ",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-escape-concession/entry/live-2026-11-18-entry-escape-to-japan-in-vain"
+      ]
+    },
+    {
+      "id": "a9a01ee70e389f5b",
+      "text": "どこににげてもむだだよ",
+      "label": "どこに逃げても無駄だよ",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-escape-concession/entry/live-2026-11-18-entry-escape-anywhere-in-vain"
+      ]
+    },
+    {
+      "id": "17d86c52d793cf0e",
+      "text": "電源が入っていなければ、ボタンを押しても無駄です。",
+      "label": "電源が入っていなければ、ボタンを押しても無駄です。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-escape-concession/example/live-2026-11-18-example-button-without-power/0"
+      ]
+    },
+    {
+      "id": "b5d63ae142cbf7c5",
+      "text": "どこに問い合わせても、同じ回答でした。",
+      "label": "どこに問い合わせても、同じ回答でした。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-escape-concession/example/live-2026-11-18-example-same-answer-anywhere/0"
+      ]
+    },
+    {
+      "id": "7b364d29ccdd9775",
+      "text": "こどもでもわかるよ",
+      "label": "子供でもわかるよ",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-demo-even-and-anyone/entry/live-2026-11-18-entry-even-children-understand"
+      ]
+    },
+    {
+      "id": "8e4c78b9e2163185",
+      "text": "だれでもわかるよ",
+      "label": "誰でもわかるよ",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-demo-even-and-anyone/entry/live-2026-11-18-entry-anyone-understands"
+      ]
+    },
+    {
+      "id": "a7c6de186a2e1c8c",
+      "text": "この説明なら、初心者でも理解できます。",
+      "label": "この説明なら、初心者でも理解できます。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-demo-even-and-anyone/example/live-2026-11-18-example-beginners-can-understand/0"
+      ]
+    },
+    {
+      "id": "2f74156eddc99c2a",
+      "text": "この公園は誰でも利用できます。",
+      "label": "この公園は誰でも利用できます。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-demo-even-and-anyone/example/live-2026-11-18-example-park-open-to-everyone/0"
+      ]
+    },
+    {
+      "id": "a106b7841023d480",
+      "text": "おかしなことがおこる",
+      "label": "おかしなことが起こる",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-strange-events/entry/live-2026-11-18-entry-strange-things-happen"
+      ]
+    },
+    {
+      "id": "56b6de7748f8e443",
+      "text": "設定を変えてから、おかしなことが起こるようになった。",
+      "label": "設定を変えてから、おかしなことが起こるようになった。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-strange-events/example/live-2026-11-18-example-strange-after-setting-change/0"
+      ]
+    },
+    {
+      "id": "5f41963152080e0d",
+      "text": "会議の途中で、思いがけないことが起こった。",
+      "label": "会議の途中で、思いがけないことが起こった。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-strange-events/example/live-2026-11-18-example-unexpected-during-meeting/0"
+      ]
+    },
+    {
+      "id": "22394e4e22b9b5ca",
+      "text": "私についてきてください。",
+      "label": "私についてきてください。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-following-direction/example/live-2026-11-18-example-follow-me-to-reception/0"
+      ]
+    },
+    {
+      "id": "f870d374347b7290",
+      "text": "受付まで案内します。",
+      "label": "受付まで案内します。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-following-direction/example/live-2026-11-18-example-follow-me-to-reception/1"
+      ]
+    },
+    {
+      "id": "ba7e2049f92e609d",
+      "text": "道を知っている彼についていこう。",
+      "label": "道を知っている彼についていこう。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-following-direction/example/live-2026-11-18-example-follow-him-who-knows-way/0"
+      ]
+    },
+    {
+      "id": "9d63ec23974d7187",
+      "text": "それはいけないね",
+      "label": "それはいけないね",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-ikenai-response/entry/live-2026-11-18-entry-that-is-not-good"
+      ]
+    },
+    {
+      "id": "2d58dc2429a011d0",
+      "text": "友達のノートを勝手に見たの?",
+      "label": "友達のノートを勝手に見たの？",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-ikenai-response/example/live-2026-11-18-example-do-not-read-notebook-secretly/0"
+      ]
+    },
+    {
+      "id": "e53387f371145497",
+      "text": "それはいけないね。",
+      "label": "それはいけないね。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-ikenai-response/example/live-2026-11-18-example-do-not-read-notebook-secretly/1",
+        "live/2026-11-18/live-2026-11-18-ikenai-response/example/live-2026-11-18-example-missed-submission-deadline/1"
+      ]
+    },
+    {
+      "id": "74ebd58c47d31ee0",
+      "text": "提出期限を過ぎてしまったの?",
+      "label": "提出期限を過ぎてしまったの？",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-ikenai-response/example/live-2026-11-18-example-missed-submission-deadline/0"
+      ]
+    },
+    {
+      "id": "1639236725bb0f33",
+      "text": "先生に相談しよう。",
+      "label": "先生に相談しよう。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-ikenai-response/example/live-2026-11-18-example-missed-submission-deadline/2"
+      ]
+    },
+    {
+      "id": "2f401309caf314dd",
+      "text": "はしりたければ、はしればいいんだよ",
+      "label": "走りたければ、走ればいいんだよ",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-conditional-advice/entry/live-2026-11-18-entry-run-if-you-want"
+      ]
+    },
+    {
+      "id": "909aa0584aa7594c",
+      "text": "たべたければ、たべればいい",
+      "label": "食べたければ、食べればいい",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-conditional-advice/entry/live-2026-11-18-entry-eat-if-you-want"
+      ]
+    },
+    {
+      "id": "4a329197fce64853",
+      "text": "ばいい",
+      "label": "～ばいい",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-conditional-advice/entry/live-2026-11-18-entry-ba-ii-pattern"
+      ]
+    },
+    {
+      "id": "b9022292277798ae",
+      "text": "疲れているなら、少し休めばいいですよ。",
+      "label": "疲れているなら、少し休めばいいですよ。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-conditional-advice/example/live-2026-11-18-example-take-break-if-tired/0"
+      ]
+    },
+    {
+      "id": "20ed9c8bdcb5fcef",
+      "text": "わからなければ、先生に聞けばいい。",
+      "label": "わからなければ、先生に聞けばいい。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-conditional-advice/example/live-2026-11-18-example-ask-teacher-if-unclear/0"
+      ]
+    },
+    {
+      "id": "6e8c3c0de24ceb31",
+      "text": "この本を読みたければ、借りていけばいいよ。",
+      "label": "この本を読みたければ、借りていけばいいよ。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-conditional-advice/example/live-2026-11-18-example-read-book-if-interested/0"
+      ]
+    },
+    {
+      "id": "be4e9fec6f6d0000",
+      "text": "こんなぐあいに",
+      "label": "こんな具合に",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-manner-and-malfunction/entry/live-2026-11-18-entry-in-this-manner"
+      ]
+    },
+    {
+      "id": "a912905256cf7cae",
+      "text": "こしょう",
+      "label": "故障",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-manner-and-malfunction/entry/live-2026-11-18-entry-equipment-breakdown"
+      ]
+    },
+    {
+      "id": "7904adecd0cb0f40",
+      "text": "こんな具合に紙を二つに折ってください。",
+      "label": "こんな具合に紙を二つに折ってください。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-manner-and-malfunction/example/live-2026-11-18-example-fold-paper-like-this/0"
+      ]
+    },
+    {
+      "id": "3bb5432bd1d57dff",
+      "text": "画面の表示に不具合があり、修正しています。",
+      "label": "画面の表示に不具合があり、修正しています。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-manner-and-malfunction/example/live-2026-11-18-example-fix-display-defect/0"
+      ]
+    },
+    {
+      "id": "e2444915c2ed2981",
+      "text": "エレベーターが故障しているので、階段を使います。",
+      "label": "エレベーターが故障しているので、階段を使います。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-manner-and-malfunction/example/live-2026-11-18-example-elevator-breakdown/0"
+      ]
+    },
+    {
+      "id": "e7a9e2e0904c7284",
+      "text": "といっただけだ",
+      "label": "～と言っただけだ",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-only-said/entry/live-2026-11-18-entry-only-said-pattern"
+      ]
+    },
+    {
+      "id": "743934bd6f20a8f9",
+      "text": "私は「今日は忙しい」と言っただけです。",
+      "label": "私は「今日は忙しい」と言っただけです。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-only-said/example/live-2026-11-18-example-only-said-busy/0"
+      ]
+    },
+    {
+      "id": "d0d3e50276b376b6",
+      "text": "断ったわけではありません。",
+      "label": "断ったわけではありません。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-only-said/example/live-2026-11-18-example-only-said-busy/1"
+      ]
+    },
+    {
+      "id": "b40ae48d749523c1",
+      "text": "彼には「ありがとう」と言っただけだ。",
+      "label": "彼には「ありがとう」と言っただけだ。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-only-said/example/live-2026-11-18-example-only-thanked/0"
+      ]
+    },
+    {
+      "id": "a33c2efcf6ddf108",
+      "text": "れつにわりこむ",
+      "label": "列に割り込む",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-queue-cutting/entry/live-2026-11-18-entry-cut-into-line"
+      ]
+    },
+    {
+      "id": "8660992234890df6",
+      "text": "わりこみはいけない",
+      "label": "割り込みはいけない",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-queue-cutting/entry/live-2026-11-18-entry-no-queue-cutting"
+      ]
+    },
+    {
+      "id": "e706319cce782de0",
+      "text": "順番を待っていたら、前に人が割り込んできた。",
+      "label": "順番を待っていたら、前に人が割り込んできた。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-queue-cutting/example/live-2026-11-18-example-someone-cut-into-line/0"
+      ]
+    },
+    {
+      "id": "cb596c32f5efcdb6",
+      "text": "皆さんお待ちですので、列の最後尾にお並びください。",
+      "label": "皆さんお待ちですので、列の最後尾にお並びください。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-queue-cutting/example/live-2026-11-18-example-join-end-of-line/0"
+      ]
+    },
+    {
+      "id": "7a6f969a0ca15bc6",
+      "text": "つらをかせ",
+      "label": "ツラを貸せ",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-rough-call-aside/entry/live-2026-11-18-entry-rough-give-me-your-face"
+      ]
+    },
+    {
+      "id": "092679bcd9d5b388",
+      "text": "かおをかせ",
+      "label": "顔を貸せ",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-rough-call-aside/entry/live-2026-11-18-entry-come-aside-command"
+      ]
+    },
+    {
+      "id": "cd50eedd1e115561",
+      "text": "少しお話しできますか。",
+      "label": "少しお話しできますか。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-rough-call-aside/example/live-2026-11-18-example-polite-short-talk/0"
+      ]
+    },
+    {
+      "id": "1cecd6184edef7cc",
+      "text": "確認したいことがあります。",
+      "label": "確認したいことがあります。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-rough-call-aside/example/live-2026-11-18-example-polite-short-talk/1"
+      ]
+    },
+    {
+      "id": "d1f2ae61d670e24d",
+      "text": "映画の登場人物が「ちょっと顔を貸せ」と言って、相手を呼び出した。",
+      "label": "映画の登場人物が「ちょっと顔を貸せ」と言って、相手を呼び出した。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-rough-call-aside/example/live-2026-11-18-example-narrate-rough-call/0"
+      ]
+    },
+    {
+      "id": "c8da8d4c7e7311d0",
+      "text": "かんべんしてください",
+      "label": "勘弁してください",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-ask-for-leniency/entry/live-2026-11-18-entry-please-spare-me"
+      ]
+    },
+    {
+      "id": "4ae8be2774a8869b",
+      "text": "今回だけは勘弁してください。",
+      "label": "今回だけは勘弁してください。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-ask-for-leniency/example/live-2026-11-18-example-spare-this-once/0"
+      ]
+    },
+    {
+      "id": "fd17bb1f132c26d3",
+      "text": "次から気をつけます。",
+      "label": "次から気をつけます。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-ask-for-leniency/example/live-2026-11-18-example-spare-this-once/1"
+      ]
+    },
+    {
+      "id": "66c74b331bf6560f",
+      "text": "その話でからかうのは、もう勘弁してください。",
+      "label": "その話でからかうのは、もう勘弁してください。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-ask-for-leniency/example/live-2026-11-18-example-please-stop-teasing/0"
+      ]
+    },
+    {
+      "id": "1065ab39149e949d",
+      "text": "ききめがある",
+      "label": "効き目がある",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-effectiveness-and-winning/entry/live-2026-11-18-entry-has-an-effect"
+      ]
+    },
+    {
+      "id": "e426ab02dc01e986",
+      "text": "かちめがない",
+      "label": "勝ち目がない",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-effectiveness-and-winning/entry/live-2026-11-18-entry-no-chance-of-winning"
+      ]
+    },
+    {
+      "id": "2d54c33fea41a27b",
+      "text": "その注意書きには効き目があり、置き忘れが減った。",
+      "label": "その注意書きには効き目があり、置き忘れが減った。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-effectiveness-and-winning/example/live-2026-11-18-example-reminder-was-effective/0"
+      ]
+    },
+    {
+      "id": "0f8d0117826e98eb",
+      "text": "準備をしないままでは、強い相手に勝ち目がない。",
+      "label": "準備をしないままでは、強い相手に勝ち目がない。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-effectiveness-and-winning/example/live-2026-11-18-example-no-win-without-plan/0"
+      ]
+    },
+    {
+      "id": "05ccb76c5d4f9130",
+      "text": "チャンスをつかむ",
+      "label": "チャンスをつかむ",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-seize-miss-overlook/entry/live-2026-11-18-entry-seize-opportunity"
+      ]
+    },
+    {
+      "id": "dcaf66a60e852b7a",
+      "text": "チャンスをのがす",
+      "label": "チャンスを逃す",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-seize-miss-overlook/entry/live-2026-11-18-entry-miss-opportunity"
+      ]
+    },
+    {
+      "id": "1c55f5d213a18f4e",
+      "text": "わるいことをみのがす",
+      "label": "悪いことを見逃す",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-seize-miss-overlook/entry/live-2026-11-18-entry-overlook-wrongdoing"
+      ]
+    },
+    {
+      "id": "8209ba84e256ae78",
+      "text": "新しい技術を学べるチャンスをつかみたい。",
+      "label": "新しい技術を学べるチャンスをつかみたい。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-seize-miss-overlook/example/live-2026-11-18-example-seize-learning-chance/0"
+      ]
+    },
+    {
+      "id": "a6b9e22866a153ec",
+      "text": "締め切りを忘れて、応募のチャンスを逃してしまった。",
+      "label": "締め切りを忘れて、応募のチャンスを逃してしまった。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-seize-miss-overlook/example/live-2026-11-18-example-missed-application-chance/0"
+      ]
+    },
+    {
+      "id": "ee0cafb30b697d27",
+      "text": "小さなミスも見逃さないように、提出前に確認します。",
+      "label": "小さなミスも見逃さないように、提出前に確認します。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-seize-miss-overlook/example/live-2026-11-18-example-do-not-overlook-small-errors/0"
+      ]
+    },
+    {
+      "id": "3a59f4b678c52912",
+      "text": "たとえしっぱいしても",
+      "label": "たとえ失敗しても",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-even-if-failure/entry/live-2026-11-18-entry-even-if-fail"
+      ]
+    },
+    {
+      "id": "f586a8c143249dfd",
+      "text": "たとえ失敗しても、原因を調べてもう一度試します。",
+      "label": "たとえ失敗しても、原因を調べてもう一度試します。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-even-if-failure/example/live-2026-11-18-example-try-again-after-failure/0"
+      ]
+    },
+    {
+      "id": "837f28a49c9c0df8",
+      "text": "たとえ難しくても、自分で考えてみたいです。",
+      "label": "たとえ難しくても、自分で考えてみたいです。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-even-if-failure/example/live-2026-11-18-example-challenge-even-if-difficult/0"
+      ]
+    },
+    {
+      "id": "adbc9d03d9acb27f",
+      "text": "おかねがほしい",
+      "label": "お金がほしい",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-want-and-want-someone-to/entry/live-2026-11-18-entry-want-money"
+      ]
+    },
+    {
+      "id": "1100989c3d755088",
+      "text": "おかねをかせいでほしい",
+      "label": "お金を稼いでほしい",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-want-and-want-someone-to/entry/live-2026-11-18-entry-want-someone-to-earn-money"
+      ]
+    },
+    {
+      "id": "5bb8d42d0078b029",
+      "text": "てほしい",
+      "label": "～てほしい",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-want-and-want-someone-to/entry/live-2026-11-18-entry-want-someone-to-do"
+      ]
+    },
+    {
+      "id": "e41a7d347850fc20",
+      "text": "おかねをかせぎたい",
+      "label": "お金を稼ぎたい",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-want-and-want-someone-to/entry/live-2026-11-18-entry-want-to-earn-money"
+      ]
+    },
+    {
+      "id": "55051eb7b46bd603",
+      "text": "今は物より、自由に使えるお金がほしい。",
+      "label": "今は物より、自由に使えるお金がほしい。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-want-and-want-someone-to/example/live-2026-11-18-example-money-rather-than-things/0"
+      ]
+    },
+    {
+      "id": "feb95e865d0ecc7a",
+      "text": "新しいパソコンを買いたいので、もう少しお金を稼ぎたい。",
+      "label": "新しいパソコンを買いたいので、もう少しお金を稼ぎたい。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-want-and-want-someone-to/example/live-2026-11-18-example-earn-for-new-computer/0"
+      ]
+    },
+    {
+      "id": "7be6c0ec3d771a28",
+      "text": "息子には、まず自分で生活費を稼いでほしい。",
+      "label": "息子には、まず自分で生活費を稼いでほしい。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-want-and-want-someone-to/example/live-2026-11-18-example-wish-son-earns-living/0"
+      ]
+    },
+    {
+      "id": "cee48b0f584c06fb",
+      "text": "たたかれたい",
+      "label": "叩かれたい",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-passive-desire/entry/live-2026-11-18-entry-want-to-be-tapped"
+      ]
+    },
+    {
+      "id": "1c2ec03c747a9678",
+      "text": "しばられたい",
+      "label": "縛られたい",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-passive-desire/entry/live-2026-11-18-entry-want-to-be-bound"
+      ]
+    },
+    {
+      "id": "c60a507f2d1aaa93",
+      "text": "子供のころは、試合に勝って父に肩を叩かれたいと思っていた。",
+      "label": "子供のころは、試合に勝って父に肩を叩かれたいと思っていた。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-passive-desire/example/live-2026-11-18-example-want-pat-after-victory/0"
+      ]
+    },
+    {
+      "id": "49f6df2606f98732",
+      "text": "時間に縛られたくないので、予定を詰めすぎないようにしている。",
+      "label": "時間に縛られたくないので、予定を詰めすぎないようにしている。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-passive-desire/example/live-2026-11-18-example-not-bound-by-time/0"
+      ]
+    },
+    {
+      "id": "abf4653a31802d2e",
+      "text": "あってほしいおんなのこがいるんだけど",
+      "label": "会ってほしい女の子がいるんだけど",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-wanted-action-relative-clause/entry/live-2026-11-18-entry-girl-i-want-you-to-meet"
+      ]
+    },
+    {
+      "id": "21f4748b5e73b0cf",
+      "text": "よんでほしいほんがあるんだけど",
+      "label": "読んでほしい本があるんだけど",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-wanted-action-relative-clause/entry/live-2026-11-18-entry-book-i-want-you-to-read"
+      ]
+    },
+    {
+      "id": "c70edd63abd60aef",
+      "text": "会ってほしい女の子がいるんだけど、今度の週末に紹介してもいい?",
+      "label": "会ってほしい女の子がいるんだけど、今度の週末に紹介してもいい？",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-wanted-action-relative-clause/example/live-2026-11-18-example-introduce-someone-next-weekend/0"
+      ]
+    },
+    {
+      "id": "89d4196484d6b550",
+      "text": "ぜひ読んでほしい本があるんだけど、あとで貸してもいい?",
+      "label": "ぜひ読んでほしい本があるんだけど、あとで貸してもいい？",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-wanted-action-relative-clause/example/live-2026-11-18-example-lend-recommended-book/0"
+      ]
+    },
+    {
+      "id": "3c227cb98d5a7ebd",
+      "text": "さかもとですが。",
+      "label": "坂本ですが。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-name-plus-desu-ga/entry/live-2026-11-18-entry-sakamoto-introduction"
+      ]
+    },
+    {
+      "id": "cf87766e3314ffca",
+      "text": "坂本ですが、田中さんはいらっしゃいますか。",
+      "label": "坂本ですが、田中さんはいらっしゃいますか。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-name-plus-desu-ga/example/live-2026-11-18-example-sakamoto-calling-tanaka/0"
+      ]
+    },
+    {
+      "id": "24eadca5eaebd679",
+      "text": "昨日予約した坂本ですが、時間を変更できますか。",
+      "label": "昨日予約した坂本ですが、時間を変更できますか。",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-name-plus-desu-ga/example/live-2026-11-18-example-sakamoto-reservation-check/0"
+      ]
+    }
+  ]
 }
