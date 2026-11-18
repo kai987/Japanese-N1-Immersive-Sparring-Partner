@@ -21,10 +21,10 @@
     "supabase": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/"
   },
   "summary": {
-    "total": 9371,
-    "reused": 1746,
+    "total": 9372,
+    "reused": 1747,
     "uploads": 7625,
-    "savedBytes": 48927018,
+    "savedBytes": 48941463,
     "uploadBytes": 272069013
   },
   "clips": {
@@ -22553,6 +22553,13 @@
       "sha256": "569d9c63e8d4000f86cb1ad4d5288ae7431244983982f37133ded60d7042c13f",
       "bytes": 67053,
       "duration": 8.292
+    },
+    "58bd2719661be04d": {
+      "provider": "daily",
+      "path": "japanese/2026-09-07/vocab-08--b965022484070562d94e4a507432894cd02fc5e3133b12a484efbe4dbda71999.mp3",
+      "bytes": 14445,
+      "duration": 1.115,
+      "sha256": "b965022484070562d94e4a507432894cd02fc5e3133b12a484efbe4dbda71999"
     },
     "58c1f9b90c27353d": {
       "provider": "supabase",
@@ -65626,5 +65633,5 @@
       "duration": 2.289
     }
   },
-  "verifiedAt": "2026-11-18T07:42:23.302Z"
+  "verifiedAt": "2026-11-18T18:15:36.437Z"
 }

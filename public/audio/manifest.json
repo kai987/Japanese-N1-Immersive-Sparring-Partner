@@ -12,7 +12,7 @@
   },
   "engineVersion": "1.1.0-dev",
   "modelVersion": "1.0.0",
-  "generatedAt": "2026-11-18T07:42:23.302Z",
+  "generatedAt": "2026-11-18T18:15:36.437Z",
   "lessonDates": [
     "2026-11-18",
     "2026-11-17",
@@ -96,7 +96,7 @@
     "2026-08-31",
     "2026-08-30"
   ],
-  "expectedClips": 9371,
+  "expectedClips": 9372,
   "complete": true,
   "clips": {
     "000508138c45e52f": {
@@ -15566,7 +15566,8 @@
       "text": "たいじんきょりをはかる",
       "label": "対人距離をはかる",
       "references": [
-        "live/2026-11-04/live-2026-11-04-personal-distance/entry/live-2026-11-04-entry-gauge-social-distance"
+        "live/2026-11-04/live-2026-11-04-personal-distance/entry/live-2026-11-04-entry-gauge-social-distance",
+        "live/2026-11-18/live-2026-11-18-interpersonal-distance/entry/live-2026-11-18-entry-gauge-interpersonal-distance"
       ],
       "duration": 1.85,
       "bytes": 15597,
@@ -23911,7 +23912,8 @@
       "text": "わたしについていこう",
       "label": "私についていこう",
       "references": [
-        "live/2026-11-04/live-2026-11-04-follow-peek-stop/entry/live-2026-11-04-entry-follow-me-note"
+        "live/2026-11-04/live-2026-11-04-follow-peek-stop/entry/live-2026-11-04-entry-follow-me-note",
+        "live/2026-11-18/live-2026-11-18-following-direction/entry/live-2026-11-18-entry-follow-me-original-note"
       ],
       "duration": 1.79,
       "bytes": 15021,
@@ -31284,7 +31286,8 @@
       "text": "ふぐあい",
       "label": "不具合",
       "references": [
-        "lesson/2026-10-02/vocabulary/2026-10-02-v-08229f38d969/word"
+        "lesson/2026-10-02/vocabulary/2026-10-02-v-08229f38d969/word",
+        "live/2026-11-18/live-2026-11-18-manner-and-malfunction/entry/live-2026-11-18-entry-malfunction-defect"
       ],
       "duration": 1.036,
       "bytes": 9069,
@@ -40604,6 +40607,18 @@
       "sha256": "569d9c63e8d4000f86cb1ad4d5288ae7431244983982f37133ded60d7042c13f",
       "rms": 0.146188
     },
+    "58bd2719661be04d": {
+      "id": "58bd2719661be04d",
+      "text": "おちいる",
+      "label": "陥る",
+      "references": [
+        "live/2026-11-18/live-2026-11-18-fall-into-and-entrap/entry/live-2026-11-18-entry-fall-into-state"
+      ],
+      "bytes": 14445,
+      "duration": 1.115,
+      "rms": 0.140955,
+      "sha256": "b965022484070562d94e4a507432894cd02fc5e3133b12a484efbe4dbda71999"
+    },
     "58c1f9b90c27353d": {
       "id": "58c1f9b90c27353d",
       "text": "Contextの管理、Tool Call、Subagent同士の協調、File・Code・中間結果などの状態を維持しながら、途中で失敗した場合の停止条件や権限も設計する必要がある。",
@@ -41288,7 +41303,8 @@
       "text": "しばる",
       "label": "縛る",
       "references": [
-        "lesson/2026-10-06/vocabulary/2026-10-06-v-study-ffdbdf4c/word"
+        "lesson/2026-10-06/vocabulary/2026-10-06-v-study-ffdbdf4c/word",
+        "live/2026-11-18/live-2026-11-18-passive-desire/entry/live-2026-11-18-entry-tie-or-restrict"
       ],
       "duration": 1.094,
       "bytes": 9453,
@@ -41898,7 +41914,8 @@
       "text": "こころづよい",
       "label": "心強い",
       "references": [
-        "lesson/2026-09-12/vocabulary/2026-09-12-v-r006/word"
+        "lesson/2026-09-12/vocabulary/2026-09-12-v-r006/word",
+        "live/2026-11-18/live-2026-11-18-reassured-and-uneasy/entry/live-2026-11-18-entry-feel-reassured"
       ],
       "duration": 1.349,
       "bytes": 11565,
@@ -43652,7 +43669,8 @@
       "text": "わりあい",
       "label": "割合",
       "references": [
-        "live/2026-11-05/live-2026-11-05-warito-warini/entry/live-2026-11-05-entry-wariai"
+        "live/2026-11-05/live-2026-11-05-warito-warini/entry/live-2026-11-05-entry-wariai",
+        "live/2026-11-18/live-2026-11-18-relative-expectation/entry/live-2026-11-18-entry-proportion-or-relatively"
       ],
       "duration": 1.106,
       "bytes": 9645,
@@ -47054,7 +47072,8 @@
       "text": "たたく",
       "label": "叩く",
       "references": [
-        "lesson/2026-10-08/vocabulary/2026-10-08-v-b1a41b612acb/word"
+        "lesson/2026-10-08/vocabulary/2026-10-08-v-b1a41b612acb/word",
+        "live/2026-11-18/live-2026-11-18-passive-desire/entry/live-2026-11-18-entry-tap-or-hit"
       ],
       "duration": 1.164,
       "bytes": 10029,
@@ -71220,7 +71239,8 @@
       "text": "きづく",
       "label": "気付く",
       "references": [
-        "lesson/2026-09-21/vocabulary/2026-09-21-v-153cde8ae634b54b/word"
+        "lesson/2026-09-21/vocabulary/2026-09-21-v-153cde8ae634b54b/word",
+        "live/2026-11-18/live-2026-11-18-attention-and-noticing/entry/live-2026-11-18-entry-notice-realize"
       ],
       "duration": 1.117,
       "bytes": 9645,
@@ -83674,7 +83694,8 @@
       "text": "すると",
       "label": "すると、",
       "references": [
-        "live/2026-11-05/live-2026-11-05-reproach-and-consequence/entry/live-2026-11-05-entry-then-as-a-result"
+        "live/2026-11-05/live-2026-11-05-reproach-and-consequence/entry/live-2026-11-05-entry-then-as-a-result",
+        "live/2026-11-18/live-2026-11-18-cleaning-and-discovery/entry/live-2026-11-18-entry-then-as-a-result"
       ],
       "duration": 1.14,
       "bytes": 9837,
@@ -109470,7 +109491,8 @@
       "text": "なれなれしい",
       "label": "馴れ馴れしい",
       "references": [
-        "live/2026-11-04/live-2026-11-04-personal-distance/entry/live-2026-11-04-entry-overly-familiar"
+        "live/2026-11-04/live-2026-11-04-personal-distance/entry/live-2026-11-04-entry-overly-familiar",
+        "live/2026-11-18/live-2026-11-18-interpersonal-distance/entry/live-2026-11-18-entry-overly-familiar"
       ],
       "duration": 1.396,
       "bytes": 11949,
@@ -117085,7 +117107,8 @@
       "text": "きになる",
       "label": "気になる",
       "references": [
-        "live/2026-09-28/live-2026-09-28-ki/entry/気になる"
+        "live/2026-09-28/live-2026-09-28-ki/entry/気になる",
+        "live/2026-11-18/live-2026-11-18-attention-and-noticing/entry/live-2026-11-18-entry-be-on-ones-mind"
       ],
       "duration": 1.14,
       "bytes": 9837,
@@ -119282,6 +119305,18 @@
     "live/2026-11-13/live-2026-11-13-variety-and-each/entry/live-2026-11-13-entry-various-ways": "c3f15dcd37c0cc59",
     "live/2026-11-13/live-2026-11-13-variety-and-each/example/live-2026-11-13-example-individual-duties/0": "d19b5ef02a76d884",
     "live/2026-11-13/live-2026-11-13-variety-and-each/example/live-2026-11-13-example-individual-preparation/0": "633c94c23cbfca36",
-    "live/2026-11-13/live-2026-11-13-variety-and-each/example/live-2026-11-13-example-varied-solutions/0": "d3f731486e84dc9c"
+    "live/2026-11-13/live-2026-11-13-variety-and-each/example/live-2026-11-13-example-varied-solutions/0": "d3f731486e84dc9c",
+    "live/2026-11-18/live-2026-11-18-attention-and-noticing/entry/live-2026-11-18-entry-be-on-ones-mind": "fe6d718e87c40002",
+    "live/2026-11-18/live-2026-11-18-attention-and-noticing/entry/live-2026-11-18-entry-notice-realize": "9a18704025061ee4",
+    "live/2026-11-18/live-2026-11-18-cleaning-and-discovery/entry/live-2026-11-18-entry-then-as-a-result": "b5dc3317e100a44b",
+    "live/2026-11-18/live-2026-11-18-fall-into-and-entrap/entry/live-2026-11-18-entry-fall-into-state": "58bd2719661be04d",
+    "live/2026-11-18/live-2026-11-18-following-direction/entry/live-2026-11-18-entry-follow-me-original-note": "356fe9a6463a8a52",
+    "live/2026-11-18/live-2026-11-18-interpersonal-distance/entry/live-2026-11-18-entry-gauge-interpersonal-distance": "212fed16e2e2cfca",
+    "live/2026-11-18/live-2026-11-18-interpersonal-distance/entry/live-2026-11-18-entry-overly-familiar": "ed80c06e0095b35a",
+    "live/2026-11-18/live-2026-11-18-manner-and-malfunction/entry/live-2026-11-18-entry-malfunction-defect": "45a1077eef58e40a",
+    "live/2026-11-18/live-2026-11-18-passive-desire/entry/live-2026-11-18-entry-tap-or-hit": "67200d9ca26665a0",
+    "live/2026-11-18/live-2026-11-18-passive-desire/entry/live-2026-11-18-entry-tie-or-restrict": "5a308013b73bdd07",
+    "live/2026-11-18/live-2026-11-18-reassured-and-uneasy/entry/live-2026-11-18-entry-feel-reassured": "5ba1d3c95985debd",
+    "live/2026-11-18/live-2026-11-18-relative-expectation/entry/live-2026-11-18-entry-proportion-or-relatively": "5f58689217df50be"
   }
 }
