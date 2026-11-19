@@ -12,7 +12,7 @@
   },
   "engineVersion": "1.1.0-dev",
   "modelVersion": "1.0.0",
-  "generatedAt": "2026-11-19T05:59:41.009Z",
+  "generatedAt": "2026-11-19T16:14:22.006Z",
   "lessonDates": [
     "2026-11-18",
     "2026-11-17",
@@ -96,7 +96,7 @@
     "2026-08-31",
     "2026-08-30"
   ],
-  "expectedClips": 9544,
+  "expectedClips": 9556,
   "complete": true,
   "clips": {
     "000508138c45e52f": {
@@ -12073,6 +12073,18 @@
       "sha256": "b9a99b79e6ac84ac0771472338655086e5800ef43a16ae87d33d2ab01270bbaa",
       "rms": 0.164712
     },
+    "193facaa390d17ee": {
+      "id": "193facaa390d17ee",
+      "text": "つぎめ",
+      "label": "継ぎ目",
+      "references": [
+        "lesson/2026-11-19/vocabulary/2026-11-19-v-8c7de00e2cab/word"
+      ],
+      "bytes": 12717,
+      "duration": 0.976,
+      "rms": 0.175443,
+      "sha256": "41d7f601d4e9a5179f0a541f8978a618abcf8d32e5d91f89c7a7c0670fa0deeb"
+    },
     "194469b54d938fd9": {
       "id": "194469b54d938fd9",
       "text": "タブが固まる",
@@ -15149,6 +15161,18 @@
       "bytes": 14445,
       "sha256": "d7591174348cd590a6a727e874e13b36c9ec292c1cb8b3115c81bf1400b48edf",
       "rms": 0.132882
+    },
+    "1fdb6667635d3fa3": {
+      "id": "1fdb6667635d3fa3",
+      "text": "わる",
+      "label": "割る",
+      "references": [
+        "lesson/2026-11-19/vocabulary/2026-11-19-v-b5ada2ca93a9/word"
+      ],
+      "bytes": 10989,
+      "duration": 0.825,
+      "rms": 0.097565,
+      "sha256": "16226fab2489cedc2343dedd9d36ac463a2a8e38272d7ab053e2ce2ad0370c02"
     },
     "1fde174075947834": {
       "id": "1fde174075947834",
@@ -52509,6 +52533,18 @@
       "sha256": "3c762e4ce53b754d936fa861c7e5ca823f7646c26f8100d7ca94a64e0776d530",
       "rms": 0.13366
     },
+    "70030b0eb0eaf20a": {
+      "id": "70030b0eb0eaf20a",
+      "text": "昼前に予約枠が埋まったので、午後の枠を追加しました。",
+      "label": "昼前に予約枠が埋まったので、午後の枠を追加しました。",
+      "references": [
+        "lesson/2026-11-19/vocabulary/2026-11-19-v-d837a32998cb/example/0"
+      ],
+      "bytes": 57357,
+      "duration": 4.694,
+      "rms": 0.128436,
+      "sha256": "16003bd76e53d5d67bcc6cec9c3876359f8c1188704089c0fc6d73d3a52261d3"
+    },
     "7004e6332929b59f": {
       "id": "7004e6332929b59f",
       "text": "今日の錯題3|緻密",
@@ -58857,6 +58893,18 @@
       "sha256": "7b85d8acb550ceccce4c308bb1767359968a2274498d54bfd749747c95fa7910",
       "rms": 0.161179
     },
+    "7cfae45242da61d6": {
+      "id": "7cfae45242da61d6",
+      "text": "うまる",
+      "label": "埋まる",
+      "references": [
+        "lesson/2026-11-19/vocabulary/2026-11-19-v-d837a32998cb/word"
+      ],
+      "bytes": 12429,
+      "duration": 0.941,
+      "rms": 0.174892,
+      "sha256": "a26efa50a8cea691ab1dc679be2b3452166b4976e4ef801fb7ceaf4609f44e90"
+    },
     "7cfc754e8efae74a": {
       "id": "7cfc754e8efae74a",
       "text": "制限の撤廃",
@@ -59535,6 +59583,18 @@
       "bytes": 12333,
       "sha256": "fe5df104ceb24d8919b226ad32d54ba79671831f952769832a76a9c2672f6470",
       "rms": 0.195121
+    },
+    "7e5aa5ee1e1838c2": {
+      "id": "7e5aa5ee1e1838c2",
+      "text": "検証では新方式が先行しましたが、最後の成績はほぼ同じでした。",
+      "label": "検証では新方式が先行しましたが、最後の成績はほぼ同じでした。",
+      "references": [
+        "lesson/2026-11-19/vocabulary/2026-11-19-v-91a45a7fef86/example/0"
+      ],
+      "bytes": 68013,
+      "duration": 5.572,
+      "rms": 0.142336,
+      "sha256": "d7b8bdc4b0f1cc14af57a030e6e9505d9b9191a6ae5ff6a3b308c0b4f545785e"
     },
     "7e5d3fb7eee70e9b": {
       "id": "7e5d3fb7eee70e9b",
@@ -78465,6 +78525,18 @@
       "sha256": "ef60b3828f24e462ecf8c4f128c87fc5d3530aa6ed436c3590d483257adffadd",
       "rms": 0.160466
     },
+    "a6985608a03f9b04": {
+      "id": "a6985608a03f9b04",
+      "text": "いきさき",
+      "label": "行き先",
+      "references": [
+        "lesson/2026-11-19/vocabulary/2026-11-19-v-1aca28b532e8/word"
+      ],
+      "bytes": 13581,
+      "duration": 1.046,
+      "rms": 0.127167,
+      "sha256": "ba279785d1b27714cb9b3b5ca14941ff7589b1ea0ddd4dc2bc7c2e28c91cd45c"
+    },
     "a6a6de3909ac0b9d": {
       "id": "a6a6de3909ac0b9d",
       "text": "深刻になる",
@@ -82005,6 +82077,18 @@
       "bytes": 14829,
       "sha256": "945d467e78d6bd996f8765d0fecde315a0946d53edb5505508a5012bf94bdea5",
       "rms": 0.118864
+    },
+    "aeab6dd2938544fe": {
+      "id": "aeab6dd2938544fe",
+      "text": "せんこう",
+      "label": "先行",
+      "references": [
+        "lesson/2026-11-19/vocabulary/2026-11-19-v-91a45a7fef86/word"
+      ],
+      "bytes": 14157,
+      "duration": 1.104,
+      "rms": 0.161325,
+      "sha256": "6fe10a632f21a8a649aeb2f30f2f2ee77bd117ab0b5d96cf111191252159a1c0"
     },
     "aeb7b0d19ec0364d": {
       "id": "aeb7b0d19ec0364d",
@@ -90222,6 +90306,18 @@
       "sha256": "27ff00cb8ff43f3683df9d3cabbf424727191035c43ba351cff6291fc7b96b46",
       "rms": 0.126097
     },
+    "c0dd5aeb3ea03df7": {
+      "id": "c0dd5aeb3ea03df7",
+      "text": "切り替えの継ぎ目で、入力欄が一瞬空になりました。",
+      "label": "切り替えの継ぎ目で、入力欄が一瞬空になりました。",
+      "references": [
+        "lesson/2026-11-19/vocabulary/2026-11-19-v-8c7de00e2cab/example/0"
+      ],
+      "bytes": 52461,
+      "duration": 4.295,
+      "rms": 0.190732,
+      "sha256": "38ea83dd19249e469f1360ac9fdbbd4410d809d49508ece2d5a84376e9566128"
+    },
     "c0e86c8fc6dfc6eb": {
       "id": "c0e86c8fc6dfc6eb",
       "text": "「ひとまず」に最も近いものはどれか。",
@@ -91062,6 +91158,18 @@
       "bytes": 57837,
       "sha256": "106cb9e53cfcf4d6a750e153bb726944965b22dcac462e8c06d4654c25f2bbc3",
       "rms": 0.149315
+    },
+    "c29c4df92ce332a5": {
+      "id": "c29c4df92ce332a5",
+      "text": "たまる",
+      "label": "溜まる",
+      "references": [
+        "lesson/2026-11-19/vocabulary/2026-11-19-v-b716d674e773/word"
+      ],
+      "bytes": 13293,
+      "duration": 1.011,
+      "rms": 0.178235,
+      "sha256": "b5f70d700600ac7051d0d370fec9a90d2ebb61aa876d166fa45e1819db39cc63"
     },
     "c2a17b8aae0149d6": {
       "id": "c2a17b8aae0149d6",
@@ -96060,6 +96168,18 @@
       "bytes": 66285,
       "sha256": "58ef7aaba04fff43d7c5b586e05ac2a7ba1f64a4e2c908ede20c4a5bccec07b7",
       "rms": 0.138086
+    },
+    "cc640dbd06307371": {
+      "id": "cc640dbd06307371",
+      "text": "番号を七で割ると、余りはゼロから六までのどれかになります。",
+      "label": "番号を七で割ると、余りはゼロから六までのどれかになります。",
+      "references": [
+        "lesson/2026-11-19/vocabulary/2026-11-19-v-b5ada2ca93a9/example/0"
+      ],
+      "bytes": 63981,
+      "duration": 5.247,
+      "rms": 0.13769,
+      "sha256": "288195521d8df5a54487e1ccca5993ccfb107458e320c88a5ba09dc54bf0f659"
     },
     "cc68954ee2c111d2": {
       "id": "cc68954ee2c111d2",
@@ -106212,6 +106332,18 @@
       "sha256": "539d0b8c317d83ad594e33ce2a90acc35c3b0c86b077d0252be6c5aafdd1f66f",
       "rms": 0.13133
     },
+    "e1b47a7157a2654d": {
+      "id": "e1b47a7157a2654d",
+      "text": "入力を確定する前に、文字の行き先を表示します。",
+      "label": "入力を確定する前に、文字の行き先を表示します。",
+      "references": [
+        "lesson/2026-11-19/vocabulary/2026-11-19-v-1aca28b532e8/example/0"
+      ],
+      "bytes": 52749,
+      "duration": 4.317,
+      "rms": 0.112748,
+      "sha256": "2a0326242ff16952de73283bf2004b4ba4562a57fa3c63a203bf258941b8f57e"
+    },
     "e1bc799abde43eae": {
       "id": "e1bc799abde43eae",
       "text": "好き好んで夜中まで働いているわけではない。",
@@ -112177,6 +112309,18 @@
       "bytes": 70317,
       "sha256": "1d66ac7288770af943b3a215a414611a2be11af911e7c29e1298b78a2615f42c",
       "rms": 0.150734
+    },
+    "eeb4520d76aa04b1": {
+      "id": "eeb4520d76aa04b1",
+      "text": "送信できなかった文が、下書きに少しずつ溜まりました。",
+      "label": "送信できなかった文が、下書きに少しずつ溜まりました。",
+      "references": [
+        "lesson/2026-11-19/vocabulary/2026-11-19-v-b716d674e773/example/0"
+      ],
+      "bytes": 55053,
+      "duration": 4.492,
+      "rms": 0.15092,
+      "sha256": "f73182f1dacc32dbf5c048660b615f6b400da6d14aef6406b7a2583dc4299631"
     },
     "eeb4dc000f771344": {
       "id": "eeb4dc000f771344",
