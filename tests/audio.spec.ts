@@ -106,11 +106,17 @@ test('short real playback remains provable after natural completion without reus
 test('reading choices can be heard without selecting or submitting an answer', async ({ page }) => {
   await openRecordedLesson(page)
   await page.getByRole('navigation', { name: 'メインナビゲーション', exact: true }).getByRole('button', { name: '読解練習', exact: true }).click()
+  await expect(page.locator('.reading-page')).toBeVisible()
+  const archived = page.locator('details.legacy-reading')
+  if (await archived.count() && await archived.getAttribute('open') === null) await archived.locator('summary').click()
   await expect(page.locator('.quiz-paper .spoken-sentence.has-audio').first()).toBeVisible()
-  await playRecording(page, page.locator('.answer-choice-audio .audio-play-button').first())
-  await expect(page.locator('.answer-option[aria-pressed="true"]')).toHaveCount(0)
-  await expect(page.getByRole('button', { name: '回答する', exact: true })).toBeDisabled()
-  await expect(page.locator('.result-panel')).toHaveCount(0)
+  const originalQuestion = page.locator('#reading-question')
+  const before = await page.evaluate(() => localStorage.getItem('n1-progress'))
+  await playRecording(page, originalQuestion.locator('.answer-choice-audio .audio-play-button').first())
+  await expect(originalQuestion.locator('.answer-option[aria-pressed="true"]')).toHaveCount(0)
+  await expect(originalQuestion.getByRole('button', { name: '回答する', exact: true })).toBeDisabled()
+  await expect(originalQuestion.locator('.result-panel')).toHaveCount(0)
+  expect(await page.evaluate(() => localStorage.getItem('n1-progress'))).toBe(before)
 })
 
 test('audio controls fit 390px and 320px dark vocabulary, compound and live cards', async ({ page }, testInfo) => {

@@ -5,7 +5,9 @@ import { practiceHref, questionElementId } from '../src/lib/questionReview.ts'
 import type { PracticeCategory, ReadingQuestion, StoredProgress } from '../src/types.ts'
 
 const date = '2026-11-19'
-const lesson = validateContent().lessons.find(item => item.date === date)!
+const lessons = validateContent().lessons
+const lesson = lessons.find(item => item.date === date)!
+const day81 = lessons.find(item => item.date === '2026-11-18')!
 const references = getPracticeQuestions(lesson)
 const categories: PracticeCategory[] = ['vocabulary', 'grammar', 'reading']
 const counts: Record<PracticeCategory, number> = { vocabulary: 5, grammar: 5, reading: 8 }
@@ -26,12 +28,12 @@ async function openCategory(page: Page, category: PracticeCategory) {
   await expect(page.locator(`[data-practice-category="${category}"]`)).toBeVisible()
 }
 
-async function openReview(page: Page) {
+async function openReview(page: Page, targetLesson = lesson) {
   const datePicker = page.locator('.date-dropdown-trigger')
-  if (!(await datePicker.innerText()).includes('Day 82')) {
+  if (!(await datePicker.innerText()).includes(`Day ${targetLesson.day}`)) {
     await datePicker.click()
-    await page.getByRole('option', { name: /^Day 82\b/ }).click()
-    await expect(datePicker).toContainText('Day 82')
+    await page.getByRole('option', { name: new RegExp(`^Day ${targetLesson.day}\\b`) }).click()
+    await expect(datePicker).toContainText(`Day ${targetLesson.day}`)
   }
   await page.getByRole('button', { name: '誤答復習', exact: true }).click()
   await expect(page.getByRole('heading', { name: 'この日の実際の誤答', exact: true })).toBeVisible()
@@ -172,28 +174,66 @@ test('one real correct retry remains daily; two correct retries extend to three 
   expect((await records(page)).readingAttempts[question.id]).toHaveLength(3)
 })
 
-test('the archived Day82 question keeps its original ID, option indexes, and undated legacy history', async ({ page }) => {
-  const original = lesson.reading.question
+for (const archivedLesson of [day81, lesson]) test(`the archived Day${archivedLesson.day} question keeps its original ID, option indexes, and undated legacy history`, async ({ page }) => {
+  const original = archivedLesson.reading.question
   await page.addInitScript(({ id, answer }) => localStorage.setItem('n1-progress', JSON.stringify({
     vocab: { 'old-absent-vocab': 'mastered' }, grammar: {}, readingAnswers: { [id]: answer },
   })), { id: original.id, answer: original.answer })
-  await page.goto(`/${practiceHref(date, 'reading', original.id)}`)
+  await page.goto(`/${practiceHref(archivedLesson.date, 'reading', original.id)}`)
   const target = page.locator('#reading-question')
+  await expect(page.locator('.date-dropdown-trigger')).toContainText(`Day ${archivedLesson.day}`)
   await expect(page.locator('details.legacy-reading')).toHaveAttribute('open', '')
   await expect(target).toBeFocused()
   await expect(target.locator('.result-title')).toHaveText('正解です')
   const selected = target.locator('.answer-option.selected')
   await expect(selected).toContainText(original.options[original.answer])
-  await expect(selected.locator('.answer-letter')).toHaveText(String.fromCharCode(65 + (lesson.day - 1) % 4))
+  await expect(selected.locator('.answer-letter')).toHaveText(String.fromCharCode(65 + (archivedLesson.day - 1) % 4))
   await target.locator('.attempt-history summary').click()
   await expect(target.locator('.attempt-history li')).toHaveText(/以前の記録（日付不明）/)
   const saved = await records(page)
   expect(saved.readingAnswers[original.id]).toBe(original.answer)
   expect(saved.readingAttempts[original.id]).toEqual([{ answer: original.answer, at: null }])
   expect(saved.vocab['old-absent-vocab']).toBe('mastered')
-  expect(references.every(({ question }) => saved.readingAnswers[question.id] === undefined)).toBe(true)
+  expect(getPracticeQuestions(archivedLesson).every(({ question }) => saved.readingAnswers[question.id] === undefined)).toBe(true)
+  await openReview(page, archivedLesson)
+  await expect(page.locator('.review-row')).toHaveCount(0)
+})
+
+test('Day81 category links load the archived lesson and keep its mistakes separate from Day82', async ({ page }) => {
+  expect(day81.practice).toBeDefined()
+  const questions = getPracticeQuestions(day81)
+  expect(questions).toHaveLength(18)
+  for (const category of categories) {
+    const categoryQuestions = questions.filter(item => item.category === category)
+    const { question } = categoryQuestions.at(-1)!
+    await page.goto(`/${practiceHref(day81.date, category, question.id)}`)
+    await expect(page.locator('.date-dropdown-trigger')).toContainText('Day 81')
+    await expect(page.locator(`[data-practice-category="${category}"] .question-block`)).toHaveCount(counts[category])
+    await expect(exercise(page, question)).toBeFocused()
+    await expect(exercise(page, question).locator('.result-panel')).toHaveCount(0)
+    await expect(exercise(page, question).getByRole('button', { name: '回答する', exact: true })).toBeDisabled()
+  }
+  expect(Object.keys((await records(page)).readingAnswers)).toHaveLength(0)
+
+  const readingQuestion = questions.filter(item => item.category === 'reading').at(-1)!.question
+  await submit(page, readingQuestion, (readingQuestion.answer + 1) % 4)
+  await openReview(page, day81)
+  await expect(page.locator('.review-row')).toHaveCount(1)
+  await expect(reviewRow(page, readingQuestion).getByRole('link')).toHaveAttribute('href', practiceHref(day81.date, 'reading', readingQuestion.id))
   await openReview(page)
   await expect(page.locator('.review-row')).toHaveCount(0)
+  await openReview(page, day81)
+  await reviewRow(page, readingQuestion).getByRole('link').click()
+  await expect(exercise(page, readingQuestion)).toBeFocused()
+  await expect(exercise(page, readingQuestion).locator('.result-panel')).toHaveCount(0)
+  await page.reload()
+  await expect(page.locator('.date-dropdown-trigger')).toContainText('Day 81')
+  await expect(exercise(page, readingQuestion)).toBeFocused()
+  await expect(exercise(page, readingQuestion).locator('.result-panel')).toBeVisible()
+  const saved = await records(page)
+  expect(saved.readingAttempts[readingQuestion.id]).toHaveLength(1)
+  expect(saved.readingAnswers[day81.reading.question.id]).toBeUndefined()
+  expect(references.every(({ question }) => saved.readingAnswers[question.id] === undefined)).toBe(true)
 })
 
 test('a nonexistent question link cannot point at another exercise or create an answer', async ({ page }) => {
