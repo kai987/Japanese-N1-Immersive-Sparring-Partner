@@ -32,10 +32,10 @@ const navigation: { id: SectionId; label: string; short: string }[] = [
   { id: 'today', label: '今日の学習', short: '今日' },
   { id: 'immersion', label: '没入読解', short: '没入' },
   { id: 'vocabulary', label: 'N1 語彙', short: '語彙' },
-  { id: 'compound-verbs', label: '複合動詞', short: '複合' },
   { id: 'grammar', label: 'N1 文法', short: '文法' },
   { id: 'reading', label: '読解練習', short: '読解' },
   { id: 'review', label: '誤答復習', short: '復習' },
+  { id: 'compound-verbs', label: '複合動詞', short: '複合' },
   { id: 'live-reactions', label: '直播条反', short: '条反' },
   { id: 'history', label: '学習履歴', short: '履歴' },
 ]
