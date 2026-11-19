@@ -100,9 +100,9 @@ Node.js 24で `npm run import:daily -- /path/to/YYYY-MM-DD.json` を実行でき
 
 ## 分类原创练习（2026-11-20用户批准，先修订Day82）
 
-`lesson.practice` 为可选的完整分类题集，类型见 `src/types.ts` 的 `DailyPractice`。数量仅由 `docs/automation/policy.json.practice` 规定；词汇、语法题数与NEW/REVIEW学习卡数量是两回事。`groups` 按 `category`（vocabulary、grammar、reading）分类，读解 `kind` 分为 short、medium、long、comparison、information。组中保留完整原文、可选表格及完整题目；每题含稳定日期ID、题干、四个选项、标准答案和对应的四个解析。网页仅在提交后显示标准答案和解析。
+`lesson.practice` 在类型中保留可选以兼容历史课程，类型见 `src/types.ts` 的 `DailyPractice`；但 `policy.practice.requiredFrom ≤ lesson.date < policy.planEnd` 的正常新课必须提供完整分类题集，考试日保留轻量安排。数量仅由 `docs/automation/policy.json.practice` 规定；词汇、语法题数与NEW/REVIEW学习卡数量是两回事。`groups` 按 `category`（vocabulary、grammar、reading）分类，读解 `kind` 分为 short、medium、long、comparison、information。组中保留完整原文、可选表格及完整题目；每题含稳定日期ID、题干、四个选项、标准答案和对应的四个解析。网页仅在提交后显示标准答案和解析。
 
-正常新课通过现有完整同步request写入该可选结构，仍由 `sync-n1-daily.yml` 写最终daily JSON。Day82的用户授权历史修订使用 `src/data/practice/2026-11-19.json`，引用完整 `n1-source/revisions/2026-11-19-practice.md`；构建时只叠加到日期吻合的既有课，不改写冻结原稿、旧checkpoint或IT学习快照。没有此结构的旧课继续显示原 `reading.question`。有新版题集的日期保留原单题及其旧ID、选项顺序、答案记录，可从读解底部“以前の主旨問題・回答履歴”打开。
+正常新课沿用修订后的Day82分类内容样式，通过现有完整同步request写入 `lesson.practice`，仍由 `sync-n1-daily.yml` 写最终daily JSON；适用日期缺少或不完整的题集会被内容验证和构建拒绝。Day82的用户授权历史修订使用 `src/data/practice/2026-11-19.json`，引用完整 `n1-source/revisions/2026-11-19-practice.md`；构建时只叠加到日期吻合的既有课，不改写冻结原稿、旧checkpoint或IT学习快照。没有此结构的旧课继续显示原 `reading.question`。有新版题集的日期保留原单题及其旧ID、选项顺序、答案记录，可从读解底部“以前の主旨問題・回答履歴”打开。
 
 实际错题从现有私有学习记录推导，不能通过公开教材文件设置某人的错误答案。未作答、初次答对、预设考点、手动卡片标记不进入错题；真实错误后，两次确实正确才降频，记录始终保留。
 
