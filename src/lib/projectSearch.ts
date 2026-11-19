@@ -3,6 +3,8 @@ import { compoundVerbSeries } from './compoundVerbs.ts'
 import { liveUnits } from '../data/live-reaction-units.ts'
 import { liveGroupSearchFields } from './liveReactions.ts'
 import { getSearchRanges, getSearchTerms, normalizeSearchText } from './searchHighlight.ts'
+import { practiceCategoryLabels, practiceKindLabels } from './practice.ts'
+import { questionElementId } from './questionReview.ts'
 
 type ReviewFocus = Record<string, { type: string; title: string; detail: string }[]>
 
@@ -110,6 +112,16 @@ const lessonChunks = (lesson: DailyLesson, reviewFocusByDate: ReviewFocus): Sear
   lesson.reading.paragraphs.forEach((text, index) => {
     chunks.push({ section: 'reading', anchor: `reading-paragraph-${index}`, label: '読解', text, priority: 22 })
   })
+  lesson.practice?.groups.forEach(group => {
+    const label = `${practiceCategoryLabels[group.category]}練習 · ${practiceKindLabels[group.kind]}`
+    const anchor = group.id
+    chunks.push({ section: group.category, anchor, label, text: [group.title, group.instructions, ...group.paragraphs,
+      ...(group.table ? [group.table.caption, ...group.table.headers, ...group.table.rows.flat()] : [])].join(' '), priority: 26 })
+    group.questions.forEach(question => {
+      chunks.push({ section: group.category, anchor: questionElementId(question.id), label,
+        text: [question.questionType ?? '', question.prompt, ...question.options].join(' '), priority: 28 })
+    })
+  })
 
   lesson.vocabulary.forEach((item) => {
     chunks.push({
@@ -132,7 +144,7 @@ const lessonChunks = (lesson: DailyLesson, reviewFocusByDate: ReviewFocus): Sear
   })
 
   ;(reviewFocusByDate[lesson.date] ?? []).forEach((item, index) => {
-    chunks.push({ section: 'review', anchor: `review-${index}`, label: `誤答復習 · ${item.type === '词汇' ? '語彙' : item.type === '读解' ? '読解' : item.type}`, text: `${item.title} ${item.detail}`, priority: 30 })
+    chunks.push({ section: 'today', anchor: `review-${index}`, label: `補充知識 · ${item.type === '词汇' ? '語彙' : item.type === '读解' ? '読解' : item.type}`, text: `${item.title} ${item.detail}`, priority: 30 })
   })
 
   return chunks

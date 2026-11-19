@@ -47,11 +47,38 @@ export interface GrammarItem extends StudyMetadata {
 
 export interface ReadingQuestion {
   id: string
+  questionType?: string
   prompt: string
   options: string[]
   answer: number
   explanation: string
   optionNotes: string[]
+}
+
+export type PracticeCategory = 'vocabulary' | 'grammar' | 'reading'
+export type PracticeKind = 'vocabulary' | 'grammar' | 'short' | 'medium' | 'long' | 'comparison' | 'information'
+
+export interface PracticeGroup {
+  id: string
+  category: PracticeCategory
+  kind: PracticeKind
+  title: string
+  instructions: string
+  paragraphs: string[]
+  table?: { caption: string; headers: string[]; rows: string[][] }
+  questions: ReadingQuestion[]
+}
+
+export interface DailyPractice {
+  schemaVersion: 1
+  date: string
+  day: number
+  title: string
+  sourceNote: string
+  formatSources: string[]
+  sourcePath: string
+  estimatedMinutes: number
+  groups: PracticeGroup[]
 }
 
 export interface DailyLesson {
@@ -74,6 +101,7 @@ export interface DailyLesson {
   grammar: GrammarItem[]
   grammarSelectionNote?: string
   grammarSourceCommit?: string
+  practice?: DailyPractice
   reading: {
     title: string
     paragraphs: string[]

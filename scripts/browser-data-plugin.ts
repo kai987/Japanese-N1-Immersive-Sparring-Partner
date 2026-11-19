@@ -36,6 +36,8 @@ export function browserDataPlugin(): Plugin {
       }
       // Development reloads use the same complete validation as release builds.
       this.addWatchFile(join(browserDataRoot, 'src/data'))
+      this.addWatchFile(join(browserDataRoot, 'n1-source'))
+      this.addWatchFile(join(browserDataRoot, 'docs/automation/policy.json'))
       this.addWatchFile(join(browserDataRoot, 'public/audio/manifest.json'))
     },
     configureServer(server) {
@@ -88,7 +90,7 @@ export function browserDataPlugin(): Plugin {
       },
     },
     handleHotUpdate(context) {
-      if (!context.file.startsWith(join(browserDataRoot, 'src/data')) && !context.file.startsWith(join(browserDataRoot, 'public/audio'))) return
+      if (!['src/data', 'public/audio', 'n1-source', 'docs/automation/policy.json'].some(path => context.file.startsWith(join(browserDataRoot, path)))) return
       data = undefined
       searchIndex = undefined
       for (const module of context.server.moduleGraph.idToModuleMap.values()) {

@@ -46,9 +46,13 @@ test('delayed cross-tab notifications cannot discard either submitted reading at
   })
   const a = await context.newPage(), b = await context.newPage()
   await Promise.all([a.goto('/'), b.goto('/')])
-  for (const page of [a, b]) await navigation(page).getByRole('button', { name: '読解練習', exact: true }).click()
-  await a.locator('.answer-option').nth(0).click(); await b.locator('.answer-option').nth(1).click()
-  await Promise.all([a.getByRole('button', { name: '回答する', exact: true }).click(), b.getByRole('button', { name: '回答する', exact: true }).click()])
+  for (const page of [a, b]) {
+    await navigation(page).getByRole('button', { name: '読解練習', exact: true }).click()
+    if (await page.locator('details.legacy-reading').count()) await page.locator('details.legacy-reading > summary').click()
+  }
+  const firstExercise = a.locator('#reading-question'), secondExercise = b.locator('#reading-question')
+  await firstExercise.locator('.answer-option').nth(0).click(); await secondExercise.locator('.answer-option').nth(1).click()
+  await Promise.all([firstExercise.getByRole('button', { name: '回答する', exact: true }).click(), secondExercise.getByRole('button', { name: '回答する', exact: true }).click()])
   for (const page of [a, b]) await page.evaluate(() => (window as unknown as { resumeRecordEvents: () => void }).resumeRecordEvents())
   await expect(a.getByText('回答履歴（2回）', { exact: true })).toBeVisible()
   await expect(b.getByText('回答履歴（2回）', { exact: true })).toBeVisible()

@@ -1,5 +1,6 @@
 import type { DailyLesson } from '../types.ts'
 import { isDate, isRecord } from './progress.ts'
+import { getAllLessonQuestions, validatePractice, validatePracticeQuestion } from './practice.ts'
 
 export type ReviewFocus = { type: '词汇' | '文法' | '读解' | '語彙' | '読解'; title: string; detail: string }
 export type DailyArchiveFile = { lesson: DailyLesson; reviewFocus?: ReviewFocus[]; merged?: boolean }
@@ -40,11 +41,10 @@ export function validateLesson(input: unknown, path: string, datedIds = false): 
   fields(input.reading, ['title'], `${path}.reading`)
   requireValid(strings(input.reading.paragraphs), `${path}.reading.paragraphs`, '本文の配列が必要です')
   const q = input.reading.question
-  fields(q, ['id', 'prompt', 'explanation'], `${path}.reading.question`)
-  requireValid(strings(q.options) && q.options.length === 4 && new Set(q.options).size === 4, `${path}.reading.question.options`, '異なる4つの選択肢が必要です')
-  requireValid(Number.isInteger(q.answer) && Number(q.answer) >= 0 && Number(q.answer) < 4, `${path}.reading.question.answer`, '0〜3の整数が必要です')
-  requireValid(strings(q.optionNotes) && q.optionNotes.length === 4, `${path}.reading.question.optionNotes`, '選択肢に対応する4つの解説が必要です')
-  const ids = [...(input.vocabulary as {id:string}[]), ...(input.grammar as {id:string}[]), q].map(item => String(item.id))
+  validatePracticeQuestion(q, `${path}.reading.question`)
+  if (input.practice !== undefined) validatePractice(input.practice, `${path}.practice`, String(input.date), Number(input.day))
+  const questions = [q, ...(input.practice ? input.practice.groups.flatMap(group => group.questions) : [])]
+  const ids = [...(input.vocabulary as {id:string}[]), ...(input.grammar as {id:string}[]), ...questions].map(item => String(item.id))
   requireValid(new Set(ids).size === ids.length, path, 'ID が重複しています')
   if (datedIds) requireValid(ids.every(id => id.startsWith(`${input.date}-`)), path, '各 ID は日付とハイフンで始めてください')
 }
@@ -63,7 +63,7 @@ export function validateArchive(input: unknown, filename: string): DailyArchiveF
   }
   return input as DailyArchiveFile
 }
-export function mergeArchives(legacy: DailyLesson[], modules: Record<string, unknown>) {
+export function mergeArchives(legacy: DailyLesson[], modules: Record<string, unknown>, practiceModules: Record<string, unknown> = {}) {
   const generated = Object.entries(modules).map(([filename, input]) => validateArchive(input, filename))
   const byDate = new Map(legacy.map(lesson => [lesson.date, lesson]))
   const generatedDates = new Set<string>()
@@ -72,11 +72,19 @@ export function mergeArchives(legacy: DailyLesson[], modules: Record<string, unk
     generatedDates.add(entry.lesson.date)
     byDate.set(entry.lesson.date, entry.lesson)
   }
+  for (const [filename, input] of Object.entries(practiceModules)) {
+    validatePractice(input, filename)
+    requireValid(filename.split('/').at(-1) === `${input.date}.json`, filename, 'ファイル名と練習の日付が一致しません')
+    const lesson = byDate.get(input.date)
+    requireValid(lesson, filename, '既存教材がない日付には修訂練習を追加できません')
+    requireValid(!lesson.practice, filename, '同じ教材に複数の練習原稿があります')
+    byDate.set(input.date, { ...lesson, practice: input })
+  }
   const lessons = [...byDate.values()].sort((a, b) => b.date.localeCompare(a.date))
   const seen = new Map<string, string>()
   for (const lesson of lessons) {
     validateLesson(lesson, lesson.date)
-    for (const { id } of [...lesson.vocabulary, ...lesson.grammar, lesson.reading.question]) {
+    for (const { id } of [...lesson.vocabulary, ...lesson.grammar, ...getAllLessonQuestions(lesson).map(item => item.question)]) {
       requireValid(!seen.has(id), lesson.date, `ID ${id} は ${seen.get(id)} と重複しています`)
       seen.set(id, lesson.date)
     }

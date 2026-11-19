@@ -20,6 +20,19 @@
     "grammarMirrorFrom": "2026-09-09",
     "vocabularyMirrorFrom": "2026-09-18"
   },
+  "practice": {
+    "requiredFrom": "2026-11-19",
+    "vocabularyQuestions": 5,
+    "grammarQuestions": 5,
+    "readingQuestions": {
+      "short": 2,
+      "medium": 2,
+      "longMinimum": 1,
+      "longMaximum": 2,
+      "comparison": 1,
+      "information": 1
+    }
+  },
   "schedule": {"sourceHourJST": 9, "syncHourJST": 11, "recoveryHourJST": 12, "recoveryRunsPerDay": 1},
   "maximumTransientAttempts": 3
 }

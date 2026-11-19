@@ -1,24 +1,36 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import type { ReadingAttempt, ReadingQuestion } from '../types'
 import { readingChoices } from '../lib/reading'
 import { splitAudioSentences } from '../lib/audioText'
 import { AudioButton, SentenceAudio } from './AudioButton'
 import { SearchHighlight } from './SearchHighlight'
 
-export function ReadingExercise({ question, day, answered, attempts, onSubmit, searchQuery = '' }: {
+export function ReadingExercise({ question, day, answered, attempts, onSubmit, searchQuery = '',
+  questionLabel = '問題 1', elementId = 'reading-question', fixedOrder = false, audioEnabled = true, startRetry = false,
+}: {
   question: ReadingQuestion; day: number; answered: number | undefined
   searchQuery?: string
+  questionLabel?: string; elementId?: string; fixedOrder?: boolean; audioEnabled?: boolean; startRetry?: boolean
   attempts: ReadingAttempt[]; onSubmit: (answer: number) => void
 }) {
   const [selected, setSelected] = useState<number | null>(null)
-  const [retrying, setRetrying] = useState(false)
-  const choices = readingChoices(question, day)
+  const [retrying, setRetrying] = useState(startRetry)
+  useEffect(() => {
+    setSelected(null)
+    setRetrying(startRetry)
+  }, [question.id, startRetry])
+  const choices = fixedOrder
+    ? question.options.map((text, index) => ({ index, text, note: question.optionNotes[index] }))
+    : readingChoices(question, day)
   const submitted = answered !== undefined && !retrying
-  const letter = (canonical: number) => String.fromCharCode(65 + choices.findIndex(c => c.index === canonical))
+  const choiceLabel = (displayIndex: number) => fixedOrder ? String(displayIndex + 1) : String.fromCharCode(65 + displayIndex)
+  const letter = (canonical: number) => choiceLabel(choices.findIndex(c => c.index === canonical))
   const highlight = (text: string) => <SearchHighlight text={text} query={searchQuery} className="search-hit lesson-search-hit" />
-  return <div className="question-block" id="reading-question" tabIndex={-1}>
-    <div className="question-label">問題 1</div>
-    <h3 aria-label={question.prompt}><SentenceAudio text={question.prompt} renderText={highlight} /></h3>
+  const questionText = (text: string, japaneseOnly = false) => audioEnabled
+    ? <SentenceAudio text={text} renderText={highlight} japaneseOnly={japaneseOnly} /> : highlight(text)
+  return <div className="question-block" id={elementId} tabIndex={-1}>
+    <div className="question-label">{questionLabel}</div>
+    <h3 aria-label={question.prompt}>{questionText(question.prompt)}</h3>
     <div className="answers">
       {choices.map((choice, displayIndex) => {
         const chosen = (submitted ? answered : selected) === choice.index
@@ -26,21 +38,21 @@ export function ReadingExercise({ question, day, answered, attempts, onSubmit, s
         return <div className="answer-option-row" key={choice.index}><button
           className={['answer-option', chosen ? 'selected' : '', submitted && correct ? 'correct' : '', submitted && chosen && !correct ? 'wrong' : ''].filter(Boolean).join(' ')}
           aria-pressed={chosen} disabled={submitted} onClick={() => setSelected(choice.index)}>
-          <span className="answer-letter">{String.fromCharCode(65 + displayIndex)}</span><span>{highlight(choice.text)}</span>
-        </button><span className="answer-choice-audio">{splitAudioSentences(choice.text).map((sentence, i) => <AudioButton key={i} text={sentence} />)}</span></div>
+          <span className="answer-letter">{choiceLabel(displayIndex)}</span><span>{highlight(choice.text)}</span>
+        </button>{audioEnabled ? <span className="answer-choice-audio">{splitAudioSentences(choice.text).map((sentence, i) => <AudioButton key={i} text={sentence} />)}</span> : null}</div>
       })}
     </div>
     {!submitted ? <>
-      {retrying ? <p className="retry-note">再挑戦中です。前回の記録は保存されています。</p> : null}
+      {retrying && answered !== undefined ? <p className="retry-note">再挑戦中です。前回の記録は保存されています。</p> : null}
       <button className="primary-btn submit-answer" disabled={selected === null} onClick={() => {
         if (selected === null) return
         onSubmit(selected); setRetrying(false); setSelected(null)
       }}>回答する</button>
-      {retrying ? <button className="text-btn retry-cancel" onClick={() => { setRetrying(false); setSelected(null) }}>前回の結果に戻る</button> : null}
+      {retrying && answered !== undefined ? <button className="text-btn retry-cancel" onClick={() => { setRetrying(false); setSelected(null) }}>前回の結果に戻る</button> : null}
     </> : <div className={`result-panel ${answered === question.answer ? 'success' : 'error'}`} role="status">
       <div className="result-title"><strong>{answered === question.answer ? '正解です' : `正解：${letter(question.answer)}`}</strong></div>
-      <p><SentenceAudio text={question.explanation} renderText={highlight} japaneseOnly /></p>
-      <div className="option-notes">{choices.map(choice => <p key={choice.index}><b>{letter(choice.index)}</b><SentenceAudio text={choice.note} renderText={highlight} japaneseOnly /></p>)}</div>
+      <p>{questionText(question.explanation, true)}</p>
+      <div className="option-notes">{choices.map(choice => <p key={choice.index}><b>{letter(choice.index)}</b>{questionText(choice.note, true)}</p>)}</div>
       <button className="primary-btn" onClick={() => { setSelected(null); setRetrying(true) }}>もう一度挑戦する</button>
     </div>}
     {attempts.length && !retrying ? <details className="attempt-history">

@@ -14,7 +14,7 @@ Request-file pushes start the workflow. workflow_dispatch/repository_dispatch ma
 
 ## Checkpoint the exact original before promotion
 
-Read n1-plan.md. Generate the complete public teaching text once: original immersion material, learning plan, minimum completion line, adjustment conditions and 3–5 review questions. Do not put individual scores, private answer history, fatigue/health details, email or private tool records in the public repository, including progress branches. Keep personalized feedback outside the public teaching text in the private response/store.
+Read n1-plan.md. Generate the complete public teaching text once: original immersion material, learning plan, minimum completion line, adjustment conditions and classified practice using `policy.json.practice`. Keep the review section, but only actual incorrect submissions qualify as personal wrong answers; use 3–5 due questions when available and an honest empty state otherwise. Do not put individual scores, private answer history, fatigue/health details, email or private tool records in the public repository, including progress branches. Keep personalized feedback outside the public teaching text in the private response/store.
 
 Stage exact final source bytes, not a summary:
 
@@ -41,6 +41,8 @@ During the existing 10:00 handoff (or the original sync/recovery entry point if 
 ## Source-bound mapping and learning rules
 
 Read src/data/daily/README.md, src/types.ts, src/lib/archive.ts, src/lib/itStudy.ts and the actual importers. Read the complete target-date n1-source and retain its blob SHA. Date/Day must agree. Title/subtitle, immersion Japanese/Chinese/analysis, reading and reviewFocus come only from that original. If no ready single reading question exists, derive one main-idea question from the same material, without external facts. Four options and optionNotes, answer index 0–3. Do not pre-reveal answers in reviewFocus; keep legitimate independent old-question review.
+
+User-approved expansion effective 2026-11-20: use `policy.json.practice` and the classified practice section of n1-plan.md. Normal new source mapping includes complete `lesson.practice` through the same sync request; a lone legacy `reading.question` is only the backward-compatible representation for earlier lessons. The explicit Day82 retrofit uses `src/data/practice/2026-11-19.json`, bound to the complete public approved revision `n1-source/revisions/2026-11-19-practice.md`. The build validates dates, categories, policy counts, unique identities, four options and explanations, and exact public question text in the cited source. Frozen canonical originals and their original outboxes are preserved; no historical daily JSON or IT snapshot is rewritten by this correction path. Revision source checkpoints may be stored under `runs/DATE/revisions/REVISION/source.json` with the existing stage/verify helper, without replacing `runs/DATE/source.json`. Keep all existing publication/deployment checks and private-progress protections.
 
 Upstream is kai987/japan-it-ai-daily. Lock a completed successful main .github/workflows/deploy.yml commit; read that commit's target-date daily/daily-ja/japanese/japanese-ja, evidence and structured interviews, schemas, identity rules and learning-review module/README. Code-only, audio-upload or draft success does not publish a missing report. Preserve Top5 identity/order/facts, C-4 membership, real levels, examples and every detailed card field.
 

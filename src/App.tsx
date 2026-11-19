@@ -11,10 +11,15 @@ import { useLesson } from './hooks/useLesson'
 import { useLocalStorage } from './hooks/useLocalStorage'
 import type { LearningStatus, ReadingMode, SectionId, StoredProgress } from './types'
 import { ReadingExercise } from './components/ReadingExercise'
+import { PracticeExercises, practiceCategoryLabels } from './components/PracticeExercises'
+import { getPracticeQuestions, getAllLessonQuestions } from './lib/practice'
+import { questionReview, questionElementId, practiceHref, parsePracticeHash } from './lib/questionReview'
+import type { PracticeCategory } from './types'
 import { initialProgress, decodeProgress, decodeCompleted, decodeTheme, recordStudy, streakFor, tokyoDate } from './lib/progress'
 import './history.css'
 import './study-reference.css'
 import './compound-verbs.css'
+import './practice.css'
 import { compoundSeriesFromHash, getCompoundSeriesForWord } from './lib/compoundVerbs'
 import type { CompoundVocabularyOrigin } from './components/CompoundVerbs'
 import { StudyReference, ReviewEvidence } from './components/StudyReference'
@@ -102,7 +107,14 @@ function SectionHeader({ eyebrow, title, description }: { eyebrow: string; title
 }
 
 export default function App() {
-  const [active, setActive] = useState<SectionId>(() => compoundSeriesFromHash(window.location.hash) ? 'compound-verbs' : window.location.hash === '#live-reactions' ? 'live-reactions' : 'today')
+  const [initialQuestionTarget] = useState(() => {
+    const target = parsePracticeHash(window.location.hash)
+    return target && historyItems.some(item => item.date === target.date) ? { date: target.date, category: target.category, questionId: target.id } : null
+  })
+  const [questionTarget, setQuestionTarget] = useState(() => initialQuestionTarget ? { ...initialQuestionTarget, token: 0, retry: false } : null)
+  const [questionLinkError, setQuestionLinkError] = useState(false)
+  const [legacyReadingOpen, setLegacyReadingOpen] = useState(false)
+  const [active, setActive] = useState<SectionId>(() => initialQuestionTarget?.category ?? (compoundSeriesFromHash(window.location.hash) ? 'compound-verbs' : window.location.hash === '#live-reactions' ? 'live-reactions' : 'today'))
   const [compoundSeriesId, setCompoundSeriesId] = useState(() => compoundSeriesFromHash(window.location.hash) ?? 'au')
   const [compoundOrigin, setCompoundOrigin] = useState<CompoundVocabularyOrigin | null>(null)
   const [searchQuery, setSearchQuery] = useState('')
@@ -123,7 +135,8 @@ export default function App() {
     }
   }
   const [returnVocabularyId, setReturnVocabularyId] = useState<string | null>(null)
-  const [selectedDate, setSelectedDate] = useState(latestLesson.date)
+  const [returnCardTarget, setReturnCardTarget] = useState<{ section: SectionId; id: string } | null>(null)
+  const [selectedDate, setSelectedDate] = useState(initialQuestionTarget?.date ?? latestLesson.date)
   const [readingMode, setReadingMode] = useState<ReadingMode>('japanese')
   const [mobileNavOpen, setMobileNavOpen] = useState(false)
   const [theme, setTheme, themeStorage] = useLocalStorage('n1-theme', 'light', decodeTheme)
@@ -137,13 +150,23 @@ export default function App() {
     const url = new URL(window.location.href)
     if (active === 'compound-verbs') url.hash = `compound-verbs/${compoundSeriesId}`
     else if (active === 'live-reactions') url.hash = 'live-reactions'
-    else if (url.hash === '#live-reactions' || url.hash.startsWith('#compound-verbs')) url.hash = ''
+    else if (url.hash === '#live-reactions' || url.hash.startsWith('#compound-verbs') || (url.hash.startsWith('#practice/') && !questionTarget)) url.hash = ''
     if (url.href !== window.location.href) window.history.replaceState(window.history.state, '', url)
-  }, [active, compoundSeriesId])
+  }, [active, compoundSeriesId, questionTarget])
   useEffect(() => {
     const onHashChange = () => {
       setLiveSearchTarget(null)
       setLessonSearchTarget(null)
+      const question = parsePracticeHash(window.location.hash)
+      if (question) {
+        if (!historyItems.some(item => item.date === question.date)) { setQuestionLinkError(true); return }
+        setQuestionTarget(previous => ({ date: question.date, category: question.category, questionId: question.id, token: (previous?.token ?? 0) + 1, retry: false }))
+        setQuestionLinkError(false)
+        setSelectedDate(question.date)
+        setActive(question.category)
+        return
+      }
+      setQuestionTarget(null)
       const id = compoundSeriesFromHash(window.location.hash)
       if (id) { setCompoundSeriesId(id); setCompoundOrigin(null); setActive('compound-verbs') }
       else if (window.location.hash === '#live-reactions') setActive('live-reactions')
@@ -152,6 +175,20 @@ export default function App() {
     window.addEventListener('hashchange', onHashChange)
     return () => window.removeEventListener('hashchange', onHashChange)
   }, [])
+  useEffect(() => {
+    if (!questionTarget || lessonLoading || lessonFailed || lesson.date !== questionTarget.date || active !== questionTarget.category) return
+    const found = getAllLessonQuestions(lesson).find(item => item.question.id === questionTarget.questionId && item.category === questionTarget.category)
+    if (!found) { setQuestionLinkError(true); return }
+    setQuestionLinkError(false)
+    const legacy = found.question.id === lesson.reading.question.id
+    if (legacy && lesson.practice && !legacyReadingOpen) { setLegacyReadingOpen(true); return }
+    const frame = window.requestAnimationFrame(() => {
+      const element = document.getElementById(legacy ? 'reading-question' : questionElementId(found.question.id))
+      element?.scrollIntoView({ block: 'start', behavior: 'instant' })
+      element?.focus({ preventScroll: true })
+    })
+    return () => window.cancelAnimationFrame(frame)
+  }, [questionTarget, lesson, lessonLoading, lessonFailed, active, legacyReadingOpen])
   useEffect(() => {
     if (active !== 'vocabulary' || !returnVocabularyId || lessonLoading || lessonFailed) return
     const frame = window.requestAnimationFrame(() => {
@@ -162,6 +199,15 @@ export default function App() {
     })
     return () => window.cancelAnimationFrame(frame)
   }, [active, returnVocabularyId, lessonLoading, lessonFailed])
+  useEffect(() => {
+    if (!returnCardTarget || active !== returnCardTarget.section || lessonLoading || lessonFailed) return
+    const frame = window.requestAnimationFrame(() => {
+      const card = document.getElementById(`${returnCardTarget.section}-${returnCardTarget.id}`)
+      card?.scrollIntoView({ block: 'start', behavior: 'instant' }); card?.focus({ preventScroll: true })
+      setReturnCardTarget(null)
+    })
+    return () => window.cancelAnimationFrame(frame)
+  }, [active, returnCardTarget, lessonLoading, lessonFailed])
   useEffect(() => {
     const refresh = () => setToday(tokyoDate())
     const timer = window.setInterval(refresh, 60_000)
@@ -208,32 +254,38 @@ export default function App() {
   }, [lessonSearchTarget, lessonHighlightQuery, searchComposing, readingMode])
 
   const answered = progress.readingAnswers[lesson.reading.question.id]
-  const answerIsCorrect = answered === lesson.reading.question.answer
+  const practiceQuestions = useMemo(() => getPracticeQuestions(lesson), [lesson])
+  const practiceCount = (category: PracticeCategory) => practiceQuestions.filter(item => item.category === category).length
 
   const progressValue = useMemo(() => {
     const vocabDone = lesson.vocabulary.filter((item) => progress.vocab[item.id] === 'mastered').length
     const grammarDone = lesson.grammar.filter((item) => progress.grammar[item.id] === 'mastered').length
-    const readingDone = answered !== undefined ? 1 : 0
+    const readingDone = practiceQuestions.filter(({ question }) => progress.readingAnswers[question.id] !== undefined).length
     const immersionDone = completedLessons[lesson.date] ? 1 : 0
-    const total = lesson.vocabulary.length + lesson.grammar.length + 2
+    const total = lesson.vocabulary.length + lesson.grammar.length + practiceQuestions.length + 1
     return Math.round(((vocabDone + grammarDone + readingDone + immersionDone) / total) * 100)
-  }, [answered, completedLessons, lesson, progress])
+  }, [practiceQuestions, completedLessons, lesson, progress])
 
   const reviewItems = useMemo(() => {
-    const scheduled: { type: string; title: string; detail: string; section?: SectionId }[] = reviewFocus.map(item => ({ ...item, type: item.type === '词汇' ? '語彙' : item.type === '读解' ? '読解' : item.type }))
+    return getAllLessonQuestions(lesson).flatMap(item => {
+      const state = questionReview(item.question, progress, today)
+      return state ? [{ ...item, state }] : []
+    })
+  }, [lesson, progress, today])
+
+  const manualReviewItems = useMemo(() => {
     const vocab = lesson.vocabulary
       .filter((item) => progress.vocab[item.id] === 'review')
-      .map((item) => ({ type: '語彙', section: 'vocabulary' as SectionId, title: item.word, detail: `${item.reading} · ${item.meaning}` }))
+      .map((item) => ({ id: item.id, type: '語彙', section: 'vocabulary' as SectionId, title: item.word, detail: `${item.reading} · ${item.meaning}` }))
     const grammar = lesson.grammar
       .filter((item) => progress.grammar[item.id] === 'review')
-      .map((item) => ({ type: '文法', section: 'grammar' as SectionId, title: item.pattern, detail: item.meaning }))
-    const wrongReading = answered !== undefined && !answerIsCorrect
-      ? [{ type: '読解', section: 'reading' as SectionId, title: lesson.reading.question.prompt, detail: '本文に戻り、主張を支える根拠を確認しましょう。' }]
-      : []
-    return [...scheduled, ...vocab, ...grammar, ...wrongReading]
-  }, [answered, answerIsCorrect, lesson, progress, reviewFocus])
+      .map((item) => ({ id: item.id, type: '文法', section: 'grammar' as SectionId, title: item.pattern, detail: item.meaning }))
+    return [...vocab, ...grammar]
+  }, [lesson, progress])
 
   const go = (section: SectionId) => {
+    setQuestionTarget(null)
+    setQuestionLinkError(false)
     setLessonSearchTarget(null)
     setLiveSearchTarget(null)
     setActive(section)
@@ -259,6 +311,9 @@ export default function App() {
   }
 
   const openLesson = (date: string, section: SectionId = 'today') => {
+    setQuestionTarget(null)
+    setQuestionLinkError(false)
+    setLegacyReadingOpen(false)
     setLessonSearchTarget(null)
     setLiveSearchTarget(null)
     setSelectedDate(date)
@@ -268,7 +323,10 @@ export default function App() {
   }
 
   const openSearchResult = (result: ProjectSearchResult) => {
+    setQuestionTarget(null)
+    setQuestionLinkError(false)
     if (result.kind === 'lesson') {
+      setLegacyReadingOpen(result.section === 'reading' && result.anchor.startsWith('reading-'))
       setLiveSearchTarget(null)
       setReturnVocabularyId(null)
       setLessonSearchTarget({ ...result, query: contentQuery })
@@ -304,8 +362,8 @@ export default function App() {
     setToday(tokyoDate())
   }
 
-  const submitReading = (answer: number) => {
-    const id = lesson.reading.question.id
+  const submitQuestion = (id: string, answer: number) => {
+    if (!getAllLessonQuestions(lesson).some(item => item.question.id === id) || !Number.isInteger(answer) || answer < 0 || answer > 3) return
     const at = new Date().toISOString()
     setProgress(prev => recordStudy({ ...prev,
       readingAnswers: { ...prev.readingAnswers, [id]: answer },
@@ -313,6 +371,27 @@ export default function App() {
     }))
     setToday(tokyoDate())
   }
+
+  const openQuestion = (category: PracticeCategory, questionId: string, retry = false) => {
+    setLessonSearchTarget(null)
+    setLiveSearchTarget(null)
+    setQuestionLinkError(false)
+    setQuestionTarget(previous => ({ date: lesson.date, category, questionId, token: (previous?.token ?? 0) + 1, retry }))
+    setActive(category)
+    setMobileNavOpen(false)
+    const url = new URL(window.location.href)
+    url.hash = practiceHref(lesson.date, category, questionId)
+    window.history.pushState(window.history.state, '', url)
+  }
+
+  const practiceNavigation = lesson.practice ? <nav className="practice-category-nav" aria-label="練習の分類">
+    {(['vocabulary', 'grammar', 'reading'] as PracticeCategory[]).map(category => <button key={category} aria-current={active === category ? 'page' : undefined} onClick={() => go(category)}>
+      {practiceCategoryLabels[category]}<small>{practiceCount(category)}問</small>
+    </button>)}
+  </nav> : null
+  const practiceSection = (category: PracticeCategory) => <PracticeExercises lesson={lesson} category={category} progress={progress}
+    onSubmit={submitQuestion} searchQuery={lessonHighlightQuery}
+    retryTarget={questionTarget?.retry ? questionTarget : null} />
 
   return (
     <div className="app" data-theme={theme}>
@@ -358,6 +437,7 @@ export default function App() {
         </header>
 
         <div className="content-shell">
+          {questionLinkError ? <p className="storage-notice" role="alert">指定された問題はこの教材に見つかりませんでした。分類から問題を選び直してください。学習記録は変更していません。</p> : null}
           {active !== 'live-reactions' ? <AudioAvailability /> : null}
           {lessonUnavailable ? lessonFailed ? <div className="storage-notice" role="alert"><p>この日の教材を読み込めませんでした。学習記録は保持されています。</p><button className="text-btn" onClick={retryLesson}>教材を再読み込み</button></div>
             : <p className="lesson-loading" role="status">この日の教材を読み込んでいます…</p> : null}
@@ -404,14 +484,16 @@ export default function App() {
               </section>
 
               <section className="today-plan">
-                <SectionHeader eyebrow="TODAY" title="学習の進め方" description={`約 ${lesson.estimatedMinutes} 分で学習します。過去の教材にも、その日の復習ポイントを収録しています。`} />
+                <SectionHeader eyebrow="TODAY" title="学習の進め方" description={`全体の学習時間は約 ${lesson.estimatedMinutes} 分。以下から各教材・練習へ進めます。`} />
+                {practiceNavigation}
+                {lesson.practice && <p className="practice-help">今回の{practiceQuestions.length}問は既存のJLPT演習100分のうち{lesson.practice.estimatedMinutes}分（語彙7分・文法8分・読解40分）で行います。聴解45分を残し、一日の総学習時間は増やしません。</p>}
                 <div className="plan-list">
                   {[
                     ['01', '没入読解', 'まず日本語で読み、必要に応じて対訳や解説を確認しましょう。', '8 min', 'immersion' as SectionId],
-                    ['02', 'N1 語彙', `${lesson.vocabulary.length}語の重点語彙を、組み合わせ・例文・ニュアンスとともに学びます。`, '7 min', 'vocabulary' as SectionId],
-                    ['03', 'N1 文法', `${lesson.grammar.length}項目の重点文型を、接続や類似表現とともに学びます。`, '6 min', 'grammar' as SectionId],
-                    ['04', '短文読解', '主旨を問う読解問題です。回答後に各選択肢の根拠を確認します。', '7 min', 'reading' as SectionId],
-                    ['05', '誤答復習', `${reviewFocus.length}項目の誤答・苦手分野を復習します。`, '5 min', 'review' as SectionId],
+                    ['02', 'N1 語彙', lesson.practice ? `語彙問題${practiceCount('vocabulary')}問。学習カード${lesson.vocabulary.length}語は別に確認できます。` : `${lesson.vocabulary.length}語の重点語彙を、組み合わせ・例文・ニュアンスとともに学びます。`, '7 min', 'vocabulary' as SectionId],
+                    ['03', 'N1 文法', lesson.practice ? `文法問題${practiceCount('grammar')}問。文法形式・文の組み立て・文章の文法を練習します。` : `${lesson.grammar.length}項目の重点文型を、接続や類似表現とともに学びます。`, lesson.practice ? '8 min' : '6 min', 'grammar' as SectionId],
+                    ['04', '読解練習', lesson.practice ? `短文・中篇・長文・比較・情報検索の${practiceCount('reading')}問。各選択肢の根拠は回答後に確認します。` : '主旨を問う読解問題です。回答後に各選択肢の根拠を確認します。', lesson.practice ? '40 min' : '7 min', 'reading' as SectionId],
+                    ['05', '誤答復習', `この日に実際に間違えた${reviewItems.length}問。クリックして元の問題へ戻ります。`, '5 min', 'review' as SectionId],
                   ].map(([num, title, desc, time, id]) => (
                     <button className="plan-row" key={String(id)} onClick={() => go(id as SectionId)}>
                       <span className="plan-num">{num}</span>
@@ -427,6 +509,12 @@ export default function App() {
                 <div className="focus-icon"><Icon name="target" size={21} /></div>
                 <div><strong>{isLatest ? '今回の練習ポイント' : 'この日の復習方法'}</strong><p>意味を読むだけで終わらず、画面を閉じて自分の日本語で語句や文型を説明してみましょう。復習では苦手な項目を確認します。</p></div>
               </section>
+              {reviewFocus.length > 0 && <section className="supplementary-points" aria-label="補充知識">
+                <h2>補充知識・復習の観点</h2><p>教材の学習ポイントです。実際の誤答記録には含めません。</p>
+                {reviewFocus.map((item, index) => <article className="supplementary-point" id={`review-${index}`} tabIndex={-1} key={`${lesson.date}-${index}`}>
+                  <h3>{highlight(item.title)}</h3><p>{highlight(item.detail)}</p>
+                </article>)}
+              </section>}
             </div>
           )}
 
@@ -461,6 +549,9 @@ export default function App() {
           {active === 'vocabulary' && (
             <div className="page-enter">
               <SectionHeader eyebrow="02" title="N1 語彙" description="意味だけでなく、よく使う組み合わせ・使用場面・例文を覚えましょう。" />
+              {practiceNavigation}
+              {practiceSection('vocabulary')}
+              {lesson.practice && <h2>語彙学習カード</h2>}
               {lesson.studyVocabularyNote && <p>{lesson.studyVocabularyNote}</p>}
               {lesson.vocabulary.some(item=>item.studyKind) && <p className="study-count">新学 {lesson.vocabulary.filter(item=>item.studyKind==='new').length} ＋ 復習 {lesson.vocabulary.filter(item=>item.studyKind==='review').length} ＝ {lesson.vocabulary.length}語</p>}
               <div className="learning-list">
@@ -501,6 +592,9 @@ export default function App() {
           {active === 'grammar' && (
             <div className="page-enter">
               <SectionHeader eyebrow="03" title="N1 文法" description="意味・接続・文体を確認し、似た表現との違いを整理しましょう。" />
+              {practiceNavigation}
+              {practiceSection('grammar')}
+              {lesson.practice && <h2>文法学習カード</h2>}
               {lesson.grammarSelectionNote && <p className="grammar-explain" data-grammar-selection-note>{lesson.grammarSelectionNote}</p>}
               {lesson.studyGrammarNote && <p>{lesson.studyGrammarNote}</p>}
               <div className="learning-list grammar-list">
@@ -531,40 +625,63 @@ export default function App() {
 
           {active === 'reading' && (
             <div className="page-enter reading-page">
-              <SectionHeader eyebrow="04" title="短文読解" description="筆者の主張・条件・逆接を確認してから、答えを選びましょう。" />
+              <SectionHeader eyebrow="04" title={lesson.practice ? '読解練習' : '短文読解'} description="筆者の主張・条件・逆接を確認してから、答えを選びましょう。" />
+              {practiceNavigation}
+              {practiceSection('reading')}
+              <details className={lesson.practice ? 'legacy-reading' : 'legacy-reading-default'} open={!lesson.practice || legacyReadingOpen} onToggle={event => {
+                if (lesson.practice) setLegacyReadingOpen(event.currentTarget.open)
+              }}>
+              <summary hidden={!lesson.practice}>以前の主旨問題・回答履歴（今回の読解問題数には含めません）</summary>
               <article className="reading-paper quiz-paper">
                 <div className="article-head" id="reading-title" tabIndex={-1}><span>JLPT N1 · 読解 · DAY {lesson.day}</span><div className="audio-heading"><h1>{highlight(lesson.reading.title)}</h1><AudioButton text={lesson.reading.title} /></div></div>
                 {lesson.reading.paragraphs.map((p, index) => <p className="jp-body" id={`reading-paragraph-${index}`} tabIndex={-1} key={`${lesson.date}-reading-${index}`}><SentenceAudio text={p} renderText={highlight} /></p>)}
-                <ReadingExercise key={lesson.reading.question.id} question={lesson.reading.question}
+                <ReadingExercise key={`${lesson.reading.question.id}:${questionTarget?.questionId === lesson.reading.question.id ? questionTarget.token : 0}`} question={lesson.reading.question}
                   day={lesson.day} answered={answered} attempts={progress.readingAttempts[lesson.reading.question.id] ?? []}
-                  onSubmit={submitReading} searchQuery={lessonHighlightQuery} />
+                  onSubmit={answer => submitQuestion(lesson.reading.question.id, answer)} searchQuery={lessonHighlightQuery}
+                  startRetry={questionTarget?.questionId === lesson.reading.question.id && questionTarget.retry} />
               </article>
+              </details>
             </div>
           )}
 
           {active === 'review' && (
             <div className="page-enter">
-              <SectionHeader eyebrow="REVIEW" title="誤答・苦手分野の復習" description="この日の復習ポイントと、要復習にした語彙・文法、未克服の読解問題を表示します。" />
+              <SectionHeader eyebrow="REVIEW" title="この日の実際の誤答" description="提出した回答で一度でも間違えた問題だけを表示します。未回答・初回から正解の問題は入りません。" />
+              <p className="review-counts">Day {lesson.day} · {lesson.date} · 誤答した問題 {reviewItems.length}問 · 本日までの復習対象 {reviewItems.filter(item => item.state.due).length}問</p>
               {reviewItems.length === 0 ? (
-                <div className="empty-state"><div className="empty-icon"><Icon name="check" size={26} /></div><h3>この日の復習項目はありません</h3><p>語彙・文法で「要復習」を選ぶと追加されます。読解で間違えた問題もここに表示します。</p><button className="text-btn" onClick={() => go('vocabulary')}>学習へ</button></div>
+                <div className="empty-state"><div className="empty-icon"><Icon name="check" size={26} /></div><h3>この日の誤答記録はありません</h3><p>語彙・文法・読解で回答を提出し、間違えた問題だけが追加されます。まだ解いていない問題を習得済みとは判定しません。</p><button className="text-btn" onClick={() => go(lesson.practice ? 'vocabulary' : 'reading')}>問題を解く</button></div>
               ) : (
                 <div className="review-list">
-                  {reviewItems.map((item, index) => {
-                    const vocabulary = item.section === 'vocabulary' ? lesson.vocabulary.find(word => word.word === item.title) : undefined
-                    const term = vocabulary || (item.section === 'grammar' ? lesson.grammar.find(grammar => grammar.pattern === item.title) : undefined)
-                    return <div className="review-row" id={`review-${index}`} tabIndex={-1} key={`${item.type}-${item.title}-${index}`}>
-                      <span className="review-number">{index + 1}</span><span className="review-type">{item.type}</span><div>
-                        <strong>{term ? <span className="audio-heading"><span>{highlight(item.title)}</span><AudioButton text={item.title} speechText={vocabulary?.reading} /></span> : <SentenceAudio text={item.title} renderText={highlight} japaneseOnly />}</strong>
-                        <p>{item.section ? highlight(item.detail) : <SentenceAudio text={item.detail} renderText={highlight} japaneseOnly />}</p>
-                      </div>{item.section ? <button className="text-btn" onClick={() => go(item.section!)} aria-label={`${item.title}を復習する`}>復習する</button> : null}
-                    </div>
+                  {(['vocabulary', 'grammar', 'reading'] as PracticeCategory[]).map(category => {
+                    const items = reviewItems.filter(item => item.category === category)
+                    return items.length ? <section key={category} aria-label={`${practiceCategoryLabels[category]}の誤答`}>
+                      <h3 className="review-category-heading">{practiceCategoryLabels[category]} · {items.length}問</h3>
+                      {items.map((item, index) => <div className="review-row" data-review-question={item.question.id} data-due={item.state.due} key={item.question.id}>
+                        <span className="review-number">{index + 1}</span><span className="review-type">{category === 'vocabulary' ? '語彙' : category === 'grammar' ? '文法' : '読解'}</span>
+                        <div><strong>{item.question.prompt}</strong>
+                          <p>{item.group?.title ?? '以前の主旨問題'} · {item.state.streak < 2 ? `連続正解 ${item.state.streak}/2 · 引き続き復習` : `連続正解 ${item.state.streak}回 · 復習間隔を延長`}</p>
+                          <p>{item.state.dueDate ? `${item.state.due ? '復習日' : '次の復習'}：${item.state.dueDate}` : '回答日時不明 · 復習待ち'} · {item.state.intervalDays}日間隔</p>
+                        </div>
+                        <a className="review-question-link" href={practiceHref(lesson.date, category, item.question.id)} aria-label={`${item.question.prompt}を復習する`} onClick={event => {
+                          if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
+                          event.preventDefault(); openQuestion(category, item.question.id, true)
+                        }}>元の問題で復習する →</a>
+                      </div>)}
+                    </section> : null
                   })}
                 </div>
               )}
               <section className="spaced-review">
-                <div><span className="section-index">SPACED REVIEW</span><h3>復習間隔の目安</h3><p>1・3・7・14・30日後を目安に、自分で思い出す練習をしましょう。</p></div>
-                <div className="intervals"><span>1 日</span><i /><span>3 日</span><i /><span>7 日</span><i /><span>14 日</span><i /><span>30 日</span></div>
+                <div><span className="section-index">SPACED REVIEW</span><h3>実際の回答に合わせて復習</h3><p>誤答後は翌日から復習。実際に2回正解するまでは頻度を下げず、その後3・7・14日間隔へ進みます。再び間違えたら翌日から再開し、以前の履歴も残します。</p></div>
+                <div className="intervals"><span>1 日</span><i /><span>3 日</span><i /><span>7 日</span><i /><span>14 日</span></div>
               </section>
+              {manualReviewItems.length > 0 && <section className="manual-review-section" aria-label="自分でマークした学習カード">
+                <h3>自分でマークした学習カード</h3><p>「要復習」にしたカードです。問題の誤答件数には含めません。</p>
+                {manualReviewItems.map(item => <div className="manual-review-row" key={item.id}>
+                  <span className="tag">{item.type}</span><div><strong>{item.title}</strong><p>{item.detail}</p></div>
+                  <button className="text-btn" onClick={() => { go(item.section); setReturnCardTarget({ section: item.section, id: item.id }) }}>カードを見る</button>
+                </div>)}
+              </section>}
             </div>
           )}
 

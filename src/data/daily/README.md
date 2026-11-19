@@ -86,7 +86,7 @@
 - 同一天只允许一个 JSON；重跑时更新当天文件，不重复创建第二份日报。
 - `vocabulary[].id`、`grammar[].id`、`reading.question.id` 必须包含日期，避免不同日期的学习状态冲突。
 - 网页正文保持当前结构：沉浸阅读 → N1语彙 → N1文法 → 読解 → 誤答復習。
-- `reviewFocus` 使用当天推送末尾的错题复习重点；题目可以暂不显示答案，但网页中的复习说明应与推送内容一致。
+- `reviewFocus` 保存公开的补充学习考点，在“今日の学習”中展示；它不是个人实际错题，不能自动加入错题列表。真实错题仅由该用户提交的错误答案产生，并按题目ID跳转。
 - 由同步workflow写入 `main` 后显式触发 GitHub Pages；完整Deploy和线上目标日期验证通过才算发布，不以提交成功代替。
 
 ## 検証付きインポート
@@ -97,6 +97,14 @@ Node.js 24で `npm run import:daily -- /path/to/YYYY-MM-DD.json` を実行でき
 選択肢と `optionNotes` はそれぞれ4件、`answer` は元配列の0〜3の番号です。
 画面で選択肢の順番が変わっても、JSONの配列や正解番号を書き換える必要はありません。
 既存の同じIDで選択肢の意味・順番を変更すると保存回答との対応が変わるため、問題を差し替える場合は新しいIDを付けてください。
+
+## 分类原创练习（2026-11-20用户批准，先修订Day82）
+
+`lesson.practice` 为可选的完整分类题集，类型见 `src/types.ts` 的 `DailyPractice`。数量仅由 `docs/automation/policy.json.practice` 规定；词汇、语法题数与NEW/REVIEW学习卡数量是两回事。`groups` 按 `category`（vocabulary、grammar、reading）分类，读解 `kind` 分为 short、medium、long、comparison、information。组中保留完整原文、可选表格及完整题目；每题含稳定日期ID、题干、四个选项、标准答案和对应的四个解析。网页仅在提交后显示标准答案和解析。
+
+正常新课通过现有完整同步request写入该可选结构，仍由 `sync-n1-daily.yml` 写最终daily JSON。Day82的用户授权历史修订使用 `src/data/practice/2026-11-19.json`，引用完整 `n1-source/revisions/2026-11-19-practice.md`；构建时只叠加到日期吻合的既有课，不改写冻结原稿、旧checkpoint或IT学习快照。没有此结构的旧课继续显示原 `reading.question`。有新版题集的日期保留原单题及其旧ID、选项顺序、答案记录，可从读解底部“以前の主旨問題・回答履歴”打开。
+
+实际错题从现有私有学习记录推导，不能通过公开教材文件设置某人的错误答案。未作答、初次答对、预设考点、手动卡片标记不进入错题；真实错误后，两次确实正确才降频，记录始终保留。
 
 ## 新词与新语法全历史查重
 
