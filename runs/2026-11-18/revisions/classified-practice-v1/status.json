@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "targetDate": "2026-11-18",
+  "day": 81,
+  "revision": "classified-practice-v1",
+  "status": "source_saved",
+  "generatedAtJST": "2026-11-20T01:54:02+09:00",
+  "verifiedAtJST": "2026-11-20T02:01:17+09:00",
+  "sha256": "4e2ecd35dbc84edd027e270cf04b68be853ac999952272fa2b37714b74235a9f",
+  "bytes": 22917,
+  "checkpoint": {
+    "branch": "automation/n1-progress",
+    "path": "runs/2026-11-18/revisions/classified-practice-v1/source.json",
+    "commitSha": "422fd2b946a3aa7f961b9ea83c447a84eeba54a9",
+    "blobSha": "9b25e078ee4881e52cdbb05d84482ba41ea9f2f0",
+    "fullReadbackVerified": true
+  },
+  "mainSource": {
+    "path": "n1-source/revisions/2026-11-18-practice.md",
+    "commitSha": "93533f606d0b8958a6a24b84d5ffa981b2d93d06",
+    "blobSha": "883bfa9ee966140bccddcc2cf788e7543c768c69",
+    "fullReadbackVerified": true
+  },
+  "preservedOriginal": {
+    "path": "n1-source/2026-11-18.md",
+    "blobSha": "b87f398e980ef39b8765a7269ba225599d2756a8"
+  },
+  "publication": {
+    "status": "published_release_verified",
+    "releaseCommit": "93533f606d0b8958a6a24b84d5ffa981b2d93d06",
+    "runId": 44571398924,
+    "runUrl": "https://github.com/kai987/Japanese-N1-Immersive-Sparring-Partner/actions/runs/44571398924",
+    "manifestSha256": "7b969c03b61551ed234810315cdbc7f2eec6ae03f589e4b48931740138a719a9",
+    "verifiedFiles": 91
+  },
+  "checks": {
+    "sharedContractTests": 9,
+    "nodeUnitTests": 223,
+    "pythonTests": 28,
+    "browserTests": 131,
+    "passed": true
+  },
+  "practice": {
+    "vocabulary": 5,
+    "grammar": 5,
+    "reading": {
+      "short": 2,
+      "medium": 2,
+      "long": 2,
+      "comparison": 1,
+      "information": 1
+    },
+    "total": 18
+  }
+}
