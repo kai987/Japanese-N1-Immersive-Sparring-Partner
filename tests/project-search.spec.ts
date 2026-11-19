@@ -93,12 +93,20 @@ test('IME Enter does not navigate until committed; arrows and Enter open the cho
   await expect(page.locator('.compound-page')).toHaveCount(0)
   await expect(results(page)).toHaveCount(0)
   await input.dispatchEvent('compositionend', { data: 'おりかえす' })
-  await expect(results(page).locator('[data-search-kind="compound"]').first()).toBeVisible()
+  const target = results(page).locator('[data-search-kind="compound"][data-search-target="naosu-kaesu"]')
+  await expect(target).toBeVisible()
+  // The asynchronously loaded daily hit can be inserted before this compound
+  // result. Select its stable identity, never an index captured before loading.
+  await expect(results(page).getByRole('status')).toHaveCount(0)
   const buttons = results(page).locator('.daily-search-result')
-  const index = await buttons.evaluateAll(elements => elements.findIndex(element => element.getAttribute('data-search-kind') === 'compound'))
-  for (let i = 0; i <= index; i++) await input.press('ArrowDown')
-  await expect(buttons.nth(index)).toHaveClass(/is-selected/)
+  const maximumSteps = await buttons.count()
+  for (let step = 0; step < maximumSteps; step++) {
+    await input.press('ArrowDown')
+    if (await target.evaluate(element => element.classList.contains('is-selected'))) break
+  }
+  await expect(target).toHaveClass(/is-selected/)
   await input.press('Enter')
+  await expect(page).toHaveURL(/#compound-verbs\/naosu-kaesu$/)
   await expect(current(page)).toHaveText('おりかえす')
   await expect(current(page)).toBeInViewport()
 })

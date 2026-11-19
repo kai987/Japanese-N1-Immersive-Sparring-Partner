@@ -27,8 +27,21 @@ function watchErrors(page: Page) {
 async function openResult(page: Page, query: string, date: string, anchor: string) {
   const inputQuery = query.replace(/[\r\n]/gu, ' ')
   await input(page).fill(inputQuery)
+  const popup = page.getByRole('region', { name: '教材の検索結果', exact: true })
+  await expect(popup).toBeVisible()
+  // Compound/live results are available before the daily index. Wait for that
+  // index before deciding whether the requested historical hit is in preview.
+  await expect(popup.getByRole('status')).toHaveCount(0)
   // The anchor is carried on the result itself rather than inferred from its label.
   const target = page.locator(`.daily-search-result[data-search-kind="lesson"][data-search-target="${date}"][data-search-anchor="${anchor}"]`)
+  if (await target.count() === 0) {
+    // The preview is intentionally capped. Newer matching exercises may move
+    // this exact dated card below it; use the same expansion a learner uses.
+    const more = popup.getByRole('button', { name: /^查看全部结果/ })
+    await expect(more).toBeVisible()
+    await more.click()
+    await expect(popup.getByRole('button', { name: '收起结果', exact: true })).toHaveAttribute('aria-expanded', 'true')
+  }
   await expect(target).toBeVisible()
   await target.click()
   await expect(page.getByRole('region', { name: '教材の検索結果', exact: true })).toHaveCount(0)
