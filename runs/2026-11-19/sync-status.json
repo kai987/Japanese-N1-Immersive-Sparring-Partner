@@ -1,9 +1,9 @@
 {
   "targetDate": "2026-11-19",
   "day": 82,
-  "stage": "validating",
+  "stage": "published",
   "schemaVersion": 1,
-  "status": "validating",
+  "status": "published",
   "reason": "source_and_upstream_verified",
   "upstreamSourceCommit": "f2bcf58a82c070d4491fcf29b226d1a839a8b761",
   "sourcePagesRunId": 44436267836,
@@ -17,8 +17,24 @@
     "allPassed": true
   },
   "lastError": null,
-  "nextStep": "Verify exact Sync and Pages plus live deployment",
-  "updatedAt": "2026-11-19T01:27:47.664Z",
+  "nextStep": "Verify the exact shared audio continuation and await the separate unique-audio worker and verifier",
+  "updatedAt": "2026-11-19T01:33:26.157Z",
   "requestCommit": "11cabb359404a881a7b1ee48c52432fb7f511b2d",
-  "requestBlobSha": "91e78bf686c0118931a7fa5a29e95d07bebf7cd8"
+  "requestBlobSha": "91e78bf686c0118931a7fa5a29e95d07bebf7cd8",
+  "manifestSha256": "713c566f05bb49b002a81fe90796a7d41f6d83d5d744cce5e44128406c385f2e",
+  "verifiedFiles": 91,
+  "latestDate": "2026-11-19",
+  "title": "数字がよくなれば、問題は解決したのか",
+  "sourceCommit": "f2bcf58a82c070d4491fcf29b226d1a839a8b761",
+  "releaseCommit": "39d5463daa3d2a9e7dac7ed7cf06ce3c8d4f16ae",
+  "pagesRunId": 44437382306,
+  "syncRunId": 44437078808,
+  "counts": {
+    "vocabularyNew": 6,
+    "vocabularyReview": 14,
+    "grammarNew": 0,
+    "grammarReview": 3
+  },
+  "verifiedAt": "2026-11-19T01:33:25.822Z",
+  "textPublicationVerified": true
 }
