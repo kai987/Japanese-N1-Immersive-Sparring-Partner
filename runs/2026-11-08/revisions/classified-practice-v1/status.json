@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "targetDate": "2026-11-08",
+  "day": 71,
+  "revision": "classified-practice-v1",
+  "status": "source_saved",
+  "frozenRunDateJST": "2026-11-20",
+  "generatedAtJST": "2026-11-20T14:01:12+09:00",
+  "verifiedAtJST": "2026-11-20T14:06:26+09:00",
+  "sha256": "30ca4c3e201082457191d40983cadb643f4b26997fd9d4dded5ecfe2fdb08ba9",
+  "bytes": 27822,
+  "checkpoint": {
+    "branch": "automation/n1-progress",
+    "path": "runs/2026-11-08/revisions/classified-practice-v1/source.json",
+    "commitSha": "0b99e6fa9e1988b91fca31c6a404dccea41afa95",
+    "blobSha": "0ec01c84ec1f1b1788599210e5af059214c881f7",
+    "fullReadbackVerified": true
+  },
+  "mainSource": {
+    "path": "n1-source/revisions/2026-11-08-practice.md",
+    "commitSha": "601233dc8e89fe124dd03c3e55ef673f1e8aedeb",
+    "blobSha": "bc887749d4d1374cde51ab99bacb79c0e991af4b",
+    "fullReadbackVerified": true
+  },
+  "preservedOriginal": {
+    "path": "n1-source/2026-11-08.md",
+    "blobSha": "41241bc6c57bd144522dd10c8e40c23f146061c6",
+    "sha256": "39b52ba5b7c23aa8bc47d3792856ce836026d74d4ae6eaf48024359d23d62c42"
+  },
+  "publication": {
+    "status": "published_release_verified",
+    "releaseCommit": "601233dc8e89fe124dd03c3e55ef673f1e8aedeb",
+    "runId": 44678273160,
+    "runUrl": "https://github.com/kai987/Japanese-N1-Immersive-Sparring-Partner/actions/runs/44678273160",
+    "manifestSha256": "d2bcd97b1ad2a8df9009cac2e2ebd76b04bd08d117efd76f7d04c049d03aca52",
+    "verifiedFiles": 92,
+    "artifactId": 14603396787,
+    "artifactDigest": "sha256:2c678e0f6cf41b83b466ac4dde29e396a6eb977f47c6e4a7ff1882df3fa7b9dd",
+    "deploymentRequestDate": "2026-11-20",
+    "liveTargetDate": "2026-11-08",
+    "liveTargetVerified": true,
+    "liveUrl": "https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/#practice/2026-11-08/reading/2026-11-08-rq-uncertain-name-report-locator-v1"
+  },
+  "checks": {
+    "sharedContractTests": 9,
+    "nodeUnitTests": 223,
+    "pythonTests": 28,
+    "browserTests": 152,
+    "passed": true
+  },
+  "practice": {
+    "vocabulary": 5,
+    "grammar": 5,
+    "reading": {
+      "short": 2,
+      "medium": 2,
+      "long": 2,
+      "comparison": 1,
+      "information": 1
+    },
+    "total": 18,
+    "estimatedMinutes": 55
+  },
+  "lastConfirmedStage": "checkpoint_main_exact_release_and_live_target_verified",
+  "error": null
+}
