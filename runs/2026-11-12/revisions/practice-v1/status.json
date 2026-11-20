@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "targetDate": "2026-11-12",
+  "day": 75,
+  "kind": "classified-practice-revision",
+  "status": "awaiting_deploy",
+  "sourcePath": "n1-source/revisions/2026-11-12-practice.md",
+  "sourceSha256": "f92189b4c5a2c0c20abd2b3659b890ee397773159e3b3b92e73a9ee5917411cb",
+  "sourceBytes": 25313,
+  "releaseCommit": "e69172ef3bebd913f6eab40fa19863082f2da229",
+  "pagesRunId": 44664483567,
+  "questionCounts": {
+    "vocabulary": 5,
+    "grammar": 5,
+    "reading": {
+      "short": 2,
+      "medium": 2,
+      "long": 2,
+      "comparison": 1,
+      "information": 1
+    },
+    "total": 18
+  },
+  "validation": {
+    "content": "passed",
+    "build": "passed",
+    "automationTestsPassed": 9,
+    "nodeTestsPassed": 223,
+    "pythonTestsPassed": 28,
+    "browserTests": "awaiting exact-commit GitHub Actions"
+  }
+}
