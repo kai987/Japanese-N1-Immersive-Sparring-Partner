@@ -1,5 +1,5 @@
 import { test, expect, type Page } from '@playwright/test'
-import { liveUnits } from '../src/data/live-reaction-units.ts'
+import { getLiveMangaGalleries, liveUnits } from '../src/data/live-reaction-units.ts'
 
 const supportedUnits = ['2026-10-29', '2026-10-30']
 const pageIds = ['cover', ...Array.from({ length: 15 }, (_, index) => `page-${String(index + 29).padStart(3, '0')}`)]
@@ -32,9 +32,10 @@ async function expectLoadedPage(page: Page, id: string) {
 }
 
 test('both October units share an ordered, lazy 16-page gallery and verified build assets', async ({ page }) => {
-  expect(liveUnits.filter(unit => unit.manga?.id === 'tanpopo-sora-wo-iku').map(unit => unit.id).sort()).toEqual(supportedUnits)
+  expect(liveUnits.filter(unit => getLiveMangaGalleries(unit).some(item => item.id === 'tanpopo-sora-wo-iku')).map(unit => unit.id).sort()).toEqual(supportedUnits)
   for (const id of supportedUnits) {
-    expect(liveUnits.find(unit => unit.id === id)!.manga!.pages.map(item => item.id)).toEqual(pageIds)
+    const manga = getLiveMangaGalleries(liveUnits.find(unit => unit.id === id)!).find(item => item.id === 'tanpopo-sora-wo-iku')!
+    expect(manga.pages.map(item => item.id)).toEqual(pageIds)
   }
 
   const release = await page.request.get('/n1-release.json')
@@ -82,6 +83,89 @@ test('both October units share an ordered, lazy 16-page gallery and verified bui
   await expect(gallery(page).locator('img')).toHaveAttribute('src', coverSource!)
   await unitPicker(page).selectOption('2026-11-18')
   await expect(gallery(page)).toHaveCount(0)
+})
+
+test('November 13 keeps both manga readers independent and loads all nine Osoda pages in order', async ({ page }) => {
+  const expectedPageIds = [...Array.from({ length: 8 }, (_, index) => `page-${290 + index}`), 'ending']
+  const unit = liveUnits.find(item => item.id === '2026-11-13')!
+  const osodaData = getLiveMangaGalleries(unit).find(item => item.id === 'osoda-ame')!
+  expect(osodaData.pages.map(item => item.id)).toEqual(expectedPageIds)
+  expect(osodaData.pages.at(-1)!.label).toContain('未标页码')
+  expect(osodaData.pages.at(-1)!.label).not.toContain('298')
+
+  await page.goto('/?live-unit=2026-11-13#live-reactions')
+  await expect(unitPicker(page)).toHaveValue('2026-11-13')
+  const original = page.locator('details[data-manga-gallery="otoshimono-comeback-spray"]')
+  const osoda = page.locator('details[data-manga-gallery="osoda-ame"]')
+  const originalPicker = original.getByLabel('选择漫画页', { exact: true })
+  const osodaPicker = osoda.getByLabel('选择漫画页', { exact: true })
+  await expect(gallery(page)).toHaveCount(2)
+  await expect(original.locator('summary')).toHaveText('漫画原图 · 落としものカムバックスプレー · 10 张')
+  await expect(osoda.locator('summary')).toHaveText('漫画原图 · おそだアメ · 9 张')
+  for (const reader of [original, osoda]) {
+    await expect(reader).not.toHaveAttribute('open')
+    await expect(reader.locator('img')).toHaveCount(0)
+  }
+  const before = await learningRecords(page)
+
+  await original.locator('summary').click()
+  await expect(original).toHaveAttribute('open')
+  await expect(originalPicker.locator('option')).toHaveCount(10)
+  await originalPicker.selectOption('page-122')
+  await expect(originalPicker).toHaveValue('page-122')
+  await expect(osoda).not.toHaveAttribute('open')
+
+  await osoda.locator('summary').click()
+  await expect(osoda).toHaveAttribute('open')
+  await expect(osodaPicker.locator('option')).toHaveText(osodaData.pages.map((item, index) => `${index + 1} / 9 · ${item.label}`))
+  await expect(osoda.getByRole('heading', { name: 'おそだアメ', exact: true })).toBeVisible()
+  await expect(osodaPicker).toHaveValue('page-290')
+  await expect(originalPicker).toHaveValue('page-122')
+  await expect(osoda.getByRole('button', { name: '上一页', exact: true })).toBeDisabled()
+
+  await original.getByRole('button', { name: '下一页', exact: true }).click()
+  await expect(originalPicker).toHaveValue('page-123')
+  await expect(osodaPicker).toHaveValue('page-290')
+
+  const loadedSources = new Set<string>()
+  for (const [index, item] of osodaData.pages.entries()) {
+    if (index > 0) await osoda.getByRole('button', { name: '下一页', exact: true }).click()
+    await expect(osodaPicker).toHaveValue(expectedPageIds[index])
+    await expect(osoda.getByRole('status')).toHaveText(`第 ${index + 1} / 9 张 · ${item.label}`)
+    const image = osoda.locator('img')
+    await image.scrollIntoViewIfNeeded()
+    await expect(image).toHaveJSProperty('complete', true)
+    await expect(image).toHaveJSProperty('naturalWidth', item.width)
+    await expect(image).toHaveJSProperty('naturalHeight', item.height)
+    await expect(image).toHaveAttribute('alt', item.alt)
+    const source = await image.getAttribute('src')
+    expect(source).toBeTruthy()
+    loadedSources.add(source!)
+    await expect(osoda.getByRole('link', { name: '打开原图', exact: true })).toHaveAttribute('href', source!)
+    await expect(originalPicker).toHaveValue('page-123')
+  }
+  expect(loadedSources.size).toBe(9)
+  await expect(osoda.getByRole('button', { name: '下一页', exact: true })).toBeDisabled()
+  await osoda.locator('summary').click()
+  await expect(osoda).not.toHaveAttribute('open')
+  await expect(osoda.locator('img')).toHaveCount(0)
+  await expect(original).toHaveAttribute('open')
+  await expect(originalPicker).toHaveValue('page-123')
+  await osoda.locator('summary').click()
+  await expect(osodaPicker).toHaveValue('ending')
+  await osoda.getByRole('button', { name: '上一页', exact: true }).click()
+  await expect(osodaPicker).toHaveValue('page-297')
+  await expect(originalPicker).toHaveValue('page-123')
+
+  await unitPicker(page).selectOption('2026-11-09')
+  await expect(gallery(page)).toHaveCount(1)
+  await expect(osoda).toHaveCount(0)
+  await expect(original.locator('summary')).toHaveText('漫画原图 · 10 张')
+  await expect(original).not.toHaveAttribute('open')
+  await original.locator('summary').click()
+  await expect(originalPicker.locator('option')).toHaveCount(10)
+  await expect(originalPicker).toHaveValue('cover')
+  expect(await learningRecords(page)).toEqual(before)
 })
 
 test('page-turn buttons float over the left and right edges of the manga at desktop and mobile widths', async ({ page }) => {

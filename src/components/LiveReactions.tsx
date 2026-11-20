@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { liveCategories, liveUnits, liveUnitFromSearch, type LiveCategory } from '../data/live-reaction-units'
+import { getLiveMangaGalleries, liveCategories, liveUnits, liveUnitFromSearch, type LiveCategory } from '../data/live-reaction-units'
 import { useLocalStorage } from '../hooks/useLocalStorage'
 import { decodeLiveProgress, initialLiveProgress, liveProgressKey, matchesLiveGroup, type LiveStatus } from '../lib/liveReactions'
 import type { LiveSearchResult } from '../lib/projectSearch'
@@ -29,6 +29,7 @@ export default function LiveReactions({ query, composing, onClear, searchTarget,
   const [progress, setProgress, storage] = useLocalStorage(liveProgressKey, initialLiveProgress, decodeLiveProgress)
   useEffect(() => { stopAudio() }, [unitId, groupId, category, filter, query])
   const unit = liveUnits.find(item => item.id === unitId) ?? liveUnits[0]
+  const mangaGalleries = getLiveMangaGalleries(unit)
   const groups = unit.groups
   const entries = groups.reduce((sum, group) => sum + group.entries.length, 0)
   const mastered = groups.filter(group => progress.groups[group.id] === 'mastered').length
@@ -81,7 +82,7 @@ export default function LiveReactions({ query, composing, onClear, searchTarget,
       <div><span className="section-index">{unit.date}</span><h2 id="live-unit-title">{unit.title}</h2></div>
       <p>{unit.description}</p><span className="live-unit-count">{unit.countLabel}</span>
     </div>
-    {unit.manga ? <LiveMangaGallery key={unit.id} gallery={unit.manga} /> : null}
+    {mangaGalleries.map(gallery => <LiveMangaGallery key={`${unit.id}:${gallery.id}`} gallery={gallery} showTitle={mangaGalleries.length > 1} />)}
     <div className="live-summary" aria-label="直播笔记学习概要">
       <div><span>当前单元</span><strong>{groups.length}<small> 组</small></strong></div>
       <div><span>词条与表达</span><strong>{entries}<small> 条</small></strong></div>

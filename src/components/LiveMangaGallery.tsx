@@ -8,7 +8,7 @@ const imageUrls = import.meta.glob<string>('../assets/live-manga/**/*.jpg', {
   eager: true, query: '?url', import: 'default',
 })
 
-export function LiveMangaGallery({ gallery }: { gallery: MangaGallery }) {
+export function LiveMangaGallery({ gallery, showTitle = false }: { gallery: MangaGallery; showTitle?: boolean }) {
   const [open, setOpen] = useState(false)
   const [selectedId, setSelectedId] = useState(gallery.pages[0]?.id ?? '')
   const [retryAttempt, setRetryAttempt] = useState(0)
@@ -33,8 +33,8 @@ export function LiveMangaGallery({ gallery }: { gallery: MangaGallery }) {
     setRetryAttempt(attempt => attempt + 1)
   }
 
-  return <details className="live-manga-gallery" onToggle={event => setOpen(event.currentTarget.open)}>
-    <summary>漫画原图 · {gallery.pages.length} 张</summary>
+  return <details className="live-manga-gallery" data-manga-gallery={gallery.id} onToggle={event => setOpen(event.currentTarget.open)}>
+    <summary>漫画原图 · {showTitle ? <><span lang="ja">{gallery.title}</span> · </> : null}{gallery.pages.length} 张</summary>
     {open ? <div className="live-manga-reader">
       <header className="live-manga-heading">
         <h3 lang="ja">{gallery.title}</h3>

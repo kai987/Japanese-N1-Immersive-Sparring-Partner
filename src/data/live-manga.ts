@@ -62,3 +62,22 @@ export const otoshimonoManga: LiveMangaGallery = {
     { id: 'page-124', file: 'otoshimono-comeback-spray/page-124.jpg', label: '第124页', alt: '「落としものカムバックスプレー」第124页：妈妈的物品回到家中，露营地的垃圾也回到小夫家', width: 1352, height: 1920, originalFilename: 'IMG_3405(1).JPG' },
   ],
 }
+
+// The first supplied page includes the title and opening panels (printed p.290).
+// The ending follows p.297, but its image has no visible printed page number.
+export const osodaManga: LiveMangaGallery = {
+  id: 'osoda-ame',
+  title: 'おそだアメ',
+  description: '对应11月13日后半学习的「おそだアメ」，共9张漫画原图。按图片顺序收录第290—297页和末页；第290页含篇名与故事开头，最后一张未显示页码。可逐页对照笔记，点击图片或“打开原图”查看原始尺寸。',
+  pages: [
+    { id: 'page-290', file: 'osoda-ame/page-290.jpg', label: '第290页（标题与开头）', alt: '「おそだアメ」第290页：篇名与故事开头，大雄回家寻找约好比瞪眼的哆啦A梦', width: 1352, height: 1920, originalFilename: 'IMG_3406.JPG' },
+    { id: 'page-291', file: 'osoda-ame/page-291.jpg', label: '第291页', alt: '「おそだアメ」第291页：大雄听见哆啦A梦留下的声音，却找不到他', width: 1352, height: 1920, originalFilename: 'IMG_3407.JPG' },
+    { id: 'page-292', file: 'osoda-ame/page-292.jpg', label: '第292页', alt: '「おそだアメ」第292页：大雄与静香谈起胖虎的演唱会', width: 1352, height: 1920, originalFilename: 'IMG_3408.JPG' },
+    { id: 'page-293', file: 'osoda-ame/page-293.jpg', label: '第293页', alt: '「おそだアメ」第293页：大雄向哆啦A梦求助，哆啦A梦介绍延迟声音传播的糖果', width: 1352, height: 1920, originalFilename: 'IMG_3409.JPG' },
+    { id: 'page-294', file: 'osoda-ame/page-294.jpg', label: '第294页', alt: '「おそだアメ」第294页：用糖果做实验，声音过了一段时间才传来', width: 1352, height: 1920, originalFilename: 'IMG_3410.JPG' },
+    { id: 'page-295', file: 'osoda-ame/page-295.jpg', label: '第295页', alt: '「おそだアメ」第295页：妈妈唱歌时，大雄先前说的话延迟传来', width: 1352, height: 1920, originalFilename: 'IMG_3411.JPG' },
+    { id: 'page-296', file: 'osoda-ame/page-296.jpg', label: '第296页', alt: '「おそだアメ」第296页：演唱会当天，大雄和哆啦A梦把糖果交给胖虎', width: 1352, height: 1920, originalFilename: 'IMG_3412.JPG' },
+    { id: 'page-297', file: 'osoda-ame/page-297.jpg', label: '第297页', alt: '「おそだアメ」第297页：胖虎吃下全部糖果，大家听完无声的演唱会', width: 1352, height: 1920, originalFilename: 'IMG_3413.JPG' },
+    { id: 'ending', file: 'osoda-ame/osoda-ending.jpg', label: '末页（未标页码）', alt: '「おそだアメ」末页：延迟的歌声在深夜响起，邻居们准备抗议；图片未显示页码', width: 1352, height: 1920, originalFilename: 'IMG_3414.JPG' },
+  ],
+}
