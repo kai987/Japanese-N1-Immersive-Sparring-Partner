@@ -84,7 +84,7 @@ test('both October units share an ordered, lazy 16-page gallery and verified bui
   await expect(gallery(page)).toHaveCount(0)
 })
 
-test('page-turn buttons flank the manga instead of the page selector at desktop and mobile widths', async ({ page }) => {
+test('page-turn buttons float over the left and right edges of the manga at desktop and mobile widths', async ({ page }) => {
   await page.goto('/?live-unit=2026-10-29#live-reactions')
   await openGallery(page)
   const previous = gallery(page).getByRole('button', { name: '上一页', exact: true })
@@ -106,14 +106,15 @@ test('page-turn buttons flank the manga instead of the page selector at desktop 
     expect(right.y).toBeGreaterThan(picker.y + picker.height)
     expect(Math.abs(left.y + left.height / 2 - picture.y - picture.height / 2)).toBeLessThan(3)
     expect(Math.abs(right.y + right.height / 2 - picture.y - picture.height / 2)).toBeLessThan(3)
-    if (width > 640) {
-      expect(left.x + left.width).toBeLessThanOrEqual(picture.x)
-      expect(right.x).toBeGreaterThanOrEqual(picture.x + picture.width)
-    } else {
-      expect(left.x).toBeGreaterThanOrEqual(picture.x)
-      expect(right.x + right.width).toBeLessThanOrEqual(picture.x + picture.width)
-      expect(picture.width).toBeGreaterThan(180)
-    }
+    // Both arrows overlay the displayed image, rather than consuming space beside it.
+    expect(left.x).toBeGreaterThanOrEqual(picture.x)
+    expect(left.x + left.width).toBeLessThan(picture.x + picture.width / 3)
+    expect(right.x).toBeGreaterThan(picture.x + picture.width * 2 / 3)
+    expect(right.x + right.width).toBeLessThanOrEqual(picture.x + picture.width)
+    expect(picture.width).toBeGreaterThan(180)
+    const reader = await gallery(page).locator('.live-manga-navigation').boundingBox()
+    expect(reader).not.toBeNull()
+    expect(Math.abs(reader!.width - picture.width)).toBeLessThan(3)
   }
   await next.click()
   await expectLoadedPage(page, 'page-029')
