@@ -486,7 +486,7 @@ export default function App() {
               <section className="today-plan">
                 <SectionHeader eyebrow="TODAY" title="学習の進め方" description={`全体の学習時間は約 ${lesson.estimatedMinutes} 分。以下から各教材・練習へ進めます。`} />
                 {practiceNavigation}
-                {lesson.practice && <p className="practice-help">今回の{practiceQuestions.length}問は既存のJLPT演習100分のうち{lesson.practice.estimatedMinutes}分（語彙7分・文法8分・読解40分）で行います。聴解45分を残し、一日の総学習時間は増やしません。</p>}
+                {lesson.practice && <p className="practice-help">今回の{practiceQuestions.length}問の目安は{lesson.practice.estimatedMinutes}分です。元の学習計画のJLPT演習内で取り組み、聴解と振り返りの時間は各日の学習計画に従ってください。一日の総学習時間は増やしません。</p>}
                 <div className="plan-list">
                   {[
                     ['01', '没入読解', 'まず日本語で読み、必要に応じて対訳や解説を確認しましょう。', '8 min', 'immersion' as SectionId],
