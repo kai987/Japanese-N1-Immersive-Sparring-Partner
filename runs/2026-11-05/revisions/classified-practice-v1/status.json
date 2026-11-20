@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "targetDate": "2026-11-05",
+  "day": 68,
+  "revision": "classified-practice-v1",
+  "status": "source_saved",
+  "frozenRunDateJST": "2026-11-20",
+  "generatedAtJST": "2026-11-20T15:33:44+09:00",
+  "sha256": "21d1fb105b2ceafa079778529e6750c8a0d7c1245f00f5717f33bb499fd528d7",
+  "bytes": 29079,
+  "checkpoint": {
+    "branch": "automation/n1-progress",
+    "path": "runs/2026-11-05/revisions/classified-practice-v1/source.json",
+    "commitSha": "1937f815e54ec54c34c2eed19f4e80d03b58c504",
+    "blobSha": "d47643b9fa87f00a96b33803f19faba442bdb173",
+    "fullReadbackVerified": true
+  },
+  "mainSource": {
+    "path": "n1-source/revisions/2026-11-05-practice.md",
+    "commitSha": "c5db115bcec28452f76e761f39cb42ac0ceed51f",
+    "blobSha": "62a27e7bc7ae16a3af642e921655cd31ec0b54ee",
+    "fullReadbackVerified": true
+  },
+  "lastConfirmedStage": "checkpoint_main_exact_release_and_live_target_verified",
+  "error": null,
+  "preservedOriginal": {
+    "path": "n1-source/2026-11-05.md",
+    "blobSha": "bb33e5b910aa2bef027574a71195dc5fa0e55dbd",
+    "sha256": "b86be9ba126509dc00deae8952c4f3e51aee66333f9266040edc987d3773b6ef"
+  },
+  "publication": {
+    "status": "published_release_verified",
+    "releaseCommit": "c5db115bcec28452f76e761f39cb42ac0ceed51f",
+    "runId": 44688750756,
+    "runUrl": "https://github.com/kai987/Japanese-N1-Immersive-Sparring-Partner/actions/runs/44688750756",
+    "manifestSha256": "f596a3e6b40bac8aeadfb0184547ef77e5c6650c3e84114dbf03c4673294d0e3",
+    "verifiedFiles": 92,
+    "artifactId": 14607343868,
+    "artifactDigest": "sha256:1d04fa30bfb39bcd5cef64f163f33e799f5d1031d39def9edc40091ef4645dd8",
+    "deploymentRequestDate": "2026-11-20",
+    "liveTargetDate": "2026-11-05",
+    "liveTargetVerified": true,
+    "liveUrl": "https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/#practice/2026-11-05/reading/2026-11-05-rq-maintenance-planning-needs-end-to-end-usable-windows-v1"
+  },
+  "verifiedAtJST": "2026-11-20T15:40:26+09:00",
+  "checks": {
+    "sharedContractTests": 9,
+    "nodeUnitTests": 223,
+    "pythonTests": 28,
+    "browserTests": 158,
+    "passed": true
+  },
+  "practice": {
+    "vocabulary": 5,
+    "grammar": 5,
+    "reading": {
+      "short": 2,
+      "medium": 2,
+      "long": 2,
+      "comparison": 1,
+      "information": 1
+    },
+    "total": 18,
+    "estimatedMinutes": 55
+  }
+}
