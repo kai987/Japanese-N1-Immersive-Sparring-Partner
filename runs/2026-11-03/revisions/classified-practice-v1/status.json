@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "targetDate": "2026-11-03",
+  "day": 66,
+  "revision": "classified-practice-v1",
+  "status": "source_saved",
+  "frozenRunDateJST": "2026-11-20",
+  "generatedAtJST": "2026-11-20T16:08:41+09:00",
+  "sha256": "47b07f74874267e241bc7ad1f77f4f16506b79c4394bb1bd1b2cd1d76493b82b",
+  "bytes": 28893,
+  "checkpoint": {
+    "branch": "automation/n1-progress",
+    "path": "runs/2026-11-03/revisions/classified-practice-v1/source.json",
+    "commitSha": "08c7affcbfd2b5e46bf3e8d82e2b6f71143acbba",
+    "blobSha": "881461ef4af5be53c1e3ca26b486c8544ae2d7dc",
+    "fullReadbackVerified": true
+  },
+  "mainSource": {
+    "path": "n1-source/revisions/2026-11-03-practice.md",
+    "commitSha": "98a06d8bd330728f27117c8219f1158a908f6f18",
+    "blobSha": "519d4d6f64adce237aba92d015674049700aaf70",
+    "fullReadbackVerified": true
+  },
+  "lastConfirmedStage": "checkpoint_main_exact_release_and_live_target_verified",
+  "error": null,
+  "preservedOriginal": {
+    "path": "n1-source/2026-11-03.md",
+    "blobSha": "1b9c8f0e6c841a49dc1d39b1ef1e6a113beaf2c6",
+    "sha256": "d5b8af0998ea08e8544d5c46b7b284a4d11bd2f4a05221eb3f0a16f08c7e3ed2"
+  },
+  "publication": {
+    "status": "published_release_verified",
+    "releaseCommit": "98a06d8bd330728f27117c8219f1158a908f6f18",
+    "runId": 44693446714,
+    "runUrl": "https://github.com/kai987/Japanese-N1-Immersive-Sparring-Partner/actions/runs/44693446714",
+    "retryHistory": [
+      {
+        "attempt": 1,
+        "jobId": 136144489974,
+        "status": "failure",
+        "stage": "Build",
+        "error": "Pages attempt 1 build: V8 fatal Check failed: !IsFreelistEntry(); Illegal instruction (core dumped), exit code 132. Browser/artifact/deploy steps were skipped."
+      }
+    ],
+    "runAttempt": 2,
+    "manifestSha256": "43200f4b71b93479452c08d584ee917d659666192ea4781bb4d0590a1724c899",
+    "verifiedFiles": 108,
+    "artifactId": 14610375948,
+    "artifactDigest": "sha256:d4cc6a783d2a453dd7036d1141fc9a9ccaf5496e9a86dd67131460b8e5873c15",
+    "deploymentRequestDate": "2026-11-20",
+    "liveTargetDate": "2026-11-03",
+    "liveTargetVerified": true,
+    "liveUrl": "https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/#practice/2026-11-03/reading/2026-11-03-rq-preserve-envelope-grouping-before-reorganizing-v1",
+    "checks": {
+      "sharedContract": 9,
+      "node": 223,
+      "python": 28,
+      "browser": 165,
+      "passed": true
+    },
+    "practiceCounts": {
+      "vocabulary": 5,
+      "grammar": 5,
+      "short": 2,
+      "medium": 2,
+      "long": 2,
+      "comparison": 1,
+      "information": 1,
+      "total": 18
+    },
+    "estimatedPracticeMinutes": 55,
+    "lessonMinutes": 260,
+    "liveUiChecks": {
+      "dateAndDayCorrect": true,
+      "readingQuestions": 8,
+      "vocabularyQuestions": 5,
+      "grammarQuestions": 5,
+      "informationTableRows": 4,
+      "legacyHistorySectionPreserved": true,
+      "submittedAnswers": false
+    }
+  },
+  "verifiedAtJST": "2026-11-20T16:24:51+09:00"
+}
