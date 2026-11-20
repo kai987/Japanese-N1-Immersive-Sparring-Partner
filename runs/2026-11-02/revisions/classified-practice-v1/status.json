@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "targetDate": "2026-11-02",
+  "day": 65,
+  "revision": "classified-practice-v1",
+  "status": "source_saved",
+  "frozenRunDateJST": "2026-11-20",
+  "generatedAtJST": "2026-11-20T18:29:29+09:00",
+  "sha256": "d4283d554ea72dd0397ee8d94fc6f470b2ca86504739985c54dbfbc18d6ff141",
+  "bytes": 28352,
+  "checkpoint": {
+    "branch": "automation/n1-progress",
+    "path": "runs/2026-11-02/revisions/classified-practice-v1/source.json",
+    "commitSha": "da736866837386e55de230de2374dafd0c4a124b",
+    "blobSha": "5753220aef33a93943cf585fc38ad1fbcc4e7bf6",
+    "fullReadbackVerified": true
+  },
+  "mainSource": {
+    "path": "n1-source/revisions/2026-11-02-practice.md",
+    "commitSha": "83d2a69b9a0da91f990e898613358917503ea85e",
+    "blobSha": "1cea8c6a2b9866a1d7c56d759e400c9e35157204",
+    "fullReadbackVerified": true
+  },
+  "lastConfirmedStage": "checkpoint_main_exact_release_and_live_target_verified",
+  "error": null,
+  "preservedOriginal": {
+    "path": "n1-source/2026-11-02.md",
+    "blobSha": "6c4dc99cf7c18473fe2352144c9b55efef87f98d",
+    "sha256": "e7bd2225fedad725807fa3af085a6a0c4659b2a42395e69d08d09aec4c3e8d74"
+  },
+  "publication": "published_release_verified",
+  "practice": {
+    "path": "src/data/practice/2026-11-02.json",
+    "blobSha": "e8a1cc0ab3f144b95d04f0e99d7e8253007b7856",
+    "sha256": "5757dc2247f6e0e1f8b22e72a173ec8a9022c7dde4b1b03e23d4564f6afc82e3",
+    "bytes": 41992,
+    "fullReadbackVerified": true,
+    "vocabularyQuestions": 5,
+    "grammarQuestions": 5,
+    "readingQuestions": 8,
+    "totalQuestions": 18,
+    "readingTypes": {
+      "short": 2,
+      "medium": 2,
+      "long": 2,
+      "comparison": 1,
+      "information": 1
+    },
+    "practiceMinutes": 55,
+    "dailyMinutes": 255
+  },
+  "release": {
+    "commitSha": "83d2a69b9a0da91f990e898613358917503ea85e",
+    "parentSha": "bcc59dda6ff43ad9fa6b85adf04e73d7c2912396",
+    "runId": 44711909513,
+    "runAttempt": 1,
+    "runUrl": "https://github.com/kai987/Japanese-N1-Immersive-Sparring-Partner/actions/runs/44711909513",
+    "artifactId": 14618082259,
+    "artifactSha256": "19204e65915537462e378b876d4d6b752025cdec5fc5b001d8de325d512cf1b7",
+    "manifestSha256": "3616d17276ad4a5285e751ec5474cee18824263c9c05ba511acba0c9f9a96bee",
+    "verifiedFiles": 108,
+    "conclusion": "success",
+    "workflowRequestDate": "2026-11-20"
+  },
+  "verifiedAtJST": "2026-11-20T18:44:00+09:00",
+  "liveTarget": {
+    "date": "2026-11-02",
+    "day": 65,
+    "url": "https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/#practice/2026-11-02/reading/2026-11-02-rq-remove-filename-hints-before-image-observation-v1",
+    "verified": true,
+    "vocabularyQuestions": 5,
+    "grammarQuestions": 5,
+    "readingQuestions": 8,
+    "readingTypes": {
+      "short": 2,
+      "medium": 2,
+      "long": 2,
+      "comparison": 1,
+      "information": 1
+    },
+    "informationTableColumns": 4,
+    "informationTableBodyRows": 4,
+    "legacyQuestionHistoryDisclosurePresent": true,
+    "answersHiddenBeforeSubmission": true,
+    "siteOriginConsoleErrorsObserved": 0,
+    "answersSubmittedDuringLiveCheck": false
+  },
+  "checks": {
+    "sharedHelperPassed": 9,
+    "nodePassed": 223,
+    "pythonPassed": 28,
+    "browserPassed": 168,
+    "browserFailed": 0,
+    "browserDuration": "2.3m",
+    "validatedLessons": 83,
+    "dailyJsonFiles": 73,
+    "buildSucceeded": true
+  }
+}
