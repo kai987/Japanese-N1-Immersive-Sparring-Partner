@@ -3,7 +3,7 @@
   "targetDate": "2026-11-12",
   "day": 75,
   "kind": "classified-practice-revision",
-  "status": "awaiting_deploy",
+  "status": "published",
   "sourcePath": "n1-source/revisions/2026-11-12-practice.md",
   "sourceSha256": "f92189b4c5a2c0c20abd2b3659b890ee397773159e3b3b92e73a9ee5917411cb",
   "sourceBytes": 25313,
@@ -24,7 +24,10 @@
   "validation": {
     "content": "passed",
     "build": "passed",
-    "browserTests": "awaiting final timing-copy commit GitHub Actions"
+    "automationContractTestsPassed": 9,
+    "nodeTestsPassed": 223,
+    "pythonTestsPassed": 28,
+    "browserTestsPassed": 144
   },
   "previousVerifiedRelease": {
     "commit": "e69172ef3bebd913f6eab40fa19863082f2da229",
@@ -32,5 +35,32 @@
     "browserTestsPassed": 144,
     "manifestSha256": "b6bff173f2e394921b0d42430bf10ed894a953e5fc78a7cd0e884de211e996e1",
     "verifiedFiles": 92
-  }
+  },
+  "pagesRunAttempt": 1,
+  "verification": {
+    "status": "published_release_verified",
+    "manifestSha256": "7cfd682f8becdcef080f3bd8f8e3e3368344a44dd6d8d427a0d438cc2b2f05ce",
+    "verifiedFiles": 92,
+    "latestDate": "2026-11-20",
+    "targetDate": "2026-11-12",
+    "day": 75,
+    "practiceCounts": {
+      "vocabulary": 5,
+      "grammar": 5,
+      "reading": 8
+    }
+  },
+  "liveUi": {
+    "status": "verified",
+    "targetDate": "2026-11-12",
+    "categoryQuestionCounts": {
+      "vocabulary": 5,
+      "grammar": 5,
+      "reading": 8
+    },
+    "practiceMinutes": 55,
+    "informationTable": "verified",
+    "answersHiddenBeforeSubmission": true
+  },
+  "verifiedAtJST": "2026-11-20T12:15:45.447+09:00"
 }
