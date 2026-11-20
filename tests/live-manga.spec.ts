@@ -122,6 +122,38 @@ test('page-turn buttons float over the left and right edges of the manga at desk
   await expectLoadedPage(page, 'cover')
 })
 
+test('manga arrows keep 60% transparent backgrounds and become 90% opaque on hover', async ({ page }) => {
+  await page.goto('/?live-unit=2026-10-29#live-reactions')
+  await openGallery(page)
+  const next = gallery(page).getByRole('button', { name: '下一页', exact: true })
+  await expectLoadedPage(page, 'cover')
+
+  for (const width of [1200, 390, 320]) {
+    await page.setViewportSize({ width, height: 844 })
+    const expectedColors = await page.evaluate(() => {
+      const container = document.querySelector('.live-manga-navigation')!
+      const probe = document.createElement('span')
+      container.appendChild(probe)
+      const getMixedColor = (percent: number) => {
+        probe.style.backgroundColor = `color-mix(in srgb, var(--surface) ${percent}%, transparent)`
+        return getComputedStyle(probe).backgroundColor
+      }
+      const colors = { idle: getMixedColor(40), hover: getMixedColor(90) }
+      probe.remove()
+      return colors
+    })
+    await expect(next).toHaveCSS('background-color', expectedColors.idle)
+    await expect(next).toHaveCSS('opacity', '1')
+    await next.hover()
+    await expect(next).toHaveCSS('background-color', expectedColors.hover)
+    await page.mouse.move(0, 0)
+    await expect(next).toHaveCSS('background-color', expectedColors.idle)
+  }
+
+  await next.click()
+  await expectLoadedPage(page, 'page-029')
+})
+
 test('viewing pages and switching units preserve live marks and daily learning records', async ({ page }) => {
   await page.addInitScript(() => {
     if (!localStorage.getItem('n1-live-reactions-progress-v1')) {

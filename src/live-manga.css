@@ -73,7 +73,8 @@
   width: 60px;
   min-height: 64px;
   padding: 8px 4px;
-  background: color-mix(in srgb, var(--surface) 92%, transparent);
+  /* 40% surface color + 60% transparency keeps the manga visible. */
+  background: color-mix(in srgb, var(--surface) 40%, transparent);
   box-shadow: 0 2px 9px rgba(0, 0, 0, .15);
   font-weight: 700;
 }
@@ -81,7 +82,12 @@
 .live-manga-next { right: 10px; }
 .live-manga-turn-arrow { font-size: 28px; line-height: 1; }
 .live-manga-turn-label { font-size: 12px; }
-.live-manga-navigation > button:hover:not(:disabled), .live-manga-error button:hover {
+.live-manga-navigation > button:hover:not(:disabled) {
+  border-color: var(--accent);
+  /* Stronger background on hover without dimming arrows or labels. */
+  background: color-mix(in srgb, var(--surface) 90%, transparent);
+}
+.live-manga-error button:hover {
   border-color: var(--accent);
   background: var(--accent-soft);
 }
