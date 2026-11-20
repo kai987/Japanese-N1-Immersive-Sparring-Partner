@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 1,
+  "targetDate": "2026-10-31",
+  "day": 63,
+  "revision": "classified-practice-v1",
+  "status": "source_saved",
+  "frozenRunDateJST": "2026-11-20",
+  "generatedAtJST": "2026-11-20T19:30:14+09:00",
+  "sha256": "0cbf4181c5688ce8631a69acee73db9c4d630a84b8c87a093110f7045e7bf82e",
+  "bytes": 30796,
+  "checkpoint": {
+    "branch": "automation/n1-progress",
+    "path": "runs/2026-10-31/revisions/classified-practice-v1/source.json",
+    "commitSha": "108e0280e7013818be2d67cc500c36358e5cc5f9",
+    "blobSha": "1404f5e4bd1e2255bc1e99bda873b93daa233993",
+    "fullReadbackVerified": true,
+    "sharedHelperVerified": true,
+    "exactStageMetadataPreserved": true
+  },
+  "mainSource": {
+    "path": "n1-source/revisions/2026-10-31-practice.md",
+    "commitSha": "b8149b0e321e9acf7364ca0a124a80bca13ca240",
+    "blobSha": "9633ba7e40cecc03097abd0d282468e6d93ec6be",
+    "fullReadbackVerified": true,
+    "branch": "main",
+    "restoredBytesExactlyMatched": true
+  },
+  "lastConfirmedStage": "checkpoint_main_exact_release_and_live_target_verified",
+  "pendingReason": null,
+  "error": null,
+  "publication": "published_release_verified",
+  "practice": {
+    "path": "src/data/practice/2026-10-31.json",
+    "blobSha": "38a0262809a1b1d3101d585a7a89ad4005f97878",
+    "sha256": "1b98b5d2de2bd70d08d52abe5ff4c3005858ef329bdfcef96395e834c96e50c8",
+    "bytes": 43995,
+    "fullReadbackVerified": true,
+    "categoryCounts": {
+      "vocabulary": 5,
+      "grammar": 5,
+      "reading": 8
+    },
+    "readingKinds": {
+      "short": 2,
+      "medium": 2,
+      "long": 2,
+      "comparison": 1,
+      "information": 1
+    },
+    "practiceMinutes": 55,
+    "dailyMinutes": 250
+  },
+  "release": {
+    "commitSha": "b8149b0e321e9acf7364ca0a124a80bca13ca240",
+    "parentCommitSha": "239169ca95a9927026f000354449ae2d8aba4c7b",
+    "runId": 44720049314,
+    "attempt": 1,
+    "runUrl": "https://github.com/kai987/Japanese-N1-Immersive-Sparring-Partner/actions/runs/44720049314",
+    "workflow": ".github/workflows/deploy-pages.yml",
+    "conclusion": "success",
+    "buildJobId": 136233175123,
+    "deployJobId": 136234719439,
+    "artifact": {
+      "artifactId": 14621128389,
+      "runId": 44720049314,
+      "headSha": "b8149b0e321e9acf7364ca0a124a80bca13ca240",
+      "zipBytes": 10929,
+      "zipSha256": "9df3837eebe80f5abf169c1f61509a5898e555bc1231a6a4d0bb06ae038b2ab6",
+      "trustedArtifactDigestMatched": true,
+      "zipEntries": [
+        "n1-release.json"
+      ],
+      "manifestBytes": 33146,
+      "manifestSha256": "e45cf81c0b9c85dcd9968b4535ba548a93dfdedf8aaa39b7b4d44eda6d89db1f",
+      "exactCandidateBytes": true
+    },
+    "verifiedFiles": 108,
+    "workflowRequestDate": "2026-11-20",
+    "day63Asset": {
+      "path": "assets/n1-lesson-2026-10-31-CHG3447l.json",
+      "bytes": 142186,
+      "sha256": "2481a57814e7b16627f9f82ccbd456c15e81467e839952f1fc5e2f744c68e55f",
+      "verified": true
+    }
+  },
+  "liveTarget": {
+    "targetDate": "2026-10-31",
+    "day": 63,
+    "url": "https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/#practice/2026-10-31/reading/2026-10-31-rq-identify-arrived-part-within-one-split-order-v1",
+    "browserVerified": true,
+    "categorySwitchingVerified": true,
+    "categoryCounts": {
+      "vocabulary": 5,
+      "grammar": 5,
+      "reading": 8
+    },
+    "readingKinds": {
+      "short": 2,
+      "medium": 2,
+      "long": 2,
+      "comparison": 1,
+      "information": 1
+    },
+    "informationTable": {
+      "caption": "空箱回収便の条件と料金",
+      "columns": 5,
+      "bodyRows": 4
+    },
+    "practiceMinutes": 55,
+    "legacyQuestionDisclosureCollapsed": true,
+    "answersHiddenBeforeSubmission": true,
+    "answersSubmittedDuringLiveCheck": false,
+    "siteOriginConsoleErrorsObserved": 0,
+    "siteOriginConsoleWarningsObserved": 0,
+    "nonSiteExtensionMetadataErrorsObserved": 9
+  },
+  "checks": {
+    "sharedHelperPassed": 9,
+    "nodePassed": 223,
+    "pythonPassed": 28,
+    "browserPassed": 173,
+    "browserFailed": 0,
+    "browserDuration": "2.1m",
+    "validatedLessons": 83,
+    "dailyJsonFiles": 73,
+    "buildSucceeded": true,
+    "day63HistoricalIdentityRegressionConfiguredInExactRelease": true,
+    "day63CategoryLinkAndMistakeSeparationRegressionConfiguredInExactRelease": true,
+    "browserReporter": "dot; complete suite count verified, individual test titles not printed",
+    "allHistoricalQuestionObjectsPreserved": 443,
+    "currentQuestionCount": 461,
+    "entireSearchIndexMatchesSource": true,
+    "searchLessonCount": 83,
+    "searchChunkCount": 4527,
+    "onlyAuthorizedThreeMainFilesChanged": true,
+    "otherTrackedFilesUnchanged": 403,
+    "originalSourceAndDailyUnchanged": true
+  },
+  "preservedOriginal": {
+    "path": "n1-source/2026-10-31.md",
+    "blobSha": "95ac0daaf467357823f5199c75dccb3b27ce53e5",
+    "sha256": "7d85c76939a25c890b73b257661cc2438a09f0c31c7a77859c9f1e4e426e6681",
+    "bytes": 26526,
+    "generatedAtJST": "2026-10-31T08:58:00+09:00",
+    "checkpointBlobSha": "8ce39d0dfc604c79115fd69eb6452cc74608752e"
+  },
+  "verifiedAtJST": "2026-11-20T19:37:12+09:00"
+}
