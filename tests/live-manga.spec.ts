@@ -84,6 +84,43 @@ test('both October units share an ordered, lazy 16-page gallery and verified bui
   await expect(gallery(page)).toHaveCount(0)
 })
 
+test('page-turn buttons flank the manga instead of the page selector at desktop and mobile widths', async ({ page }) => {
+  await page.goto('/?live-unit=2026-10-29#live-reactions')
+  await openGallery(page)
+  const previous = gallery(page).getByRole('button', { name: '上一页', exact: true })
+  const next = gallery(page).getByRole('button', { name: '下一页', exact: true })
+  const image = await expectLoadedPage(page, 'cover')
+
+  for (const width of [1200, 390, 320]) {
+    await page.setViewportSize({ width, height: 844 })
+    await image.scrollIntoViewIfNeeded()
+    const [selectBox, previousBox, imageBox, nextBox] = await Promise.all([
+      mangaPicker(page).boundingBox(), previous.boundingBox(), image.boundingBox(), next.boundingBox(),
+    ])
+    expect(selectBox).not.toBeNull()
+    expect(previousBox).not.toBeNull()
+    expect(imageBox).not.toBeNull()
+    expect(nextBox).not.toBeNull()
+    const [picker, left, picture, right] = [selectBox!, previousBox!, imageBox!, nextBox!]
+    expect(left.y).toBeGreaterThan(picker.y + picker.height)
+    expect(right.y).toBeGreaterThan(picker.y + picker.height)
+    expect(Math.abs(left.y + left.height / 2 - picture.y - picture.height / 2)).toBeLessThan(3)
+    expect(Math.abs(right.y + right.height / 2 - picture.y - picture.height / 2)).toBeLessThan(3)
+    if (width > 640) {
+      expect(left.x + left.width).toBeLessThanOrEqual(picture.x)
+      expect(right.x).toBeGreaterThanOrEqual(picture.x + picture.width)
+    } else {
+      expect(left.x).toBeGreaterThanOrEqual(picture.x)
+      expect(right.x + right.width).toBeLessThanOrEqual(picture.x + picture.width)
+      expect(picture.width).toBeGreaterThan(180)
+    }
+  }
+  await next.click()
+  await expectLoadedPage(page, 'page-029')
+  await previous.click()
+  await expectLoadedPage(page, 'cover')
+})
+
 test('viewing pages and switching units preserve live marks and daily learning records', async ({ page }) => {
   await page.addInitScript(() => {
     if (!localStorage.getItem('n1-live-reactions-progress-v1')) {

@@ -51,10 +51,6 @@ export function LiveMangaGallery({ gallery }: { gallery: MangaGallery }) {
               </option>)}
             </select>
           </label>
-          <div className="live-manga-navigation" role="group" aria-label="漫画翻页">
-            <button type="button" disabled={index === 0} onClick={() => choosePage(index - 1)}>上一页</button>
-            <button type="button" disabled={index === gallery.pages.length - 1} onClick={() => choosePage(index + 1)}>下一页</button>
-          </div>
         </div>
         <div className="live-manga-page-heading">
           <p className="live-manga-status" role="status" aria-live="polite" aria-atomic="true">
@@ -62,17 +58,29 @@ export function LiveMangaGallery({ gallery }: { gallery: MangaGallery }) {
           </p>
           {originalUrl ? <a className="live-manga-original" href={originalUrl} target="_blank" rel="noopener noreferrer">打开原图</a> : null}
         </div>
-        <figure className="live-manga-page">
-          {failed ? <div className="live-manga-error" role="alert">
-            <p>{originalUrl ? '这张漫画原图未能加载，请重试，或打开原图查看。' : '这张漫画原图暂时无法显示，请重新加载页面。'}</p>
-            <button type="button" onClick={retry}>重试加载</button>
-          </div> : <a className="live-manga-page-link" href={originalUrl} target="_blank" rel="noopener noreferrer"
-            aria-label={`打开${page.label}原图（新标签页）`}>
-            <img className="live-manga-image" key={imageUrl} src={imageUrl} alt={page.alt}
-              width={page.width} height={page.height} loading="lazy" decoding="async"
-              onError={() => setFailedSource(imageUrl!)} />
-          </a>}
-        </figure>
+        <div className="live-manga-navigation" role="group" aria-label="漫画翻页">
+          <button className="live-manga-prev" type="button" aria-label="上一页"
+            disabled={index === 0} onClick={() => choosePage(index - 1)}>
+            <span className="live-manga-turn-arrow" aria-hidden="true">‹</span>
+            <span className="live-manga-turn-label">上一页</span>
+          </button>
+          <figure className="live-manga-page">
+            {failed ? <div className="live-manga-error" role="alert">
+              <p>{originalUrl ? '这张漫画原图未能加载，请重试，或打开原图查看。' : '这张漫画原图暂时无法显示，请重新加载页面。'}</p>
+              <button type="button" onClick={retry}>重试加载</button>
+            </div> : <a className="live-manga-page-link" href={originalUrl} target="_blank" rel="noopener noreferrer"
+              aria-label={`打开${page.label}原图（新标签页）`}>
+              <img className="live-manga-image" key={imageUrl} src={imageUrl} alt={page.alt}
+                width={page.width} height={page.height} loading="lazy" decoding="async"
+                onError={() => setFailedSource(imageUrl!)} />
+            </a>}
+          </figure>
+          <button className="live-manga-next" type="button" aria-label="下一页"
+            disabled={index === gallery.pages.length - 1} onClick={() => choosePage(index + 1)}>
+            <span className="live-manga-turn-arrow" aria-hidden="true">›</span>
+            <span className="live-manga-turn-label">下一页</span>
+          </button>
+        </div>
       </> : <p className="live-manga-empty">暂时没有可显示的漫画原图。</p>}
     </div> : null}
   </details>

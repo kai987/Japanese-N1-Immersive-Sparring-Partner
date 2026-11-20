@@ -29,13 +29,8 @@
   line-height: 1.9;
   overflow-wrap: anywhere;
 }
-.live-manga-controls {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: end;
-  gap: 12px;
-}
-.live-manga-page-select { display: grid; min-width: 0; gap: 7px; }
+.live-manga-controls { min-width: 0; }
+.live-manga-page-select { display: grid; max-width: 420px; min-width: 0; gap: 7px; }
 .live-manga-page-select > span { color: var(--text-soft); font-size: 12px; font-weight: 700; }
 .live-manga-page-select select {
   box-sizing: border-box;
@@ -50,7 +45,13 @@
   font: inherit;
   font-size: 16px;
 }
-.live-manga-navigation { display: flex; gap: 8px; }
+.live-manga-navigation {
+  display: grid;
+  grid-template-columns: 60px minmax(0, 1fr) 60px;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
 .live-manga-navigation button, .live-manga-error button {
   min-height: 44px;
   padding: 9px 15px;
@@ -62,6 +63,19 @@
   font-size: 14px;
   cursor: pointer;
 }
+.live-manga-navigation button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  width: 60px;
+  min-height: 64px;
+  padding: 8px 4px;
+  font-weight: 700;
+}
+.live-manga-turn-arrow { font-size: 28px; line-height: 1; }
+.live-manga-turn-label { font-size: 12px; }
 .live-manga-navigation button:hover:not(:disabled), .live-manga-error button:hover {
   border-color: var(--accent);
   background: var(--accent-soft);
@@ -110,6 +124,21 @@
   .live-manga-gallery > summary { padding: 15px 14px; }
   .live-manga-reader { padding: 16px 12px; }
   .live-manga-heading h3 { font-size: 19px; }
-  .live-manga-controls { grid-template-columns: minmax(0, 1fr); }
-  .live-manga-navigation button { flex: 1; min-width: 0; }
+  .live-manga-page-select { max-width: none; }
+  .live-manga-navigation { display: block; position: relative; }
+  .live-manga-navigation button {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    transform: translateY(-50%);
+    width: 44px;
+    min-height: 52px;
+    padding: 4px;
+    background: color-mix(in srgb, var(--surface) 90%, transparent);
+    box-shadow: 0 2px 9px rgba(0, 0, 0, .15);
+  }
+  .live-manga-prev { left: 4px; }
+  .live-manga-next { right: 4px; }
+  .live-manga-turn-label { display: none; }
+  .live-manga-turn-arrow { font-size: 30px; }
 }
