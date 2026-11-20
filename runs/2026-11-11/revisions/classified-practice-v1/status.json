@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "targetDate": "2026-11-11",
+  "day": 74,
+  "revision": "classified-practice-v1",
+  "status": "source_saved",
+  "frozenRunDateJST": "2026-11-20",
+  "generatedAtJST": "2026-11-20T12:34:55+09:00",
+  "sha256": "8f5b3969db062d33d59cd71564829e4cce97df66da4e0b54610c3302ba80a6ec",
+  "bytes": 25775,
+  "checkpoint": {
+    "branch": "automation/n1-progress",
+    "path": "runs/2026-11-11/revisions/classified-practice-v1/source.json",
+    "commitSha": "c236e8ee8b57f60e52afd3614ef84d205a5b4408",
+    "blobSha": "f76d4a381bc21952093430f08a18ca5ba7cc7045",
+    "fullReadbackVerified": true
+  },
+  "mainSource": {
+    "path": "n1-source/revisions/2026-11-11-practice.md",
+    "commitSha": "59379ea51fee8a16f1a9b00e2037884ffbaee67f",
+    "blobSha": "c5da898e69e48f1bdb334b90d1a9248095e66444",
+    "fullReadbackVerified": true
+  },
+  "publication": {
+    "status": "published_release_verified",
+    "releaseCommit": "59379ea51fee8a16f1a9b00e2037884ffbaee67f",
+    "runId": 44668968913,
+    "runUrl": "https://github.com/kai987/Japanese-N1-Immersive-Sparring-Partner/actions/runs/44668968913",
+    "manifestSha256": "0e446a9c386d7c83dda485d5839c76db51c2313dd051cc9cf42ee9a76c920dea",
+    "verifiedFiles": 92,
+    "artifactId": 14599112942,
+    "artifactDigest": "sha256:4e7b2d8737d1e28c5f1aabc887204d45128558c38ac5c968d17b177ddfee588b",
+    "liveTargetDate": "2026-11-11",
+    "liveTargetVerified": true,
+    "liveUrl": "https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/#practice/2026-11-11/reading/2026-11-11-rq-file-date-and-effective-date-v1"
+  },
+  "lastConfirmedStage": "checkpoint_main_exact_release_and_live_target_verified",
+  "error": null,
+  "verifiedAtJST": "2026-11-20T12:42:26+09:00",
+  "preservedOriginal": {
+    "path": "n1-source/2026-11-11.md",
+    "blobSha": "577b50e869f7bf378f9e5cb6e3eaff159b7d7703",
+    "sha256": "ae1feaded6555a6713fcc0a4b4b22f3ffcdff8e32e29cc5647aecf4779a3142d"
+  },
+  "checks": {
+    "sharedContractTests": 9,
+    "nodeUnitTests": 223,
+    "pythonTests": 28,
+    "browserTests": 146,
+    "passed": true
+  },
+  "practice": {
+    "vocabulary": 5,
+    "grammar": 5,
+    "reading": {
+      "short": 2,
+      "medium": 2,
+      "long": 2,
+      "comparison": 1,
+      "information": 1
+    },
+    "total": 18,
+    "estimatedMinutes": 55
+  }
+}
