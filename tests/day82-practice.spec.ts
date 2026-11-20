@@ -7,7 +7,7 @@ import type { PracticeCategory, ReadingQuestion, StoredProgress } from '../src/t
 const date = '2026-11-19'
 const lessons = validateContent().lessons
 const lesson = lessons.find(item => item.date === date)!
-const historicalPracticeLessons = ['2026-10-28', '2026-10-29', '2026-10-30', '2026-10-31', '2026-11-01', '2026-11-02', '2026-11-03', '2026-11-04', '2026-11-05', '2026-11-06', '2026-11-07', '2026-11-08', '2026-11-09', '2026-11-10', '2026-11-11', '2026-11-12', '2026-11-13', '2026-11-14', '2026-11-15', '2026-11-16', '2026-11-17', '2026-11-18'].map(date => lessons.find(item => item.date === date)!)
+const historicalPracticeLessons = ['2026-10-27', '2026-10-28', '2026-10-29', '2026-10-30', '2026-10-31', '2026-11-01', '2026-11-02', '2026-11-03', '2026-11-04', '2026-11-05', '2026-11-06', '2026-11-07', '2026-11-08', '2026-11-09', '2026-11-10', '2026-11-11', '2026-11-12', '2026-11-13', '2026-11-14', '2026-11-15', '2026-11-16', '2026-11-17', '2026-11-18'].map(date => lessons.find(item => item.date === date)!)
 const references = getPracticeQuestions(lesson)
 const categories: PracticeCategory[] = ['vocabulary', 'grammar', 'reading']
 const counts: Record<PracticeCategory, number> = { vocabulary: 5, grammar: 5, reading: 8 }
