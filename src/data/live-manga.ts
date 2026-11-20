@@ -41,3 +41,24 @@ export const tanpopoManga: LiveMangaGallery = {
     { id: 'page-043', file: 'tanpopo-sora-wo-iku/page-043.jpg', label: '第43页', alt: '「タンポポ空を行く」第43页：大雄为种子加油，并主动参加棒球', width: 1352, height: 1920, originalFilename: 'IMG_3393.JPG' },
   ],
 }
+
+// The supplied title page and printed pp.116–124 belong to the same story.
+// 11/09 studies its first part; 11/13 continues it before moving to おそだアメ.
+// Keep one shared set of original image bytes and do not infer a page split.
+export const otoshimonoManga: LiveMangaGallery = {
+  id: 'otoshimono-comeback-spray',
+  title: '落としものカムバックスプレー',
+  description: '11月9日与11月13日前半学习同一短篇，共用这10张漫画原图。顺序为标题页、图片标示的第116—124页；标题页未标页码。本组图片仅对应「落としものカムバックスプレー」，不包含11月13日后半的「おそだアメ」。可逐页对照笔记，点击图片或“打开原图”查看原始尺寸。',
+  pages: [
+    { id: 'cover', file: 'otoshimono-comeback-spray/otoshimono-cover.jpg', label: '标题页', alt: '「落としものカムバックスプレー」标题页：哆啦A梦、大雄与飞回来的物品', width: 1352, height: 1920, originalFilename: 'IMG_3396(1).JPG' },
+    { id: 'page-116', file: 'otoshimono-comeback-spray/page-116.jpg', label: '第116页', alt: '「落としものカムバックスプレー」第116页：大雄发现漫画被妈妈当作垃圾扔掉', width: 1352, height: 1920, originalFilename: 'IMG_3397(1).JPG' },
+    { id: 'page-117', file: 'otoshimono-comeback-spray/page-117.jpg', label: '第117页', alt: '「落としものカムバックスプレー」第117页：大雄向哆啦A梦求助，被扔掉的漫画飞了回来', width: 1352, height: 1920, originalFilename: 'IMG_3398(1).JPG' },
+    { id: 'page-118', file: 'otoshimono-comeback-spray/page-118.jpg', label: '第118页', alt: '「落としものカムバックスプレー」第118页：哆啦A梦说明喷雾的作用，用球做实验', width: 1352, height: 1920, originalFilename: 'IMG_3399(1).JPG' },
+    { id: 'page-119', file: 'otoshimono-comeback-spray/page-119.jpg', label: '第119页', alt: '「落としものカムバックスプレー」第119页：大雄给自己的物品和妈妈的购物篮喷上喷雾', width: 1352, height: 1920, originalFilename: 'IMG_3400(1).JPG' },
+    { id: 'page-120', file: 'otoshimono-comeback-spray/page-120.jpg', label: '第120页', alt: '「落としものカムバックスプレー」第120页：大雄和静香到小夫家做客', width: 1352, height: 1920, originalFilename: 'IMG_3401(1).JPG' },
+    { id: 'page-121', file: 'otoshimono-comeback-spray/page-121.jpg', label: '第121页', alt: '「落としものカムバックスプレー」第121页：大家观看小夫一家去露营的家庭录像', width: 1352, height: 1920, originalFilename: 'IMG_3402(1).JPG' },
+    { id: 'page-122', file: 'otoshimono-comeback-spray/page-122.jpg', label: '第122页', alt: '「落としものカムバックスプレー」第122页：大雄和哆啦A梦在露营地遇见捡垃圾的人', width: 1352, height: 1920, originalFilename: 'IMG_3403(1).JPG' },
+    { id: 'page-123', file: 'otoshimono-comeback-spray/page-123.jpg', label: '第123页', alt: '「落としものカムバックスプレー」第123页：给露营地的垃圾喷上喷雾，回家途中遇见丢失物品的妈妈', width: 1352, height: 1920, originalFilename: 'IMG_3404(1).JPG' },
+    { id: 'page-124', file: 'otoshimono-comeback-spray/page-124.jpg', label: '第124页', alt: '「落としものカムバックスプレー」第124页：妈妈的物品回到家中，露营地的垃圾也回到小夫家', width: 1352, height: 1920, originalFilename: 'IMG_3405(1).JPG' },
+  ],
+}

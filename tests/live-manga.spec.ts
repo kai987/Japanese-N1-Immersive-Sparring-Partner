@@ -32,7 +32,7 @@ async function expectLoadedPage(page: Page, id: string) {
 }
 
 test('both October units share an ordered, lazy 16-page gallery and verified build assets', async ({ page }) => {
-  expect(liveUnits.filter(unit => unit.manga).map(unit => unit.id).sort()).toEqual(supportedUnits)
+  expect(liveUnits.filter(unit => unit.manga?.id === 'tanpopo-sora-wo-iku').map(unit => unit.id).sort()).toEqual(supportedUnits)
   for (const id of supportedUnits) {
     expect(liveUnits.find(unit => unit.id === id)!.manga!.pages.map(item => item.id)).toEqual(pageIds)
   }

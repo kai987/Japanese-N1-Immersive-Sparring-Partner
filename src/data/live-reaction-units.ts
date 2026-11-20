@@ -9,7 +9,7 @@ import { liveNovember5Groups } from './live-reactions-2026-11-05.ts'
 import { liveNovember9Groups } from './live-reactions-2026-11-09.ts'
 import { liveNovember13Groups } from './live-reactions-2026-11-13.ts'
 import { liveNovember18Groups } from './live-reactions-2026-11-18.ts'
-import { tanpopoManga, type LiveMangaGallery } from './live-manga.ts'
+import { otoshimonoManga, tanpopoManga, type LiveMangaGallery } from './live-manga.ts'
 
 export const liveCategories = [
   { id: 'grammar', label: '文法・口语' },
@@ -82,11 +82,13 @@ export const liveUnits: LiveUnit[] = [
     id: '2026-11-13', date: '2026-11-13', title: 'ドラえもん「落としものカムバックスプレー」・「おそだアメ」',
     description: '相关短篇：前半接续「落としものカムバックスプレー」（普通单行本第41卷第12话），后半为「おそだアメ」（第10卷第1话）。根据露营地捡垃圾、物品归还主人，以及にらめっこ、被迫听歌、延迟声音传播等笔记线索，与官方目录、剧情和原作文字对照识别。整理日期：2026-11-13（日本时间），不是已确认的直播日期。整理13张手机笔记截图，合并重叠内容，学习日常口语、词义辨析、使役受身及自动词／他动词。保留可见笔记原文，另附读音、中文释义、用法辨析和原创日中例句；未完句明确标注。词汇与语法拓展仍属于课堂学习补充。',
     countLabel: liveUnitCountLabel(liveNovember13Groups), groups: liveNovember13Groups,
+    manga: otoshimonoManga,
   },
   {
     id: '2026-11-09', date: '2026-11-09', title: 'ドラえもん「落としものカムバックスプレー」',
     description: '篇名来自漫画封面。整理 2026-11-09 的四张连续直播笔记照片，合并重叠条目，补充读音、中文释义和原创日中例句。学习主题包括落ちる／落とす、让步条件、て形表达与会话中的话题转换。',
     countLabel: liveUnitCountLabel(liveNovember9Groups), groups: liveNovember9Groups,
+    manga: otoshimonoManga,
   },
   {
     id: '2026-11-05', date: '2026-11-05', title: 'ドラえもん「ママをとりかえっこ」',
