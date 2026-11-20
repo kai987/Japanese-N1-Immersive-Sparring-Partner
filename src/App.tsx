@@ -431,7 +431,7 @@ export default function App() {
           <ProjectSearch query={searchQuery} contentQuery={contentQuery} onChange={changeSearch} onOpen={openSearchResult} located={searchLocated}
             onNavigateMatches={active === 'compound-verbs' ? direction => setSearchStep(step => ({ id: step.id + 1, direction })) : undefined} />
           <div className="topbar-actions">
-            <div className="quiet-stat"><Icon name={active === 'live-reactions' || active === 'compound-verbs' ? 'book' : 'clock'} size={17} /><span>{active === 'compound-verbs' ? '語彙を広げる' : active === 'live-reactions' ? '直播笔记' : `約 ${lesson.estimatedMinutes} 分`}</span></div>
+            <div className="quiet-stat"><Icon name={active === 'live-reactions' || active === 'compound-verbs' ? 'book' : 'clock'} size={17} /><span>{active === 'compound-verbs' ? '語彙を広げる' : active === 'live-reactions' ? '直播笔记' : lesson.practice ? `演習 約 ${lesson.practice.estimatedMinutes} 分` : `約 ${lesson.estimatedMinutes} 分`}</span></div>
             <button className="icon-button" onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')} aria-label="読解テーマを切り替える"><Icon name={theme === 'light' ? 'moon' : 'sun'} size={18} /></button>
           </div>
         </header>
@@ -478,13 +478,13 @@ export default function App() {
 
               <section className="summary-strip" aria-label="学習の概要">
                 <div><span>計画の進捗</span><strong>{lesson.day}<small> / 99</small></strong></div>
-                <div><span>学習時間の目安</span><strong>{lesson.estimatedMinutes}<small> min</small></strong></div>
+                <div><span>{lesson.practice ? '分類練習の目安' : '学習時間の目安'}</span><strong>{lesson.practice?.estimatedMinutes ?? lesson.estimatedMinutes}<small> min</small></strong></div>
                 <div><span>この日の語彙</span><strong>{lesson.vocabulary.length}<small> 項目</small></strong></div>
                 <div><span>この日の文法</span><strong>{lesson.grammar.length}<small> 項目</small></strong></div>
               </section>
 
               <section className="today-plan">
-                <SectionHeader eyebrow="TODAY" title="学習の進め方" description={`全体の学習時間は約 ${lesson.estimatedMinutes} 分。以下から各教材・練習へ進めます。`} />
+                <SectionHeader eyebrow="TODAY" title="学習の進め方" description={lesson.practice ? `分類練習は約 ${lesson.practice.estimatedMinutes} 分。聴解・没入学習・振り返りは当日の学習計画に沿って進めましょう。` : `全体の学習時間は約 ${lesson.estimatedMinutes} 分。以下から各教材・練習へ進めます。`} />
                 {practiceNavigation}
                 {lesson.practice && <p className="practice-help">今回の{practiceQuestions.length}問の目安は{lesson.practice.estimatedMinutes}分です。元の学習計画のJLPT演習内で取り組み、聴解と振り返りの時間は各日の学習計画に従ってください。一日の総学習時間は増やしません。</p>}
                 <div className="plan-list">
