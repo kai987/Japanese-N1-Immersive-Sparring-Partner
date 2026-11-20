@@ -79,7 +79,7 @@ export function browserDataPlugin(): Plugin {
         const lessons = Object.fromEntries(Object.entries(assets.lessons).map(([date, reference]) => [date, {
           path: this.getFileName(reference), day: current().byDate[date].lesson.day, title: current().byDate[date].lesson.title,
         }]))
-        const files = Object.values(bundle).filter(file => file.fileName === 'index.html' || /\.(?:js|css|json)$/.test(file.fileName))
+        const files = Object.values(bundle).filter(file => file.fileName === 'index.html' || /\.(?:js|css|json|jpe?g|png|webp|svg|avif)$/.test(file.fileName))
         const snapshot = JSON.parse(readFileSync(join(browserDataRoot, 'src/data/it-study-snapshot.json'), 'utf8'))
         const manifest = createReleaseManifest({ lessons, latestDate: current().catalog.latest.lesson.date,
           searchIndex: this.getFileName(assets.searchIndex), studySnapshotCommit: snapshot.sourceCommit,

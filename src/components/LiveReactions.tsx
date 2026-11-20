@@ -7,6 +7,7 @@ import { AudioButton, SentenceAudio } from './AudioButton'
 import { AudioAvailability } from './AudioAvailability'
 import { stopAudio } from '../lib/audioPlayer'
 import { SearchHighlight } from './SearchHighlight'
+import { LiveMangaGallery } from './LiveMangaGallery'
 import '../live-reactions.css'
 import '../live-units.css'
 
@@ -80,6 +81,7 @@ export default function LiveReactions({ query, composing, onClear, searchTarget,
       <div><span className="section-index">{unit.date}</span><h2 id="live-unit-title">{unit.title}</h2></div>
       <p>{unit.description}</p><span className="live-unit-count">{unit.countLabel}</span>
     </div>
+    {unit.manga ? <LiveMangaGallery key={unit.id} gallery={unit.manga} /> : null}
     <div className="live-summary" aria-label="直播笔记学习概要">
       <div><span>当前单元</span><strong>{groups.length}<small> 组</small></strong></div>
       <div><span>词条与表达</span><strong>{entries}<small> 条</small></strong></div>

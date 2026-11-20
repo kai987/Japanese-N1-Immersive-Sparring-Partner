@@ -9,6 +9,7 @@ import { liveNovember5Groups } from './live-reactions-2026-11-05.ts'
 import { liveNovember9Groups } from './live-reactions-2026-11-09.ts'
 import { liveNovember13Groups } from './live-reactions-2026-11-13.ts'
 import { liveNovember18Groups } from './live-reactions-2026-11-18.ts'
+import { tanpopoManga, type LiveMangaGallery } from './live-manga.ts'
 
 export const liveCategories = [
   { id: 'grammar', label: '文法・口语' },
@@ -29,6 +30,7 @@ export interface LiveUnit {
   description: string
   countLabel: string
   groups: LiveUnitGroup[]
+  manga?: LiveMangaGallery
 }
 // Keep every legacy ID and all legacy card data intact. Only add display categories.
 const legacyCategories: LiveCategory[] = [
@@ -105,11 +107,13 @@ export const liveUnits: LiveUnit[] = [
     id: '2026-10-30', date: '2026-10-30', title: 'ドラえもん「タンポポ空を行く」',
     description: '相关短篇：タンポポ空を行く，收录于普通单行本第18卷第20话，接续10月29日的同篇学习。补充照片中的「庭の隅に植え替える」「のどがカラカラ」「水まきをする」「冬に備える」「のび太にならないように」与原作中照顾蒲公英、植物缺水及蚂蚁备冬的情节对应。学习主题：抜き出す・授受・口語と時間の表現。笔记标题日期：2026-10-30。来自5张连续手机笔记照片，合并重叠部分，收录该标题下的64条笔记和4句无独立日期的口语补充。照片中已有的10月29日内容仍保留在原单元，不重复收录。原笔记、用法辨析和学习例句分别标注，不将全部表达标为N1。',
     countLabel: liveUnitCountLabel(liveOctober30Groups), groups: liveOctober30Groups,
+    manga: tanpopoManga,
   },
   {
     id: '2026-10-29', date: '2026-10-29', title: 'ドラえもん「タンポポ空を行く」',
     description: '相关短篇：タンポポ空を行く，收录于普通单行本第18卷第20话。根据补充照片中的眼镜、幻想及「そう見えるだけ」等线索，与道具「ファンタグラス」和10月30日连续笔记中的蒲公英情节交叉核对；两期为同一短篇的连续学习。学习主题：移動の「を」・断り方・見え方。笔记标题日期：2026-10-29。来自两张连续手机笔记截图，重叠部分合并为35条表达、16组知识点。原笔记与补充辨析、学习例句分别标注；保留简写并说明适用语境，不将全部表达标为N1。',
     countLabel: liveUnitCountLabel(liveOctober29Groups), groups: liveOctober29Groups,
+    manga: tanpopoManga,
   },
   {
     id: '2026-09-30-okashi-bokuso', date: '2026-09-30', title: 'ドラえもん「おかし牧場」',
