@@ -5,7 +5,10 @@ import type { DailyPractice } from '../../src/types.ts'
 export function validatePracticeSource(practice: DailyPractice, repositoryRoot = new URL('../../', import.meta.url)) {
   const source = readFileSync(new URL(practice.sourcePath, repositoryRoot), 'utf8')
   const heading = source.split('\n').find(line => /^#\s/.test(line)) ?? ''
-  if (!heading.includes(practice.date) || !new RegExp(`\\bDay\\s*${practice.day}\\b`).test(heading)) {
+  const [year, month, day] = practice.date.split('-').map(Number)
+  const localizedDate = `${year}年${month}月${day}日`
+  const dateMatches = heading.includes(practice.date) || heading.includes(localizedDate)
+  if (!dateMatches || !new RegExp(`\\bDay\\s*${practice.day}\\b`).test(heading)) {
     throw new Error(`${practice.sourcePath}: practice source date/Day mismatch`)
   }
   for (const group of practice.groups) {
