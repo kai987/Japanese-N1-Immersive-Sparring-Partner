@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "targetDate": "2026-11-01",
+  "day": 64,
+  "revision": "classified-practice-v1",
+  "status": "source_saved",
+  "publication": "published_release_verified",
+  "frozenRunDateJST": "2026-11-20",
+  "generatedAtJST": "2026-11-20T19:04:57+09:00",
+  "sha256": "c8c3a9b3db34c41818abb2990d2b05d286cc488885ef75e7b942817eacb87492",
+  "bytes": 29094,
+  "checkpoint": {
+    "branch": "automation/n1-progress",
+    "path": "runs/2026-11-01/revisions/classified-practice-v1/source.json",
+    "commitSha": "23a66e8000df73d8c62480106e1572b82c9cb667",
+    "blobSha": "9655c4b5d847ec2f917ec97af8c6def9c3ff07df",
+    "fullReadbackVerified": true,
+    "sharedHelperVerified": true,
+    "exactStageMetadataPreserved": true
+  },
+  "mainSource": {
+    "branch": "main",
+    "path": "n1-source/revisions/2026-11-01-practice.md",
+    "commitSha": "ec9b0f19567727c805cc6297fb1975e056b1f035",
+    "blobSha": "1822ebdb09b6398ed48eebc1b574d5e2e700c400",
+    "fullReadbackVerified": true,
+    "restoredBytesExactlyMatched": true
+  },
+  "practice": {
+    "path": "src/data/practice/2026-11-01.json",
+    "blobSha": "7ed341a92d122865eb7c24cb30ddbd7a0dfa27ec",
+    "sha256": "c5df5e0fc0f88c1e9c5bd4db40ba4b4721c1e118ba1c089bdd2fb9b669841eef",
+    "bytes": 42913,
+    "fullReadbackVerified": true,
+    "categories": {
+      "vocabulary": 5,
+      "grammar": 5,
+      "reading": 8
+    },
+    "readingKinds": {
+      "short": 2,
+      "medium": 2,
+      "long": 2,
+      "comparison": 1,
+      "information": 1
+    },
+    "practiceMinutes": 55,
+    "dailyMinutes": 255
+  },
+  "release": {
+    "commitSha": "ec9b0f19567727c805cc6297fb1975e056b1f035",
+    "parentSha": "a407c924f79e70f4157776e231ce1ec97413a796",
+    "runId": 44716736731,
+    "attempt": 1,
+    "runUrl": "https://github.com/kai987/Japanese-N1-Immersive-Sparring-Partner/actions/runs/44716736731",
+    "workflow": ".github/workflows/deploy-pages.yml",
+    "conclusion": "success",
+    "buildJobId": 136221936761,
+    "deployJobId": 136223604094,
+    "artifactId": 14620735228,
+    "artifactZipSha256": "975ce8c376a578804150814312f5b90acddc0568f79900cdd0450bbb9e415a61",
+    "artifactZipBytes": 10931,
+    "artifactDigestVerified": true,
+    "manifestSha256": "86d0b1b8ccdc4371e37b75d06ec3afb2b2f7fa04e880515bb156a7ea32b9611b",
+    "manifestBytes": 33146,
+    "manifestExactlyMatchesLocalCandidate": true,
+    "verifiedFiles": 108,
+    "workflowRequestDate": "2026-11-20"
+  },
+  "liveTarget": {
+    "date": "2026-11-01",
+    "day": 64,
+    "url": "https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/#practice/2026-11-01/reading/2026-11-01-rq-share-equipment-location-across-rotated-views-v1",
+    "browserVerified": true,
+    "categorySwitchingVerified": true,
+    "vocabularyQuestions": 5,
+    "grammarQuestions": 5,
+    "readingQuestions": 8,
+    "readingKinds": {
+      "short": 2,
+      "medium": 2,
+      "long": 2,
+      "comparison": 1,
+      "information": 1
+    },
+    "informationTableColumns": 5,
+    "informationTableBodyRows": 4,
+    "legacyQuestionDisclosurePresent": true,
+    "answersHiddenBeforeSubmission": true,
+    "answersSubmittedDuringLiveCheck": false,
+    "siteOriginConsoleErrorsObserved": 0,
+    "nonSiteExtensionErrorsObserved": 8
+  },
+  "checks": {
+    "helperPassed": 9,
+    "nodePassed": 223,
+    "pythonPassed": 28,
+    "browserPassed": 170,
+    "browserFailed": 0,
+    "lessonsValidated": 83,
+    "all425PreviousQuestionObjectsUnchanged": true,
+    "currentUniqueQuestions": 443,
+    "fullSearchIndexMatched": true,
+    "sourceScopeVerified": true,
+    "oldDailyUnchanged": true
+  },
+  "preservedOriginal": {
+    "path": "n1-source/2026-11-01.md",
+    "blobSha": "31291a698eeb035ad2fd94a506616ce88a3ad02d",
+    "sha256": "d9fe9fc7bda57896ab97a3382bd09586a23127665889c7679d902f7735a6ef71",
+    "bytes": 26624,
+    "generatedAtJST": "2026-11-01T09:01:02+09:00",
+    "checkpointBlobSha": "102d0213cda43bc1b171354aaff2b0a299b2fbb8"
+  },
+  "verifiedAtJST": "2026-11-20T19:14:59+09:00",
+  "lastConfirmedStage": "checkpoint_main_exact_release_and_live_target_verified",
+  "error": null
+}
