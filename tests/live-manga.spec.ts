@@ -133,6 +133,9 @@ test('manga arrows keep 60% transparent backgrounds and become 90% opaque on hov
     const expectedColors = await page.evaluate(() => {
       const container = document.querySelector('.live-manga-navigation')!
       const probe = document.createElement('span')
+      // The global reduced-motion rule gives every element a tiny transition.
+      // Read stable reference colors without changing the real button's behavior.
+      probe.style.setProperty('transition', 'none', 'important')
       container.appendChild(probe)
       const getMixedColor = (percent: number) => {
         probe.style.backgroundColor = `color-mix(in srgb, var(--surface) ${percent}%, transparent)`
