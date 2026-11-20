@@ -10,8 +10,633 @@
     "sampleRate": 24000,
     "codec": "mp3-64k"
   },
-  "requiredClips": 9630,
-  "pendingClips": 0,
-  "incompleteLessonDates": [],
-  "entries": []
+  "requiredClips": 9716,
+  "pendingClips": 74,
+  "incompleteLessonDates": [
+    "2026-11-20"
+  ],
+  "entries": [
+    {
+      "id": "d40a204f608e6a1b",
+      "text": "要約された言葉と、決まったこと",
+      "label": "要約された言葉と、決まったこと",
+      "references": [
+        "lesson/2026-11-20/title",
+        "lesson/2026-11-20/immersion/title",
+        "lesson/2026-11-20/reading/title"
+      ]
+    },
+    {
+      "id": "e0e781f0af8a521c",
+      "text": "会議の終了後、参加者に要点を素早く伝えるため、発言を生成AIで要約する企業が増えているという想定で考えてみよう。",
+      "label": "会議の終了後、参加者に要点を素早く伝えるため、発言を生成AIで要約する企業が増えているという想定で考えてみよう。",
+      "references": [
+        "lesson/2026-11-20/immersion/0/0",
+        "lesson/2026-11-20/reading/0/0"
+      ]
+    },
+    {
+      "id": "3d71b9d87e5e55e4",
+      "text": "録音を文字に起こし、論点を分類し、次の行動を一覧にする。",
+      "label": "録音を文字に起こし、論点を分類し、次の行動を一覧にする。",
+      "references": [
+        "lesson/2026-11-20/immersion/0/1",
+        "lesson/2026-11-20/reading/0/1"
+      ]
+    },
+    {
+      "id": "94a71b6c4b147a90",
+      "text": "こうした作業が短縮されれば、人は議論そのものに時間を使える。",
+      "label": "こうした作業が短縮されれば、人は議論そのものに時間を使える。",
+      "references": [
+        "lesson/2026-11-20/immersion/0/2",
+        "lesson/2026-11-20/reading/0/2"
+      ]
+    },
+    {
+      "id": "59d2532c7b186d70",
+      "text": "しかし、整った文章が出来上がったことと、会議で何かが正式に決まったことは、同じではない。",
+      "label": "しかし、整った文章が出来上がったことと、会議で何かが正式に決まったことは、同じではない。",
+      "references": [
+        "lesson/2026-11-20/immersion/0/3",
+        "lesson/2026-11-20/reading/0/3"
+      ]
+    },
+    {
+      "id": "f4672e4c42c13c10",
+      "text": "例えば、ある開発会議で「来週の公開を目指したい。",
+      "label": "例えば、ある開発会議で「来週の公開を目指したい。",
+      "references": [
+        "lesson/2026-11-20/immersion/1/0",
+        "lesson/2026-11-20/reading/1/0"
+      ]
+    },
+    {
+      "id": "2f7bd56958aa0805",
+      "text": "ただし、安全性の検証が終わることが前提だ」と発言したとする。",
+      "label": "ただし、安全性の検証が終わることが前提だ」と発言したとする。",
+      "references": [
+        "lesson/2026-11-20/immersion/1/1",
+        "lesson/2026-11-20/reading/1/1"
+      ]
+    },
+    {
+      "id": "682243af3bab2f3b",
+      "text": "要約が「来週公開する」とだけ記せば、目標が確定事項に変わってしまう。",
+      "label": "要約が「来週公開する」とだけ記せば、目標が確定事項に変わってしまう。",
+      "references": [
+        "lesson/2026-11-20/immersion/1/2",
+        "lesson/2026-11-20/reading/1/2"
+      ]
+    },
+    {
+      "id": "c47815f293f596be",
+      "text": "一方で、発言を一語一句残しても、発言者が提案したのか、出席者が合意したのかは分からないことがある。",
+      "label": "一方で、発言を一語一句残しても、発言者が提案したのか、出席者が合意したのかは分からないことがある。",
+      "references": [
+        "lesson/2026-11-20/immersion/1/3",
+        "lesson/2026-11-20/reading/1/3"
+      ]
+    },
+    {
+      "id": "c5461b6157b9724d",
+      "text": "欠けているのは文字数ではなく、判断が成立した条件である。",
+      "label": "欠けているのは文字数ではなく、判断が成立した条件である。",
+      "references": [
+        "lesson/2026-11-20/immersion/1/4",
+        "lesson/2026-11-20/reading/1/4"
+      ]
+    },
+    {
+      "id": "59240bc2267a16d6",
+      "text": "そこで、ある架空の開発チームは、会議録を三つの欄に分けた。「",
+      "label": "そこで、ある架空の開発チームは、会議録を三つの欄に分けた。「",
+      "references": [
+        "lesson/2026-11-20/immersion/2/0",
+        "lesson/2026-11-20/reading/2/0"
+      ]
+    },
+    {
+      "id": "0e60f26cb88bc080",
+      "text": "確認済みの事実」「合意された決定」「未決定・要確認」である。",
+      "label": "確認済みの事実」「合意された決定」「未決定・要確認」である。",
+      "references": [
+        "lesson/2026-11-20/immersion/2/1",
+        "lesson/2026-11-20/reading/2/1"
+      ]
+    },
+    {
+      "id": "52340cc29fecda76",
+      "text": "AIは下書きを作れるが、決定欄を確定させる前には、担当者が元の発言を照合し、必要なら発言者へ問い合わせる。",
+      "label": "AIは下書きを作れるが、決定欄を確定させる前には、担当者が元の発言を照合し、必要なら発言者へ問い合わせる。",
+      "references": [
+        "lesson/2026-11-20/immersion/2/2",
+        "lesson/2026-11-20/reading/2/2"
+      ]
+    },
+    {
+      "id": "928c9fd0634acbcc",
+      "text": "音声が残っていない部分には、もっともらしい言葉を補うのではなく、「根拠未確認」と表示する。",
+      "label": "音声が残っていない部分には、もっともらしい言葉を補うのではなく、「根拠未確認」と表示する。",
+      "references": [
+        "lesson/2026-11-20/immersion/2/3",
+        "lesson/2026-11-20/reading/2/3"
+      ]
+    },
+    {
+      "id": "9d173e3ac30ed9ee",
+      "text": "文書を読んだ人が、どこまでを行動の根拠にしてよいのかを区別するためだ。",
+      "label": "文書を読んだ人が、どこまでを行動の根拠にしてよいのかを区別するためだ。",
+      "references": [
+        "lesson/2026-11-20/immersion/2/4",
+        "lesson/2026-11-20/reading/2/4"
+      ]
+    },
+    {
+      "id": "6fba93a06a98566c",
+      "text": "ただ、確認項目を増やせば常によいわけではない。",
+      "label": "ただ、確認項目を増やせば常によいわけではない。",
+      "references": [
+        "lesson/2026-11-20/immersion/3/0",
+        "lesson/2026-11-20/reading/3/0"
+      ]
+    },
+    {
+      "id": "511c29b71494bae3",
+      "text": "全ての助詞や言い回しを同じ重さで点検していたら、急ぎの連絡そのものが遅れてしまう。",
+      "label": "全ての助詞や言い回しを同じ重さで点検していたら、急ぎの連絡そのものが遅れてしまう。",
+      "references": [
+        "lesson/2026-11-20/immersion/3/1",
+        "lesson/2026-11-20/reading/3/1"
+      ]
+    },
+    {
+      "id": "d7c9d56510009e99",
+      "text": "公開日、責任者、予算上限、品質の合格条件など、誤ると次の行動が変わる箇所を優先し、それ以外の表現修正と区別する必要がある。",
+      "label": "公開日、責任者、予算上限、品質の合格条件など、誤ると次の行動が変わる箇所を優先し、それ以外の表現修正と区別する必要がある。",
+      "references": [
+        "lesson/2026-11-20/immersion/3/2",
+        "lesson/2026-11-20/reading/3/2"
+      ]
+    },
+    {
+      "id": "09d7117569d2d3b9",
+      "text": "重要なのは、何文字修正したかよりも、その修正が誰の判断に影響するかを見極めることである。",
+      "label": "重要なのは、何文字修正したかよりも、その修正が誰の判断に影響するかを見極めることである。",
+      "references": [
+        "lesson/2026-11-20/immersion/3/3",
+        "lesson/2026-11-20/reading/3/3"
+      ]
+    },
+    {
+      "id": "dc1c27f557a6a771",
+      "text": "さらに、記録が正確でも、古い版が広まれば混乱は起きる。",
+      "label": "さらに、記録が正確でも、古い版が広まれば混乱は起きる。",
+      "references": [
+        "lesson/2026-11-20/immersion/4/0",
+        "lesson/2026-11-20/reading/4/0"
+      ]
+    },
+    {
+      "id": "f8d1a42ec4294bc2",
+      "text": "後で公開日が変更されたとき、「最終版」というファイル名だけが残っていたら、受け取った人はそれがいつの最終版なのか判断できない。",
+      "label": "後で公開日が変更されたとき、「最終版」というファイル名だけが残っていたら、受け取った人はそれがいつの最終版なのか判断できない。",
+      "references": [
+        "lesson/2026-11-20/immersion/4/1",
+        "lesson/2026-11-20/reading/4/1"
+      ]
+    },
+    {
+      "id": "d9cb824290108036",
+      "text": "版番号、更新時刻、変更理由、確認者をひも付け、以前の版との違いが分かるようにする。",
+      "label": "版番号、更新時刻、変更理由、確認者をひも付け、以前の版との違いが分かるようにする。",
+      "references": [
+        "lesson/2026-11-20/immersion/4/2",
+        "lesson/2026-11-20/reading/4/2"
+      ]
+    },
+    {
+      "id": "68d4040bc93b12d7",
+      "text": "必要なら未確認のまま配布した範囲も記し、受け手が誤った前提で作業を続けないようにする。",
+      "label": "必要なら未確認のまま配布した範囲も記し、受け手が誤った前提で作業を続けないようにする。",
+      "references": [
+        "lesson/2026-11-20/immersion/4/3",
+        "lesson/2026-11-20/reading/4/3"
+      ]
+    },
+    {
+      "id": "c973b52f50c38adb",
+      "text": "要約が速いことは価値がある。",
+      "label": "要約が速いことは価値がある。",
+      "references": [
+        "lesson/2026-11-20/immersion/5/0",
+        "lesson/2026-11-20/reading/5/0"
+      ]
+    },
+    {
+      "id": "f5eb6bbb50d27f77",
+      "text": "しかし速さだけでは、言葉を誰がどう受け止め、何に合意したかまでは保証できない。",
+      "label": "しかし速さだけでは、言葉を誰がどう受け止め、何に合意したかまでは保証できない。",
+      "references": [
+        "lesson/2026-11-20/immersion/5/1",
+        "lesson/2026-11-20/reading/5/1"
+      ]
+    },
+    {
+      "id": "734e3b32c7f8e456",
+      "text": "AIに任せる作業と、人が確かめる判断の境界を明らかにしてこそ、短い議事録は信頼できる仕事の道具になるのではないだろうか。",
+      "label": "AIに任せる作業と、人が確かめる判断の境界を明らかにしてこそ、短い議事録は信頼できる仕事の道具になるのではないだろうか。",
+      "references": [
+        "lesson/2026-11-20/immersion/5/2",
+        "lesson/2026-11-20/reading/5/2"
+      ]
+    },
+    {
+      "id": "f3cf8288946989fc",
+      "text": "筆者は生成AIによる議事録をどう使うべきだと考えているか。",
+      "label": "筆者は生成AIによる議事録をどう使うべきだと考えているか。",
+      "references": [
+        "lesson/2026-11-20/question/0"
+      ]
+    },
+    {
+      "id": "6be22977bb3c590b",
+      "text": "整った要約を正式な決定としてすぐに配る。",
+      "label": "整った要約を正式な決定としてすぐに配る。",
+      "references": [
+        "lesson/2026-11-20/option/0/0"
+      ]
+    },
+    {
+      "id": "df798d4ec47e03c2",
+      "text": "AIの下書きを使い、判断の根拠や未決定事項、訂正を人が確認できるようにする。",
+      "label": "AIの下書きを使い、判断の根拠や未決定事項、訂正を人が確認できるようにする。",
+      "references": [
+        "lesson/2026-11-20/option/1/0"
+      ]
+    },
+    {
+      "id": "3e4e1e1f17f09aab",
+      "text": "録音がない部分をAIで補い、文書に空欄を作らない。",
+      "label": "録音がない部分をAIで補い、文書に空欄を作らない。",
+      "references": [
+        "lesson/2026-11-20/option/2/0"
+      ]
+    },
+    {
+      "id": "35da00df9656e1f3",
+      "text": "行動への影響にかかわらず、すべての言葉を同じ重さで確認する。",
+      "label": "行動への影響にかかわらず、すべての言葉を同じ重さで確認する。",
+      "references": [
+        "lesson/2026-11-20/option/3/0"
+      ]
+    },
+    {
+      "id": "5d96e338df2d5d9c",
+      "text": "本文はAIの速さを生かしつつ、決定条件、根拠、版を人が確認する方法を説明しています。",
+      "label": "本文はAIの速さを生かしつつ、決定条件、根拠、版を人が確認する方法を説明しています。",
+      "references": [
+        "lesson/2026-11-20/explanation/0"
+      ]
+    },
+    {
+      "id": "179faf683f980904",
+      "text": "要約の完成と正式な決定は別です。",
+      "label": "要約の完成と正式な決定は別です。",
+      "references": [
+        "lesson/2026-11-20/option-note/0/0"
+      ]
+    },
+    {
+      "id": "f3fe36d79f240fa3",
+      "text": "根拠を照合し、未決定や変更の情報も記録する考えに合います。",
+      "label": "根拠を照合し、未決定や変更の情報も記録する考えに合います。",
+      "references": [
+        "lesson/2026-11-20/option-note/1/0"
+      ]
+    },
+    {
+      "id": "4f4006c4a96bc8e8",
+      "text": "音声が残らない場合は「根拠未確認」と表示します。",
+      "label": "音声が残らない場合は「根拠未確認」と表示します。",
+      "references": [
+        "lesson/2026-11-20/option-note/2/0"
+      ]
+    },
+    {
+      "id": "169fc13dadbac5c1",
+      "text": "誤ると行動が変わる箇所を優先します。",
+      "label": "誤ると行動が変わる箇所を優先します。",
+      "references": [
+        "lesson/2026-11-20/option-note/3/0"
+      ]
+    },
+    {
+      "id": "bb2e97a7e46966db",
+      "text": "遠回りになる",
+      "label": "遠回りになる",
+      "references": [
+        "lesson/2026-11-20/vocabulary/2026-11-20-v-30f42438db37/collocation/0"
+      ]
+    },
+    {
+      "id": "cbad8bff5b9ca4ab",
+      "text": "遠回りをする",
+      "label": "遠回りをする",
+      "references": [
+        "lesson/2026-11-20/vocabulary/2026-11-20-v-30f42438db37/collocation/1"
+      ]
+    },
+    {
+      "id": "5a0c6c3d42c9ebf1",
+      "text": "単一の方式",
+      "label": "単一の方式",
+      "references": [
+        "lesson/2026-11-20/vocabulary/2026-11-20-v-5a4877a0c957/collocation/0"
+      ]
+    },
+    {
+      "id": "273b1a56ef291042",
+      "text": "単一の原因",
+      "label": "単一の原因",
+      "references": [
+        "lesson/2026-11-20/vocabulary/2026-11-20-v-5a4877a0c957/collocation/1"
+      ]
+    },
+    {
+      "id": "343c5eb07364bc3c",
+      "text": "その場で立ち止まる",
+      "label": "その場で立ち止まる",
+      "references": [
+        "lesson/2026-11-20/vocabulary/2026-11-20-v-67e7e3cba380/collocation/0"
+      ]
+    },
+    {
+      "id": "659bfeba83ddc44e",
+      "text": "一度立ち止まって考える",
+      "label": "一度立ち止まって考える",
+      "references": [
+        "lesson/2026-11-20/vocabulary/2026-11-20-v-67e7e3cba380/collocation/1"
+      ]
+    },
+    {
+      "id": "6c2a39e4abf5ee60",
+      "text": "手順を見直す",
+      "label": "手順を見直す",
+      "references": [
+        "lesson/2026-11-20/vocabulary/2026-11-20-v-37280643cd47/collocation/1"
+      ]
+    },
+    {
+      "id": "1251ac98cce81e54",
+      "text": "DevelopersIOでは、AgentCore GatewayがCognitoのトークンを確認した後、Cedarでツール呼び出しを実行前に評価する構成を検証しました。",
+      "label": "DevelopersIOでは、AgentCore GatewayがCognitoのトークンを確認した後、Cedarでツール呼び出しを実行前に評価する構成を検証しました。",
+      "references": [
+        "lesson/2026-11-20/vocabulary/2026-11-20-v-study-a47c5cf6/evidence/0",
+        "lesson/2026-11-20/vocabulary/2026-11-20-v-study-d898be90/evidence/0",
+        "lesson/2026-11-20/vocabulary/2026-11-20-v-study-66614293/evidence/0",
+        "lesson/2026-11-20/vocabulary/2026-11-20-v-study-d20f029e/evidence/0"
+      ]
+    },
+    {
+      "id": "cdd50662a7468326",
+      "text": "ただし、先行アーカイブで扱うのはカーネル以外です。",
+      "label": "ただし、先行アーカイブで扱うのはカーネル以外です。",
+      "references": [
+        "lesson/2026-11-20/vocabulary/2026-11-20-v-study-73083d1e/evidence/0"
+      ]
+    },
+    {
+      "id": "f72d614a928aeb86",
+      "text": "候補を妥当と判断できた場合は、正式なQAが終わる前にEdgeで選べるようになります。",
+      "label": "候補を妥当と判断できた場合は、正式なQAが終わる前にEdgeで選べるようになります。",
+      "references": [
+        "lesson/2026-11-20/vocabulary/2026-11-20-v-study-1e18d506/evidence/0"
+      ]
+    },
+    {
+      "id": "3a3187ec583a4cb0",
+      "text": "カーネルと一般パッケージでは、使う検証の仕組みが異なります。",
+      "label": "カーネルと一般パッケージでは、使う検証の仕組みが異なります。",
+      "references": [
+        "lesson/2026-11-20/vocabulary/2026-11-20-v-study-4785c5c0/evidence/1"
+      ]
+    },
+    {
+      "id": "1d20c76c6b8360c0",
+      "text": "APIの標準単価は100万トークン当たり入力3ドル、出力15ドルですが、11月30日まで導入価格が適用されるCarbonとの比較ではNeonが高くなります。",
+      "label": "APIの標準単価は100万トークン当たり入力3ドル、出力15ドルですが、11月30日まで導入価格が適用されるCarbonとの比較ではNeonが高くなります。",
+      "references": [
+        "lesson/2026-11-20/vocabulary/2026-11-20-v-study-339df203/evidence/0"
+      ]
+    },
+    {
+      "id": "11eecb6b34515d1f",
+      "text": "読む価値: 認証が通った後に、操作とデータの境界をどの層で守るか説明できる実験です。",
+      "label": "読む価値: 認証が通った後に、操作とデータの境界をどの層で守るか説明できる実験です。",
+      "references": [
+        "lesson/2026-11-20/vocabulary/2026-11-20-v-study-167ee02e/evidence/0"
+      ]
+    },
+    {
+      "id": "eea15144ccd17bc0",
+      "text": "既存の検索や並び順との共存は検討対象から外し、要件分析、設計、コード生成、ビルドとテストを段階として進めました。",
+      "label": "既存の検索や並び順との共存は検討対象から外し、要件分析、設計、コード生成、ビルドとテストを段階として進めました。",
+      "references": [
+        "lesson/2026-11-20/vocabulary/2026-11-20-v-study-41640d3b/evidence/0"
+      ]
+    },
+    {
+      "id": "2aa048cceb431428",
+      "text": "関連プロジェクト例: 架空の従業員データを扱うゲートウェイで、本人照会と権限のない照会を分け、拒否時に下流が動かないことを調べる。",
+      "label": "関連プロジェクト例: 架空の従業員データを扱うゲートウェイで、本人照会と権限のない照会を分け、拒否時に下流が動かないことを調べる。",
+      "references": [
+        "lesson/2026-11-20/vocabulary/2026-11-20-v-study-8cdb27ff/evidence/0"
+      ]
+    },
+    {
+      "id": "73312a33e32b6537",
+      "text": "エージェントの成績には、モデルに加えて呼び出すツールと推論設定が関わります。",
+      "label": "エージェントの成績には、モデルに加えて呼び出すツールと推論設定が関わります。",
+      "references": [
+        "lesson/2026-11-20/grammar/2026-11-20-g-study-2c43f688/evidence/1"
+      ]
+    },
+    {
+      "id": "503c7929b228aa2d",
+      "text": "試作では既存データを扱える形に整えた上でAIによる分類を反映しています。",
+      "label": "試作では既存データを扱える形に整えた上でAIによる分類を反映しています。",
+      "references": [
+        "lesson/2026-11-20/grammar/2026-11-20-g-study-4b544f6d/evidence/0"
+      ]
+    },
+    {
+      "id": "b83efae342f0234f",
+      "text": "| 国内SRE | 利用者の操作に基づくリスク評価 |",
+      "label": "| 国内SRE | 利用者の操作に基づくリスク評価 |",
+      "references": [
+        "lesson/2026-11-20/grammar/2026-11-20-g-study-7700b0e1/evidence/0"
+      ]
+    },
+    {
+      "id": "82867b86f072e0c2",
+      "text": "ITmedia AI+が取り上げたGemini 4 Neonは、GoogleがCarbonを基にして公開したモデルです。",
+      "label": "ITmedia AI+が取り上げたGemini 4 Neonは、GoogleがCarbonを基にして公開したモデルです。",
+      "references": [
+        "lesson/2026-11-20/grammar/2026-11-20-g-study-1673b8d8/evidence/0"
+      ]
+    },
+    {
+      "id": "09e2f3de6f2e70c2",
+      "text": "ガイドラインに沿った書式、機能要件に入れるべきUIの細部、技術選定の比較材料にも不足が残っています。",
+      "label": "ガイドラインに沿った書式、機能要件に入れるべきUIの細部、技術選定の比較材料にも不足が残っています。",
+      "references": [
+        "lesson/2026-11-20/grammar/2026-11-20-g-study-e739abd3/evidence/0"
+      ]
+    },
+    {
+      "id": "307f6c52b44c506e",
+      "text": "gihyo.jpは、Ubuntu Pro向けのEdgeアーカイブを、正式な対応パッケージに先立つ選択制の提供経路として紹介しています。",
+      "label": "gihyo.jpは、Ubuntu Pro向けのEdgeアーカイブを、正式な対応パッケージに先立つ選択制の提供経路として紹介しています。",
+      "references": [
+        "lesson/2026-11-20/grammar/2026-11-20-g-study-6cdc1d90/evidence/0"
+      ]
+    },
+    {
+      "id": "afcde681f09f8375",
+      "text": "生成された画面だけでは手順の抜けに気づきにくいので、途中の成果物も確認します。",
+      "label": "生成された画面だけでは手順の抜けに気づきにくいので、途中の成果物も確認します。",
+      "references": [
+        "lesson/2026-11-20/grammar/2026-11-20-g-study-48e1043d/evidence/0"
+      ]
+    },
+    {
+      "id": "89b33ad1686b7c0d",
+      "text": "単価だけでなくキャッシュや再実行も効くので、自社の課題を同じ条件で解いて、合格した一件当たりの費用を比べます。",
+      "label": "単価だけでなくキャッシュや再実行も効くので、自社の課題を同じ条件で解いて、合格した一件当たりの費用を比べます。",
+      "references": [
+        "lesson/2026-11-20/grammar/2026-11-20-g-study-61aee9b6/evidence/0"
+      ]
+    },
+    {
+      "id": "b8cf84ec52ea26e0",
+      "text": "R1|语法改编:なくしては",
+      "label": "R1｜语法改编：なくしては",
+      "references": [
+        "lesson/2026-11-20/review/0/title/0"
+      ]
+    },
+    {
+      "id": "0e82e9aa88b7fe3e",
+      "text": "現場担当者の確認( )、この記録を正式な決定として公開することはできない。",
+      "label": "現場担当者の確認（　）、この記録を正式な決定として公開することはできない。",
+      "references": [
+        "lesson/2026-11-20/review/0/detail/0"
+      ]
+    },
+    {
+      "id": "baa5a0c0c77104cc",
+      "text": "なくしては 2.",
+      "label": "なくしては　2.",
+      "references": [
+        "lesson/2026-11-20/review/0/detail/2"
+      ]
+    },
+    {
+      "id": "382fe9975ebb53c3",
+      "text": "にこたえて 3.",
+      "label": "にこたえて　3.",
+      "references": [
+        "lesson/2026-11-20/review/0/detail/3"
+      ]
+    },
+    {
+      "id": "a3615aa169d1c7cd",
+      "text": "を皮切りに 4.",
+      "label": "を皮切りに　4.",
+      "references": [
+        "lesson/2026-11-20/review/0/detail/4"
+      ]
+    },
+    {
+      "id": "526c2a3b98aca65f",
+      "text": "R2|语法改编:に越したことはない",
+      "label": "R2｜语法改编：に越したことはない",
+      "references": [
+        "lesson/2026-11-20/review/1/title/0"
+      ]
+    },
+    {
+      "id": "d3d86b8eea8570b2",
+      "text": "重要な変更は、誤解を生まないよう早めに知らせる( )。",
+      "label": "重要な変更は、誤解を生まないよう早めに知らせる（　）。",
+      "references": [
+        "lesson/2026-11-20/review/1/detail/0"
+      ]
+    },
+    {
+      "id": "75038c00723b5214",
+      "text": "どころではない 2.",
+      "label": "どころではない　2.",
+      "references": [
+        "lesson/2026-11-20/review/1/detail/2"
+      ]
+    },
+    {
+      "id": "5d36e5ed94430439",
+      "text": "に越したことはない 3.",
+      "label": "に越したことはない　3.",
+      "references": [
+        "lesson/2026-11-20/review/1/detail/3"
+      ]
+    },
+    {
+      "id": "63a6d4fe49eaf4aa",
+      "text": "に足らない 4.",
+      "label": "に足らない　4.",
+      "references": [
+        "lesson/2026-11-20/review/1/detail/4"
+      ]
+    },
+    {
+      "id": "5190df16b8aeec32",
+      "text": "ものか",
+      "label": "ものか",
+      "references": [
+        "lesson/2026-11-20/review/1/detail/5"
+      ]
+    },
+    {
+      "id": "e8a585ec719468e8",
+      "text": "この申請は教育委員会の( )に属するため、別の窓口では最終判断できない。",
+      "label": "この申請は教育委員会の（　）に属するため、別の窓口では最終判断できない。",
+      "references": [
+        "lesson/2026-11-20/review/2/detail/0"
+      ]
+    },
+    {
+      "id": "b162805dffd87b09",
+      "text": "新しい運用が整うまで、( )は旧方式と併用することにした。",
+      "label": "新しい運用が整うまで、（　）は旧方式と併用することにした。",
+      "references": [
+        "lesson/2026-11-20/review/3/detail/0"
+      ]
+    },
+    {
+      "id": "4e3feec0384a9114",
+      "text": "とっさに 2.",
+      "label": "とっさに　2.",
+      "references": [
+        "lesson/2026-11-20/review/3/detail/2"
+      ]
+    },
+    {
+      "id": "cdfaf4af3cd139bb",
+      "text": "おおむね 3.",
+      "label": "おおむね　3.",
+      "references": [
+        "lesson/2026-11-20/review/3/detail/3"
+      ]
+    }
+  ]
 }
