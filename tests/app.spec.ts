@@ -20,7 +20,7 @@ async function reading(page: import('@playwright/test').Page) {
 async function openLegacyQuestion(page: import('@playwright/test').Page) {
   await expect(page.locator('.reading-page')).toBeVisible()
   const legacy = page.locator('details.legacy-reading')
-  if (await legacy.count() && await legacy.getAttribute('open') === null) await legacy.locator('summary').click()
+  if (await legacy.count() && await legacy.getAttribute('open') === null) await legacy.locator(':scope > summary').click()
   await expect(page.locator('#reading-question')).toBeVisible()
 }
 test('fresh activity starts at zero and completion, theme and review status persist', async ({ page }) => {
