@@ -9,7 +9,7 @@ import { liveNovember5Groups } from './live-reactions-2026-11-05.ts'
 import { liveNovember9Groups } from './live-reactions-2026-11-09.ts'
 import { liveNovember13Groups } from './live-reactions-2026-11-13.ts'
 import { liveNovember18Groups } from './live-reactions-2026-11-18.ts'
-import { osodaManga, otoshimonoManga, tanpopoManga, type LiveMangaGallery } from './live-manga.ts'
+import { osodaManga, otonaWanshoManga, otoshimonoManga, tanpopoManga, type LiveMangaGallery } from './live-manga.ts'
 
 export const liveCategories = [
   { id: 'grammar', label: '文法・口语' },
@@ -45,7 +45,8 @@ const legacyCategories: LiveCategory[] = [
 ]
 // Manga titles are display metadata, not speech or progress identities.
 // 11/18 basis: 掃除・ポイ捨て・子供のくせに・生意気・腕章を腕にはめる.
-// The title is identified from the notes and plot, not directly visible in a photo.
+// The title was identified from the notes and plot, and is now confirmed by the
+// supplied Japanese title page in the paired Chinese/Japanese manga gallery.
 // https://e-comi.shogakukan.co.jp/books/091408030000d0000000
 // https://www.tv-asahi.co.jp/doraemon/story/0622/
 // https://www.hatosan.com/ensoku/2011/07/post-36.html (original manga's cigarette butt)
@@ -80,8 +81,9 @@ const legacyCategories: LiveCategory[] = [
 export const liveUnits: LiveUnit[] = [
   {
     id: '2026-11-18', date: '2026-11-18', title: 'ドラえもん「大人をしかる腕章」',
-    description: '相关短篇：大人をしかる腕章，收录于普通单行本第33卷第6话。根据打扫、乱扔烟头、佩戴腕章及「子供のくせに」「生意気」等笔记线索，与官方目录、剧情和原作资料对照识别。笔记标题日期：2026-11-18。整理10张连续手机笔记截图，合并重叠条目，学习条件与让步、叮嘱与祈愿、愿望表达、词义辨析及自动词／他动词。保留可见原文，补充读音、中文释义、用法要点和原创日中例句；未完句和速记简写另作说明。词汇与语法拓展仍属于课堂学习补充。',
+    description: '相关短篇：大人をしかる腕章，收录于普通单行本第33卷第6话。根据打扫、乱扔烟头、佩戴腕章及「子供のくせに」「生意気」等笔记线索，与官方目录、剧情和原作资料对照识别；篇名已由补充漫画的日文标题页确认。附16张中日对照漫画图片，按每组中文彩色、日文黑白的顺序排列。笔记标题日期：2026-11-18。整理10张连续手机笔记截图，合并重叠条目，学习条件与让步、叮嘱与祈愿、愿望表达、词义辨析及自动词／他动词。保留可见原文，补充读音、中文释义、用法要点和原创日中例句；未完句和速记简写另作说明。词汇与语法拓展仍属于课堂学习补充。',
     countLabel: liveUnitCountLabel(liveNovember18Groups), groups: liveNovember18Groups,
+    manga: otonaWanshoManga,
   },
   {
     id: '2026-11-13', date: '2026-11-13', title: 'ドラえもん「落としものカムバックスプレー」・「おそだアメ」',

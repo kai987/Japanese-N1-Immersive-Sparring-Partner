@@ -81,3 +81,31 @@ export const osodaManga: LiveMangaGallery = {
     { id: 'ending', file: 'osoda-ame/osoda-ending.jpg', label: '末页（未标页码）', alt: '「おそだアメ」末页：延迟的歌声在深夜响起，邻居们准备抗议；图片未显示页码', width: 1352, height: 1920, originalFilename: 'IMG_3414.JPG' },
   ],
 }
+
+// The supplied originals alternate Chinese color and Japanese monochrome for
+// each matching page: two covers, then seven pairs of story pages. Only the
+// Japanese second through seventh story pages show printed numbers (506–511).
+// Keep the opening unnumbered and preserve both versions byte-for-byte.
+export const otonaWanshoManga: LiveMangaGallery = {
+  id: 'otona-wo-shikaru-wansho',
+  title: '大人をしかる腕章',
+  description: '对应11月18日学习的「大人をしかる腕章」（批评大人的袖章），共16张中日对照漫画图片：标题页2张、正文7组各2张。按上传顺序，每组先中文彩色、后日文黑白，方便逐页对照。日文正文首张未显示页码，后续可见页码为第506—511页；中文正文按故事顺序编号。点击图片或“打开原图”可查看原始尺寸。',
+  pages: [
+    { id: 'cover-zh', file: 'otona-wo-shikaru-wansho/wansho-cover-zh.jpg', label: '标题页 · 中文彩色', alt: '「批评大人的袖章」中文彩色标题页：哆啦A梦、大雄与妈妈', width: 1280, height: 1815, originalFilename: 'IMG_3415(1).JPG' },
+    { id: 'cover-ja', file: 'otona-wo-shikaru-wansho/wansho-cover-ja.jpg', label: '标题页 · 日文黑白', alt: '「大人をしかる腕章」日文黑白标题页：哆啦A梦、大雄与妈妈', width: 1352, height: 1920, originalFilename: 'IMG_3416(1).JPG' },
+    { id: 'opening-zh', file: 'otona-wo-shikaru-wansho/wansho-opening-zh.jpg', label: '正文1 · 中文彩色', alt: '「批评大人的袖章」中文正文1：大雄打扫门前，劝阻乱扔烟头的男子', width: 1280, height: 1815, originalFilename: 'IMG_3417(1).JPG' },
+    { id: 'opening-ja', file: 'otona-wo-shikaru-wansho/wansho-opening-ja.jpg', label: '正文1 · 日文黑白（未标页码）', alt: '「大人をしかる腕章」日文正文开头：大雄打扫门前，劝阻乱扔烟头的男子；图片未显示页码', width: 1352, height: 1920, originalFilename: 'IMG_3418(1).JPG' },
+    { id: 'page-506-zh', file: 'otona-wo-shikaru-wansho/wansho-page-506-zh.jpg', label: '正文2 · 中文彩色', alt: '「批评大人的袖章」中文正文2：哆啦A梦介绍腕章，大雄去寻找乱扔烟头的男子', width: 1280, height: 1815, originalFilename: 'IMG_3419(1).JPG' },
+    { id: 'page-506-ja', file: 'otona-wo-shikaru-wansho/wansho-page-506-ja.jpg', label: '第506页 · 日文黑白', alt: '「大人をしかる腕章」日文第506页：哆啦A梦介绍腕章，大雄去寻找乱扔烟头的男子', width: 1352, height: 1920, originalFilename: 'IMG_3420(1).JPG' },
+    { id: 'page-507-zh', file: 'otona-wo-shikaru-wansho/wansho-page-507-zh.jpg', label: '正文3 · 中文彩色', alt: '「批评大人的袖章」中文正文3：乱扔烟头的男子道歉，大雄遇到在公交站插队的人', width: 1280, height: 1815, originalFilename: 'IMG_3421(1).JPG' },
+    { id: 'page-507-ja', file: 'otona-wo-shikaru-wansho/wansho-page-507-ja.jpg', label: '第507页 · 日文黑白', alt: '「大人をしかる腕章」日文第507页：乱扔烟头的男子道歉，大雄遇到在公交站插队的人', width: 1352, height: 1920, originalFilename: 'IMG_3422(1).JPG' },
+    { id: 'page-508-zh', file: 'otona-wo-shikaru-wansho/wansho-page-508-zh.jpg', label: '正文4 · 中文彩色', alt: '「批评大人的袖章」中文正文4：插队者道歉，大雄劝阻踩踏草坪和乱扔垃圾的人', width: 1280, height: 1815, originalFilename: 'IMG_3423(1).JPG' },
+    { id: 'page-508-ja', file: 'otona-wo-shikaru-wansho/wansho-page-508-ja.jpg', label: '第508页 · 日文黑白', alt: '「大人をしかる腕章」日文第508页：插队者道歉，大雄劝阻踩踏草坪和乱扔垃圾的人', width: 1352, height: 1920, originalFilename: 'IMG_3424(1).JPG' },
+    { id: 'page-509-zh', file: 'otona-wo-shikaru-wansho/wansho-page-509-zh.jpg', label: '正文5 · 中文彩色', alt: '「批评大人的袖章」中文正文5：大雄劝告小夫的妈妈和胖虎的妈妈', width: 1280, height: 1815, originalFilename: 'IMG_3425(1).JPG' },
+    { id: 'page-509-ja', file: 'otona-wo-shikaru-wansho/wansho-page-509-ja.jpg', label: '第509页 · 日文黑白', alt: '「大人をしかる腕章」日文第509页：大雄劝告小夫的妈妈和胖虎的妈妈', width: 1352, height: 1920, originalFilename: 'IMG_3426(1).JPG' },
+    { id: 'page-510-zh', file: 'otona-wo-shikaru-wansho/wansho-page-510-zh.jpg', label: '正文6 · 中文彩色', alt: '「批评大人的袖章」中文正文6：大雄用腕章顶撞妈妈，并拒绝归还腕章', width: 1280, height: 1815, originalFilename: 'IMG_3427(1).JPG' },
+    { id: 'page-510-ja', file: 'otona-wo-shikaru-wansho/wansho-page-510-ja.jpg', label: '第510页 · 日文黑白', alt: '「大人をしかる腕章」日文第510页：大雄用腕章顶撞妈妈，并拒绝归还腕章', width: 1352, height: 1920, originalFilename: 'IMG_3428(1).JPG' },
+    { id: 'page-511-zh', file: 'otona-wo-shikaru-wansho/wansho-page-511-zh.jpg', label: '正文7 · 中文彩色', alt: '「批评大人的袖章」中文正文7：胖虎变得更嚣张，大雄发现腕章对小孩不起作用', width: 1280, height: 1815, originalFilename: 'IMG_3429(1).JPG' },
+    { id: 'page-511-ja', file: 'otona-wo-shikaru-wansho/wansho-page-511-ja.jpg', label: '第511页 · 日文黑白', alt: '「大人をしかる腕章」日文第511页：胖虎变得更嚣张，大雄发现腕章对小孩不起作用', width: 1352, height: 1920, originalFilename: 'IMG_3430(1).JPG' },
+  ],
+}

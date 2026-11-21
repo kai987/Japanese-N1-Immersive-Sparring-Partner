@@ -81,7 +81,7 @@ test('both October units share an ordered, lazy 16-page gallery and verified bui
   await openGallery(page)
   await expectLoadedPage(page, 'cover')
   await expect(gallery(page).locator('img')).toHaveAttribute('src', coverSource!)
-  await unitPicker(page).selectOption('2026-11-18')
+  await unitPicker(page).selectOption('2026-11-05')
   await expect(gallery(page)).toHaveCount(0)
 })
 
@@ -271,7 +271,7 @@ test('viewing pages and switching units preserve live marks and daily learning r
   await openGallery(page)
   await mangaPicker(page).selectOption('page-043')
   await expectLoadedPage(page, 'page-043')
-  await unitPicker(page).selectOption('2026-11-18')
+  await unitPicker(page).selectOption('2026-11-05')
   await expect(gallery(page)).toHaveCount(0)
   await unitPicker(page).selectOption('2026-10-29')
   await page.reload()
