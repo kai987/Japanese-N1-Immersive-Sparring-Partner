@@ -53,8 +53,16 @@ export function parseAppNavigation(
 /** Preserve unrelated query parameters and the established practice/live links. */
 export function appNavigationUrl(current: URL, state: AppNavigation): URL {
   const url = new URL(current.href)
-  url.searchParams.set('date', state.selectedDate)
-  url.searchParams.set('section', state.active)
+  const independentPage = !state.questionLinkError && (state.active === 'compound-verbs' || state.active === 'live-reactions')
+  if (independentPage) {
+    // These hashes already identify the page. Preserve a lesson date carried
+    // from ordinary navigation without adding parameters to established links.
+    if (url.searchParams.has('date')) url.searchParams.set('date', state.selectedDate)
+    url.searchParams.delete('section')
+  } else {
+    url.searchParams.set('date', state.selectedDate)
+    url.searchParams.set('section', state.active)
+  }
   if (url.hash.startsWith('#practice/') && state.questionLinkError) {
     // Keep a broken incoming link inspectable until the learner chooses a page,
     // including when the URL also carries a previous live/compound section.

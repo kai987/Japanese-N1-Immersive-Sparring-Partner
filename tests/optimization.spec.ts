@@ -161,11 +161,11 @@ for (const width of [1440, 390]) {
       ['N1 文法', ['.practice-section', '.grammar-list']],
       ['誤答復習', ['.empty-state', '.spaced-review']],
       ['没入読解', ['.reading-paper']],
-      ['学習履歴', ['.history-summary', '.history-table-wrap', '.history-note']],
+      ['学習履歴', ['.history-summary', '.progress-backup', '.history-table-wrap', '.history-note']],
     ] as const) {
       if (width < 680) await page.getByRole('button', { name: 'ナビゲーションを開く', exact: true }).click()
       await nav(page).getByRole('button', { name: label, exact: true }).click()
-      await expect(page.locator(selectors[0])).toBeVisible()
+      for (const selector of selectors) await expect(page.locator(selector)).toBeVisible()
       const bounds = await page.evaluate(targets => {
         const shell = document.querySelector('.content-shell')!
         const rect = shell.getBoundingClientRect(), style = getComputedStyle(shell)

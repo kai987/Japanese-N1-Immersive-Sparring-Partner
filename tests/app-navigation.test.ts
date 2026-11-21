@@ -66,3 +66,20 @@ test('only missing or retired resource responses request a version refresh', () 
   for (const status of [403, 429, 500, 503]) assert.equal(isExpiredResource(new ResourceRequestError('Lesson', status)), false)
   assert.equal(isExpiredResource(new TypeError('Network failed')), false)
 })
+
+test('independent pages preserve canonical links and any explicitly carried lesson context', () => {
+  for (const path of ['/?live-unit=2026-09-28#live-reactions', '/#compound-verbs/komu']) {
+    const url = new URL(path, 'https://example.test/')
+    assert.equal(appNavigationUrl(url, parse(url.href)).href, url.href)
+    const dated = new URL(url.href)
+    dated.searchParams.set('date', '2026-08-30')
+    dated.searchParams.set('section', 'grammar')
+    dated.searchParams.set('source', 'bookmark')
+    const state = parse(dated.href)
+    const retained = appNavigationUrl(dated, state)
+    assert.equal(retained.searchParams.get('date'), '2026-08-30')
+    assert.equal(retained.searchParams.has('section'), false)
+    assert.equal(retained.searchParams.get('source'), 'bookmark')
+    assert.deepEqual(parse(retained.href), state)
+  }
+})
