@@ -10,6 +10,8 @@ export interface ClientAudioIndex {
   pendingClips: number
   pendingByLiveUnit: Record<string, number>
 }
+export type ClientAudioAvailability = Omit<ClientAudioIndex, 'clips'>
+export interface ClientAudioScope { version: 1; scope: string; clips: Record<string, ClientRecording> }
 
 export function clientHostedRecording(index: ClientAudioIndex, id: string): ClientRecording | undefined {
   const recording = index.clips[id]

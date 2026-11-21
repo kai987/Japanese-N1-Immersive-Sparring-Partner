@@ -4,6 +4,7 @@ import { readingChoices } from '../lib/reading'
 import { splitAudioSentences } from '../lib/audioText'
 import { AudioButton, SentenceAudio } from './AudioButton'
 import { SearchHighlight } from './SearchHighlight'
+import { readQuestionDraft, saveQuestionDraft, clearQuestionDraft, type QuestionDraft } from '../lib/questionDraft'
 
 export function ReadingExercise({ question, day, answered, attempts, onSubmit, searchQuery = '',
   questionLabel = '問題 1', elementId = 'reading-question', fixedOrder = false, audioEnabled = true, startRetry = false,
@@ -13,11 +14,17 @@ export function ReadingExercise({ question, day, answered, attempts, onSubmit, s
   questionLabel?: string; elementId?: string; fixedOrder?: boolean; audioEnabled?: boolean; startRetry?: boolean
   attempts: ReadingAttempt[]; onSubmit: (answer: number) => void
 }) {
-  const [selected, setSelected] = useState<number | null>(null)
-  const [retrying, setRetrying] = useState(startRetry)
+  const [{ selected, retrying }, setDraft] = useState(() => readQuestionDraft(question, answered, attempts, startRetry))
+  const changeDraft = (draft: QuestionDraft) => {
+    setDraft(draft)
+    saveQuestionDraft(question, answered, attempts, draft)
+  }
+  const clearDraft = () => {
+    clearQuestionDraft(question.id)
+    setDraft({ selected: null, retrying: false })
+  }
   useEffect(() => {
-    setSelected(null)
-    setRetrying(startRetry)
+    setDraft(readQuestionDraft(question, answered, attempts, startRetry))
   }, [question.id, startRetry])
   const choices = fixedOrder
     ? question.options.map((text, index) => ({ index, text, note: question.optionNotes[index] }))
@@ -37,7 +44,7 @@ export function ReadingExercise({ question, day, answered, attempts, onSubmit, s
         const correct = choice.index === question.answer
         return <div className="answer-option-row" key={choice.index}><button
           className={['answer-option', chosen ? 'selected' : '', submitted && correct ? 'correct' : '', submitted && chosen && !correct ? 'wrong' : ''].filter(Boolean).join(' ')}
-          aria-pressed={chosen} disabled={submitted} onClick={() => setSelected(choice.index)}>
+          aria-pressed={chosen} disabled={submitted} onClick={() => changeDraft({ selected: choice.index, retrying })}>
           <span className="answer-letter">{choiceLabel(displayIndex)}</span><span>{highlight(choice.text)}</span>
         </button>{audioEnabled ? <span className="answer-choice-audio">{splitAudioSentences(choice.text).map((sentence, i) => <AudioButton key={i} text={sentence} />)}</span> : null}</div>
       })}
@@ -46,14 +53,14 @@ export function ReadingExercise({ question, day, answered, attempts, onSubmit, s
       {retrying && answered !== undefined ? <p className="retry-note">再挑戦中です。前回の記録は保存されています。</p> : null}
       <button className="primary-btn submit-answer" disabled={selected === null} onClick={() => {
         if (selected === null) return
-        onSubmit(selected); setRetrying(false); setSelected(null)
+        onSubmit(selected); clearDraft()
       }}>回答する</button>
-      {retrying && answered !== undefined ? <button className="text-btn retry-cancel" onClick={() => { setRetrying(false); setSelected(null) }}>前回の結果に戻る</button> : null}
+      {retrying && answered !== undefined ? <button className="text-btn retry-cancel" onClick={clearDraft}>前回の結果に戻る</button> : null}
     </> : <div className={`result-panel ${answered === question.answer ? 'success' : 'error'}`} role="status">
       <div className="result-title"><strong>{answered === question.answer ? '正解です' : `正解：${letter(question.answer)}`}</strong></div>
       <p>{questionText(question.explanation, true)}</p>
       <div className="option-notes">{choices.map(choice => <p key={choice.index}><b>{letter(choice.index)}</b>{questionText(choice.note, true)}</p>)}</div>
-      <button className="primary-btn" onClick={() => { setSelected(null); setRetrying(true) }}>もう一度挑戦する</button>
+      <button className="primary-btn" onClick={() => changeDraft({ selected: null, retrying: true })}>もう一度挑戦する</button>
     </div>}
     {attempts.length && !retrying ? <details className="attempt-history">
       <summary>回答履歴（{attempts.length}回）</summary>

@@ -3,7 +3,7 @@ import assert from 'node:assert/strict'
 import { SharedStorage, type StorageLike } from '../src/lib/sharedStorage.ts'
 import { applyStorageMutations, decodeStorageMutation, storageChanges, storageJournalPrefix, type StorageMutation } from '../src/lib/storageMerge.ts'
 import { decodeCompleted, decodeProgress, initialProgress } from '../src/lib/progress.ts'
-import type { StoredProgress } from '../src/types.ts'
+import type { ReadingAttempt, StoredProgress } from '../src/types.ts'
 
 class MemoryStorage implements StorageLike {
   values = new Map<string, string>()
@@ -186,4 +186,89 @@ test('explicit field deletion is retained and data keys cannot pollute object pr
   const safe = applyStorageMutations({}, [{ version: 1, id: 'prototype', clock: 1, changes: [{ path: ['__proto__', 'polluted'], kind: 'set', value: true }] }])
   assert.equal(({} as { polluted?: boolean }).polluted, undefined)
   assert.equal(Object.hasOwn(safe, '__proto__'), true)
+})
+
+test('attempt replay preserves repeated legacy answers and equal concurrent appends on every replay', () => {
+  const legacy = { answer: 0, at: null }, repeated = { answer: 1, at: '2026-10-30T02:10:00.000Z' }
+  const later = { answer: 2, at: '2026-10-30T02:11:00.000Z' }
+  const changes = (before: ReadingAttempt[], add: ReadingAttempt[]) => [{ path: ['readingAttempts', 'q'], kind: 'attempts' as const, before, add }]
+  const mutations: StorageMutation[] = [
+    { version: 1, id: 'tab-a', clock: 1, changes: changes([legacy, legacy], [repeated]) },
+    { version: 1, id: 'tab-b', clock: 1, changes: changes([legacy, legacy], [repeated]) },
+    { version: 1, id: 'later', clock: 2, changes: changes([legacy, legacy, repeated, repeated], [later]) },
+  ]
+  const expected = [legacy, legacy, repeated, repeated, later]
+  const restored = applyStorageMutations({ readingAttempts: {} as Record<string, ReadingAttempt[]> }, mutations)
+  assert.deepEqual(restored.readingAttempts.q, expected)
+  assert.deepEqual(applyStorageMutations(restored, [...mutations].reverse()).readingAttempts.q, expected)
+  assert.deepEqual(applyStorageMutations(restored, [...mutations, ...mutations]).readingAttempts.q, expected)
+})
+
+test('attempt replay work grows with stored history entries rather than repeatedly scanning each signature', () => {
+  const count = 100
+  let inputReads = 0
+  const attempts = Array.from({ length: count }, (_, index): ReadingAttempt => ({
+    get answer() { inputReads++; return index % 4 },
+    at: new Date(Date.UTC(2026, 9, 30) + index * 1000).toISOString(),
+  }))
+  const mutations: StorageMutation[] = attempts.map((attempt, index) => ({ version: 1, id: `answer-${index}`, clock: index + 1,
+    changes: [{ path: ['readingAttempts', 'q'], kind: 'attempts', before: attempts.slice(0, index), add: [attempt] }] }))
+  const result = applyStorageMutations({ readingAttempts: {} as Record<string, ReadingAttempt[]> }, mutations)
+  const storedEntries = count * (count + 1) / 2
+  assert.ok(inputReads <= storedEntries * 2 + count, `replay visited ${inputReads} attempt values for ${storedEntries} stored entries`)
+  assert.equal(result.readingAttempts.q.length, count)
+  assert.deepEqual(result.readingAttempts.q.map(attempt => attempt.answer), Array.from({ length: count }, (_, index) => index % 4))
+})
+
+test('one update decodes unchanged journal bytes once while retaining the second storage read', () => {
+  const storage = new MemoryStorage(), count = 100
+  for (let index = 0; index < count; index++) {
+    const mutation: StorageMutation = { version: 1, id: `cached-${index}`, clock: index + 1,
+      changes: [{ path: ['vocab', `word-${index}`], kind: 'set', value: 'mastered' }] }
+    storage.setItem(storageJournalPrefix('cache') + mutation.id, JSON.stringify(mutation))
+  }
+  const state = new SharedStorage('cache', initialProgress, decodeProgress, () => storage)
+  const parse = JSON.parse
+  let parsedJournals = 0
+  try {
+    JSON.parse = (text, reviver) => {
+      if (text.startsWith('{"version":1,"id":')) parsedJournals++
+      return parse(text, reviver)
+    }
+    mark(state, 'new-word', 'review')
+  } finally { JSON.parse = parse }
+  assert.equal(parsedJournals, count + 1, 'one parse per old journal entry plus the newly written operation')
+  assert.equal(Object.keys(state.getSnapshot().value.vocab).length, count + 1)
+  assert.equal(state.getSnapshot().value.vocab['new-word'], 'review')
+})
+
+test('an update cache observes appended journals and replaced bytes from a concurrent writer', () => {
+  class RacingStorage extends MemoryStorage {
+    afterJournalWrite: (() => void) | undefined
+    override setItem(key: string, value: string) {
+      super.setItem(key, value)
+      if (key.startsWith(storageJournalPrefix('race')) && this.afterJournalWrite) {
+        const write = this.afterJournalWrite
+        this.afterJournalWrite = undefined
+        write()
+      }
+    }
+  }
+  const storage = new RacingStorage()
+  const foreign: StorageMutation = { version: 1, id: 'foreign', clock: 1,
+    changes: [{ path: ['vocab', 'foreign'], kind: 'set', value: 'review' }] }
+  storage.setItem(storageJournalPrefix('race') + foreign.id, JSON.stringify(foreign))
+  const state = new SharedStorage('race', initialProgress, decodeProgress, () => storage)
+  storage.afterJournalWrite = () => {
+    storage.setItem('race', JSON.stringify({ ...initialProgress, vocab: { legacy: 'mastered' } }))
+    storage.setItem(storageJournalPrefix('race') + foreign.id, JSON.stringify({ ...foreign,
+      changes: [{ path: ['vocab', 'foreign'], kind: 'set', value: 'mastered' }] }))
+    storage.setItem(storageJournalPrefix('race') + 'appended', JSON.stringify({ version: 1, id: 'appended', clock: 2,
+      changes: [{ path: ['grammar', 'remote'], kind: 'set', value: 'review' }] }))
+  }
+  mark(state, 'local', 'review')
+  assert.equal(state.getSnapshot().failed, false)
+  assert.deepEqual(state.getSnapshot().value.vocab, { legacy: 'mastered', foreign: 'mastered', local: 'review' })
+  assert.deepEqual(state.getSnapshot().value.grammar, { remote: 'review' })
+  assert.deepEqual(JSON.parse(storage.getItem('race')!), state.getSnapshot().value)
 })

@@ -4,6 +4,7 @@ import { getSearchTerms } from '../lib/searchHighlight'
 import { compoundVerbSeries, getCompoundSeriesById, getCompoundSeriesForWord, searchCompoundSeries } from '../lib/compoundVerbs'
 
 import { AudioButton, SentenceAudio } from './AudioButton'
+import { AudioScope } from './AudioScope'
 import { SearchHighlight } from './SearchHighlight'
 
 const wordCount = new Set(compoundVerbSeries.flatMap(series => series.groups.flatMap(group => group.words.map(entry => entry.word)))).size
@@ -115,7 +116,7 @@ export default function CompoundVerbs({ selectedId, onSelect, origin, onReturn, 
     document.querySelector<HTMLInputElement>('.daily-search input')?.focus({ preventScroll: true })
   }
   const highlight = (text: string) => <SearchHighlight text={text} query={contentQuery} className="compound-search-hit" />
-  return <div className="compound-page page-enter">
+  return <AudioScope scope={selectedVisible ? `compound/${selected.id}` : undefined} searchQuery={query}><div className="compound-page page-enter">
     <header className="compound-header">
       <span className="section-index">VOCABULARY SERIES</span>
       <h1>複合動詞</h1>
@@ -170,5 +171,5 @@ export default function CompoundVerbs({ selectedId, onSelect, origin, onReturn, 
         </footer>
       </article> : <div className="compound-search-prompt"><p>在左侧选择搜索结果，查看系列内容。</p><button className="text-btn" onClick={() => select(matches[0].id)}>查看「{matches[0].title}」</button></div>}
     </div> : <div className="empty-state"><h2>没有找到相关系列</h2><p>试试「合う」「間に合う」「取り」或「期限」。</p><button className="text-btn" onClick={clear}>显示全部系列</button></div>}
-  </div>
+  </div></AudioScope>
 }

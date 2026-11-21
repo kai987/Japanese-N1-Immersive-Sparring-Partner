@@ -5,6 +5,8 @@ import { validateContent } from '../validate-content.ts'
 import { withItStudy, type StudySnapshot } from '../../src/lib/itStudy.ts'
 import { historyItems as legacyHistory, reviewFocusByDate as legacyReview } from '../../src/data/history-legacy.ts'
 import type { DailyArchiveFile, ReviewFocus } from '../../src/lib/archive.ts'
+import { collectAudio } from '../collect-audio.ts'
+import type { ClientAudioScope } from '../../src/lib/audioClientTypes.ts'
 
 const root = new URL('../../', import.meta.url)
 const read = (path: string) => JSON.parse(readFileSync(new URL(path, root), 'utf8'))
@@ -53,6 +55,24 @@ export function createBrowserAudio() {
   return { version: 1 as const, complete: sources.complete, verifiedAt: sources.verifiedAt,
     providers: sources.providers, clips, pendingClips: pending.pendingClips,
     pendingByLiveUnit: Object.fromEntries([...pendingSets].map(([id, entries]) => [id, entries.size])) }
+}
+
+/** Preserve recording identities/URLs while loading only the active study scope. */
+export function createBrowserAudioScopes() {
+  const { clips, ...availability } = createBrowserAudio()
+  const plan = collectAudio()
+  const byScope: Record<string, ClientAudioScope> = {}
+  const assigned = new Set<string>()
+  for (const entry of plan.entries) for (const reference of entry.references) {
+    const scope = reference.split('/').slice(0, 2).join('/')
+    byScope[scope] ??= { version: 1, scope, clips: {} }
+    if (clips[entry.id]) { byScope[scope].clips[entry.id] = clips[entry.id]; assigned.add(entry.id) }
+  }
+  // Published recordings can outlive their original teaching source. Keep their
+  // exact metadata in the verified release without fetching it during study.
+  const retained = Object.fromEntries(Object.entries(clips).filter(([id]) => !assigned.has(id)))
+  if (Object.keys(retained).length) byScope.archive = { version: 1, scope: 'archive', clips: retained }
+  return { availability, byScope }
 }
 
 export const browserDataRoot = fileURLToPath(root)

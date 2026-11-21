@@ -160,6 +160,21 @@ jobs:
           cp ../upstream/dist/study-index.json /tmp/study-index.json
           npm run import:study -- /tmp/study-index.json
 
+      - name: Verify study snapshot import
+        if: steps.gate.outputs.execute == 'true'
+        working-directory: n1
+        run: |
+          cp src/data/it-study-snapshot.json /tmp/n1-imported-study.json
+          npm run import:study -- /tmp/n1-imported-study.json
+          cmp /tmp/n1-imported-study.json src/data/it-study-snapshot.json
+
+      - name: Capture candidate source tree
+        if: steps.gate.outputs.execute == 'true'
+        working-directory: n1
+        env:
+          TARGET_DATE: ${{ steps.meta.outputs.target_date }}
+        run: node scripts/validated-build.mjs capture --date "$TARGET_DATE" --output /tmp/n1-validated-source.json
+
       - name: Validate content
         if: steps.gate.outputs.execute == 'true'
         working-directory: n1
@@ -199,6 +214,23 @@ jobs:
           fi
           echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
+      - name: Seal validated build for Pages
+        if: steps.gate.outputs.execute == 'true'
+        id: seal
+        continue-on-error: true
+        working-directory: n1
+        run: node scripts/validated-build.mjs seal --capture /tmp/n1-validated-source.json --output /tmp/n1-validated-pages
+
+      - name: Retain validated Pages build
+        if: steps.gate.outputs.execute == 'true' && steps.seal.outcome == 'success'
+        continue-on-error: true
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n1-validated-build-${{ github.run_attempt }}
+          path: /tmp/n1-validated-pages
+          if-no-files-found: error
+          retention-days: 7
+
       # No changed data is NOT evidence that the last deployment succeeded.
       # GITHUB_TOKEN pushes need an explicit dispatch.
       - name: Ensure verified content has a Pages deployment
@@ -233,7 +265,7 @@ jobs:
           } else if (runs.some(r=>active.has(r.status))) {
             fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,'awaiting_deploy: existing Pages run retained; no duplicate dispatch.\n');
           } else {
-            execFileSync('gh',['workflow','run','deploy-pages.yml','--repo',process.env.GITHUB_REPOSITORY,'--ref','main'],{stdio:'inherit',timeout:30000});
+            execFileSync('gh',['workflow','run','deploy-pages.yml','--repo',process.env.GITHUB_REPOSITORY,'--ref','main','-f',`validated_run_id=${process.env.GITHUB_RUN_ID}`],{stdio:'inherit',timeout:30000});
             fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,'awaiting_deploy: Pages dispatched; this sync run alone is not publication success.\n');
           }
           NODE

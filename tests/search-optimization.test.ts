@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
-import { createLessonSearchIndex, searchProject } from '../src/lib/projectSearch.ts'
+import { createLessonSearchIndex, searchProject } from './helpers/projectSearch.ts'
 import { validateContent } from '../scripts/validate-content.ts'
 import { liveUnits } from '../src/data/live-reaction-units.ts'
 import { matchesLiveGroup } from '../src/lib/liveReactions.ts'

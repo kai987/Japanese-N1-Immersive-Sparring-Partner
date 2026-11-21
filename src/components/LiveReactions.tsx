@@ -4,6 +4,7 @@ import { useLocalStorage } from '../hooks/useLocalStorage'
 import { decodeLiveProgress, initialLiveProgress, liveProgressKey, matchesLiveGroup, type LiveStatus } from '../lib/liveReactions'
 import type { LiveSearchResult } from '../lib/projectSearch'
 import { AudioButton, SentenceAudio } from './AudioButton'
+import { AudioScope } from './AudioScope'
 import { AudioAvailability } from './AudioAvailability'
 import { stopAudio } from '../lib/audioPlayer'
 import { SearchHighlight } from './SearchHighlight'
@@ -43,6 +44,20 @@ export default function LiveReactions({ query, composing, onClear, searchTarget,
     groups: { ...prev.groups, [id]: prev.groups[id] === next ? 'new' : next } }))
 
   useEffect(() => {
+    const restoreLocation = () => {
+      if (window.location.hash !== '#live-reactions') return
+      setUnitId(liveUnitFromSearch(window.location.search).id)
+      setGroupId('all'); setCategory('all'); setFilter('all')
+    }
+    window.addEventListener('popstate', restoreLocation)
+    window.addEventListener('hashchange', restoreLocation)
+    return () => {
+      window.removeEventListener('popstate', restoreLocation)
+      window.removeEventListener('hashchange', restoreLocation)
+    }
+  }, [])
+
+  useEffect(() => {
     const url = new URL(window.location.href)
     url.searchParams.set('live-unit', unitId)
     if (url.href !== window.location.href) window.history.replaceState(window.history.state, '', url)
@@ -68,7 +83,7 @@ export default function LiveReactions({ query, composing, onClear, searchTarget,
     return () => window.cancelAnimationFrame(frame)
   }, [searchTarget, unitId, groupId, filter, category, composing])
 
-  return <section className="page-enter live-page" aria-labelledby="live-title" data-live-unit={unit.id}>
+  return <AudioScope scope={`live/${unit.id}`} searchQuery={query}><section className="page-enter live-page" aria-labelledby="live-title" data-live-unit={unit.id}>
     <header className="live-header">
       <span className="section-index">LIVE NOTES · {liveUnits.length} UNITS</span>
       <h1 id="live-title">直播条反</h1>
@@ -135,5 +150,5 @@ export default function LiveReactions({ query, composing, onClear, searchTarget,
         </article>
       })}
     </div>}
-  </section>
+  </section></AudioScope>
 }

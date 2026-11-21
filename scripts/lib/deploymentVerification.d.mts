@@ -7,6 +7,7 @@ export interface ReleaseManifest {
   entryPoints: string[]
   lessons: Record<string, { path: string; day: number; title: string }>
   searchIndex: string
+  audioScopes?: Record<string, string>
   files: Record<string, { sha256: string; bytes: number }>
 }
 export function createReleaseManifest(options: {
@@ -14,6 +15,7 @@ export function createReleaseManifest(options: {
   lessons: ReleaseManifest['lessons']
   latestDate: string
   searchIndex: string
+  audioScopes?: Record<string, string>
   studySnapshotCommit: string
   entryPoints: string[]
 }): ReleaseManifest

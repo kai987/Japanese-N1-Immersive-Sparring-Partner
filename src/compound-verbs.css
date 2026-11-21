@@ -56,18 +56,6 @@
 .compound-sources { color: var(--text-soft); font-size: 12px; margin-top: 26px; line-height: 1.9; }
 .compound-sources summary { cursor: pointer; }
 .compound-sources a { color: var(--accent); overflow-wrap: anywhere; }
-.word-line > .vocabulary-heading { flex-wrap: wrap; }
-.word-line > .vocabulary-meta { margin-left: auto; display: flex; flex: 0 1 auto; align-items: flex-start; justify-content: flex-end; gap: 12px; max-width: 100%; text-align: right; }
-.vocabulary-meta .study-reference-inline { max-width: min(100%, 420px); }
-.vocabulary-meta .study-reference-badges { display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 8px; }
-.vocabulary-meta .study-reference-badges > * { flex-shrink: 0; }
-.vocabulary-meta .study-reference { align-items: flex-end; text-align: right; }
-.vocabulary-meta .study-frequency { text-align: right; }
-.vocabulary-meta .study-frequency p { text-align: left; }
-.compound-verb-tag { flex-basis: auto; align-self: center; cursor: pointer; border: 1px solid var(--accent-2); border-radius: 5px; padding: 4px 9px; color: var(--accent-2); background: var(--accent-2-soft); font: inherit; font-size: 12px; line-height: 1.5; }
-.compound-verb-tag:hover { background: var(--surface-2); }
-.learning-card[data-vocabulary-id] { scroll-margin-top: 100px; }
-.learning-card[data-vocabulary-id]:focus { outline: 2px solid var(--accent-2); outline-offset: 4px; }
 @media (max-width: 1120px) { .compound-layout { grid-template-columns: 195px minmax(0, 1fr); gap: 18px; } .compound-detail { padding: 24px; } }
 @media (max-width: 680px) {
   .compound-layout { grid-template-columns: minmax(0, 1fr); gap: 22px; }
@@ -77,15 +65,12 @@
   .compound-series-button span { font-size: 12px; }
   .compound-series-button small { font-size: 10px; }
   .compound-detail { padding: 22px 16px; scroll-margin-top: 84px; }
-  .learning-card[data-vocabulary-id] { scroll-margin-top: 126px; }
   .compound-detail-head h2 { font-size: 25px; }
   .compound-origin { padding: 16px; }
   .compound-topbar-label { grid-column: 2; grid-row: 1; min-width: 0; }
   .compound-topbar-label small { font-size: 10px; }
   .compound-header h1 { font-size: 34px; }
   .compound-header p { font-size: 14px; }
-  .word-line > .vocabulary-meta { flex-wrap: wrap; width: 100%; }
-  .vocabulary-meta .study-reference { width: auto; max-width: 100%; }
 }
 
 .compound-search {

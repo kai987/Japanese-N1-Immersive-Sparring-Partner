@@ -1,6 +1,9 @@
 import index from 'virtual:n1-audio-client'
-import { clientHostedRecording, clientAudioPlaybackUrl, type ClientAudioIndex } from './audioClientTypes.ts'
+import assets from 'virtual:n1-data-assets'
+import { createAudioScopeLoader } from './audioScopeData.ts'
+import { clientAudioPlaybackUrl, type ClientRecording } from './audioClientTypes.ts'
 
-export const audioAvailability = index as ClientAudioIndex
-export const hostedRecording = (id: string) => clientHostedRecording(audioAvailability, id)
-export const audioPlaybackUrl = (id: string, siteBase = '/') => clientAudioPlaybackUrl(audioAvailability, id, siteBase)
+export const audioAvailability = index
+export const audioScopes = createAudioScopeLoader(assets.audioScopes)
+export const audioPlaybackUrl = (id: string, recording: ClientRecording, siteBase = '/') =>
+  clientAudioPlaybackUrl({ ...audioAvailability, clips: { [id]: recording } }, id, siteBase)

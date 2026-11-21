@@ -1,9 +1,12 @@
 import type { Plugin } from 'vite'
 import { join } from 'node:path'
 import { readFileSync } from 'node:fs'
-import { createBrowserAudio, createBrowserLessons, browserDataRoot } from './lib/browserData.ts'
+import { createBrowserAudioScopes, createBrowserLessons, browserDataRoot } from './lib/browserData.ts'
 import { createLessonSearchIndex } from '../src/lib/projectSearch.ts'
+import { packLessonSearchIndex, packProjectNotesIndex } from '../src/lib/searchIndexCodec.ts'
+import { createCompoundCatalog, createNoteSearchData } from './lib/noteSearchData.ts'
 import { createReleaseManifest, releaseManifestName } from './lib/deploymentVerification.mjs'
+import { assertBrowserDataBudget } from './lib/browserDataBudget.ts'
 
 const prefix = 'virtual:n1-'
 const dataRoute = '/__n1_data/'
@@ -11,12 +14,16 @@ const script = (value: unknown) => `export default ${JSON.stringify(value)};`
 
 export function browserDataPlugin(): Plugin {
   let data: ReturnType<typeof createBrowserLessons> | undefined
-  let searchIndex: ReturnType<typeof createLessonSearchIndex> | undefined
+  let searchIndex: ReturnType<typeof packLessonSearchIndex> | undefined
+  let audio: ReturnType<typeof createBrowserAudioScopes> | undefined
+  let notes: ReturnType<typeof packProjectNotesIndex> | undefined
   let building = false
   let base = '/'
-  let assets: { lessons: Record<string, string>; searchIndex: string } | undefined
+  let assets: { lessons: Record<string, string>; searchIndex: string; audioScopes: Record<string, string> } | undefined
   const current = () => data ??= createBrowserLessons()
-  const currentIndex = () => searchIndex ??= createLessonSearchIndex(current().lessons, current().reviewFocusByDate)
+  const currentIndex = () => searchIndex ??= packLessonSearchIndex(createLessonSearchIndex(current().lessons, current().reviewFocusByDate))
+  const currentAudio = () => audio ??= createBrowserAudioScopes()
+  const currentNotes = () => notes ??= packProjectNotesIndex(createNoteSearchData())
   const archivedDates = () => current().catalog.historyItems.filter(item => item.date !== current().catalog.latest.lesson.date)
   return {
     name: 'verified-browser-data',
@@ -24,6 +31,8 @@ export function browserDataPlugin(): Plugin {
     buildStart() {
       data = undefined
       searchIndex = undefined
+      audio = undefined
+      notes = undefined
       current()
       if (building) {
         // Data uses fetch instead of native JS imports: a failed request must be
@@ -32,6 +41,7 @@ export function browserDataPlugin(): Plugin {
         assets = {
           lessons: Object.fromEntries(current().catalog.historyItems.map(({ date }) => [date, emit(`n1-lesson-${date}.json`, current().byDate[date])])),
           searchIndex: emit('n1-search-index.json', currentIndex()),
+          audioScopes: Object.fromEntries(Object.entries(currentAudio().byScope).map(([scope, value]) => [scope, emit(`n1-audio-${scope.replace('/', '-')}.json`, value)])),
         }
       }
       // Development reloads use the same complete validation as release builds.
@@ -50,7 +60,9 @@ export function browserDataPlugin(): Plugin {
         try {
           const name = route.slice(dataRoute.length)
           const match = /^lesson\/(\d{4}-\d{2}-\d{2})\.json$/.exec(name)
-          const value = name === 'search-index.json' ? currentIndex() : match ? current().byDate[match[1]] : undefined
+          const audioMatch = /^audio\/((?:lesson|live|compound)\/[a-zA-Z0-9-]+|archive)\.json$/.exec(name)
+          const value = name === 'search-index.json' ? currentIndex() : match ? current().byDate[match[1]]
+            : audioMatch ? currentAudio().byScope[audioMatch[1]] : undefined
           if (!value) { response.statusCode = 404; response.end('Unknown verified learning data'); return }
           response.setHeader('Content-Type', 'application/json; charset=utf-8')
           response.setHeader('Cache-Control', 'no-cache')
@@ -63,12 +75,17 @@ export function browserDataPlugin(): Plugin {
       if (!id.startsWith(`\0${prefix}`)) return
       const name = id.slice(1)
       if (name === `${prefix}catalog`) return script(current().catalog)
-      if (name === `${prefix}audio-client`) return script(createBrowserAudio())
+      if (name === `${prefix}audio-client`) return script(currentAudio().availability)
+      if (name === `${prefix}compound-catalog`) return script(createCompoundCatalog())
+      if (name === `${prefix}note-search`) return script(currentNotes())
       if (name === `${prefix}data-assets`) {
-        if (!building) return script({ lessons: Object.fromEntries(archivedDates().map(({ date }) => [date, `${base}${dataRoute.slice(1)}lesson/${date}.json`])), searchIndex: `${base}${dataRoute.slice(1)}search-index.json` })
+        if (!building) return script({ lessons: Object.fromEntries(archivedDates().map(({ date }) => [date, `${base}${dataRoute.slice(1)}lesson/${date}.json`])),
+          searchIndex: `${base}${dataRoute.slice(1)}search-index.json`,
+          audioScopes: Object.fromEntries(Object.keys(currentAudio().byScope).map(scope => [scope, `${base}${dataRoute.slice(1)}audio/${scope}.json`])) })
         if (!assets) throw new Error('Verified learning data assets have not been generated')
         const fileUrl = (reference: string) => `import.meta.ROLLUP_FILE_URL_${reference}`
-        return `export default {lessons:{${Object.entries(assets.lessons).map(([date, reference]) => `${JSON.stringify(date)}:${fileUrl(reference)}`).join(',')}},searchIndex:${fileUrl(assets.searchIndex)}};`
+        const fileMap = (entries: Record<string, string>) => `{${Object.entries(entries).map(([key, reference]) => `${JSON.stringify(key)}:${fileUrl(reference)}`).join(',')}}`
+        return `export default {lessons:${fileMap(assets.lessons)},searchIndex:${fileUrl(assets.searchIndex)},audioScopes:${fileMap(assets.audioScopes)}};`
       }
       throw new Error(`Unknown browser data module: ${name}`)
     },
@@ -76,6 +93,7 @@ export function browserDataPlugin(): Plugin {
       order: 'post',
       handler(_options, bundle) {
         if (!assets) throw new Error('Verified learning data assets have not been generated')
+        assertBrowserDataBudget(bundle, this.getFileName(assets.searchIndex))
         const lessons = Object.fromEntries(Object.entries(assets.lessons).map(([date, reference]) => [date, {
           path: this.getFileName(reference), day: current().byDate[date].lesson.day, title: current().byDate[date].lesson.title,
         }]))
@@ -83,6 +101,7 @@ export function browserDataPlugin(): Plugin {
         const snapshot = JSON.parse(readFileSync(join(browserDataRoot, 'src/data/it-study-snapshot.json'), 'utf8'))
         const manifest = createReleaseManifest({ lessons, latestDate: current().catalog.latest.lesson.date,
           searchIndex: this.getFileName(assets.searchIndex), studySnapshotCommit: snapshot.sourceCommit,
+          audioScopes: Object.fromEntries(Object.entries(assets.audioScopes).map(([scope, reference]) => [scope, this.getFileName(reference)])),
           entryPoints: files.filter(file => file.type === 'chunk' && file.isEntry).map(file => file.fileName),
           files: files.map(file => ({ path: file.fileName, content: file.type === 'chunk' ? file.code : file.source })),
         })
@@ -93,6 +112,8 @@ export function browserDataPlugin(): Plugin {
       if (!['src/data', 'public/audio', 'n1-source', 'docs/automation/policy.json'].some(path => context.file.startsWith(join(browserDataRoot, path)))) return
       data = undefined
       searchIndex = undefined
+      audio = undefined
+      notes = undefined
       for (const module of context.server.moduleGraph.idToModuleMap.values()) {
         if (module.id?.startsWith(`\0${prefix}`)) context.server.moduleGraph.invalidateModule(module)
       }

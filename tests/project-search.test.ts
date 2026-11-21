@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
 import { validateContent } from '../scripts/validate-content.ts'
-import { createLessonSearchIndex, searchProject } from '../src/lib/projectSearch.ts'
+import { createLessonSearchIndex, searchProject } from './helpers/projectSearch.ts'
 import { searchCompoundSeries } from '../src/lib/compoundVerbs.ts'
 import { liveUnits } from '../src/data/live-reaction-units.ts'
 import { getSearchRanges } from '../src/lib/searchHighlight.ts'

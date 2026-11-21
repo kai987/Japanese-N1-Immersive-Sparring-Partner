@@ -1,6 +1,7 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { createReleaseManifest, releaseManifestName, verifyPublishedRelease } from '../scripts/lib/deploymentVerification.mjs'
+import { packLessonSearchIndex } from '../src/lib/searchIndexCodec.ts'
 
 const baseUrl = 'https://example.test/N1/'
 const sourceCommit = 'a'.repeat(40)
@@ -102,4 +103,40 @@ test('concurrent requests stay bounded and stalled requests honor the verificati
   const timer = setTimeout(() => {}, 1000)
   try { await assert.rejects(verifyPublishedRelease({ baseUrl, expectedManifest: fixture.expectedManifest, fetchImpl: stalled, timeoutMs: 20, requestTimeoutMs: 10 }), /timeout|aborted/i) }
   finally { clearTimeout(timer) }
+})
+
+function scopedFixture(change?: (files: Record<string, string>, audioPath: string) => void) {
+  const fixture = deploymentFixture(files => {
+    const original = JSON.parse(files[searchPath])
+    files[searchPath] = JSON.stringify(packLessonSearchIndex(original.map((row: { lesson: { date: string; day: number; title: string } }) => ({ ...row,
+      chunks: [{ section: 'today', anchor: 'lesson-theme', label: 'テーマ', text: '教材', priority: 38, normalized: '教材', compact: '教材' }] }))))
+  })
+  const audioPath = 'assets/n1-audio-lesson-2026-09-18-fixture.json'
+  fixture.files[audioPath] = JSON.stringify({ version: 1, scope: 'lesson/2026-09-18', clips: {
+    ['a'.repeat(16)]: { provider: 'supabase', path: 'morioki-normal/clip.mp3', duration: 1.5 },
+  } })
+  change?.(fixture.files, audioPath)
+  fixture.manifest = createReleaseManifest({ ...fixture.manifest,
+    audioScopes: { 'lesson/2026-09-18': audioPath },
+    files: Object.entries(fixture.files).filter(([path]) => path !== releaseManifestName).map(([path, content]) => ({ path, content })),
+  })
+  fixture.expectedManifest = JSON.stringify(fixture.manifest, null, 2) + '\n'
+  fixture.files[releaseManifestName] = fixture.expectedManifest
+  return fixture
+}
+
+test('compact search history and every scoped audio payload are parsed and proved against the retained release', async () => {
+  const fixture = scopedFixture(), { fetchImpl, requested } = scriptedFetch(fixture)
+  const result = await verifyPublishedRelease({ baseUrl, expectedManifest: fixture.expectedManifest, target, fetchImpl })
+  assert.equal(result.verifiedFiles, 7)
+  assert.deepEqual(new Set(requested), new Set(Object.keys(fixture.files)))
+})
+
+test('audio scope identity and search string references cannot be accepted merely because their bytes match', async () => {
+  const wrongAudio = scopedFixture((files, path) => { files[path] = JSON.stringify({ version: 1, scope: 'lesson/2026-09-19', clips: {} }) })
+  await assert.rejects(verifyPublishedRelease({ baseUrl, expectedManifest: wrongAudio.expectedManifest, ...scriptedFetch(wrongAudio) }), /audio metadata is invalid/)
+  const wrongSearch = scopedFixture(files => {
+    const index = JSON.parse(files[searchPath]); index.lessons[0][2] = -1; files[searchPath] = JSON.stringify(index)
+  })
+  await assert.rejects(verifyPublishedRelease({ baseUrl, expectedManifest: wrongSearch.expectedManifest, ...scriptedFetch(wrongSearch) }), /search index is invalid/)
 })

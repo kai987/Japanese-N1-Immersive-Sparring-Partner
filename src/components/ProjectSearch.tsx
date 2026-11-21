@@ -1,12 +1,13 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { searchProject, type LessonSearchIndex, type ProjectSearchResult } from '../lib/projectSearch'
+import { searchProject, type LessonSearchIndex, type ProjectNotesIndex, type ProjectSearchResult } from '../lib/projectSearch'
 import assets from 'virtual:n1-data-assets'
+import noteData from 'virtual:n1-note-search'
+import { decodeLessonSearchIndex, decodeProjectNotesIndex } from '../lib/searchIndexCodec'
+import { isExpiredResource, reloadWithSearch, ResourceRequestError } from '../lib/resourceRecovery'
 import { SearchHighlight } from './SearchHighlight'
 
 const emptyLessonIndex: LessonSearchIndex = []
-class SearchIndexRequestError extends Error {
-  constructor(readonly status: number) { super(`Search index request failed (${status})`) }
-}
+let notes: ProjectNotesIndex | undefined
 const resultKey = (result: ProjectSearchResult) => {
   if (result.kind === 'lesson') return `lesson/${result.date}`
   if (result.kind === 'compound') return `compound/${result.seriesId}`
@@ -18,12 +19,9 @@ function loadLessonSearchIndex(): Promise<LessonSearchIndex> {
   // Keep the large index out of the first screen. Fetch failures can be retried;
   // browsers permanently cache failed native dynamic imports in this page.
   indexRequest ??= fetch(assets.searchIndex, { cache: 'no-cache' }).then(response => {
-    if (!response.ok) throw new SearchIndexRequestError(response.status)
-    return response.json() as Promise<LessonSearchIndex>
-  }).then(index => {
-    if (!Array.isArray(index)) throw new Error('Unexpected search index')
-    return index
-  })
+    if (!response.ok) throw new ResourceRequestError('Search index', response.status)
+    return response.json() as Promise<unknown>
+  }).then(decodeLessonSearchIndex)
     .catch(error => { indexRequest = undefined; throw error })
   return indexRequest
 }
@@ -61,13 +59,14 @@ export function ProjectSearch({ query, contentQuery, onChange, onOpen, located, 
       if (!mountedRef.current) return
       setLessonIndex(index)
     }).catch(error => {
-      if (mountedRef.current) setLoadError(error instanceof SearchIndexRequestError && error.status === 404 ? 'missing' : 'unavailable')
+      if (mountedRef.current) setLoadError(isExpiredResource(error) ? 'missing' : 'unavailable')
     })
       .finally(() => { loadingRef.current = false })
   }, [lessonIndex])
   useEffect(() => { if (contentQuery.trim()) ensureLoaded() }, [contentQuery, ensureLoaded])
   useEffect(() => { setExpanded(false); setSelected(null) }, [contentQuery])
-  const groups = useMemo(() => searchProject(contentQuery, lessonIndex ?? emptyLessonIndex, { limit: expanded ? null : 4 }), [contentQuery, lessonIndex, expanded])
+  const groups = useMemo(() => contentQuery.trim() ? searchProject(contentQuery, lessonIndex ?? emptyLessonIndex,
+    { limit: expanded ? null : 4, notes: notes ??= decodeProjectNotesIndex(noteData) }) : [], [contentQuery, lessonIndex, expanded])
   const results = groups.flatMap(group => group.results)
   const selectedIndex = results.findIndex(result => resultKey(result) === selected)
   const total = groups.reduce((count, group) => count + group.total, 0)
@@ -89,10 +88,7 @@ export function ProjectSearch({ query, contentQuery, onChange, onOpen, located, 
   // Revealing a located match must not put the popup over the reading area.
   useEffect(() => { if (located) setOpen(false) }, [located])
 
-  const refreshSearch = () => {
-    window.history.replaceState({ ...window.history.state, n1SearchQuery: contentQuery }, '')
-    window.location.reload()
-  }
+  const refreshSearch = () => reloadWithSearch(contentQuery)
   const choose = (result: ProjectSearchResult) => { onOpen(result); setOpen(false); setSelected(null) }
   const clear = () => {
     composingRef.current = false

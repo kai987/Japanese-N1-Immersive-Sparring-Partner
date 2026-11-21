@@ -68,3 +68,40 @@ test('historical snapshot rejects missing dates, false-new cards and absent evid
  data=load();data.grammarLessons!['2026-09-09'].grammar.find(card=>card.studyKind==='review')!.studyKind='new';assert.throws(()=>validateStudySnapshot(data),/repeated NEW/)
  data=load();delete data.grammarLessons!['2026-09-09'].grammar.find(card=>card.studyKind==='review')!.reviewEvidence;assert.throws(()=>validateStudySnapshot(data),/evidence/)
 })
+
+test('vocabulary boundaries require actual non-empty term and reading strings before conversion', () => {
+ for (const field of ['term', 'reading'] as const) for (const invalid of [undefined, null, '', ' \t ', 12, ['語彙']]) {
+  const data = load(), date = '2026-09-18', card = data.lessons[date].vocabulary[0]
+  const identity = card.identity
+  if (invalid === undefined) Reflect.deleteProperty(card, field)
+  else Object.assign(card, { [field]: invalid })
+  assert.throws(() => validateStudySnapshot(data), error => error instanceof Error &&
+    error.message.includes(date) && error.message.includes(identity) && error.message.includes(`.${field}`))
+ }
+})
+
+test('full and historical grammar views enforce the same pattern and metadata field types', () => {
+ for (const source of ['lessons', 'grammarLessons'] as const) for (const [field, invalid] of [
+  ['pattern', undefined], ['pattern', ' '], ['pattern', 5], ['meaning', {}], ['exampleJa', []],
+  ['note', 123], ['reviewEvidence', { form: 'ため', excerpt: 4, sourceKind: 'article' }],
+ ] as const) {
+  const data = load(), date = source === 'lessons' ? '2026-09-18' : '2026-09-09'
+  const card = data[source]![date].grammar[0], identity = card.identity
+  if (invalid === undefined) Reflect.deleteProperty(card, field)
+  else Object.assign(card, { [field]: invalid })
+  assert.throws(() => validateStudySnapshot(data), error => error instanceof Error &&
+    error.message.includes(date) && error.message.includes(identity) && error.message.includes(`.${field}`))
+ }
+})
+
+test('snapshot validation accepts unknown JSON and reports structural errors before property access', () => {
+ for (const input of [null, [], 'snapshot', 3]) assert.throws(() => validateStudySnapshot(input), /snapshot: expected an object/)
+ for (const [field, value] of [['issueNumbers', null], ['lessons', []], ['policy', undefined], ['firstVocabulary', false]] as const) {
+  const data = load()
+  Object.assign(data, { [field]: value })
+  assert.throws(() => validateStudySnapshot(data), new RegExp(`snapshot\\.${field}: expected an object`))
+ }
+ const data = load()
+ Object.assign(data.lessons['2026-09-18'].vocabulary[0].reportFrequency, { appearedDates: '2026-09-18' })
+ assert.throws(() => validateStudySnapshot(data), /2026-09-18.*reportFrequency.*frequency fields/)
+})

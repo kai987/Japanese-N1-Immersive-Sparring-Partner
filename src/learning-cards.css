@@ -1,0 +1,18 @@
+/* Vocabulary card metadata and links belong to the learning cards. */
+.word-line > .vocabulary-heading { flex-wrap: wrap; }
+.word-line > .vocabulary-meta { margin-left: auto; display: flex; flex: 0 1 auto; align-items: flex-start; justify-content: flex-end; gap: 12px; max-width: 100%; text-align: right; }
+.vocabulary-meta .study-reference-inline { max-width: min(100%, 420px); }
+.vocabulary-meta .study-reference-badges { display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 8px; }
+.vocabulary-meta .study-reference-badges > * { flex-shrink: 0; }
+.vocabulary-meta .study-reference { align-items: flex-end; text-align: right; }
+.vocabulary-meta .study-frequency { text-align: right; }
+.vocabulary-meta .study-frequency p { text-align: left; }
+.compound-verb-tag { flex-basis: auto; align-self: center; cursor: pointer; border: 1px solid var(--accent-2); border-radius: 5px; padding: 4px 9px; color: var(--accent-2); background: var(--accent-2-soft); font: inherit; font-size: 12px; line-height: 1.5; }
+.compound-verb-tag:hover { background: var(--surface-2); }
+.learning-card[data-vocabulary-id] { scroll-margin-top: 100px; }
+.learning-card[data-vocabulary-id]:focus { outline: 2px solid var(--accent-2); outline-offset: 4px; }
+@media (max-width: 680px) {
+  .learning-card[data-vocabulary-id] { scroll-margin-top: 126px; }
+  .word-line > .vocabulary-meta { flex-wrap: wrap; width: 100%; }
+  .vocabulary-meta .study-reference { width: auto; max-width: 100%; }
+}

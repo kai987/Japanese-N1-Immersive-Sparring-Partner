@@ -1,14 +1,12 @@
 import type { DailyLesson, GrammarItem, VocabularyItem, StudyMetadata, ReportFrequency } from '../types.ts'
 import { grammarIdentity } from './grammarHistory.ts'
+import { isDate, isRecord } from './progress.ts'
 
 interface SourceCard extends StudyMetadata {
   identity: string
   studyKind: 'new' | 'review'
   firstIntroducedDate: string
   reportFrequency: ReportFrequency
-  term?: string
-  pattern?: string
-  reading?: string
   level: string
   partOfSpeech?: string
   meaning: string
@@ -23,6 +21,13 @@ interface SourceCard extends StudyMetadata {
   sourceForm?: string
   sourceAnchor?: string
 }
+export interface VocabularySourceCard extends SourceCard {
+  term: string
+  reading: string
+}
+export interface GrammarSourceCard extends SourceCard {
+  pattern: string
+}
 export interface StudySnapshot {
   schemaVersion: number
   sourceCommit: string
@@ -36,18 +41,90 @@ export interface StudySnapshot {
   grammarFrequency: Record<string,ReportFrequency>
   firstVocabulary: Record<string,string>
   firstGrammar: Record<string,string>
-  lessons: Record<string, { issueNumber: number; vocabulary: SourceCard[]; grammar: SourceCard[]; reviewVocabularyNote?: string; reviewGrammarNote?: string }>
-  grammarLessons?: Record<string, { issueNumber: number; grammar: SourceCard[]; reviewGrammarNote?: string }>
+  lessons: Record<string, { issueNumber: number; vocabulary: VocabularySourceCard[]; grammar: GrammarSourceCard[]; reviewVocabularyNote?: string; reviewGrammarNote?: string }>
+  grammarLessons?: Record<string, { issueNumber: number; grammar: GrammarSourceCard[]; reviewGrammarNote?: string }>
 }
-const dayPattern = /^\d{4}-\d{2}-\d{2}$/
 const studyLevels = new Set(['N1','N2','N3','N5/N4','IT/AI'])
 const lexicalKey = (value: string) => value.normalize('NFKC').replace(/\s+/g,'').replace(/する$/,'')
 const same = (a: unknown,b: unknown) => JSON.stringify(a) === JSON.stringify(b)
-export function validateStudySnapshot(snapshot: StudySnapshot) {
+
+function requireValid(ok: unknown, path: string, message: string): asserts ok {
+  if (!ok) throw new Error(`${path}: ${message}`)
+}
+const text = (value: unknown): value is string => typeof value === 'string' && value.trim().length > 0
+const positiveInteger = (value: unknown) => typeof value === 'number' && Number.isSafeInteger(value) && value > 0
+const object = (value: unknown, path: string) => {
+  requireValid(isRecord(value), path, 'expected an object')
+  return value
+}
+const requiredText = (value: Record<string, unknown>, field: string, path: string) =>
+  requireValid(text(value[field]), `${path}.${field}`, 'expected a non-empty string')
+
+/** Validate untrusted JSON before any field is used as a string or array. */
+function validateSnapshotShape(input: unknown): asserts input is StudySnapshot {
+  const snapshot = object(input, 'snapshot')
+  for (const name of ['sourceCommit', 'frequencyScope']) requiredText(snapshot, name, 'snapshot')
+  for (const name of ['firstDate', 'lastDate']) requireValid(isDate(snapshot[name]), `snapshot.${name}`, 'expected a valid date')
+  requireValid(positiveInteger(snapshot.totalDays), 'snapshot.totalDays', 'expected a positive report denominator')
+  const policy = object(snapshot.policy, 'snapshot.policy')
+  requireValid(isDate(policy.effectiveFrom), 'snapshot.policy.effectiveFrom', 'expected a valid date')
+  for (const name of ['vocabularyTarget', 'grammarTarget']) requireValid(positiveInteger(policy[name]), `snapshot.policy.${name}`, 'expected a positive integer')
+  if (policy.grammarEffectiveFrom !== undefined) requireValid(isDate(policy.grammarEffectiveFrom), 'snapshot.policy.grammarEffectiveFrom', 'expected a valid date')
+  for (const name of ['grammarMinimum', 'grammarMaximum']) if (policy[name] !== undefined) requireValid(positiveInteger(policy[name]), `snapshot.policy.${name}`, 'expected a positive integer')
+  for (const [date, issue] of Object.entries(object(snapshot.issueNumbers, 'snapshot.issueNumbers'))) {
+    requireValid(isDate(date) && positiveInteger(issue), `snapshot.issueNumbers.${date}`, 'invalid issue sequence')
+  }
+  for (const name of ['firstVocabulary', 'firstGrammar']) {
+    for (const [identity, date] of Object.entries(object(snapshot[name], `snapshot.${name}`))) {
+      requireValid(text(identity) && isDate(date), `snapshot.${name}.${identity}`, 'invalid introduction date')
+    }
+  }
+  const frequencyShape = (value: unknown, path: string) => {
+    const frequency = object(value, `${path} frequency`)
+    requireValid(positiveInteger(frequency.totalDays) && typeof frequency.appearedDays === 'number' && Number.isSafeInteger(frequency.appearedDays) && frequency.appearedDays >= 0 &&
+      typeof frequency.percent === 'number' && Number.isFinite(frequency.percent) && Array.isArray(frequency.appearedDates) && frequency.appearedDates.every(isDate), path, 'invalid IT report frequency fields')
+  }
+  for (const name of ['vocabularyFrequency', 'grammarFrequency']) {
+    for (const [identity, value] of Object.entries(object(snapshot[name], `snapshot.${name}`))) frequencyShape(value, `snapshot.${name}.${identity}`)
+  }
+  const cardsShape = (input: unknown, kind: 'vocabulary' | 'grammar', path: string) => {
+    requireValid(Array.isArray(input), path, `missing ${kind}`)
+    for (const [index, value] of input.entries()) {
+      const card = object(value, `${path}[${index}]`)
+      const cardPath = `${path}[${text(card.identity) ? card.identity : index}]`
+      for (const field of ['identity', 'exampleJa', 'meaning', 'level', ...(kind === 'vocabulary' ? ['term', 'reading'] : ['pattern'])]) requiredText(card, field, cardPath)
+      requireValid(isDate(card.firstIntroducedDate), `${cardPath}.firstIntroducedDate`, 'expected a valid introduction date')
+      frequencyShape(card.reportFrequency, `${cardPath}.reportFrequency`)
+      for (const field of ['partOfSpeech', 'structure', 'usage', 'note', 'nuance', 'exampleMeaning', 'sourceUrl', 'sourceForm', 'sourceAnchor']) {
+        if (card[field] !== undefined) requireValid(typeof card[field] === 'string', `${cardPath}.${field}`, 'expected a string')
+      }
+      if (card.collocations !== undefined) requireValid(Array.isArray(card.collocations) && card.collocations.every(text), `${cardPath}.collocations`, 'expected non-empty strings')
+      if (card.reviewEvidence !== undefined) {
+        const evidence = object(card.reviewEvidence, `${cardPath}.reviewEvidence`)
+        for (const field of ['form', 'excerpt', 'sourceKind']) requiredText(evidence, field, `${cardPath}.reviewEvidence`)
+      }
+    }
+  }
+  const lessonsShape = (input: unknown, path: string, grammarOnly: boolean) => {
+    for (const [date, value] of Object.entries(object(input, path))) {
+      requireValid(isDate(date), `${path}.${date}`, 'expected a valid lesson date')
+      const lesson = object(value, `${path}.${date}`)
+      requireValid(positiveInteger(lesson.issueNumber), `${path}.${date}.issueNumber`, 'expected a positive source issue')
+      cardsShape(lesson.grammar, 'grammar', `${date}.grammar`)
+      if (!grammarOnly) cardsShape(lesson.vocabulary, 'vocabulary', `${date}.vocabulary`)
+      for (const field of ['reviewVocabularyNote', 'reviewGrammarNote']) if (lesson[field] !== undefined) requiredText(lesson, field, `${path}.${date}`)
+    }
+  }
+  lessonsShape(snapshot.lessons, 'snapshot.lessons', false)
+  if (snapshot.grammarLessons !== undefined) lessonsShape(snapshot.grammarLessons, 'snapshot.grammarLessons', true)
+}
+
+export function validateStudySnapshot(snapshot: unknown): StudySnapshot {
+  validateSnapshotShape(snapshot)
   if (snapshot.schemaVersion !== 1 || !/^[a-f0-9]{40}$/.test(snapshot.sourceCommit)) throw new Error('Invalid IT study source commit or schema')
   const dates = Object.keys(snapshot.issueNumbers).sort()
   if (!dates.length || snapshot.totalDays !== dates.length || dates[0] !== snapshot.firstDate || dates.at(-1) !== snapshot.lastDate) throw new Error('Incomplete IT report denominator')
-  dates.forEach((date,index) => { if (!dayPattern.test(date) || snapshot.issueNumbers[date] !== index+1) throw new Error('Invalid issue sequence') })
+  dates.forEach((date,index) => { if (snapshot.issueNumbers[date] !== index+1) throw new Error('Invalid issue sequence') })
   const frequency = (f: ReportFrequency) => {
     if (!f || f.totalDays !== dates.length || f.appearedDays !== new Set(f.appearedDates).size || f.appearedDates.some(date => !snapshot.issueNumbers[date]) || f.percent !== Number((f.appearedDays / f.totalDays * 100).toFixed(1))) throw new Error('Invalid IT report frequency')
   }
@@ -127,13 +204,13 @@ export function withItStudy(lesson: DailyLesson,snapshot: StudySnapshot): DailyL
   }
   const vocabulary: VocabularyItem[] = source.vocabulary?.map(card => {
     const existing = lesson.vocabulary.find(item => item.word === card.term && item.reading === card.reading && item.example === card.exampleJa)
-    return {id:existing?.id ?? stableId(lesson.date,'v',card.identity,card.exampleJa),word:card.term!,reading:card.reading!,meaning:card.meaning,
+    return {id:existing?.id ?? stableId(lesson.date,'v',card.identity,card.exampleJa),word:card.term,reading:card.reading,meaning:card.meaning,
       jlpt:card.level as VocabularyItem['jlpt'],partOfSpeech:card.partOfSpeech ?? '',example:card.exampleJa,translation:card.exampleMeaning ?? '',
       collocations:card.collocations ?? [],nuance:[...new Set([card.note,card.nuance].filter((text): text is string => Boolean(text?.trim())))].join('\n\n'),...metadata(card)}
   }) ?? lesson.vocabulary.map(card => ({...card,reportFrequency:snapshot.vocabularyFrequency[card.word] ?? snapshot.vocabularyFrequency[lexicalKey(card.word)]}))
   const grammar: GrammarItem[] = source.grammar.map(card => {
     const existing=lesson.grammar.find(item=>grammarIdentity(item.pattern)===card.identity && item.example===card.exampleJa)
-    return {id:existing?.id ?? stableId(lesson.date,'g',card.identity,card.exampleJa),pattern:card.pattern!,level:card.level,meaning:card.meaning,
+    return {id:existing?.id ?? stableId(lesson.date,'g',card.identity,card.exampleJa),pattern:card.pattern,level:card.level,meaning:card.meaning,
       form:card.structure ?? '',register:card.usage ?? '',frequency:existing?.frequency ?? 3,explanation:card.usage ?? '',example:card.exampleJa,
       translation:card.exampleMeaning ?? '',comparison:card.note ?? '',sourceUrl:card.sourceUrl,sourceForm:card.sourceForm,sourceAnchor:card.sourceAnchor,...metadata(card)}
   })

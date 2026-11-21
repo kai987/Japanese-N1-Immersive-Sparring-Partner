@@ -1,6 +1,6 @@
 import type { DailyLesson, ReadingMode, SectionId } from '../types.ts'
-import { compoundVerbSeries } from './compoundVerbs.ts'
-import { liveUnits } from '../data/live-reaction-units.ts'
+import type { CompoundVerbSeries } from '../data/compound-verbs.ts'
+import type { LiveUnit } from '../data/live-reaction-units.ts'
 import { liveGroupSearchFields } from './liveReactions.ts'
 import { getSearchRanges, getSearchTerms, normalizeSearchText } from './searchHighlight.ts'
 import { practiceCategoryLabels, practiceKindLabels } from './practice.ts'
@@ -160,9 +160,9 @@ export type CompoundSearchResult = { kind: 'compound'; seriesId: string; title: 
 export type LiveSearchResult = { kind: 'live'; unitId: string; groupId: string; date: string; title: string; label: string; snippet: string }
 export type ProjectSearchResult = LessonSearchResult | CompoundSearchResult | LiveSearchResult
 export interface SearchResultGroup { kind: ProjectSearchResult['kind']; label: string; results: ProjectSearchResult[]; total: number }
-export interface ProjectSearchOptions { /** null returns every match; omitted keeps four previews per category. */ limit?: number | null }
+export interface ProjectSearchOptions { /** null returns every match; omitted keeps four previews per category. */ limit?: number | null; notes?: ProjectNotesIndex }
 
-interface PreparedField { text: string; normalized: string }
+export interface PreparedField { text: string; normalized: string }
 const prepareFields = (fields: string[]): PreparedField[] => fields.map(text => ({ text, normalized: normalizeSearchText(text) }))
 const matchesFields = (query: PreparedQuery, fields: PreparedField[]) => query.terms.every(term => fields.some(field => field.normalized.includes(term)))
 const fieldScore = (query: PreparedQuery, fields: PreparedField[]) => {
@@ -177,25 +177,49 @@ const fieldScore = (query: PreparedQuery, fields: PreparedField[]) => {
 const bestSnippet = (fields: PreparedField[], query: PreparedQuery) => makeSnippet(
   fields.find(field => query.terms.some(term => field.normalized.includes(term)))?.text ?? fields[0]?.text ?? '', query.raw)
 
-// Data is immutable between publications; normalize these independent note indexes once.
-const compoundIndex = compoundVerbSeries.map((series, order) => {
+export interface CompoundNoteIndex {
+  series: Pick<CompoundVerbSeries, 'id' | 'title' | 'subtitle'>
+  order: number
+  entries: { word: string; reading: string }[]
+  fields: PreparedField[]
+  searchable: PreparedField[]
+  words: PreparedField[]
+  title: PreparedField[]
+}
+export interface LiveNoteIndex {
+  unit: Pick<LiveUnit, 'id' | 'date' | 'title'>
+  group: { id: string; title: string }
+  order: number
+  fields: PreparedField[]
+  words: PreparedField[]
+  title: PreparedField[]
+}
+export interface ProjectNotesIndex { compounds: CompoundNoteIndex[]; live: LiveNoteIndex[] }
+const emptyNotes: ProjectNotesIndex = { compounds: [], live: [] }
+
+/** Build-time projection: the browser never imports the full note datasets for search. */
+export function createProjectNotesIndex(compoundVerbSeries: CompoundVerbSeries[], liveUnits: LiveUnit[]): ProjectNotesIndex {
+  const compounds = compoundVerbSeries.map((series, order) => {
   const entries = series.groups.flatMap(group => group.words)
   const fields = prepareFields([series.title, series.subtitle, series.summary, series.structure, ...series.notes,
     ...series.groups.flatMap(group => [group.title, group.description, ...group.words.flatMap(item => [item.word, item.reading, item.meaning, item.example, item.translation, item.note ?? ''])])])
-  return { series, order, entries, fields, searchable: [...fields, ...prepareFields(series.triggers)],
+  return { series: { id: series.id, title: series.title, subtitle: series.subtitle }, order,
+    entries: entries.map(({ word, reading }) => ({ word, reading })), fields, searchable: [...fields, ...prepareFields(series.triggers)],
     words: prepareFields(entries.flatMap(entry => [entry.word, entry.reading])), title: prepareFields([series.title, series.subtitle]) }
 })
-const liveIndex = liveUnits.flatMap(unit => unit.groups.map((group, order) => ({
-  unit, group, order, fields: prepareFields(liveGroupSearchFields(group)),
+  const live = liveUnits.flatMap(unit => unit.groups.map((group, order) => ({
+  unit: { id: unit.id, date: unit.date, title: unit.title }, group: { id: group.id, title: group.title }, order, fields: prepareFields(liveGroupSearchFields(group)),
   words: prepareFields(group.entries.flatMap(entry => [entry.expression, entry.reading])),
   title: prepareFields([group.title, group.subtitle]),
 })))
+  return { compounds, live }
+}
 interface RankedLesson { lesson: LessonSearchRecord['lesson']; best: IndexedSearchChunk; score: number; hits: number }
 interface RankedNotes<T> { item: T; score: number }
-interface RankedResults { query: PreparedQuery; lessons: RankedLesson[]; compounds: RankedNotes<typeof compoundIndex[number]>[]; live: RankedNotes<typeof liveIndex[number]>[] }
-const queryCache = new WeakMap<LessonSearchIndex, Map<string, RankedResults>>()
+interface RankedResults { query: PreparedQuery; lessons: RankedLesson[]; compounds: RankedNotes<CompoundNoteIndex>[]; live: RankedNotes<LiveNoteIndex>[] }
+const queryCache = new WeakMap<LessonSearchIndex, WeakMap<ProjectNotesIndex, Map<string, RankedResults>>>()
 
-function rankProject(query: PreparedQuery, index: LessonSearchIndex): RankedResults {
+function rankProject(query: PreparedQuery, index: LessonSearchIndex, notes: ProjectNotesIndex): RankedResults {
   const lessons: RankedLesson[] = []
   for (const { lesson, chunks } of index) {
     let best: IndexedSearchChunk | undefined, bestScore = 0, hits = 0
@@ -208,25 +232,27 @@ function rankProject(query: PreparedQuery, index: LessonSearchIndex): RankedResu
     if (best) lessons.push({ lesson, best, hits, score: bestScore + Math.min(hits, 8) * 2 })
   }
   lessons.sort((a, b) => b.score - a.score || b.lesson.date.localeCompare(a.lesson.date))
-  const compounds = compoundIndex.filter(item => matchesFields(query, item.searchable)).map(item => ({ item,
+  const compounds = notes.compounds.filter(item => matchesFields(query, item.searchable)).map(item => ({ item,
     score: fieldScore(query, item.words) * 4 || fieldScore(query, item.title) }))
     .sort((a, b) => b.score - a.score || a.item.order - b.item.order)
-  const live = liveIndex.filter(item => matchesFields(query, item.fields)).map(item => ({ item,
+  const live = notes.live.filter(item => matchesFields(query, item.fields)).map(item => ({ item,
     score: fieldScore(query, item.words) * 4 || fieldScore(query, item.title) }))
     .sort((a, b) => b.score - a.score || b.item.unit.date.localeCompare(a.item.unit.date) || a.item.order - b.item.order)
   return { query, lessons, compounds, live }
 }
 
 /** Search each category independently; previews cannot hide the existence of older matches. */
-export function searchProject(query: string, lessonIndex: LessonSearchIndex, { limit = 4 }: ProjectSearchOptions = {}): SearchResultGroup[] {
+export function searchProject(query: string, lessonIndex: LessonSearchIndex, { limit = 4, notes = emptyNotes }: ProjectSearchOptions = {}): SearchResultGroup[] {
   const prepared = prepareQuery(query)
   if (!prepared.terms.length) return []
   if (limit !== null && (!Number.isSafeInteger(limit) || limit < 1)) throw new Error('Invalid search result limit')
-  let cache = queryCache.get(lessonIndex)
-  if (!cache) { cache = new Map(); queryCache.set(lessonIndex, cache) }
+  let byNotes = queryCache.get(lessonIndex)
+  if (!byNotes) { byNotes = new WeakMap(); queryCache.set(lessonIndex, byNotes) }
+  let cache = byNotes.get(notes)
+  if (!cache) { cache = new Map(); byNotes.set(notes, cache) }
   let ranked = cache.get(query)
   if (!ranked) {
-    ranked = rankProject(prepared, lessonIndex)
+    ranked = rankProject(prepared, lessonIndex, notes)
     cache.set(query, ranked)
     if (cache.size > 12) cache.delete(cache.keys().next().value!)
   }

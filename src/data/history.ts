@@ -1,6 +1,7 @@
 import catalog from 'virtual:n1-catalog'
 import assets from 'virtual:n1-data-assets'
 import type { BrowserLesson } from '../lib/lessonDataTypes.ts'
+import { ResourceRequestError } from '../lib/resourceRecovery.ts'
 
 export const historyItems = catalog.historyItems
 export const lesson = catalog.latest.lesson
@@ -14,7 +15,7 @@ export function loadLesson(date: string): Promise<BrowserLesson> {
   let request = pending.get(date)
   if (!request) {
     request = fetch(assets.lessons[date], { cache: 'no-cache' }).then(response => {
-      if (!response.ok) throw new Error(`Lesson data request failed (${response.status})`)
+      if (!response.ok) throw new ResourceRequestError('Lesson data', response.status)
       return response.json() as Promise<BrowserLesson>
     }).then(value => {
       if (value?.lesson?.date !== date || !Array.isArray(value.reviewFocus)) throw new Error('Unexpected lesson data')

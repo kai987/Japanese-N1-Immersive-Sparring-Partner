@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs'
 import { liveUnits } from '../src/data/live-reaction-units.ts'
 import { liveEntryAudioReference, liveExampleAudioReference } from '../src/lib/liveIdentities.ts'
 import { matchesLiveGroup } from '../src/lib/liveReactions.ts'
-import { createLessonSearchIndex, searchProject } from '../src/lib/projectSearch.ts'
+import { createLessonSearchIndex, searchProject } from './helpers/projectSearch.ts'
 import { validateContent } from '../scripts/validate-content.ts'
 import { collectAudio } from '../scripts/collect-audio.ts'
 

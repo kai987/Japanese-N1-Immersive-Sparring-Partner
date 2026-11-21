@@ -1,4 +1,6 @@
 import { createHash } from 'node:crypto'
+import { decodeLessonSearchIndex } from '../../src/lib/searchIndexCodec.ts'
+import { decodeAudioScope } from '../../src/lib/audioScopeData.ts'
 
 export const releaseManifestName = 'n1-release.json'
 export const releaseArtifactName = 'n1-deployment-verification'
@@ -11,10 +13,11 @@ const validDate = date => typeof date === 'string' && /^\d{4}-\d{2}-\d{2}$/.test
 const record = value => value && typeof value === 'object' && !Array.isArray(value)
 const comparePath = (a, b) => a < b ? -1 : a > b ? 1 : 0
 
-export function createReleaseManifest({ files, lessons, latestDate, searchIndex, studySnapshotCommit, entryPoints }) {
+export function createReleaseManifest({ files, lessons, latestDate, searchIndex, audioScopes, studySnapshotCommit, entryPoints }) {
   const manifest = {
     version: 1, latestDate, studySnapshotCommit, entryPoints: [...entryPoints].sort(),
     lessons: Object.fromEntries(Object.entries(lessons).sort(([a], [b]) => comparePath(a, b))), searchIndex,
+    ...(audioScopes ? { audioScopes: Object.fromEntries(Object.entries(audioScopes).sort(([a], [b]) => comparePath(a, b))) } : {}),
     files: Object.fromEntries(files.map(file => [file.path, { sha256: digest(bytesOf(file.content)), bytes: bytesOf(file.content).length }])
       .sort(([a], [b]) => comparePath(a, b))),
   }
@@ -39,6 +42,10 @@ function validateManifest(manifest) {
   for (const [date, lesson] of lessons) {
     if (!validDate(date) || !record(lesson) || !manifest.files[lesson.path] || !lesson.path.endsWith('.json')
       || !Number.isInteger(lesson.day) || lesson.day < 1 || typeof lesson.title !== 'string' || !lesson.title.trim()) throw new Error(`Invalid release lesson: ${date}`)
+  }
+  if (manifest.audioScopes !== undefined && (!record(manifest.audioScopes) || Object.entries(manifest.audioScopes).some(([scope, path]) =>
+    !/^(?:(?:lesson|live|compound)\/[A-Za-z0-9-]+|archive)$/.test(scope) || !validPath(path) || !path.endsWith('.json') || !manifest.files[path]))) {
+    throw new Error('Release manifest has invalid audio metadata scopes')
   }
   return manifest
 }
@@ -73,21 +80,23 @@ export async function verifyPublishedRelease({ baseUrl, expectedManifest, target
     if (digest(published) !== digest(expectedBytes) || !published.equals(expectedBytes)) throw new Error('Published release manifest differs from the exact build')
     const data = new Map(), files = Object.entries(manifest.files)
     const lessonPaths = new Set(Object.values(manifest.lessons).map(lesson => lesson.path))
+    const audioPaths = new Set(Object.values(manifest.audioScopes ?? {}))
     let cursor = 0
     const worker = async () => {
       while (cursor < files.length) {
         const [path, expected] = files[cursor++]
         const body = await get(path)
         if (body.length !== expected.bytes || digest(body) !== expected.sha256) throw new Error(`Published asset hash/size mismatch: ${path}`)
-        if (path === manifest.searchIndex || lessonPaths.has(path)) {
+        if (path === manifest.searchIndex || lessonPaths.has(path) || audioPaths.has(path)) {
           try { data.set(path, JSON.parse(body.toString('utf8'))) }
           catch { throw new Error(`Published learning data is not JSON: ${path}`) }
         }
       }
     }
     await Promise.all(Array.from({ length: Math.min(concurrency, files.length) }, worker))
-    const search = data.get(manifest.searchIndex)
-    if (!Array.isArray(search)) throw new Error('Published search index is invalid')
+    let search
+    try { search = decodeLessonSearchIndex(data.get(manifest.searchIndex)) }
+    catch { throw new Error('Published search index is invalid') }
     const indexed = new Map()
     for (const row of search) {
       if (!record(row) || !record(row.lesson) || !validDate(row.lesson.date) || indexed.has(row.lesson.date) || !Array.isArray(row.chunks)
@@ -100,6 +109,10 @@ export async function verifyPublishedRelease({ baseUrl, expectedManifest, target
       if (!record(payload) || !record(payload.lesson) || !Array.isArray(payload.reviewFocus) || payload.lesson.date !== date
         || payload.lesson.day !== expected.day || payload.lesson.title !== expected.title) throw new Error(`Published lesson contents do not match: ${date}`)
       if (!row || row.day !== expected.day || row.title !== expected.title) throw new Error(`Published search lesson does not match: ${date}`)
+    }
+    for (const [scope, path] of Object.entries(manifest.audioScopes ?? {})) {
+      try { decodeAudioScope(data.get(path), scope) }
+      catch { throw new Error(`Published audio metadata is invalid: ${scope}`) }
     }
     return { manifestSha256: digest(expectedBytes), verifiedFiles: files.length, latestDate: manifest.latestDate, targetDate: target?.date ?? null }
   } catch (error) {

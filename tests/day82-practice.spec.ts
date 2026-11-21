@@ -7,7 +7,8 @@ import type { PracticeCategory, ReadingQuestion, StoredProgress } from '../src/t
 const date = '2026-11-19'
 const lessons = validateContent().lessons
 const lesson = lessons.find(item => item.date === date)!
-const historicalPracticeLessons = ['2026-08-30', '2026-08-31', '2026-09-01', '2026-09-02', '2026-09-03', '2026-09-13', '2026-09-04', '2026-09-14', '2026-09-05', '2026-09-15', '2026-09-16', '2026-09-06', '2026-09-17', '2026-09-07', '2026-09-18', '2026-09-19', '2026-09-08', '2026-09-20', '2026-09-09', '2026-09-21', '2026-09-10', '2026-09-22', '2026-09-11', '2026-09-23', '2026-09-24', '2026-09-12', '2026-09-25', '2026-09-26', '2026-09-27', '2026-09-28', '2026-09-29', '2026-09-30', '2026-10-01', '2026-10-02', '2026-10-03', '2026-10-04', '2026-10-05', '2026-10-06', '2026-10-07', '2026-10-08', '2026-10-09', '2026-10-10', '2026-10-11', '2026-10-12', '2026-10-13', '2026-10-14', '2026-10-15', '2026-10-16', '2026-10-17', '2026-10-18', '2026-10-19', '2026-10-20', '2026-10-21', '2026-10-22', '2026-10-23', '2026-10-24', '2026-10-25', '2026-10-26', '2026-10-27', '2026-10-28', '2026-10-29', '2026-10-30', '2026-10-31', '2026-11-01', '2026-11-02', '2026-11-03', '2026-11-04', '2026-11-05', '2026-11-06', '2026-11-07', '2026-11-08', '2026-11-09', '2026-11-10', '2026-11-11', '2026-11-12', '2026-11-13', '2026-11-14', '2026-11-15', '2026-11-16', '2026-11-17', '2026-11-18'].map(date => lessons.find(item => item.date === date)!)
+const historicalPracticeLessons = lessons.filter(item => item.date < date).sort((a, b) => a.date.localeCompare(b.date))
+const archivedPracticeLessons = [...historicalPracticeLessons, lesson]
 const references = getPracticeQuestions(lesson)
 const categories: PracticeCategory[] = ['vocabulary', 'grammar', 'reading']
 const counts: Record<PracticeCategory, number> = { vocabulary: 5, grammar: 5, reading: 8 }
@@ -174,7 +175,7 @@ test('one real correct retry remains daily; two correct retries extend to three 
   expect((await records(page)).readingAttempts[question.id]).toHaveLength(3)
 })
 
-for (const archivedLesson of [...historicalPracticeLessons, lesson]) test(`the archived Day${archivedLesson.day} question keeps its original ID, option indexes, and undated legacy history`, async ({ page }) => {
+for (const archivedLesson of archivedPracticeLessons) test(`the archived Day${archivedLesson.day} question keeps its original ID, option indexes, and undated legacy history`, async ({ page }) => {
   const original = archivedLesson.reading.question
   await page.addInitScript(({ id, answer }) => localStorage.setItem('n1-progress', JSON.stringify({
     vocab: { 'old-absent-vocab': 'mastered' }, grammar: {}, readingAnswers: { [id]: answer },
@@ -202,7 +203,13 @@ for (const archivedLesson of [...historicalPracticeLessons, lesson]) test(`the a
 for (const historicalLesson of historicalPracticeLessons) test(`Day${historicalLesson.day} category links load the archived lesson and keep its mistakes separate from other dates`, async ({ page }) => {
   expect(historicalLesson.practice).toBeDefined()
   const questions = getPracticeQuestions(historicalLesson)
-  const otherLessons = [...historicalPracticeLessons, lesson].filter(item => item.date !== historicalLesson.date)
+  // Full all-date isolation is exercised by the shared UI selector in
+  // lesson-review.test.ts. Browser checks retain adjacent/distant switches,
+  // return navigation, retry focus, reload and every day's category links.
+  const index = archivedPracticeLessons.indexOf(historicalLesson)
+  const otherLessons = [...new Set([1, -1, Math.floor(archivedPracticeLessons.length / 2)]
+    .map(offset => archivedPracticeLessons[(index + offset + archivedPracticeLessons.length) % archivedPracticeLessons.length]))]
+    .filter(item => item.date !== historicalLesson.date)
   expect(questions).toHaveLength(18)
   for (const category of categories) {
     const categoryQuestions = questions.filter(item => item.category === category)

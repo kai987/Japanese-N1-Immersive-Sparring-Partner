@@ -6,9 +6,15 @@ on:
     branches: [main]
     paths-ignore: ['.github/n1-sync-request.json']
   workflow_dispatch:
+    inputs:
+      validated_run_id:
+        description: Optional successful main sync run; exact provenance is verified before reuse
+        required: false
+        type: string
 
 permissions:
   contents: read
+  actions: read
   pages: write
   id-token: write
 
@@ -22,6 +28,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 2
 
       - name: Setup Node
         uses: actions/setup-node@v7
@@ -32,28 +40,43 @@ jobs:
       - name: Verify shared automation contract
         run: node --test scripts/n1-automation.test.mjs
 
+      - name: Restore exact validated sync build
+        id: reuse
+        timeout-minutes: 4
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VALIDATED_RUN_ID: ${{ inputs.validated_run_id }}
+        run: node scripts/validated-build.mjs restore
+
       - name: Install dependencies
+        if: steps.reuse.outputs.reused != 'true'
         run: npm ci --no-audit --no-fund
 
       - name: Verify study snapshot import
+        if: steps.reuse.outputs.reused != 'true'
         run: |
           cp src/data/it-study-snapshot.json /tmp/study-index.json
           npm run import:study -- /tmp/study-index.json
           git diff --exit-code -- src/data/it-study-snapshot.json
 
       - name: Validate content
+        if: steps.reuse.outputs.reused != 'true'
         run: npm run validate:content
 
       - name: Unit tests
+        if: steps.reuse.outputs.reused != 'true'
         run: npm test
 
       - name: Build
+        if: steps.reuse.outputs.reused != 'true'
         run: npm run build
 
       - name: Install test browser
+        if: steps.reuse.outputs.reused != 'true'
         run: npx playwright install --with-deps chromium
 
       - name: Browser tests
+        if: steps.reuse.outputs.reused != 'true'
         run: npm run test:e2e
 
       - name: Retain exact build verification manifest

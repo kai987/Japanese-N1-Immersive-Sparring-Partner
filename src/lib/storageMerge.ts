@@ -101,13 +101,30 @@ export function applyStorageMutations<T>(base: T, mutations: StorageMutation[]):
   }
   for (const [key, changes] of attemptChanges) {
     const path = JSON.parse(key) as string[], current = at(value, path), currentCounts = counts(Array.isArray(current) ? current : [])
-    const signatures = new Set(changes.flatMap(change => [...counts(change.before ?? []).keys(), ...counts(change.add ?? []).keys()]))
-    for (const signature of signatures) {
-      const baseline = Math.min(...changes.map(change => counts(change.before ?? []).get(signature)?.count ?? 0))
-      const additions = changes.reduce((total, change) => total + (counts(change.add ?? []).get(signature)?.count ?? 0), 0)
-      const target = Math.max(currentCounts.get(signature)?.count ?? 0, baseline + additions)
-      const example = currentCounts.get(signature)?.value ?? changes.flatMap(change => [...(change.before ?? []), ...(change.add ?? [])]).find(item => stableValue(item) === signature)
-      currentCounts.set(signature, { value: example, count: target })
+    const signatures = new Map<string, { value: unknown; minimumBefore: number; beforeChanges: number; additions: number }>()
+    const signatureFor = (key: string, example: unknown) => {
+      let entry = signatures.get(key)
+      if (!entry) {
+        entry = { value: example, minimumBefore: Infinity, beforeChanges: 0, additions: 0 }
+        signatures.set(key, entry)
+      }
+      return entry
+    }
+    // Each stored history is counted once. Recounting every history for every
+    // distinct attempt makes replay cubic as one question's history grows.
+    for (const change of changes) {
+      for (const [signature, item] of counts(change.before ?? [])) {
+        const entry = signatureFor(signature, item.value)
+        entry.minimumBefore = Math.min(entry.minimumBefore, item.count)
+        entry.beforeChanges++
+      }
+      for (const [signature, item] of counts(change.add ?? [])) signatureFor(signature, item.value).additions += item.count
+    }
+    for (const [signature, entry] of signatures) {
+      // A signature absent from any earlier projection has a baseline of zero.
+      const baseline = entry.beforeChanges === changes.length ? entry.minimumBefore : 0
+      const target = Math.max(currentCounts.get(signature)?.count ?? 0, baseline + entry.additions)
+      currentCounts.set(signature, { value: currentCounts.get(signature)?.value ?? entry.value, count: target })
     }
     value = put(value, path, sortAttempts([...currentCounts.values()].flatMap(item => Array.from({ length: item.count }, () => item.value))))
   }

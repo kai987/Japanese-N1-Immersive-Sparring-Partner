@@ -22,7 +22,7 @@ test('new-date request starts import without first deploying a missing lesson', 
 })
 
 test('source pinning, snapshot import, all validation gates and CAS remain before commit', () => {
-  const names = ['Verify successful upstream Pages run and post-deployment check', 'Rebuild and verify published study snapshot', 'Verify locked 09:00 N1 source blob', 'Materialize requested daily JSON and validated snapshot', 'Validate content', 'Unit tests', 'Build', 'Install browser', 'Browser tests', 'Commit verified content with fast-forward protection', 'Ensure verified content has a Pages deployment']
+  const names = ['Verify successful upstream Pages run and post-deployment check', 'Rebuild and verify published study snapshot', 'Verify locked 09:00 N1 source blob', 'Materialize requested daily JSON and validated snapshot', 'Verify study snapshot import', 'Capture candidate source tree', 'Validate content', 'Unit tests', 'Build', 'Install browser', 'Browser tests', 'Commit verified content with fast-forward protection', 'Seal validated build for Pages', 'Retain validated Pages build', 'Ensure verified content has a Pages deployment']
   let position = -1
   for (const name of names) {
     const next = workflow.indexOf(`- name: ${name}`, position + 1)
@@ -98,17 +98,44 @@ for (const scenario of [
       assert.ok(match,'actual deployment script must be testable')
       const script=match[1].replace("'/tmp/n1-deploy-runs.json'",JSON.stringify(input))
       const fakeFetch=`const fixture=${JSON.stringify(files)};globalThis.fetch=async input=>{const pathname=new URL(String(input)).pathname;const path=Object.keys(fixture).find(key=>pathname.endsWith('/'+key));return new Response(path?fixture[path]:'Missing',{status:path?200:404});};\n`
-      execFileSync(process.execPath,['--input-type=module','-e',fakeFetch+script],{env:{...process.env,PATH:`${root}:${process.env.PATH}`,VERIFIED_COMMIT:'a'.repeat(40),GITHUB_REPOSITORY:'test/n1',GITHUB_STEP_SUMMARY:summary,N1_TEST_DISPATCH_LOG:log,N1_TEST_DOWNLOAD_LOG:downloadLog,N1_TEST_RELEASE_MANIFEST:artifact}})
+      execFileSync(process.execPath,['--input-type=module','-e',fakeFetch+script],{env:{...process.env,PATH:`${root}:${process.env.PATH}`,VERIFIED_COMMIT:'a'.repeat(40),GITHUB_REPOSITORY:'test/n1',GITHUB_RUN_ID:'456',GITHUB_STEP_SUMMARY:summary,N1_TEST_DISPATCH_LOG:log,N1_TEST_DOWNLOAD_LOG:downloadLog,N1_TEST_RELEASE_MANIFEST:artifact}})
       assert.equal(existsSync(log),scenario.dispatch)
       assert.equal(existsSync(downloadLog),scenario.name==='successful exact commit')
       if (existsSync(downloadLog)) assert.match(readFileSync(downloadLog,'utf8'),/^run\ndownload\n123\n--repo\ntest\/n1\n--name\nn1-deployment-verification\n/)
       if (scenario.dispatch) {
-        assert.equal(readFileSync(log,'utf8'),'workflow\nrun\ndeploy-pages.yml\n--repo\ntest/n1\n--ref\nmain\n')
+        assert.equal(readFileSync(log,'utf8'),'workflow\nrun\ndeploy-pages.yml\n--repo\ntest/n1\n--ref\nmain\n-f\nvalidated_run_id=456\n')
         assert.match(readFileSync(summary,'utf8'),/awaiting_deploy/)
       }
     } finally {rmSync(root,{recursive:true,force:true})}
   })
 }
+
+test('Pages reuses only a verified candidate and otherwise retains every full validation gate', () => {
+  assert.match(pages, /validated_run_id:[\s\S]*?required: false/)
+  assert.match(pages, /actions: read/)
+  assert.match(pages, /fetch-depth: 2/)
+  assert.match(pages, /id: reuse[\s\S]*?node scripts\/validated-build\.mjs restore/)
+  for (const name of ['Install dependencies', 'Verify study snapshot import', 'Validate content', 'Unit tests', 'Build', 'Install test browser', 'Browser tests']) {
+    const start = pages.indexOf(`- name: ${name}\n`), end = pages.indexOf('\n      - name:', start)
+    assert.ok(start >= 0, `${name} must be retained`)
+    assert.match(pages.slice(start, end < 0 ? undefined : end), /if: steps\.reuse\.outputs\.reused != 'true'/)
+  }
+  for (const name of ['Retain exact build verification manifest', 'Upload Pages artifact', 'Verify live target date and exact release assets']) {
+    const start = pages.indexOf(`- name: ${name}\n`), end = pages.indexOf('\n      - name:', start)
+    assert.ok(start >= 0)
+    assert.doesNotMatch(pages.slice(start, end < 0 ? undefined : end), /steps\.reuse/)
+  }
+  assert.match(workflow, /name: n1-validated-build-\$\{\{ github\.run_attempt \}\}/)
+  assert.match(workflow, /cmp \/tmp\/n1-imported-study\.json src\/data\/it-study-snapshot\.json/)
+  for (const name of ['Seal validated build for Pages', 'Retain validated Pages build']) {
+    const start = workflow.indexOf(`- name: ${name}\n`), end = workflow.indexOf('\n      - name:', start)
+    assert.match(workflow.slice(start, end), /continue-on-error: true/, 'optional artifact failure must still dispatch fully checked Pages')
+  }
+  for (const name of ['Verify study snapshot import', 'Validate content', 'Unit tests', 'Build', 'Browser tests', 'Commit verified content with fast-forward protection']) {
+    const start = workflow.indexOf(`- name: ${name}\n`), end = workflow.indexOf('\n      - name:', start)
+    assert.doesNotMatch(workflow.slice(start, end), /continue-on-error/, 'existing validation and publication gates remain strict')
+  }
+})
 
 test('identical snapshot does not block a daily-only content commit', () => {
   assert.deepEqual(verifySyncChangedPaths(date, daily), [daily])

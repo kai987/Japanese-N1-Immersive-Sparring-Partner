@@ -109,10 +109,6 @@
 .attempt-history { margin-top: 24px; }
 .attempt-history summary { cursor: pointer; }
 .retry-cancel { margin-left: 16px; }
-.review-row { grid-template-columns: 32px 56px minmax(0, 1fr) auto; }
-.review-row .text-btn { white-space: nowrap; }
 @media (max-width: 680px) {
-  .review-row { grid-template-columns: 24px 46px minmax(0, 1fr); }
-  .review-row .text-btn { grid-column: 3; justify-self: start; }
   .retry-cancel { display: block; margin: 12px 0 0; }
 }

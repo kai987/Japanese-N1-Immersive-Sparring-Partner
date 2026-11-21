@@ -3,17 +3,34 @@ import { applyStorageMutations, decodeStorageMutation, stableValue, storageChang
 
 export interface StorageLike { readonly length: number; key(index: number): string | null; getItem(key: string): string | null; setItem(key: string, value: string): void }
 type Snapshot<T> = { value: T; failed: boolean; recovered: boolean }
+type JournalRead = { text: string; mutation: StorageMutation | null }
+type ReadCache<T> = {
+  projection?: { text: string | null; parsed: Decoded<T> }
+  journals: Map<string, JournalRead>
+  encodings: Map<StorageMutation, string>
+}
 const actor = typeof crypto !== 'undefined' && crypto.randomUUID ? crypto.randomUUID() : Math.random().toString(36).slice(2)
 let clock = 0
 
 export function readStorageMutations(storage: StorageLike, key: string): StorageMutation[] {
+  return readJournal(storage, key)
+}
+
+function readJournal(storage: StorageLike, key: string, cache?: Map<string, JournalRead>): StorageMutation[] {
   const prefix = storageJournalPrefix(key), result: StorageMutation[] = []
   // Snapshot key names first: another tab may append while this tab is reading.
   const keys = Array.from({ length: storage.length }, (_, index) => storage.key(index)).filter((name): name is string => !!name?.startsWith(prefix))
   for (const name of keys) {
     const text = storage.getItem(name)
     if (!text) continue
-    try { const mutation = decodeStorageMutation(JSON.parse(text)); if (mutation) result.push(mutation) } catch { /* An interrupted/foreign journal entry is not a replacement for valid records. */ }
+    let entry = cache?.get(name)
+    if (entry?.text !== text) {
+      let mutation: StorageMutation | null = null
+      try { mutation = decodeStorageMutation(JSON.parse(text)) } catch { /* An interrupted/foreign journal entry is not a replacement for valid records. */ }
+      entry = { text, mutation }
+      cache?.set(name, entry)
+    }
+    if (entry.mutation) result.push(entry.mutation)
   }
   return result
 }
@@ -43,14 +60,17 @@ export class SharedStorage<T> {
     this.snapshot = next
     this.listeners.forEach(listener => listener())
   }
-  private read(storage: StorageLike): { value: T; recovered: boolean } {
+  private read(storage: StorageLike, cache?: ReadCache<T>): { value: T; recovered: boolean } {
     let value = this.initial, recovered = false
     const text = storage.getItem(this.key)
-    if (text !== null) {
+    if (cache?.projection?.text === text) {
+      value = cache.projection.parsed.value; recovered = cache.projection.parsed.recovered
+    } else if (text !== null) {
       try { const parsed = this.decode(JSON.parse(text)); value = parsed.value; recovered = parsed.recovered }
       catch { recovered = true }
     }
-    const mutations = [...new Map([...readStorageMutations(storage, this.key), ...this.pending].map(item => [item.id, item])).values()]
+    if (cache) cache.projection = { text, parsed: { value, recovered } }
+    const mutations = [...new Map([...readJournal(storage, this.key, cache?.journals), ...this.pending].map(item => [item.id, item])).values()]
       .sort((a, b) => a.clock - b.clock || a.id.localeCompare(b.id))
     let accepted: StorageMutation[] = []
     const reject = (mutation: StorageMutation) => {
@@ -61,7 +81,8 @@ export class SharedStorage<T> {
       try { return !this.decode(applyStorageMutations(base, [mutation])).recovered } catch { return false }
     }
     for (const mutation of mutations) {
-      const encoded = JSON.stringify(mutation)
+      const encoded = cache?.encodings.get(mutation) ?? JSON.stringify(mutation)
+      cache?.encodings.set(mutation, encoded)
       let checked = this.checkedMutations.get(mutation.id)
       if (checked?.encoded !== encoded) {
         // Most edits affect one item. Validate that small edit against the empty
@@ -94,7 +115,8 @@ export class SharedStorage<T> {
     for (const mutation of accepted) clock = Math.max(clock, mutation.clock)
     return { value: parsed.value, recovered: recovered || parsed.recovered }
   }
-  refresh = (write = true, forceProbe = false) => {
+  refresh = (write = true, forceProbe = false) => this.synchronize(write, forceProbe)
+  private synchronize(write: boolean, forceProbe: boolean, cache?: ReadCache<T>) {
     try {
       const storage = this.storage()
       if (write) {
@@ -104,7 +126,7 @@ export class SharedStorage<T> {
           this.pending.shift()
         }
       }
-      const result = this.read(storage)
+      const result = this.read(storage, cache)
       const serialized = JSON.stringify(result.value)
       if (write && (forceProbe || storage.getItem(this.key) !== serialized)) storage.setItem(this.key, serialized)
       this.publish({ value: result.value, failed: write ? false : this.snapshot.failed, recovered: this.snapshot.recovered || result.recovered })
@@ -120,14 +142,18 @@ export class SharedStorage<T> {
     if (!changes.length) return
     // Observe durable clocks without changing the visible-state diff. This also
     // orders a later action correctly after a background tab or clock rollback.
+    // Reuse decoding only for identical bytes within this synchronous update.
+    // Re-read keys and values after writing: another tab can append or replace
+    // data meanwhile. Discard the cache afterwards instead of retaining history.
+    const cache: ReadCache<T> = { journals: new Map(), encodings: new Map() }
     try {
-      const observed = this.read(this.storage())
+      const observed = this.read(this.storage(), cache)
       if (observed.recovered) this.publish({ ...this.snapshot, recovered: true })
     } catch { /* Retain the action in memory if storage is unavailable. */ }
     clock = Math.max(Date.now() * 1000, clock + 1)
     this.pending.push({ version: 1, id: `${clock.toString(36)}-${actor}`, clock, changes })
     this.publish({ ...this.snapshot, value: desired })
-    this.refresh(true)
+    this.synchronize(true, false, cache)
   }
   retry = () => this.refresh(true, true)
   dismiss = () => this.publish({ ...this.snapshot, recovered: false })
