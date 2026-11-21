@@ -30,10 +30,10 @@ async function openCategory(page: Page, category: PracticeCategory) {
 
 async function openReview(page: Page, targetLesson = lesson) {
   const datePicker = page.locator('.date-dropdown-trigger')
-  if (!(await datePicker.innerText()).includes(`Day ${targetLesson.day}`)) {
+  if (!(await datePicker.innerText()).includes(`Day ${targetLesson.day} ·`)) {
     await datePicker.click()
     await page.getByRole('option', { name: new RegExp(`^Day ${targetLesson.day}\\b`) }).click()
-    await expect(datePicker).toContainText(`Day ${targetLesson.day}`)
+    await expect(datePicker).toContainText(`Day ${targetLesson.day} ·`)
   }
   await page.getByRole('button', { name: '誤答復習', exact: true }).click()
   await expect(page.getByRole('heading', { name: 'この日の実際の誤答', exact: true })).toBeVisible()
