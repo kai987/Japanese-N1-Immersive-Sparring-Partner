@@ -10,7 +10,7 @@ const search = (page: Page) => page.getByRole('textbox', { name: '全站搜索',
 const results = (page: Page) => page.getByRole('region', { name: '教材の検索結果', exact: true })
 const navigation = (page: Page) => page.getByRole('navigation', { name: 'メインナビゲーション', exact: true })
 
-test('sidebar defaults to the newest unit and October 30 photo notes expose complete source cards', async ({ page }, testInfo) => {
+test('sidebar defaults to the newest unit and October 30 cards retain the original note annotations', async ({ page }, testInfo) => {
   const errors: string[] = []
   page.on('pageerror', error => errors.push(error.message))
   page.on('console', message => { if (['error', 'warning'].includes(message.type())) errors.push(message.text()) })
@@ -23,10 +23,11 @@ test('sidebar defaults to the newest unit and October 30 photo notes expose comp
   await expect(page.locator('#live-unit-title')).toHaveText(unit.title)
   await expect(page.locator('[data-live-group]')).toHaveCount(unit.groups.length)
   await expect(page.locator('.live-entry')).toHaveCount(unit.groups.reduce((sum, group) => sum + group.entries.length, 0))
-  await expect(page.locator('.live-source-quote')).toHaveCount(unit.groups.length)
+  await expect(page.locator('.live-source-quote')).toHaveCount(0)
   const annotated = page.locator('[data-live-group="live-2026-10-30-sekkaku-wazawaza"]')
-  await expect(annotated.locator('.live-source-quote')).toContainText('難得')
-  await expect(annotated.locator('.live-source-quote .audio-play-button')).toHaveCount(0)
+  await expect(annotated.locator('.live-entry-note').first()).toContainText('原笔记旁注“難得”')
+  await expect(annotated.locator('.live-points')).toContainText('不只是固定对应中文“难得”')
+  await expect(annotated.locator('.live-entry-note .audio-play-button')).toHaveCount(0)
   await expect(annotated.locator('.live-entry .audio-play-button')).toHaveCount(unit.groups.find(group => group.id.endsWith('-sekkaku-wazawaza'))!.entries.length)
   await expect(page.locator('vite-error-overlay')).toHaveCount(0)
   await page.screenshot({ path: testInfo.outputPath('live-october30-desktop.png') })

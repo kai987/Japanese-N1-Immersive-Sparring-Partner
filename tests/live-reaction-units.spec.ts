@@ -6,7 +6,7 @@ const unit = '2026-09-30-okashi-bokuso'
 const storageKey = 'n1-live-reactions-progress-v1'
 const screenshots = '/tmp/n1-improvements-playwright/okashi-bokuso'
 
-test('new unit is reachable from the sidebar and contains complete source-labelled study cards', async ({ page }) => {
+test('new unit is reachable from the sidebar and keeps distinct source contexts with complete study cards', async ({ page }) => {
   const errors: string[] = []
   page.on('pageerror', error => errors.push(error.message))
   page.on('console', message => { if (['error', 'warning'].includes(message.type())) errors.push(message.text()) })
@@ -17,8 +17,11 @@ test('new unit is reachable from the sidebar and contains complete source-labell
   await expect(page.locator('#live-unit-title')).toHaveText('ドラえもん「おかし牧場」')
   await expect(page.locator('[data-live-group]')).toHaveCount(28)
   await expect(page.locator('.live-entry')).toHaveCount(47)
-  await expect(page.locator('.live-source-quote')).toHaveCount(28)
-  await expect(page.locator('[data-live-group]').first().locator('.live-source-quote')).toContainText('手机笔记')
+  await expect(page.locator('.live-source-quote')).toHaveCount(25)
+  const first = page.locator('[data-live-group="live-2026-09-30-exhaust"]')
+  await expect(first.locator('.live-source-quote')).toHaveCount(0)
+  await expect(first.locator('.live-points')).toContainText('此句来自手机笔记')
+  await expect(first.locator('.live-entry')).toContainText('エネルギーを使い果たす')
   await expect(page.locator('vite-error-overlay')).toHaveCount(0)
   await mkdir(screenshots, { recursive: true })
   await page.screenshot({ path: `${screenshots}/desktop.png` })

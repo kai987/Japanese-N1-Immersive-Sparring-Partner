@@ -69,7 +69,7 @@ export const liveNovember4Groups: LiveUnitGroup[] = [
     subtitle: '地理距离和环保表达', category: 'vocabulary',
     entries: [
       entry('near-station', '駅に近い', 'えきにちかい', '离车站近', '「駅に近い」以车站为参照点，「駅から近い」从车站量距离。'),
-      entry('eco-friendly-appliances', '環境にやさしい家電製品', 'かんきょうにやさしいかでんせいひん', '对环境友好的家电', '照片写作「やかしい」。词条采用常用写法「やさしい」，下方保留笔记原文。'),
+      entry('eco-friendly-appliances', '環境にやさしい家電製品', 'かんきょうにやさしいかでんせいひん', '对环境友好的家电', '照片写作「環境にやかしい家電製品」。词条采用常用写法「環境にやさしい家電製品」。'),
       entry('eco-lifestyle', 'エコ生活', 'エコせいかつ', '环保生活、低环境负担的生活方式'),
     ],
     points: ['「環境にやさしい」说的是给环境带来的负担较小，例如节能或减少废弃物。'],

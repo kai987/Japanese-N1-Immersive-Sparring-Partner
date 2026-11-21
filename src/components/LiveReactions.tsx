@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { getLiveMangaGalleries, liveCategories, liveUnits, liveUnitFromSearch, type LiveCategory } from '../data/live-reaction-units'
 import { useLocalStorage } from '../hooks/useLocalStorage'
 import { decodeLiveProgress, initialLiveProgress, liveProgressKey, matchesLiveGroup, type LiveStatus } from '../lib/liveReactions'
+import { getVisibleLiveSource } from '../lib/liveSourcePresentation'
 import type { LiveSearchResult } from '../lib/projectSearch'
 import { AudioButton, SentenceAudio } from './AudioButton'
 import { AudioScope } from './AudioScope'
@@ -132,9 +133,10 @@ export default function LiveReactions({ query, composing, onClear, searchTarget,
       {visible.map(group => {
         const index = groups.indexOf(group)
         const status = progress.groups[group.id] ?? 'new'
+        const source = getVisibleLiveSource(group)
         return <article className="live-group-card" key={group.id} data-live-group={group.id} data-category={group.category} aria-labelledby={`${group.id}-title`}>
           <header className="live-group-heading"><span className="live-group-number">{String(index + 1).padStart(2, '0')}</span><div><h2 id={`${group.id}-title`}>{highlight(group.title)}</h2><p>{highlight(group.subtitle)}</p><span className="live-category-caption">{liveCategories.find(item => item.id === group.category)?.label}{group.supplement ? ' · 补充辨析' : ''}</span></div><span className="tag">{group.entries.length} 条</span></header>
-          {group.source ? <blockquote className="live-source-quote"><div>{group.source.kind === 'manga' ? `漫画原句 · ${group.source.label}` : group.source.label}</div><p lang="ja">{group.source.readAloud === false ? highlight(group.source.quote) : <SentenceAudio text={group.source.quote} renderText={highlight} />}</p><p lang="zh-CN">{highlight(group.source.translation)}</p></blockquote> : null}
+          {source ? <blockquote className="live-source-quote"><div>{source.kind === 'manga' ? `漫画原句 · ${source.label}` : source.label}</div><p lang="ja">{source.readAloud === false ? highlight(source.quote) : <SentenceAudio text={source.quote} renderText={highlight} />}</p><p lang="zh-CN">{highlight(source.translation)}</p></blockquote> : null}
           <dl className="live-entries">{group.entries.map(item => <div className="live-entry" key={item.id}>
             <dt><strong lang="ja">{highlight(item.expression)}</strong>{item.reading !== item.expression ? <span className="live-reading" lang="ja">{highlight(item.reading)}</span> : null}<AudioButton text={item.expression} speechText={item.reading} /></dt>
             <dd><p lang="zh-CN">{highlight(item.meaning)}</p>{item.note ? <p className="live-entry-note" lang="zh-CN">{highlight(item.note)}</p> : null}</dd>

@@ -10,7 +10,7 @@ const search = (page: Page) => page.getByRole('textbox', { name: '全站搜索',
 const results = (page: Page) => page.getByRole('region', { name: '教材の検索結果', exact: true })
 const navigation = (page: Page) => page.getByRole('navigation', { name: 'メインナビゲーション', exact: true })
 
-test('November 3 unit is available from the sidebar with source-labelled cards and audio controls', async ({ page }, testInfo) => {
+test('November 3 cards retain shorthand corrections and audio controls without repeated note blocks', async ({ page }, testInfo) => {
   const errors: string[] = []
   page.on('pageerror', error => errors.push(error.message))
   page.on('console', message => { if (message.type() === 'error') errors.push(message.text()) })
@@ -22,11 +22,13 @@ test('November 3 unit is available from the sidebar with source-labelled cards a
   await expect(page.locator('#live-unit-title')).toHaveText(unit.title)
   await expect(page.locator('[data-live-group]')).toHaveCount(unit.groups.length)
   await expect(page.locator('.live-entry')).toHaveCount(unit.groups.reduce((sum, group) => sum + group.entries.length, 0))
-  await expect(page.locator('.live-source-quote')).toHaveCount(unit.groups.length)
+  await expect(page.locator('.live-source-quote')).toHaveCount(0)
   const annotatedGroup = unit.groups.find(group => group.source!.quote.includes('いつの間に＝いつ'))!
   const annotated = page.locator(`[data-live-group="${annotatedGroup.id}"]`)
-  await expect(annotated.locator('.live-source-quote')).toContainText('いつの間に＝いつ')
-  await expect(annotated.locator('.live-source-quote .audio-play-button')).toHaveCount(0)
+  await expect(annotated.locator('.live-entry-note').last()).toContainText('原笔记写「いつの間に＝いつ」')
+  await expect(annotated.locator('.live-entry-note').last()).toContainText('不与「いつ」在所有场景中互换')
+  await expect(annotated.locator('.live-points')).toContainText('这不是无条件的同义公式')
+  await expect(annotated.locator('.live-entry-note .audio-play-button')).toHaveCount(0)
   await expect(annotated.locator('.live-entry .audio-play-button')).toHaveCount(annotatedGroup.entries.length)
   await expect(page.locator('vite-error-overlay')).toHaveCount(0)
   await page.screenshot({ path: testInfo.outputPath('live-november3-desktop.png') })

@@ -12,7 +12,7 @@ const evidence = '/tmp/n1-improvements-playwright/live-2026-10-29'
 const search = (page: Page) => page.getByRole('textbox', { name: '全站搜索', exact: true })
 const results = (page: Page) => page.getByRole('region', { name: '教材の検索結果', exact: true })
 
-test('sidebar opens the October 29 archive with complete source-labelled cards', async ({ page }) => {
+test('sidebar opens October 29 cards with note corrections retained below the entries', async ({ page }) => {
   const errors: string[] = []
   page.on('pageerror', error => errors.push(error.message))
   page.on('console', message => { if (['error', 'warning'].includes(message.type())) errors.push(message.text()) })
@@ -23,10 +23,11 @@ test('sidebar opens the October 29 archive with complete source-labelled cards',
   await expect(page.locator('#live-unit-title')).toHaveText(unit.title)
   await expect(page.locator('[data-live-group]')).toHaveCount(unit.groups.length)
   await expect(page.locator('.live-entry')).toHaveCount(unit.groups.reduce((sum, group) => sum + group.entries.length, 0))
-  await expect(page.locator('.live-source-quote')).toHaveCount(unit.groups.length)
+  await expect(page.locator('.live-source-quote')).toHaveCount(0)
   const annotated = page.locator('[data-live-group="live-2026-10-29-prohibition"]')
-  await expect(annotated.locator('.live-source-quote')).toContainText('不允许')
-  await expect(annotated.locator('.live-source-quote .audio-play-button')).toHaveCount(0)
+  await expect(annotated.locator('.live-entry-note')).toContainText(['「説教」', '「規則」', '不允许'])
+  await expect(annotated.locator('.live-points')).toContainText('两者并非“说教专用”和“规则专用”')
+  await expect(annotated.locator('.live-entry-note .audio-play-button')).toHaveCount(0)
   await expect(annotated.locator('.live-entry .audio-play-button')).toHaveCount(3)
   await expect(page.locator('vite-error-overlay')).toHaveCount(0)
   await mkdir(evidence, { recursive: true })

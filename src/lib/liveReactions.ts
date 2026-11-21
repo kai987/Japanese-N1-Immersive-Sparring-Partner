@@ -1,6 +1,7 @@
 import type { LiveReactionGroup } from '../data/live-reactions.ts'
 import type { LiveUnitGroup } from '../data/live-reaction-units.ts'
 import { getSearchTerms, normalizeSearchText } from './searchHighlight.ts'
+import { getVisibleLiveSource } from './liveSourcePresentation.ts'
 
 export type LiveStatus = 'new' | 'review' | 'mastered'
 export interface LiveProgress { version: 1; groups: Record<string, LiveStatus> }
@@ -24,10 +25,11 @@ const preparedGroups = new WeakMap<SearchableGroup, { fields: string[]; normaliz
 function prepareGroup(group: SearchableGroup) {
   let cached = preparedGroups.get(group)
   if (!cached) {
+    const source = getVisibleLiveSource(group)
     const fields = [group.title, group.subtitle, ...group.points,
       ...group.entries.flatMap(item => [item.expression, item.reading, item.meaning, item.note ?? '']),
       ...group.examples.flatMap(item => [item.japanese, item.chinese]),
-      ...(group.source ? [group.source.quote, group.source.translation] : [])]
+      ...(source ? [source.quote, source.translation] : [])]
     cached = { fields, normalized: fields.map(normalizeSearchText) }
     preparedGroups.set(group, cached)
   }
