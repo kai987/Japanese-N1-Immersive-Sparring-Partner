@@ -1,0 +1,63 @@
+<!doctype html><meta charset="utf-8" /><input aria-label="Query" />
+<ul></ul>
+<script type="module">
+  const box = document.querySelector('input'),
+    list = document.querySelector('ul')
+  let search
+  window.initialize = async (mode) => {
+    const start = performance.now()
+    let initialized
+    if (mode === 'main') {
+      const engine = await import('./ts.js')
+      initialized = await engine.initialize()
+      search = engine.query
+    } else {
+      const worker = new Worker(mode === 'worker' ? './ts.js' : './wasm.js', { type: 'module' })
+      // The harness issues exactly one outstanding query per trial.
+      const request = (message) =>
+        new Promise((resolve, reject) => {
+          worker.onmessage = ({ data }) => (data.error ? reject(Error(data.error)) : resolve(data))
+          worker.onerror = (error) => reject(Error(error.message))
+          worker.postMessage(message)
+        })
+      initialized = await request({ init: true })
+      search = (text, limit) => request({ text, limit })
+    }
+    return { ...initialized, load: performance.now() - start }
+  }
+  window.allResults = (text) => search(text, null)
+  // A posted task measures how soon the main thread can service other work
+  // while this input's search is running. It is not an INP measurement.
+  const ping = new MessageChannel()
+  window.trial = (text) =>
+    new Promise((resolve, reject) => {
+      box.oninput = async () => {
+        try {
+          const start = performance.now()
+          const responsiveness = new Promise((done) => {
+            ping.port1.onmessage = () => done(performance.now() - start)
+            ping.port2.postMessage(0)
+          })
+          const { groups, compute } = await search(box.value, 4)
+          list.replaceChildren(
+            ...groups.flatMap((g) =>
+              g.results.map((r) => {
+                const item = document.createElement('li')
+                item.textContent = [r.label, r.title, r.snippet].join(' ')
+                return item
+              })
+            )
+          )
+          const dom = performance.now() - start
+          const frame = await new Promise((done) =>
+            requestAnimationFrame(() => requestAnimationFrame(() => done(performance.now() - start)))
+          )
+          resolve({ compute, dom, frame, mainTask: await responsiveness })
+        } catch (error) {
+          reject(error)
+        }
+      }
+      box.value = text
+      box.dispatchEvent(new Event('input', { bubbles: true }))
+    })
+</script>

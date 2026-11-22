@@ -1,0 +1,210 @@
+{
+  "commit": "b2d88b65678cd58be8f283dded42ffbc546486dd",
+  "chromium": "151.0.7922.34",
+  "node": "v24.18.0",
+  "rounds": 24,
+  "queries": [
+    "恨み",
+    "ない",
+    "の",
+    "間に合う",
+    "はなしあう",
+    "期限",
+    "受付",
+    "読み取る",
+    "いけない",
+    "日语 不存在的查询",
+    "ﾌｧﾝﾀｼﾞｰ",
+    "ガ",
+    "𠮷野家",
+    "😀",
+    "ＡＩ",
+    "経験 知識",
+    "できません",
+    "変更",
+    "という",
+    "abcdefghzzzz",
+    "引用",
+    "読 取",
+    "ファンタジー",
+    "～"
+  ],
+  "lessons": 84,
+  "chunks": 6353,
+  "strings": 14908,
+  "indexBytes": 5662765,
+  "indexGzipBytes": 1379698,
+  "parity": 24,
+  "summary": {
+    "main": {
+      "initMs": {
+        "n": 24,
+        "median": 56.9,
+        "p95": 79.2
+      },
+      "firstComputeMs": {
+        "n": 24,
+        "median": 8.3,
+        "p95": 15
+      },
+      "firstFrameMs": {
+        "n": 24,
+        "median": 39.8,
+        "p95": 48.1
+      },
+      "computeMs": {
+        "n": 552,
+        "median": 2.9,
+        "p95": 6.4
+      },
+      "inputDomMs": {
+        "n": 552,
+        "median": 2.9,
+        "p95": 6.5
+      },
+      "mainTaskDelayMs": {
+        "n": 552,
+        "median": 3,
+        "p95": 6.7
+      },
+      "inputFrameMs": {
+        "n": 552,
+        "median": 15.6,
+        "p95": 16.9
+      },
+      "cacheComputeMs": {
+        "n": 24,
+        "median": 0.4,
+        "p95": 2.1
+      },
+      "cacheFrameMs": {
+        "n": 24,
+        "median": 15.6,
+        "p95": 16.6
+      },
+      "jsHeapBytes": {
+        "n": 24,
+        "median": 8200116,
+        "p95": 8217308
+      },
+      "linearBytes": 0,
+      "engineGzipBytes": 5063
+    },
+    "worker": {
+      "initMs": {
+        "n": 24,
+        "median": 57.6,
+        "p95": 69.6
+      },
+      "firstComputeMs": {
+        "n": 24,
+        "median": 7.6,
+        "p95": 14.2
+      },
+      "firstFrameMs": {
+        "n": 24,
+        "median": 32.5,
+        "p95": 36.1
+      },
+      "computeMs": {
+        "n": 552,
+        "median": 2.9,
+        "p95": 6.6
+      },
+      "inputDomMs": {
+        "n": 552,
+        "median": 3.1,
+        "p95": 6.8
+      },
+      "mainTaskDelayMs": {
+        "n": 552,
+        "median": 0.1,
+        "p95": 0.2
+      },
+      "inputFrameMs": {
+        "n": 552,
+        "median": 15.7,
+        "p95": 21
+      },
+      "cacheComputeMs": {
+        "n": 24,
+        "median": 0.4,
+        "p95": 1.9
+      },
+      "cacheFrameMs": {
+        "n": 24,
+        "median": 15.6,
+        "p95": 16.8
+      },
+      "jsHeapBytes": {
+        "n": 24,
+        "median": 8477412,
+        "p95": 8495088
+      },
+      "linearBytes": 0,
+      "engineGzipBytes": 5063
+    },
+    "wasm": {
+      "initMs": {
+        "n": 24,
+        "median": 82.1,
+        "p95": 88.7
+      },
+      "firstComputeMs": {
+        "n": 24,
+        "median": 6.8,
+        "p95": 12.5
+      },
+      "firstFrameMs": {
+        "n": 24,
+        "median": 32.1,
+        "p95": 35.4
+      },
+      "computeMs": {
+        "n": 552,
+        "median": 2.9,
+        "p95": 7.1
+      },
+      "inputDomMs": {
+        "n": 552,
+        "median": 3.2,
+        "p95": 7.4
+      },
+      "mainTaskDelayMs": {
+        "n": 552,
+        "median": 0.1,
+        "p95": 0.2
+      },
+      "inputFrameMs": {
+        "n": 552,
+        "median": 15.7,
+        "p95": 23.1
+      },
+      "cacheComputeMs": {
+        "n": 24,
+        "median": 0.5,
+        "p95": 2.1
+      },
+      "cacheFrameMs": {
+        "n": 24,
+        "median": 15.6,
+        "p95": 16.6
+      },
+      "jsHeapBytes": {
+        "n": 24,
+        "median": 5858632,
+        "p95": 5879032
+      },
+      "linearBytes": 11206656,
+      "engineGzipBytes": 23070
+    }
+  },
+  "production": {
+    "mobileViewport": "390x844",
+    "warmInputFrameMs": {
+      "n": 23,
+      "median": 13.1,
+      "p95": 14.9
+    }
+  }
+}

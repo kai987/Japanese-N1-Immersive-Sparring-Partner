@@ -23,7 +23,9 @@
     "audio:dedupe": "node scripts/plan-audio-storage.ts",
     "audio:stage": "node scripts/stage-audio-upload.ts",
     "audio:publish": "node scripts/verify-audio-storage.ts --publish",
-    "audio:validate:remote": "node scripts/verify-audio-storage.ts"
+    "audio:validate:remote": "node scripts/verify-audio-storage.ts",
+    "audio:compare": "node tools/n1-tool/compare.mjs",
+    "bench:search": "npm run build && node benchmarks/search/run.mjs"
   },
   "dependencies": {
     "react": "19.2.8",

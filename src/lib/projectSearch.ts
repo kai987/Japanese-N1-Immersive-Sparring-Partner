@@ -1,3 +1,4 @@
+import { rankLessons, type RankedLesson } from './lessonRanking.ts'
 import type { DailyLesson, ReadingMode, SectionId } from '../types.ts'
 import type { CompoundVerbSeries } from '../data/compound-verbs.ts'
 import type { LiveUnit } from '../data/live-reaction-units.ts'
@@ -41,7 +42,7 @@ const normalize = (value: string) =>
 export interface IndexedSearchChunk extends SearchChunk { normalized: string; compact: string }
 export interface LessonSearchRecord { lesson: Pick<DailyLesson, 'date' | 'day' | 'title'>; chunks: IndexedSearchChunk[] }
 export type LessonSearchIndex = LessonSearchRecord[]
-interface PreparedQuery { raw: string; normalized: string; compact: string; tokens: string[]; terms: string[]; literal: string }
+export interface PreparedQuery { raw: string; normalized: string; compact: string; tokens: string[]; terms: string[]; literal: string }
 const prepareQuery = (raw: string): PreparedQuery => {
   const normalized = normalize(raw)
   return { raw, normalized, compact: normalized.replace(/\s+/g, ''), tokens: normalized.split(/\s+/).filter(Boolean),
@@ -50,38 +51,6 @@ const prepareQuery = (raw: string): PreparedQuery => {
 const prepareChunk = (chunk: SearchChunk): IndexedSearchChunk => {
   const normalized = normalize(chunk.text)
   return { ...chunk, normalized, compact: normalized.replace(/\s+/g, '') }
-}
-
-const fuzzySubsequenceScore = (query: string, target: string) => {
-  if (query.length < 3 || target.length < query.length) return 0
-  let q = 0
-  let start = -1
-  let end = -1
-  for (let i = 0; i < target.length && q < query.length; i += 1) {
-    if (target[i] === query[q]) {
-      if (start === -1) start = i
-      end = i
-      q += 1
-    }
-  }
-  if (q !== query.length || start === -1) return 0
-  const spread = end - start + 1
-  const density = query.length / spread
-  return density >= 0.45 ? 18 * density : 0
-}
-
-const scoreText = (query: PreparedQuery, chunk: IndexedSearchChunk) => {
-  if (!query.normalized || !query.compact || !chunk.compact) return 0
-  let score = 0
-  if (chunk.compact === query.compact) score += 160
-  else if (chunk.compact.startsWith(query.compact)) score += 105
-  else if (chunk.compact.includes(query.compact)) score += 78
-  if (query.tokens.length > 1) {
-    const matched = query.tokens.filter(token => chunk.normalized.includes(token)).length
-    score += matched === query.tokens.length ? 52 : (matched / query.tokens.length) * 24
-  }
-  if (!score) score += fuzzySubsequenceScore(query.compact, chunk.compact)
-  return score ? score + chunk.priority : 0
 }
 
 const makeSnippet = (text: string, query: string) => {
@@ -214,24 +183,12 @@ export function createProjectNotesIndex(compoundVerbSeries: CompoundVerbSeries[]
 })))
   return { compounds, live }
 }
-interface RankedLesson { lesson: LessonSearchRecord['lesson']; best: IndexedSearchChunk; score: number; hits: number }
 interface RankedNotes<T> { item: T; score: number }
 interface RankedResults { query: PreparedQuery; lessons: RankedLesson[]; compounds: RankedNotes<CompoundNoteIndex>[]; live: RankedNotes<LiveNoteIndex>[] }
 const queryCache = new WeakMap<LessonSearchIndex, WeakMap<ProjectNotesIndex, Map<string, RankedResults>>>()
 
 function rankProject(query: PreparedQuery, index: LessonSearchIndex, notes: ProjectNotesIndex): RankedResults {
-  const lessons: RankedLesson[] = []
-  for (const { lesson, chunks } of index) {
-    let best: IndexedSearchChunk | undefined, bestScore = 0, hits = 0
-    for (const chunk of chunks) {
-      const score = scoreText(query, chunk)
-      if (score <= 0) continue
-      hits++
-      if (score > bestScore) { best = chunk; bestScore = score }
-    }
-    if (best) lessons.push({ lesson, best, hits, score: bestScore + Math.min(hits, 8) * 2 })
-  }
-  lessons.sort((a, b) => b.score - a.score || b.lesson.date.localeCompare(a.lesson.date))
+  const lessons = rankLessons(query, index)
   const compounds = notes.compounds.filter(item => matchesFields(query, item.searchable)).map(item => ({ item,
     score: fieldScore(query, item.words) * 4 || fieldScore(query, item.title) }))
     .sort((a, b) => b.score - a.score || a.item.order - b.item.order)
