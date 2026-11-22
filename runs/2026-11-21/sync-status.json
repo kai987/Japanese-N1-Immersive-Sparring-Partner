@@ -1,9 +1,9 @@
 {
   "targetDate": "2026-11-21",
   "day": 84,
-  "stage": "validating",
+  "stage": "published",
   "schemaVersion": 1,
-  "status": "validating",
+  "status": "published",
   "reason": "source_and_upstream_verified",
   "upstreamSourceCommit": "e28c998759f76c1ac1a0d41fcf77bc9d6c41d17f",
   "sourcePagesRunId": 44849704624,
@@ -17,8 +17,24 @@
     "allPassed": true
   },
   "lastError": null,
-  "nextStep": "Verify exact Sync and Pages plus live deployment",
-  "updatedAt": "2026-11-22T08:39:30.753Z",
+  "nextStep": "Verify the exact shared audio continuation and await the separate unique-audio worker and verifier",
+  "updatedAt": "2026-11-22T08:49:40.304Z",
   "requestCommit": "cc7477da91fb54718ba8f75bf8191d5cba00f8fe",
-  "requestBlobSha": "dbbd811d2f3ed432eed3630d5b7c9006c0fee9b7"
+  "requestBlobSha": "dbbd811d2f3ed432eed3630d5b7c9006c0fee9b7",
+  "manifestSha256": "88094c0af54bb208168eac109b8a344537dbf694eb2f4cd970e0cf3b50b1ea49",
+  "verifiedFiles": 248,
+  "latestDate": "2026-11-21",
+  "title": "「一度の評価」と「その後の安心」",
+  "sourceCommit": "e28c998759f76c1ac1a0d41fcf77bc9d6c41d17f",
+  "releaseCommit": "bf6f0967fa24761a9d9683249ca34008f005347e",
+  "pagesRunId": 45004236941,
+  "syncRunId": 45003832956,
+  "counts": {
+    "vocabularyNew": 3,
+    "vocabularyReview": 17,
+    "grammarNew": 0,
+    "grammarReview": 7
+  },
+  "verifiedAt": "2026-11-22T08:49:39.921Z",
+  "textPublicationVerified": true
 }
