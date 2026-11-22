@@ -1,0 +1,83 @@
+name: Playwright shard comparison
+on:
+  push:
+    branches: [codex/ci-playwright-shard-bench]
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ github.sha }}
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build
+      - name: Package exact preview build
+        run: |
+          tar -czf preview.tar.gz dist
+          sha256sum preview.tar.gz > preview.sha256
+          git rev-parse HEAD > source.commit
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: exact-preview
+          path: |
+            preview.tar.gz
+            preview.sha256
+            source.commit
+          retention-days: 7
+          if-no-files-found: error
+  browser:
+    name: Browser (${{ matrix.label }})
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - label: baseline
+            shard: ''
+          - label: shard-1
+            shard: --shard=1/2
+          - label: shard-2
+            shard: --shard=2/2
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ github.sha }}
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+      - run: npm ci --no-audit --no-fund
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: exact-preview
+      - name: Verify commit and preview bytes
+        run: |
+          test "$(git rev-parse HEAD)" = "$(cat source.commit)"
+          sha256sum -c preview.sha256
+          tar -xzf preview.tar.gz
+      - name: Install test browser
+        run: npx playwright install --with-deps chromium
+      - name: Browser tests
+        env:
+          PLAYWRIGHT_JSON_OUTPUT_FILE: browser.json
+          SHARD: ${{ matrix.shard }}
+        run: npm run test:e2e -- --reporter=line,json $SHARD
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: browser-${{ matrix.label }}
+          path: |
+            browser.json
+            preview.sha256
+            source.commit
+          retention-days: 7
+          if-no-files-found: error
