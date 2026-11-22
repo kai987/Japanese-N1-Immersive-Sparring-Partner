@@ -14,17 +14,17 @@
   "modelVersion": "1.0.0",
   "sharedSource": {
     "repository": "https://github.com/kai987/japan-it-ai-daily",
-    "commit": "b3f0c077fc9b7847d6a97e6415c6c565f9bbd281"
+    "commit": "499d116232965ecbef459df3f9c34e767b15c27b"
   },
   "providers": {
     "daily": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/",
     "supabase": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/"
   },
   "summary": {
-    "total": 9644,
-    "reused": 1771,
+    "total": 9650,
+    "reused": 1777,
     "uploads": 7873,
-    "savedBytes": 49909935,
+    "savedBytes": 50138301,
     "uploadBytes": 279672237
   },
   "clips": {
@@ -15743,6 +15743,13 @@
       "duration": 4.368,
       "sha256": "b3c580c517e61033238ae5db725e0dce1a0a1f1751e3bd1a5dfc01557536eb36"
     },
+    "3e2f5ef8b173a414": {
+      "provider": "daily",
+      "path": "japanese/2026-11-21/vocab-03--234c9764341592a4f38742233ec2c0f91b16f9b3d5587d7372e38be5cae5bc78.mp3",
+      "bytes": 12717,
+      "duration": 0.964,
+      "sha256": "234c9764341592a4f38742233ec2c0f91b16f9b3d5587d7372e38be5cae5bc78"
+    },
     "3e2fb0a605c449fa": {
       "provider": "supabase",
       "path": "morioki-normal/3e2fb0a605c449fa--d5493621fefec80588541ae5fe6a5d7dd90eea4dcf02f9663b17f65d21a6ade5.mp3",
@@ -18122,6 +18129,13 @@
       "sha256": "3ae0464090b303b7acf3afce4690bac32065af6e01e649d7a2dd4f587abce3c3",
       "bytes": 15213,
       "duration": 1.814
+    },
+    "4682c2ab8c5d9dbf": {
+      "provider": "daily",
+      "path": "japanese/2026-11-21/vocab-02--4796c2c66e96fe9a97c59cc31724126c73c48817f8e143732c7849f6c0fc3e90.mp3",
+      "bytes": 12429,
+      "duration": 0.953,
+      "sha256": "4796c2c66e96fe9a97c59cc31724126c73c48817f8e143732c7849f6c0fc3e90"
     },
     "4685b43cf39f8318": {
       "provider": "supabase",
@@ -23792,6 +23806,13 @@
       "sha256": "94099511458911d47d6d4830b6d3601e2755fd8ff0002679013b6b7457a61873",
       "bytes": 18861,
       "duration": 2.278
+    },
+    "5b4ef597a6e88a83": {
+      "provider": "daily",
+      "path": "japanese/2026-11-21/example-02--b35369e3ff96caaa217199051def0d89bbae6eaf6c86df258ba83654b3a17191.mp3",
+      "bytes": 68013,
+      "duration": 5.572,
+      "sha256": "b35369e3ff96caaa217199051def0d89bbae6eaf6c86df258ba83654b3a17191"
     },
     "5b52a6c827f23414": {
       "provider": "supabase",
@@ -29952,6 +29973,13 @@
       "sha256": "64a2a0e32947cfc82cce0e56dc6ce43c1e9eb608d15052b162b5a76a87c0abdb",
       "bytes": 9645,
       "duration": 1.117
+    },
+    "71e3f5abb9093c7f": {
+      "provider": "daily",
+      "path": "japanese/2026-11-21/example-01--c6e5eab7feb39788baffbd069245193429128b5eddb325853e1fa382670fdca7.mp3",
+      "bytes": 62829,
+      "duration": 5.142,
+      "sha256": "c6e5eab7feb39788baffbd069245193429128b5eddb325853e1fa382670fdca7"
     },
     "71e73d052d3f3121": {
       "provider": "daily",
@@ -53039,6 +53067,13 @@
       "bytes": 14637,
       "duration": 1.732
     },
+    "c9187302adb88686": {
+      "provider": "daily",
+      "path": "japanese/2026-11-21/vocab-01--8ef7184b76b28bedbd8a0adcd86609823be45fd359060b38c26daf42c3f43c77.mp3",
+      "bytes": 14157,
+      "duration": 1.082,
+      "sha256": "8ef7184b76b28bedbd8a0adcd86609823be45fd359060b38c26daf42c3f43c77"
+    },
     "c91c126a9615a2fe": {
       "provider": "supabase",
       "path": "morioki-normal/c91c126a9615a2fe--2aee53071880a1f6b1fb22f17ed48d55caaad3c49e0e1f73054acaaf4a4cd567.mp3",
@@ -66374,6 +66409,13 @@
       "bytes": 95661,
       "duration": 11.877
     },
+    "fbb779a72846c283": {
+      "provider": "daily",
+      "path": "japanese/2026-11-21/example-03--8965d7c2c3cd1b1fceee89ed2b3ee73a5f021e85334b6d986aaf7937fa13b2f9.mp3",
+      "bytes": 58221,
+      "duration": 4.77,
+      "sha256": "8965d7c2c3cd1b1fceee89ed2b3ee73a5f021e85334b6d986aaf7937fa13b2f9"
+    },
     "fbb85891da470305": {
       "provider": "supabase",
       "path": "morioki-normal/fbb85891da470305--0c4396b2be08eb9f2fadb78285bc0bdfd81c5016c401a6e9c73a0335c7507978.mp3",
@@ -67537,5 +67579,5 @@
       "duration": 2.289
     }
   },
-  "verifiedAt": "2026-11-20T02:50:27.277Z"
+  "verifiedAt": "2026-11-22T08:51:36.180Z"
 }
