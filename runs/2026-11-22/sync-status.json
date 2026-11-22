@@ -1,9 +1,9 @@
 {
   "targetDate": "2026-11-22",
   "day": 85,
-  "stage": "validating",
+  "stage": "published",
   "schemaVersion": 1,
-  "status": "validating",
+  "status": "published",
   "reason": "source_and_upstream_verified",
   "upstreamSourceCommit": "aed5e0c1f4e02f9f4aa04378a15439b160543cab",
   "sourcePagesRunId": 45003995700,
@@ -17,8 +17,24 @@
     "allPassed": true
   },
   "lastError": null,
-  "nextStep": "Verify exact Sync and Pages plus live deployment",
-  "updatedAt": "2026-11-22T11:38:14.148Z",
+  "nextStep": "Verify the exact shared audio continuation and await the separate unique-audio worker and verifier",
+  "updatedAt": "2026-11-22T11:45:33.231Z",
   "requestCommit": "cfa8e85122d83a279f7058db80c3cea7011bd4f9",
-  "requestBlobSha": "d0735a469b4ca41b5521d3718a6b9a8638a61a3b"
+  "requestBlobSha": "d0735a469b4ca41b5521d3718a6b9a8638a61a3b",
+  "manifestSha256": "303d20fc16015e63e8d064e47f09d809f5ac75ea2d8983f917c6341e23bd8426",
+  "verifiedFiles": 250,
+  "latestDate": "2026-11-22",
+  "title": "止められる自動化は、なぜ必要か",
+  "sourceCommit": "aed5e0c1f4e02f9f4aa04378a15439b160543cab",
+  "releaseCommit": "f54a6925299f09eb765356baabc9e8a8e3a80a3c",
+  "pagesRunId": 45018740543,
+  "syncRunId": 45018298302,
+  "counts": {
+    "vocabularyNew": 4,
+    "vocabularyReview": 16,
+    "grammarNew": 1,
+    "grammarReview": 7
+  },
+  "verifiedAt": "2026-11-22T11:45:32.837Z",
+  "textPublicationVerified": true
 }
