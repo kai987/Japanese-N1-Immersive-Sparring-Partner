@@ -31,3 +31,8 @@ __pycache__/
 .env.*
 !.env.example
 /supabase/.temp/
+
+# Local Rust and search benchmark builds
+/tools/n1-tool/target/
+/benchmarks/search/wasm/target/
+/benchmarks/search/generated/

@@ -95,3 +95,11 @@ npm run test:e2e
 `tests/optimization.spec.ts` covers refresh/draft recovery, bad links, failed lazy
 modules, retired lesson metadata, scoped audio loading/retry, external live-unit
 history and common content edges on desktop and mobile.
+
+## Offline audio and search experiments
+
+Run the [Rust audio sidecar](../tools/n1-tool/README.md) with
+`npm run audio:compare`. The [browser search benchmark](../benchmarks/search/README.md)
+compares main-thread TypeScript, a TypeScript Worker, and the same Worker with a
+resident Rust/WASM lesson ranker. Its experimental modules are built separately
+from the application.
