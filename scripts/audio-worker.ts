@@ -63,6 +63,7 @@ async function run(command: string, args: string[], cwd = sourceRoot, environmen
   })
 }
 const readJson = (path: string) => JSON.parse(readFileSync(path, 'utf8'))
+const remoteMain = () => run('gh', ['api', `repos/${githubRepository}/git/ref/heads/main`, '--jq', '.object.sha'])
 async function atomicClone(remote: string, target: string, options: string[]) {
   const temporary = mkdtempSync(join(dirname(target), '.clone-'))
   try {
@@ -196,28 +197,57 @@ export async function verifyWorkerReleaseAssets(runId: number, localDist?: strin
     })
   } finally { if (temporary) rmSync(temporary, { recursive: true, force: true }) }
 }
-async function verifyDeployment(commit: string, localDist?: string, verificationDirectory?: string) {
-  const path = `repos/${githubRepository}/actions/workflows/deploy-pages.yml/runs?head_sha=${commit}&branch=main&per_page=100`
-  let dispatched = false
+type PagesRun = { id: number; head_sha: string; status: string; conclusion: string | null; run_attempt: number }
+type DeploymentCheckpoint = { commit: string; runId?: number; dispatchRequested?: boolean; retryRequestedFor?: number }
+
+export async function waitForWorkerDeployment(
+  initial: DeploymentCheckpoint,
+  operations: {
+    listRuns: () => Promise<PagesRun[]>
+    save: (checkpoint: DeploymentCheckpoint) => void
+    verify: (runId: number) => Promise<unknown>
+    dispatch: () => Promise<void>
+    rerun: (runId: number) => Promise<void>
+    wait: () => Promise<unknown>
+  },
+  retryRunId?: number,
+) {
+  let checkpoint = initial
+  let retried = false
+  const save = (fields: Partial<DeploymentCheckpoint>) => {
+    checkpoint = { ...checkpoint, ...fields }
+    operations.save(checkpoint)
+  }
   for (let attempt = 0; attempt < 18; attempt++) {
-    const { workflow_runs: all } = JSON.parse(await run('gh', ['api', path]))
-    const runs = all.filter((r: { head_sha: string }) => r.head_sha === commit)
-    const successful = runs.find((r: { id: number; status: string; conclusion: string }) => r.status === 'completed' && r.conclusion === 'success' && Number.isSafeInteger(r.id) && r.id > 0)
+    const runs = (await operations.listRuns()).filter(run =>
+      run.head_sha === checkpoint.commit && Number.isSafeInteger(run.id) && run.id > 0)
+    const successful = runs.find(run => run.status === 'completed' && run.conclusion === 'success')
+    const pinned = runs.find(run => run.id === checkpoint.runId)
+    const active = pinned && pinned.status !== 'completed' ? pinned : runs.find(run => run.status !== 'completed')
+    const selected = successful ?? active ?? pinned ?? runs[0]
+    if (selected && selected.id !== checkpoint.runId) save({ runId: selected.id, retryRequestedFor: undefined })
+
     if (successful) {
-      await verifyWorkerReleaseAssets(successful.id, localDist, { retainedProof: verificationDirectory ? retainedWorkerReleasePath(verificationDirectory, commit) : undefined })
+      await operations.verify(successful.id)
       return true
     }
-    const active = runs.some((r: { status: string }) => ['queued', 'requested', 'pending', 'waiting', 'in_progress'].includes(r.status))
-    if (!active && !dispatched && attempt > 0) {
-      const main = await run('gh', ['api', `repos/${githubRepository}/git/ref/heads/main`, '--jq', '.object.sha'])
-      if (main !== commit) throw new Error('awaiting_rebase: main advanced before deployment')
-      await run('gh', ['workflow', 'run', 'deploy-pages.yml', '--repo', githubRepository, '--ref', 'main'])
-      dispatched = true
+    if (selected?.status === 'completed' && checkpoint.retryRequestedFor !== selected.run_attempt) {
+      if (retried || selected.id !== retryRunId) {
+        throw new Error(`Pages run ${selected.id} finished with ${selected.conclusion ?? 'no conclusion'}`)
+      }
+      await operations.rerun(selected.id)
+      retried = true
+      save({ retryRequestedFor: selected.run_attempt })
     }
-    if (abort.signal.aborted) throw new Error('Worker interrupted')
-    await delay(15000, undefined, { signal: abort.signal })
+    // Let the push-triggered workflow become visible before requesting one.
+    // A checkpointed run or dispatch may simply be absent from this listing.
+    if (!selected && !checkpoint.runId && !checkpoint.dispatchRequested && attempt > 0) {
+      await operations.dispatch()
+      save({ dispatchRequested: true })
+    }
+    if (attempt < 17) await operations.wait()
   }
-  throw new Error('awaiting_deploy: exact commit is not yet verified')
+  return false
 }
 
 export type AudioRepair = { dates: string[]; liveUnitIds?: string[]; evidenceDirectory: string; entrypoint: string; deadline: number }
@@ -271,36 +301,72 @@ export async function audioWorker(repair?: AudioRepair) {
     atomicJson(statePath, state)
     console.log(JSON.stringify({ phase: value, ...fields }))
   }
+  const verifyDeployment = async (commit: string, localDist?: string) => {
+    const previous = state.deployment as DeploymentCheckpoint | undefined
+    const checkpoint = previous?.commit === commit ? previous : { commit }
+    const retryRunId = state.phase === 'retry_pending' && state.failedPhase === 'awaiting_deploy' ? checkpoint.runId : undefined
+    const pendingFields = {
+      releaseCommit: commit, deployment: checkpoint, jobPending: true, pendingClips: 0,
+      nextAttempt: schedule.nextOpening.toISOString(), lastError: null, failedPhase: null,
+    }
+    phase('awaiting_deploy', pendingFields)
+    const path = `repos/${githubRepository}/actions/workflows/deploy-pages.yml/runs?head_sha=${commit}&branch=main&per_page=100`
+    const requireCurrentMain = async () => {
+      if (await remoteMain() !== commit) throw new Error('awaiting_rebase: main advanced before deployment')
+    }
+    try {
+      const verified = await waitForWorkerDeployment(checkpoint, {
+        listRuns: async () => JSON.parse(await run('gh', ['api', path, '--jq',
+          '[.workflow_runs[] | {id, head_sha, status, conclusion, run_attempt}]'])),
+        save: deployment => phase('awaiting_deploy', { deployment }),
+        verify: id => verifyWorkerReleaseAssets(id, localDist, { retainedProof: retainedWorkerReleasePath(join(root, 'verification'), commit) }),
+        dispatch: async () => {
+          await requireCurrentMain()
+          await run('gh', ['workflow', 'run', 'deploy-pages.yml', '--repo', githubRepository, '--ref', 'main'])
+        },
+        rerun: async id => {
+          await requireCurrentMain()
+          await run('gh', ['run', 'rerun', String(id), '--repo', githubRepository])
+        },
+        wait: () => delay(15000, undefined, { signal: abort.signal }),
+      }, retryRunId)
+      if (verified) return true
+    } catch (error) {
+      if (repair || !(abort.signal.reason === 'audio_window_ended' || Date.now() >= windowDeadline)) throw error
+    }
+    if (repair) process.exitCode = 1
+    return false
+  }
   let attempt = ''
   let diagnostics = ''
   let usedEngine = false
   let claimed = false
-  const claim = (reason: string) => {
+  const claim = (reason: string, stage = 'detected') => {
     checkRunning()
     // Called under the OS lock, before waiting for upstream audio or synthesis.
     if (!repair) atomicJson(join(root, 'schedule.json'), { version: 1, claimedDate: schedule.date, reason, startedAt: new Date().toISOString() })
     claimed = true
-    phase('detected', { jobPending: true, detectedReason: reason, nextAttempt: schedule.nextOpening.toISOString() })
+    phase(stage, { jobPending: true, detectedReason: reason, nextAttempt: schedule.nextOpening.toISOString() })
   }
   try {
     // Recheck under the lock: simultaneous manual/login/calendar triggers share one latch.
     if (!repair && !audioSchedule(new Date(), readAudioSchedule(root)).allowed) return
-    if (unfinishedAudio(state)) claim('resume_pending')
+    if (unfinishedAudio(state)) {
+      const deploymentRetry = state.phase === 'retry_pending' && state.releaseCommit
+      claim('resume_pending', deploymentRetry ? 'retry_pending' : 'detected')
+    }
     if (!repair && state.releaseCommit && state.phase !== 'complete') {
-      const main = await run('gh', ['api', `repos/${githubRepository}/git/ref/heads/main`, '--jq', '.object.sha'])
-      const pending = pendingDeploymentForMain(state, main)
+      const pending = pendingDeploymentForMain(state, await remoteMain())
       if (pending) {
-        phase('awaiting_deploy')
-        await verifyDeployment(pending, undefined, join(root, 'verification'))
-        phase('complete', { jobPending: false, lastError: null, lastVerifiedCommit: state.releaseCommit })
+        if (await verifyDeployment(pending)) phase('complete', { jobPending: false, lastVerifiedCommit: pending })
         return
-      } else phase('reconciling', { releaseCommit: null })
+      } else phase('reconciling', { releaseCommit: null, deployment: null })
     }
     phase('fetching', { lastError: null, attempt: Number(state.attempt ?? 0) + 1 })
     const control = join(root, 'control')
     if (!existsSync(join(control, '.git'))) await atomicClone(repository, control, ['--single-branch', '--branch', 'main'])
     const base = await synchronizeWorkerControl(control)
-    phase('catalog', { baseCommit: base, releaseCommit: null })
+    phase('catalog', { baseCommit: base, releaseCommit: null, deployment: null })
     const attempts = join(root, 'attempts')
     mkdirSync(attempts, { recursive: true, mode: 0o700 })
     // Every attempt starts clean. Generated audio is retained separately.
@@ -366,7 +432,7 @@ export async function audioWorker(repair?: AudioRepair) {
       for (const [path, value] of metadataPaths.map((path, i) => [path, [merged.manifest, merged.index, merged.sources, merged.pending][i]] as const)) atomicJson(join(attempt, path), value)
     }
     if (!await run('git', ['diff', '--name-only', '--', ...metadataPaths], attempt)) {
-      if (state.lastVerifiedCommit !== base) await verifyDeployment(base, undefined, join(root, 'verification'))
+      if (state.lastVerifiedCommit !== base && !await verifyDeployment(base)) return
       if (!repair) cleanupPublishedCache(work, published)
       phase('complete', { jobPending: false, pendingClips: 0, releaseCommit: base, lastVerifiedCommit: base, lastError: null })
       return
@@ -411,8 +477,7 @@ export async function audioWorker(repair?: AudioRepair) {
     retainWorkerReleaseProof(join(root, 'verification'), commit, readFileSync(join(attempt, 'dist', releaseManifestName)))
     phase('pushing', { candidateCommit: commit })
     await run('git', ['-c', 'http.version=HTTP/1.1', '-c', 'http.postBuffer=16777216', 'push', 'origin', 'HEAD:main'], attempt)
-    phase('awaiting_deploy', { releaseCommit: commit })
-    await verifyDeployment(commit, join(attempt, 'dist'), join(root, 'verification'))
+    if (!await verifyDeployment(commit, join(attempt, 'dist'))) return
     // All new bytes were remotely verified before commit, and the exact release
     // passed Pages plus real playback tests. Only now remove generated MP3s.
     if (!repair) cleanupPublishedCache(work, readJson(join(attempt, 'public/audio/manifest.json')) as Manifest)

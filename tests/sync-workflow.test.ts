@@ -1,9 +1,9 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import { readFileSync, writeFileSync, mkdtempSync, chmodSync, existsSync, rmSync } from 'node:fs'
+import { readFileSync, writeFileSync, mkdtempSync, chmodSync, existsSync, rmSync, mkdirSync, copyFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { tmpdir } from 'node:os'
-import { execFileSync } from 'node:child_process'
+import { execFileSync, spawnSync } from 'node:child_process'
 import { verifySyncChangedPaths } from '../scripts/verify-sync-changed-paths.mjs'
 import { createReleaseManifest, releaseManifestName } from '../scripts/lib/deploymentVerification.mjs'
 
@@ -149,4 +149,67 @@ test('content commit rejects history, source, UI, control and empty changes', ()
   }
   assert.throws(() => verifySyncChangedPaths(date, `${daily}\nn1-source/2026-09-23.md`))
   assert.throws(() => verifySyncChangedPaths('../main', daily))
+})
+
+const sharedAudio = readFileSync(new URL('../.github/workflows/sync-n1-audio.yml', import.meta.url), 'utf8')
+const audioStep = (name: string) => {
+  const start = sharedAudio.indexOf(`      - name: ${name}\n`)
+  assert.ok(start >= 0, name)
+  const end = sharedAudio.indexOf('\n      - name:', start)
+  return sharedAudio.slice(start, end < 0 ? undefined : end)
+}
+const audioShell = (step: string) => step.split('        run: |\n')[1].replace(/^ {10}/gm, '')
+
+test('shared audio sync preserves the npm failure even when tee succeeds and retains the summary', t => {
+  const root = mkdtempSync(join(tmpdir(), 'n1-audio-sync-test-'))
+  t.after(() => rmSync(root, { recursive: true, force: true }))
+  const step = audioStep('Verify and merge shared audio, record pending utterances')
+  const summary = join(root, 'summary')
+  assert.match(step, /shell: bash/)
+  writeFileSync(join(root, 'npm'), '#!/bin/sh\necho "fixture sync failed"\nexit 27\n', { mode: 0o755 })
+  const result = spawnSync('bash', ['--noprofile', '--norc', '-eo', 'pipefail', '-c', audioShell(step)], {
+    env: { ...process.env, PATH: `${root}:${process.env.PATH}`, RUNNER_TEMP: root, GITHUB_STEP_SUMMARY: summary },
+  })
+  assert.equal(result.status, 27)
+  assert.match(readFileSync(summary, 'utf8'), /fixture sync failed/)
+})
+
+test('shared audio skips expensive gates only when the metadata diff is empty', t => {
+  const root = mkdtempSync(join(tmpdir(), 'n1-audio-sync-diff-'))
+  t.after(() => rmSync(root, { recursive: true, force: true }))
+  const output = join(root, 'output'), summary = join(root, 'summary')
+  const git = (...args: string[]) => execFileSync('git', args, { cwd: root, stdio: 'pipe' })
+  git('init', '-q')
+  const metadata = 'src/data/audio-index.json'
+  mkdirSync(join(root, 'src/data'), { recursive: true })
+  mkdirSync(join(root, 'scripts'))
+  copyFileSync(new URL('../scripts/verify-audio-changed-paths.ts', import.meta.url), join(root, 'scripts/verify-audio-changed-paths.ts'))
+  writeFileSync(join(root, metadata), '{}\n')
+  writeFileSync(join(root, 'other.txt'), 'original')
+  git('add', '.')
+  git('-c', 'user.name=Fixture', '-c', 'user.email=fixture@example.test', 'commit', '-qm', 'fixture')
+
+  const gate = audioShell(audioStep('Check for audio metadata changes'))
+  const runGate = () => {
+    writeFileSync(output, '')
+    const result = spawnSync('bash', ['-e', '-c', gate], {
+      cwd: root, env: { ...process.env, GITHUB_OUTPUT: output, GITHUB_STEP_SUMMARY: summary },
+    })
+    return [result.status, readFileSync(output, 'utf8')]
+  }
+  assert.deepEqual(runGate(), [0, 'changed=false\n'])
+  writeFileSync(join(root, metadata), '{"changed":true}\n')
+  assert.deepEqual(runGate(), [0, 'changed=true\n'])
+  writeFileSync(join(root, 'other.txt'), 'unexpected')
+  assert.deepEqual(runGate(), [1, ''])
+
+  const validation = audioStep('Validate audio snapshot, content and unit contracts')
+  const commit = audioStep('Commit audio metadata with fast-forward protection')
+  for (const step of [validation, commit]) assert.match(step, /if: steps\.metadata\.outputs\.changed == 'true'/)
+  for (const command of ['npm run audio:validate -- --snapshot', 'npm test', 'npm run build', 'git diff --check']) {
+    assert.ok(validation.includes(command))
+  }
+  assert.ok(commit.includes('test "$(git rev-parse origin/main)" = "$base"'))
+  assert.ok(commit.includes('git push origin HEAD:main'))
+  assert.match(audioStep('Deploy changed audio metadata'), /if: steps\.commit\.outputs\.changed == 'true'/)
 })
