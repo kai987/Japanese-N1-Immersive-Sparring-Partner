@@ -103,6 +103,15 @@ test('short real playback remains provable after natural completion without reus
   expect(await playbackProof(page, id, nextClick)).toBeUndefined()
 })
 
+test('supplementary knowledge on the Today page exposes playable Japanese audio', async ({ page }) => {
+  await openRecordedLesson(page)
+  const supplementary = page.getByRole('region', { name: '補充知識', exact: true })
+  await expect(supplementary).toBeVisible()
+  const button = supplementary.locator('.audio-play-button:enabled').first()
+  await expect(button).toBeEnabled()
+  await playRecording(page, button)
+})
+
 test('reading choices can be heard without selecting or submitting an answer', async ({ page }) => {
   await openRecordedLesson(page)
   await page.getByRole('navigation', { name: 'メインナビゲーション', exact: true }).getByRole('button', { name: '読解練習', exact: true }).click()

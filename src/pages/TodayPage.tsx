@@ -1,6 +1,6 @@
 import { Icon, SectionHeader } from '../components/StudyUI'
 import { ProgressRing } from '../components/StudyUI'
-import { AudioButton } from '../components/AudioButton'
+import { AudioButton, SentenceAudio } from '../components/AudioButton'
 import type { ReactNode } from 'react'
 import type { LessonPageProps } from './types'
 import type { BrowserHistoryItem } from '../lib/lessonDataTypes'
@@ -67,7 +67,8 @@ export function TodayPage({ lesson, highlight, go, isLatest, historyEntry, today
     {reviewFocus.length > 0 && <section className="supplementary-points" aria-label="補充知識">
       <h2>補充知識・復習の観点</h2><p>教材の学習ポイントです。実際の誤答記録には含めません。</p>
       {reviewFocus.map((item, index) => <article className="supplementary-point" id={`review-${index}`} tabIndex={-1} key={`${lesson.date}-${index}`}>
-        <h3>{highlight(item.title)}</h3><p>{highlight(item.detail)}</p>
+        <h3><SentenceAudio text={item.title} renderText={highlight} japaneseOnly /></h3>
+        <p><SentenceAudio text={item.detail} renderText={highlight} japaneseOnly /></p>
       </article>)}
     </section>}
   </div>
