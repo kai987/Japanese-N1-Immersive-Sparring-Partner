@@ -9,6 +9,7 @@ import { liveNovember5Groups } from './live-reactions-2026-11-05.ts'
 import { liveNovember9Groups } from './live-reactions-2026-11-09.ts'
 import { liveNovember13Groups } from './live-reactions-2026-11-13.ts'
 import { liveNovember18Groups } from './live-reactions-2026-11-18.ts'
+import { liveNovember23Groups } from './live-reactions-2026-11-23.ts'
 import { osodaManga, otonaWanshoManga, otoshimonoManga, tanpopoManga, type LiveMangaGallery } from './live-manga.ts'
 
 export const liveCategories = [
@@ -79,6 +80,13 @@ const legacyCategories: LiveCategory[] = [
 // 09/30: https://e-comi.shogakukan.co.jp/books/091405040000d0000000
 //        https://dora-world.com/contents/1514
 export const liveUnits: LiveUnit[] = [
+  {
+    id: '2026-11-23', date: '2026-11-23', title: 'ドラえもん「大人をしかる腕章」関連・口語と語彙',
+    description: '2026年11月23日的「直播条反」独立单元。依据7张直播截图（IMG_3441.PNG、IMG_3447.PNG、IMG_3450.PNG、IMG_3454.PNG、IMG_3455.PNG、IMG_3456.PNG、IMG_3457.PNG），其中备忘录可见日期「2026年11月23日 11:49」，不以手机录制时间推断准确开播时刻。关联11月18日的「大人をしかる腕章」和「叱ってほしい大人」等用语，但截图混有延伸词汇、口语和5题测验结果，不把全部笔记称作原作对白，也不推断本期另有新篇名。重复拍摄的表达只收录一次；保留原笔记中的片段、用字和语气，辨析「携わる／携える」「励む／励ます」「揉める／揉む」「ろくに～ない」等，并附读音、中文释义及原创日中例句。关联漫画沿用11月18日已经上传的中日对照原图。',
+    countLabel: liveUnitCountLabel(liveNovember23Groups), groups: liveNovember23Groups,
+    manga: otonaWanshoManga,
+  },
+
   {
     id: '2026-11-18', date: '2026-11-18', title: 'ドラえもん「大人をしかる腕章」',
     description: '相关短篇：大人をしかる腕章，收录于普通单行本第33卷第6话。根据打扫、乱扔烟头、佩戴腕章及「子供のくせに」「生意気」等笔记线索，与官方目录、剧情和原作资料对照识别；篇名已由补充漫画的日文标题页确认。附16张中日对照漫画图片，按每组中文彩色、日文黑白的顺序排列。笔记标题日期：2026-11-18。整理10张连续手机笔记截图，合并重叠条目，学习条件与让步、叮嘱与祈愿、愿望表达、词义辨析及自动词／他动词。保留可见原文，补充读音、中文释义、用法要点和原创日中例句；未完句和速记简写另作说明。词汇与语法拓展仍属于课堂学习补充。',
