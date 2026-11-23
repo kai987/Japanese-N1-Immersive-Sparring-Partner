@@ -1,9 +1,9 @@
 {
   "targetDate": "2026-11-23",
   "day": 86,
-  "stage": "validating",
+  "stage": "published",
   "schemaVersion": 1,
-  "status": "validating",
+  "status": "published",
   "reason": "source_and_upstream_verified",
   "upstreamSourceCommit": "0574a53a138408b6751f8863a114ba5a3887af97",
   "sourcePagesRunId": 45094760108,
@@ -17,8 +17,24 @@
     "allPassed": true
   },
   "lastError": null,
-  "nextStep": "Verify exact Sync and Pages plus live deployment",
-  "updatedAt": "2026-11-23T01:36:25.410Z",
+  "nextStep": "Verify the exact shared audio continuation and await the separate unique-audio worker and verifier",
+  "updatedAt": "2026-11-23T01:43:12.254Z",
   "requestCommit": "311bd51774f4d7bbac455a26b80d5026dcb12960",
-  "requestBlobSha": "43ae57607ad24351ec9c4a938ecf0cd33bed3587"
+  "requestBlobSha": "43ae57607ad24351ec9c4a938ecf0cd33bed3587",
+  "manifestSha256": "4af83a25e28829d718ac727ad93ecba61c0fbd87b6b0ff6f9aaeaafd25f96288",
+  "verifiedFiles": 252,
+  "latestDate": "2026-11-23",
+  "title": "「本人だと分かった」と「使えるようになった」の間",
+  "sourceCommit": "0574a53a138408b6751f8863a114ba5a3887af97",
+  "releaseCommit": "72899a342f84b3f397ad64a095843a69c8aa7ad5",
+  "pagesRunId": 45096028892,
+  "syncRunId": 45095504116,
+  "counts": {
+    "vocabularyNew": 3,
+    "vocabularyReview": 17,
+    "grammarNew": 0,
+    "grammarReview": 5
+  },
+  "verifiedAt": "2026-11-23T01:43:11.872Z",
+  "textPublicationVerified": true
 }
