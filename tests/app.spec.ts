@@ -1,6 +1,7 @@
-import { test, expect } from '@playwright/test'
+import { test, expect, type Locator } from '@playwright/test'
 import { readFileSync } from 'node:fs'
 import { validateContent } from '../scripts/validate-content.ts'
+import { practiceHref } from '../src/lib/questionReview.ts'
 import { validateStudySnapshot, withItStudy, type StudySnapshot } from '../src/lib/itStudy.ts'
 
 const catalog = validateContent().lessons
@@ -143,29 +144,44 @@ test('blocked writes keep the app usable and retry persists in-memory work', asy
   await expect(page.getByRole('button', { name: '読了済み', exact: true })).toBeVisible()
   expect(errors).toEqual([])
 })
-// Cover every saved lesson in short groups so a slow browser can still
-// finish the entire group within Playwright's normal per-test deadline.
+async function submitDisplayedOptionC(exercise: Locator, day: number) {
+  await exercise.locator('.answer-option').nth(2).press('Enter')
+  const submit = exercise.getByRole('button', { name: '回答する', exact: true })
+  await expect(submit).toBeEnabled()
+  await submit.press('Enter')
+  const correctChoice = ['A', 'B', 'C', 'D'][(day - 1) % 4]
+  await expect(exercise.locator('.result-title')).toHaveText(correctChoice === 'C' ? '正解です' : `正解：${correctChoice}`)
+}
+
+test('the keyboard opens an archived lesson and submits its reading answer', async ({ page }) => {
+  const archived = catalog.at(-1)!
+  await page.goto('/')
+  const datePicker = page.locator('.date-dropdown-trigger')
+  await datePicker.press('Enter')
+  await page.getByRole('option', { name: new RegExp(`^Day ${archived.day}\\b`) }).press('Enter')
+  await expect(datePicker).toContainText(`Day ${archived.day} ·`)
+  await page.getByRole('button', { name: '読解練習', exact: true }).press('Enter')
+  await openLegacyQuestion(page)
+  await submitDisplayedOptionC(page.locator('#reading-question'), archived.day)
+})
+
+// Use the public question link for each saved lesson. The separate keyboard
+// walkthrough exercises the date picker; these batches exercise answer order.
 const answerBatchSize = 2
 const answerBatches = Array.from({ length: Math.ceil(catalog.length / answerBatchSize) }, (_, index) =>
   catalog.slice(index * answerBatchSize, (index + 1) * answerBatchSize))
 for (const batch of answerBatches) test(`choosing C for every lesson checks ${batch[0].date} through ${batch.at(-1)!.date}`, async ({ page }) => {
-  await page.goto('/')
-  // This exhaustive check exercises the keyboard path. Pointer interactions
-  // are covered above and need stable animation frames on the background Mac.
   const datePicker = page.locator('.date-dropdown-trigger')
+  const exercise = page.locator('#reading-question')
   for (const lesson of batch) {
-    await datePicker.press('Enter')
-    await page.getByRole('option', { name: new RegExp(`^Day ${lesson.day}\\b`) }).press('Enter')
-    await expect(datePicker).toContainText(`Day ${lesson.day} ·`)
-    await page.getByRole('button', { name: '読解練習', exact: true }).press('Enter')
-    await openLegacyQuestion(page)
-    const exercise = page.locator('#reading-question')
-    await exercise.locator('.answer-option').nth(2).press('Enter')
-    const submit = exercise.getByRole('button', { name: '回答する', exact: true })
-    await expect(submit).toBeEnabled()
-    await submit.press('Enter')
-    const correctChoice = ['A', 'B', 'C', 'D'][(lesson.day - 1) % 4]
-    await expect(exercise.locator('.result-title')).toHaveText(correctChoice === 'C' ? '正解です' : `正解：${correctChoice}`)
+    const { id, prompt } = lesson.reading.question
+    await page.goto(`/${practiceHref(lesson.date, 'reading', id)}`, { waitUntil: 'domcontentloaded' })
+    await Promise.all([
+      expect(datePicker).toContainText(`Day ${lesson.day} ·`),
+      expect(exercise.getByRole('heading', { name: prompt, exact: true })).toBeVisible(),
+      expect(exercise).toBeFocused(),
+    ])
+    await submitDisplayedOptionC(exercise, lesson.day)
   }
 })
 test('search and mobile Japanese reading remain usable in dark mode', async ({ page }, testInfo) => {

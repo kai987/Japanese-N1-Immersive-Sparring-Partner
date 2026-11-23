@@ -32,11 +32,11 @@ async function openCategory(page: Page, category: PracticeCategory) {
 async function openReview(page: Page, targetLesson = lesson) {
   const datePicker = page.locator('.date-dropdown-trigger')
   if (!(await datePicker.innerText()).includes(`Day ${targetLesson.day} ·`)) {
-    await datePicker.click()
-    await page.getByRole('option', { name: new RegExp(`^Day ${targetLesson.day}\\b`) }).click()
+    await datePicker.press('Enter')
+    await page.getByRole('option', { name: new RegExp(`^Day ${targetLesson.day}\\b`) }).press('Enter')
     await expect(datePicker).toContainText(`Day ${targetLesson.day} ·`)
   }
-  await page.getByRole('button', { name: '誤答復習', exact: true }).click()
+  await page.getByRole('button', { name: '誤答復習', exact: true }).press('Enter')
   await expect(page.getByRole('heading', { name: 'この日の実際の誤答', exact: true })).toBeVisible()
 }
 
@@ -214,12 +214,15 @@ for (const historicalLesson of historicalPracticeLessons) test(`Day${historicalL
   for (const category of categories) {
     const categoryQuestions = questions.filter(item => item.category === category)
     const { question } = categoryQuestions.at(-1)!
-    await page.goto(`/${practiceHref(historicalLesson.date, category, question.id)}`)
-    await expect(page.locator('.date-dropdown-trigger')).toContainText(`Day ${historicalLesson.day}`)
-    await expect(page.locator(`[data-practice-category="${category}"] .question-block`)).toHaveCount(counts[category])
-    await expect(exercise(page, question)).toBeFocused()
-    await expect(exercise(page, question).locator('.result-panel')).toHaveCount(0)
-    await expect(exercise(page, question).getByRole('button', { name: '回答する', exact: true })).toBeDisabled()
+    await page.goto(`/${practiceHref(historicalLesson.date, category, question.id)}`, { waitUntil: 'domcontentloaded' })
+    const target = exercise(page, question)
+    await Promise.all([
+      expect(page.locator('.date-dropdown-trigger')).toContainText(`Day ${historicalLesson.day} ·`),
+      expect(page.locator(`[data-practice-category="${category}"] .question-block`)).toHaveCount(counts[category]),
+      expect(target).toBeFocused(),
+      expect(target.locator('.result-panel')).toHaveCount(0),
+      expect(target.getByRole('button', { name: '回答する', exact: true })).toBeDisabled(),
+    ])
   }
   expect(Object.keys((await records(page)).readingAnswers)).toHaveLength(0)
 
@@ -236,10 +239,12 @@ for (const historicalLesson of historicalPracticeLessons) test(`Day${historicalL
   await reviewRow(page, readingQuestion).getByRole('link').click()
   await expect(exercise(page, readingQuestion)).toBeFocused()
   await expect(exercise(page, readingQuestion).locator('.result-panel')).toHaveCount(0)
-  await page.reload()
-  await expect(page.locator('.date-dropdown-trigger')).toContainText(`Day ${historicalLesson.day}`)
-  await expect(exercise(page, readingQuestion)).toBeFocused()
-  await expect(exercise(page, readingQuestion).locator('.result-panel')).toBeVisible()
+  await page.reload({ waitUntil: 'domcontentloaded' })
+  await Promise.all([
+    expect(page.locator('.date-dropdown-trigger')).toContainText(`Day ${historicalLesson.day} ·`),
+    expect(exercise(page, readingQuestion)).toBeFocused(),
+    expect(exercise(page, readingQuestion).locator('.result-panel')).toBeVisible(),
+  ])
   const saved = await records(page)
   expect(saved.readingAttempts[readingQuestion.id]).toHaveLength(1)
   expect(saved.readingAnswers[historicalLesson.reading.question.id]).toBeUndefined()
