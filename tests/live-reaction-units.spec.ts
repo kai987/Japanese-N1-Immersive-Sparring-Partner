@@ -95,11 +95,19 @@ test('mobile unit picker, categories and dark cards remain readable at narrow wi
   await page.getByLabel('选择知识组', { exact: true }).selectOption('live-2026-09-30-sae')
   await page.locator('[data-live-group]').scrollIntoViewIfNeeded()
   await page.screenshot({ path: `${screenshots}/mobile-dark.png` })
-  for (const width of [320, 390, 768, 1440]) {
-    await page.setViewportSize({ width, height: 900 })
-    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(true)
-  }
 })
+
+for (const width of [320, 390, 768, 1440]) {
+  test(`the filtered live card fits a dark ${width}px viewport`, async ({ page }) => {
+    await page.setViewportSize({ width, height: 900 })
+    await page.addInitScript(() => localStorage.setItem('n1-theme', JSON.stringify('dark')))
+    await page.goto(`/?live-unit=${unit}#live-reactions`, { waitUntil: 'domcontentloaded' })
+    await expect(page.locator('.app')).toHaveAttribute('data-theme', 'dark')
+    await page.getByLabel('选择知识组', { exact: true }).selectOption('live-2026-09-30-sae')
+    await expect(page.locator('[data-live-group="live-2026-09-30-sae"]')).toBeVisible()
+    await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(true)
+  })
+}
 
 test('invalid unit URLs fall back without losing the live section', async ({ page }) => {
   await page.goto('/?live-unit=invalid#live-reactions')
