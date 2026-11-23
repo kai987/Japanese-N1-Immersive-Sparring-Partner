@@ -12,7 +12,7 @@
   },
   "engineVersion": "1.1.0-dev",
   "modelVersion": "1.0.0",
-  "generatedAt": "2026-11-23T03:32:33.401Z",
+  "generatedAt": "2026-11-23T09:41:34.279Z",
   "lessonDates": [
     "2026-11-23",
     "2026-11-22",
@@ -101,7 +101,7 @@
     "2026-08-31",
     "2026-08-30"
   ],
-  "expectedClips": 10044,
+  "expectedClips": 10045,
   "complete": true,
   "clips": {
     "000508138c45e52f": {
@@ -37374,6 +37374,18 @@
       "sha256": "a41651fdfa3c755adcc8245dfdcb4911992b378f802eddb5abde24d65ff1eca3",
       "rms": 0.132164
     },
+    "4d1f2ba94519c305": {
+      "id": "4d1f2ba94519c305",
+      "text": "ふさい",
+      "label": "負債",
+      "references": [
+        "live/2026-11-23/live-2026-11-23-debt-repayment/entry/live-2026-11-23-entry-debt-repayment-liability"
+      ],
+      "bytes": 11565,
+      "duration": 0.871,
+      "rms": 0.106768,
+      "sha256": "c4f6fa54688cd68a473c9a65ae3550af4768a7d6319ff6c90de0e426b6736c80"
+    },
     "4d203a08c8b2a22c": {
       "id": "4d203a08c8b2a22c",
       "text": "部屋には誰もいない。",
@@ -51290,7 +51302,8 @@
       "text": "かんじがする",
       "label": "感じがする",
       "references": [
-        "live/2026-11-04/live-2026-11-04-perception/entry/live-2026-11-04-entry-get-impression"
+        "live/2026-11-04/live-2026-11-04-perception/entry/live-2026-11-04-entry-get-impression",
+        "live/2026-11-23/live-2026-11-23-sensory-ga-suru/entry/live-2026-11-23-entry-sensory-ga-suru-feeling"
       ],
       "duration": 1.373,
       "bytes": 11757,
@@ -105660,7 +105673,8 @@
       "text": "はきけがする",
       "label": "吐き気がする",
       "references": [
-        "live/2026-11-13/live-2026-11-13-physical-sensations/entry/live-2026-11-13-entry-feel-nauseous"
+        "live/2026-11-13/live-2026-11-13-physical-sensations/entry/live-2026-11-13-entry-feel-nauseous",
+        "live/2026-11-23/live-2026-11-23-chills-and-nausea/entry/live-2026-11-23-entry-chills-and-nausea-nausea"
       ],
       "duration": 1.442,
       "bytes": 12333,
@@ -109378,7 +109392,8 @@
       "text": "なんとかする",
       "label": "なんとかする",
       "references": [
-        "live/2026-11-13/live-2026-11-13-trouble-and-resolution/entry/live-2026-11-13-entry-do-something-about-it"
+        "live/2026-11-13/live-2026-11-13-trouble-and-resolution/entry/live-2026-11-13-entry-do-something-about-it",
+        "live/2026-11-23/live-2026-11-23-manage-and-stop-it/entry/live-2026-11-23-entry-manage-and-stop-it-manage-somehow"
       ],
       "duration": 1.442,
       "bytes": 12333,
@@ -118135,7 +118150,8 @@
       "text": "さむけがする",
       "label": "寒気がする",
       "references": [
-        "live/2026-11-13/live-2026-11-13-physical-sensations/entry/live-2026-11-13-entry-feel-chills"
+        "live/2026-11-13/live-2026-11-13-physical-sensations/entry/live-2026-11-13-entry-feel-chills",
+        "live/2026-11-23/live-2026-11-23-chills-and-nausea/entry/live-2026-11-23-entry-chills-and-nausea-chills"
       ],
       "duration": 1.5,
       "bytes": 12717,
@@ -128213,6 +128229,11 @@
     "live/2026-11-18/live-2026-11-18-whichever-alternative/entry/live-2026-11-18-entry-today-or-tomorrow": "7b277d504e601c54",
     "live/2026-11-18/live-2026-11-18-whichever-alternative/example/live-2026-11-18-example-avoid-food-waste/0": "87711eaff56f116b",
     "live/2026-11-18/live-2026-11-18-whichever-alternative/example/live-2026-11-18-example-contact-on-either-day/0": "7b582623564e5b0f",
-    "live/2026-11-18/live-2026-11-18-whichever-alternative/example/live-2026-11-18-example-study-online-anywhere/0": "1e5d9e3a1f9c8a16"
+    "live/2026-11-18/live-2026-11-18-whichever-alternative/example/live-2026-11-18-example-study-online-anywhere/0": "1e5d9e3a1f9c8a16",
+    "live/2026-11-23/live-2026-11-23-chills-and-nausea/entry/live-2026-11-23-entry-chills-and-nausea-chills": "ee859e5d29923921",
+    "live/2026-11-23/live-2026-11-23-chills-and-nausea/entry/live-2026-11-23-entry-chills-and-nausea-nausea": "d5f97b346c0c57b8",
+    "live/2026-11-23/live-2026-11-23-debt-repayment/entry/live-2026-11-23-entry-debt-repayment-liability": "4d1f2ba94519c305",
+    "live/2026-11-23/live-2026-11-23-manage-and-stop-it/entry/live-2026-11-23-entry-manage-and-stop-it-manage-somehow": "dcf4dc9b7a41e6bf",
+    "live/2026-11-23/live-2026-11-23-sensory-ga-suru/entry/live-2026-11-23-entry-sensory-ga-suru-feeling": "68193613f94c5427"
   }
 }
