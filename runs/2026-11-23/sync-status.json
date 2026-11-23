@@ -1,0 +1,22 @@
+{
+  "targetDate": "2026-11-23",
+  "day": 86,
+  "stage": "request_ready",
+  "schemaVersion": 1,
+  "status": "waiting_request",
+  "reason": "source_and_upstream_verified",
+  "upstreamSourceCommit": "0574a53a138408b6751f8863a114ba5a3887af97",
+  "sourcePagesRunId": 45094760108,
+  "snapshotSha256": "4a293144c84677ab51640e4ae1e249a01a63f700f92ad492b0fbe1232b9d74cb",
+  "sourceBlobSha": "d23684e9a4a573b16010282621c8776bf6c25477",
+  "issueNumber": 104,
+  "totalDays": 104,
+  "requestSha256": "38990be4455c39e07dde0e5ed41ea109c782e847fd37a8037f225c09c8c211f9",
+  "requestSubmitted": false,
+  "localValidation": {
+    "allPassed": true
+  },
+  "lastError": null,
+  "nextStep": "Submit one source-bound request",
+  "updatedAt": "2026-11-23T01:36:14.267Z"
+}
