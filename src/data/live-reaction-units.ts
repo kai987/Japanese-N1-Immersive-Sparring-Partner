@@ -1,3 +1,4 @@
+import { validateLiveSourcePresentation } from '../lib/liveSourcePresentation.ts'
 import { liveUnitCountLabel, validateLiveIdentities } from '../lib/liveIdentities.ts'
 import { liveReactionGroups, type LiveReactionGroup } from './live-reactions.ts'
 import { okashiBokusoGroups } from './live-reactions-2026-09-30.ts'
@@ -22,7 +23,7 @@ export type LiveCategory = typeof liveCategories[number]['id']
 export interface LiveUnitGroup extends LiveReactionGroup {
   category: LiveCategory
   supplement?: boolean
-  source?: { kind: 'manga' | 'note'; label: string; quote: string; translation: string; readAloud?: boolean }
+  source?: { kind: 'manga' | 'note'; label: string; quote: string; translation: string; readAloud?: boolean; contextReason?: string }
 }
 export interface LiveUnit {
   id: string
@@ -146,6 +147,7 @@ export const liveUnits: LiveUnit[] = [
 ]
 
 validateLiveIdentities(liveUnits)
+validateLiveSourcePresentation(liveUnits)
 
 export function liveUnitFromSearch(search: string): LiveUnit {
   const id = new URLSearchParams(search).get('live-unit')

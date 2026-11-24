@@ -1,8 +1,10 @@
 import { test, expect } from '@playwright/test'
+import { liveUnits } from '../src/data/live-reaction-units.ts'
 
 // Counts come from the source audit, independently of the rendering helper.
 // Removing a repeated quote must not remove a study group or one of its entries.
 const auditedUnits = [
+  { id: '2026-11-23', groups: 23, entries: 57, quotes: 0 },
   { id: '2026-11-18', groups: 40, entries: 84, quotes: 0 },
   { id: '2026-11-13', groups: 29, entries: 77, quotes: 0 },
   { id: '2026-11-09', groups: 11, entries: 60, quotes: 0 },
@@ -15,7 +17,16 @@ const auditedUnits = [
   { id: '2026-09-28', groups: 15, entries: 64, quotes: 0 },
 ] as const
 
-for (const unit of auditedUnits) {
+// Automatically include future units, not just an enumerated set of dates.
+// The data's explicit opt-ins (not the rendering helper) determine the count.
+const auditedIds = new Set<string>(auditedUnits.map(unit => unit.id))
+const futureUnits = liveUnits.filter(unit => !auditedIds.has(unit.id)).map(unit => ({
+  id: unit.id,
+  groups: unit.groups.length,
+  entries: unit.groups.reduce((count, group) => count + group.entries.length, 0),
+  quotes: unit.groups.filter(group => group.source?.contextReason?.trim()).length,
+}))
+for (const unit of [...auditedUnits, ...futureUnits]) {
   test(`${unit.id} retains every study entry and only independent source context`, async ({ page }) => {
     await page.goto(`/?live-unit=${unit.id}#live-reactions`)
     await expect(page.locator('.live-page')).toHaveAttribute('data-live-unit', unit.id)
@@ -85,3 +96,22 @@ test('global search locates the remaining entry after its duplicated source bloc
   expect(match!.y).toBeGreaterThanOrEqual(header!.y + header!.height)
   await expect(results).toHaveCount(0)
 })
+
+for (const width of [1440, 390]) {
+  test(`November 23 no-effect group never repeats its notes at ${width}px`, async ({ page }) => {
+    await page.setViewportSize({ width, height: 960 })
+    await page.goto('/?live-unit=2026-11-23#live-reactions')
+    await page.getByLabel('选择知识组', { exact: true }).selectOption('live-2026-11-23-no-effect')
+    const card = page.locator('[data-live-group="live-2026-11-23-no-effect"]')
+    await expect(card).toHaveCount(1)
+    await expect(card.locator('.live-source-quote')).toHaveCount(0)
+    await expect(card.locator('.live-entry dt strong')).toHaveText(['私には効かない', '効き目がない'])
+    await expect(card.locator('.live-reading')).toHaveText(['わたしにはきかない', 'ききめがない'])
+    await expect(card.locator('.live-entry dd > p')).toHaveText(['对我不起作用', '没有效果、没有起作用'])
+    await expect(card.locator('.live-entry .audio-play-button')).toHaveCount(2)
+    await expect(card.locator('.live-entry-note')).toContainText('「には」')
+    await expect(card.locator('.live-points')).toContainText('効き目')
+    await expect(card.locator('.live-examples .example-box')).toHaveCount(2)
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(true)
+  })
+}
