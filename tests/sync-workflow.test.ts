@@ -120,7 +120,9 @@ test('Pages reuses only a verified candidate and otherwise retains every full va
     assert.ok(start >= 0, `${name} must be retained`)
     assert.match(pages.slice(start, end < 0 ? undefined : end), /if: steps\.reuse\.outputs\.reused != 'true'/)
   }
-  assert.match(pages, /browser:\s+needs: build\s+if: needs\.build\.outputs\.browser_validated != 'true'/)
+  const browserJob = pages.slice(pages.indexOf('\n  browser:'), pages.indexOf('\n  deploy:'))
+  assert.match(browserJob, /permissions:\s+contents: read\s+actions: read/)
+  assert.match(browserJob, /needs: build\s+if: needs\.build\.outputs\.browser_validated != 'true'/)
   assert.match(pages, /shard: \[1, 2\]/)
   assert.match(pages, /needs: \[build, browser\]/)
   assert.match(pages, /needs\.browser\.result == 'success'/)
