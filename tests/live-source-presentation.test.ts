@@ -51,7 +51,7 @@ test('new dates, source kinds and opt-in cannot reintroduce duplicated source bl
   assert.equal(original.source?.quote, '私には効かない\n効き目がない')
   const before = JSON.stringify(original)
   for (const kind of ['note', 'manga'] as const) {
-    const future = { ...original, id: 'live-2099-01-01-unseen', source: {
+    const future: LiveUnitGroup & { source: NonNullable<LiveUnitGroup['source']> } = { ...original, id: 'live-2099-01-01-unseen', source: {
       ...original.source!, kind, quote: '私には効かない。　効き目がない！',
     } }
     assert.equal(isRepeatedLiveSource(future), true)
