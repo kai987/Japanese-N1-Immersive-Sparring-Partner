@@ -48,7 +48,7 @@ test('approved legacy independent context survives; new groups archive sources b
 
 test('new dates, source kinds and opt-in cannot reintroduce duplicated source blocks', () => {
   const original = group('live-2026-11-23-no-effect')
-  assert.equal(original.source?.quote, '私には効かない\\n効き目がない')
+  assert.equal(original.source?.quote, '私には効かない\n効き目がない')
   const before = JSON.stringify(original)
   for (const kind of ['note', 'manga'] as const) {
     const future = { ...original, id: 'live-2099-01-01-unseen', source: {
@@ -93,7 +93,11 @@ test('every registered unit obeys the date-independent archive-by-default invari
     }
     if (visible) assert.equal(isRepeatedLiveSource(item), false, item.id)
     if (item.source && !visible) {
-      assert.equal(liveGroupSearchFields(item).slice(-2).includes(item.source.quote) && liveGroupSearchFields(item).slice(-2).includes(item.source.translation), false, item.id)
+      assert.deepEqual(liveGroupSearchFields(item), [
+        item.title, item.subtitle, ...item.points,
+        ...item.entries.flatMap(entry => [entry.expression, entry.reading, entry.meaning, entry.note ?? '']),
+        ...item.examples.flatMap(example => [example.japanese, example.chinese]),
+      ], item.id)
     }
   }
 })
