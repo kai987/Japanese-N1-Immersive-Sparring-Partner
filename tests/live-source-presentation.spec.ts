@@ -107,7 +107,7 @@ for (const width of [1440, 390]) {
     await expect(card.locator('.live-source-quote')).toHaveCount(0)
     await expect(card.locator('.live-entry dt strong')).toHaveText(['私には効かない', '効き目がない'])
     await expect(card.locator('.live-reading')).toHaveText(['わたしにはきかない', 'ききめがない'])
-    await expect(card.locator('.live-entry dd > p')).toHaveText(['对我不起作用', '没有效果、没有起作用'])
+    await expect(card.locator('.live-entry dd > p:not(.live-entry-note)')).toHaveText(['对我不起作用', '没有效果、没有起作用'])
     await expect(card.locator('.live-entry .audio-play-button')).toHaveCount(2)
     await expect(card.locator('.live-entry-note')).toContainText('「には」')
     await expect(card.locator('.live-points')).toContainText('効き目')
