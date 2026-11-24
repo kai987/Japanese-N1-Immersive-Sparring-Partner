@@ -1,4 +1,4 @@
-export interface BuildSource { sourceCommit: string; tree: string }
+export interface BuildSource { sourceCommit: string; tree: string; kind?: 'audio' }
 export interface ValidatedBuildProof extends BuildSource {
   version: 1
   repository: string
@@ -9,7 +9,8 @@ export interface ValidatedBuildProof extends BuildSource {
 }
 export function validatedBuildArtifact(attempt: number): string
 export function captureBuildSource(root: string, date: string): BuildSource
-export function verifyTrustedBuildRun(options: { run: unknown; jobs: unknown; repository: string }): void
+export function captureAudioBuildSource(root: string): BuildSource
+export function verifyTrustedBuildRun(options: { run: unknown; jobs: unknown; repository: string }): 'daily' | 'audio'
 export function verifyBuildProvenance(options: {
   proof: unknown; run: unknown; jobs: unknown; repository: string; commit: string; tree: string; parents: string[]
 }): void

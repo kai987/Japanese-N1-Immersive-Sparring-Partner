@@ -3,7 +3,7 @@ import { appendFileSync, cpSync, mkdtempSync, readFileSync, rmSync, writeFileSyn
 import { tmpdir } from 'node:os'
 import { join, resolve } from 'node:path'
 import { pathToFileURL } from 'node:url'
-import { captureBuildSource, sealValidatedBuild, validatedBuildArtifact, verifyTrustedBuildRun, verifyValidatedBuild } from './lib/validatedBuild.mjs'
+import { captureAudioBuildSource, captureBuildSource, sealValidatedBuild, validatedBuildArtifact, verifyTrustedBuildRun, verifyValidatedBuild } from './lib/validatedBuild.mjs'
 
 export async function restoreValidatedBuild({ root, runId, repository, expectedCommit, api, download, now = Date.now, wait = ms => new Promise(resolve => setTimeout(resolve, ms)) }) {
   if (!runId) return { reused: false, reason: 'No validated sync run supplied' }
@@ -27,7 +27,7 @@ export async function restoreValidatedBuild({ root, runId, repository, expectedC
     const proof = await verifyValidatedBuild({ root, directory, run, jobs: jobs.jobs, repository, expectedCommit })
     rmSync(join(root, 'dist'), { recursive: true, force: true })
     cpSync(join(directory, 'dist'), join(root, 'dist'), { recursive: true })
-    return { reused: true, runId: run.id, runAttempt: run.run_attempt, commit: proof.commit, files: Object.keys(proof.files).length }
+    return { reused: true, browserValidated: proof.kind !== 'audio', runId: run.id, runAttempt: run.run_attempt, commit: proof.commit, files: Object.keys(proof.files).length }
   } catch (error) {
     return { reused: false, reason: error instanceof Error ? error.message : 'Validated build unavailable' }
   } finally { rmSync(directory, { recursive: true, force: true }) }
@@ -38,8 +38,9 @@ export async function validatedBuildCommand(args, env = process.env) {
   const root = resolve(option('--root') ?? '.'), mode = args[0]
   if (mode === 'capture') {
     const output = option('--output'), date = option('--date')
-    if (!output || !date) throw new Error('capture requires --date and --output')
-    writeFileSync(output, JSON.stringify(captureBuildSource(root, date)) + '\n')
+    const audio = args.includes('--audio')
+    if (!output || (audio ? Boolean(date) : !date)) throw new Error('capture requires --output and exactly one of --date or --audio')
+    writeFileSync(output, JSON.stringify(audio ? captureAudioBuildSource(root) : captureBuildSource(root, date)) + '\n')
   } else if (mode === 'seal') {
     const capture = option('--capture'), output = option('--output')
     if (!capture || !output) throw new Error('seal requires --capture and --output')
@@ -50,9 +51,9 @@ export async function validatedBuildCommand(args, env = process.env) {
       api: path => JSON.parse(execFileSync('gh', ['api', path], { encoding: 'utf8', timeout: 10_000, maxBuffer: 4 * 1024 * 1024 })),
       download: (run, name, directory) => execFileSync('gh', ['run', 'download', run, '--repo', env.GITHUB_REPOSITORY, '--name', name, '--dir', directory], { stdio: 'inherit', timeout: 120_000 }),
     })
-    if (env.GITHUB_OUTPUT) appendFileSync(env.GITHUB_OUTPUT, `reused=${result.reused}\n`)
+    if (env.GITHUB_OUTPUT) appendFileSync(env.GITHUB_OUTPUT, `reused=${result.reused}\nbrowser_validated=${result.reused && result.browserValidated}\n`)
     if (env.GITHUB_STEP_SUMMARY) appendFileSync(env.GITHUB_STEP_SUMMARY, result.reused
-      ? `Reused fully validated source run ${result.runId}, attempt ${result.runAttempt}, exact commit ${result.commit}; all ${result.files} build files verified.\n`
+      ? `Reused validated source run ${result.runId}, attempt ${result.runAttempt}, exact commit ${result.commit}; all ${result.files} build files verified. Browser tests ${result.browserValidated ? 'already passed in the trusted daily run' : 'required in Pages shards'}.\n`
       : `Validated build not reused; all normal Pages checks will run. ${String(result.reason).replace(/[\r\n]/g, ' ')}\n`)
     console.log(JSON.stringify(result))
     return result

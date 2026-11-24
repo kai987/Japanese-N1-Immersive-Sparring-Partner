@@ -28,7 +28,7 @@ concurrency:
 jobs:
   sync:
     if: github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout N1 repository
         uses: actions/checkout@v6
@@ -175,10 +175,19 @@ jobs:
           TARGET_DATE: ${{ steps.meta.outputs.target_date }}
         run: node scripts/validated-build.mjs capture --date "$TARGET_DATE" --output /tmp/n1-validated-source.json
 
+      - name: Typecheck
+        if: steps.gate.outputs.execute == 'true'
+        working-directory: n1
+        run: npm run typecheck
+
       - name: Validate content
         if: steps.gate.outputs.execute == 'true'
         working-directory: n1
         run: npm run validate:content
+      - name: Validate audio pending snapshot
+        if: steps.gate.outputs.execute == 'true'
+        working-directory: n1
+        run: npm run audio:validate -- --snapshot
       - name: Unit tests
         if: steps.gate.outputs.execute == 'true'
         working-directory: n1
@@ -186,7 +195,7 @@ jobs:
       - name: Build
         if: steps.gate.outputs.execute == 'true'
         working-directory: n1
-        run: npm run build
+        run: npm run build:ci
       - name: Install browser
         if: steps.gate.outputs.execute == 'true'
         working-directory: n1
@@ -194,7 +203,27 @@ jobs:
       - name: Browser tests
         if: steps.gate.outputs.execute == 'true'
         working-directory: n1
-        run: npm run test:e2e
+        env:
+          PLAYWRIGHT_JSON_OUTPUT_FILE: ${{ runner.temp }}/n1-browser-report.json
+        run: npm run test:e2e -- --reporter=line,json --trace=retain-on-failure
+
+      - name: Summarize browser timings
+        if: always() && steps.gate.outputs.execute == 'true'
+        working-directory: n1
+        run: node scripts/ci-playwright-summary.mjs "$RUNNER_TEMP/n1-browser-report.json"
+
+      - name: Retain daily browser verification
+        if: always() && steps.gate.outputs.execute == 'true'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n1-daily-browser-verification-${{ github.run_attempt }}
+          path: |
+            /tmp/n1-improvements-playwright/**/*.png
+            /tmp/n1-improvements-playwright/**/*.zip
+            ${{ runner.temp }}/n1-browser-report.json
+          if-no-files-found: ignore
+          overwrite: true
+          retention-days: 3
 
       - name: Commit verified content with fast-forward protection
         if: steps.gate.outputs.execute == 'true'

@@ -16,7 +16,7 @@ concurrency:
 jobs:
   promote:
     if: github.ref == 'refs/heads/automation/n1-progress' || github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 10
     env:
       GIT_AUTHOR_NAME: github-actions[bot]

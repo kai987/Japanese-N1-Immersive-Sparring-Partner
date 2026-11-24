@@ -4,11 +4,13 @@ import { cpSync, existsSync, lstatSync, mkdtempSync, readFileSync, readdirSync, 
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { verifySyncChangedPaths } from '../verify-sync-changed-paths.mjs'
+import { audioMetadataPaths, verifyAudioChangedPaths } from '../verify-audio-changed-paths.ts'
 import { verifyPublishedRelease, releaseManifestName } from './deploymentVerification.mjs'
 import { validateRequest } from '../n1-automation.mjs'
 
 export const validatedBuildArtifact = attempt => `n1-validated-build-${attempt}`
 const workflowPath = '.github/workflows/sync-n1-daily.yml'
+const audioWorkflowPath = '.github/workflows/sync-n1-audio.yml'
 const sha = value => typeof value === 'string' && /^[a-f0-9]{40}$/.test(value)
 const digest = bytes => createHash('sha256').update(bytes).digest('hex')
 const requireValid = (ok, message) => { if (!ok) throw new Error(message) }
@@ -22,6 +24,16 @@ const changedPaths = root => [
 export function captureBuildSource(root, date) {
   const allowed = [`src/data/daily/${date}.json`, 'src/data/it-study-snapshot.json']
   verifySyncChangedPaths(date, allowed.join('\n'))
+  return captureAllowedTree(root, allowed)
+}
+
+export function captureAudioBuildSource(root) {
+  const changed = changedPaths(root)
+  verifyAudioChangedPaths(changed.join('\n'))
+  return { ...captureAllowedTree(root, audioMetadataPaths), kind: 'audio' }
+}
+
+function captureAllowedTree(root, allowed) {
   const changed = changedPaths(root)
   requireValid(changed.every(path => allowed.includes(path)), 'Candidate includes changes outside the sync allowlist')
   const directory = mkdtempSync(join(tmpdir(), 'n1-source-tree-'))
@@ -62,29 +74,42 @@ async function verifyBuildFiles(directory, request) {
   })
 }
 
+const workflowMatches = (run, path) => [path, `${path}@main`, `${path}@refs/heads/main`].includes(run.path)
+const dailyGates = ['Verify shared automation contract', 'Verify successful upstream Pages run and post-deployment check',
+  'Rebuild and verify published study snapshot', 'Verify locked 09:00 N1 source blob', 'Materialize requested daily JSON and validated snapshot',
+  'Verify study snapshot import', 'Capture candidate source tree', 'Typecheck', 'Validate content', 'Validate audio pending snapshot',
+  'Unit tests', 'Build', 'Install browser', 'Browser tests', 'Commit verified content with fast-forward protection',
+  'Seal validated build for Pages', 'Retain validated Pages build']
+const audioGates = ['Check publication trigger', 'Checkout current N1 main', 'Lock a successful upstream R2 audio commit', 'Checkout pinned upstream audio manifests',
+  'Plan shared audio candidates', 'Verify and merge shared audio, record pending utterances', 'Check for audio metadata changes',
+  'Capture candidate audio tree', 'Typecheck', 'Verify study snapshot import', 'Validate content',
+  'Validate audio snapshot, content and unit contracts', 'Commit audio metadata with fast-forward protection',
+  'Seal validated build for Pages', 'Retain validated Pages build']
+
 export function verifyTrustedBuildRun({ run, jobs, repository }) {
   requireValid(run.repository?.full_name === repository && run.head_repository?.full_name === repository, 'Build must come from this repository')
-  requireValid([workflowPath, `${workflowPath}@main`, `${workflowPath}@refs/heads/main`].includes(run.path) && run.head_branch === 'main' &&
-    ['push', 'workflow_dispatch', 'repository_dispatch'].includes(run.event), 'Build must come from the trusted main sync workflow')
+  const daily = workflowMatches(run, workflowPath) && ['push', 'workflow_dispatch', 'repository_dispatch'].includes(run.event)
+  const audio = workflowMatches(run, audioWorkflowPath) && ['workflow_run', 'workflow_dispatch'].includes(run.event)
+  requireValid((daily || audio) && run.head_branch === 'main', 'Build must come from the trusted main sync workflow')
   requireValid(run.status === 'completed' && run.conclusion === 'success', 'Sync run has not completed successfully')
   requireValid(Number.isSafeInteger(run.id) && run.id > 0 && Number.isSafeInteger(run.run_attempt) && run.run_attempt > 0 && sha(run.head_sha), 'Invalid source run identity')
   const job = jobs.find(job => job.name === 'sync')
   requireValid(job?.status === 'completed' && job.conclusion === 'success' && job.run_id === run.id, 'Trusted sync job has not succeeded')
-  for (const name of ['Verify shared automation contract', 'Verify successful upstream Pages run and post-deployment check',
-    'Rebuild and verify published study snapshot', 'Verify locked 09:00 N1 source blob', 'Materialize requested daily JSON and validated snapshot',
-    'Verify study snapshot import', 'Capture candidate source tree', 'Validate content', 'Unit tests', 'Build', 'Install browser', 'Browser tests',
-    'Commit verified content with fast-forward protection', 'Seal validated build for Pages', 'Retain validated Pages build']) {
+  for (const name of daily ? dailyGates : audioGates) {
     requireValid(job.steps?.some(step => step.name === name && step.status === 'completed' && step.conclusion === 'success'), `Missing successful sync gate: ${name}`)
   }
+  return daily ? 'daily' : 'audio'
 }
 
 /** The source run and exact commit tree must have passed the same gates Pages uses. */
 export function verifyBuildProvenance({ proof, run, jobs, repository, commit, tree, parents }) {
-  verifyTrustedBuildRun({ run, jobs, repository })
+  const kind = verifyTrustedBuildRun({ run, jobs, repository })
+  requireValid((proof?.kind ?? 'daily') === kind, 'Validated build kind differs from trusted workflow')
   requireValid(proof?.version === 1 && sha(proof.sourceCommit) && sha(proof.commit) && sha(proof.tree), 'Invalid validated build provenance')
   requireValid(proof.repository === repository && proof.runId === run.id && proof.runAttempt === run.run_attempt && proof.sourceCommit === run.head_sha, 'Build run/attempt/source mismatch')
   requireValid(proof.commit === commit && proof.tree === tree, 'Build is for another release commit or tree')
   requireValid(commit === proof.sourceCommit || (parents.length === 1 && parents[0] === proof.sourceCommit), 'Release is not the verified source or its direct sync child')
+  if (kind === 'audio') requireValid(commit !== proof.sourceCommit, 'Audio reuse requires a verified metadata child commit')
 }
 
 export async function sealValidatedBuild({ root, capture, output, repository, runId, runAttempt }) {
@@ -97,7 +122,7 @@ export async function sealValidatedBuild({ root, capture, output, repository, ru
   const request = validateRequest(JSON.parse(readFileSync(join(root, '.github/n1-sync-request.json'), 'utf8')))
   const dist = join(root, 'dist')
   await verifyBuildFiles(dist, request)
-  const proof = { version: 1, repository, runId, runAttempt, sourceCommit: capture.sourceCommit, commit, tree, files: inventory(dist) }
+  const proof = { version: 1, repository, runId, runAttempt, sourceCommit: capture.sourceCommit, commit, tree, ...(capture.kind === 'audio' ? { kind: 'audio' } : {}), files: inventory(dist) }
   cpSync(dist, join(output, 'dist'), { recursive: true, errorOnExist: true, force: false })
   writeFileSync(join(output, 'provenance.json'), JSON.stringify(proof, null, 2) + '\n')
   return proof
@@ -110,6 +135,10 @@ export async function verifyValidatedBuild({ root, directory, run, jobs, reposit
   requireValid(commit === expectedCommit, 'Checkout does not match the requested Pages commit')
   verifyBuildProvenance({ proof, run, jobs, repository, commit,
     tree: git(root, ['rev-parse', 'HEAD^{tree}']), parents: git(root, ['show', '-s', '--format=%P', 'HEAD']).split(' ').filter(Boolean) })
+  if (proof.kind === 'audio') {
+    const changed = git(root, ['diff', '--no-renames', '--name-only', proof.sourceCommit, commit])
+    verifyAudioChangedPaths(changed)
+  }
   const dist = join(directory, 'dist')
   requireValid(JSON.stringify(inventory(dist)) === JSON.stringify(proof.files), 'Validated build file inventory/hash mismatch')
   const request = validateRequest(JSON.parse(readFileSync(join(root, '.github/n1-sync-request.json'), 'utf8')))

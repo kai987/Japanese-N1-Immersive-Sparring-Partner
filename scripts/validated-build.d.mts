@@ -1,4 +1,4 @@
-export type RestoreResult = { reused: false; reason: string } | { reused: true; runId: number; runAttempt: number; commit: string; files: number }
+export type RestoreResult = { reused: false; reason: string } | { reused: true; browserValidated: boolean; runId: number; runAttempt: number; commit: string; files: number }
 export function restoreValidatedBuild(options: {
   root: string; runId?: string; repository: string; expectedCommit: string
   api: (path: string) => unknown | Promise<unknown>

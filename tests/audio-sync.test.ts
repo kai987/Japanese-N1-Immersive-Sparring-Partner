@@ -2,7 +2,7 @@ import assert from 'node:assert/strict'
 import test from 'node:test'
 import { execFileSync } from 'node:child_process'
 import { readFileSync } from 'node:fs'
-import { mergeSharedAudio } from '../scripts/sync-audio.ts'
+import { mergeSharedAudio, sharedAudioNeeds } from '../scripts/sync-audio.ts'
 import { verifyAudioChangedPaths, audioMetadataPaths } from '../scripts/verify-audio-changed-paths.ts'
 import { audioId, audioVoice } from '../src/lib/audioText.ts'
 import type { AudioSources } from '../src/lib/audioSources.ts'
@@ -77,4 +77,12 @@ test('audio follow-up is separate from the text writer and deploys only metadata
   assert.match(workflow, /test "\$\(git rev-parse origin\/main\)" = "\$base"/)
   assert.match(workflow, /if: steps.commit.outputs.changed == 'true'/)
   assert.doesNotMatch(workflow, /git push[^\n]*(?:--force| -f\b)/)
+})
+
+test('read-only candidate planning requests tools only for unpublished matching speech', () => {
+  assert.deepEqual(sharedAudioNeeds(catalog, manifest, new Map()), [])
+  assert.deepEqual(sharedAudioNeeds(catalog, manifest, new Map([[old.id, true], [shared.id, true]])), [shared])
+  assert.deepEqual(sharedAudioNeeds(catalog, manifest, new Map([[unique.id, true]])), [unique])
+  const merged = mergeSharedAudio(catalog, manifest, index, sources, verified, commit, now)
+  assert.deepEqual(sharedAudioNeeds(catalog, merged.manifest, new Map([[old.id, true], [shared.id, true]])), [])
 })

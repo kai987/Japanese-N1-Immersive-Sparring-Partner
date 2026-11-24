@@ -88,15 +88,22 @@ export async function verifyCandidate(candidate: DailyCandidate, base: string): 
   } finally { rmSync(work, { recursive: true, force: true }) }
 }
 
+// Both planning and synchronization use exactly the same selection.
+// Only actual missing matching recordings require ffmpeg/ffprobe.
+export function sharedAudioNeeds(catalog: Catalog, manifest: Pick<Manifest, 'clips'>, candidates: ReadonlyMap<string, unknown>) {
+  return catalog.entries.filter(entry => !manifest.clips[entry.id] && candidates.has(entry.id))
+}
+
 async function main() {
   const args = process.argv.slice(2)
   const option = (name: string) => { const at = args.indexOf(name); return at < 0 ? '' : args[at + 1] ?? '' }
   const repo = option('--daily-repo'), commit = option('--ref'), targetDate = option('--date')
+  const planOnly = args.includes('--plan-only')
   if (!repo || !/^[a-f0-9]{40}$/.test(commit)) throw new Error('Provide --daily-repo PATH --ref FULL_VERIFIED_AUDIO_COMMIT')
   if (execFileSync('git', ['rev-parse', '--verify', `${commit}^{commit}`], { cwd: repo, encoding: 'utf8' }).trim() !== commit) throw new Error('Upstream audio commit not available')
   const catalog = collectAudio()
   if (targetDate && !catalog.lessonDates.includes(targetDate)) {
-    console.log(`waiting_n1_lesson: ${targetDate}; no teaching content or audio metadata changed`)
+    console.log(planOnly ? JSON.stringify({ needed: 0, status: 'waiting_n1_lesson' }) : `waiting_n1_lesson: ${targetDate}; no teaching content or audio metadata changed`)
     return
   }
   validateAudio()
@@ -115,7 +122,11 @@ async function main() {
     }
   }
   const verified: Record<string, VerifiedClip> = {}
-  const needed = catalog.entries.filter(entry => !manifest.clips[entry.id] && candidates.has(entry.id))
+  const needed = sharedAudioNeeds(catalog, manifest, candidates)
+  if (planOnly) {
+    console.log(JSON.stringify({ needed: needed.length, status: 'planned' }))
+    return
+  }
   for (const entry of needed) {
     let lastError: unknown
     for (const candidate of candidates.get(entry.id)!) {

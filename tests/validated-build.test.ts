@@ -4,14 +4,19 @@ import { execFileSync } from 'node:child_process'
 import { cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, symlinkSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { dirname, join } from 'node:path'
-import { captureBuildSource, sealValidatedBuild, validatedBuildArtifact, verifyBuildProvenance, verifyValidatedBuild } from '../scripts/lib/validatedBuild.mjs'
+import { captureAudioBuildSource, captureBuildSource, sealValidatedBuild, validatedBuildArtifact, verifyBuildProvenance, verifyValidatedBuild } from '../scripts/lib/validatedBuild.mjs'
 import { restoreValidatedBuild } from '../scripts/validated-build.mjs'
 import { createReleaseManifest, releaseManifestName } from '../scripts/lib/deploymentVerification.mjs'
 
 const gates = ['Verify shared automation contract', 'Verify successful upstream Pages run and post-deployment check',
   'Rebuild and verify published study snapshot', 'Verify locked 09:00 N1 source blob', 'Materialize requested daily JSON and validated snapshot',
-  'Verify study snapshot import', 'Capture candidate source tree', 'Validate content', 'Unit tests', 'Build', 'Install browser', 'Browser tests',
+  'Verify study snapshot import', 'Capture candidate source tree', 'Typecheck', 'Validate content', 'Validate audio pending snapshot', 'Unit tests', 'Build', 'Install browser', 'Browser tests',
   'Commit verified content with fast-forward protection', 'Seal validated build for Pages', 'Retain validated Pages build']
+const audioGates = ['Check publication trigger', 'Checkout current N1 main', 'Lock a successful upstream R2 audio commit', 'Checkout pinned upstream audio manifests',
+  'Plan shared audio candidates', 'Verify and merge shared audio, record pending utterances', 'Check for audio metadata changes',
+  'Capture candidate audio tree', 'Typecheck', 'Verify study snapshot import', 'Validate content',
+  'Validate audio snapshot, content and unit contracts', 'Commit audio metadata with fast-forward protection',
+  'Seal validated build for Pages', 'Retain validated Pages build']
 const repository = 'test/n1', runId = 456, runAttempt = 2
 const request = JSON.parse(readFileSync(new URL('../.github/n1-sync-request.json', import.meta.url), 'utf8'))
 const trustedRun = (sourceCommit: string) => ({ id: runId, run_attempt: runAttempt, repository: { full_name: repository }, head_repository: { full_name: repository },
@@ -20,7 +25,7 @@ const trustedJobs = () => [{ name: 'sync', run_id: runId, status: 'completed', c
 const git = (root: string, ...args: string[]) => execFileSync('git', ['-C', root, ...args], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] }).trim()
 const write = (root: string, path: string, content: string) => { mkdirSync(dirname(join(root, path)), { recursive: true }); writeFileSync(join(root, path), content) }
 
-async function fixture() {
+async function fixture(kind: 'daily' | 'audio' = 'daily') {
   const root = mkdtempSync(join(tmpdir(), 'n1-validated-build-test-'))
   git(root, 'init', '-q'); git(root, 'config', 'user.name', 'Test'); git(root, 'config', 'user.email', 'test@example.invalid')
   write(root, '.gitignore', '/dist/\n/sealed/\n')
@@ -28,11 +33,13 @@ async function fixture() {
   write(root, 'src/data/it-study-snapshot.json', '{}')
   write(root, `src/data/daily/${request.targetDate}.json`, '{"before":true}')
   write(root, 'app.txt', 'unchanged source')
+  for (const path of ['public/audio/manifest.json', 'src/data/audio-index.json', 'src/data/audio-sources.json', 'src/data/audio-pending.json']) write(root, path, '{}')
   git(root, 'add', '.'); git(root, 'commit', '-qm', 'source request')
   const sourceCommit = git(root, 'rev-parse', 'HEAD')
-  write(root, `src/data/daily/${request.targetDate}.json`, JSON.stringify(request.daily))
-  const capture = captureBuildSource(root, request.targetDate)
-  git(root, 'add', `src/data/daily/${request.targetDate}.json`); git(root, 'commit', '-qm', 'verified content')
+  const changed = kind === 'audio' ? 'src/data/audio-index.json' : `src/data/daily/${request.targetDate}.json`
+  write(root, changed, kind === 'audio' ? '{"updated":true}' : JSON.stringify(request.daily))
+  const capture = kind === 'audio' ? captureAudioBuildSource(root) : captureBuildSource(root, request.targetDate)
+  git(root, 'add', changed); git(root, 'commit', '-qm', 'verified content')
   const commit = git(root, 'rev-parse', 'HEAD'), lessonPath = 'assets/lesson.json', searchPath = 'assets/search.json'
   const { date, day, title } = request.daily.lesson
   const files = { 'index.html': '<script src="./assets/index.js"></script>', 'assets/index.js': 'export const ready=true;',
@@ -47,6 +54,10 @@ async function fixture() {
   const directory = join(root, 'sealed')
   const proof = await sealValidatedBuild({ root, capture, output: directory, repository, runId, runAttempt })
   const run = trustedRun(sourceCommit), jobs = trustedJobs()
+  if (kind === 'audio') {
+    run.path = '.github/workflows/sync-n1-audio.yml'; run.event = 'workflow_run'
+    jobs[0].steps = audioGates.map(name => ({ name, status: 'completed', conclusion: 'success' }))
+  }
   return { root, directory, capture, proof, run, jobs, commit, tree: git(root, 'rev-parse', 'HEAD^{tree}'), sourceCommit }
 }
 
@@ -69,6 +80,7 @@ test('trusted same-tree content commit can reuse the exact validated dist and ma
       },
     })
     assert.equal(result.reused, true)
+    if (result.reused) assert.equal(result.browserValidated, true)
     assert.deepEqual(readFileSync(join(f.root, 'dist', releaseManifestName)), expected)
   } finally { rmSync(f.root, { recursive: true, force: true }) }
 })
@@ -200,5 +212,30 @@ test('dispatch waits briefly for its exact sync run to finish; failed/expired/un
     assert.equal(expired.reused, false)
     assert.ok(existsSync(join(f.root, 'dist/index.html')), 'fallback must not replace dist with unverified bytes')
     assert.equal((await restoreValidatedBuild({ ...options, runId: '', api: () => { throw new Error('No API request expected') } })).reused, false)
+  } finally { rmSync(f.root, { recursive: true, force: true }) }
+})
+
+
+test('audio build reuse accepts only exact metadata changes and always requires Pages browser tests', async () => {
+  const f = await fixture('audio')
+  try {
+    const proof = await verifyValidatedBuild({ ...f, repository, expectedCommit: f.commit })
+    assert.equal(proof.kind, 'audio')
+    const result = await restoreValidatedBuild({
+      root: f.root, runId: String(runId), repository, expectedCommit: f.commit,
+      api: path => path.includes('/jobs?') ? { jobs: f.jobs } : f.run,
+      download: (_run, _artifact, directory) => cpSync(f.directory, directory, { recursive: true }),
+    })
+    assert.equal(result.reused, true)
+    if (result.reused) assert.equal(result.browserValidated, false)
+    const provenance = { ...f, repository, parents: [f.sourceCommit] }
+    assert.throws(() => verifyBuildProvenance({ ...provenance, proof: { ...f.proof, kind: undefined } }), /kind differs/)
+    for (const name of audioGates) {
+      const jobs = structuredClone(f.jobs)
+      jobs[0].steps.find(step => step.name === name)!.conclusion = 'skipped'
+      assert.throws(() => verifyBuildProvenance({ ...provenance, jobs }), /Missing successful sync gate/)
+    }
+    write(f.root, 'app.txt', 'not an audio-only change')
+    assert.throws(() => captureAudioBuildSource(f.root), /only the four audio metadata files/)
   } finally { rmSync(f.root, { recursive: true, force: true }) }
 })

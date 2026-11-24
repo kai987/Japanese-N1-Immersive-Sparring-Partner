@@ -22,7 +22,7 @@ test('new-date request starts import without first deploying a missing lesson', 
 })
 
 test('source pinning, snapshot import, all validation gates and CAS remain before commit', () => {
-  const names = ['Verify successful upstream Pages run and post-deployment check', 'Rebuild and verify published study snapshot', 'Verify locked 09:00 N1 source blob', 'Materialize requested daily JSON and validated snapshot', 'Verify study snapshot import', 'Capture candidate source tree', 'Validate content', 'Unit tests', 'Build', 'Install browser', 'Browser tests', 'Commit verified content with fast-forward protection', 'Seal validated build for Pages', 'Retain validated Pages build', 'Ensure verified content has a Pages deployment']
+  const names = ['Verify successful upstream Pages run and post-deployment check', 'Rebuild and verify published study snapshot', 'Verify locked 09:00 N1 source blob', 'Materialize requested daily JSON and validated snapshot', 'Verify study snapshot import', 'Capture candidate source tree', 'Typecheck', 'Validate content', 'Validate audio pending snapshot', 'Unit tests', 'Build', 'Install browser', 'Browser tests', 'Commit verified content with fast-forward protection', 'Seal validated build for Pages', 'Retain validated Pages build', 'Ensure verified content has a Pages deployment']
   let position = -1
   for (const name of names) {
     const next = workflow.indexOf(`- name: ${name}`, position + 1)
@@ -115,11 +115,19 @@ test('Pages reuses only a verified candidate and otherwise retains every full va
   assert.match(pages, /actions: read/)
   assert.match(pages, /fetch-depth: 2/)
   assert.match(pages, /id: reuse[\s\S]*?node scripts\/validated-build\.mjs restore/)
-  for (const name of ['Install dependencies', 'Verify study snapshot import', 'Validate content', 'Unit tests', 'Build', 'Install test browser', 'Browser tests']) {
+  for (const name of ['Install dependencies', 'Typecheck', 'Verify study snapshot import', 'Validate content', 'Validate audio pending snapshot', 'Unit tests', 'Build']) {
     const start = pages.indexOf(`- name: ${name}\n`), end = pages.indexOf('\n      - name:', start)
     assert.ok(start >= 0, `${name} must be retained`)
     assert.match(pages.slice(start, end < 0 ? undefined : end), /if: steps\.reuse\.outputs\.reused != 'true'/)
   }
+  assert.match(pages, /browser:\s+needs: build\s+if: needs\.build\.outputs\.browser_validated != 'true'/)
+  assert.match(pages, /shard: \[1, 2\]/)
+  assert.match(pages, /needs: \[build, browser\]/)
+  assert.match(pages, /needs\.browser\.result == 'success'/)
+  assert.match(pages, /needs\.browser\.result == 'skipped' && needs\.build\.outputs\.browser_validated == 'true'/)
+  assert.match(pages, /sha256sum --check --strict/)
+  assert.match(pages, /name: \$\{\{ needs\.build\.outputs\.artifact_name \}\}/)
+  assert.match(pages, /artifact_name: \$\{\{ needs\.build\.outputs\.artifact_name \}\}/)
   for (const name of ['Retain exact build verification manifest', 'Upload Pages artifact', 'Verify live target date and exact release assets']) {
     const start = pages.indexOf(`- name: ${name}\n`), end = pages.indexOf('\n      - name:', start)
     assert.ok(start >= 0)
@@ -206,10 +214,40 @@ test('shared audio skips expensive gates only when the metadata diff is empty', 
   const validation = audioStep('Validate audio snapshot, content and unit contracts')
   const commit = audioStep('Commit audio metadata with fast-forward protection')
   for (const step of [validation, commit]) assert.match(step, /if: steps\.metadata\.outputs\.changed == 'true'/)
-  for (const command of ['npm run audio:validate -- --snapshot', 'npm test', 'npm run build', 'git diff --check']) {
+  for (const command of ['npm run audio:validate -- --snapshot', 'npm test', 'npm run build:ci', 'git diff --check']) {
     assert.ok(validation.includes(command))
   }
   assert.ok(commit.includes('test "$(git rev-parse origin/main)" = "$base"'))
   assert.ok(commit.includes('git push origin HEAD:main'))
   assert.match(audioStep('Deploy changed audio metadata'), /if: steps\.commit\.outputs\.changed == 'true'/)
+})
+
+test('CI uses a pinned runner, early type checks, conditional tools and exact archive shards', () => {
+  for (const source of [pages, workflow, sharedAudio]) assert.doesNotMatch(source, /runs-on: ubuntu-latest/)
+  for (const source of [pages, workflow]) {
+    assert.ok(source.indexOf('- name: Typecheck') < source.indexOf('- name: Unit tests'))
+    assert.match(source, /run: npm run build:ci/)
+  }
+  const install = audioStep('Install audio inspection tools')
+  assert.match(install, /if: steps\.plan\.outputs\.needed != '0'/)
+  assert.match(install, /command -v ffmpeg/)
+  assert.match(install, /command -v ffprobe/)
+  assert.match(install, /timeout-minutes: 5/)
+  assert.match(audioStep('Plan shared audio candidates'), /--plan-only/)
+  assert.ok(sharedAudio.indexOf('- name: Plan shared audio candidates') < sharedAudio.indexOf('- name: Install audio inspection tools'))
+  assert.ok(sharedAudio.indexOf('- name: Capture candidate audio tree') < sharedAudio.indexOf('- name: Typecheck'))
+  assert.ok(sharedAudio.indexOf('- name: Typecheck') < sharedAudio.indexOf('- name: Validate audio snapshot, content and unit contracts'))
+  assert.match(audioStep('Deploy changed audio metadata'), /validated_run_id=\$GITHUB_RUN_ID/)
+})
+
+test('an unchanged release is an opt-in verified equivalent, not a blind path-ignore or audio trigger', () => {
+  assert.match(pages, /id: unchanged[\s\S]*?if: github\.event_name == 'push'/)
+  assert.match(pages, /node scripts\/ci-unchanged-release\.mjs/)
+  assert.match(pages, /if: needs\.build\.outputs\.unchanged_release != 'true'/)
+  assert.match(pages, /Verify live target date and exact release assets/)
+  assert.match(audioStep('Check publication trigger'), /Verify live target date and exact release assets/)
+  assert.match(audioStep('Check publication trigger'), /skipped\)[\s\S]*?execute=false/)
+  for (const name of ['Checkout current N1 main', 'Plan shared audio candidates', 'Verify and merge shared audio, record pending utterances']) {
+    assert.match(audioStep(name), /if: steps\.publication\.outputs\.execute == 'true'/)
+  }
 })

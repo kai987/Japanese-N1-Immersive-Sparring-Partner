@@ -29,16 +29,42 @@ jobs:
       (github.event_name == 'workflow_dispatch' ||
        (github.event.workflow_run.conclusion == 'success' &&
         github.event.workflow_run.head_repository.full_name == github.repository))
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:
+      - name: Check publication trigger
+        id: publication
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PAGES_RUN_ID: ${{ github.event.workflow_run.id }}
+          PAGES_RUN_ATTEMPT: ${{ github.event.workflow_run.run_attempt }}
+        run: |
+          if [ "$GITHUB_EVENT_NAME" = workflow_dispatch ]; then
+            echo "execute=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          jobs=$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$PAGES_RUN_ID/attempts/$PAGES_RUN_ATTEMPT/jobs?per_page=100")
+          verified=$(printf '%s' "$jobs" | jq -er '.jobs[] | select(.name == "deploy" and .conclusion == "success") | .steps[] | select(.name == "Verify live target date and exact release assets") | .conclusion')
+          test "$verified" = success
+          deployed=$(printf '%s' "$jobs" | jq -er '.jobs[] | select(.name == "deploy" and .conclusion == "success") | .steps[] | select(.name == "Deploy to GitHub Pages") | .conclusion')
+          case "$deployed" in
+            success) echo "execute=true" >> "$GITHUB_OUTPUT" ;;
+            skipped)
+              echo "execute=false" >> "$GITHUB_OUTPUT"
+              echo "Verified unchanged release; no new Pages deployment, no audio sync needed." >> "$GITHUB_STEP_SUMMARY"
+              ;;
+            *) echo "Unverified Pages deployment" >&2; exit 1 ;;
+          esac
+
       - name: Checkout current N1 main
+        if: steps.publication.outputs.execute == 'true'
         uses: actions/checkout@v6
         with:
           ref: main
           path: n1
 
       - name: Lock a successful upstream R2 audio commit
+        if: steps.publication.outputs.execute == 'true'
         id: source
         env:
           GH_TOKEN: ${{ github.token }}
@@ -59,6 +85,7 @@ jobs:
 
       # Fetch metadata only; shared MP3s stay on R2.
       - name: Checkout pinned upstream audio manifests
+        if: steps.publication.outputs.execute == 'true'
         uses: actions/checkout@v6
         with:
           repository: kai987/japan-it-ai-daily
@@ -71,21 +98,43 @@ jobs:
             /public/audio/japanese/**/interview-manifest.json
 
       - name: Setup Node
+        if: steps.publication.outputs.execute == 'true'
         uses: actions/setup-node@v7
         with:
           node-version: 24
           package-manager-cache: false
 
-      - name: Install audio inspection tools
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y ffmpeg
-
       - name: Install dependencies
+        if: steps.publication.outputs.execute == 'true'
         working-directory: n1
         run: npm ci --no-audit --no-fund
 
+      - name: Plan shared audio candidates
+        if: steps.publication.outputs.execute == 'true'
+        id: plan
+        working-directory: n1
+        env:
+          SOURCE_COMMIT: ${{ steps.source.outputs.commit }}
+          TARGET_DATE: ${{ inputs.target_date }}
+        run: |
+          plan=$(node scripts/sync-audio.ts --daily-repo ../daily --ref "$SOURCE_COMMIT" --date "$TARGET_DATE" --plan-only)
+          needed=$(printf '%s' "$plan" | jq -er '.needed | select(type == "number" and . >= 0 and floor == .)')
+          echo "needed=$needed" >> "$GITHUB_OUTPUT"
+          echo "New shared recordings to inspect: $needed" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Install audio inspection tools
+        if: steps.plan.outputs.needed != '0' && steps.publication.outputs.execute == 'true'
+        timeout-minutes: 5
+        run: |
+          if ! command -v ffmpeg >/dev/null || ! command -v ffprobe >/dev/null; then
+            sudo apt-get update -o Acquire::Retries=2 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30
+            sudo apt-get install -y --no-install-recommends -o Acquire::Retries=2 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30 ffmpeg
+          fi
+          ffmpeg -version
+          ffprobe -version
+
       - name: Verify and merge shared audio, record pending utterances
+        if: steps.publication.outputs.execute == 'true'
         shell: bash
         working-directory: n1
         env:
@@ -98,6 +147,7 @@ jobs:
           exit "$status"
 
       - name: Check for audio metadata changes
+        if: steps.publication.outputs.execute == 'true'
         id: metadata
         working-directory: n1
         run: |
@@ -110,13 +160,36 @@ jobs:
             echo 'changed=true' >> "$GITHUB_OUTPUT"
           fi
 
+      - name: Capture candidate audio tree
+        if: steps.metadata.outputs.changed == 'true'
+        working-directory: n1
+        run: node scripts/validated-build.mjs capture --audio --output "$RUNNER_TEMP/n1-validated-audio-source.json"
+
+      - name: Typecheck
+        if: steps.metadata.outputs.changed == 'true'
+        working-directory: n1
+        run: npm run typecheck
+
+      - name: Verify study snapshot import
+        if: steps.metadata.outputs.changed == 'true'
+        working-directory: n1
+        run: |
+          cp src/data/it-study-snapshot.json "$RUNNER_TEMP/n1-audio-study.json"
+          npm run import:study -- "$RUNNER_TEMP/n1-audio-study.json"
+          cmp "$RUNNER_TEMP/n1-audio-study.json" src/data/it-study-snapshot.json
+
+      - name: Validate content
+        if: steps.metadata.outputs.changed == 'true'
+        working-directory: n1
+        run: npm run validate:content
+
       - name: Validate audio snapshot, content and unit contracts
         if: steps.metadata.outputs.changed == 'true'
         working-directory: n1
         run: |
           npm run audio:validate -- --snapshot
           npm test
-          npm run build
+          npm run build:ci
           git diff --check
 
       - name: Commit audio metadata with fast-forward protection
@@ -137,6 +210,23 @@ jobs:
             echo 'changed=true' >> "$GITHUB_OUTPUT"
           fi
 
+      - name: Seal validated build for Pages
+        if: steps.commit.outputs.changed == 'true'
+        id: seal
+        continue-on-error: true
+        working-directory: n1
+        run: node scripts/validated-build.mjs seal --capture "$RUNNER_TEMP/n1-validated-audio-source.json" --output "$RUNNER_TEMP/n1-validated-audio-pages"
+
+      - name: Retain validated Pages build
+        if: steps.commit.outputs.changed == 'true' && steps.seal.outcome == 'success'
+        continue-on-error: true
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n1-validated-build-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/n1-validated-audio-pages
+          if-no-files-found: error
+          retention-days: 7
+
       - name: Deploy changed audio metadata
         if: steps.commit.outputs.changed == 'true'
         working-directory: n1
@@ -145,4 +235,4 @@ jobs:
         run: |
           git fetch origin main
           test "$(git rev-parse origin/main)" = "$(git rev-parse HEAD)"
-          gh workflow run deploy-pages.yml --repo "$GITHUB_REPOSITORY" --ref main
+          gh workflow run deploy-pages.yml --repo "$GITHUB_REPOSITORY" --ref main -f "validated_run_id=$GITHUB_RUN_ID"

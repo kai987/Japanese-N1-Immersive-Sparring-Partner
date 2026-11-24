@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
     inputs:
       validated_run_id:
-        description: Optional successful main sync run; exact provenance is verified before reuse
+        description: Optional successful main content/audio sync run; exact provenance and completed gates are verified before reuse
         required: false
         type: string
 
@@ -24,7 +24,13 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    outputs:
+      unchanged_release: ${{ steps.unchanged.outputs.unchanged }}
+      browser_validated: ${{ steps.unchanged.outputs.unchanged == 'true' || steps.reuse.outputs.browser_validated == 'true' }}
+      artifact_name: ${{ format('github-pages-{0}', github.run_attempt) }}
+      artifact_sha256: ${{ steps.pages_tar.outputs.sha256 }}
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -40,7 +46,18 @@ jobs:
       - name: Verify shared automation contract
         run: node --test scripts/n1-automation.test.mjs
 
+      - name: Verify unchanged release for documentation or unreferenced originals
+        id: unchanged
+        if: github.event_name == 'push'
+        timeout-minutes: 3
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PAGE_URL: https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/
+        run: node scripts/ci-unchanged-release.mjs
+
       - name: Restore exact validated sync build
+        if: steps.unchanged.outputs.unchanged != 'true'
         id: reuse
         timeout-minutes: 4
         env:
@@ -49,35 +66,35 @@ jobs:
         run: node scripts/validated-build.mjs restore
 
       - name: Install dependencies
-        if: steps.reuse.outputs.reused != 'true'
+        if: steps.reuse.outputs.reused != 'true' && steps.unchanged.outputs.unchanged != 'true'
         run: npm ci --no-audit --no-fund
 
+      - name: Typecheck
+        if: steps.reuse.outputs.reused != 'true' && steps.unchanged.outputs.unchanged != 'true'
+        run: npm run typecheck
+
       - name: Verify study snapshot import
-        if: steps.reuse.outputs.reused != 'true'
+        if: steps.reuse.outputs.reused != 'true' && steps.unchanged.outputs.unchanged != 'true'
         run: |
           cp src/data/it-study-snapshot.json /tmp/study-index.json
           npm run import:study -- /tmp/study-index.json
           git diff --exit-code -- src/data/it-study-snapshot.json
 
       - name: Validate content
-        if: steps.reuse.outputs.reused != 'true'
+        if: steps.reuse.outputs.reused != 'true' && steps.unchanged.outputs.unchanged != 'true'
         run: npm run validate:content
 
+      - name: Validate audio pending snapshot
+        if: steps.reuse.outputs.reused != 'true' && steps.unchanged.outputs.unchanged != 'true'
+        run: npm run audio:validate -- --snapshot
+
       - name: Unit tests
-        if: steps.reuse.outputs.reused != 'true'
+        if: steps.reuse.outputs.reused != 'true' && steps.unchanged.outputs.unchanged != 'true'
         run: npm test
 
       - name: Build
-        if: steps.reuse.outputs.reused != 'true'
-        run: npm run build
-
-      - name: Install test browser
-        if: steps.reuse.outputs.reused != 'true'
-        run: npx playwright install --with-deps chromium
-
-      - name: Browser tests
-        if: steps.reuse.outputs.reused != 'true'
-        run: npm run test:e2e
+        if: steps.reuse.outputs.reused != 'true' && steps.unchanged.outputs.unchanged != 'true'
+        run: npm run build:ci
 
       - name: Retain exact build verification manifest
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -88,40 +105,114 @@ jobs:
           overwrite: true
           retention-days: 30
 
-      - name: Retain learning UI verification
-        if: always()
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
-        with:
-          name: n1-learning-ui-verification
-          path: /tmp/n1-improvements-playwright/**/*.png
-          if-no-files-found: ignore
-          overwrite: true
-          retention-days: 3
-
       - name: Add Pages fallbacks
+        if: steps.unchanged.outputs.unchanged != 'true'
         run: |
           cp dist/index.html dist/404.html
           touch dist/.nojekyll
 
       - name: Configure GitHub Pages
+        if: steps.unchanged.outputs.unchanged != 'true'
         uses: actions/configure-pages@v5
 
       - name: Upload Pages artifact
+        if: steps.unchanged.outputs.unchanged != 'true'
         uses: actions/upload-pages-artifact@v4
         with:
+          name: ${{ format('github-pages-{0}', github.run_attempt) }}
           path: ./dist
+          retention-days: 3
+
+      - name: Record exact Pages archive hash
+        if: steps.unchanged.outputs.unchanged != 'true'
+        id: pages_tar
+        run: echo "sha256=$(sha256sum "$RUNNER_TEMP/artifact.tar" | cut -d ' ' -f 1)" >> "$GITHUB_OUTPUT"
+
+  browser:
+    permissions:
+      contents: read
+      actions: read
+    needs: build
+    if: needs.build.outputs.browser_validated != 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [1, 2]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.sha }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+
+      # Test the very same archive that the deploy job will publish.
+      - name: Download exact Pages archive
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: ${{ needs.build.outputs.artifact_name }}
+          path: ${{ runner.temp }}/n1-pages-archive
+
+      - name: Verify and extract exact Pages archive
+        env:
+          EXPECTED_SHA256: ${{ needs.build.outputs.artifact_sha256 }}
+        run: |
+          test -n "$EXPECTED_SHA256"
+          archive="$RUNNER_TEMP/n1-pages-archive/artifact.tar"
+          echo "$EXPECTED_SHA256  $archive" | sha256sum --check --strict
+          mkdir -p dist
+          tar -xf "$archive" -C dist
+          test -f dist/n1-release.json
+
+      - name: Install test browser
+        run: npx playwright install --with-deps chromium
+
+      - name: Browser tests
+        env:
+          PLAYWRIGHT_JSON_OUTPUT_FILE: ${{ runner.temp }}/n1-browser-report.json
+        run: npm run test:e2e -- --shard=${{ matrix.shard }}/2 --workers=2 --reporter=line,json --trace=retain-on-failure
+
+      - name: Summarize browser timings
+        if: always()
+        run: node scripts/ci-playwright-summary.mjs "$RUNNER_TEMP/n1-browser-report.json"
+
+      - name: Retain learning UI verification
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n1-learning-ui-verification-shard-${{ matrix.shard }}
+          path: |
+            /tmp/n1-improvements-playwright/**/*.png
+            /tmp/n1-improvements-playwright/**/*.zip
+            ${{ runner.temp }}/n1-browser-report.json
+          if-no-files-found: ignore
+          overwrite: true
+          retention-days: 3
 
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+      url: ${{ steps.deployment.outputs.page_url || 'https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/' }}
+    runs-on: ubuntu-24.04
     timeout-minutes: 20
-    needs: build
+    needs: [build, browser]
+    if: ${{ !cancelled() && needs.build.result == 'success' && (needs.browser.result == 'success' || (needs.browser.result == 'skipped' && needs.build.outputs.browser_validated == 'true')) }}
     steps:
       - name: Deploy to GitHub Pages
+        if: needs.build.outputs.unchanged_release != 'true'
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          artifact_name: ${{ needs.build.outputs.artifact_name }}
 
       - name: Checkout deployment metadata
         uses: actions/checkout@v6
@@ -141,7 +232,7 @@ jobs:
 
       - name: Verify live target date and exact release assets
         env:
-          PAGE_URL: ${{ steps.deployment.outputs.page_url }}
+          PAGE_URL: ${{ steps.deployment.outputs.page_url || 'https://kai987.github.io/Japanese-N1-Immersive-Sparring-Partner/' }}
         run: |
           for attempt in 1 2 3; do
             if node scripts/verify-deployment.mjs --url "$PAGE_URL" --manifest /tmp/n1-deployment-verification/n1-release.json --request .github/n1-sync-request.json; then
