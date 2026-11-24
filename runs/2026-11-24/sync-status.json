@@ -1,9 +1,9 @@
 {
   "targetDate": "2026-11-24",
   "day": 87,
-  "stage": "validating",
+  "stage": "published",
   "schemaVersion": 1,
-  "status": "validating",
+  "status": "published",
   "reason": "source_and_upstream_verified",
   "upstreamSourceCommit": "a681887cc4fcc2fcd17aa1b926cfd8d6b0504400",
   "sourcePagesRunId": 45304603432,
@@ -17,8 +17,24 @@
     "allPassed": true
   },
   "lastError": null,
-  "nextStep": "Verify exact Sync and Pages plus live deployment",
-  "updatedAt": "2026-11-24T01:30:57.719Z",
+  "nextStep": "Verify the exact shared audio continuation and await the separate unique-audio worker and verifier",
+  "updatedAt": "2026-11-24T01:37:15.694Z",
   "requestCommit": "9287e00300608462a0ecc3a5fdd3cc641266c5f9",
-  "requestBlobSha": "6b7b74ea9c77a133cbbb616b2ed351475391ab1b"
+  "requestBlobSha": "6b7b74ea9c77a133cbbb616b2ed351475391ab1b",
+  "manifestSha256": "fa02fdca3c5036f841144207057fc8b6e9a21e170bb90a885e460e28ea3b0b6d",
+  "verifiedFiles": 255,
+  "latestDate": "2026-11-24",
+  "title": "使えるということと、誰もが使えるということ",
+  "sourceCommit": "a681887cc4fcc2fcd17aa1b926cfd8d6b0504400",
+  "releaseCommit": "5f1b58189d79ea1773a41802f58f4aadca55f9d5",
+  "pagesRunId": 45306220167,
+  "syncRunId": 45305596422,
+  "counts": {
+    "vocabularyNew": 3,
+    "vocabularyReview": 17,
+    "grammarNew": 0,
+    "grammarReview": 8
+  },
+  "verifiedAt": "2026-11-24T01:37:15.300Z",
+  "textPublicationVerified": true
 }
