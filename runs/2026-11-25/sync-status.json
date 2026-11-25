@@ -1,9 +1,9 @@
 {
   "targetDate": "2026-11-25",
   "day": 88,
-  "stage": "validating",
+  "stage": "published",
   "schemaVersion": 1,
-  "status": "validating",
+  "status": "published",
   "reason": "source_and_upstream_verified",
   "upstreamSourceCommit": "04038edbb69d7e94c60f6f798abe3bc8c76c8c65",
   "sourcePagesRunId": 45524829944,
@@ -17,8 +17,24 @@
     "allPassed": true
   },
   "lastError": null,
-  "nextStep": "Verify exact Sync and Pages plus live deployment",
-  "updatedAt": "2026-11-25T01:26:25.386Z",
+  "nextStep": "Verify the exact shared audio continuation and await the separate unique-audio worker and verifier",
+  "updatedAt": "2026-11-25T01:36:22.848Z",
   "requestCommit": "e0330e6eef29da4263b6fae3ac08c529028f498b",
-  "requestBlobSha": "ba401d27d8d4fe6d3450d9c7cd0d3de583edea2b"
+  "requestBlobSha": "ba401d27d8d4fe6d3450d9c7cd0d3de583edea2b",
+  "manifestSha256": "ec5c11a30e4c40c36dbd961bbfc6bd77830f2c03905ce51ee2d1c2868c9487a8",
+  "verifiedFiles": 257,
+  "latestDate": "2026-11-25",
+  "title": "一覧に載っていることと、影響があること",
+  "sourceCommit": "04038edbb69d7e94c60f6f798abe3bc8c76c8c65",
+  "releaseCommit": "55f6c92f39dab1ba4887279cfe9eaefe391f19d9",
+  "pagesRunId": 45526745459,
+  "syncRunId": 45525759918,
+  "counts": {
+    "vocabularyNew": 3,
+    "vocabularyReview": 17,
+    "grammarNew": 0,
+    "grammarReview": 8
+  },
+  "verifiedAt": "2026-11-25T01:36:22.411Z",
+  "textPublicationVerified": true
 }
