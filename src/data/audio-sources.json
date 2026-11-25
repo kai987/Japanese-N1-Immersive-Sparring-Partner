@@ -14,17 +14,17 @@
   "modelVersion": "1.0.0",
   "sharedSource": {
     "repository": "https://github.com/kai987/japan-it-ai-daily",
-    "commit": "b032c662ae356d590eb2c3c6a00db1ef3e5fc54c"
+    "commit": "277d60686f3268f33a5b4239b3d7e366949d3c5b"
   },
   "providers": {
     "daily": "https://pub-7561025e67be4103ac4bafb331864381.r2.dev/",
     "supabase": "https://flpmblfscgcbrprwwckz.supabase.co/storage/v1/object/public/n1-audio/"
   },
   "summary": {
-    "total": 10051,
-    "reused": 1806,
+    "total": 10057,
+    "reused": 1812,
     "uploads": 8245,
-    "savedBytes": 51219894,
+    "savedBytes": 51435012,
     "uploadBytes": 295847889
   },
   "clips": {
@@ -5893,6 +5893,13 @@
       "sha256": "46410fa8b56b9af4719a5031d87618aff500a1f401873a1023ba61101895fe96",
       "bytes": 15597,
       "duration": 1.86
+    },
+    "14a0b2d8f3e9a0b4": {
+      "provider": "daily",
+      "path": "japanese/2026-11-25/example-02--d9479d7958807cb1fab66e434493e0c618d546d1be268889c4ce5e91df0a3a37.mp3",
+      "bytes": 60813,
+      "duration": 5.04,
+      "sha256": "d9479d7958807cb1fab66e434493e0c618d546d1be268889c4ce5e91df0a3a37"
     },
     "14ad775625038132": {
       "provider": "supabase",
@@ -13951,6 +13958,13 @@
       "bytes": 9837,
       "duration": 1.152
     },
+    "3486754e143836c2": {
+      "provider": "daily",
+      "path": "japanese/2026-11-25/example-03--b27198caca52a10b2c5514403ca32d3dc87b267936941b0481ee6d1938f756b0.mp3",
+      "bytes": 65133,
+      "duration": 5.4,
+      "sha256": "b27198caca52a10b2c5514403ca32d3dc87b267936941b0481ee6d1938f756b0"
+    },
     "34886aea79bc3e26": {
       "provider": "supabase",
       "path": "morioki-normal/34886aea79bc3e26--20da773b79fd1bbeb7155f17b41be0fff5306d77a3f99c3320acff9b06a5bc14.mp3",
@@ -16834,6 +16848,13 @@
       "sha256": "eb525cd8807f4a59975a4f1e4e9ad1f8272ca1bebd13bf3ee54e0e325673e29c",
       "bytes": 7725,
       "duration": 0.873
+    },
+    "3f8c5eb335e7b0cf": {
+      "provider": "daily",
+      "path": "japanese/2026-11-25/example-01--69d01f36ef13bafbb2db57947915f5805a3e03c17c619ba99cb38a3ba4e4bc20.mp3",
+      "bytes": 53613,
+      "duration": 4.44,
+      "sha256": "69d01f36ef13bafbb2db57947915f5805a3e03c17c619ba99cb38a3ba4e4bc20"
     },
     "3f93775298e31286": {
       "provider": "supabase",
@@ -26697,6 +26718,13 @@
       "sha256": "2a23dcd65b63221f048dae567fb3a8071f9c5fd87623fad4bb8b964eebbde31a",
       "bytes": 33453,
       "duration": 4.1
+    },
+    "619cad5fffc0d493": {
+      "provider": "daily",
+      "path": "japanese/2026-11-25/vocab-01--ae16d5db25f047b9136845c81885bd1c95f5c2c57ab0d53fbb38ece9d61d96dd.mp3",
+      "bytes": 11565,
+      "duration": 0.936,
+      "sha256": "ae16d5db25f047b9136845c81885bd1c95f5c2c57ab0d53fbb38ece9d61d96dd"
     },
     "619d6191958fe25d": {
       "provider": "supabase",
@@ -42539,6 +42567,13 @@
       "bytes": 20013,
       "duration": 2.405
     },
+    "9b535bf618939c82": {
+      "provider": "daily",
+      "path": "japanese/2026-11-25/vocab-03--114496baf2c25f2b3021abf70bade99c3d92c200566cf1a076f30f9a366629d4.mp3",
+      "bytes": 10989,
+      "duration": 0.888,
+      "sha256": "114496baf2c25f2b3021abf70bade99c3d92c200566cf1a076f30f9a366629d4"
+    },
     "9b5a17bb438cecaf": {
       "provider": "daily",
       "path": "japanese/2026-11-06/vocab-02--22934b87fedb616b004feb49d690518efdd40b6a4f40b647f0227ed6bcec8bb2.mp3",
@@ -43630,6 +43665,13 @@
       "sha256": "187f73f4f0e81695517d59f6e83398a76250905eb0efe7c4f476164dbefb08d3",
       "bytes": 38445,
       "duration": 4.727
+    },
+    "9f75f0bb110ed3ff": {
+      "provider": "daily",
+      "path": "japanese/2026-11-25/vocab-02--08e9910b2ae35bbabbf02aad450d9f05721dcf8c59c72f19d866611f6b54cc6e.mp3",
+      "bytes": 13005,
+      "duration": 1.056,
+      "sha256": "08e9910b2ae35bbabbf02aad450d9f05721dcf8c59c72f19d866611f6b54cc6e"
     },
     "9f7eca768893566a": {
       "provider": "supabase",
@@ -70386,5 +70428,5 @@
       "duration": 2.289
     }
   },
-  "verifiedAt": "2026-11-24T01:38:02.607Z"
+  "verifiedAt": "2026-11-25T01:37:50.234Z"
 }
