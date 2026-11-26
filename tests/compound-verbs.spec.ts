@@ -43,20 +43,26 @@ const seriesButton = (page: Page, id: string) => page.locator(`.compound-series-
 const detail = (page: Page, id: string) => page.locator(`article.compound-detail[data-series-id="${id}"]`)
 
 async function expectRightAlignedMetadata(card: Locator) {
-  const header = card.locator('.word-line')
-  const metadata = card.locator('.vocabulary-meta')
-  const reference = metadata.locator('.study-reference')
-  await expect(metadata).toBeVisible()
-  const bounds = await Promise.all([header.boundingBox(), metadata.boundingBox(), reference.boundingBox()])
-  if (bounds.some(value => !value)) throw new Error('Vocabulary metadata has no rendered bounds')
-  const [head, meta, ref] = bounds.map(value => value!)
-  expect(Math.abs(head.x + head.width - meta.x - meta.width)).toBeLessThanOrEqual(2)
-  expect(Math.abs(meta.x + meta.width - ref.x - ref.width)).toBeLessThanOrEqual(2)
-  const aligned = await reference.evaluate(element => getComputedStyle(element).alignItems)
-  expect(aligned).toBe('flex-end')
-  const badges = await reference.locator('.study-reference-badges').boundingBox()
-  if (!badges) throw new Error('The right-aligned badge group is missing')
-  expect(Math.abs(ref.x + ref.width - badges.x - badges.width)).toBeLessThanOrEqual(2)
+  await expect(card.locator('.vocabulary-meta')).toBeVisible()
+  // Read all four right edges from the same layout after the viewport change.
+  const edges = await card.evaluate(element => {
+    const header = element.querySelector('.word-line')
+    const metadata = element.querySelector('.vocabulary-meta')
+    const reference = metadata?.querySelector('.study-reference')
+    const badges = reference?.querySelector('.study-reference-badges')
+    if (!header || !metadata || !reference || !badges) throw new Error('Vocabulary metadata has no rendered bounds')
+    return {
+      header: header.getBoundingClientRect().right,
+      metadata: metadata.getBoundingClientRect().right,
+      reference: reference.getBoundingClientRect().right,
+      badges: badges.getBoundingClientRect().right,
+      alignment: getComputedStyle(reference).alignItems,
+    }
+  })
+  expect(Math.abs(edges.header - edges.metadata)).toBeLessThanOrEqual(2)
+  expect(Math.abs(edges.metadata - edges.reference)).toBeLessThanOrEqual(2)
+  expect(edges.alignment).toBe('flex-end')
+  expect(Math.abs(edges.reference - edges.badges)).toBeLessThanOrEqual(2)
 }
 
 test('sidebar opens compound series and Japanese/reading search and series selection work', async ({ page }, testInfo) => {

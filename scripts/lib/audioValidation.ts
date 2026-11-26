@@ -7,6 +7,7 @@ export interface AudioValidationOptions {
   directory: string
   env?: NodeJS.ProcessEnv
   signal?: AbortSignal
+  interruptSignal?: 'SIGINT' | 'SIGTERM'
   timeoutMs?: number
 }
 
@@ -104,7 +105,7 @@ export async function runAudioValidation(command: string, args: string[], option
         if (finished) return
         if (reason === 'abort') record.aborted = true
         else record.timedOut = true
-        terminate('SIGTERM')
+        terminate(options.interruptSignal ?? 'SIGTERM')
         forceStop ??= setTimeout(() => terminate('SIGKILL'), 10_000)
       }
       const abort = () => stop('abort')

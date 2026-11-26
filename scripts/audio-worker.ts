@@ -449,19 +449,34 @@ export async function audioWorker(repair?: AudioRepair) {
       atomicJson(join(dependencies, 'complete.json'), { lockHash, installedAt: new Date().toISOString() })
     }
     symlinkSync(join(dependencies, 'node_modules'), join(attempt, 'node_modules'), 'dir')
-    const validate = (name: string, command: string, args: string[], env: NodeJS.ProcessEnv = {}) => runAudioValidation(command, args, {
-      cwd: attempt, directory: join(diagnostics, name), env, signal: abort.signal,
+    const validate = (name: string, command: string, args: string[]) => runAudioValidation(command, args, {
+      cwd: attempt, directory: join(diagnostics, name), signal: abort.signal,
       timeoutMs: Math.min(20 * 60_000, windowDeadline - Date.now()),
     })
     phase('validating', { validationDirectory: diagnostics })
     await validate('audio', process.execPath, ['scripts/validate-audio.ts'])
     await validate('unit', 'npm', ['test'])
     await validate('build', 'npm', ['run', 'build'])
-    await validate('e2e', 'npm', ['run', 'test:e2e', '--', '--reporter=line,json,html', '--trace=retain-on-failure'], {
-      N1_PREVIEW_PORT: String(await freePort()), N1_TEST_OUTPUT_DIR: join(diagnostics, 'e2e/test-results'),
-      PLAYWRIGHT_HTML_REPORT: join(diagnostics, 'e2e/playwright-report'), PLAYWRIGHT_HTML_OPEN: 'never',
-      PLAYWRIGHT_JSON_OUTPUT_FILE: join(diagnostics, 'e2e/playwright.json'),
-      ...(repair ? { N1_AUDIO_VERIFY_DATES: repair.dates.join(',') } : {}),
+    // A single fresh-browser retry covers transient desktop or network load.
+    // The retry still runs the same assertions, including real playback.
+    const playwright = [process.execPath, join(attempt, 'node_modules/playwright/cli.js'), 'test', '--reporter=line,json,html', '--retries=1']
+    // Move only the browser command from Darwin background throttling to
+    // utility QoS and disk I/O. Keep its inherited niceness and two workers.
+    const [browserCommand, ...browserArgs] = process.platform === 'darwin'
+      ? ['/bin/sh', '-c', '/usr/sbin/taskpolicy -B -p "$$" && exec /usr/sbin/taskpolicy -c utility -d utility "$@"', 'playwright', ...playwright]
+      : playwright
+    await runAudioValidation(browserCommand, browserArgs, {
+      cwd: attempt, directory: join(diagnostics, 'e2e'), signal: abort.signal,
+      timeoutMs: Math.min(45 * 60_000, windowDeadline - Date.now()),
+      // Playwright handles SIGINT by closing its own preview process group.
+      interruptSignal: 'SIGINT',
+      env: {
+        N1_AUDIO_WORKER_E2E: '1',
+        N1_PREVIEW_PORT: String(await freePort()), N1_TEST_OUTPUT_DIR: join(diagnostics, 'e2e/test-results'),
+        PLAYWRIGHT_HTML_REPORT: join(diagnostics, 'e2e/playwright-report'), PLAYWRIGHT_HTML_OPEN: 'never',
+        PLAYWRIGHT_JSON_OUTPUT_FILE: join(diagnostics, 'e2e/playwright.json'),
+        ...(repair ? { N1_AUDIO_VERIFY_DATES: repair.dates.join(',') } : {}),
+      },
     })
     await run('git', ['diff', '--check'], attempt)
     await run('git', ['add', '--', ...metadataPaths], attempt)
