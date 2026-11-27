@@ -1,9 +1,9 @@
 {
   "targetDate": "2026-11-27",
   "day": 90,
-  "stage": "validating",
+  "stage": "published",
   "schemaVersion": 1,
-  "status": "validating",
+  "status": "published",
   "reason": "source_and_upstream_verified",
   "upstreamSourceCommit": "971d97f05e9b5575c4abca042586384063b0bbb4",
   "sourcePagesRunId": 45922228754,
@@ -17,8 +17,24 @@
     "allPassed": true
   },
   "lastError": null,
-  "nextStep": "Verify exact Sync and Pages plus live deployment",
-  "updatedAt": "2026-11-27T01:30:17.033Z",
+  "nextStep": "Verify the exact shared audio continuation and await the separate unique-audio worker and verifier",
+  "updatedAt": "2026-11-27T01:38:39.191Z",
   "requestCommit": "45bf43decaa489f99be9010d55100553c3996e3b",
-  "requestBlobSha": "342d5d043dce33dbd684c5157a9d55f77a875b9f"
+  "requestBlobSha": "342d5d043dce33dbd684c5157a9d55f77a875b9f",
+  "manifestSha256": "bd89d427a4a5d5c925c641ba536ea44aaff3399fbd4541a94c95ac685b03a456",
+  "verifiedFiles": 261,
+  "latestDate": "2026-11-27",
+  "title": "試験で見えたこと、現場で確かめること",
+  "sourceCommit": "971d97f05e9b5575c4abca042586384063b0bbb4",
+  "releaseCommit": "cc40fdb0b607cdba208f32ebc894865673832824",
+  "pagesRunId": 45923609704,
+  "syncRunId": 45922927800,
+  "counts": {
+    "vocabularyNew": 3,
+    "vocabularyReview": 17,
+    "grammarNew": 0,
+    "grammarReview": 8
+  },
+  "verifiedAt": "2026-11-27T01:38:38.842Z",
+  "textPublicationVerified": true
 }
